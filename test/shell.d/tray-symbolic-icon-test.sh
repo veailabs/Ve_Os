@@ -37,11 +37,23 @@ PY
 
 TMPDIR=$(mktemp -d)
 config_dir="$TMPDIR/config"
-icons_dir="$TMPDIR/icons"
+icons_dir="$TMPDIR/home/.local/share/icons/ve-mask-fixture"
 grab="$TMPDIR/tray.png"
 qs_log="$TMPDIR/quickshell.log"
 mock_log="$TMPDIR/mock-sni.log"
-mkdir -p "$config_dir" "$icons_dir" "$TMPDIR/home"
+mkdir -p "$config_dir" "$icons_dir/scalable/status" "$TMPDIR/home"
+cat >"$icons_dir/index.theme" <<'THEME'
+[Icon Theme]
+Name=Ve mask fixture
+Directories=scalable/status
+
+[scalable/status]
+Size=16
+Type=Scalable
+MinSize=1
+MaxSize=512
+Context=Status
+THEME
 
 for dir in Ui Commons plugins services; do
   ln -s "$ROOT/shell/$dir" "$config_dir/$dir"
@@ -49,7 +61,7 @@ done
 
 # Adwaita and many app icons fill symbolic icons dark, which colorization
 # could not lift to a light bar foreground.
-cat >"$icons_dir/omarchy-test-tray-symbolic.svg" <<'SVG'
+cat >"$icons_dir/scalable/status/vefixturemask-symbolic.svg" <<'SVG'
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="6.5" fill="#222222"/></svg>
 SVG
 
@@ -72,7 +84,7 @@ ShellRoot {
     // TrayIcon is inline in Tray.qml, so find it by its shape and the mock's
     // icon name: other apps' tray icons may be in the same tray.
     function findIcon(item) {
-      if (item.symbolic !== undefined && String(item.icon).indexOf("/omarchy-test-tray-symbolic?") !== -1) return item
+      if (item.symbolic !== undefined && String(item.icon).indexOf("/vefixturemask-symbolic?") !== -1) return item
       for (var i = 0; i < item.children.length; i++) {
         var found = findIcon(item.children[i])
         if (found) return found
@@ -117,7 +129,7 @@ ShellRoot {
 }
 QML
 
-OMARCHY_TRAY_ICON_NAME="omarchy-test-tray-symbolic" \
+OMARCHY_TRAY_ICON_NAME="vefixturemask-symbolic" \
 OMARCHY_TRAY_ICON_THEME_PATH="$icons_dir" \
 OMARCHY_TRAY_MENU_EVENT_RESULT="$TMPDIR/event" \
 OMARCHY_TRAY_MENU_READY="$TMPDIR/ready" \
@@ -126,6 +138,8 @@ MOCK_PID=$!
 
 output=$(OMARCHY_PATH="$ROOT" \
   HOME="$TMPDIR/home" \
+  XDG_DATA_HOME="$TMPDIR/home/.local/share" \
+  QS_ICON_THEME=ve-mask-fixture \
   XDG_CONFIG_HOME="$TMPDIR/home/.config" \
   XDG_CACHE_HOME="$TMPDIR/home/.cache" \
   XDG_STATE_HOME="$TMPDIR/home/.local/state" \

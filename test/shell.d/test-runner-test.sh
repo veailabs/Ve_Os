@@ -122,6 +122,37 @@ run_suite
   fail "the overlap file prints in file order" "$output"
 pass "the overlap file runs beside the pool and is reported in order"
 
+exclusive_root="$test_dir/exclusive"
+mkdir -p "$exclusive_root/test/shell.d" "$exclusive_root/bin"
+cp "$ROOT/test/shell" "$exclusive_root/test/shell"
+printf '#!/bin/bash\nprintf "1\\n"\n' >"$exclusive_root/bin/nproc"
+chmod +x "$exclusive_root/bin/nproc"
+cat >"$exclusive_root/test/shell.d/a-quickshell-test.sh" <<'SH'
+set -euo pipefail
+require_quickshell() { :; }
+require_quickshell
+state=$(dirname "$0")
+[[ -f $state/parallel.done && -f $state/overlap.done ]]
+SH
+cat >"$exclusive_root/test/shell.d/z-parallel-test.sh" <<'SH'
+set -euo pipefail
+touch "$(dirname "$0")/parallel.done"
+SH
+cat >"$exclusive_root/test/shell.d/shell-idle-spawn-test.sh" <<'SH'
+set -euo pipefail
+state=$(dirname "$0")
+for attempt in {1..100}; do
+  [[ ! -f $state/parallel.done ]] || break
+  sleep 0.02
+done
+[[ -f $state/parallel.done ]]
+touch "$state/overlap.done"
+SH
+status=0
+output=$(PATH="$exclusive_root/bin:$PATH" bash "$exclusive_root/test/shell" 2>&1) || status=$?
+(( status == 0 )) || fail "Quickshell tests wait for both pool and idle guard" "$output"
+pass "Quickshell tests wait for both pool and idle guard"
+
 # lua with no script argument runs stdin but ignores its error and exits 0, so
 # assertions in a bare heredoc cannot fail their test. lua - treats it as a script.
 stdin_lua=$(rg -l -P '\blua[[:space:]]*<<' "$SHELL_TEST_DIR" || true)

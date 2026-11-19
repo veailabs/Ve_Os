@@ -10,4 +10,8 @@ Development on Apple Silicon uses Try Omarchy with this checkout selected as the
 
 ## Preview status
 
-The Apple Silicon dev VM loaded this fork’s shell and returned three consecutive IPC pings. The Ve bar logo and dark palette were visually checked. The installed shell was restored after the check. Boot/login artwork uses the unchanged Ve mail `public/app-icons/icon-192.png`; those screens have not been boot-tested or installed into the active VM. Packaged OS naming and a permanent dev link are not implemented by this preview.
+The Apple Silicon dev VM loaded this fork’s shell and returned three consecutive IPC pings. The Ve bar logo, dock launcher and dark palette were visually checked. The installed shell was restored after the check. Boot/login artwork uses the unchanged Ve mail `public/app-icons/icon-192.png`; publishing those files into an existing installation requires its supported refresh commands. A checkout update alone does not replace installed boot artwork or packaged OS naming.
+
+## Mac Dock
+
+Run `scripts/ve-os-macos-app` on an Apple Silicon Mac with Try Omarchy installed. It creates `~/Applications/Ve OS.app` using the exact mail client `.icns` icon and the runtime’s supported `OMARCHY_PRODUCT_NAME` / `OMARCHY_PRODUCT_ICON` settings. The signed runtime stays intact. Close the existing VM before launching this app: the runtime prevents two processes opening the same disk. The launcher stores runtime output in `~/Library/Logs/Ve OS/runtime.log`.

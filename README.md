@@ -2,7 +2,7 @@
 
 # Ve OS
 
-Ve team development fork of [Omarchy](https://github.com/omacom/omarchy). This repository starts from the existing Omarchy desktop; Ve-specific interface and service integration work has not been implemented yet.
+Ve team development fork of [Omarchy](https://github.com/omacom/omarchy), with the Ve mail logo and dark palette. Ve service integrations are not implemented yet.
 
 ## Team quick start
 
@@ -121,3 +121,5 @@ Omarchy is released under the [MIT License](https://opensource.org/licenses/MIT)
 ## Ve appearance
 
 The desktop menu and dock app launcher use the Ve mail mark. Select the matching palette with `omarchy theme set Ve`. See [Ve branding](docs/ve-branding.md) for asset provenance and the dev preview scope.
+
+On an Apple Silicon Mac with Try Omarchy installed, run `scripts/ve-os-macos-app` to create `~/Applications/Ve OS.app`. Close the existing VM before opening the Ve launcher; it uses the same VM disk.

@@ -10,4 +10,4 @@ Development on Apple Silicon uses Try Omarchy with this checkout selected as the
 
 ## Preview status
 
-The Apple Silicon dev VM loaded this fork’s shell and returned three consecutive IPC pings. The Ve bar logo and dark palette were visually checked. The installed shell was restored after the check. Boot/login artwork, packaged OS naming and a permanent dev link are not implemented by this preview.
+The Apple Silicon dev VM loaded this fork’s shell and returned three consecutive IPC pings. The Ve bar logo and dark palette were visually checked. The installed shell was restored after the check. Boot/login artwork uses the unchanged Ve mail `public/app-icons/icon-192.png`; those screens have not been boot-tested or installed into the active VM. Packaged OS naming and a permanent dev link are not implemented by this preview.

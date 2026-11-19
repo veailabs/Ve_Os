@@ -20,6 +20,9 @@ class Control:
   def __init__(self):
     self.events = queue.Queue(maxsize=256)
     self.child = None
+    self.outbox = None
+    self.writer_stop = None
+    self.write_error = False
     self.generation = 0
     self.serial = 0
     self.requests = {}
@@ -80,16 +83,33 @@ class Control:
           value = None
         self.events.put((source, generation, value))
     finally:
+      if source == "agent":
+        stream.close()
       self.events.put((source + "-eof", generation, None))
+
+  def write(self, stream, outbox, stopped, generation):
+    try:
+      while not stopped.is_set():
+        value = outbox.get()
+        if value is None or stopped.is_set():
+          break
+        stream.write(value)
+        stream.flush()
+    except (BrokenPipeError, OSError, ValueError):
+      self.events.put(("agent-write-error", generation, None))
+    finally:
+      try:
+        stream.close()
+      except (BrokenPipeError, OSError, ValueError):
+        pass
 
   def send(self, value):
     if self.child is None:
       return
     try:
-      self.child.stdin.write(json.dumps({"jsonrpc": "2.0", **value}) + "\n")
-      self.child.stdin.flush()
-    except (BrokenPipeError, OSError):
-      self.fail("Grok Build disconnected.")
+      self.outbox.put_nowait(json.dumps({"jsonrpc": "2.0", **value}) + "\n")
+    except queue.Full:
+      self.write_error = True
 
   def request(self, method, params):
     self.serial += 1
@@ -99,17 +119,32 @@ class Control:
 
   def stop(self):
     child, self.child = self.child, None
+    if self.writer_stop is not None:
+      self.writer_stop.set()
+      try:
+        self.outbox.put_nowait(None)
+      except queue.Full:
+        pass
+    self.outbox = None
+    self.writer_stop = None
+    self.write_error = False
     if child is not None:
       try:
         os.killpg(child.pid, signal.SIGTERM)
+      except ProcessLookupError:
+        pass
+      try:
         child.wait(timeout=1)
       except subprocess.TimeoutExpired:
+        pass
+      try:
         os.killpg(child.pid, signal.SIGKILL)
-        child.wait()
       except ProcessLookupError:
-        child.wait()
-      child.stdin.close()
-      child.stdout.close()
+        pass
+      try:
+        child.wait(timeout=1)
+      except subprocess.TimeoutExpired:
+        pass
     self.requests.clear()
     self.permissions.clear()
     self.permission_started = None
@@ -136,8 +171,11 @@ class Control:
       self.input_error("Enter a task of at most 65,536 characters.")
       return
     resume = command.get("resume") is True
-    previous = self.state["sessionId"] if self.state["cwd"] == str(Path(cwd).resolve()) else ""
-    self.state = {"status": "starting", "text": "", "sessionId": previous if resume else "", "cwd": str(Path(cwd).resolve())}
+    cwd = str(Path(cwd).resolve())
+    if resume and (not self.state["sessionId"] or self.state["cwd"] != cwd):
+      self.input_error("Resume requires the saved task's workspace. Select that directory or start a new task.")
+      return
+    self.state = {"status": "starting", "text": "", "sessionId": self.state["sessionId"] if resume else "", "cwd": cwd}
     self.prompt = prompt
     self.generation += 1
     try:
@@ -145,6 +183,9 @@ class Control:
     except OSError:
       self.fail("Could not start Grok Build. Install or repair the Grok CLI first.")
       return
+    self.outbox = queue.Queue(maxsize=16)
+    self.writer_stop = threading.Event()
+    threading.Thread(target=self.write, args=(self.child.stdin, self.outbox, self.writer_stop, self.generation), daemon=True).start()
     threading.Thread(target=self.read, args=(self.child.stdout, "agent", self.generation), daemon=True).start()
     self.status("starting")
     self.request("initialize", {"protocolVersion": 1, "clientCapabilities": {}})
@@ -301,12 +342,16 @@ class Control:
         if source == "input":
           self.input(value)
         elif source.startswith("agent") and generation == self.generation and self.child is not None:
-          if source == "agent-eof":
+          if source == "agent-write-error":
+            self.fail("Grok Build disconnected while receiving a command.")
+          elif source == "agent-eof":
             self.fail("Grok Build disconnected before the task finished.")
           else:
             self.agent(value)
         now = time.monotonic()
-        if self.cancel_at and now >= self.cancel_at:
+        if self.write_error:
+          self.fail("Grok Build could not receive commands. Try the task again.")
+        elif self.cancel_at and now >= self.cancel_at:
           self.stop()
           self.status("cancelled")
         elif self.child and not self.permissions and any(now > deadline for _, deadline in self.requests.values()):

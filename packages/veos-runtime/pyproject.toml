@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "veos-runtime"
+version = "0.2.0"
+description = "Personal subscription-agent workspace for VeOS"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/veailabs/Ve_Os"
+
+[project.optional-dependencies]
+browser = ["playwright>=1.58,<2"]
+
+[project.scripts]
+veos = "veos_runtime.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+veos_runtime = ["web/*.html", "web/*.js", "web/*.css", "desktop/*.json", "desktop/*.qml", "desktop/*.service", "desktop/*.desktop"]
+
+[tool.ruff]
+indent-width = 2
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "BLE"]

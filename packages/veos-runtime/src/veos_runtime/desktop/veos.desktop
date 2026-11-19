@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=VeOS Mission Desk
+Comment=Projects, subscription agents and evidence
+Exec=veos open
+Icon=applications-science
+Terminal=false
+Categories=Office;Development;

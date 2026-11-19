@@ -4,6 +4,10 @@ Omarchy is a beautiful, fun & agentic Linux distribution by DHH.
 
 Read more at [omarchy.org](https://omarchy.org).
 
+## VeOS Mission Desk
+
+This fork's optional [VeOS runtime](packages/veos-runtime/README.md) provides local projects, subscription-agent tasks, evidence, browser profiles and reviewed actions. See [the integration boundary](docs/veos-runtime.md). It is installed separately; a source checkout does not enable it or connect a provider account.
+
 ## The Omarchy Manual
 
 The manual lives in [`manual/`](manual/), which is its authoritative source.

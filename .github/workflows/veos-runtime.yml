@@ -1,0 +1,62 @@
+name: VeOS runtime
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'packages/veos-runtime/**'
+      - '.github/workflows/veos-runtime.yml'
+      - 'docs/veos-runtime.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: veos-runtime-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  runtime:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: packages/veos-runtime
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install isolated test dependencies
+        run: |
+          python3 -m venv "$RUNNER_TEMP/veos-tests"
+          echo "$RUNNER_TEMP/veos-tests/bin" >> "$GITHUB_PATH"
+          "$RUNNER_TEMP/veos-tests/bin/python" -m pip install '.[browser]' build ruff
+          "$RUNNER_TEMP/veos-tests/bin/python" -m playwright install --with-deps chromium
+      - name: Check runtime logic and syntax
+        run: |
+          mkdir -p artifacts
+          PYTHONPATH=src python -m unittest discover -s tests -v > artifacts/runtime-tests.log 2>&1
+          cat artifacts/runtime-tests.log
+          ruff check src tests
+          ruff format src tests --check
+          node --check src/veos_runtime/web/app.js
+      - name: Build and verify the installed wheel
+        run: |
+          python -m build --wheel
+          python3 -m venv "$RUNNER_TEMP/veos-wheel"
+          "$RUNNER_TEMP/veos-wheel/bin/python" -m pip install dist/*.whl
+          "$RUNNER_TEMP/veos-wheel/bin/python" tests/installed_smoke.py > artifacts/installed-smoke.log 2>&1
+          cat artifacts/installed-smoke.log
+      - name: Exercise the real local browser and Mission Desk
+        run: |
+          PYTHONPATH=src python tests/local_browser_smoke.py > artifacts/browser-control.log 2>&1
+          cat artifacts/browser-control.log
+          PYTHONPATH=src python tests/browser_smoke.py > artifacts/mission-desk.log 2>&1
+          cat artifacts/mission-desk.log
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: veos-runtime-checks
+          path: packages/veos-runtime/artifacts/
+          retention-days: 14

@@ -127,3 +127,7 @@ On an Apple Silicon Mac with Try Omarchy installed, run `scripts/ve-os-macos-app
 ## Default AI apps
 
 Grok Bot is included in the default package list and pinned to the dock. Existing installations can add it with `omarchy pkg add grok-bot` and `omarchy dock pin grok-bot`. Grok Build CLI is already a default mise tool; `mise install grok` installs it immediately instead of waiting for its first use. Open the desktop app with `gtk-launch grok-bot` and the CLI with `grok`. Sign in within each app as needed.
+
+## Grok controls
+
+Expand Grok controls in the agents panel to open or close the native Bot app, prepare an unsent draft for your primary Bot, or run a Grok Build task in a selected directory. The CLI task view shows progress, the latest result, one-time permission requests, cancellation and session continuation. Sign in through the official CLI when prompted. Closing Bot windows does not stop its cloud work; cloud routines and other unsupported controls stay in Grok Bot.

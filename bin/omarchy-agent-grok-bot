@@ -1,0 +1,56 @@
+#!/usr/bin/python3
+# omarchy:summary=Open or close Grok Bot, or prepare an unsent message
+# omarchy:args=<open|close|draft> [message]
+import json
+import re
+import subprocess
+import sys
+from urllib.parse import urlencode
+
+
+def windows():
+  result = subprocess.run(['hyprctl', 'clients', '-j'], capture_output=True, text=True, check=True)
+  return [w['address'] for w in json.loads(result.stdout)
+          if w.get('class', '').lower() == 'grok-bot'
+          and re.fullmatch(r'0x[0-9a-fA-F]+', w.get('address', ''))]
+
+
+def dispatch(action, address):
+  method = 'focus' if action == 'focuswindow' else 'window.close'
+  subprocess.run(['hyprctl', 'dispatch', 'hl.dsp.' + method + '({ window = "address:' + address + '" })'],
+                 check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+
+def run(args):
+  if not args or args[0] not in ('open', 'close', 'draft'):
+    raise ValueError('Choose open, close, or draft.')
+  action = args[0]
+  if len(args) != (2 if action == 'draft' else 1):
+    raise ValueError('Draft needs one message; open and close take no message.')
+  if action == 'draft':
+    message = args[1].strip()
+    if not message or len(message) > 1000 or '\x00' in message:
+      raise ValueError('Enter a message between 1 and 1,000 characters.')
+    url = 'grokbot://app/v1/prompt?' + urlencode({'text': message})
+    subprocess.Popen(['/usr/bin/grok-bot', url], stdout=subprocess.DEVNULL,
+                     stderr=subprocess.DEVNULL, start_new_session=True)
+    return {'status': 'draft', 'message': 'Opened a draft in your primary Bot. Review and send it in Grok Bot.'}
+  addresses = windows()
+  if action == 'close':
+    for address in addresses:
+      dispatch('closewindow', address)
+    return {'status': 'closed', 'message': 'Desktop windows closed. Cloud work continues.'}
+  if addresses:
+    dispatch('focuswindow', addresses[0])
+  else:
+    subprocess.Popen(['/usr/bin/grok-bot'], stdout=subprocess.DEVNULL,
+                     stderr=subprocess.DEVNULL, start_new_session=True)
+  return {'status': 'opened', 'message': 'Grok Bot opened.'}
+
+
+if __name__ == '__main__':
+  try:
+    print(json.dumps(run(sys.argv[1:])))
+  except (ValueError, OSError, subprocess.SubprocessError, KeyError, TypeError):
+    print(json.dumps({'status': 'error', 'message': 'Grok Bot action failed. Check the app installation, desktop session and message length.'}))
+    sys.exit(1)

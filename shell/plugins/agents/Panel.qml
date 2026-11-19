@@ -266,6 +266,7 @@ Panel {
     var hero = []
     if (addButtonShown) hero.push({ kind: "add", index: 0 })
     if (hero.length > 0) rows.push(hero)
+    if (addStage === "") rows.push([{ kind: "grok", index: 0 }])
     if (picking) {
       var choices = []
       for (var k = 0; k < addProviders.length; k++) choices.push({ kind: "choice", index: k })
@@ -884,6 +885,7 @@ Panel {
     var target = keyTarget
     if (!target) refreshNow()
     else if (target.kind === "add") addStage !== "" ? cancelAdd() : addAccount()
+    else if (target.kind === "grok" && panel.loadedContent) panel.loadedContent.grokControls.activate()
     else if (target.kind === "choice") chooseAddProvider(addProviders[target.index].providerId)
     else if (target.kind === "localAdd") chooseAddRow(target.index)
     else if (target.kind === "pasteCode") openPasteField()
@@ -1593,6 +1595,7 @@ Panel {
       property alias hero: hero
       property alias column: column
       property alias providerSections: providerSections
+      property alias grokControls: grokControls
       ConfirmDialog {
         id: deleteConfirm
         anchors.fill: parent
@@ -1635,7 +1638,7 @@ Panel {
                                            Math.max(0, panelFlick.contentHeight - panelFlick.height))
       }
       onDeleteRequested: root.deleteSelected()
-      blocked: root.renaming || root.deleteTarget !== null
+      blocked: root.renaming || root.deleteTarget !== null || grokControls.activeFocus
       onActivateRequested: function(modifiers) { root.activateSelection(modifiers) }
       onCloseRequested: {
         if (root.dragIndex >= 0) root.settleProviderDrag(true)
@@ -1727,6 +1730,15 @@ Panel {
                 }
               }
             }
+          }
+
+          GrokControls {
+            id: grokControls
+            width: parent.width
+            visible: root.addStage === ""
+            hasCursor: root.hasKey("grok")
+            onHovered: root.pointAt("grok")
+            onLeave: root.focusKeys()
           }
 
           AddView {

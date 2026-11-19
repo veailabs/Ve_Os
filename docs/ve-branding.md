@@ -1,6 +1,6 @@
 # Ve branding
 
-Ve OS uses the Ve mark from the mail client (`public/ve-logo.svg`) and its dark UI palette (`src/renderer/v2/styles/tokens.css`). The logo is copied unchanged; the bar masks it with the current foreground so it remains visible in light and dark themes.
+Ve OS uses the Ve mark from the mail client (`public/ve-logo.svg`) and its dark UI palette (`src/renderer/v2/styles/tokens.css`). The logo is copied unchanged; the bar and dock app launcher share `Ui/VeLogo.qml`, which masks it with the current foreground so it remains visible in light and dark themes.
 
 The `Ve` theme is selectable with `omarchy theme set Ve`. The root `logo.txt` and `icon.txt` supply terminal and About defaults. Existing user branding is not overwritten by a checkout update.
 

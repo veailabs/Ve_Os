@@ -120,4 +120,4 @@ Omarchy is released under the [MIT License](https://opensource.org/licenses/MIT)
 
 ## Ve appearance
 
-The desktop menu uses the Ve mail mark. Select the matching palette with `omarchy theme set Ve`. See [Ve branding](docs/ve-branding.md) for asset provenance and the dev preview scope.
+The desktop menu and dock app launcher use the Ve mail mark. Select the matching palette with `omarchy theme set Ve`. See [Ve branding](docs/ve-branding.md) for asset provenance and the dev preview scope.

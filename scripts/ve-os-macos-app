@@ -38,7 +38,7 @@ export OMARCHY_PRODUCT_ICON="$resources/Ve.icns"
 IFS= read -r OMARCHY_QEMU_GPU_SHARED_FOLDER < "$resources/checkout-path"
 export OMARCHY_QEMU_GPU_SHARED_FOLDER
 mkdir -p "$HOME/Library/Logs/Ve OS"
-exec '/Applications/Try Omarchy.app/Contents/Resources/scripts/run-qemu-gpu.sh' > "$HOME/Library/Logs/Ve OS/runtime.log" 2>&1
+exec /usr/bin/arch -arm64 /bin/bash '/Applications/Try Omarchy.app/Contents/Resources/scripts/run-qemu-gpu.sh' > "$HOME/Library/Logs/Ve OS/runtime.log" 2>&1
 LAUNCHER
 chmod +x "$bundle/Contents/MacOS/ve-os"
 plutil -lint "$bundle/Contents/Info.plist"

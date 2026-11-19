@@ -156,7 +156,8 @@ wait "$inhibit_update_pid"
 (( inhibitor_holds_lock == 0 )) || fail "update keeps the update lock out of the sleep inhibitor it leaves running"
 pass "omarchy-update keeps the update lock out of its sleep inhibitor"
 
-kill -0 "$inhibitor_pid" 2>/dev/null &&
+inhibitor_state=$(awk '{ sub(/^.*\) /, ""); print $1 }' "/proc/$inhibitor_pid/stat" 2>/dev/null || true)
+[[ -n $inhibitor_state && $inhibitor_state != "Z" ]] &&
   fail "update waits for its sleep inhibitor to stop before continuing"
 pass "omarchy-update waits for its sleep inhibitor to stop"
 

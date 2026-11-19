@@ -1,4 +1,6 @@
-# Ve_Os
+<img src="logo.svg" alt="Ve" width="88" height="88">
+
+# Ve OS
 
 Ve team development fork of [Omarchy](https://github.com/omacom/omarchy). This repository starts from the existing Omarchy desktop; Ve-specific interface and service integration work has not been implemented yet.
 
@@ -115,3 +117,7 @@ The manual lives in [`manual/`](manual/), which is its authoritative source.
 ## License
 
 Omarchy is released under the [MIT License](https://opensource.org/licenses/MIT).
+
+## Ve appearance
+
+The desktop menu uses the Ve mail mark. Select the matching palette with `omarchy theme set Ve`. See [Ve branding](docs/ve-branding.md) for asset provenance and the dev preview scope.

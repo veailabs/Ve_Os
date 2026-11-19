@@ -32,7 +32,7 @@ Cloning source does not install Omarchy. Edit and inspect files on macOS if need
 
 Read [testing guidance](docs/testing.md) and [visual verification guidance](agents/skills/visual-verification.md). Run applicable focused tests for the changed area and attach visual evidence for UI changes. The upstream aggregate runner is `./test/all`; live desktop and graphical acceptance checks require their documented environment. A source checkout is not evidence that those checks passed.
 
-Inherited Actions workflows are present, but their activation and successful execution on this fork are not yet verified. Do not describe CI as passing until a run proves it. The translation-sync workflow requires separate credentials and must not be enabled without review.
+The Tests workflow runs translation checks and the Linux VM suite for ready PRs into `master` and manual runs. Its `ci-ok` job is required by branch protection. Check the run for the current commit before merging. Upstream credential-backed translation automation is restricted to the upstream repository.
 
 Fetch upstream changes with `git fetch upstream`. Integrate `upstream/quattro` on a dedicated feature branch, resolve conflicts, run applicable tests and open a PR against `veailabs/Ve_Os:master`. Do not reset or force-push the team's `master` to synchronize upstream.
 
@@ -123,3 +123,7 @@ Omarchy is released under the [MIT License](https://opensource.org/licenses/MIT)
 The desktop menu and dock app launcher use the Ve mail mark. Select the matching palette with `omarchy theme set Ve`. See [Ve branding](docs/ve-branding.md) for asset provenance and the dev preview scope.
 
 On an Apple Silicon Mac with Try Omarchy installed, run `scripts/ve-os-macos-app` to create `~/Applications/Ve OS.app`. Close the existing VM before opening the Ve launcher; it uses the same VM disk.
+
+## Default AI apps
+
+Grok Bot is included in the default package list and pinned to the dock. Existing installations can add it with `omarchy pkg add grok-bot` and `omarchy dock pin grok-bot`. Grok Build CLI is already a default mise tool; `mise install grok` installs it immediately instead of waiting for its first use. Open the desktop app with `gtk-launch grok-bot` and the CLI with `grok`. Sign in within each app as needed.

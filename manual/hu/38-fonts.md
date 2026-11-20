@@ -1,12 +1,12 @@
 # Betűtípusok
 
-Az Omarchy alapértelmezetten a JetBrainsMono Nerd Font betűtípust használja terminál- és rendszerbetűtípusként is.
+Az Ve OS alapértelmezetten a JetBrainsMono Nerd Font betűtípust használja terminál- és rendszerbetűtípusként is.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Ezt az Omarchy menü (`Super + Space`) _Megjelenés > Betűtípus_ menüpontjában változtathatod meg. Ez mindenhol beállítja a monospace betűtípust: a terminálban, a sávon és minden másban, ami azt kéri.
+Ezt az Ve OS menü (`Super + Space`) _Megjelenés > Betűtípus_ menüpontjában változtathatod meg. Ez mindenhol beállítja a monospace betűtípust: a terminálban, a sávon és minden másban, ami azt kéri.
 
-Más népszerű programozói betűtípusokat az Omarchy menü _Telepítés > Stílus > Betűtípus_ menüpontjában telepíthetsz: a Cascadia Mono, a Meslo LG Mono, a Fira Code, a Victor Code, a Bitstream Vera Mono és az Iosevka mind egy kattintásra elérhetők, Nerd Font változatukban, így a sávban és a terminálban lévő glifák továbbra is működnek. Miután telepítetted az egyiket, válaszd ki a _Megjelenés > Betűtípus_ alatt.
+Más népszerű programozói betűtípusokat az Ve OS menü _Telepítés > Stílus > Betűtípus_ menüpontjában telepíthetsz: a Cascadia Mono, a Meslo LG Mono, a Fira Code, a Victor Code, a Bitstream Vera Mono és az Iosevka mind egy kattintásra elérhetők, Nerd Font változatukban, így a sávban és a terminálban lévő glifák továbbra is működnek. Miután telepítetted az egyiket, válaszd ki a _Megjelenés > Betűtípus_ alatt.
 
 ## Kínai, japán és koreai
 

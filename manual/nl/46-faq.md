@@ -28,7 +28,7 @@ Dit toont zondag 10:55 AM.
 
 ### Hoe wijzig ik mijn tijdzone?
 
-Voer _Update > Timezone_ uit in het Omarchy-menu en kies uit de lijst. Als de tijdzone klopt maar de klok zelf is verlopen, start _Update > Time_ de tijdsynchronisatie opnieuw voor je.
+Voer _Update > Timezone_ uit in het Ve OS-menu en kies uit de lijst. Als de tijdzone klopt maar de klok zelf is verlopen, start _Update > Time_ de tijdsynchronisatie opnieuw voor je.
 
 ### Hoe wijzig ik mijn DNS, deel ik mijn Wi-Fi of controleer ik mijn verbindingssnelheid?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Dat kun je ook doen voor schermopnames met `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap maakt zijn screenshotmap automatisch aan. Maak de map voor schermopnames zelf aan en herstart daarna Omarchy om een van beide omgevingswijzigingen door te voeren.
+Omasnap maakt zijn screenshotmap automatisch aan. Maak de map voor schermopnames zelf aan en herstart daarna Ve OS om een van beide omgevingswijzigingen door te voeren.
 
 ### Hoe krijg ik de luidsprekers + webcam aan de praat op mijn Apple Studio Display?
 
 Je zou denken dat het allemaal gewoon moet werken als je USB C inplugt, maar helaas is dat niet het geval. De oplossing die ik heb gevonden om het betrouwbaar te laten werken, is [de WJESOG DisplayPort + USB-A => USB-C cable](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Dan werken luidsprekers en webcam als een zonnetje.
 
-Vergeet niet dat je in Omarchy ingebouwde helderheidsbediening hebt voor de Apple Displays (zowel Studio als XDR) met de gewone helderheidstoetsen op het toetsenbord.
+Vergeet niet dat je in Ve OS ingebouwde helderheidsbediening hebt voor de Apple Displays (zowel Studio als XDR) met de gewone helderheidstoetsen op het toetsenbord.
 
 ### Hoe kom ik van al die extra software af?
 
@@ -72,7 +72,7 @@ Als je programma's als Obsidian of LibreOffice of andere vooraf geïnstalleerde 
 
 Voer _Remove > Package_ uit om elk geïnstalleerd pakket te zien. Daarna kun je met tab elk pakket selecteren dat je wilt verwijderen, en met return beginnen met het verwijderen van alles wat je hebt geselecteerd.
 
-En met _Remove > Web App_ in het Omarchy-menu kun je alle vooraf geïnstalleerde webapps verwijderen die je niet wilt.
+En met _Remove > Web App_ in het Ve OS-menu kun je alle vooraf geïnstalleerde webapps verwijderen die je niet wilt.
 
 Of voer _Remove > Preinstalls_ uit om alle vooraf geïnstalleerde extra's — webapps, TUIs en optionele applicaties — in één keer op te ruimen. De sneltoetsen waarmee je ze startte, verdwijnen ermee, dus je houdt een schone lei aan toetsbindingen over die je met je eigen bindingen kunt vullen in `~/.config/hypr/bindings.lua`.
 

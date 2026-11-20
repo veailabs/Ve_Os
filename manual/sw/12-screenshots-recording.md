@@ -41,7 +41,7 @@ Miunganiko hii ipo tu wakati Omasnap imefunguliwa, kwa hivyo haiwezi kugongana n
 
 ## Kurekodi skrini
 
-`Alt + Print Screen` hufungua _Trigger > Capture > Screenrecord_, ambayo huuliza unachotaka kwenye wimbo wa sauti: hakuna sauti, sauti ya eneo-kazi, sauti ya eneo-kazi pamoja na maikrofoni, au sauti ya eneo-kazi pamoja na maikrofoni pamoja na kamera ya wavuti. Hiyo ya mwisho huonekana tu ikiwa kweli una kamera iliyochomekwa. Chagua moja na kichaguaji cha kurekodi cha Omarchy hukuwezesha kuburuta eneo au kubofya dirisha au monita.
+`Alt + Print Screen` hufungua _Trigger > Capture > Screenrecord_, ambayo huuliza unachotaka kwenye wimbo wa sauti: hakuna sauti, sauti ya eneo-kazi, sauti ya eneo-kazi pamoja na maikrofoni, au sauti ya eneo-kazi pamoja na maikrofoni pamoja na kamera ya wavuti. Hiyo ya mwisho huonekana tu ikiwa kweli una kamera iliyochomekwa. Chagua moja na kichaguaji cha kurekodi cha Ve OS hukuwezesha kuburuta eneo au kubofya dirisha au monita.
 
 Kurekodi huendeshwa na gpu-screen-recorder, ambayo husimba kwenye GPU kwa 60fps na hurudi kwenye CPU ikilazimika. Matokeo yake ni MP4 katika `~/Videos`, yenye jina `screenrecording-2026-08-13_14-22-05.mp4`. Weka `OMARCHY_SCREENRECORD_DIR` ili kubadilisha hilo — lakini kumbuka kuwa tofauti na saraka ya picha za skrini, hii lazima iwepo tayari, vinginevyo rekodi hukataa kuanza.
 

@@ -8,7 +8,7 @@ Elke sneltoets bevindt zich op een vlak, bepaald door de modificatietoetsen, en 
 
 | Vlak | Wat daar thuishoort | Voorbeelden |
 | --- | --- | --- |
-| `Super + key` | Het systeem: vensters, werkruimten, indelingen en kernmenu's | `Super + Space` Omarchy-menu, `Super + W` venster sluiten, `Super + F` volledig scherm |
+| `Super + key` | Het systeem: vensters, werkruimten, indelingen en kernmenu's | `Super + Space` Ve OS-menu, `Super + W` venster sluiten, `Super + F` volledig scherm |
 | `Super + Shift + key` | Apps | `Super + Shift + B` browser, `Super + Shift + E` e-mail, `Super + Shift + N` editor |
 | `Super + Ctrl + key` | Panelen en systeemmenu's | `Super + Ctrl + A` audio, `Super + Ctrl + N` netwerk, `Super + Ctrl + C` vastlegmenu |
 | `Super + Ctrl + Alt + key` | Snelle acties en meldingen | `Super + Ctrl + Alt + T` tijd weergeven, `Super + Ctrl + Alt + B` batterij, `Super + Ctrl + Alt + C` schermafbeelding |
@@ -34,7 +34,7 @@ Als een standaardinstelling je niet bevalt (stel dat je `Super + Shift + S` wilt
 
 | Sneltoets                  | Functie              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Omarchy-menu (apps en al het andere)    |
+| `Super + Space`           | Ve OS-menu (apps en al het andere)    |
 | `Super + Alt + Space` | App-raster |
 | `Super + Escape` | Systeemmenu (slaapstand, herstarten, enz.)  |
 | `Super + Ctrl + L` | Computer vergrendelen |
@@ -172,7 +172,7 @@ Wijzig/voeg bindingen toe in `~/.config/hypr/bindings.lua`.
 | `Super + V`           | Plakken    |
 | `Super + Ctrl + V`           | Klembordbeheerder    |
 
-Normaal gesproken heb je op Linux `Ctrl + Shift + C/V` nodig om in de terminal te kopiëren'n'plakken en `Ctrl + C/V` om het overal elders te doen. Deze uniforme klembordsneltoetsen van Omarchy werken overal.
+Normaal gesproken heb je op Linux `Ctrl + Shift + C/V` nodig om in de terminal te kopiëren'n'plakken en `Ctrl + C/V` om het overal elders te doen. Deze uniforme klembordsneltoetsen van Ve OS werken overal.
 
 ## Vastleggen
 
@@ -194,7 +194,7 @@ Normaal gesproken heb je op Linux `Ctrl + Shift + C/V` nodig om in de terminal t
 
 Bij schermopnamen vraagt de sneltoets eerst welke audio je wilt, en start dan de opname. Druk er opnieuw op om te stoppen. Zie [schermafbeeldingen en opnamen](12-screenshots-recording.md) voor de details.
 
-Alle vastlegopties zijn ook toegankelijk onder _Trigger > Capture_ in het Omarchy-menu (`Super + Space`).
+Alle vastlegopties zijn ook toegankelijk onder _Trigger > Capture_ in het Ve OS-menu (`Super + Space`).
 
 ## Meldingen
 
@@ -216,9 +216,9 @@ Alle vastlegopties zijn ook toegankelijk onder _Trigger > Capture_ in het Omarch
 | `Super + Backspace` | Transparantie op een venster in-/uitschakelen |
 | `Super + Ctrl + Backspace` | Vierkante verhouding voor één venster in-/uitschakelen |
 
-Extra achtergrondafbeeldingen staan in `~/.config/omarchy/backgrounds/<theme name>`. Ook beschikbaar via _Install > Style > Background_ in het Omarchy-menu.
+Extra achtergrondafbeeldingen staan in `~/.config/omarchy/backgrounds/<theme name>`. Ook beschikbaar via _Install > Style > Background_ in het Ve OS-menu.
 
-Alle stijlopties zijn ook toegankelijk onder _Style_ in het Omarchy-menu (`Super + Space`).
+Alle stijlopties zijn ook toegankelijk onder _Style_ in het Ve OS-menu (`Super + Space`).
 
 ## Schakelaars
 
@@ -319,7 +319,7 @@ Deze functies moeten binnen een Tmux-sessie worden uitgevoerd.
 
 ## Ghostty Terminal
 
-Ghostty-terminal wordt geïnstalleerd met _Install > Terminal_ via het Omarchy-menu.
+Ghostty-terminal wordt geïnstalleerd met _Install > Terminal_ via het Ve OS-menu.
 
 | Sneltoets                  | Functie              |
 | ----------------------- | --------------------- |

@@ -1,14 +1,14 @@
 # Thanh trên cùng
 
-Dải nằm dọc theo cạnh trên của màn hình là thanh Omarchy. Nó không phải một thanh trạng thái gắn thêm vào, mà là một phần của shell Omarchy, tiến trình Quickshell duy nhất chạy lâu dài, cũng là tiến trình vẽ menu, thông báo, các cửa sổ bật lên OSD và màn hình khóa. Đó là lý do nó ăn khớp hoàn hảo về giao diện với mọi thứ khác, và là lý do một bảng mở ra ngay lập tức thay vì phải khởi chạy một ứng dụng mới.
+Dải nằm dọc theo cạnh trên của màn hình là thanh Ve OS. Nó không phải một thanh trạng thái gắn thêm vào, mà là một phần của shell Ve OS, tiến trình Quickshell duy nhất chạy lâu dài, cũng là tiến trình vẽ menu, thông báo, các cửa sổ bật lên OSD và màn hình khóa. Đó là lý do nó ăn khớp hoàn hảo về giao diện với mọi thứ khác, và là lý do một bảng mở ra ngay lập tức thay vì phải khởi chạy một ứng dụng mới.
 
 Đây cũng là phần duy nhất của desktop luôn hiện trên màn hình, vì vậy đáng để biết tất cả những ký hiệu nhỏ xíu đó làm gì.
 
 ## Có gì trên đó theo mặc định
 
-Thanh này có ba phần. Ở bên trái là logo Omarchy (trình khởi chạy menu) và các chỉ báo không gian làm việc. Ở giữa, bạn có các chỉ báo trạng thái, đồng hồ, Elsewhen (một đồng hồ thế giới), thời tiết và huy hiệu cập nhật Omarchy. Ở bên phải: khay hệ thống, bố cục bàn phím (khi có nhiều hơn một bố cục được cấu hình), agents, Bluetooth, mạng, âm thanh, màn hình và nguồn điện.
+Thanh này có ba phần. Ở bên trái là logo Ve OS (trình khởi chạy menu) và các chỉ báo không gian làm việc. Ở giữa, bạn có các chỉ báo trạng thái, đồng hồ, Elsewhen (một đồng hồ thế giới), thời tiết và huy hiệu cập nhật Ve OS. Ở bên phải: khay hệ thống, bố cục bàn phím (khi có nhiều hơn một bố cục được cấu hình), agents, Bluetooth, mạng, âm thanh, màn hình và nguồn điện.
 
-Một vài thứ trong số đó chỉ xuất hiện khi chúng có điều gì đó để nói. Bố cục bàn phím chỉ xuất hiện nếu bạn đã cấu hình nhiều hơn một bố cục. Huy hiệu cập nhật chỉ xuất hiện khi có một bản cập nhật Omarchy đang chờ. Và biểu tượng agents xuất hiện ngay lần đầu tiên Omarchy tìm thấy việc sử dụng AI coding trên máy (xem [AI](17-ai.md)).
+Một vài thứ trong số đó chỉ xuất hiện khi chúng có điều gì đó để nói. Bố cục bàn phím chỉ xuất hiện nếu bạn đã cấu hình nhiều hơn một bố cục. Huy hiệu cập nhật chỉ xuất hiện khi có một bản cập nhật Ve OS đang chờ. Và biểu tượng agents xuất hiện ngay lần đầu tiên Ve OS tìm thấy việc sử dụng AI coding trên máy (xem [AI](17-ai.md)).
 
 ## Nhấp chuột khắp nơi
 
@@ -16,7 +16,7 @@ Gần như mọi widget đều làm một việc gì đó khi nhấp chuột tr�
 
 | Widget | Trái | Phải | Giữa / cuộn |
 | --- | --- | --- | --- |
-| Menu | Menu Omarchy | Terminal mới | — |
+| Menu | Menu Ve OS | Terminal mới | — |
 | Các không gian làm việc | Chuyển đến không gian làm việc đó trên màn hình này | — | Cuộn: không gian làm việc tiếp theo/trước đó |
 | Đồng hồ | Cửa sổ bật lên lịch | Chuyển vòng qua các định dạng nhãn | Giữa: bộ chọn múi giờ |
 | Thời tiết | Cửa sổ bật lên dự báo | Toàn bộ thời tiết dưới dạng thông báo | Giữa: làm mới |
@@ -29,7 +29,7 @@ Gần như mọi widget đều làm một việc gì đó khi nhấp chuột tr�
 | Media | Phát/tạm dừng | Cửa sổ bật lên ảnh bìa | Giữa: bài tiếp theo · cuộn: bài trước/tiếp theo |
 | Agents | Bảng agents | Khởi chạy agent của bạn | Giữa: gói đăng ký tiếp theo |
 | Khay | Di chuột lên để hiện ngăn kéo | Nhấp chuột phải vào dấu chevron để quản lý | — |
-| Cập nhật Omarchy | Chạy cập nhật | — | — |
+| Cập nhật Ve OS | Chạy cập nhật | — | — |
 
 Không phải mọi thứ trong bảng đó đều có trên thanh của bạn ngay từ đầu. Widget media (MPRIS đang phát, với bản nhạc và nghệ sĩ cuộn qua) và widget micrô đều được tích hợp sẵn nhưng tắt theo mặc định — hãy thêm chúng nếu bạn muốn, như mô tả bên dưới.
 
@@ -137,6 +137,6 @@ Mỗi widget là một mục trong một trong năm mảng bố cục, và các 
 
 `center` là hộp ở giữa thanh: mọi thứ trong đó được căn giữa trên màn hình như một nhóm. `centerBegin` và `centerEnd` treo vào hai phía của hộp, đó là cách đồng hồ luôn ở chính giữa ngay cả khi thời tiết và huy hiệu cập nhật đến và đi. Đặt nhiều hơn một widget trong `center` và chúng được căn giữa cùng nhau; để nó trống và `centerBegin` cùng `centerEnd` gặp nhau ở giữa thanh.
 
-Một quy tắc đáng khắc sâu: **một khi bạn có `shell.json` của riêng mình, nó là thứ có tính chuẩn tắc**. Cho đến khi bạn tùy chỉnh bất cứ thứ gì, shell đọc tệp mặc định của Omarchy. Ngay khoảnh khắc bạn kéo một widget, chạy `omarchy bar`, hoặc tự sửa tệp, bạn sở hữu nó — không có phép trộn sâu nào cả, vì vậy các widget mặc định mới trong các bản phát hành Omarchy tương lai sẽ không xuất hiện trên thanh của bạn một cách tự động. `omarchy bar defaults` đưa bố cục được phát hành kèm theo trở lại bất cứ khi nào bạn muốn một khởi đầu sạch sẽ.
+Một quy tắc đáng khắc sâu: **một khi bạn có `shell.json` của riêng mình, nó là thứ có tính chuẩn tắc**. Cho đến khi bạn tùy chỉnh bất cứ thứ gì, shell đọc tệp mặc định của Ve OS. Ngay khoảnh khắc bạn kéo một widget, chạy `omarchy bar`, hoặc tự sửa tệp, bạn sở hữu nó — không có phép trộn sâu nào cả, vì vậy các widget mặc định mới trong các bản phát hành Ve OS tương lai sẽ không xuất hiện trên thanh của bạn một cách tự động. `omarchy bar defaults` đưa bố cục được phát hành kèm theo trở lại bất cứ khi nào bạn muốn một khởi đầu sạch sẽ.
 
 Cùng tệp đó cũng chứa các thời gian chờ không hoạt động của bạn ở cấp cao nhất, ngoài khóa `bar`: `idle.screensaver` và `idle.lock`, cả hai đều tính bằng giây kể từ khi bạn không hoạt động. Vì vậy trình bảo vệ màn hình mặc định bắt đầu chạy ở 150 giây và khóa ở 300 giây.

@@ -1,6 +1,6 @@
 # Blagovna znamka
 
-Omarchy vam omogoča, da nastavite logotip svojega podjetja ali osebno sliko za odklepanje ob zagonu, ohranjevalnik zaslona in zaslon O programu.
+Ve OS vam omogoča, da nastavite logotip svojega podjetja ali osebno sliko za odklepanje ob zagonu, ohranjevalnik zaslona in zaslon O programu.
 
 ### Odklepanje ob zagonu
 
@@ -24,11 +24,11 @@ V tem meniju so trije vnosi:
 
 - **Uredi besedilo** odpre `~/.config/omarchy/branding/screensaver.txt` v vašem urejevalniku. Vnesite ali prilepite, kar želite — umetnost ASCII, svoje ime, prostaško besedo. Shranite in zaprite in ohranjevalnik zaslona se takoj zažene, da si ga lahko ogledate.
 - **Nastavi iz slike** odpre izbirnik datotek za png ali svg, jo pretvori v ASCII in vam pokaže rezultat. Logotipi z jasno silhueto delujejo veliko bolje kot fotografije.
-- **Obnovi privzeto** vrne logotip Omarchy nazaj.
+- **Obnovi privzeto** vrne logotip Ve OS nazaj.
 
 ### Zaslon O programu
 
-Iste tri možnosti so pod _Videz > Blagovna znamka > O programu_ za zaslon _O programu_, ki ga dobite iz menija Omarchy, in delujejo enako — datoteka je `~/.config/omarchy/branding/about.txt`, okno O programu pa se po vsaki spremembi pojavi. Umetnost za zaslon O programu se pretvori v manjšo velikost kot tista za ohranjevalnik zaslona, saj se mora prilegati v okno, namesto da bi zapolnila vaš zaslon.
+Iste tri možnosti so pod _Videz > Blagovna znamka > O programu_ za zaslon _O programu_, ki ga dobite iz menija Ve OS, in delujejo enako — datoteka je `~/.config/omarchy/branding/about.txt`, okno O programu pa se po vsaki spremembi pojavi. Umetnost za zaslon O programu se pretvori v manjšo velikost kot tista za ohranjevalnik zaslona, saj se mora prilegati v okno, namesto da bi zapolnila vaš zaslon.
 
 Medtem ko je okno odprto, se vsakih nekaj sekund čez umetnost nagne zelen lesk in jo nato spet pusti pri miru. Tudi vaša lastna umetnost ga dobi, če je vsak znak v njej širok en stolpec — vse, kar ustvari _Nastavi iz slike_, je. Umetnost, sestavljena iz emojijev ali znakov dvojne širine, namesto tega ostane pri miru, prav tako pa zaslon, če obdržite svojo konfiguracijo fastfetch: mirujoč logotip je v teh primerih animacija, ki se umakne s poti, namesto da bi odpovedala, saj bi drsenje leska čez njih preostanek vrstice postavilo na napačno mesto.
 

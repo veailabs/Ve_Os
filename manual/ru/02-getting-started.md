@@ -1,4 +1,6 @@
-# Начало работы
+# Ve OS — Начало работы
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy устанавливается с помощью ISO. Вы можете выбрать между установкой на весь диск, которая занимает весь накопитель целиком, или установкой в свободное пространство, которая ставит Omarchy в нераспределённое пространство на диске — именно так выполняется двойная загрузка рядом с Windows или другой OS (см. [установка с двойной загрузкой](50-dual-boot-install.md) — учтите, что сначала в Windows нужно отключить BitLocker). В любом случае по умолчанию установка выполняется с полным шифрованием, а вариант на весь диск сотрёт выбранный накопитель, так что обязательно сделайте резервную копию, прежде чем использовать существующий диск!
 

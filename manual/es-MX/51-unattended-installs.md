@@ -1,4 +1,6 @@
-# Instalaciones desatendidas
+# Ve OS — Instalaciones desatendidas
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 La ISO de Omarchy puede instalarse sola, sin nadie frente al teclado. Si el instalador encuentra una segunda unidad etiquetada como `cidata` con sus archivos de configuración, los copia, se salta por completo el asistente de configuración y reinicia por su cuenta en el sistema ya terminado. No necesitas una ISO especial ni una entrada extra en el menú de arranque: si no hay una unidad así conectada, nada cambia y obtienes el asistente normal.
 

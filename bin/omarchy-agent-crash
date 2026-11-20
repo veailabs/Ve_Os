@@ -32,7 +32,7 @@ when=${when:-unknown}
 
 prompt=$(
   cat <<PROMPT
-A process crashed on this Omarchy machine and I want to know why.
+A process crashed on this Ve OS machine and I want to know why.
 
 What systemd-coredump recorded:
   process:  $comm

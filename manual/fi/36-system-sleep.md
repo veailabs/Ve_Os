@@ -1,12 +1,12 @@
 # Järjestelmän lepotila
 
-Omarchy ottaa valmiustilan ja horrostilan käyttöön oletuksena, mutta jos sinulla on ongelmia kumman tahansa kanssa koneellasi, voit kytkeä ne pois päältä.
+Ve OS ottaa valmiustilan ja horrostilan käyttöön oletuksena, mutta jos sinulla on ongelmia kumman tahansa kanssa koneellasi, voit kytkeä ne pois päältä.
 
 NVIDIA GB10 -koneissa, kuten DGX Sparkissa ja ASUS Ascent GX10:ssä, valmiustila ja horrostila on kytketty pois päältä, samoin kuin NVIDIA:n DGX OS:ssä, koska lepotilan ei ole vielä osoitettu toimivan sillä laitteistolla. Sama koskee ASUS Zenbook A16 (UX3607OA) -konetta, jossa valmiustila ei vielä saa sirua täysin lepotilaan ja se voi jumiutua yön aikana. Valmiustilan kytkin ja horrostilan määritys eivät koske niitä. Kytke lepotila takaisin päälle poistamalla `/etc/systemd/sleep.conf.d/omarchy-sleep-disabled.conf` komennolla `sudo rm`; Valmiustila palaa tämän jälkeen valikkoon, ja horrostilan voi määrittää kuten muissakin koneissa. Komennon `sudo omarchy apply hardware --install-user "$USER"` suorittaminen palauttaa tiedoston.
 
 ### Virtaprofiilit
 
-Kannettavalla Omarchy muistaa virtaprofiilisi erikseen verkkovirralla käytettäessä ja akulla käytettäessä, ja vaihtaa näiden kahden välillä, kun kytket johdon ja irrotat sen. Suoraan käytössä se tarkoittaa suorituskykyä verkkovirralla ja tasapainotettua akulla.
+Kannettavalla Ve OS muistaa virtaprofiilisi erikseen verkkovirralla käytettäessä ja akulla käytettäessä, ja vaihtaa näiden kahden välillä, kun kytket johdon ja irrotat sen. Suoraan käytössä se tarkoittaa suorituskykyä verkkovirralla ja tasapainotettua akulla.
 
 Näet, mitä koneesi tarjoaa, komennolla `omarchy powerprofiles list`, ja asetat haluamasi nykyiselle tilallesi komennolla `omarchy powerprofiles set autodetect power-saver`. Aseta toinen tila irrottamatta mitään nimeämällä se suoraan: `omarchy powerprofiles set battery power-saver`. Minkä tahansa valitsetkin, saat sen takaisin seuraavalla kerralla, kun olet siinä tilassa.
 

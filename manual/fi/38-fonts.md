@@ -1,12 +1,12 @@
 # Fontit
 
-Omarchy käyttää oletuksena JetBrainsMono Nerd Font -fonttia sekä päätteen että järjestelmän fonttina.
+Ve OS käyttää oletuksena JetBrainsMono Nerd Font -fonttia sekä päätteen että järjestelmän fonttina.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Voit vaihtaa sen Omarchy-valikon _Appearance > Font_ -valikon kautta (`Super + Space`). Se määrittää tasalevyisen fontin kaikkialle: päätteeseen, palkkiin ja kaikkeen muuhun, joka sitä pyytää.
+Voit vaihtaa sen Ve OS-valikon _Appearance > Font_ -valikon kautta (`Super + Space`). Se määrittää tasalevyisen fontin kaikkialle: päätteeseen, palkkiin ja kaikkeen muuhun, joka sitä pyytää.
 
-Voit asentaa muita suosittuja ohjelmointifontteja Omarchy-valikon kohdan _Install > Style > Font_ kautta: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono ja Iosevka ovat kaikki yhden napsautuksen päässä niiden Nerd Font -versioina, joten palkin ja päätteen glyfit toimivat edelleen. Kun olet asentanut jonkin niistä, valitse se kohdasta _Appearance > Font_.
+Voit asentaa muita suosittuja ohjelmointifontteja Ve OS-valikon kohdan _Install > Style > Font_ kautta: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono ja Iosevka ovat kaikki yhden napsautuksen päässä niiden Nerd Font -versioina, joten palkin ja päätteen glyfit toimivat edelleen. Kun olet asentanut jonkin niistä, valitse se kohdasta _Appearance > Font_.
 
 ## Kiina, japani ja korea
 

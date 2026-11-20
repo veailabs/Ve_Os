@@ -6,19 +6,19 @@ Primero intenta [revertir tu sistema](47-system-snapshots.md) a la versión ante
 
 ### ¿Por qué algunas apps se ven tan grandes en mi pantalla?
 
-Omarchy asume una pantalla de alta resolución 2x, así que establece `GDK_SCALE` en 2 hasta que elijas una escala en el panel del monitor. Si estás en una pantalla 1x y las apps GTK o X11 se ven enormes, elige 1x para ella en el panel del monitor, o agrega `hl.env("GDK_SCALE", "1")` a `~/.config/hypr/monitors.lua` (y después reinicia cualquier app que se vea enorme). Consulta [el manual sobre monitores](33-monitors.md).
+Ve OS asume una pantalla de alta resolución 2x, así que establece `GDK_SCALE` en 2 hasta que elijas una escala en el panel del monitor. Si estás en una pantalla 1x y las apps GTK o X11 se ven enormes, elige 1x para ella en el panel del monitor, o agrega `hl.env("GDK_SCALE", "1")` a `~/.config/hypr/monitors.lua` (y después reinicia cualquier app que se vea enorme). Consulta [el manual sobre monitores](33-monitors.md).
 
 Para Spotify, puedes usar `Ctrl + Minus` para reducir la interfaz (y `Ctrl + Plus` para agrandarla).
 
 ### ¿Por qué dejaron de funcionar todos mis atajos con la tecla Super?
 
-En algunas laptops ASUS ROG y TUF, `Fn + Super` es una combinación fácil de pasar por alto que activa un bloqueo de la tecla Windows a nivel firmware (pensado para jugar, para que no salgas de un juego por accidente). Nada en pantalla te dice que pasó. Mientras el bloqueo está activo, Super no emite absolutamente nada, así que todos los atajos de Omarchy que usan Super simplemente dejan de funcionar, y parece que Hyprland se rompió.
+En algunas laptops ASUS ROG y TUF, `Fn + Super` es una combinación fácil de pasar por alto que activa un bloqueo de la tecla Windows a nivel firmware (pensado para jugar, para que no salgas de un juego por accidente). Nada en pantalla te dice que pasó. Mientras el bloqueo está activo, Super no emite absolutamente nada, así que todos los atajos de Ve OS que usan Super simplemente dejan de funcionar, y parece que Hyprland se rompió.
 
 Presiona `Fn + Super` una vez antes de meterte a revisar `~/.config/hypr/`, y si eso no hace que Super vuelva, presiónala otra vez para no dejar el bloqueo activado. Esto no es el bloqueo de Fn, que solo cambia lo que hace la fila de teclas F.
 
 ### Mi Wi-Fi, Bluetooth, audio o trackpad simplemente dejó de funcionar
 
-Antes de reiniciar, intenta reiniciar por separado el subsistema que está fallando. _Actualizar > Hardware_ en el menú de Omarchy tiene Wi-Fi, Bluetooth, Audio y Trackpad, y recargar uno de esos resuelve la mayoría de las situaciones de "funcionaba hace cinco minutos": unos audífonos Bluetooth que no se vuelven a conectar, un trackpad que dejó de responder después de una suspensión, sonido que desapareció cuando desconectaste un monitor.
+Antes de reiniciar, intenta reiniciar por separado el subsistema que está fallando. _Actualizar > Hardware_ en el menú de Ve OS tiene Wi-Fi, Bluetooth, Audio y Trackpad, y recargar uno de esos resuelve la mayoría de las situaciones de "funcionaba hace cinco minutos": unos audífonos Bluetooth que no se vuelven a conectar, un trackpad que dejó de responder después de una suspensión, sonido que desapareció cuando desconectaste un monitor.
 
 ### ¿Por qué no suenan mis bocinas externas?
 
@@ -26,7 +26,7 @@ Probablemente porque no están configuradas como la salida principal. Haz clic e
 
 ### Las bocinas de mi laptop suenan raro
 
-En algunas laptops, Omarchy aplica automáticamente un ajuste de bocinas que corrige la respuesta de frecuencia de las bocinas integradas. `omarchy audio tuning status` te dice si hay uno activo en tu máquina, y `omarchy audio tuning off` lo desactiva si prefieres escuchar las bocinas sin corrección.
+En algunas laptops, Ve OS aplica automáticamente un ajuste de bocinas que corrige la respuesta de frecuencia de las bocinas integradas. `omarchy audio tuning status` te dice si hay uno activo en tu máquina, y `omarchy audio tuning off` lo desactiva si prefieres escuchar las bocinas sin corrección.
 
 ### ¿Por qué no puedo iniciar sesión ni usar sudo con mi contraseña?
 

@@ -246,7 +246,7 @@ for platform in aarch64-apple; do
     reset_boundary
     if SUDO_TEST_PLATFORM=$platform refresh "$channel"; then fail "$platform: $channel is refused"; fi
     [[ -z $(events) ]] || fail "$platform: $channel stops before anything" "$(events)"
-    grep -q "Omarchy has no $channel channel for $platform" "$boundary_tmp/output" || fail "the refusal says why" "$(cat "$boundary_tmp/output")"
+    grep -q "Ve OS has no $channel channel for $platform" "$boundary_tmp/output" || fail "the refusal says why" "$(cat "$boundary_tmp/output")"
   done
 done
 mv "$boundary_tmp/saved-template" "$SUDO_TEST_ROOT/default/pacman/aarch64-apple/pacman-stable.conf"

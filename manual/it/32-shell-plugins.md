@@ -1,10 +1,10 @@
 # Plugin della shell
 
-Il desktop Omarchy gira come un singolo processo Quickshell a lunga durata chiamato `omarchy-shell`, e quasi tutto ciò che vedi sullo schermo è un plugin al suo interno. La barra è un plugin. Lo sono anche i pannelli che scendono da essa, gli overlay a schermo intero come il selettore di emoji e il gestore degli appunti, il menu Omarchy stesso, la schermata di blocco, la finestra di dialogo polkit e i servizi headless che monitorano la batteria e riscaldano lo schermo di notte.
+Il desktop Ve OS gira come un singolo processo Quickshell a lunga durata chiamato `omarchy-shell`, e quasi tutto ciò che vedi sullo schermo è un plugin al suo interno. La barra è un plugin. Lo sono anche i pannelli che scendono da essa, gli overlay a schermo intero come il selettore di emoji e il gestore degli appunti, il menu Ve OS stesso, la schermata di blocco, la finestra di dialogo polkit e i servizi headless che monitorano la batteria e riscaldano lo schermo di notte.
 
-Non è solo un dettaglio di implementazione. Significa che puoi disattivare pezzi del desktop, sostituirli o scriverne di tuoi senza toccare una riga del sorgente di Omarchy.
+Non è solo un dettaglio di implementazione. Significa che puoi disattivare pezzi del desktop, sostituirli o scriverne di tuoi senza toccare una riga del sorgente di Ve OS.
 
-I plugin di prima parte sono inclusi con Omarchy e vivono in `$OMARCHY_PATH/shell/plugins/`. Tutto ciò che aggiungi tu — i tuoi esperimenti o qualcosa che hai trovato su GitHub — vive in `~/.config/omarchy/plugins/`. Entrambi vengono scoperti allo stesso modo all'avvio, ma quelli integrati ricevono interfacce shell fidate mentre i plugin di terze parti ricevono un'interfaccia limitata circoscritta al proprio servizio e ciclo di vita. I cloni di quelli integrati conservano solo la configurazione specifica della sorgente e le chiamate UI necessarie per il comportamento originale.
+I plugin di prima parte sono inclusi con Ve OS e vivono in `$OMARCHY_PATH/shell/plugins/`. Tutto ciò che aggiungi tu — i tuoi esperimenti o qualcosa che hai trovato su GitHub — vive in `~/.config/omarchy/plugins/`. Entrambi vengono scoperti allo stesso modo all'avvio, ma quelli integrati ricevono interfacce shell fidate mentre i plugin di terze parti ricevono un'interfaccia limitata circoscritta al proprio servizio e ciclo di vita. I cloni di quelli integrati conservano solo la configurazione specifica della sorgente e le chiamate UI necessarie per il comportamento originale.
 
 ## Vedere cosa hai
 

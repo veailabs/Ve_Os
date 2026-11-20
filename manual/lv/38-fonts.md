@@ -1,12 +1,12 @@
 # Fonti
 
-Omarchy pēc noklusējuma kā termināļa un sistēmas fontu izmanto JetBrainsMono Nerd Font.
+Ve OS pēc noklusējuma kā termināļa un sistēmas fontu izmanto JetBrainsMono Nerd Font.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-To var mainīt Omarchy izvēlnes sadaļā _Izskats > Fonts_ (`Super + Space`). Tas iestata vienplatuma fontu visur: terminālī, joslā un visā citā, kas to pieprasa.
+To var mainīt Ve OS izvēlnes sadaļā _Izskats > Fonts_ (`Super + Space`). Tas iestata vienplatuma fontu visur: terminālī, joslā un visā citā, kas to pieprasa.
 
-Citus populārus programmēšanas fontus var instalēt Omarchy izvēlnes sadaļā _Instalēt > Stils > Fonts_: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono un Iosevka ir pieejami ar vienu klikšķi, to Nerd Font versijās, lai glifi joslā un terminālī turpinātu darboties. Pēc kāda no tiem instalēšanas izvēlies to sadaļā _Izskats > Fonts_.
+Citus populārus programmēšanas fontus var instalēt Ve OS izvēlnes sadaļā _Instalēt > Stils > Fonts_: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono un Iosevka ir pieejami ar vienu klikšķi, to Nerd Font versijās, lai glifi joslā un terminālī turpinātu darboties. Pēc kāda no tiem instalēšanas izvēlies to sadaļā _Izskats > Fonts_.
 
 ## Ķīniešu, japāņu un korejiešu
 

@@ -1,12 +1,12 @@
 # Kommer du fra Mac eller Windows
 
-Hvis du har brukt macOS eller Windows i årevis, kan fingrene dine hundre ting hjernen din har glemt at den noen gang lærte. Dette kapitlet er oversettelseslaget: hvor de instinktene hører hjemme i Omarchy. Selve funksjonene er dekket grundig andre steder — dette er bare kartet.
+Hvis du har brukt macOS eller Windows i årevis, kan fingrene dine hundre ting hjernen din har glemt at den noen gang lærte. Dette kapitlet er oversettelseslaget: hvor de instinktene hører hjemme i Ve OS. Selve funksjonene er dekket grundig andre steder — dette er bare kartet.
 
 ### Super er midtpunktet i alt
 
-All muskelhukommelsen du har bygget rundt Cmd eller Windows-tasten, overføres til én tast: Super. Det er Windows-tasten på et PC-tastatur, og den er ankeret for nesten alle hurtigtaster i Omarchy.
+All muskelhukommelsen du har bygget rundt Cmd eller Windows-tasten, overføres til én tast: Super. Det er Windows-tasten på et PC-tastatur, og den er ankeret for nesten alle hurtigtaster i Ve OS.
 
-Refleksen din etter Spotlight, Raycast eller Start-menyen blir `Super + Space`. Det åpner Omarchy-menyen, som starter apper, endrer innstillinger, installerer programvare, tar skjermbilder — omtrent alt. Begynn å skrive for å filtrere. `Super + Alt + Space` viser alle appene i ett rutenett, slik Launchpad gjør. Se [navigering](04-navigation.md).
+Refleksen din etter Spotlight, Raycast eller Start-menyen blir `Super + Space`. Det åpner Ve OS-menyen, som starter apper, endrer innstillinger, installerer programvare, tar skjermbilder — omtrent alt. Begynn å skrive for å filtrere. `Super + Alt + Space` viser alle appene i ett rutenett, slik Launchpad gjør. Se [navigering](04-navigation.md).
 
 ### Det finnes ingen dock og ingen skrivebordsikoner
 
@@ -22,15 +22,15 @@ Arbeidsområder vil føles kjente: de er Spaces i macOS eller virtuelle skrivebo
 
 ### Kopiering og liming bare fungerer
 
-På Mac hadde du Cmd + C overalt. På Windows hadde du Ctrl + C overalt — bortsett fra i terminalen, der den dreper programmet ditt. Omarchy gir deg `Super + C`, `Super + X` og `Super + V`, og de fungerer overalt, også i terminalen. Ingen egen refleks å lære for skallet.
+På Mac hadde du Cmd + C overalt. På Windows hadde du Ctrl + C overalt — bortsett fra i terminalen, der den dreper programmet ditt. Ve OS gir deg `Super + C`, `Super + X` og `Super + V`, og de fungerer overalt, også i terminalen. Ingen egen refleks å lære for skallet.
 
 Windows-folk: utklippstavlehistorikken din fra Win + V bor på `Super + Ctrl + V`, og den tar vare på bilder så vel som tekst. Se [samlet utklippstavle og historikk](08-unified-clipboard-history.md).
 
 ### Oversettelsestabellen
 
-| Du strekker deg etter | I Omarchy |
+| Du strekker deg etter | I Ve OS |
 | ------------- | ---------- |
-| Spotlight / Raycast / Start-meny | `Super + Space` — Omarchy-menyen |
+| Spotlight / Raycast / Start-meny | `Super + Space` — Ve OS-menyen |
 | AirDrop | LocalSend, via `Super + Ctrl + S` — se [GUIs](22-guis.md) |
 | Cmd + Shift + 4 / Win + Shift + S | `Super + Ctrl + Alt + C` eller `Print Screen` — se [skjermbilder og opptak](12-screenshots-recording.md) |
 | Notification Center | Varselhistorikk på `Super + Shift + Alt + ,` |
@@ -42,7 +42,7 @@ Windows-folk: utklippstavlehistorikken din fra Win + V bor på `Super + Ctrl + V
 
 Mange innstillinger bor i tekstfiler du redigerer, ikke i paneler du klikker deg gjennom. Det høres primitivt ut til du innser at det betyr at hver justering kan ses, kopieres til din neste maskin og settes i versjonskontroll. _Oppsett_-menyen slipper deg rett inn i riktig fil og starter det som må startes på nytt, når du er ferdig.
 
-Oppdateringer kommer gjennom én kommando — _Oppdater > Omarchy_ — som oppdaterer selve Omarchy og hver pakke på systemet, og tar et øyeblikksbilde først. Ingen oppdateringsprogrammer per app som maser på deg i tide og utide. Se [oppdateringer](30-updates.md).
+Oppdateringer kommer gjennom én kommando — _Oppdater > Ve OS_ — som oppdaterer selve Ve OS og hver pakke på systemet, og tar et øyeblikksbilde først. Ingen oppdateringsprogrammer per app som maser på deg i tide og utide. Se [oppdateringer](30-updates.md).
 
 Programvare kommer fra en pakkebehandler, ikke fra nedlastede installasjonsprogrammer.
 
@@ -50,7 +50,7 @@ Og når du lukker et vindu, avsluttes appen faktisk. Det finnes ingen macOS-limb
 
 ### På Mac-maskinvare
 
-Omarchy kjører bra på Intel-Macer — se [Mac-støtte](44-mac-support.md). Og tastaturet er snilt mot deg: Omarchy tilordner ingenting på nytt, og Linux behandler Command-tasten som Super, så Super sitter akkurat der Cmd alltid var. Tommelen din vil ikke merke flyttingen.
+Ve OS kjører bra på Intel-Macer — se [Mac-støtte](44-mac-support.md). Og tastaturet er snilt mot deg: Ve OS tilordner ingenting på nytt, og Linux behandler Command-tasten som Super, så Super sitter akkurat der Cmd alltid var. Tommelen din vil ikke merke flyttingen.
 
 ### Gi det to uker
 

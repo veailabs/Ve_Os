@@ -39,6 +39,7 @@ concurrency:
 
 jobs:
   prepare:
+    if: github.repository == 'omacom/omarchy'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     outputs:
@@ -438,7 +439,7 @@ jobs:
               if [ "$(gh pr view "$pr" --json autoMergeRequest --jq '.autoMergeRequest != null')" = true ]; then
                 gh pr merge --disable-auto "$pr"
               fi
-              gh pr comment "$pr" --body 'This sync includes an automated extraction that changed executable code under `bin/`, `install/` or `shell/`, so auto-merge is off: please review those hunks before merging.'
+              gh pr comment "$pr" --body 'This sync includes an automated extraction that changed executable code under bin/, install/ or shell/, so auto-merge is off: please review those hunks before merging.'
               echo "Extraction touched code; PR #$pr waits for human review."
             else
               # Merged here rather than left to auto-merge: collect has already

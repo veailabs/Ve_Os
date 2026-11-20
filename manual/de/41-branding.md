@@ -1,6 +1,6 @@
 # Branding
 
-Omarchy ermöglicht es dir, dein Firmenlogo oder ein persönliches Bild sowohl für die Boot-Entsperrung, den Bildschirmschoner als auch den Info-Bildschirm festzulegen.
+Ve OS ermöglicht es dir, dein Firmenlogo oder ein persönliches Bild sowohl für die Boot-Entsperrung, den Bildschirmschoner als auch den Info-Bildschirm festzulegen.
 
 ### Boot-Entsperrung
 
@@ -24,11 +24,11 @@ Dieses Menü enthält drei Einträge:
 
 - **Edit Text** öffnet `~/.config/omarchy/branding/screensaver.txt` in deinem Editor. Tippe oder füge ein, was immer du willst — ASCII-Art, deinen Namen, ein unanständiges Wort. Speichere und beende den Editor, und der Bildschirmschoner startet sofort, damit du es dir ansehen kannst.
 - **Set From Image** öffnet eine Dateiauswahl für ein png oder svg, wandelt es in ASCII um und zeigt dir das Ergebnis. Logos mit einer klaren Silhouette funktionieren weitaus besser als Fotos.
-- **Restore Default** stellt das Omarchy-Logo wieder her.
+- **Restore Default** stellt das Ve OS-Logo wieder her.
 
 ### Info-Bildschirm
 
-Dieselben drei Optionen findest du unter _Appearance > Branding > About_ für den _About_-Bildschirm, den du über das Omarchy-Menü aufrufst, und sie funktionieren identisch — die Datei ist `~/.config/omarchy/branding/about.txt`, und das About-Fenster öffnet sich nach jeder Änderung. Die About-Grafik wird in einer kleineren Größe konvertiert als die des Bildschirmschoners, da sie in ein Fenster passen muss, statt deine Anzeige auszufüllen.
+Dieselben drei Optionen findest du unter _Appearance > Branding > About_ für den _About_-Bildschirm, den du über das Ve OS-Menü aufrufst, und sie funktionieren identisch — die Datei ist `~/.config/omarchy/branding/about.txt`, und das About-Fenster öffnet sich nach jeder Änderung. Die About-Grafik wird in einer kleineren Größe konvertiert als die des Bildschirmschoners, da sie in ein Fenster passen muss, statt deine Anzeige auszufüllen.
 
 Während das Fenster geöffnet ist, zieht alle paar Sekunden ein grüner Schimmer über die Grafik und lässt sie dann wieder still stehen. Deine eigene Grafik bekommt ihn auch, solange darin jedes Zeichen eine Spalte breit ist — alles, was _Set From Image_ erzeugt, ist es. Aus Emoji oder Zeichen mit doppelter Breite aufgebaute Grafik bleibt stattdessen still stehen, und das gilt auch für den Bildschirm, wenn du eine eigene fastfetch-Konfiguration behältst: Ein stillstehendes Logo ist in diesen Fällen die Animation, die sich zurückhält, statt zu versagen, denn ein Schimmer, der darüber hinweggleitet, würde den Rest der Zeile an der falschen Stelle landen lassen.
 

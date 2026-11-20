@@ -1,12 +1,12 @@
 # Tizim uyqusi
 
-Omarchy sukut bo‘yicha to‘xtatib turish va gibernatsiyani yoqadi, lekin mashinangizda ulardan biri bilan muammo bo‘lsa, ularni o‘chirib qo‘yishingiz mumkin.
+Ve OS sukut bo‘yicha to‘xtatib turish va gibernatsiyani yoqadi, lekin mashinangizda ulardan biri bilan muammo bo‘lsa, ularni o‘chirib qo‘yishingiz mumkin.
 
 NVIDIA GB10 mashinalarida, masalan DGX Spark va ASUS Ascent GX10 da, to‘xtatib turish va gibernatsiya o‘chirilgan, xuddi NVIDIA ning DGX OS dagidek, chunki uyqu rejimi bu apparatda hali ishlashi isbotlanmagan. Xuddi shu holat ASUS Zenbook A16 (UX3607OA) ga ham tegishli, unda to‘xtatib turish chipni hali to‘liq uyquga o‘tkazmaydi va kechasi osilib qolishi mumkin. To‘xtatib turishni almashtirish va gibernatsiyani sozlash u yerda qo‘llanilmaydi. Uyquni qayta yoqish uchun `/etc/systemd/sleep.conf.d/omarchy-sleep-disabled.conf` ni `sudo rm` bilan o‘chirib tashlang; Shunda Suspend menyuga qaytadi va gibernatsiyani boshqa mashinalardagi kabi sozlash mumkin bo‘ladi. `sudo omarchy apply hardware --install-user "$USER"` ni ishga tushirish faylni qayta joyiga qo‘yadi.
 
 ### Quvvat profillari
 
-Laptopda Omarchy quvvat profilingizni tarmoqqa ulangan va batareyada ishlayotgan holat uchun alohida eslab qoladi va siz ulaganingizda hamda uzganingizda ikkalasi o‘rtasida almashadi. Qutidan chiqqan holida bu AC da unumdorlik va batareyada muvozanatli degani.
+Laptopda Ve OS quvvat profilingizni tarmoqqa ulangan va batareyada ishlayotgan holat uchun alohida eslab qoladi va siz ulaganingizda hamda uzganingizda ikkalasi o‘rtasida almashadi. Qutidan chiqqan holida bu AC da unumdorlik va batareyada muvozanatli degani.
 
 Mashinangiz nimani taklif qilishini `omarchy powerprofiles list` bilan ko‘rishingiz va hozir bo‘lgan holatingiz uchun keraklisini `omarchy powerprofiles set autodetect power-saver` bilan o‘rnatishingiz mumkin. Hech narsani uzmasdan boshqa holatni o‘rnatish uchun uni to‘g‘ridan-to‘g‘ri nomlang: `omarchy powerprofiles set battery power-saver`. Nimani tanlasangiz, keyingi safar shu holatda bo‘lganingizda xuddi shuni olasiz.
 

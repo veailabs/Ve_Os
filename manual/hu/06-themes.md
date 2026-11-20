@@ -1,8 +1,8 @@
 # Témák
 
-Az Omarchy huszonkét gyönyörű témával érkezik. Közülük az Omarchy Menu _Megjelenés > Téma_ pontjában (`Super + Space`) választhatsz, vagy a `Super + Ctrl + T` billentyűkombinációval közvetlenül a témaválasztóhoz ugorhatsz.
+Az Ve OS huszonkét gyönyörű témával érkezik. Közülük az Ve OS Menu _Megjelenés > Téma_ pontjában (`Super + Space`) választhatsz, vagy a `Super + Ctrl + T` billentyűkombinációval közvetlenül a témaválasztóhoz ugorhatsz.
 
-Minden téma meghatározza az asztal, a terminál, a neovim, a tevékenységképernyő (btop), a Chromium és a teljes Omarchy-felület stílusát: a felső sávét, a menüét, az értesítésekét, az OSD-ét és a zárolási képernyőét. (Az Obsidian esetében az alkalmazáson belül, a _Megjelenés > Témák_ pontban kell kézzel kiválasztanod az Omarchy témát).
+Minden téma meghatározza az asztal, a terminál, a neovim, a tevékenységképernyő (btop), a Chromium és a teljes Ve OS-felület stílusát: a felső sávét, a menüét, az értesítésekét, az OSD-ét és a zárolási képernyőét. (Az Obsidian esetében az alkalmazáson belül, a _Megjelenés > Témák_ pontban kell kézzel kiválasztanod az Ve OS témát).
 
 Minden témához tartozik egy sor háttérkép, amelyek közül a `Super + Ctrl + W` billentyűkombinációval választhatsz.
 
@@ -75,7 +75,7 @@ Az alkalmazásindítóban és a dokkon látható ikonok a témád színeivel raj
 
 Telepíthetsz más által készített ikonkészletet a _Telepítés > Stílus > Ikonok_ pontban (vagy az `omarchy icons install <git url>` paranccsal), és az _Eltávolítás > Ikonok_ pontban távolíthatod el újra. A _Frissítés > Extra ikonok_ letölti a telepített készleteid legfrissebb verzióját.
 
-Saját készítéshez tedd az ikonjaidat a `~/.config/omarchy/icons/<name>/` mappába, alkalmazásonként egy fájlt, az alkalmazás `.desktop` fájljának `Icon=` sora után elnevezve. A `.svg` végződésű fájl úgy jelenik meg, ahogy van. A `.svg.tpl` végződésű fájl a téma színeivel rajzolódik ki: írj `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` vagy `{{ icon_shadow }}` kódot oda, ahová szín kerül. A `/usr/share/omarchy/icons/papercraft/` mappában található alapértelmezett készlet jó kiindulópont. Adj hozzá egy `preview.png` fájlt, hogy a készleted megjelenjen a választóban; enélkül az Omarchy az ikonjaidból rajzol előnézetet. Az alapértelmezett készlet egyetlen ikonjának módosításához tedd a saját verziódat a `~/.config/omarchy/icons/papercraft/` mappába.
+Saját készítéshez tedd az ikonjaidat a `~/.config/omarchy/icons/<name>/` mappába, alkalmazásonként egy fájlt, az alkalmazás `.desktop` fájljának `Icon=` sora után elnevezve. A `.svg` végződésű fájl úgy jelenik meg, ahogy van. A `.svg.tpl` végződésű fájl a téma színeivel rajzolódik ki: írj `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` vagy `{{ icon_shadow }}` kódot oda, ahová szín kerül. A `/usr/share/omarchy/icons/papercraft/` mappában található alapértelmezett készlet jó kiindulópont. Adj hozzá egy `preview.png` fájlt, hogy a készleted megjelenjen a választóban; enélkül az Ve OS az ikonjaidból rajzol előnézetet. Az alapértelmezett készlet egyetlen ikonjának módosításához tedd a saját verziódat a `~/.config/omarchy/icons/papercraft/` mappába.
 
 ### Feloldások
 

@@ -1,4 +1,6 @@
-# Felügyelet nélküli telepítések
+# Ve OS — Felügyelet nélküli telepítések
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Az Omarchy ISO képes önmagát telepíteni úgy, hogy senki sem ül a billentyűzetnél. Ha a telepítő talál egy második, `cidata` címkéjű meghajtót, amely a konfigurációs fájljait hordozza, lemásolja azokat, teljesen kihagyja a beállítási varázslót, és magától újraindul az elkészült rendszerbe. Nem kell hozzá külön ISO-build, sem extra rendszerindító menüpont — ha nincs ilyen meghajtó csatlakoztatva, semmi sem változik, és a szokásos varázslót kapod.
 

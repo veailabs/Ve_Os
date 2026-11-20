@@ -1,5 +1,5 @@
 [Unit]
-Description=Omarchy CPU frequency floor for the power profile
+Description=Ve OS CPU frequency floor for the power profile
 After=power-profiles-daemon.service systemd-logind.service
 
 [Service]

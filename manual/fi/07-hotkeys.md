@@ -8,7 +8,7 @@ Jokainen pikanäppäin on tasolla, jonka sen muokkausnäppäimet määrittävät
 
 | Taso | Mitä siellä on | Esimerkit |
 | --- | --- | --- |
-| `Super + key` | Järjestelmä: ikkunat, työtilat, asettelut ja ydinvalikot | `Super + Space` Omarchy-valikko, `Super + W` sulje ikkuna, `Super + F` koko näyttö |
+| `Super + key` | Järjestelmä: ikkunat, työtilat, asettelut ja ydinvalikot | `Super + Space` Ve OS-valikko, `Super + W` sulje ikkuna, `Super + F` koko näyttö |
 | `Super + Shift + key` | Sovellukset | `Super + Shift + B` selain, `Super + Shift + E` sähköposti, `Super + Shift + N` editori |
 | `Super + Ctrl + key` | Paneelit ja järjestelmävalikot | `Super + Ctrl + A` ääni, `Super + Ctrl + N` verkko, `Super + Ctrl + C` kaappausvalikko |
 | `Super + Ctrl + Alt + key` | Pikatoiminnot ja huomautukset | `Super + Ctrl + Alt + T` näytä aika, `Super + Ctrl + Alt + B` akku, `Super + Ctrl + Alt + C` kuvakaappaus |
@@ -34,7 +34,7 @@ Jos oletus ei sovi sinulle (jos esimerkiksi haluat näppäimet `Super + Shift + 
 
 | Pikanäppäin | Toiminto |
 | ----------------------- | --------------------- |
-| `Super + Space` | Omarchy-valikko (sovellukset ja kaikki muu) |
+| `Super + Space` | Ve OS-valikko (sovellukset ja kaikki muu) |
 | `Super + Alt + Space` | Sovellusruudukko |
 | `Super + Escape` | Järjestelmävalikko (lepotila, uudelleenkäynnistys jne.) |
 | `Super + Ctrl + L` | Lukitse tietokone |
@@ -172,7 +172,7 @@ Muuta/lisää sidontoja tiedostossa `~/.config/hypr/bindings.lua`.
 | `Super + V` | Liitä |
 | `Super + Ctrl + V` | Leikepöydän hallinta |
 
-Yleensä Linuxissa tarvitset näppäimet `Ctrl + Shift + C/V` kopioimiseen ja liittämiseen terminaalissa ja näppäimet `Ctrl + C/V` samaan kaikkialla muualla. Nämä Omarchyn yhtenäistetyt leikepöydän pikanäppäimet toimivat kaikkialla.
+Yleensä Linuxissa tarvitset näppäimet `Ctrl + Shift + C/V` kopioimiseen ja liittämiseen terminaalissa ja näppäimet `Ctrl + C/V` samaan kaikkialla muualla. Nämä Ve OSn yhtenäistetyt leikepöydän pikanäppäimet toimivat kaikkialla.
 
 ## Kaappaus
 
@@ -194,7 +194,7 @@ Yleensä Linuxissa tarvitset näppäimet `Ctrl + Shift + C/V` kopioimiseen ja li
 
 Näyttötallennuksissa pikanäppäin kysyy ensin, minkä äänen haluat, ja aloittaa sitten tallennuksen. Paina sitä uudelleen lopettaaksesi. Katso lisätietoja kohdasta [kuvakaappaukset ja tallennus](12-screenshots-recording.md).
 
-Kaikki kaappausvaihtoehdot ovat käytettävissä myös Omarchy-valikon kohdassa _Trigger > Capture_ (`Super + Space`).
+Kaikki kaappausvaihtoehdot ovat käytettävissä myös Ve OS-valikon kohdassa _Trigger > Capture_ (`Super + Space`).
 
 ## Ilmoitukset
 
@@ -216,9 +216,9 @@ Kaikki kaappausvaihtoehdot ovat käytettävissä myös Omarchy-valikon kohdassa 
 | `Super + Backspace` | Vaihda ikkunan läpinäkyvyys päälle/pois |
 | `Super + Ctrl + Backspace` | Vaihda yksittäisen ikkunan neliönmuotoinen kuvasuhde päälle/pois |
 
-Lisätaustakuvat sijaitsevat kansiossa `~/.config/omarchy/backgrounds/<theme name>`. Saatavilla myös Omarchy-valikon kohdan _Install > Style > Background_ kautta.
+Lisätaustakuvat sijaitsevat kansiossa `~/.config/omarchy/backgrounds/<theme name>`. Saatavilla myös Ve OS-valikon kohdan _Install > Style > Background_ kautta.
 
-Kaikki tyylivaihtoehdot ovat käytettävissä myös Omarchy-valikon kohdassa _Style_ (`Super + Space`).
+Kaikki tyylivaihtoehdot ovat käytettävissä myös Ve OS-valikon kohdassa _Style_ (`Super + Space`).
 
 ## Kytkimet
 
@@ -319,7 +319,7 @@ Nämä funktiot on suoritettava Tmux-istunnon sisällä.
 
 ## Ghostty Terminal
 
-Ghostty terminal asennetaan Omarchy-valikon kohdan _Install > Terminal_ avulla.
+Ghostty terminal asennetaan Ve OS-valikon kohdan _Install > Terminal_ avulla.
 
 | Pikanäppäin | Toiminto |
 | ----------------------- | --------------------- |

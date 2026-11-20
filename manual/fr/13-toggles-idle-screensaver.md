@@ -1,10 +1,10 @@
 # Bascules, veille et l’économiseur d’écran
 
-Une bonne partie de ce que tu changes au jour le jour n’est pas vraiment un réglage. C’est un mode que tu actives pour une heure puis que tu désactives : la lumière nocturne quand tu travailles tard, ne pas déranger quand tu présentes, rester éveillé quand tu regardes quelque chose. Omarchy appelle ça des bascules, et elles fonctionnent toutes de la même façon — un raccourci clavier, une entrée de menu et une commande, qui agissent tous sur le même interrupteur.
+Une bonne partie de ce que tu changes au jour le jour n’est pas vraiment un réglage. C’est un mode que tu actives pour une heure puis que tu désactives : la lumière nocturne quand tu travailles tard, ne pas déranger quand tu présentes, rester éveillé quand tu regardes quelque chose. Ve OS appelle ça des bascules, et elles fonctionnent toutes de la même façon — un raccourci clavier, une entrée de menu et une commande, qui agissent tous sur le même interrupteur.
 
 ### Le menu des bascules
 
-`Super + Ctrl + O` ouvre directement _Trigger > Toggle_, ou tu peux y accéder depuis le menu Omarchy (`Super + Space`). Tout ce qui figure dans cette liste est un interrupteur que tu peux basculer sans te soucier de l’endroit où l’état est stocké. Les interrupteurs qui concernent l’apparence du bureau se trouvent juste à côté, sous _Appearance_.
+`Super + Ctrl + O` ouvre directement _Trigger > Toggle_, ou tu peux y accéder depuis le menu Ve OS (`Super + Space`). Tout ce qui figure dans cette liste est un interrupteur que tu peux basculer sans te soucier de l’endroit où l’état est stocké. Les interrupteurs qui concernent l’apparence du bureau se trouvent juste à côté, sous _Appearance_.
 
 Depuis le terminal, les mêmes interrupteurs sont `omarchy toggle <thing>`. Lance `omarchy toggle` seul pour voir l’ensemble du groupe.
 
@@ -26,7 +26,7 @@ Les interrupteurs du pavé tactile, de l’écran tactile et du GPU hybride se t
 
 _Appearance_ contient la barre de menu et les animations, plus quelques éléments qui ne sont pas des commandes `omarchy toggle` mais qui se comportent de la même façon : le pourcentage de batterie dans la barre, la disposition par défaut des espaces de travail et, sous _Windows_, les espacements entre fenêtres (`Super + Shift + Backspace`) et le format carré pour 1 fenêtre (`Super + Ctrl + Backspace`).
 
-Quand Hyprland n’a aucun GPU pour afficher et rend à la place sur le processeur (llvmpipe), comme sur les Mac dont le GPU n’est pas encore pris en charge, dans la plupart des machines virtuelles, ou quand un pilote graphique ne parvient pas à se charger, Omarchy désactive les animations, le flou et les ombres pour cette session et te le signale une fois par une notification. _Appearance > Animations On_ les réactive, et Omarchy s’en souvient aussi pour les sessions suivantes.
+Quand Hyprland n’a aucun GPU pour afficher et rend à la place sur le processeur (llvmpipe), comme sur les Mac dont le GPU n’est pas encore pris en charge, dans la plupart des machines virtuelles, ou quand un pilote graphique ne parvient pas à se charger, Ve OS désactive les animations, le flou et les ombres pour cette session et te le signale une fois par une notification. _Appearance > Animations On_ les réactive, et Ve OS s’en souvient aussi pour les sessions suivantes.
 
 La plupart d’entre elles ne sont qu’un fichier drapeau sous `~/.local/state/omarchy/toggles/`. Si tu veux tester l’une d’elles dans un script, `omarchy-toggle-enabled` te donne un code de sortie au lieu de t’obliger à aller chercher :
 
@@ -63,11 +63,11 @@ Démarre ensuite hyprsunset à la connexion en ajoutant `o.launch_on_start("hypr
 
 Rien n’est perdu, cependant. Les notifications coupées sont retenues : réaffiche les dernières à l’écran avec `Super + Shift + Alt + ,`. Voir [les notifications](10-notices.md) pour le reste.
 
-Deux types de messages passent quand même : les toasts de confirmation d’Omarchy pour quelque chose que tu viens de faire (« Theme changed », « Screenshot saved »), et les alertes critiques envoyées depuis la ligne de commande. Les applications de chat qui marquent tout comme critique pour s’imposer devant toi n’en font pas partie.
+Deux types de messages passent quand même : les toasts de confirmation d’Ve OS pour quelque chose que tu viens de faire (« Theme changed », « Screenshot saved »), et les alertes critiques envoyées depuis la ligne de commande. Les applications de chat qui marquent tout comme critique pour s’imposer devant toi n’en font pas partie.
 
 ### Veille
 
-Le shell Omarchy gère le comportement en veille, et les délais se trouvent dans un bloc `idle` de premier niveau dans `~/.config/omarchy/shell.json` :
+Le shell Ve OS gère le comportement en veille, et les délais se trouvent dans un bloc `idle` de premier niveau dans `~/.config/omarchy/shell.json` :
 
 ```json
 {
@@ -89,16 +89,16 @@ Il s’agit du verrouillage et de l’économiseur d’écran, pas de l’alimen
 
 ### L’économiseur d’écran
 
-L’économiseur d’écran d’Omarchy est de l’art ASCII animé par des effets de texte aléatoires, à raison d’une instance par moniteur. N’importe quelle touche ou n’importe quel mouvement de souris le quitte.
+L’économiseur d’écran d’Ve OS est de l’art ASCII animé par des effets de texte aléatoires, à raison d’une instance par moniteur. N’importe quelle touche ou n’importe quel mouvement de souris le quitte.
 
 Tu peux le démarrer à la demande depuis _System > Screensaver_ (`Super + Esc`), ce qui le force à apparaître même si tu as désactivé l’économiseur d’écran en veille. Aucun raccourci clavier ne lui est associé par défaut.
 
 `omarchy toggle screensaver` est ce qui désactive celui en veille, si tu préfères passer directement du travail au verrouillage. N’importe quelle touche, n’importe quel clic, défilement ou mouvement de souris le ferme.
 
-Le logo qu’il dessine, c’est à toi de le changer, sous _Appearance > Branding > Screensaver_. Téléverse un png ou un svg et Omarchy le convertit en ASCII. Voir [l’identité visuelle](41-branding.md).
+Le logo qu’il dessine, c’est à toi de le changer, sous _Appearance > Branding > Screensaver_. Téléverse un png ou un svg et Ve OS le convertit en ASCII. Voir [l’identité visuelle](41-branding.md).
 
 ### L’écran de verrouillage
 
-`Super + Ctrl + L` verrouille la machine. Cela lance l’écran de verrouillage du shell Omarchy, éteint l’affichage, réinitialise la disposition de ton clavier sur la première pour que tu ne tapes pas ton mot de passe dans le mauvais alphabet et — si tu l’as en cours d’exécution — verrouille 1Password au passage.
+`Super + Ctrl + L` verrouille la machine. Cela lance l’écran de verrouillage du shell Ve OS, éteint l’affichage, réinitialise la disposition de ton clavier sur la première pour que tu ne tapes pas ton mot de passe dans le mauvais alphabet et — si tu l’as en cours d’exécution — verrouille 1Password au passage.
 
 L’écran de verrouillage accepte un mot de passe, et il acceptera aussi une empreinte digitale une fois que tu en auras configuré une. Cela, ainsi que les autres moyens de s’authentifier, est couvert dans [l’authentification matérielle](37-hardware-authentication.md).

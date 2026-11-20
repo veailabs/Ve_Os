@@ -1,12 +1,12 @@
 # Pisave
 
-Omarchy privzeto uporablja JetBrainsMono Nerd Font kot terminalsko in sistemsko pisavo.
+Ve OS privzeto uporablja JetBrainsMono Nerd Font kot terminalsko in sistemsko pisavo.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Spremenite jo lahko prek menija _Videz > Pisava_ v meniju Omarchy (`Super + Space`). S tem nastavite pisavo s fiksno širino povsod: v terminalu, vrstici in vsem drugem, kar jo zahteva.
+Spremenite jo lahko prek menija _Videz > Pisava_ v meniju Ve OS (`Super + Space`). S tem nastavite pisavo s fiksno širino povsod: v terminalu, vrstici in vsem drugem, kar jo zahteva.
 
-Druge priljubljene programerske pisave lahko namestite prek _Namesti > Slog > Pisava_ v meniju Omarchy: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono in Iosevka so vse oddaljene en sam klik, v različicah Nerd Font, da glifi v vrstici in terminalu še naprej delujejo. Ko eno namestite, jo izberite pod _Videz > Pisava_.
+Druge priljubljene programerske pisave lahko namestite prek _Namesti > Slog > Pisava_ v meniju Ve OS: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono in Iosevka so vse oddaljene en sam klik, v različicah Nerd Font, da glifi v vrstici in terminalu še naprej delujejo. Ko eno namestite, jo izberite pod _Videz > Pisava_.
 
 ## Kitajščina, japonščina in korejščina
 

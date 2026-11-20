@@ -1,14 +1,14 @@
 # Die obere Leiste
 
-Der Streifen am oberen Rand deines Bildschirms ist die Omarchy-Leiste. Sie ist keine aufgesetzte Statusleiste, sondern Teil der Omarchy-Shell, des einzigen langlaufenden Quickshell-Prozesses, der auch das Menü, die Benachrichtigungen, die OSD-Popups und den Sperrbildschirm zeichnet. Deshalb passt ihr Theme perfekt zu allem anderen und deshalb öffnet sich ein Panel sofort, statt eine neue App zu starten.
+Der Streifen am oberen Rand deines Bildschirms ist die Ve OS-Leiste. Sie ist keine aufgesetzte Statusleiste, sondern Teil der Ve OS-Shell, des einzigen langlaufenden Quickshell-Prozesses, der auch das Menü, die Benachrichtigungen, die OSD-Popups und den Sperrbildschirm zeichnet. Deshalb passt ihr Theme perfekt zu allem anderen und deshalb öffnet sich ein Panel sofort, statt eine neue App zu starten.
 
 Sie ist auch das einzige Stück des Desktops, das immer auf dem Bildschirm ist, also lohnt es sich zu wissen, was all diese kleinen Glyphen tun.
 
 ## Was standardmäßig darauf ist
 
-Die Leiste hat drei Bereiche. Links sitzen das Omarchy-Logo (der Menü-Launcher) und die Workspace-Anzeigen. In der Mitte bekommst du die Statusanzeigen, die Uhr, Elsewhen (eine Weltuhr), das Wetter und ein Omarchy-Update-Badge. Rechts: der System-Tray, das Tastaturlayout (wenn mehr als eines konfiguriert ist), Agents, Bluetooth, Netzwerk, Audio, Display und Power.
+Die Leiste hat drei Bereiche. Links sitzen das Ve OS-Logo (der Menü-Launcher) und die Workspace-Anzeigen. In der Mitte bekommst du die Statusanzeigen, die Uhr, Elsewhen (eine Weltuhr), das Wetter und ein Ve OS-Update-Badge. Rechts: der System-Tray, das Tastaturlayout (wenn mehr als eines konfiguriert ist), Agents, Bluetooth, Netzwerk, Audio, Display und Power.
 
-Einige davon tauchen nur auf, wenn sie etwas zu sagen haben. Das Tastaturlayout erscheint nur, wenn du mehr als ein Layout konfiguriert hast. Das Update-Badge erscheint nur, wenn ein Omarchy-Update wartet. Und das Agents-Symbol erscheint, sobald Omarchy zum ersten Mal KI-Coding-Nutzung auf dem Rechner findet (siehe [KI](17-ai.md)).
+Einige davon tauchen nur auf, wenn sie etwas zu sagen haben. Das Tastaturlayout erscheint nur, wenn du mehr als ein Layout konfiguriert hast. Das Update-Badge erscheint nur, wenn ein Ve OS-Update wartet. Und das Agents-Symbol erscheint, sobald Ve OS zum ersten Mal KI-Coding-Nutzung auf dem Rechner findet (siehe [KI](17-ai.md)).
 
 ## Herumklicken
 
@@ -16,7 +16,7 @@ Fast jedes Widget tut etwas bei Links-, Rechts- und Mittelklick, und mehrere rea
 
 | Widget | Links | Rechts | Mitte / Scrollen |
 | --- | --- | --- | --- |
-| Menü | Omarchy-Menü | Neues Terminal | — |
+| Menü | Ve OS-Menü | Neues Terminal | — |
 | Workspaces | Diesen Workspace auf diesem Monitor fokussieren | — | Scrollen: nächster/vorheriger Workspace |
 | Uhr | Kalender-Popup | Label-Format durchwechseln | Mitte: Zeitzonen-Auswahl |
 | Wetter | Vorhersage-Popup | Vollständiges Wetter als Benachrichtigung | Mitte: aktualisieren |
@@ -29,7 +29,7 @@ Fast jedes Widget tut etwas bei Links-, Rechts- und Mittelklick, und mehrere rea
 | Medien | Abspielen/Pausieren | Cover-Art-Popup | Mitte: weiter · Scrollen: zurück/weiter |
 | Agents | Agents-Panel | Deinen Agent starten | Mitte: nächstes Abonnement |
 | Tray | Darüberfahren, um die Schublade zu zeigen | Rechtsklick auf das Chevron, um sie zu verwalten | — |
-| Omarchy-Update | Update ausführen | — | — |
+| Ve OS-Update | Update ausführen | — | — |
 
 Nicht alles in dieser Tabelle ist von Haus aus auf deiner Leiste. Das Medien-Widget (MPRIS Now-Playing, mit scrollendem Track und Künstler) und das Mikrofon-Widget sind beide eingebaut, aber standardmäßig aus — füge sie hinzu, wenn du sie willst, wie unten beschrieben.
 
@@ -137,6 +137,6 @@ Jedes Widget ist ein Eintrag in einem der fünf Layout-Arrays, und seine Einstel
 
 `center` ist die Box in der Mitte der Leiste: Alles darin wird als eine Gruppe auf dem Bildschirm zentriert. `centerBegin` und `centerEnd` hängen auf beiden Seiten der Box, wodurch die Uhr genau in der Mitte bleibt, auch wenn Wetter und Update-Badge kommen und gehen. Lege mehr als ein Widget in `center`, und sie werden gemeinsam zentriert; lasse es leer, und `centerBegin` und `centerEnd` treffen sich in der Mitte der Leiste.
 
-Eine Regel, die es wert ist, verinnerlicht zu werden: **Sobald du deine eigene `shell.json` hast, ist sie kanonisch**. Bis du irgendetwas anpasst, liest die Shell Omarchys Standarddatei. In dem Moment, in dem du ein Widget ziehst, `omarchy bar` ausführst oder die Datei selbst bearbeitest, gehört sie dir — es gibt kein tiefes Mergen, also werden neue Standard-Widgets in zukünftigen Omarchy-Releases nicht automatisch auf deiner Leiste erscheinen. `omarchy bar defaults` legt das ausgelieferte Layout zurück, wann immer du eine saubere Ausgangslage willst.
+Eine Regel, die es wert ist, verinnerlicht zu werden: **Sobald du deine eigene `shell.json` hast, ist sie kanonisch**. Bis du irgendetwas anpasst, liest die Shell Ve OSs Standarddatei. In dem Moment, in dem du ein Widget ziehst, `omarchy bar` ausführst oder die Datei selbst bearbeitest, gehört sie dir — es gibt kein tiefes Mergen, also werden neue Standard-Widgets in zukünftigen Ve OS-Releases nicht automatisch auf deiner Leiste erscheinen. `omarchy bar defaults` legt das ausgelieferte Layout zurück, wann immer du eine saubere Ausgangslage willst.
 
 Dieselbe Datei hält auf der obersten Ebene, außerhalb des `bar`-Keys, auch deine Leerlaufzeiten: `idle.screensaver` und `idle.lock`, beide in Sekunden seit du in den Leerlauf gegangen bist. Der Standard-Bildschirmschoner springt also bei 150 Sekunden an und die Sperre bei 300.

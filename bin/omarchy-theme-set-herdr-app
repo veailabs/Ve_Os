@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Sync the generated Omarchy theme to the Herdr desktop app
+# omarchy:summary=Sync the generated Ve OS theme to the Herdr desktop app
 # omarchy:args=[--activate]
 # omarchy:hidden=true
 
@@ -17,12 +17,12 @@ esac
 
 source_path="$HOME/.local/state/omarchy/current/theme/herdr-app.json"
 app_home="${HERDR_APP_HOME:-${XDG_CONFIG_HOME:-$HOME/.config}/herdr-app}"
-theme_path="$app_home/themes/omarchy.json"
+theme_path="$app_home/themes/ve.json"
 
 # Do not create state for an app the person has never opened.
 if [[ ! -d $app_home ]]; then
   if (( activate == 1 )); then
-    echo "Open Herdr before activating its Omarchy theme." >&2
+    echo "Open Herdr before activating its Ve OS theme." >&2
     exit 1
   fi
   exit 0
@@ -30,7 +30,7 @@ fi
 
 if (( activate == 1 )); then
   if ! omarchy-cmd-present herdr-app; then
-    echo "Install Herdr 0.1.11 or newer before activating its Omarchy theme." >&2
+    echo "Install Herdr 0.1.11 or newer before activating its Ve OS theme." >&2
     exit 1
   fi
   version=$(herdr-app --version)
@@ -47,7 +47,7 @@ fi
 exec {theme_lock}>"${XDG_RUNTIME_DIR:-/tmp}/omarchy-theme-set.lock"
 flock "$theme_lock"
 if [[ ! -f $source_path ]]; then
-  echo "Skipping Herdr theme: refresh the current Omarchy theme to generate its palette." >&2
+  echo "Skipping Herdr theme: refresh the current Ve OS theme to generate its palette." >&2
   if (( activate == 1 )); then exit 1; fi
   exit 0
 fi
@@ -78,10 +78,16 @@ fi
 
 # The app command can wait for a busy window. Do not hold up desktop theme
 # staging while it does; it selects whichever palette is current at that time.
+if [[ -f $app_home/themes/omarchy.json ]]; then
+  legacy_tmp=$(mktemp "$app_home/themes/omarchy.json.XXXXXX")
+  printf '%s\n' "$palette" >"$legacy_tmp"
+  mv "$legacy_tmp" "$app_home/themes/omarchy.json"
+fi
+
 flock -u "$theme_lock"
 if (( activate == 1 )); then
-  if ! HERDR_APP_HOME="$app_home" herdr-app do app.theme --name omarchy; then
-    echo "Omarchy was published. Open Herdr and rerun with --activate to select it." >&2
+  if ! HERDR_APP_HOME="$app_home" herdr-app do app.theme --name ve; then
+    echo "Ve OS was published. Open Herdr and rerun with --activate to select it." >&2
     exit 1
   fi
 fi

@@ -37,10 +37,10 @@ cat >"$mount_dir/t3code" <<'SH'
 #!/bin/bash
 [[ $ELECTRON_RUN_AS_NODE == "1" && $1 == "$(dirname "$0")/resources/app.asar/apps/server/dist/bin.mjs" ]] || exit 1
 shift
-[[ $1 == "theme" && $2 == "set" && $3 == "omarchy" && $4 == "--base-dir" && $5 == "$T3CODE_HOME" ]] || exit 1
-palette="$T3CODE_HOME/userdata/themes/omarchy.json"
-if [[ ! -f $palette ]] || ! jq -e '.name == "Omarchy" and (.accent | test("^#[0-9a-fA-F]{6}$"))' "$palette" >/dev/null; then
-  echo "No published Omarchy theme"
+[[ $1 == "theme" && $2 == "set" && $3 == "ve" && $4 == "--base-dir" && $5 == "$T3CODE_HOME" ]] || exit 1
+palette="$T3CODE_HOME/userdata/themes/ve.json"
+if [[ ! -f $palette ]] || ! jq -e '.name == "Ve OS" and (.accent | test("^#[0-9a-fA-F]{6}$"))' "$palette" >/dev/null; then
+  echo "No published Ve OS theme"
   exit 1
 fi
 if [[ ${OMARCHY_TEST_T3_FAIL:-0} == "1" ]]; then
@@ -51,7 +51,7 @@ if [[ ${OMARCHY_TEST_T3_HANG:-0} == "1" ]]; then
   touch "$TEST_TMP/cli-started"
   exec sleep 30
 fi
-echo "T3 selected Omarchy"
+echo "T3 selected Ve OS"
 SH
 
 cat >"$mock_bin/gum" <<'SH'
@@ -82,7 +82,7 @@ run_installer() {
 }
 
 state="$test_home/.local/state/omarchy/current"
-palette="$test_tmp/custom t3 home/userdata/themes/omarchy.json"
+palette="$test_tmp/custom t3 home/userdata/themes/ve.json"
 settings="$test_tmp/custom t3 home/userdata/settings.json"
 mkdir -p "$state/theme"
 echo 'tokyo-night' >"$state/theme.name"
@@ -93,7 +93,7 @@ OMARCHY_TEST_GUM_PICK=Nightly run_installer || fail "installing after an update 
 [[ -f $state/theme/t3code.json && -f $palette ]] || fail "the missing palette is rendered and published"
 [[ $(jq -S . "$state/theme/t3code.json") == "$(jq -S 'del(.css)' "$palette")" ]] || fail "T3 receives the current theme's palette"
 jq -e '.css | startswith(":root { --omarchy-radius: ")' "$palette" >/dev/null || fail "T3 receives the theme's chrome with the live corner radius"
-grep -q 'T3 selected Omarchy' "$test_tmp/output" || fail "the published palette is selected"
+grep -q 'T3 selected Ve OS' "$test_tmp/output" || fail "the published palette is selected"
 grep -q 'Opening T3 Code' "$test_tmp/output" || fail "the themed app opens"
 [[ $(cat "$test_tmp/dropped") == "t3code-bin t3code-nightly-bin" ]] || fail "the T3 Code packages go once the app is themed"
 [[ ! -e $test_home/.t3 ]] || fail "the custom T3 home is respected"
@@ -114,13 +114,13 @@ cp "$test_tmp/palette.json" "$state/theme/t3code.json"
 run_installer stable || fail "installing with an existing palette succeeds" "$(cat "$test_tmp/output")"
 [[ $(jq -S 'del(.css)' "$test_tmp/palette.json") == "$(jq -S 'del(.css)' "$palette")" ]] || fail "an existing palette is published without re-staging"
 jq -e '.css | startswith(":root { --omarchy-radius: ") and endswith("\n.theme-own { color: red; }")' "$palette" >/dev/null ||
-  fail "a theme's own T3 CSS is kept after Omarchy's chrome"
+  fail "a theme's own T3 CSS is kept after Ve OS's chrome"
 pass "an existing palette is used without refreshing the current theme"
 
 rm -f "$test_tmp/channel"
 OMARCHY_TEST_RUN=no-launch run_installer nightly --no-launch || fail "installing without a launch succeeds" "$(cat "$test_tmp/output")"
 [[ $(cat "$test_tmp/channel") == "nightly" ]] || fail "the named channel is installed without a prompt"
-grep -q 'T3 selected Omarchy' "$test_tmp/output" || fail "the palette is selected without a launch"
+grep -q 'T3 selected Ve OS' "$test_tmp/output" || fail "the palette is selected without a launch"
 if [[ -f $test_tmp/launched-no-launch ]] || grep -q 'Opening T3 Code' "$test_tmp/output"; then
   fail "--no-launch leaves T3 Code closed" "$(cat "$test_tmp/output")"
 fi

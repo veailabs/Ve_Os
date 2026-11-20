@@ -1,10 +1,10 @@
 # Veebirakendused
 
-Saad lisada oma veebirakendusi Omarchy menüü _Install > Web App_ kaudu (`Super + Space`). See küsib sinult rakenduse nime, rakenduse URL-i ja ikooni URL-i, kui ta ei suuda seda faviconi kaudu hankida. Paljude populaarsete veebirakenduste jaoks saad suurepäraseid PNG-ikoone lehelt [Dashboard Icons](https://dashboardicons.com).
+Saad lisada oma veebirakendusi Ve OS menüü _Install > Web App_ kaudu (`Super + Space`). See küsib sinult rakenduse nime, rakenduse URL-i ja ikooni URL-i, kui ta ei suuda seda faviconi kaudu hankida. Paljude populaarsete veebirakenduste jaoks saad suurepäraseid PNG-ikoone lehelt [Dashboard Icons](https://dashboardicons.com).
 
 Seejärel pääsed neile ligi rakenduste käivitaja (`Super + Space`) kaudu ja need kasutavad kaunist raamita veebirakenduse akent.
 
-Kui soovid veebirakenduse eemaldada, mine lihtsalt Omarchy menüüs valiku _Remove > Web App_ juurde.
+Kui soovid veebirakenduse eemaldada, mine lihtsalt Ve OS menüüs valiku _Remove > Web App_ juurde.
 
 Kõige parem on, kui logid kõikidele oma kontodele sisse tavalise brauseriga, enne kui veebirakenduste otseteid kasutad. See õhuke ümbrisraam ei tööta 1passwordiga hästi, nii et lihtsalt kergem on enne otse sisse logida.
 
@@ -12,7 +12,7 @@ Kõiki nende veebirakenduste kiirklahve saab muuta failis `~/.config/hypr/bindin
 
 Kui oled veebirakenduses, saad kopeerida praeguse URL-i lõikelauale klahvidega `Shift + Alt + L`.
 
-Vaikimisi on Omarchyga juba kaasas valik vaikimisi rakendusi:
+Vaikimisi on Ve OSga juba kaasas valik vaikimisi rakendusi:
 
 ## HEY
 
@@ -64,7 +64,7 @@ YouTube'i saad käivitada klahvidega `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) on USAs kõige populaarsem videovestlussüsteem. Suurepärased ühendused üle kogu maailma. Ja 40-minutilisi koosolekuid saab pidada ka ilma tasulise kontota. Omarchy kasutab Zoomi veebiklienti ja zoomi koosolekute lingid avanevad otse selles.
+[Zoom](https://zoom.us/) on USAs kõige populaarsem videovestlussüsteem. Suurepärased ühendused üle kogu maailma. Ja 40-minutilisi koosolekuid saab pidada ka ilma tasulise kontota. Ve OS kasutab Zoomi veebiklienti ja zoomi koosolekute lingid avanevad otse selles.
 
 Zoomi käivitad rakenduste käivitaja abil (`Super + Space`).
 
@@ -76,7 +76,7 @@ Discordi käivitad rakenduste käivitaja abil (`Super + Space`).
 
 ## Microsofti rakendused
 
-Vali _Install > Service > Microsoft_, et lisada Outlook, Word, Excel, PowerPoint, Teams ja OneDrive veebirakendustena. Igal rakendusel on oma käivitaja ja see avaneb otse, kasutades kommertslikke Microsoft 365 URL-e ja sinu olemasolevat brauseri profiili. Need avanevad samades brauserirakenduse akendes nagu Omarchy teised veebirakendused; need ei installi eraldi Teams for Linux klienti.
+Vali _Install > Service > Microsoft_, et lisada Outlook, Word, Excel, PowerPoint, Teams ja OneDrive veebirakendustena. Igal rakendusel on oma käivitaja ja see avaneb otse, kasutades kommertslikke Microsoft 365 URL-e ja sinu olemasolevat brauseri profiili. Need avanevad samades brauserirakenduse akendes nagu Ve OS teised veebirakendused; need ei installi eraldi Teams for Linux klienti.
 
 Eemalda pakett valikuga _Remove > Service > Microsoft_ või eemalda üksikud rakendused valikuga _Remove > Web App_. Samuti saad installida ainult need rakendused, mida tahad, valiku _Install > Web App_ kaudu.
 
@@ -88,4 +88,4 @@ Tööga seotud sisselogimiste eraldi hoidmiseks lisa iga käivitaja `Exec=` real
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Asenda näidiskataloog enda valitud absoluutse teega ja kasuta kõigi kuue käivitaja puhul sama teed, et jagada nende vahel tööga seotud sisselogimisi. Veebirakendused kasutavad Omarchy valitud toetatud brauserit, minnes varuvariandina Chrome'i peale, kui vaikebrauserit ei toetata.
+Asenda näidiskataloog enda valitud absoluutse teega ja kasuta kõigi kuue käivitaja puhul sama teed, et jagada nende vahel tööga seotud sisselogimisi. Veebirakendused kasutavad Ve OS valitud toetatud brauserit, minnes varuvariandina Chrome'i peale, kui vaikebrauserit ei toetata.

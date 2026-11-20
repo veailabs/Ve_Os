@@ -10,7 +10,7 @@ Inaalok ng mga card kung ano ang dala nila: _Kopyahin ang code_ para sa mga veri
 
 Para gamitin ang mga ito nang walang mouse, pindutin ang `Super + Ctrl + ,`. Napili ang pinakabagong notification at nakabilang ang mga button nito: pindutin ang isang numero para gamitin ang isa, `Enter` para i-click ang notification, `↑` at `↓` para lumipat sa pagitan ng mga notification, `Delete` para mag-dismiss ng isa, at `Esc` para ibalik ang keyboard. Kusang bumibitaw din ito pagkalipas ng ilang segundong walang ginagawa.
 
-Pinipigilan ng pagpapatahimik sa mga notification ang mga ito, maliban sa sariling mga kumpirmasyon ng Omarchy, mga emergency alert, at mga verification code, na hiniling mo kanina lang. Ibalik sa screen ang huling iilan, napigilan man o hindi, gamit ang `Super + Shift + Alt + ,`. Itinatago ang kasaysayan sa loob ng isang araw.
+Pinipigilan ng pagpapatahimik sa mga notification ang mga ito, maliban sa sariling mga kumpirmasyon ng Ve OS, mga emergency alert, at mga verification code, na hiniling mo kanina lang. Ibalik sa screen ang huling iilan, napigilan man o hindi, gamit ang `Super + Shift + Alt + ,`. Itinatago ang kasaysayan sa loob ng isang araw.
 
 ## Mga hotkey notice
 

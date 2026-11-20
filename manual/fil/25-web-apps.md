@@ -1,10 +1,10 @@
 # Mga Web App
 
-Maaari kang magdagdag ng sarili mong mga web app gamit ang _Install > Web App_ sa menu ng Omarchy (`Super + Space`). Hihingin nito sa iyo ang pangalan ng app, URL ng app, at URL ng icon, kung hindi nito makuha ang mga ito sa pamamagitan ng favicon. Makakakuha ka ng magagandang PNG icon para sa maraming sikat na web app sa [Dashboard Icons](https://dashboardicons.com).
+Maaari kang magdagdag ng sarili mong mga web app gamit ang _Install > Web App_ sa menu ng Ve OS (`Super + Space`). Hihingin nito sa iyo ang pangalan ng app, URL ng app, at URL ng icon, kung hindi nito makuha ang mga ito sa pamamagitan ng favicon. Makakakuha ka ng magagandang PNG icon para sa maraming sikat na web app sa [Dashboard Icons](https://dashboardicons.com).
 
 Mapupuntahan mo na ang mga ito sa pamamagitan ng app launcher (`Super + Space`), at gagamitin nila ang magandang frameless na window ng web-app.
 
-Kung gusto mong mag-alis ng web app, pumunta lang sa _Remove > Web App_ sa menu ng Omarchy.
+Kung gusto mong mag-alis ng web app, pumunta lang sa _Remove > Web App_ sa menu ng Ve OS.
 
 Pinakamainam na mag-log in ka muna sa lahat ng account mo gamit ang regular na browser bago gamitin ang mga shortcut ng web app. Hindi gumagana nang maayos ang manipis na wrapper frame sa 1password, kaya mas madali kung naka-log in ka na agad bago pa man.
 
@@ -12,7 +12,7 @@ Mababago ang lahat ng keyboard hotkey para sa mga web app na ito sa `~/.config/h
 
 Kapag nasa loob ka ng isang web app, maaari mong kopyahin ang kasalukuyang URL papunta sa clipboard gamit ang `Shift + Alt + L`.
 
-Bilang default, may kasama nang iba't ibang default na app ang Omarchy:
+Bilang default, may kasama nang iba't ibang default na app ang Ve OS:
 
 ## HEY
 
@@ -64,7 +64,7 @@ Maaari mong simulan ang YouTube gamit ang `Super + Shift + Y`.
 
 ## Zoom
 
-Ang [Zoom](https://zoom.us/) ang pinakasikat na sistema ng video chat na ginagamit sa US. Mahuhusay na koneksyon sa buong mundo. At maaaring magdaos ng 40-minutong mga meeting nang walang bayad na account. Binalot ng Omarchy ang web client ng Zoom, at direktang bubukas dito ang mga link ng meeting sa zoom.
+Ang [Zoom](https://zoom.us/) ang pinakasikat na sistema ng video chat na ginagamit sa US. Mahuhusay na koneksyon sa buong mundo. At maaaring magdaos ng 40-minutong mga meeting nang walang bayad na account. Binalot ng Ve OS ang web client ng Zoom, at direktang bubukas dito ang mga link ng meeting sa zoom.
 
 Sinisimulan mo ang Zoom gamit ang application launcher (`Super + Space`).
 
@@ -76,7 +76,7 @@ Sinisimulan mo ang Discord gamit ang application launcher (`Super + Space`).
 
 ## Mga app ng Microsoft
 
-Piliin ang _Install > Service > Microsoft_ para idagdag ang Outlook, Word, Excel, PowerPoint, Teams, at OneDrive bilang mga web app. Bawat app ay may sarili nitong launcher at direktang bumubukas, gamit ang mga komersyal na URL ng Microsoft 365 at ang kasalukuyan mong profile sa browser. Bumubukas ang mga ito sa parehong mga window ng browser app gaya ng ibang mga web app ng Omarchy; hindi nila ini-install ang hiwalay na client ng Teams for Linux.
+Piliin ang _Install > Service > Microsoft_ para idagdag ang Outlook, Word, Excel, PowerPoint, Teams, at OneDrive bilang mga web app. Bawat app ay may sarili nitong launcher at direktang bumubukas, gamit ang mga komersyal na URL ng Microsoft 365 at ang kasalukuyan mong profile sa browser. Bumubukas ang mga ito sa parehong mga window ng browser app gaya ng ibang mga web app ng Ve OS; hindi nila ini-install ang hiwalay na client ng Teams for Linux.
 
 Alisin ang bundle gamit ang _Remove > Service > Microsoft_, o alisin ang mga indibidwal na app gamit ang _Remove > Web App_. Maaari mo ring i-install lang ang mga app na gusto mo sa pamamagitan ng _Install > Web App_.
 
@@ -88,4 +88,4 @@ Para manatiling hiwalay ang mga sign-in sa trabaho, magdagdag ng direktoryo ng d
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Palitan ang halimbawang direktoryo ng absolute path na gusto mo at gamitin ang parehong path para sa lahat ng anim na launcher para magbahagi ang mga ito ng mga sign-in sa trabaho. Ginagamit ng mga web app ang napiling sinusuportahang browser ng Omarchy, at babalik sa Chrome kapag hindi sinusuportahan ang default na browser.
+Palitan ang halimbawang direktoryo ng absolute path na gusto mo at gamitin ang parehong path para sa lahat ng anim na launcher para magbahagi ang mga ito ng mga sign-in sa trabaho. Ginagamit ng mga web app ang napiling sinusuportahang browser ng Ve OS, at babalik sa Chrome kapag hindi sinusuportahan ang default na browser.

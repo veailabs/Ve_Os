@@ -28,7 +28,7 @@ Hii itaonyesha Jumapili 10:55 AM.
 
 ### Je, ninabadilishaje eneo langu la saa?
 
-Endesha _Sasisha > Eneo la Saa_ katika menyu ya Omarchy na uchague kutoka kwenye orodha. Ikiwa eneo la saa ni sahihi lakini saa yenyewe imechelewa, _Sasisha > Saa_ huwasha upya usawazishaji wa saa kwa ajili yako.
+Endesha _Sasisha > Eneo la Saa_ katika menyu ya Ve OS na uchague kutoka kwenye orodha. Ikiwa eneo la saa ni sahihi lakini saa yenyewe imechelewa, _Sasisha > Saa_ huwasha upya usawazishaji wa saa kwa ajili yako.
 
 ### Je, ninabadilishaje DNS yangu, kushiriki Wi-Fi yangu, au kuangalia kasi ya muunganisho wangu?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Unaweza kufanya vivyo hivyo kwa rekodi za skrini kwa kutumia `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap huunda saraka yake ya picha za skrini kiotomatiki. Unda saraka ya rekodi za skrini mwenyewe, kisha uanzishe upya Omarchy ili mabadiliko yoyote kati ya hayo ya mazingira yaanze kutumika.
+Omasnap huunda saraka yake ya picha za skrini kiotomatiki. Unda saraka ya rekodi za skrini mwenyewe, kisha uanzishe upya Ve OS ili mabadiliko yoyote kati ya hayo ya mazingira yaanze kutumika.
 
 ### Je, ninawashaje spika + kamera ya wavuti kwenye Apple Studio Display yangu?
 
 Ungedhani kuwa kila kitu kinapaswa kufanya kazi kwa kuchomeka tu USB C, lakini kwa bahati mbaya sivyo ilivyo. Suluhisho nililopata ili lifanye kazi kwa uhakika ni kutumia [kebo ya WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Kisha spika na kamera ya wavuti hufanya kazi vizuri sana bila matatizo.
 
-Kumbuka kuwa una udhibiti wa mwangaza uliojengewa ndani katika Omarchy kwa ajili ya Skrini za Apple (Studio na XDR zote mbili) kwa kutumia vitufe vya kawaida vya mwangaza vya kibodi.
+Kumbuka kuwa una udhibiti wa mwangaza uliojengewa ndani katika Ve OS kwa ajili ya Skrini za Apple (Studio na XDR zote mbili) kwa kutumia vitufe vya kawaida vya mwangaza vya kibodi.
 
 ### Je, ninaondoaje programu zote za ziada?
 
@@ -72,7 +72,7 @@ Ikiwa hutaki programu kama Obsidian au LibreOffice au programu nyingine zozote z
 
 Endesha _Ondoa > Kifurushi_ ili kuona kila kifurushi kilichosakinishwa. Kisha unaweza kuchagua kifurushi chochote ungependa kukiondoa kwa tab, na kuanza kuondoa kila ulichokichagua kwa return.
 
-Na unaweza kutumia _Ondoa > Programu ya Wavuti_ kutoka kwenye menyu ya Omarchy ili kuondoa programu zozote za wavuti zilizosakinishwa awali usizozitaka.
+Na unaweza kutumia _Ondoa > Programu ya Wavuti_ kutoka kwenye menyu ya Ve OS ili kuondoa programu zozote za wavuti zilizosakinishwa awali usizozitaka.
 
 Au endesha _Ondoa > Vilivyosakinishwa Awali_ ili kufagia programu zote za ziada zilizosakinishwa awali — programu za wavuti, TUI, na programu za hiari — kwa mara moja. Mikato ya kibodi iliyozianzisha huondoka pamoja nazo, kwa hivyo unabaki na orodha safi ya mikato ya kujaza kwa yako mwenyewe katika `~/.config/hypr/bindings.lua`.
 

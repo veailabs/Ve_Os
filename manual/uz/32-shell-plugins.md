@@ -1,10 +1,10 @@
 # Shell plaginlari
 
-Omarchy ish stoli `omarchy-shell` deb ataluvchi bitta uzoq yashovchi Quickshell jarayoni sifatida ishlaydi va ekranda koʻrgan deyarli hamma narsa uning ichidagi plagindir. Panel plagindir. Undan tushadigan panellar, emoji tanlagich va almashish buferi boshqaruvchisi kabi toʻliq ekran ustqoplamalari, Omarchy menyusining oʻzi, qulflash ekrani, polkit dialogi va batareyangizni kuzatuvchi hamda kechasi ekraningizni isituvchi boshsiz xizmatlar ham shunday.
+Ve OS ish stoli `omarchy-shell` deb ataluvchi bitta uzoq yashovchi Quickshell jarayoni sifatida ishlaydi va ekranda koʻrgan deyarli hamma narsa uning ichidagi plagindir. Panel plagindir. Undan tushadigan panellar, emoji tanlagich va almashish buferi boshqaruvchisi kabi toʻliq ekran ustqoplamalari, Ve OS menyusining oʻzi, qulflash ekrani, polkit dialogi va batareyangizni kuzatuvchi hamda kechasi ekraningizni isituvchi boshsiz xizmatlar ham shunday.
 
-Bu shunchaki amalga oshirish tafsiloti emas. Bu siz ish stolining qismlarini oʻchirishingiz, ularni almashtirishingiz yoki Omarchy manbasining bir qatoriga tegmasdan oʻzingiznikini yozishingiz mumkinligini anglatadi.
+Bu shunchaki amalga oshirish tafsiloti emas. Bu siz ish stolining qismlarini oʻchirishingiz, ularni almashtirishingiz yoki Ve OS manbasining bir qatoriga tegmasdan oʻzingiznikini yozishingiz mumkinligini anglatadi.
 
-Birinchi tomon plaginlari Omarchy bilan keladi va `$OMARCHY_PATH/shell/plugins/` da yashaydi. Oʻzingiz qoʻshgan har qanday narsa — oʻz tajribalaringiz yoki GitHub da topgan biror narsangiz — `~/.config/omarchy/plugins/` da yashaydi. Ikkalasi ham boshlangʻichda bir xil tarzda topiladi, lekin oʻrnatilganlar ishonchli shell interfeyslarini oladi, uchinchi tomon plaginlari esa oʻz xizmati va hayot aylanishi bilan cheklangan interfeys oladi. Oʻrnatilganlarning klonlari faqat asl xulq-atvor uchun kerak boʻlgan manbaga xos konfiguratsiya va UI chaqiruvlarini saqlaydi.
+Birinchi tomon plaginlari Ve OS bilan keladi va `$OMARCHY_PATH/shell/plugins/` da yashaydi. Oʻzingiz qoʻshgan har qanday narsa — oʻz tajribalaringiz yoki GitHub da topgan biror narsangiz — `~/.config/omarchy/plugins/` da yashaydi. Ikkalasi ham boshlangʻichda bir xil tarzda topiladi, lekin oʻrnatilganlar ishonchli shell interfeyslarini oladi, uchinchi tomon plaginlari esa oʻz xizmati va hayot aylanishi bilan cheklangan interfeys oladi. Oʻrnatilganlarning klonlari faqat asl xulq-atvor uchun kerak boʻlgan manbaga xos konfiguratsiya va UI chaqiruvlarini saqlaydi.
 
 ## Sizda nima borligini koʻrish
 

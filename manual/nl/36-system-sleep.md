@@ -1,12 +1,12 @@
 # Slaapstand van het systeem
 
-Omarchy schakelt slaapstand en sluimerstand standaard in, maar als je op je machine problemen ondervindt met een van beide, kun je ze uitschakelen.
+Ve OS schakelt slaapstand en sluimerstand standaard in, maar als je op je machine problemen ondervindt met een van beide, kun je ze uitschakelen.
 
 Op NVIDIA GB10-machines, zoals de DGX Spark en de ASUS Ascent GX10, zijn slaapstand en sluimerstand uitgeschakeld, net als in NVIDIA's DGX OS, omdat nog niet is aangetoond dat slaapstand op die hardware werkt. Hetzelfde geldt voor de ASUS Zenbook A16 (UX3607OA), waar de slaapstand de chip nog niet volledig in slaap brengt en 's nachts kan vastlopen. De schakelaar voor de slaapstand en de instelling van de sluimerstand zijn daar niet van toepassing. Om slaapstand weer in te schakelen, verwijder je `/etc/systemd/sleep.conf.d/omarchy-sleep-disabled.conf` met `sudo rm`; Slaapstand keert dan terug in het menu, en de sluimerstand kan worden ingesteld zoals op andere machines. Met `sudo omarchy apply hardware --install-user "$USER"` zet je het bestand terug.
 
 ### Energieprofielen
 
-Op een laptop onthoudt Omarchy je energieprofiel afzonderlijk voor aangesloten op netstroom en werken op de accu, en schakelt het tussen de twee wanneer je de stekker aansluit of loskoppelt. Standaard betekent dat performance op netstroom en balanced op de accu.
+Op een laptop onthoudt Ve OS je energieprofiel afzonderlijk voor aangesloten op netstroom en werken op de accu, en schakelt het tussen de twee wanneer je de stekker aansluit of loskoppelt. Standaard betekent dat performance op netstroom en balanced op de accu.
 
 Je kunt zien wat je machine biedt met `omarchy powerprofiles list`, en degene instellen die je wilt voor de toestand waarin je je momenteel bevindt met `omarchy powerprofiles set autodetect power-saver`. Om de andere toestand in te stellen zonder iets los te koppelen, benoem je die direct: `omarchy powerprofiles set battery power-saver`. Wat je ook kiest, dat krijg je de volgende keer dat je in die toestand bent weer terug.
 

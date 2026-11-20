@@ -1,5 +1,5 @@
 {
-  "name": "Omarchy",
+  "name": "Ve OS",
   "appearance": "{{ mode }}",
   "canvas": "{{ background }}",
   "accent": "{{ accent }}",

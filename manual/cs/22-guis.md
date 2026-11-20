@@ -20,7 +20,7 @@ Obsidian je bezplatný pro všechny účely, včetně osobního, komerčního a 
 
 Obsidian nabízí také [komerční doplněk pro synchronizaci](https://obsidian.md/sync) s mobilními aplikacemi pro iOS a Android. (https://obsidian.md/pricing).
 
-Obsidian spustíte pomocí `Super + Shift + O`. Chcete-li používat synchronizaci témat, musíte v nastavení vybrat téma `Omarchy`.
+Obsidian spustíte pomocí `Super + Shift + O`. Chcete-li používat synchronizaci témat, musíte v nastavení vybrat téma `Ve OS`.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Aether spustíte přes spouštěč aplikací (`Super + Space`).
 
 [LocalSend](https://localsend.org/) vám umožní posílat soubory na jiná zařízení ve stejné síti, na kterých běží tato aplikace, podobně jako AirDrop od Applu. Je ale multiplatformní, takže můžete posílat soubory do Windows, macOS, Androidu, iOS a samozřejmě Linuxu a z nich.
 
-Nabídku Sdílet otevřete pomocí `Super + Ctrl + S` nebo v nabídce Omarchy v _Trigger > Share_. Nabídne vám čtyři možnosti:
+Nabídku Sdílet otevřete pomocí `Super + Ctrl + S` nebo v nabídce Ve OS v _Trigger > Share_. Nabídne vám čtyři možnosti:
 
 - **Clipboard** odešle cokoli, co jste zkopírovali, jako textový soubor. Skvělé, když chcete dostat odkaz nebo úryvek do telefonu, aniž byste si posílali e-mail.
 - **File** otevře výběr souborů, kde jich můžete vybrat několik najednou.
@@ -55,7 +55,7 @@ Totéž funguje z terminálu pomocí `omarchy share clipboard`, `omarchy share f
 
 Posílat můžete také rovnou ze správce souborů: klikněte pravým tlačítkem na libovolný výběr v Nautilu a vyberte _Send via LocalSend_.
 
-Firewall v Omarchy je ve výchozím nastavení zavřený s výjimkou portu LocalSend, takže to funguje hned po čerstvé instalaci. Viz [zabezpečení](48-security.md).
+Firewall v Ve OS je ve výchozím nastavení zavřený s výjimkou portu LocalSend, takže to funguje hned po čerstvé instalaci. Viz [zabezpečení](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Signed spustíte přes spouštěč aplikací (`Super + Space`), nebo s ním otev
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) je vlastní 3D šachová hra Omarchy. Hrajte s přítelem na stejném počítači nebo proti vestavěnému soupeři ve třech úrovních, se čtyřmi vyřezávanými sadami, z nichž se každá pohybuje po svém: orbitální stroje, vyřezávané dřevo a slonovina, lesní tvorové a cukroví. Partie nemají hodiny a ukládají se po každém tahu.
+[Checkmate](https://github.com/omacom/checkmate) je vlastní 3D šachová hra Ve OS. Hrajte s přítelem na stejném počítači nebo proti vestavěnému soupeři ve třech úrovních, se čtyřmi vyřezávanými sadami, z nichž se každá pohybuje po svém: orbitální stroje, vyřezávané dřevo a slonovina, lesní tvorové a cukroví. Partie nemají hodiny a ukládají se po každém tahu.
 
 Checkmate spustíte přes spouštěč aplikací (`Super + Space`), kde je uvedená jako Chess. Stiskněte v ní `?` a uvidíte všechny zkratky.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) je vlastní solitaire Klondike od Omarchy. Taháte po třech, bez omezení počtu průchodů, ve čtyřech sériích karet: jedna je kreslená v barvách vašeho tématu a tři mají vlastní vzhled. Klikněte na kartu a pak tam, kam patří, přetáhněte ji, nebo ji dvojklikem pošlete na nejlepší místo. Hry se ukládají po každém tahu.
+[Cards](https://github.com/omacom/cards) je vlastní solitaire Klondike od Ve OS. Taháte po třech, bez omezení počtu průchodů, ve čtyřech sériích karet: jedna je kreslená v barvách vašeho tématu a tři mají vlastní vzhled. Klikněte na kartu a pak tam, kam patří, přetáhněte ji, nebo ji dvojklikem pošlete na nejlepší místo. Hry se ukládají po každém tahu.
 
 Cards spustíte přes spouštěč aplikací (`Super + Space`). Klikněte na její název, nebo stiskněte `?`, a uvidíte všechny zkratky.
 
@@ -97,7 +97,7 @@ Omacalc spustíte pomocí `Super + Shift + Q` (nebo klávesou kalkulačky, pokud
 
 [Signal](https://signal.org/) je průkopníkem šifrovaných zpráv E2E a skvělou komunikační volbou pro každého, kdo by raději nešel přes jeden z velkých technologických konglomerátů.
 
-Signal spustíte pomocí `Super + Shift + G`. Není součástí základní instalace, takže když to stisknete poprvé, Omarchy vám nabídne, že ho za vás nainstaluje (je také v nabídce Omarchy v _Install > Service_).
+Signal spustíte pomocí `Super + Shift + G`. Není součástí základní instalace, takže když to stisknete poprvé, Ve OS vám nabídne, že ho za vás nainstaluje (je také v nabídce Ve OS v _Install > Service_).
 
 ## Omaview
 

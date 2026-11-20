@@ -20,7 +20,7 @@ Obsidian on ilmainen kaikkiin tarkoituksiin, myös henkilökohtaiseen, kaupallis
 
 Obsidian tarjoaa myös [kaupallisen synkronointilisäosan](https://obsidian.md/sync) mobiilisovellusten kanssa iOS:llä ja Androidilla. (https://obsidian.md/pricing).
 
-Käynnistät Obsidianin näppäinyhdistelmällä `Super + Shift + O`. Teeman synkronoinnin käyttämiseksi sinun on valittava asetuksista `Omarchy`-teema.
+Käynnistät Obsidianin näppäinyhdistelmällä `Super + Shift + O`. Teeman synkronoinnin käyttämiseksi sinun on valittava asetuksista `Ve OS`-teema.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Käynnistät Aetherin sovelluskäynnistimen kautta (`Super + Space`).
 
 [LocalSend](https://localsend.org/) antaa lähettää tiedostoja muihin samassa verkossa oleviin laitteisiin, joissa sovellus on käynnissä, kuten Applen AirDrop. Se on kuitenkin alustariippumaton, joten voit lähettää tiedostoja Windowsiin, macOS:ään, Androidiin, iOS:ään ja tietysti Linuxiin ja niistä pois.
 
-Voit avata Share-valikon näppäinyhdistelmällä `Super + Ctrl + S` tai Omarchy-valikosta kohdasta _Trigger > Share_. Se antaa neljä vaihtoehtoa:
+Voit avata Share-valikon näppäinyhdistelmällä `Super + Ctrl + S` tai Ve OS-valikosta kohdasta _Trigger > Share_. Se antaa neljä vaihtoehtoa:
 
 - **Clipboard** lähettää kopioimasi sisällön tekstitiedostona. Loistava tapa saada linkki tai koodinpätkä puhelimeesi lähettämättä itsellesi sähköpostia.
 - **File** avaa tiedostonvalitsimen, jossa voit valita useita kerralla.
@@ -55,7 +55,7 @@ Sama toimii terminaalista komennoilla `omarchy share clipboard`, `omarchy share 
 
 Voit lähettää myös suoraan tiedostonhallinnasta: napsauta mitä tahansa valintaa Nautiluksessa hiiren oikealla painikkeella ja valitse _Send via LocalSend_.
 
-Omarchyn palomuuri on oletuksena suljettu LocalSendin porttia lukuun ottamatta, joten tämä toimii heti tuoreella asennuksella. Katso [tietoturva](48-security.md).
+Ve OSn palomuuri on oletuksena suljettu LocalSendin porttia lukuun ottamatta, joten tämä toimii heti tuoreella asennuksella. Katso [tietoturva](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Käynnistät Signedin sovelluskäynnistimen kautta (`Super + Space`) tai avaat s
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) on Omarchyn oma 3D-shakkipeli. Pelaa kaveria vastaan samalla tietokoneella tai sisäänrakennettua vastustajaa vastaan kolmella tasolla, neljällä veistetyllä pelisetillä, jotka kaikki liikkuvat omalla tavallaan: kiertorata-alukset, veistetty puu ja norsunluu, metsän olennot ja karkit. Peleissä ei ole kelloa, ja ne tallentuvat jokaisen siirron jälkeen.
+[Checkmate](https://github.com/omacom/checkmate) on Ve OSn oma 3D-shakkipeli. Pelaa kaveria vastaan samalla tietokoneella tai sisäänrakennettua vastustajaa vastaan kolmella tasolla, neljällä veistetyllä pelisetillä, jotka kaikki liikkuvat omalla tavallaan: kiertorata-alukset, veistetty puu ja norsunluu, metsän olennot ja karkit. Peleissä ei ole kelloa, ja ne tallentuvat jokaisen siirron jälkeen.
 
 Käynnistät Checkmaten sovelluskäynnistimen kautta (`Super + Space`), jossa se näkyy nimellä Chess. Paina `?` sen sisällä nähdäksesi kaikki pikanäppäimet.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) on Omarchyn oma Klondike-pasianssi. Nosta kolme, ilman rajoitusta läpikäynneille, neljässä korttisarjassa: yksi on piirretty teemasi väreillä ja kolmella on oma ulkoasunsa. Napsauta korttia ja sitten kohdetta, johon se menee, raahaa sitä tai kaksoisnapsauta lähettääksesi sen parhaaseen paikkaan. Pelit tallentuvat jokaisen siirron jälkeen.
+[Cards](https://github.com/omacom/cards) on Ve OSn oma Klondike-pasianssi. Nosta kolme, ilman rajoitusta läpikäynneille, neljässä korttisarjassa: yksi on piirretty teemasi väreillä ja kolmella on oma ulkoasunsa. Napsauta korttia ja sitten kohdetta, johon se menee, raahaa sitä tai kaksoisnapsauta lähettääksesi sen parhaaseen paikkaan. Pelit tallentuvat jokaisen siirron jälkeen.
 
 Käynnistät Cardsin sovelluskäynnistimen kautta (`Super + Space`). Napsauta sen nimeä tai paina `?` nähdäksesi kaikki pikanäppäimet.
 
@@ -97,7 +97,7 @@ Käynnistät Omacalcin näppäinyhdistelmällä `Super + Shift + Q` (tai laskinn
 
 [Signal](https://signal.org/) on E2E-salatun viestinnän pioneeri ja loistava viestintävaihtoehto kaikille, jotka eivät halua kulkea yhden suuren teknologiakonglomeraatin kautta.
 
-Käynnistät Signalin näppäinyhdistelmällä `Super + Shift + G`. Se ei ole osa perusasennusta, joten ensimmäisellä kerralla, kun painat sitä, Omarchy tarjoaa sen asentamista puolestasi (se on myös Omarchy-valikossa kohdassa _Install > Service_).
+Käynnistät Signalin näppäinyhdistelmällä `Super + Shift + G`. Se ei ole osa perusasennusta, joten ensimmäisellä kerralla, kun painat sitä, Ve OS tarjoaa sen asentamista puolestasi (se on myös Ve OS-valikossa kohdassa _Install > Service_).
 
 ## Omaview
 

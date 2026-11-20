@@ -1,4 +1,6 @@
-# Omarchy على...
+# Ve OS — upstream Omarchy على...
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 ### رقاقات Apple M1/M2
 

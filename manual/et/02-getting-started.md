@@ -1,4 +1,6 @@
-# Alustamine
+# Ve OS — Alustamine
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy installimiseks kasutatakse ISO-t. Saad valida täisketta installi, mis võtab üle kogu ketta, või vaba ruumi installi, mis paigutab Omarchy kettal eraldamata ruumi — nii teed topeltkäivituse koos Windowsi või mõne muu OS-iga (vt [topeltkäivituse installimine](50-dual-boot-install.md) — pane tähele, et pead kõigepealt Windowsis BitLockeri välja lülitama). Mõlemal juhul on install vaikimisi täieliku krüpteerimisega ja täisketta valik pühib valitud ketta tühjaks, nii et tee kindlasti varukoopia, enne kui olemasolevat ketast kasutad!
 

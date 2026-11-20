@@ -1,6 +1,6 @@
 # Orodja lupine
 
-Poleg standardnih orodij Linuxa Omarchy dobavlja tudi kup izboljšanih orodij lupine. Tu so ključna.
+Poleg standardnih orodij Linuxa Ve OS dobavlja tudi kup izboljšanih orodij lupine. Tu so ključna.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Celoten priročnik najdete prek `man yt-dlp`.
 
 [try](https://github.com/tobi/try) olajša upravljanje programskih poskusov z mapami z datumskimi žigi. Vsi poskusi živijo v `~/Work/tries` in do njih dostopate prek `try`.
 
-Omarchy ne doda mape `bin/` projekta v `PATH` samodejno. Zaupanja vredna projektno lokalna orodja zaganjajte z eksplicitno relativno potjo, na primer `bin/rails` ali `./bin/dev`.
+Ve OS ne doda mape `bin/` projekta v `PATH` samodejno. Zaupanja vredna projektno lokalna orodja zaganjajte z eksplicitno relativno potjo, na primer `bin/rails` ali `./bin/dev`.

@@ -10,7 +10,7 @@ Cuireann cártaí an méid atá á iompar acu ar fáil: _Cóipeáil an cód_ le 
 
 Chun iad a úsáid gan an luch, brúigh `Super + Ctrl + ,`. Roghnaítear an fógra is nuaí agus cuirtear uimhreacha lena chnaipí: brúigh uimhir chun ceann acu a úsáid, `Enter` chun an fógra a chliceáil, `↑` agus `↓` chun bogadh idir fógraí, `Delete` chun ceann a dhíbhe, agus `Esc` chun an méarchlár a thabhairt ar ais. Ligeann sé leis féin freisin tar éis cúpla soicind díomhaoin.
 
-Nuair a chuirtear fógraí ina dtost, coinntear siar iad, seachas deimhnithe Omarchy féin, foláirimh éigeandála, agus cóid fhíorúcháin, a d'iarr tú nóiméad ó shin. Cuir na cinn dheireanacha ar ais ar an scáileán, bíodh siad coinnithe siar nó ná bíodh, le `Super + Shift + Alt + ,`. Coinnítear an stair ar feadh lae.
+Nuair a chuirtear fógraí ina dtost, coinntear siar iad, seachas deimhnithe Ve OS féin, foláirimh éigeandála, agus cóid fhíorúcháin, a d'iarr tú nóiméad ó shin. Cuir na cinn dheireanacha ar ais ar an scáileán, bíodh siad coinnithe siar nó ná bíodh, le `Super + Shift + Alt + ,`. Coinnítear an stair ar feadh lae.
 
 ## Fógraí aicearra
 

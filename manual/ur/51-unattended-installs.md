@@ -1,4 +1,6 @@
-# غیر حاضر انسٹالز
+# Ve OS — غیر حاضر انسٹالز
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO خود کو انسٹال کر سکتی ہے جب کی بورڈ پر کوئی موجود نہ ہو۔ اگر انسٹالر کو `cidata` کے لیبل والی دوسری ڈرائیو مل جائے جس پر اس کی کنفیگریشن فائلیں موجود ہوں، تو وہ انہیں کاپی کر لیتا ہے، سیٹ اپ wizard کو مکمل طور پر چھوڑ دیتا ہے، اور خود ہی تیار سسٹم میں ری بوٹ ہو جاتا ہے۔ کوئی خاص ISO build نہیں، کوئی اضافی بوٹ مینیو انٹری نہیں — ایسی کوئی ڈرائیو منسلک نہ ہو تو کچھ نہیں بدلتا اور آپ کو معمول کا wizard ملتا ہے۔
 

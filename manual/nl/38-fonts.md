@@ -1,12 +1,12 @@
 # Lettertypen
 
-Omarchy gebruikt standaard JetBrainsMono Nerd Font als zowel het terminal- als het systeemlettertype.
+Ve OS gebruikt standaard JetBrainsMono Nerd Font als zowel het terminal- als het systeemlettertype.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Je kunt dit wijzigen via het menu _Uiterlijk > Lettertype_ in het Omarchy-menu (`Super + Space`). Daarmee stel je het monospace-lettertype overal in: in de terminal, de balk en alles wat er verder om vraagt.
+Je kunt dit wijzigen via het menu _Uiterlijk > Lettertype_ in het Ve OS-menu (`Super + Space`). Daarmee stel je het monospace-lettertype overal in: in de terminal, de balk en alles wat er verder om vraagt.
 
-Je kunt andere populaire programmeerlettertypen installeren via _Installeren > Stijl > Lettertype_ in het Omarchy-menu: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono en Iosevka zijn allemaal één klik verwijderd, in hun Nerd Font-versies, zodat de glyphs in de balk en terminal blijven werken. Kies er na installatie een onder _Uiterlijk > Lettertype_.
+Je kunt andere populaire programmeerlettertypen installeren via _Installeren > Stijl > Lettertype_ in het Ve OS-menu: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono en Iosevka zijn allemaal één klik verwijderd, in hun Nerd Font-versies, zodat de glyphs in de balk en terminal blijven werken. Kies er na installatie een onder _Uiterlijk > Lettertype_.
 
 ## Chinees, Japans en Koreaans
 

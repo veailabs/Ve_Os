@@ -1,10 +1,10 @@
 # Connectors de l'intèrpret d'escriptori
 
-L'escriptori d'Omarchy s'executa com un únic procés Quickshell de llarga durada anomenat `omarchy-shell`, i gairebé tot el que veus en pantalla és un connector a dins seu. La barra és un connector. També ho són els panells que en baixen, les superposicions a pantalla completa com el selector d'emojis i el gestor del porta-retalls, el mateix menú d'Omarchy, la pantalla de bloqueig, el diàleg de polkit i els serveis sense interfície que observen la teva bateria i escalfen la pantalla a la nit.
+L'escriptori d'Ve OS s'executa com un únic procés Quickshell de llarga durada anomenat `omarchy-shell`, i gairebé tot el que veus en pantalla és un connector a dins seu. La barra és un connector. També ho són els panells que en baixen, les superposicions a pantalla completa com el selector d'emojis i el gestor del porta-retalls, el mateix menú d'Ve OS, la pantalla de bloqueig, el diàleg de polkit i els serveis sense interfície que observen la teva bateria i escalfen la pantalla a la nit.
 
-Això no és només un detall d'implementació. Vol dir que pots apagar peces de l'escriptori, intercanviar-les o escriure'n de pròpies sense tocar ni una línia del codi font d'Omarchy.
+Això no és només un detall d'implementació. Vol dir que pots apagar peces de l'escriptori, intercanviar-les o escriure'n de pròpies sense tocar ni una línia del codi font d'Ve OS.
 
-Els connectors oficials venen amb Omarchy i viuen a `$OMARCHY_PATH/shell/plugins/`. Qualsevol cosa que afegeixis tu mateix — els teus propis experiments, o alguna cosa que hagis trobat a GitHub — viu a `~/.config/omarchy/plugins/`. Tots dos es descobreixen de la mateixa manera a l'arrencada, però els integrats reben interfícies de l'intèrpret de confiança mentre que els connectors de tercers reben una interfície limitada restringida al seu propi servei i cicle de vida. Els clons dels integrats conserven només la configuració i les crides a la interfície d'usuari específiques de l'origen necessàries per al comportament original.
+Els connectors oficials venen amb Ve OS i viuen a `$OMARCHY_PATH/shell/plugins/`. Qualsevol cosa que afegeixis tu mateix — els teus propis experiments, o alguna cosa que hagis trobat a GitHub — viu a `~/.config/omarchy/plugins/`. Tots dos es descobreixen de la mateixa manera a l'arrencada, però els integrats reben interfícies de l'intèrpret de confiança mentre que els connectors de tercers reben una interfície limitada restringida al seu propi servei i cicle de vida. Els clons dels integrats conserven només la configuració i les crides a la interfície d'usuari específiques de l'origen necessàries per al comportament original.
 
 ## Veure què tens
 

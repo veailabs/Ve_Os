@@ -1,6 +1,6 @@
 # Tarmoq
 
-Omarchy'da tarmoq NetworkManager tomonidan boshqariladi, siz esa uni [yuqori panel](05-the-top-bar.md)dagi tarmoq belgisidan yoki `Super + Ctrl + N` bilan boshqarasiz.
+Ve OS'da tarmoq NetworkManager tomonidan boshqariladi, siz esa uni [yuqori panel](05-the-top-bar.md)dagi tarmoq belgisidan yoki `Super + Ctrl + N` bilan boshqarasiz.
 
 O'sha panel Wi-Fi tarmoqlarini qidiradi, signal kuchini ko'rsatadi va ulanadi. Ethernet uchun hech narsa kerak emas — kabelni ulang va u ishlaydi. Agar terminalda qolishni afzal ko'rsangiz, `nmtui` xuddi o'sha boshqaruvlarni beradi, shuningdek `omarchy network` buyruqlar guruhi ham bor.
 
@@ -12,7 +12,7 @@ Agar sizga aynan parolning o'zi kerak bo'lsa, `omarchy network password <interfa
 
 ## DNS
 
-Omarchy tarmog'ingiz DHCP orqali bergan DNS'dan foydalanadi. Buni butun mashina uchun _Setup > Network > DNS_ ostida o'zgartirishingiz mumkin, u yerda Cloudflare va Google bir bosishda tayyor. O'zingizning serverlaringizni yozish uchun _Custom_ ni tanlang.
+Ve OS tarmog'ingiz DHCP orqali bergan DNS'dan foydalanadi. Buni butun mashina uchun _Setup > Network > DNS_ ostida o'zgartirishingiz mumkin, u yerda Cloudflare va Google bir bosishda tayyor. O'zingizning serverlaringizni yozish uchun _Custom_ ni tanlang.
 
 Terminaldan `omarchy dns` joriy providerni chiqaradi va `omarchy dns Cloudflare` bittasini o'rnatadi.
 

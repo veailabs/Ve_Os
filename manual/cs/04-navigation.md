@@ -1,8 +1,8 @@
 # Navigace
 
-Všechno v Omarchy se děje přes klávesnici — _ÚPLNĚ VŠECHNO!_ Když systém poprvé nastartuje, myší samotnou doslova nic nezmůžeš. Můžeš ale stisknout `Super + Space`, čímž odkryješ Omarchy Menu, a odsud už zvládneš skoro všechno.
+Všechno v Ve OS se děje přes klávesnici — _ÚPLNĚ VŠECHNO!_ Když systém poprvé nastartuje, myší samotnou doslova nic nezmůžeš. Můžeš ale stisknout `Super + Space`, čímž odkryješ Ve OS Menu, a odsud už zvládneš skoro všechno.
 
-Omarchy menu ale většinu času ani nemá být hlavním způsobem, jak systém ovládat. Umíme to rychleji! Všechny nejdůležitější aplikace jsou navázané přímo na jednotlivé klávesové zkratky. Terminál spustíš pomocí `Super + Return` a prohlížeč pomocí `Super + Shift + Return`. Zkus jedno po druhém a uvidíš kouzlo dlaždicového uspořádání Hyprland v akci:
+Ve OS menu ale většinu času ani nemá být hlavním způsobem, jak systém ovládat. Umíme to rychleji! Všechny nejdůležitější aplikace jsou navázané přímo na jednotlivé klávesové zkratky. Terminál spustíš pomocí `Super + Return` a prohlížeč pomocí `Super + Shift + Return`. Zkus jedno po druhém a uvidíš kouzlo dlaždicového uspořádání Hyprland v akci:
 
  ![navigation-browser-terminal](images/navigation-browser-terminal.webp)
 
@@ -30,7 +30,7 @@ Můžeš taky přejít na celou obrazovku pomocí `Super + F`, nebo jen na celou
 
 ### Rozložení dwindle vs. scrolling
 
-Výchozí rozložení Omarchy se jmenuje dwindle. Všechna okna, která otevřeš na jedné pracovní ploše, udržuje neustále viditelná, i když je kvůli tomu musí zmenšit.
+Výchozí rozložení Ve OS se jmenuje dwindle. Všechna okna, která otevřeš na jedné pracovní ploše, udržuje neustále viditelná, i když je kvůli tomu musí zmenšit.
 
  ![navigation-dwindle-layout](images/navigation-dwindle-layout.webp)
 
@@ -56,7 +56,7 @@ hl.config({
 
 Plovoucí pracovní plocha funguje jako tradiční desktop: okna se překrývají a sám je přesouváš a měníš jim velikost. Každé okno dostane titulkový pruh v barvách tvého motivu s tlačítky pro minimalizaci, maximalizaci a zavření. `Super + M` minimalizuje i zaměřené okno. Minimalizované okno čeká v docku; kliknutím na jeho aplikaci ho přivedeš zpět. Kliknutím na okno ho přivedeš dopředu. Velikost mu změníš z kterékoli hrany nebo rohu. Dvojitým kliknutím na titulkový pruh okno maximalizuješ a přitom ponecháš horní lištu na očích a dalším dvojitým kliknutím získáš zpět jeho starou velikost. Chrome a další prohlížeče založené na Chromium, Disks a Document Viewer titulkový pruh vynechávají a místo něj používají vlastní záhlaví; `Super + Alt + F` je maximalizuje a `Super + M` je minimalizuje.
 
-Plovoucí pracovní plocha taky ukazuje dock s tvými připnutými aplikacemi, vším, co právě běží, a mřížkou všech aplikací za tlačítkem aplikací, kterou otevře i `Super + Alt + Space` a _Aplikace_ v Omarchy menu. Kliknutím pravým tlačítkem na aplikaci v mřížce, nebo stisknutím `Delete`, ji odinstaluješ. Kliknutím na aplikaci ji otevřeš, nebo přivedeš její okno dopředu; dalším kliknutím procházíš její okna. Files přivede zpět jen okno z pracovní plochy, na které jsi, a jinak otevře nové, a Terminal a Agent vždy spustí další, i když minimalizované okno se vrátí jako první. Kliknutím prostředním tlačítkem otevřeš nové okno. Přetažením ikony podél docku ji přesuneš; přetažením běžící aplikace mezi ostatní ji tam ponecháš. Kliknutím pravým tlačítkem aplikaci v docku ponecháš, vyndáš ji z něj, nebo ji ukončíš. Dock uhne oknu na celou obrazovku. Kliknutím pravým tlačítkem na tlačítko aplikací dock přesuneš na jinou hranu, nebo ho necháš skrývat, dokud ukazatel nedosáhne jeho hrany. Umístění je taky pod _Vzhled > Dock > Umístění docku_ a `omarchy dock position left` a `omarchy dock autohide on` obojí nastaví z terminálu. Aplikace, které si v docku ponecháš, jsou vybledlé, dokud neběží.
+Plovoucí pracovní plocha taky ukazuje dock s tvými připnutými aplikacemi, vším, co právě běží, a mřížkou všech aplikací za tlačítkem aplikací, kterou otevře i `Super + Alt + Space` a _Aplikace_ v Ve OS menu. Kliknutím pravým tlačítkem na aplikaci v mřížce, nebo stisknutím `Delete`, ji odinstaluješ. Kliknutím na aplikaci ji otevřeš, nebo přivedeš její okno dopředu; dalším kliknutím procházíš její okna. Files přivede zpět jen okno z pracovní plochy, na které jsi, a jinak otevře nové, a Terminal a Agent vždy spustí další, i když minimalizované okno se vrátí jako první. Kliknutím prostředním tlačítkem otevřeš nové okno. Přetažením ikony podél docku ji přesuneš; přetažením běžící aplikace mezi ostatní ji tam ponecháš. Kliknutím pravým tlačítkem aplikaci v docku ponecháš, vyndáš ji z něj, nebo ji ukončíš. Dock uhne oknu na celou obrazovku. Kliknutím pravým tlačítkem na tlačítko aplikací dock přesuneš na jinou hranu, nebo ho necháš skrývat, dokud ukazatel nedosáhne jeho hrany. Umístění je taky pod _Vzhled > Dock > Umístění docku_ a `omarchy dock position left` a `omarchy dock autohide on` obojí nastaví z terminálu. Aplikace, které si v docku ponecháš, jsou vybledlé, dokud neběží.
 
 Nové pracovní plochy a každá, které jsi pomocí `Super + L` nedal její vlastní rozložení, používají výchozí rozložení. Změna výchozího rozložení na něj resetuje každou pracovní plochu bez oken, zatímco ta s okny si ponechá rozložení, které má. Okno minimalizované do docku se pořád počítá jako okno na pracovní ploše, kterou opustilo. Vyber ho pod _Vzhled > Rozložení pracovní plochy_: Dlaždicové, Posuvné, nebo Plovoucí. `omarchy-hyprland-workspace-layout-default scrolling` ho nastaví z terminálu.
 

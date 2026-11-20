@@ -6,19 +6,19 @@ Versuche zuerst, [dein System zurückzusetzen](47-system-snapshots.md) auf die V
 
 ### Warum sind manche Apps auf meinem Display so groß?
 
-Omarchy geht von einem 2x-Display mit hoher Auflösung aus, also setzt es `GDK_SCALE` auf 2, bis du im Monitor-Panel eine Skalierung auswählst. Wenn du ein 1x-Display hast und GTK- oder X11-Apps überdimensioniert dargestellt werden, wähle im Monitor-Panel 1x dafür aus, oder füge `hl.env("GDK_SCALE", "1")` zu `~/.config/hypr/monitors.lua` hinzu (und starte dann jede überdimensionierte App neu). Siehe [das Handbuch zu Monitoren](33-monitors.md).
+Ve OS geht von einem 2x-Display mit hoher Auflösung aus, also setzt es `GDK_SCALE` auf 2, bis du im Monitor-Panel eine Skalierung auswählst. Wenn du ein 1x-Display hast und GTK- oder X11-Apps überdimensioniert dargestellt werden, wähle im Monitor-Panel 1x dafür aus, oder füge `hl.env("GDK_SCALE", "1")` zu `~/.config/hypr/monitors.lua` hinzu (und starte dann jede überdimensionierte App neu). Siehe [das Handbuch zu Monitoren](33-monitors.md).
 
 Für Spotify kannst du `Ctrl + Minus` verwenden, um die UI zu verkleinern (und `Ctrl + Plus`, um sie zu vergrößern).
 
 ### Warum funktionieren alle meine Super-Tastenbindungen nicht mehr?
 
-Bei manchen ASUS ROG- und TUF-Laptops ist `Fn + Super` eine leicht zu übersehende Tastenkombination, die eine Firmware-Sperre für die Windows-Taste umschaltet (gedacht für Gaming, damit du ein Spiel nicht versehentlich verlässt). Nichts auf dem Bildschirm zeigt dir an, dass das passiert ist. Solange die Sperre aktiv ist, sendet Super überhaupt nichts — also hört jede Omarchy-Bindung, die Super verwendet, einfach auf zu funktionieren, und es sieht so aus, als wäre Hyprland kaputt.
+Bei manchen ASUS ROG- und TUF-Laptops ist `Fn + Super` eine leicht zu übersehende Tastenkombination, die eine Firmware-Sperre für die Windows-Taste umschaltet (gedacht für Gaming, damit du ein Spiel nicht versehentlich verlässt). Nichts auf dem Bildschirm zeigt dir an, dass das passiert ist. Solange die Sperre aktiv ist, sendet Super überhaupt nichts — also hört jede Ve OS-Bindung, die Super verwendet, einfach auf zu funktionieren, und es sieht so aus, als wäre Hyprland kaputt.
 
 Drücke einmal `Fn + Super`, bevor du dich in `~/.config/hypr/` vertiefst, und wenn das Super nicht zurückbringt, drücke es erneut, damit du die Sperre nicht aktiviert lässt. Das ist nicht die Fn-Sperre, die nur ändert, was die F-Tastenreihe tut.
 
 ### Mein Wi-Fi, Bluetooth, Audio oder Trackpad funktioniert plötzlich nicht mehr
 
-Bevor du neu startest, versuche, das betroffene Subsystem einzeln neu zu starten. _Update > Hardware_ im Omarchy-Menü hat Wi-Fi, Bluetooth, Audio und Trackpad, und das Neuladen eines davon behebt die Mehrheit der „vor fünf Minuten hat es noch funktioniert“-Situationen — ein Bluetooth-Headset, das sich nicht wiederverbindet, ein Trackpad, das nach einem Suspend tot ist, Ton, der verschwunden ist, als du einen Monitor abgesteckt hast.
+Bevor du neu startest, versuche, das betroffene Subsystem einzeln neu zu starten. _Update > Hardware_ im Ve OS-Menü hat Wi-Fi, Bluetooth, Audio und Trackpad, und das Neuladen eines davon behebt die Mehrheit der „vor fünf Minuten hat es noch funktioniert“-Situationen — ein Bluetooth-Headset, das sich nicht wiederverbindet, ein Trackpad, das nach einem Suspend tot ist, Ton, der verschwunden ist, als du einen Monitor abgesteckt hast.
 
 ### Warum spielen meine externen Lautsprecher nichts ab?
 
@@ -26,7 +26,7 @@ Wahrscheinlich, weil sie nicht als primäre Ausgabe gesetzt sind. Klicke auf das
 
 ### Meine Laptop-Lautsprecher klingen komisch
 
-Bei manchen Laptops wendet Omarchy automatisch ein Lautsprecher-Tuning an, das den Frequenzgang der eingebauten Lautsprecher korrigiert. `omarchy audio tuning status` zeigt dir, ob eines auf deinem Gerät aktiv ist, und `omarchy audio tuning off` schaltet es aus, wenn du die Lautsprecher lieber unverfälscht hören willst.
+Bei manchen Laptops wendet Ve OS automatisch ein Lautsprecher-Tuning an, das den Frequenzgang der eingebauten Lautsprecher korrigiert. `omarchy audio tuning status` zeigt dir, ob eines auf deinem Gerät aktiv ist, und `omarchy audio tuning off` schaltet es aus, wenn du die Lautsprecher lieber unverfälscht hören willst.
 
 ### Warum kann ich mich nicht einloggen oder sudo mit meinem Passwort verwenden?
 

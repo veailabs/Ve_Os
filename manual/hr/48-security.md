@@ -1,6 +1,6 @@
 # Sigurnost
 
-Omarchy sigurnost shvaća iznimno ozbiljno. Ovo je zamišljeno kao operativni sustav koji možete koristiti za _pravi posao_ u _stvarnom svijetu_. Gdje gubitak prijenosnog računala ne može dovesti do sigurnosne uzbune. Evo što radimo:
+Ve OS sigurnost shvaća iznimno ozbiljno. Ovo je zamišljeno kao operativni sustav koji možete koristiti za _pravi posao_ u _stvarnom svijetu_. Gdje gubitak prijenosnog računala ne može dovesti do sigurnosne uzbune. Evo što radimo:
 
 1. *Potpuno šifriranje diska uključeno je prema zadanim postavkama*: Ovo je najvažniji korak za fizičku zaštitu vaših podataka. Ako se vaše računalo izgubi ili ga ukradu, podaci su potpuno šifrirani standardnim LUKS-om (Linux Unified Key Setup). Instalacijski program omogućuje vam da to isključite za računala za jednokratnu upotrebu (pogledajte [Početak rada](02-getting-started.md)); instalacija bez šifriranja nema ništa od ove zaštite i svatko tko drži disk može ga pročitati.
 2. *Vatrozid je omogućen prema zadanim postavkama*: Sav dolazni promet blokiran je prema zadanim postavkama, uz nekoliko iznimki: priključak 53317 za [LocalSend](https://localsend.org/); DNS upiti prema vlastitom razrješivaču računala na adresi Docker bridgea (172.17.0.1), prihvaćeni iz privatnih raspona adresa koje Docker daje svojim spremnicima; i multicast DNS (priključak 5353), koji pisačima i drugim uređajima na vašoj mreži omogućuje da se međusobno pronađu, a tamo i oglašava ime vašeg računala. Povrh toga, vatrozid zadržava standardna UFW dopuštenja za ping, dobivanje adrese od vašeg usmjerivača (DHCP) i UPnP otkrivanje. Čak je i ssh isključen dok ga ne uključite putem _Setup > Security > SSHD_, što kao dio postavljanja otvara priključak 22 (s ograničenom brzinom radi zaštite od napada grubom silom). Čak zaključavamo pristup Dockeru pomoću postavki [ufw-docker](https://github.com/chaifeng/ufw-docker) kako bismo spriječili da vaši spremnici slučajno budu izloženi svijetu.
@@ -10,11 +10,11 @@ Omarchy sigurnost shvaća iznimno ozbiljno. Ovo je zamišljeno kao operativni su
 
 ## Promjena vaših lozinki
 
-Na šifriranoj instalaciji imate dvije lozinke: onu koja otključava disk pri pokretanju i onu kojom se prijavljujete i koristite `sudo`. Postavljanje ih čini istima. Obje se mogu promijeniti pod _Update > Password_ u izborniku Omarchy — _Drive Encryption_ za prvu, _User_ za drugu. Promjena lozinke diska prvo traži trenutnu, pa je imajte pri ruci. Ako se promjena prekine, ponovno pokrenite _Drive Encryption_: tražit će lozinku koja sada otključava disk i dovršiti promjenu.
+Na šifriranoj instalaciji imate dvije lozinke: onu koja otključava disk pri pokretanju i onu kojom se prijavljujete i koristite `sudo`. Postavljanje ih čini istima. Obje se mogu promijeniti pod _Update > Password_ u izborniku Ve OS — _Drive Encryption_ za prvu, _User_ za drugu. Promjena lozinke diska prvo traži trenutnu, pa je imajte pri ruci. Ako se promjena prekine, ponovno pokrenite _Drive Encryption_: tražit će lozinku koja sada otključava disk i dovršiti promjenu.
 
 ## Predavanje računala koje ste već koristili
 
-Ako svoje računalo predajete nekome drugome, ne morate ga ponovno instalirati. Pokrenite _Setup > Reset Computer_ u izborniku Omarchy, upišite `reset` za potvrdu i ponovno pokrenite računalo. To briše svaki korisnički račun i sve u `/home`, odbacuje sve pakete i promjene sustava koje ste napravili od instalacije i briše identitet računala — mrežne veze, ključeve hosta i sve. Ono što se ponovno pokrene jest čarobnjak za postavljanje s prvog pokretanja, spreman da njegov novi vlasnik unese svoje ime, lozinku i lozinku za šifriranje.
+Ako svoje računalo predajete nekome drugome, ne morate ga ponovno instalirati. Pokrenite _Setup > Reset Computer_ u izborniku Ve OS, upišite `reset` za potvrdu i ponovno pokrenite računalo. To briše svaki korisnički račun i sve u `/home`, odbacuje sve pakete i promjene sustava koje ste napravili od instalacije i briše identitet računala — mrežne veze, ključeve hosta i sve. Ono što se ponovno pokrene jest čarobnjak za postavljanje s prvog pokretanja, spreman da njegov novi vlasnik unese svoje ime, lozinku i lozinku za šifriranje.
 
 Radi tako da vraća osnovnu snimku stanja koju instalacijski program napravi, pa je dostupno samo na računalima instaliranim s Omarchy ISO-a. A na disku bez šifriranja resetiranje je brisanje, a ne sigurno brisanje, pa ako su podaci bili osjetljivi, umjesto toga napravite svježu instalaciju.
 
@@ -24,7 +24,7 @@ Ponekad želite da `sudo` prestane pitati, najčešće kada AI agent za vas radi
 
 Vremenski ograničen pristup istječe automatski, uključujući odmah nakon nastavka iz obustave koja je prešla rok. Ponovno pokretanje računala završava ga ranije. Trajni pristup preživljava ponovna pokretanja i ostaje omogućen dok ga ne onemogućite.
 
-Ažuriranje ili uklanjanje Omarchyjeva paketa postavki završava svako privremeno dopuštenje prije nego što se promijeni podrška za njegovo istjecanje. Ako naredba prijavi pogrešku autorizacije ili čišćenja, riješite je prije nego što pokušate omogućiti drugo dopuštenje; pogreška ne znači da je pristup bez lozinke neaktivan.
+Ažuriranje ili uklanjanje Ve OSjeva paketa postavki završava svako privremeno dopuštenje prije nego što se promijeni podrška za njegovo istjecanje. Ako naredba prijavi pogrešku autorizacije ili čišćenja, riješite je prije nego što pokušate omogućiti drugo dopuštenje; pogreška ne znači da je pristup bez lozinke neaktivan.
 
 Gledajte na ovo otvorenih očiju: dok je uključeno, sve što radi kao vaš korisnik može kao root raditi bilo što, a da ga se ne pita. To je cijela poanta, a to je i cijeli rizik.
 

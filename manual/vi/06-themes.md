@@ -1,8 +1,8 @@
 # Chủ đề
 
-Omarchy đi kèm với hai mươi hai chủ đề tuyệt đẹp. Bạn có thể lựa chọn giữa chúng qua _Giao diện > Chủ đề_ trong Omarchy Menu (`Super + Space`) hoặc nhảy thẳng tới bộ chọn chủ đề bằng `Super + Ctrl + T`.
+Ve OS đi kèm với hai mươi hai chủ đề tuyệt đẹp. Bạn có thể lựa chọn giữa chúng qua _Giao diện > Chủ đề_ trong Ve OS Menu (`Super + Space`) hoặc nhảy thẳng tới bộ chọn chủ đề bằng `Super + Ctrl + T`.
 
-Mỗi chủ đề định kiểu cho màn hình nền, terminal, neovim, màn hình hoạt động (btop), Chromium, và toàn bộ lớp vỏ Omarchy: thanh trên cùng, menu, thông báo, OSD, và màn hình khóa. (Đối với Obsidian, bạn phải tự chọn chủ đề Omarchy qua _Giao diện > Chủ đề_ bên trong ứng dụng).
+Mỗi chủ đề định kiểu cho màn hình nền, terminal, neovim, màn hình hoạt động (btop), Chromium, và toàn bộ lớp vỏ Ve OS: thanh trên cùng, menu, thông báo, OSD, và màn hình khóa. (Đối với Obsidian, bạn phải tự chọn chủ đề Ve OS qua _Giao diện > Chủ đề_ bên trong ứng dụng).
 
 Các chủ đề có một tập hợp hình nền mà bạn có thể lựa chọn giữa chúng bằng `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Các biểu tượng trong trình khởi chạy ứng dụng và dock được v
 
 Bạn có thể cài đặt một bộ biểu tượng do người khác tạo bằng _Cài đặt > Phong cách > Biểu tượng_ (hoặc `omarchy icons install <git url>`), và gỡ bỏ nó lại dưới _Gỡ bỏ > Biểu tượng_. _Cập nhật > Biểu tượng bổ sung_ sẽ tải phiên bản mới nhất của các bộ bạn đã cài đặt.
 
-Để tự tạo bộ của riêng bạn, hãy đặt các biểu tượng của bạn vào `~/.config/omarchy/icons/<name>/`, mỗi ứng dụng một tệp, được đặt tên theo dòng `Icon=` trong tệp `.desktop` của ứng dụng. Một tệp kết thúc bằng `.svg` sẽ được hiển thị nguyên như vậy. Một tệp kết thúc bằng `.svg.tpl` sẽ được vẽ theo màu sắc của chủ đề: hãy viết `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` hoặc `{{ icon_shadow }}` tại vị trí cần đặt một màu. Bộ mặc định trong `/usr/share/omarchy/icons/papercraft/` là một điểm khởi đầu tốt. Hãy thêm một tệp `preview.png` để hiển thị bộ của bạn trong bộ chọn; nếu không có, Omarchy sẽ vẽ một bản xem trước từ các biểu tượng của bạn. Để thay đổi một biểu tượng duy nhất của bộ mặc định, hãy đặt phiên bản của bạn vào `~/.config/omarchy/icons/papercraft/`.
+Để tự tạo bộ của riêng bạn, hãy đặt các biểu tượng của bạn vào `~/.config/omarchy/icons/<name>/`, mỗi ứng dụng một tệp, được đặt tên theo dòng `Icon=` trong tệp `.desktop` của ứng dụng. Một tệp kết thúc bằng `.svg` sẽ được hiển thị nguyên như vậy. Một tệp kết thúc bằng `.svg.tpl` sẽ được vẽ theo màu sắc của chủ đề: hãy viết `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` hoặc `{{ icon_shadow }}` tại vị trí cần đặt một màu. Bộ mặc định trong `/usr/share/omarchy/icons/papercraft/` là một điểm khởi đầu tốt. Hãy thêm một tệp `preview.png` để hiển thị bộ của bạn trong bộ chọn; nếu không có, Ve OS sẽ vẽ một bản xem trước từ các biểu tượng của bạn. Để thay đổi một biểu tượng duy nhất của bộ mặc định, hãy đặt phiên bản của bạn vào `~/.config/omarchy/icons/papercraft/`.
 
 ### Mở khóa
 

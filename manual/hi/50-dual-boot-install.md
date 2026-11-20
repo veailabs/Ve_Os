@@ -1,4 +1,6 @@
-# ड्यूल बूट इंस्टॉल
+# Ve OS — ड्यूल बूट इंस्टॉल
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 आप Windows या अन्य इंस्टॉलेशन के साथ-साथ एक ही पार्टीशन पर Omarchy इंस्टॉल कर सकते हैं।
 

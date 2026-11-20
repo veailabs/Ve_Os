@@ -1,8 +1,8 @@
 # Tēmas
 
-Omarchy nāk ar divdesmit divām skaistām tēmām. Tu vari izvēlēties starp tām Omarchy izvēlnē (`Super + Space`) sadaļā _Izskats > Tēma_ vai pārlēkt tieši uz tēmu atlasītāju ar `Super + Ctrl + T`.
+Ve OS nāk ar divdesmit divām skaistām tēmām. Tu vari izvēlēties starp tām Ve OS izvēlnē (`Super + Space`) sadaļā _Izskats > Tēma_ vai pārlēkt tieši uz tēmu atlasītāju ar `Super + Ctrl + T`.
 
-Katra tēma veido darbvirsmas, termināļa, neovim, aktivitāšu ekrāna (btop), Chromium un visas Omarchy čaulas stilu: augšējā josla, izvēlne, paziņojumi, OSD un bloķēšanas ekrāns. (Obsidian gadījumā Omarchy tēma tev manuāli jāizvēlas pašā lietotnē sadaļā _Izskats > Tēmas_). 
+Katra tēma veido darbvirsmas, termināļa, neovim, aktivitāšu ekrāna (btop), Chromium un visas Ve OS čaulas stilu: augšējā josla, izvēlne, paziņojumi, OSD un bloķēšanas ekrāns. (Obsidian gadījumā Ve OS tēma tev manuāli jāizvēlas pašā lietotnē sadaļā _Izskats > Tēmas_).
 
 Tēmām ir fona attēlu kopums, starp kuriem vari izvēlēties ar `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Ikonas lietotņu palaišanas rīkā un dokā ir uzzīmētas tavas tēmas krāsā
 
 Kādas citas personas izveidotu ikonu kopu vari instalēt ar _Instalēt > Stils > Ikonas_ (vai `omarchy icons install <git url>`) un atkal noņemt sadaļā _Noņemt > Ikonas_. _Atjaunināt > Papildu ikonas_ iegūst tavu instalēto kopu jaunāko versiju.
 
-Lai izveidotu savu, ieliec savas ikonas mapē `~/.config/omarchy/icons/<name>/`, vienu failu katrai lietotnei, nosauktu pēc lietotnes `.desktop` faila rindiņas `Icon=`. Fails, kas beidzas ar `.svg`, tiek parādīts tāds, kāds tas ir. Fails, kas beidzas ar `.svg.tpl`, tiek uzzīmēts tēmas krāsās: vietā, kur jābūt krāsai, ieraksti `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` vai `{{ icon_shadow }}`. Noklusējuma kopa mapē `/usr/share/omarchy/icons/papercraft/` ir laba vieta, no kuras sākt. Pievieno `preview.png`, lai parādītu savu kopu atlasītājā; bez tā Omarchy uzzīmē priekšskatījumu no tavām ikonām. Lai mainītu vienu noklusējuma kopas ikonu, ieliec savu versiju mapē `~/.config/omarchy/icons/papercraft/`.
+Lai izveidotu savu, ieliec savas ikonas mapē `~/.config/omarchy/icons/<name>/`, vienu failu katrai lietotnei, nosauktu pēc lietotnes `.desktop` faila rindiņas `Icon=`. Fails, kas beidzas ar `.svg`, tiek parādīts tāds, kāds tas ir. Fails, kas beidzas ar `.svg.tpl`, tiek uzzīmēts tēmas krāsās: vietā, kur jābūt krāsai, ieraksti `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` vai `{{ icon_shadow }}`. Noklusējuma kopa mapē `/usr/share/omarchy/icons/papercraft/` ir laba vieta, no kuras sākt. Pievieno `preview.png`, lai parādītu savu kopu atlasītājā; bez tā Ve OS uzzīmē priekšskatījumu no tavām ikonām. Lai mainītu vienu noklusējuma kopas ikonu, ieliec savu versiju mapē `~/.config/omarchy/icons/papercraft/`.
 
 ### Atbloķēšana
 

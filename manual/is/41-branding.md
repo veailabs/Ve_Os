@@ -1,6 +1,6 @@
 # Vörumerking
 
-Omarchy gerir þér kleift að setja merki fyrirtækis þíns eða persónulega mynd bæði fyrir opnun við ræsingu, skjáhvíluna og Um-skjáinn.
+Ve OS gerir þér kleift að setja merki fyrirtækis þíns eða persónulega mynd bæði fyrir opnun við ræsingu, skjáhvíluna og Um-skjáinn.
 
 ### Opnun við ræsingu
 
@@ -24,11 +24,11 @@ Beittu svo uppsetningunni með `omarchy plymouth set '#1d2021' '#ebdbb2' logo.pn
 
 - **Breyta texta** opnar `~/.config/omarchy/branding/screensaver.txt` í ritlinum þínum. Skrifaðu eða límdu hvað sem þú vilt — ASCII-list, nafnið þitt, ruddalegt orð. Vistaðu og lokaðu, og skjáhvílan fer strax í gang svo þú getir séð það.
 - **Setja frá mynd** opnar skráavel fyrir png eða svg, breytir því í ASCII og sýnir þér útkomuna. Merki með skýra útlínu virka miklu betur en ljósmyndir.
-- **Endurheimta sjálfgefið** setur Omarchy-merkið aftur á.
+- **Endurheimta sjálfgefið** setur Ve OS-merkið aftur á.
 
 ### Um-skjárinn
 
-Sömu þrír valkostir eru undir _Útlit > Vörumerking > Um_ fyrir _Um_-skjáinn sem þú færð úr Omarchy-valmyndinni, og þeir virka eins — skráin er `~/.config/omarchy/branding/about.txt`, og Um-glugginn sprettur upp eftir hverja breytingu. Um-listinni er breytt í minni stærð en list skjáhvílunnar, þar sem hún þarf að passa í glugga frekar en að fylla skjáinn þinn.
+Sömu þrír valkostir eru undir _Útlit > Vörumerking > Um_ fyrir _Um_-skjáinn sem þú færð úr Ve OS-valmyndinni, og þeir virka eins — skráin er `~/.config/omarchy/branding/about.txt`, og Um-glugginn sprettur upp eftir hverja breytingu. Um-listinni er breytt í minni stærð en list skjáhvílunnar, þar sem hún þarf að passa í glugga frekar en að fylla skjáinn þinn.
 
 Meðan glugginn er opinn hallast grænn ljómi yfir listina á nokkurra sekúndna fresti og skilur hana svo eftir kyrr aftur. Þín eigin list fær hann líka, svo lengi sem hvert tákn í henni er einn dálkur á breidd — allt sem _Setja frá mynd_ býr til er það. List sem er byggð úr emoji eða tvíbreiðum táknum helst þess í stað kyrr, og það gerir skjárinn líka ef þú geymir þína eigin fastfetch-stillingu: kyrrt merki í þeim tilvikum er hreyfimyndin að halda sig til hlés frekar en að mistakast, þar sem að renna ljóma yfir þau myndi láta afganginn af línunni lenda á röngum stað.
 

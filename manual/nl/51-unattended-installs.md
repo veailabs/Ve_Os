@@ -1,4 +1,6 @@
-# Installaties zonder toezicht
+# Ve OS — Installaties zonder toezicht
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 De Omarchy ISO kan zichzelf installeren zonder dat er iemand achter het toetsenbord zit. Als het installatieprogramma een tweede schijf vindt met het label `cidata` waarop de configuratiebestanden staan, kopieert het die eraf, slaat het de installatiewizard volledig over en start het zelf opnieuw op in het voltooide systeem. Geen speciale ISO-build, geen extra opstartmenu-item — zonder zo'n schijf verandert er niets en krijg je de normale wizard.
 

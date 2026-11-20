@@ -1,14 +1,14 @@
 # La barra superiore
 
-La striscia lungo la parte superiore dello schermo è la barra di Omarchy. Non è una barra di stato aggiunta alla bell'e meglio, ma parte della shell di Omarchy, l'unico processo Quickshell a esecuzione prolungata che disegna anche il menu, le notifiche, i popup OSD e la schermata di blocco. Ecco perché si abbina perfettamente a tutto il resto e perché un pannello si apre all'istante invece di avviare una nuova app.
+La striscia lungo la parte superiore dello schermo è la barra di Ve OS. Non è una barra di stato aggiunta alla bell'e meglio, ma parte della shell di Ve OS, l'unico processo Quickshell a esecuzione prolungata che disegna anche il menu, le notifiche, i popup OSD e la schermata di blocco. Ecco perché si abbina perfettamente a tutto il resto e perché un pannello si apre all'istante invece di avviare una nuova app.
 
 È anche l'unico pezzo del desktop sempre visibile sullo schermo, quindi vale la pena sapere cosa fanno tutti quei piccoli glifi.
 
 ## Cosa contiene per impostazione predefinita
 
-La barra ha tre sezioni. A sinistra si trovano il logo di Omarchy (il lanciatore del menu) e gli indicatori dei workspace. Al centro trovi gli indicatori di stato, l'orologio, Elsewhen (un orologio mondiale), il meteo e un badge di aggiornamento di Omarchy. A destra: il tray di sistema, il layout di tastiera (quando ne è configurato più di uno), gli agenti, Bluetooth, rete, audio, schermo e alimentazione.
+La barra ha tre sezioni. A sinistra si trovano il logo di Ve OS (il lanciatore del menu) e gli indicatori dei workspace. Al centro trovi gli indicatori di stato, l'orologio, Elsewhen (un orologio mondiale), il meteo e un badge di aggiornamento di Ve OS. A destra: il tray di sistema, il layout di tastiera (quando ne è configurato più di uno), gli agenti, Bluetooth, rete, audio, schermo e alimentazione.
 
-Alcuni di questi compaiono solo quando hanno qualcosa da dire. Il layout di tastiera compare solo se hai configurato più di un layout. Il badge di aggiornamento compare solo quando c'è un aggiornamento di Omarchy in attesa. E l'icona degli agenti compare la prima volta che Omarchy trova un utilizzo di AI coding sulla macchina (vedi [AI](17-ai.md)).
+Alcuni di questi compaiono solo quando hanno qualcosa da dire. Il layout di tastiera compare solo se hai configurato più di un layout. Il badge di aggiornamento compare solo quando c'è un aggiornamento di Ve OS in attesa. E l'icona degli agenti compare la prima volta che Ve OS trova un utilizzo di AI coding sulla macchina (vedi [AI](17-ai.md)).
 
 ## Clic in giro
 
@@ -16,7 +16,7 @@ Quasi ogni widget fa qualcosa con il clic sinistro, destro e centrale, e diversi
 
 | Widget | Sinistro | Destro | Centrale / scorrimento |
 | --- | --- | --- | --- |
-| Menu | Menu di Omarchy | Nuovo terminale | — |
+| Menu | Menu di Ve OS | Nuovo terminale | — |
 | Workspace | Porta in primo piano quel workspace su questo monitor | — | Scorrimento: workspace successivo/precedente |
 | Orologio | Popup del calendario | Passa da un formato dell'etichetta all'altro | Centrale: selettore del fuso orario |
 | Meteo | Popup delle previsioni | Meteo completo come notifica | Centrale: aggiorna |
@@ -29,7 +29,7 @@ Quasi ogni widget fa qualcosa con il clic sinistro, destro e centrale, e diversi
 | Media | Riproduci/pausa | Popup della copertina | Centrale: successivo · scorrimento: precedente/successivo |
 | Agenti | Pannello Agenti | Avvia il tuo agent | Centrale: abbonamento successivo |
 | Tray | Passa il mouse sopra per mostrare il cassetto | Tasto destro sullo chevron per gestire | — |
-| Aggiornamento Omarchy | Esegui l'aggiornamento | — | — |
+| Aggiornamento Ve OS | Esegui l'aggiornamento | — | — |
 
 Non tutto in quella tabella è sulla tua barra fin dall'inizio. Il widget media (MPRIS in riproduzione, con brano e artista a scorrimento) e il widget microfono sono entrambi integrati ma disattivati per impostazione predefinita: aggiungili se li vuoi, come descritto di seguito.
 
@@ -137,6 +137,6 @@ Ogni widget è una voce in uno dei cinque array di layout, e le sue impostazioni
 
 `center` è il riquadro al centro della barra: tutto ciò che contiene è centrato sullo schermo come un unico gruppo. `centerBegin` e `centerEnd` si agganciano ai due lati del riquadro, ed è così che l'orologio resta perfettamente al centro anche mentre il meteo e il badge di aggiornamento vanno e vengono. Metti più di un widget in `center` e verranno centrati insieme; lascialo vuoto e `centerBegin` e `centerEnd` si incontrano al centro della barra.
 
-Una regola che vale la pena interiorizzare: **quando hai un tuo `shell.json`, è quello canonico**. Finché non personalizzi nulla, la shell legge il file predefinito di Omarchy. Nel momento in cui trascini un widget, esegui `omarchy bar` o modifichi tu stesso il file, diventa tuo: non c'è alcuna fusione profonda, quindi i nuovi widget predefiniti nelle future versioni di Omarchy non compariranno automaticamente sulla tua barra. `omarchy bar defaults` rimette il layout fornito di serie ogni volta che vuoi ripartire da zero.
+Una regola che vale la pena interiorizzare: **quando hai un tuo `shell.json`, è quello canonico**. Finché non personalizzi nulla, la shell legge il file predefinito di Ve OS. Nel momento in cui trascini un widget, esegui `omarchy bar` o modifichi tu stesso il file, diventa tuo: non c'è alcuna fusione profonda, quindi i nuovi widget predefiniti nelle future versioni di Ve OS non compariranno automaticamente sulla tua barra. `omarchy bar defaults` rimette il layout fornito di serie ogni volta che vuoi ripartire da zero.
 
 Lo stesso file conserva anche i tuoi tempi di inattività al livello superiore, fuori dalla chiave `bar`: `idle.screensaver` e `idle.lock`, entrambi in secondi da quando sei diventato inattivo. Quindi lo screensaver predefinito parte dopo 150 secondi e il blocco dopo 300.

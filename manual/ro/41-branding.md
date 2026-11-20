@@ -1,6 +1,6 @@
 # Branding
 
-Omarchy îți permite să setezi logo-ul companiei tale sau o imagine personală atât pentru deblocarea la pornire, cât și pentru screensaver și pentru ecranul despre.
+Ve OS îți permite să setezi logo-ul companiei tale sau o imagine personală atât pentru deblocarea la pornire, cât și pentru screensaver și pentru ecranul despre.
 
 ### Deblocarea la pornire
 
@@ -24,11 +24,11 @@ Poți schimba logo-ul folosit pentru screensaver în _Appearance > Branding > Sc
 
 - **Edit Text** deschide `~/.config/omarchy/branding/screensaver.txt` în editorul tău. Tastează sau lipește ce vrei — artă ASCII, numele tău, un cuvânt nepoliticos. Salvează și închide, iar screensaverul pornește imediat ca să îl poți vedea.
 - **Set From Image** deschide un selector de fișiere pentru un png sau svg, îl convertește în ASCII și îți arată rezultatul. Logo-urile cu o siluetă clară funcționează mult mai bine decât fotografiile.
-- **Restore Default** pune logo-ul Omarchy la loc.
+- **Restore Default** pune logo-ul Ve OS la loc.
 
 ### Ecranul despre
 
-Aceleași trei opțiuni se află în _Appearance > Branding > About_ pentru ecranul _About_ pe care îl obții din meniul Omarchy și funcționează identic — fișierul este `~/.config/omarchy/branding/about.txt`, iar fereastra About apare după fiecare modificare. Arta pentru About este convertită la o dimensiune mai mică decât cea a screensaverului, deoarece trebuie să încapă într-o fereastră, nu să îți umple ecranul.
+Aceleași trei opțiuni se află în _Appearance > Branding > About_ pentru ecranul _About_ pe care îl obții din meniul Ve OS și funcționează identic — fișierul este `~/.config/omarchy/branding/about.txt`, iar fereastra About apare după fiecare modificare. Arta pentru About este convertită la o dimensiune mai mică decât cea a screensaverului, deoarece trebuie să încapă într-o fereastră, nu să îți umple ecranul.
 
 Cât timp fereastra este deschisă, o strălucire verde se apleacă peste artă la fiecare câteva secunde și apoi o lasă din nou nemișcată. Și arta ta o primește, atâta timp cât fiecare caracter din ea are o lățime de o coloană — tot ce produce _Set From Image_ are. Arta construită din emoji sau caractere cu lățime dublă rămâne nemișcată, la fel și ecranul dacă păstrezi o configurație fastfetch proprie: un logo nemișcat în aceste cazuri este animația care se dă la o parte, nu una care eșuează, deoarece alunecarea unei străluciri peste ele ar face ca restul rândului să ajungă în locul greșit.
 

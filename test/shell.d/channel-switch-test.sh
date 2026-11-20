@@ -92,7 +92,7 @@ for channel in stable; do
   reset_boundary
   if SUDO_TEST_PLATFORM=aarch64-apple run_channel "$channel"; then fail "aarch64-apple accepted $channel"; fi
   if grep -Eq '^step:|^sudo ' "$SUDO_TEST_LOG"; then fail "aarch64-apple $channel was refused before any change" "$(<"$SUDO_TEST_LOG")"; fi
-  grep -q "Omarchy has no $channel channel for aarch64-apple" "$boundary_tmp/output" || fail "aarch64-apple $channel: the refusal says why" "$(<"$boundary_tmp/output")"
+  grep -q "Ve OS has no $channel channel for aarch64-apple" "$boundary_tmp/output" || fail "aarch64-apple $channel: the refusal says why" "$(<"$boundary_tmp/output")"
 done
 mv "$boundary_tmp/saved-template" "$SUDO_TEST_ROOT/default/pacman/aarch64-apple/pacman-stable.conf"
 pass "a platform without a stable template refuses stable before any change"
@@ -104,7 +104,7 @@ for channel in edge dev; do
   reset_boundary
   if SUDO_TEST_PLATFORM=aarch64-apple run_channel "$channel"; then fail "a channel without a template was accepted ($channel)"; fi
   if grep -Eq '^step:|^sudo ' "$SUDO_TEST_LOG"; then fail "$channel was refused before any change" "$(<"$SUDO_TEST_LOG")"; fi
-  grep -q "Omarchy has no edge channel for aarch64-apple" "$boundary_tmp/output" || fail "the refusal says why" "$(<"$boundary_tmp/output")"
+  grep -q "Ve OS has no edge channel for aarch64-apple" "$boundary_tmp/output" || fail "the refusal says why" "$(<"$boundary_tmp/output")"
 done
 mv "$boundary_tmp/saved-template" "$SUDO_TEST_ROOT/default/pacman/aarch64-apple/pacman-edge.conf"
 pass "a channel without a template for the platform is refused before any change"

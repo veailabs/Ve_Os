@@ -1,12 +1,12 @@
 # Czcionki
 
-Omarchy domyślnie używa JetBrainsMono Nerd Font zarówno jako czcionki terminala, jak i czcionki systemowej.
+Ve OS domyślnie używa JetBrainsMono Nerd Font zarówno jako czcionki terminala, jak i czcionki systemowej.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Możesz to zmienić w menu _Wygląd > Czcionka_ w menu Omarchy (`Super + Space`). Ustawia to czcionkę monospace wszędzie: w terminalu, na pasku i we wszystkim innym, co o nią prosi.
+Możesz to zmienić w menu _Wygląd > Czcionka_ w menu Ve OS (`Super + Space`). Ustawia to czcionkę monospace wszędzie: w terminalu, na pasku i we wszystkim innym, co o nią prosi.
 
-Inne popularne czcionki programistyczne możesz zainstalować przez _Instaluj > Styl > Czcionka_ w menu Omarchy: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono i Iosevka są na wyciągnięcie jednego kliknięcia, w wersjach Nerd Font, więc glify na pasku i w terminalu nadal działają. Po zainstalowaniu jednej z nich wybierz ją w _Wygląd > Czcionka_.
+Inne popularne czcionki programistyczne możesz zainstalować przez _Instaluj > Styl > Czcionka_ w menu Ve OS: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono i Iosevka są na wyciągnięcie jednego kliknięcia, w wersjach Nerd Font, więc glify na pasku i w terminalu nadal działają. Po zainstalowaniu jednej z nich wybierz ją w _Wygląd > Czcionka_.
 
 ## Chiński, japoński i koreański
 

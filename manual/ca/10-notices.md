@@ -10,7 +10,7 @@ Les targetes ofereixen el que porten: _Copia el codi_ per als codis de verificac
 
 Per fer-les servir sense el ratolí, prem `Super + Ctrl + ,`. La notificació més recent queda seleccionada i els seus botons numerats: prem un número per fer-ne servir un, `Enter` per fer clic a la notificació, `↑` i `↓` per moure't entre notificacions, `Delete` per descartar-ne una i `Esc` per tornar el teclat. També es deixa anar per si sola al cap d'uns segons sense activitat.
 
-Silenciar les notificacions les reté, excepte les confirmacions del mateix Omarchy, les alertes d'emergència i els codis de verificació, que acabes de demanar fa un moment. Torna a posar les últimes a la pantalla, retingudes o no, amb `Super + Shift + Alt + ,`. L'historial es conserva durant un dia.
+Silenciar les notificacions les reté, excepte les confirmacions del mateix Ve OS, les alertes d'emergència i els codis de verificació, que acabes de demanar fa un moment. Torna a posar les últimes a la pantalla, retingudes o no, amb `Super + Shift + Alt + ,`. L'historial es conserva durant un dia.
 
 ## Avisos per drecera de teclat
 

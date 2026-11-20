@@ -1,4 +1,6 @@
-# البدء
+# Ve OS — البدء
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 يتم تثبيت Omarchy باستخدام ملف ISO. يمكنك الاختيار بين التثبيت على القرص بالكامل، الذي يستولي على محرك الأقراص بأكمله، أو التثبيت في المساحة الحرة، الذي يضع Omarchy في المساحة غير المخصصة على محرك الأقراص — وهكذا يمكنك الإقلاع المزدوج إلى جانب Windows أو نظام تشغيل آخر (راجع [تثبيت الإقلاع المزدوج](50-dual-boot-install.md) — لاحظ أنك ستحتاج إلى إيقاف تشغيل BitLocker في Windows أولًا). في كلتا الحالتين، يكون التثبيت افتراضيًا مع التشفير الكامل، وخيار القرص بالكامل سيمسح محرك الأقراص المحدد، لذا تأكد من أخذ نسخة احتياطية قبل استخدام محرك أقراص موجود!
 

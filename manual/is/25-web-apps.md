@@ -1,10 +1,10 @@
 # Vefforrit
 
-Þú getur bætt við þínum eigin vefforritum með því að nota _Install > Web App_ í Omarchy-valmyndinni (`Super + Space`). Það mun biðja þig um nafn forritsins, vefslóð forritsins og vefslóð táknsins, ef það getur ekki sótt það með favicon. Þú getur fengið frábær PNG-tákn fyrir mörg vinsæl vefforrit á [Dashboard Icons](https://dashboardicons.com).
+Þú getur bætt við þínum eigin vefforritum með því að nota _Install > Web App_ í Ve OS-valmyndinni (`Super + Space`). Það mun biðja þig um nafn forritsins, vefslóð forritsins og vefslóð táknsins, ef það getur ekki sótt það með favicon. Þú getur fengið frábær PNG-tákn fyrir mörg vinsæl vefforrit á [Dashboard Icons](https://dashboardicons.com).
 
 Þau verða síðan aðgengileg í gegnum forritavalmyndina (`Super + Space`) og nota fallega rammalausa vefforritsgluggann.
 
-Ef þú vilt fjarlægja vefforrit skaltu bara fara í _Remove > Web App_ í Omarchy-valmyndinni.
+Ef þú vilt fjarlægja vefforrit skaltu bara fara í _Remove > Web App_ í Ve OS-valmyndinni.
 
 Best er ef þú skráir þig inn á alla reikningana þína í venjulegum vafra áður en þú notar flýtileiðirnar fyrir vefforritin. Þunna umgjörðin virkar ekki vel með 1password, svo það er bara auðveldara að vera skráður inn beint fyrir fram.
 
@@ -12,7 +12,7 @@ Best er ef þú skráir þig inn á alla reikningana þína í venjulegum vafra 
 
 Þegar þú ert í vefforriti geturðu afritað núverandi vefslóð á klippiborðið með `Shift + Alt + L`.
 
-Sjálfgefið fylgir Omarchy nú þegar með úrval af sjálfgefnum forritum:
+Sjálfgefið fylgir Ve OS nú þegar með úrval af sjálfgefnum forritum:
 
 ## HEY
 
@@ -64,7 +64,7 @@ X er þar sem fréttirnar berast fyrst.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) er vinsælasta myndfundakerfið sem notað er í Bandaríkjunum. Frábærar tengingar um allan heim. Og hægt er að halda 40 mínútna fundi án greidds reiknings. Omarchy notar vefútgáfu Zoom sem umgjörð og Zoom-fundatenglar opnast beint í henni.
+[Zoom](https://zoom.us/) er vinsælasta myndfundakerfið sem notað er í Bandaríkjunum. Frábærar tengingar um allan heim. Og hægt er að halda 40 mínútna fundi án greidds reiknings. Ve OS notar vefútgáfu Zoom sem umgjörð og Zoom-fundatenglar opnast beint í henni.
 
 Þú ræsir Zoom í gegnum forritavalmyndina (`Super + Space`).
 
@@ -76,7 +76,7 @@ X er þar sem fréttirnar berast fyrst.
 
 ## Microsoft-forrit
 
-Veldu _Install > Service > Microsoft_ til að bæta Outlook, Word, Excel, PowerPoint, Teams og OneDrive við sem vefforrit. Hvert forrit hefur sinn eigin ræsi og opnast beint, notar viðskiptaútgáfu vefslóðanna fyrir Microsoft 365 og núverandi vafrasniðið þitt. Þau opnast í sömu vafraforritsgluggum og önnur vefforrit Omarchy; þau setja ekki upp sérstaka Teams for Linux-útgáfuna.
+Veldu _Install > Service > Microsoft_ til að bæta Outlook, Word, Excel, PowerPoint, Teams og OneDrive við sem vefforrit. Hvert forrit hefur sinn eigin ræsi og opnast beint, notar viðskiptaútgáfu vefslóðanna fyrir Microsoft 365 og núverandi vafrasniðið þitt. Þau opnast í sömu vafraforritsgluggum og önnur vefforrit Ve OS; þau setja ekki upp sérstaka Teams for Linux-útgáfuna.
 
 Fjarlægðu pakkann með _Remove > Service > Microsoft_ eða fjarlægðu einstök forrit með _Remove > Web App_. Þú getur líka sett upp bara þau forrit sem þú vilt í gegnum _Install > Web App_.
 
@@ -88,4 +88,4 @@ Til að halda vinnuinnskráningum aðskildum skaltu bæta möppu fyrir vafragög
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Skiptu dæmamöppunni út fyrir algilt slóð að eigin vali og notaðu sömu slóðina fyrir alla sex ræsana til að deila vinnuinnskráningum á milli þeirra. Vefforritin nota valinn studdan vafra Omarchy og grípa til Chrome þegar sjálfgefni vafrinn er ekki studdur.
+Skiptu dæmamöppunni út fyrir algilt slóð að eigin vali og notaðu sömu slóðina fyrir alla sex ræsana til að deila vinnuinnskráningum á milli þeirra. Vefforritin nota valinn studdan vafra Ve OS og grípa til Chrome þegar sjálfgefni vafrinn er ekki studdur.

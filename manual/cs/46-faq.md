@@ -28,7 +28,7 @@ Zobrazí se neděle 10:55 AM.
 
 ### Jak změním své časové pásmo?
 
-Spusťte _Update > Timezone_ v nabídce Omarchy a vyberte ze seznamu. Pokud je časové pásmo správné, ale samotné hodiny se rozcházejí, _Update > Time_ za vás restartuje synchronizaci času.
+Spusťte _Update > Timezone_ v nabídce Ve OS a vyberte ze seznamu. Pokud je časové pásmo správné, ale samotné hodiny se rozcházejí, _Update > Time_ za vás restartuje synchronizaci času.
 
 ### Jak změním DNS, nasdílím svou Wi-Fi nebo zjistím rychlost svého připojení?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Stejně můžete postupovat i u nahrávek obrazovky pomocí `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap vytvoří adresář pro snímky obrazovky automaticky. Adresář pro nahrávky obrazovky si vytvořte sami a potom restartujte Omarchy, aby se kterákoli ze změn prostředí projevila.
+Omasnap vytvoří adresář pro snímky obrazovky automaticky. Adresář pro nahrávky obrazovky si vytvořte sami a potom restartujte Ve OS, aby se kterákoli ze změn prostředí projevila.
 
 ### Jak zprovozním reproduktory + webkameru na svém Apple Studio Display?
 
 Člověk by si myslel, že to všechno bude fungovat prostě po zapojení USB C, ale bohužel tomu tak není. Řešení, které jsem našel a díky kterému to funguje spolehlivě, je použití [kabelu WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Pak reproduktory i webkamera fungují jako po másle.
 
-Pamatujte, že v Omarchy máte vestavěné ovládání jasu pro displeje Apple (Studio i XDR) pomocí běžných kláves pro ovládání jasu na klávesnici.
+Pamatujte, že v Ve OS máte vestavěné ovládání jasu pro displeje Apple (Studio i XDR) pomocí běžných kláves pro ovládání jasu na klávesnici.
 
 ### Jak se zbavím všeho toho softwaru navíc?
 
@@ -72,7 +72,7 @@ Pokud nechcete programy jako Obsidian nebo LibreOffice ani žádné další pře
 
 Spusťte _Remove > Package_, abyste viděli všechny nainstalované balíčky. Pak můžete klávesou tab vybrat libovolný balíček, který chcete odstranit, a klávesou return začít odstraňovat vše, co jste vybrali.
 
-A pomocí _Remove > Web App_ z nabídky Omarchy můžete odstranit kteroukoli z předinstalovaných webových aplikací, kterou nechcete.
+A pomocí _Remove > Web App_ z nabídky Ve OS můžete odstranit kteroukoli z předinstalovaných webových aplikací, kterou nechcete.
 
 Nebo spusťte _Remove > Preinstalls_ a jedním tahem vymeťte všechny předinstalované doplňky — webové aplikace, TUI a volitelné aplikace. Klávesové zkratky, které je spouštěly, zmizí spolu s nimi, takže vám zůstane čistý štít vazeb, které si můžete zaplnit vlastními v `~/.config/hypr/bindings.lua`.
 

@@ -1,6 +1,6 @@
 # Outils du shell
 
-En plus des outils Linux standard, Omarchy est aussi livré avec plein d'outils de shell améliorés. Voici les principaux.
+En plus des outils Linux standard, Ve OS est aussi livré avec plein d'outils de shell améliorés. Voici les principaux.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Le manuel complet est accessible via `man yt-dlp`.
 
 [try](https://github.com/tobi/try) facilite la gestion d'expérimentations de programmation avec des répertoires horodatés. Toutes les expériences vivent dans `~/Work/tries` et vous pouvez y accéder via `try`.
 
-Omarchy n'ajoute pas automatiquement le répertoire `bin/` d'un projet à `PATH`. Lancez les outils locaux au projet auxquels vous faites confiance avec un chemin relatif explicite, comme `bin/rails` ou `./bin/dev`.
+Ve OS n'ajoute pas automatiquement le répertoire `bin/` d'un projet à `PATH`. Lancez les outils locaux au projet auxquels vous faites confiance avec un chemin relatif explicite, comme `bin/rails` ou `./bin/dev`.

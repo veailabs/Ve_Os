@@ -1,4 +1,6 @@
-# Diegimas be priežiūros
+# Ve OS — Diegimas be priežiūros
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO gali įsidiegti pats, niekam nesėdint prie klaviatūros. Jei diegimo programa randa antrą diską su žyma `cidata`, kuriame yra jos konfigūracijos failai, ji juos nukopijuoja, visiškai praleidžia sąrankos vedlį ir pati persikrauna į baigtą sistemą. Jokio specialaus ISO atvaizdo, jokio papildomo įrašo paleidimo meniu — neprijungus tokio disko, niekas nesikeičia ir gaunate įprastą vedlį.
 

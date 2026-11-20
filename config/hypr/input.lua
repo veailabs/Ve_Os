@@ -1,5 +1,5 @@
 -- Keep only your personal input overrides here. Uncommented settings below
--- replace Omarchy's defaults.
+-- replace Ve OS's defaults.
 
 -- Keyboard layout and options.
 -- See https://wiki.hypr.land/Configuring/Basics/Variables/#input
@@ -38,7 +38,7 @@
 --       -- Enable the touchpad while typing.
 --       disable_while_typing = false,
 --
---       -- Left-click-and-drag with three fingers. Turn off Omarchy's
+--       -- Left-click-and-drag with three fingers. Turn off Ve OS's
 --       -- three-finger gestures with omarchy_default_gestures = false first.
 --       drag_3fg = 1,
 --
@@ -61,7 +61,7 @@
 -- o.window("foot", { scroll_touchpad = 2.0 })
 -- o.window("com.mitchellh.ghostty", { scroll_touchpad = 0.2 })
 
--- Change one of Omarchy's touchpad gestures by unsetting it first, since
+-- Change one of Ve OS's touchpad gestures by unsetting it first, since
 -- Hyprland rejects a second gesture on the same fingers and direction. This
 -- makes a three-finger swipe move focus instead (helpful on scrolling layout).
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Gestures/

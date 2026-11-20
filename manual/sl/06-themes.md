@@ -1,8 +1,8 @@
 # Teme
 
-Omarchy prihaja z dvaindvajsetimi čudovitimi temami. Med njimi lahko izbirate prek _Videz > Tema_ v meniju Omarchy (`Super + Space`) ali pa skočite naravnost v izbirnik tem z `Super + Ctrl + T`.
+Ve OS prihaja z dvaindvajsetimi čudovitimi temami. Med njimi lahko izbirate prek _Videz > Tema_ v meniju Ve OS (`Super + Space`) ali pa skočite naravnost v izbirnik tem z `Super + Ctrl + T`.
 
-Vsaka tema oblikuje namizje, terminal, neovim, zaslon dejavnosti (btop), Chromium in celotno lupino Omarchy: zgornjo vrstico, meni, obvestila, OSD in zaklenjeni zaslon. (Pri Obsidianu morate temo Omarchy izbrati ročno prek _Videz > Teme_ v aplikaciji).
+Vsaka tema oblikuje namizje, terminal, neovim, zaslon dejavnosti (btop), Chromium in celotno lupino Ve OS: zgornjo vrstico, meni, obvestila, OSD in zaklenjeni zaslon. (Pri Obsidianu morate temo Ve OS izbrati ročno prek _Videz > Teme_ v aplikaciji).
 
 Teme imajo nabor slik za ozadje, med katerimi lahko izbirate z `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Ikone v zaganjalniku aplikacij in doku so narisane v barvah vaše teme, zato se 
 
 Nabor ikon, ki ga je izdelal kdo drug, lahko namestite z _Namesti > Slog > Ikone_ (ali `omarchy icons install <git url>`), odstranite pa ga znova pod _Odstrani > Ikone_. _Posodobi > Dodatne ikone_ pridobi najnovejšo različico naborov, ki jih imate nameščene.
 
-Če želite izdelati lastne, postavite svoje ikone v `~/.config/omarchy/icons/<name>/`, eno datoteko na aplikacijo, poimenovano po vrstici `Icon=` v datoteki `.desktop` aplikacije. Datoteka, ki se konča z `.svg`, je prikazana takšna, kot je. Datoteka, ki se konča z `.svg.tpl`, je narisana v barvah teme: napišite `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` ali `{{ icon_shadow }}` tja, kamor gre barva. Privzeti nabor v `/usr/share/omarchy/icons/papercraft/` je dobro izhodišče. Dodajte `preview.png`, da svoj nabor prikažete v izbirniku; brez njega Omarchy nariše predogled iz vaših ikon. Če želite spremeniti eno samo ikono privzetega nabora, postavite svojo različico v `~/.config/omarchy/icons/papercraft/`.
+Če želite izdelati lastne, postavite svoje ikone v `~/.config/omarchy/icons/<name>/`, eno datoteko na aplikacijo, poimenovano po vrstici `Icon=` v datoteki `.desktop` aplikacije. Datoteka, ki se konča z `.svg`, je prikazana takšna, kot je. Datoteka, ki se konča z `.svg.tpl`, je narisana v barvah teme: napišite `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` ali `{{ icon_shadow }}` tja, kamor gre barva. Privzeti nabor v `/usr/share/omarchy/icons/papercraft/` je dobro izhodišče. Dodajte `preview.png`, da svoj nabor prikažete v izbirniku; brez njega Ve OS nariše predogled iz vaših ikon. Če želite spremeniti eno samo ikono privzetega nabora, postavite svojo različico v `~/.config/omarchy/icons/papercraft/`.
 
 ### Odklepi
 

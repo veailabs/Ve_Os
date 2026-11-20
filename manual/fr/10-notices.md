@@ -10,7 +10,7 @@ Les cartes proposent ce qu'elles transportent : _Copier le code_ pour les codes 
 
 Pour les utiliser sans la souris, appuie sur `Super + Ctrl + ,`. La notification la plus récente est sélectionnée et ses boutons sont numérotés : appuie sur un chiffre pour en utiliser un, sur `Enter` pour cliquer sur la notification, sur `↑` et `↓` pour passer d'une notification à l'autre, sur `Delete` pour en ignorer une, et sur `Esc` pour rendre le clavier. Elle lâche aussi prise d'elle-même au bout de quelques secondes d'inactivité.
 
-Mettre les notifications en silence les retient, sauf les confirmations d'Omarchy lui-même, les alertes d'urgence et les codes de vérification, que tu as demandés il y a un instant. Remets les dernières à l'écran, retenues ou non, avec `Super + Shift + Alt + ,`. L'historique est conservé pendant un jour.
+Mettre les notifications en silence les retient, sauf les confirmations d'Ve OS lui-même, les alertes d'urgence et les codes de vérification, que tu as demandés il y a un instant. Remets les dernières à l'écran, retenues ou non, avec `Super + Shift + Alt + ,`. L'historique est conservé pendant un jour.
 
 ## Notifications par raccourci clavier
 

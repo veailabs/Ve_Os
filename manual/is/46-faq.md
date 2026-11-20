@@ -28,7 +28,7 @@ omarchy bar set omarchy.clock format "dddd h:mm AP"
 
 ### Hvernig breyti ég tímabeltinu mínu?
 
-Keyrðu _Uppfæra > Tímabelti_ í Omarchy valmyndinni og veldu af listanum. Ef tímabeltið er rétt en klukkan sjálf hefur rekið endurræsir _Uppfæra > Tími_ tímasamstillinguna fyrir þig.
+Keyrðu _Uppfæra > Tímabelti_ í Ve OS valmyndinni og veldu af listanum. Ef tímabeltið er rétt en klukkan sjálf hefur rekið endurræsir _Uppfæra > Tími_ tímasamstillinguna fyrir þig.
 
 ### Hvernig breyti ég DNS-inu mínu, deili Wi-Fi-inu mínu eða athuga hraða tengingarinnar minnar?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Þú getur gert það sama fyrir skjáupptökur með því að nota `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap býr skjámyndamöppuna til sjálfkrafa. Búðu skjáupptökumöppuna til sjálf/ur, endurræstu svo Omarchy til að hvor umhverfisbreytingin sem er taki gildi.
+Omasnap býr skjámyndamöppuna til sjálfkrafa. Búðu skjáupptökumöppuna til sjálf/ur, endurræstu svo Ve OS til að hvor umhverfisbreytingin sem er taki gildi.
 
 ### Hvernig fæ ég hátalarana + vefmyndavélina til að virka á Apple Studio Display skjánum mínum?
 
 Maður skyldi halda að allt ætti bara að virka með því að stinga USB C í samband, en því miður er það ekki raunin. Lausnin sem ég hef fundið til að láta þetta virka áreiðanlega er að nota [WJESOG DisplayPort + USB-A => USB-C snúruna](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Þá virka hátalarar og vefmyndavél eins og smurt.
 
-Mundu að þú ert með innbyggða birtustýringu í Omarchy fyrir Apple skjáina (bæði Studio og XDR) með venjulegu birtuhnöppunum á lyklaborðinu.
+Mundu að þú ert með innbyggða birtustýringu í Ve OS fyrir Apple skjáina (bæði Studio og XDR) með venjulegu birtuhnöppunum á lyklaborðinu.
 
 ### Hvernig losna ég við allan auka hugbúnaðinn?
 
@@ -72,7 +72,7 @@ Ef þú vilt ekki forrit eins og Obsidian eða LibreOffice eða eitthvað annað
 
 Keyrðu _Fjarlægja > Pakki_ til að sjá hvern einasta pakka sem er uppsettur. Síðan geturðu valið hvaða pakka sem þú vilt fjarlægja með tab, og byrjað að fjarlægja allt sem þú hefur valið með return.
 
-Og þú getur notað _Fjarlægja > Vefforrit_ úr Omarchy valmyndinni til að fjarlægja einhver af fyrirfram uppsettu vefforritunum sem þú vilt ekki.
+Og þú getur notað _Fjarlægja > Vefforrit_ úr Ve OS valmyndinni til að fjarlægja einhver af fyrirfram uppsettu vefforritunum sem þú vilt ekki.
 
 Eða keyrðu _Fjarlægja > Fyrirfram uppsett_ til að sópa út öllum fyrirfram uppsettu aukahlutunum — vefforritum, TUI-forritum og valkvæðum forritum — í einu lagi. Flýtilyklarnir sem ræstu þau hverfa með þeim, svo þú situr eftir með hreint borð af bindingum til að fylla með þínum eigin í `~/.config/hypr/bindings.lua`.
 

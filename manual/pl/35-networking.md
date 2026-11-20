@@ -1,6 +1,6 @@
 # Sieć
 
-Za sieć w Omarchy odpowiada NetworkManager, a sterujesz nią z ikony sieci na [górnym pasku](05-the-top-bar.md) albo za pomocą `Super + Ctrl + N`.
+Za sieć w Ve OS odpowiada NetworkManager, a sterujesz nią z ikony sieci na [górnym pasku](05-the-top-bar.md) albo za pomocą `Super + Ctrl + N`.
 
 Ten panel skanuje sieci Wi-Fi, pokazuje siłę sygnału i łączy. Ethernet nie potrzebuje zupełnie niczego — podłączasz kabel i działa. Jeśli wolisz zostać w terminalu, `nmtui` daje Ci te same opcje, a do tego jest jeszcze grupa poleceń `omarchy network`.
 
@@ -12,7 +12,7 @@ Jeśli faktycznie potrzebujesz samego hasła, wypisze je polecenie `omarchy netw
 
 ## DNS
 
-Omarchy używa takiego DNS, jaki Twoja sieć przekazuje przez DHCP. Możesz to nadpisać dla całej maszyny w _Setup > Network > DNS_, gdzie Cloudflare i Google są o jedno kliknięcie stąd. Wybierz _Custom_, aby wpisać własne serwery.
+Ve OS używa takiego DNS, jaki Twoja sieć przekazuje przez DHCP. Możesz to nadpisać dla całej maszyny w _Setup > Network > DNS_, gdzie Cloudflare i Google są o jedno kliknięcie stąd. Wybierz _Custom_, aby wpisać własne serwery.
 
 Z terminala polecenie `omarchy dns` wypisuje bieżącego dostawcę, a `omarchy dns Cloudflare` ustawia wybranego.
 

@@ -1,5 +1,25 @@
 # Getting Started
 
+Ve OS is currently a development fork activated on a supported Omarchy installation. Downloading the upstream ISO installs Omarchy; it does not install the Ve checkout. This repository does not publish a separate Ve OS ISO.
+
+For the team’s source setup, follow the repository’s [quick start](../README.md#team-quick-start). On a supported Linux installation, clone the Ve repository, review the checkout you intend to trust, then run the existing developer-link command as your normal user:
+
+```sh
+omarchy dev link ~/Development/Ve_Os
+```
+
+Use the actual location of your Ve checkout. The command requests local administrator authentication and coordinates a reboot. A permanent developer link changes the active desktop source and sudo’s command lookup path; keep the checkout under your control. After reboot, `omarchy dev status` shows the active checkout. A clone by itself does not activate the desktop or replace installed boot and login artwork.
+
+On Apple Silicon, use the existing Try Omarchy runtime and the Ve launcher described under [Mac support](44-mac-support.md). Keep installation and reset operations inside the intended Linux VM.
+
+Open the Ve OS menu with `Super + Space`. Choose _Setup > Language_ to change the desktop language. The compatibility command remains `omarchy language <code>`; `omarchy language list` shows available codes.
+
+Report Ve-specific problems in the [Ve OS issue tracker](https://github.com/veailabs/Ve_Os/issues). Include the active source version and steps to reproduce, without account tokens or private data.
+
+## Upstream installation reference
+
+The following instructions describe upstream Omarchy installation media. They prepare the underlying system; activate the Ve checkout afterwards. Screenshots are upstream reference images. The full-disk option erases the selected drive, so back up your data first.
+
 Omarchy is installed using an ISO. You can choose between a full-disk install, which takes over the entire drive, or a free-space install, which puts Omarchy in the unallocated space on a drive — that's how you dual boot alongside Windows or another OS (see [dual-boot install](50-dual-boot-install.md) — note that you'll need to turn off BitLocker in Windows first). Either way, the installation defaults to full encryption, and the full-disk option will wipe the selected drive, so be sure to take a backup before using an existing one!
 
 [Download the Omarchy ISO](https://omarchy.org/) first, put it on a USB stick (use [Rufus](https://rufus.ie/) on Windows, [balenaEtcher](https://etcher.balena.io/) on Mac, or [caligula](https://github.com/ifd3f/caligula) on Linux), and boot off the stick.

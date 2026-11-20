@@ -1,8 +1,8 @@
 # Temalar
 
-Omarchy, yirmi iki güzel temayla birlikte gelir. Bunlar arasında Omarchy Menüsü'ndeki (`Super + Space`) _Görünüm > Tema_ üzerinden seçim yapabilir veya `Super + Ctrl + T` kullanarak doğrudan tema seçicisine atlayabilirsiniz.
+Ve OS, yirmi iki güzel temayla birlikte gelir. Bunlar arasında Ve OS Menüsü'ndeki (`Super + Space`) _Görünüm > Tema_ üzerinden seçim yapabilir veya `Super + Ctrl + T` kullanarak doğrudan tema seçicisine atlayabilirsiniz.
 
-Her tema masaüstünü, terminali, neovim'i, etkinlik ekranını (btop), Chromium'u ve tüm Omarchy kabuğunu şekillendirir: üst çubuk, menü, bildirimler, OSD ve kilit ekranı. (Obsidian için, Omarchy temasını uygulama içindeki _Görünüm > Temalar_ üzerinden elle seçmeniz gerekir).
+Her tema masaüstünü, terminali, neovim'i, etkinlik ekranını (btop), Chromium'u ve tüm Ve OS kabuğunu şekillendirir: üst çubuk, menü, bildirimler, OSD ve kilit ekranı. (Obsidian için, Ve OS temasını uygulama içindeki _Görünüm > Temalar_ üzerinden elle seçmeniz gerekir).
 
 Temaların, `Super + Ctrl + W` kullanarak aralarında seçim yapabileceğiniz bir dizi arka plan görseli vardır.
 
@@ -75,7 +75,7 @@ Uygulama başlatıcıdaki ve dock'taki simgeler temanızın renkleriyle çizilir
 
 Başka birinin yaptığı bir simge setini _Kur > Stil > Simgeler_ ile (veya `omarchy icons install <git url>` ile) kurabilir ve _Kaldır > Simgeler_ altında tekrar kaldırabilirsiniz. _Güncelle > Ekstra Simgeler_, kurduğunuz setlerin en son sürümünü getirir.
 
-Kendinizinkini yapmak için simgelerinizi `~/.config/omarchy/icons/<name>/` içine, uygulama başına bir dosya olacak şekilde, uygulamanın `.desktop` dosyasının `Icon=` satırına göre adlandırarak koyun. `.svg` ile biten bir dosya olduğu gibi gösterilir. `.svg.tpl` ile biten bir dosya temanın renkleriyle çizilir: bir rengin gideceği yere `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` veya `{{ icon_shadow }}` yazın. `/usr/share/omarchy/icons/papercraft/` içindeki varsayılan set, başlamak için iyi bir yerdir. Setinizi seçicide göstermek için bir `preview.png` ekleyin; biri olmadan, Omarchy simgelerinizden bir önizleme çizer. Varsayılan setin tek bir simgesini değiştirmek için kendi sürümünüzü `~/.config/omarchy/icons/papercraft/` içine koyun.
+Kendinizinkini yapmak için simgelerinizi `~/.config/omarchy/icons/<name>/` içine, uygulama başına bir dosya olacak şekilde, uygulamanın `.desktop` dosyasının `Icon=` satırına göre adlandırarak koyun. `.svg` ile biten bir dosya olduğu gibi gösterilir. `.svg.tpl` ile biten bir dosya temanın renkleriyle çizilir: bir rengin gideceği yere `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` veya `{{ icon_shadow }}` yazın. `/usr/share/omarchy/icons/papercraft/` içindeki varsayılan set, başlamak için iyi bir yerdir. Setinizi seçicide göstermek için bir `preview.png` ekleyin; biri olmadan, Ve OS simgelerinizden bir önizleme çizer. Varsayılan setin tek bir simgesini değiştirmek için kendi sürümünüzü `~/.config/omarchy/icons/papercraft/` içine koyun.
 
 ### Kilit açma ekranları
 

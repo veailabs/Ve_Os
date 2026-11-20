@@ -20,7 +20,7 @@ Obsidian nemokama visiems tikslams, įskaitant asmeninį, komercinį ir ne pelno
 
 Obsidian taip pat siūlo [komercinį sinchronizavimo priedą](https://obsidian.md/sync) su mobiliosiomis programėlėmis iOS ir Android. (https://obsidian.md/pricing).
 
-Obsidian paleidžiate su `Super + Shift + O`. Norėdami naudoti temų sinchronizavimą, nustatymuose turite pasirinkti `Omarchy` temą.
+Obsidian paleidžiate su `Super + Shift + O`. Norėdami naudoti temų sinchronizavimą, nustatymuose turite pasirinkti `Ve OS` temą.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Aether paleidžiate per programų paleidyklę (`Super + Space`).
 
 [LocalSend](https://localsend.org/) leidžia siųsti failus į kitus to paties tinklo įrenginius, kuriuose veikia ši programa, panašiai kaip Apple AirDrop. Vis dėlto ji veikia keliose platformose, tad galite siųsti failus į Windows, macOS, Android, iOS ir, žinoma, Linux bei iš jų.
 
-Bendrinimo meniu galite atidaryti su `Super + Ctrl + S` arba Omarchy meniu skiltyje _Aktyviklis > Bendrinti_. Jame yra keturios parinktys:
+Bendrinimo meniu galite atidaryti su `Super + Ctrl + S` arba Ve OS meniu skiltyje _Aktyviklis > Bendrinti_. Jame yra keturios parinktys:
 
 - **Mainų sritis** siunčia viską, ką nukopijavote, kaip tekstinį failą. Puikiai tinka nuorodai ar kodo fragmentui perkelti į telefoną nesiunčiant sau el. laiško.
 - **Failas** atidaro failų pasirinkimo langą, kuriame galite pasirinkti kelis iš karto.
@@ -55,7 +55,7 @@ Tas pats veikia iš terminalo su `omarchy share clipboard`, `omarchy share file 
 
 Taip pat galite siųsti tiesiai iš failų tvarkyklės: dešiniuoju pelės mygtuku spustelėkite bet kurį pasirinkimą programoje Nautilus ir pasirinkite _Siųsti per LocalSend_.
 
-Omarchy ugniasienė pagal numatytuosius nustatymus yra uždara, išskyrus LocalSend prievadą, tad tai veikia iškart po šviežio įdiegimo. Žr. [saugumas](48-security.md).
+Ve OS ugniasienė pagal numatytuosius nustatymus yra uždara, išskyrus LocalSend prievadą, tad tai veikia iškart po šviežio įdiegimo. Žr. [saugumas](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Signed paleidžiate per programų paleidyklę (`Super + Space`) arba atidarote s
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) yra pačios Omarchy 3D šachmatų žaidimas. Žaiskite su draugu tame pačiame kompiuteryje arba su įtaisytuoju priešininku trimis lygiais, su keturiais skulptūriniais rinkiniais, kurių kiekvienas juda savaip: orbitiniai aparatai, raižytas medis ir dramblio kaulas, miško būtybės ir saldainiai. Partijose nėra laikrodžio ir jos išsaugomos po kiekvieno ėjimo.
+[Checkmate](https://github.com/omacom/checkmate) yra pačios Ve OS 3D šachmatų žaidimas. Žaiskite su draugu tame pačiame kompiuteryje arba su įtaisytuoju priešininku trimis lygiais, su keturiais skulptūriniais rinkiniais, kurių kiekvienas juda savaip: orbitiniai aparatai, raižytas medis ir dramblio kaulas, miško būtybės ir saldainiai. Partijose nėra laikrodžio ir jos išsaugomos po kiekvieno ėjimo.
 
 Checkmate paleidžiate per programų paleidyklę (`Super + Space`), kur ji nurodyta kaip Chess. Paspauskite `?` joje, kad pamatytumėte kiekvieną spartųjį klavišą.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) yra pačios Omarchy Klondike soliteris. Traukite po tris, be apribojimo, kiek kartų galite pereiti kaladę, keturiose kortų serijose: viena nupiešta jūsų temos spalvomis, o trys turi savitą išvaizdą. Spustelėkite kortą, tada vietą, kur ji turi eiti, vilkite ją arba dukart spustelėkite, kad nusiųstumėte ją į geriausią vietą. Žaidimai išsaugomi po kiekvieno ėjimo.
+[Cards](https://github.com/omacom/cards) yra pačios Ve OS Klondike soliteris. Traukite po tris, be apribojimo, kiek kartų galite pereiti kaladę, keturiose kortų serijose: viena nupiešta jūsų temos spalvomis, o trys turi savitą išvaizdą. Spustelėkite kortą, tada vietą, kur ji turi eiti, vilkite ją arba dukart spustelėkite, kad nusiųstumėte ją į geriausią vietą. Žaidimai išsaugomi po kiekvieno ėjimo.
 
 Cards paleidžiate per programų paleidyklę (`Super + Space`). Spustelėkite jos pavadinimą arba paspauskite `?`, kad pamatytumėte kiekvieną spartųjį klavišą.
 
@@ -97,7 +97,7 @@ Omacalc paleidžiate su `Super + Shift + Q` (arba skaičiuotuvo klavišu, jei j�
 
 [Signal](https://signal.org/) yra E2E šifruoto susirašinėjimo pradininkė ir puikus bendravimo pasirinkimas visiems, kurie verčiau nesinaudotų vienu iš didžiųjų technologijų konglomeratų.
 
-Signal paleidžiate su `Super + Shift + G`. Ji nėra bazinio diegimo dalis, tad pirmą kartą paspaudus šį derinį, Omarchy pasiūlys ją įdiegti už jus (ji taip pat yra Omarchy meniu skiltyje _Įdiegti > Paslauga_).
+Signal paleidžiate su `Super + Shift + G`. Ji nėra bazinio diegimo dalis, tad pirmą kartą paspaudus šį derinį, Ve OS pasiūlys ją įdiegti už jus (ji taip pat yra Ve OS meniu skiltyje _Įdiegti > Paslauga_).
 
 ## Omaview
 

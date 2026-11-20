@@ -1,6 +1,6 @@
 # Klaviatura, sichqoncha, trekpad
 
-Hyprland barcha kiritish qurilmalaringizni juda batafsil sozlash imkonini beradi. Klaviatura takrorlanishini tovush tezligidan ham tezroq qilishingiz yoki trekpadni tabiiy aylantirishdan foydalanadigan qilishingiz mumkin. Hammasini `~/.config/hypr/input.lua` faylida o'zgartirasiz, unga Omarchy menyusi (`Super + Space`) orqali _Setup > Input_ yo'li bilan ham kirishingiz mumkin. U yerda o'rnatgan har qanday narsa Omarchy standart sozlamalari o'rnini bosadi.
+Hyprland barcha kiritish qurilmalaringizni juda batafsil sozlash imkonini beradi. Klaviatura takrorlanishini tovush tezligidan ham tezroq qilishingiz yoki trekpadni tabiiy aylantirishdan foydalanadigan qilishingiz mumkin. Hammasini `~/.config/hypr/input.lua` faylida o'zgartirasiz, unga Ve OS menyusi (`Super + Space`) orqali _Setup > Input_ yo'li bilan ham kirishingiz mumkin. U yerda o'rnatgan har qanday narsa Ve OS standart sozlamalari o'rnini bosadi.
 
 Mana misol:
 
@@ -59,7 +59,7 @@ Ish stolida harakatlanish uchun trekpadda suring:
 | --- | --- |
 | Uch barmoq chapga / o'ngga | Oldingi / keyingi ish maydoni, bo'shlarini ham qo'shib |
 | Uch barmoq yuqoriga | AI konsolini yoqish/o'chirish |
-| Uch barmoq pastga | Omarchy menyusini ochish |
+| Uch barmoq pastga | Ve OS menyusini ochish |
 | To'rt barmoq chapga / o'ngga | Faol oynani oldingi / keyingi ish maydoniga ko'chirish |
 | To'rt barmoq pastga | To'liq ekranni yoqish/o'chirish |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Omarchy ning barcha imo-ishoralarini o'chirish uchun, Omarchy standart sozlamalari yuklanishidan oldin, `~/.config/hypr/hyprland.lua` faylining yuqori qismiga yaqin joyda `omarchy_default_gestures = false` ni o'rnating.
+Ve OS ning barcha imo-ishoralarini o'chirish uchun, Ve OS standart sozlamalari yuklanishidan oldin, `~/.config/hypr/hyprland.lua` faylining yuqori qismiga yaqin joyda `omarchy_default_gestures = false` ni o'rnating.
 
 Haptik sensorli panelli Dell XPS noutbuklarida, _Trigger > Hardware > Touchpad Haptics_ bo'limida bosish kuchini low, mid yoki high qilib ham o'rnatishingiz mumkin.
 
 ### Xitoy, yapon va boshqa tillarda yozish
 
-O'rnatuvchi klaviaturangizni so'raganda Japanese, Korean, Chinese (Simplified, Pinyin), Taiwan (Zhuyin) yoki Hong Kong (Cangjie) ni tanlang. Omarchy klaviaturani va mos kiritish mexanizmini avtomatik sozlaydi, shu jumladan oflayn birinchi yuklashda sozlash paytida ham. Japanese Mozc dan foydalanadi, Korean standart ikki to'plamli Hangul dan foydalanadi, Simplified Chinese Pinyin dan foydalanadi, Taiwan Chewing ning standart Zhuyin tartibidan foydalanadi, Hong Kong esa Hong Kong belgilar shakllari bilan Cangjie dan foydalanadi. Japanese (US keyboard) US klaviatura tartibi bilan Mozc ni taqdim etadi. Hangul, Zhuyin va Cangjie tugmalari, lotin harflarini Dvorak, Colemak yoki AZERTY bilan yozsangiz ham, standart o'rinlarida qoladi. Agar Hangul yoki Chewing ni bundan oldin qo'shgan bo'lsangiz, uning tugmalarini o'sha yerga ko'chirish uchun _Setup > Keyboard > Input Methods_ bo'limida uni tanlovdan chiqarib, qayta tanlang; Omarchy siz allaqachon yozayotgan mexanizmni o'zgartirmaydi.
+O'rnatuvchi klaviaturangizni so'raganda Japanese, Korean, Chinese (Simplified, Pinyin), Taiwan (Zhuyin) yoki Hong Kong (Cangjie) ni tanlang. Ve OS klaviaturani va mos kiritish mexanizmini avtomatik sozlaydi, shu jumladan oflayn birinchi yuklashda sozlash paytida ham. Japanese Mozc dan foydalanadi, Korean standart ikki to'plamli Hangul dan foydalanadi, Simplified Chinese Pinyin dan foydalanadi, Taiwan Chewing ning standart Zhuyin tartibidan foydalanadi, Hong Kong esa Hong Kong belgilar shakllari bilan Cangjie dan foydalanadi. Japanese (US keyboard) US klaviatura tartibi bilan Mozc ni taqdim etadi. Hangul, Zhuyin va Cangjie tugmalari, lotin harflarini Dvorak, Colemak yoki AZERTY bilan yozsangiz ham, standart o'rinlarida qoladi. Agar Hangul yoki Chewing ni bundan oldin qo'shgan bo'lsangiz, uning tugmalarini o'sha yerga ko'chirish uchun _Setup > Keyboard > Input Methods_ bo'limida uni tanlovdan chiqarib, qayta tanlang; Ve OS siz allaqachon yozayotgan mexanizmni o'zgartirmaydi.
 
 Yozish lotin rejimida boshlanadi. Sozlangan kiritish usullari orasida aylanish uchun `Super + I` ni bosing, orqaga aylanish uchun esa `Super + Shift + I` ni bosing. Pinyin kabi kiritish usulidan lotin harflariga chiqish uchun `Shift` ni o'zini bosing, orqaga qaytish uchun uni yana bosing — Sogou, Microsoft Pinyin va macOS ishlaganidek; `Shift` va harf hali ham bosh harf yozadi. Yapon klaviaturalarida 全角/半角 kiritishni yoqib-o'chiradi, 変換 uni yoqadi, 無変換 esa uni o'chiradi. Korean bilan 한/영 Hangul ni almashtiradi va 한자 Hanja ga o'giradi, klaviaturangizda alohida tugmalar bo'ladimi yoki ko'p noutbuklar qilganidek ular uchun Right Alt va Right Ctrl yuboradimi, baribir, shuning uchun Right Alt va Right Ctrl u yerda oddiy modifikatorlar emas; ovoz bilan kiritish o'rniga Alt + Space bilan yoqib-o'chiriladi. `Ctrl + Space` Tmux va Herdr uchun mavjud bo'lib qoladi; `Shift + CapsLock` tuzish tugmasi bo'lib qoladi.
 
 Bir nechta klaviatura tartibingiz yoki kiritish usulingiz bo'lganda, panelning o'ng tomonida klaviatura ko'rsatkichi paydo bo'ladi. Kiritish tillarini almashtirish uchun uni bosing; Japanese hiragana uchun あ ni ko'rsatadi. Yapon belgilarini tanlash uchun Japanese ga o'ting, `nihongo` kabi so'z yozing, keyin Space ni ikki marta bosing. Tanlovingizni qabul qilish uchun Enter ni bosing. Agar sizda bir nechta klaviatura tartibi ham bo'lsa, o'sha tartiblar orasida aylanish uchun ko'rsatkichni o'ng tugma bilan bosing.
 
-English va French kabi tartiblarni tanlash uchun _Setup > Keyboard > Keyboard Inputs_ dan foydalaning, o'rnatish paytida taklif qilingan o'sha tanlovlar orasidan. Qaysi tuzish mexanizmlari faol bo'lishini tanlash uchun _Setup > Keyboard > Input Methods_ dan foydalaning. Ikkala tanlovchi ham Omarchy menyusi ichida ochiladi, joriy tanlovlaringiz belgilangan holda. Tanlovni yoqib-o'chirish uchun bosing yoki Enter ni bosing; har bir o'zgarish darhol qo'llaniladi. Kiritish usulini tanlovdan chiqarish uni o'chirmasdan aylanishdan olib tashlaydi; klaviatura mavjud bo'lib qoladi.
+English va French kabi tartiblarni tanlash uchun _Setup > Keyboard > Keyboard Inputs_ dan foydalaning, o'rnatish paytida taklif qilingan o'sha tanlovlar orasidan. Qaysi tuzish mexanizmlari faol bo'lishini tanlash uchun _Setup > Keyboard > Input Methods_ dan foydalaning. Ikkala tanlovchi ham Ve OS menyusi ichida ochiladi, joriy tanlovlaringiz belgilangan holda. Tanlovni yoqib-o'chirish uchun bosing yoki Enter ni bosing; har bir o'zgarish darhol qo'llaniladi. Kiritish usulini tanlovdan chiqarish uni o'chirmasdan aylanishdan olib tashlaydi; klaviatura mavjud bo'lib qoladi.
 
 O'sha tanlovchilarni ochish uchun `omarchy setup keyboard` yoki `omarchy setup input` ni ishga tushiring. Buyruq satridan bitta til qo'shish uchun `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` yoki `cangjie5` dan foydalaning. Quick, Boshiamy va Array Cangjie bilan bir xil paketda keladi va Input Methods tanlovchisida paydo bo'ladi. Sizning maxsus almashtirish tugmalaringiz saqlanadi. Muqobil mexanizm tartiblari yoki tugmalari uchun `omarchy pkg add fcitx5-configtool` bilan `fcitx5-configtool` ni o'rnating va uni terminaldan ishga tushiring. Kiritish tilini tanlash ish stoli tilini o'zgartirmaydi. _Setup > Language_ bo'limida Japanese, Korean yoki Chinese ni tanlash, hali hech biri bo'lmaganda, uning kiritish usulini qo'shadi.
 

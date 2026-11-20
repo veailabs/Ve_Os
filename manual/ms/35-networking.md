@@ -1,6 +1,6 @@
 # Rangkaian
 
-Rangkaian dalam Omarchy dikendalikan oleh NetworkManager, dan anda mengawalnya daripada ikon rangkaian di [bar atas](05-the-top-bar.md) atau dengan `Super + Ctrl + N`.
+Rangkaian dalam Ve OS dikendalikan oleh NetworkManager, dan anda mengawalnya daripada ikon rangkaian di [bar atas](05-the-top-bar.md) atau dengan `Super + Ctrl + N`.
 
 Panel itu mengimbas rangkaian Wi-Fi, menunjukkan kekuatan isyarat, dan menyambung. Ethernet tidak memerlukan apa-apa langsung — cucuk sahaja dan ia terus berfungsi. Jika anda lebih suka kekal di terminal, `nmtui` memberikan kawalan yang sama kepada anda, dan terdapat juga kumpulan arahan `omarchy network`.
 
@@ -12,7 +12,7 @@ Jika anda benar-benar memerlukan kata laluannya sendiri, `omarchy network passwo
 
 ## DNS
 
-Omarchy menggunakan apa sahaja DNS yang diberikan oleh rangkaian anda melalui DHCP. Anda boleh menggantikannya untuk keseluruhan mesin di bawah _Setup > Network > DNS_, di mana Cloudflare dan Google hanya satu klik sahaja. Pilih _Custom_ untuk menaip pelayan anda sendiri.
+Ve OS menggunakan apa sahaja DNS yang diberikan oleh rangkaian anda melalui DHCP. Anda boleh menggantikannya untuk keseluruhan mesin di bawah _Setup > Network > DNS_, di mana Cloudflare dan Google hanya satu klik sahaja. Pilih _Custom_ untuk menaip pelayan anda sendiri.
 
 Dari terminal, `omarchy dns` mencetak pembekal semasa dan `omarchy dns Cloudflare` menetapkan satu.
 

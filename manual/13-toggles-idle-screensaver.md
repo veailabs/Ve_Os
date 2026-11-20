@@ -1,10 +1,10 @@
 # Toggles, Idle & the Screensaver
 
-A lot of what you change day to day isn't really a setting. It's a mode you flip on for an hour and off again: night light while you're working late, do not disturb while you're presenting, stay awake while you're watching something. Omarchy calls those toggles, and they all work the same way — a hotkey, a menu entry, and a command, all hitting the same switch.
+A lot of what you change day to day isn't really a setting. It's a mode you flip on for an hour and off again: night light while you're working late, do not disturb while you're presenting, stay awake while you're watching something. Ve OS calls those toggles, and they all work the same way — a hotkey, a menu entry, and a command, all hitting the same switch.
 
 ### The toggle menu
 
-`Super + Ctrl + O` opens _Trigger > Toggle_ directly, or you can walk there from the Omarchy menu (`Super + Space`). Everything in that list is a switch you can flip without thinking about where the state lives. Switches for how the desktop looks sit next to it, under _Appearance_.
+`Super + Ctrl + O` opens _Trigger > Toggle_ directly, or you can walk there from the Ve OS menu (`Super + Space`). Everything in that list is a switch you can flip without thinking about where the state lives. Switches for how the desktop looks sit next to it, under _Appearance_.
 
 From the terminal, the same switches are `omarchy toggle <thing>`. Run `omarchy toggle` on its own to see the whole group.
 
@@ -26,7 +26,7 @@ The touchpad, touchscreen, and hybrid GPU switches live under _Trigger > Hardwar
 
 _Appearance_ holds the menu bar and animations, plus a few things that aren't `omarchy toggle` commands but behave the same: battery percentage in the bar, the default workspace layout, and under _Windows_, window gaps (`Super + Shift + Backspace`) and the 1-window square aspect (`Super + Ctrl + Backspace`).
 
-When Hyprland has no GPU to draw with and renders on the CPU instead (llvmpipe), as on Macs whose GPU isn't supported yet, in most virtual machines, or when a graphics driver fails to load, Omarchy turns off animations, blur and shadows for that session and tells you so once with a notification. _Appearance > Animations On_ brings them back, and Omarchy remembers that for later sessions too.
+When Hyprland has no GPU to draw with and renders on the CPU instead (llvmpipe), as on Macs whose GPU isn't supported yet, in most virtual machines, or when a graphics driver fails to load, Ve OS turns off animations, blur and shadows for that session and tells you so once with a notification. _Appearance > Animations On_ brings them back, and Ve OS remembers that for later sessions too.
 
 Most of these are just a flag file under `~/.local/state/omarchy/toggles/`. If you want to branch on one in a script, `omarchy-toggle-enabled` gives you an exit code instead of making you go looking:
 
@@ -63,11 +63,11 @@ Then start hyprsunset at login by adding `o.launch_on_start("hyprsunset")` to `~
 
 Nothing is lost, though. Silenced notifications are held back: put the last few back on screen with `Super + Shift + Alt + ,`. See [notices](10-notices.md) for the rest.
 
-Two kinds of message still get through: Omarchy's own confirmation toasts for something you just did ("Theme changed", "Screenshot saved"), and critical alerts sent from the command line. Chat apps that mark everything critical to force their way in front of you don't qualify.
+Two kinds of message still get through: Ve OS's own confirmation toasts for something you just did ("Theme changed", "Screenshot saved"), and critical alerts sent from the command line. Chat apps that mark everything critical to force their way in front of you don't qualify.
 
 ### Idle
 
-The Omarchy shell owns idle behavior, and the timings are a top-level `idle` block in `~/.config/omarchy/shell.json`:
+The Ve OS shell owns idle behavior, and the timings are a top-level `idle` block in `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ This is about locking and the screensaver, not power. Suspend and hibernation ha
 
 ### The screensaver
 
-Omarchy's screensaver is ASCII art running through random text effects, one instance per monitor. Any key or mouse movement exits it.
+Ve OS's screensaver is ASCII art running through random text effects, one instance per monitor. Any key or mouse movement exits it.
 
 You can start it on demand from _System > Screensaver_ (`Super + Esc`), which forces it up even if you've turned the idle screensaver off. There's no hotkey bound to it by default.
 
 `omarchy toggle screensaver` is what turns the idle one off, if you'd rather go straight from working to locked. Any key, click, scroll or mouse movement closes it.
 
-The logo it draws is yours to change, under _Appearance > Branding > Screensaver_. Upload a png or svg and Omarchy converts it to ASCII. See [branding](41-branding.md).
+The logo it draws is yours to change, under _Appearance > Branding > Screensaver_. Upload a png or svg and Ve OS converts it to ASCII. See [branding](41-branding.md).
 
 ### The lock screen
 
-`Super + Ctrl + L` locks the machine. That runs the lock screen from the Omarchy shell, blanks the display, resets your keyboard layout to the first one so you're not typing your password in the wrong alphabet, and — if you have it running — locks 1Password on the way out.
+`Super + Ctrl + L` locks the machine. That runs the lock screen from the Ve OS shell, blanks the display, resets your keyboard layout to the first one so you're not typing your password in the wrong alphabet, and — if you have it running — locks 1Password on the way out.
 
 The lock screen takes a password, and it'll take a fingerprint too once you've set one up. That, and the other ways to authenticate, are covered in [hardware authentication](37-hardware-authentication.md).

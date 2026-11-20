@@ -1,4 +1,6 @@
-# Að byrja
+# Ve OS — Að byrja
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy er sett upp með ISO-skrá. Þú getur valið á milli uppsetningar á öllum diskinum, sem tekur yfir allan diskinn, eða uppsetningar í lausu plássi, sem setur Omarchy í óúthlutaða plássið á diski — þannig geturðu ræst tvöfalt samhliða Windows eða öðru stýrikerfi (sjá [uppsetning fyrir tvöfalda ræsingu](50-dual-boot-install.md) — athugaðu að þú þarft fyrst að slökkva á BitLocker í Windows). Í báðum tilvikum er sjálfgefið að nota fulla dulritun og valkosturinn fyrir allan diskinn mun þurrka út valda diskinn, svo vertu viss um að taka öryggisafrit áður en þú notar disk sem þegar er í notkun!
 

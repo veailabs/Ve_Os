@@ -1,4 +1,6 @@
-# बिना निगरानी वाले इंस्टॉल
+# Ve OS — बिना निगरानी वाले इंस्टॉल
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO बिना किसी के कीबोर्ड पर बैठे खुद को इंस्टॉल कर सकता है। अगर इंस्टॉलर को `cidata` लेबल वाली दूसरी ड्राइव मिलती है जिस पर उसकी कॉन्फ़िगरेशन फ़ाइलें हैं, तो वह उन्हें कॉपी कर लेता है, सेटअप विज़ार्ड को पूरी तरह छोड़ देता है, और अपने आप तैयार सिस्टम में रीबूट हो जाता है। कोई खास ISO बिल्ड नहीं, कोई अतिरिक्त बूट मेनू एंट्री नहीं — ऐसी ड्राइव लगी न हो तो कुछ नहीं बदलता और आपको सामान्य विज़ार्ड ही मिलता है।
 

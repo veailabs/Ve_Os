@@ -1,14 +1,14 @@
 # ऊपरी बार
 
-आपकी स्क्रीन के शीर्ष पर मौजूद पट्टी Omarchy बार है। यह कोई बाद में जोड़ी गई status bar नहीं है, बल्कि Omarchy shell का हिस्सा है, वही एकल, लंबे समय तक चलने वाली Quickshell प्रक्रिया जो menu, notifications, OSD popups और lock screen भी बनाती है। इसीलिए यह बाकी हर चीज़ के साथ पूरी तरह theme होती है और इसीलिए कोई panel किसी नए app को spawn करने के बजाय तुरंत खुलता है।
+आपकी स्क्रीन के शीर्ष पर मौजूद पट्टी Ve OS बार है। यह कोई बाद में जोड़ी गई status bar नहीं है, बल्कि Ve OS shell का हिस्सा है, वही एकल, लंबे समय तक चलने वाली Quickshell प्रक्रिया जो menu, notifications, OSD popups और lock screen भी बनाती है। इसीलिए यह बाकी हर चीज़ के साथ पूरी तरह theme होती है और इसीलिए कोई panel किसी नए app को spawn करने के बजाय तुरंत खुलता है।
 
 यह desktop का वह एकमात्र हिस्सा भी है जो हमेशा स्क्रीन पर रहता है, इसलिए यह जानना उपयोगी है कि वे सभी छोटे-छोटे glyphs क्या करते हैं।
 
 ## डिफ़ॉल्ट रूप से इस पर क्या होता है
 
-बार के तीन खंड होते हैं। बाईं ओर Omarchy logo (menu launcher) और workspace संकेतक बैठते हैं। केंद्र में आपको status संकेतक, घड़ी, Elsewhen (एक world clock), मौसम और एक Omarchy update badge मिलता है। दाईं ओर: system tray, keyboard layout (जब एक से अधिक कॉन्फ़िगर किया गया हो), agents, bluetooth, network, audio, display और power।
+बार के तीन खंड होते हैं। बाईं ओर Ve OS logo (menu launcher) और workspace संकेतक बैठते हैं। केंद्र में आपको status संकेतक, घड़ी, Elsewhen (एक world clock), मौसम और एक Ve OS update badge मिलता है। दाईं ओर: system tray, keyboard layout (जब एक से अधिक कॉन्फ़िगर किया गया हो), agents, bluetooth, network, audio, display और power।
 
-इनमें से कुछ तभी दिखाई देते हैं जब उनके पास कहने के लिए कुछ हो। keyboard layout तभी दिखाई देता है यदि आपने एक से अधिक layout कॉन्फ़िगर किया हो। update badge तभी दिखाई देता है जब कोई Omarchy update प्रतीक्षा कर रहा हो। और agents आइकन पहली बार तभी दिखाई देता है जब Omarchy को मशीन पर AI coding उपयोग मिलता है (देखें [AI](17-ai.md))।
+इनमें से कुछ तभी दिखाई देते हैं जब उनके पास कहने के लिए कुछ हो। keyboard layout तभी दिखाई देता है यदि आपने एक से अधिक layout कॉन्फ़िगर किया हो। update badge तभी दिखाई देता है जब कोई Ve OS update प्रतीक्षा कर रहा हो। और agents आइकन पहली बार तभी दिखाई देता है जब Ve OS को मशीन पर AI coding उपयोग मिलता है (देखें [AI](17-ai.md))।
 
 ## इधर-उधर क्लिक करना
 
@@ -16,7 +16,7 @@
 
 | विजेट | बायाँ | दायाँ | मध्य / स्क्रॉल |
 | --- | --- | --- | --- |
-| Menu | Omarchy menu | नया terminal | — |
+| Menu | Ve OS menu | नया terminal | — |
 | Workspaces | इस मॉनिटर पर उस workspace पर फ़ोकस करें | — | स्क्रॉल: अगला/पिछला workspace |
 | Clock | Calendar popup | label format को चक्रित करें | मध्य: timezone picker |
 | Weather | Forecast popup | सूचना के रूप में पूरा मौसम | मध्य: refresh |
@@ -29,7 +29,7 @@
 | Media | Play/pause | Cover-art popup | मध्य: अगला · स्क्रॉल: पिछला/अगला |
 | Agents | Agents panel | अपना agent लॉन्च करें | मध्य: अगली subscription |
 | Tray | drawer दिखाने के लिए hover करें | प्रबंधित करने के लिए chevron पर दायाँ क्लिक करें | — |
-| Omarchy update | update चलाएँ | — | — |
+| Ve OS update | update चलाएँ | — | — |
 
 उस तालिका में मौजूद हर चीज़ शुरुआत से ही आपके बार पर नहीं होती। media विजेट (MPRIS now-playing, स्क्रॉल होते track और artist के साथ) और microphone विजेट दोनों अंतर्निहित हैं लेकिन डिफ़ॉल्ट रूप से बंद रहते हैं — यदि आप उन्हें चाहते हैं तो उन्हें जोड़ें, जैसा कि नीचे बताया गया है।
 
@@ -137,6 +137,6 @@ omarchy plugin disable omarchy.weather
 
 `center` बार के मध्य में मौजूद box है: उसमें मौजूद हर चीज़ स्क्रीन पर एक समूह के रूप में केंद्रित होती है। `centerBegin` और `centerEnd` box के दोनों ओर लटके रहते हैं, इसी तरह घड़ी ठीक केंद्र में रहती है, भले ही मौसम और update badge आते-जाते रहें। `center` में एक से अधिक विजेट डालें और वे एक साथ केंद्रित होते हैं; उसे खाली छोड़ दें और `centerBegin` तथा `centerEnd` बार के मध्य में मिल जाते हैं।
 
-याद रखने लायक एक नियम: **एक बार जब आपके पास अपनी `shell.json` हो जाती है, तो वही आधिकारिक होती है**। जब तक आप कुछ भी अनुकूलित नहीं करते, shell Omarchy की default file पढ़ता है। जिस क्षण आप किसी विजेट को खींचते हैं, `omarchy bar` चलाते हैं, या file को खुद संपादित करते हैं, वह आपकी हो जाती है — कोई deep merge नहीं होता, इसलिए भविष्य के Omarchy releases में नए default विजेट आपके बार पर अपने आप दिखाई नहीं देंगे। जब भी आप एक साफ़ शुरुआत चाहते हैं, `omarchy bar defaults` भेजी गई layout को वापस रख देता है।
+याद रखने लायक एक नियम: **एक बार जब आपके पास अपनी `shell.json` हो जाती है, तो वही आधिकारिक होती है**। जब तक आप कुछ भी अनुकूलित नहीं करते, shell Ve OS की default file पढ़ता है। जिस क्षण आप किसी विजेट को खींचते हैं, `omarchy bar` चलाते हैं, या file को खुद संपादित करते हैं, वह आपकी हो जाती है — कोई deep merge नहीं होता, इसलिए भविष्य के Ve OS releases में नए default विजेट आपके बार पर अपने आप दिखाई नहीं देंगे। जब भी आप एक साफ़ शुरुआत चाहते हैं, `omarchy bar defaults` भेजी गई layout को वापस रख देता है।
 
 वही file शीर्ष स्तर पर, `bar` key के बाहर, आपकी idle समय-सीमाएँ भी रखती है: `idle.screensaver` और `idle.lock`, दोनों आपके idle होने के बाद से सेकंड में। इसलिए default screensaver 150 सेकंड पर शुरू होता है और lock 300 पर।

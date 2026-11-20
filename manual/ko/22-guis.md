@@ -20,7 +20,7 @@ Obsidian은 개인, 상업, 비영리 등 모든 용도로 무료입니다.
 
 Obsidian은 iOS와 Android 모바일 앱과의 동기화를 위한 [상용 부가 기능](https://obsidian.md/sync)도 제공합니다. (https://obsidian.md/pricing).
 
-Obsidian은 `Super + Shift + O`로 시작합니다. 테마 동기화를 사용하려면 설정에서 `Omarchy` 테마를 선택해야 합니다.
+Obsidian은 `Super + Shift + O`로 시작합니다. 테마 동기화를 사용하려면 설정에서 `Ve OS` 테마를 선택해야 합니다.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Aether는 애플리케이션 실행기(`Super + Space`)에서 시작합니다.
 
 [LocalSend](https://localsend.org/)를 사용하면 Apple의 AirDrop처럼 같은 네트워크에서 이 앱을 실행 중인 다른 기기로 파일을 보낼 수 있습니다. 다만 크로스 플랫폼이므로 Windows, macOS, Android, iOS, 그리고 물론 Linux와도 파일을 주고받을 수 있습니다.
 
-`Super + Ctrl + S`를 누르거나 Omarchy 메뉴의 _Trigger > Share_에서 Share 메뉴를 열 수 있습니다. 네 가지 옵션이 제공됩니다.
+`Super + Ctrl + S`를 누르거나 Ve OS 메뉴의 _Trigger > Share_에서 Share 메뉴를 열 수 있습니다. 네 가지 옵션이 제공됩니다.
 
 - **Clipboard**는 복사한 내용을 텍스트 파일로 보냅니다. 자신에게 이메일을 보내지 않고 링크나 코드 조각을 휴대폰으로 옮기기에 좋습니다.
 - **File**은 여러 개를 한 번에 선택할 수 있는 파일 선택기를 엽니다.
@@ -55,7 +55,7 @@ Aether는 애플리케이션 실행기(`Super + Space`)에서 시작합니다.
 
 파일 관리자에서 바로 보낼 수도 있습니다. Nautilus에서 선택 항목을 마우스 오른쪽 버튼으로 클릭하고 _Send via LocalSend_를 선택하세요.
 
-Omarchy의 방화벽은 기본적으로 LocalSend 포트만 예외로 닫혀 있으므로 새로 설치한 상태에서도 바로 작동합니다. [보안](48-security.md)을 참조하세요.
+Ve OS의 방화벽은 기본적으로 LocalSend 포트만 예외로 닫혀 있으므로 새로 설치한 상태에서도 바로 작동합니다. [보안](48-security.md)을 참조하세요.
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Signed는 애플리케이션 실행기(`Super + Space`)에서 시작하거나 �
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate)는 Omarchy 자체의 3D 체스 게임입니다. 같은 컴퓨터에서 친구와 대결하거나 세 단계의 내장 상대를 상대하세요. 각각 고유한 방식으로 움직이는 네 가지 조각 세트, 즉 궤도 비행체, 조각한 나무와 상아, 숲속 생물, 사탕이 있습니다. 게임에는 시계가 없으며 매 수마다 저장됩니다.
+[Checkmate](https://github.com/omacom/checkmate)는 Ve OS 자체의 3D 체스 게임입니다. 같은 컴퓨터에서 친구와 대결하거나 세 단계의 내장 상대를 상대하세요. 각각 고유한 방식으로 움직이는 네 가지 조각 세트, 즉 궤도 비행체, 조각한 나무와 상아, 숲속 생물, 사탕이 있습니다. 게임에는 시계가 없으며 매 수마다 저장됩니다.
 
 Checkmate는 애플리케이션 실행기(`Super + Space`)에서 시작하며 Chess로 표시됩니다. 안에서 `?`를 누르면 모든 단축키를 볼 수 있습니다.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards)는 Omarchy 자체의 Klondike 솔리테어입니다. 세 장씩 뒤집고 패스 횟수에 제한이 없으며, 네 가지 카드 시리즈가 있습니다. 하나는 테마 색상으로 그려졌고, 세 가지는 각자 고유한 모습을 갖고 있습니다. 카드를 클릭한 뒤 이동할 곳을 클릭하거나, 드래그하거나, 더블클릭해 가장 좋은 위치로 보내세요. 게임은 매 이동마다 저장됩니다.
+[Cards](https://github.com/omacom/cards)는 Ve OS 자체의 Klondike 솔리테어입니다. 세 장씩 뒤집고 패스 횟수에 제한이 없으며, 네 가지 카드 시리즈가 있습니다. 하나는 테마 색상으로 그려졌고, 세 가지는 각자 고유한 모습을 갖고 있습니다. 카드를 클릭한 뒤 이동할 곳을 클릭하거나, 드래그하거나, 더블클릭해 가장 좋은 위치로 보내세요. 게임은 매 이동마다 저장됩니다.
 
 Cards는 애플리케이션 실행기(`Super + Space`)에서 시작합니다. 이름을 클릭하거나 `?`를 누르면 모든 단축키를 볼 수 있습니다.
 
@@ -97,7 +97,7 @@ Omacalc는 `Super + Shift + Q`로 시작합니다(키보드에 계산기 키가 
 
 [Signal](https://signal.org/)은 E2E 암호화 메시징의 선구자이며, 거대 기술 대기업을 거치고 싶지 않은 사람에게 훌륭한 커뮤니케이션 선택지입니다.
 
-Signal은 `Super + Shift + G`로 시작합니다. 기본 설치에는 포함되어 있지 않으므로 처음 이 키를 누르면 Omarchy가 설치할지 제안합니다(Omarchy 메뉴의 _Install > Service_에도 있습니다).
+Signal은 `Super + Shift + G`로 시작합니다. 기본 설치에는 포함되어 있지 않으므로 처음 이 키를 누르면 Ve OS가 설치할지 제안합니다(Ve OS 메뉴의 _Install > Service_에도 있습니다).
 
 ## Omaview
 

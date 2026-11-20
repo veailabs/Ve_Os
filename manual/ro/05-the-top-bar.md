@@ -1,14 +1,14 @@
 # Bara de sus
 
-Fâșia de-a lungul părții de sus a ecranului tău este bara Omarchy. Nu este o bară de stare prinsă cu șuruburi, ci parte din shell-ul Omarchy, singurul proces Quickshell care rulează continuu și care desenează și meniul, notificările, ferestrele pop-up OSD și ecranul de blocare. De aceea se potrivește tematic perfect cu tot restul și de aceea un panou se deschide instantaneu, în loc să pornească o aplicație nouă.
+Fâșia de-a lungul părții de sus a ecranului tău este bara Ve OS. Nu este o bară de stare prinsă cu șuruburi, ci parte din shell-ul Ve OS, singurul proces Quickshell care rulează continuu și care desenează și meniul, notificările, ferestrele pop-up OSD și ecranul de blocare. De aceea se potrivește tematic perfect cu tot restul și de aceea un panou se deschide instantaneu, în loc să pornească o aplicație nouă.
 
 Este și singura piesă a desktopului care este mereu pe ecran, așa că merită să știi ce fac toate acele mici glife.
 
 ## Ce este pe ea în mod implicit
 
-Bara are trei secțiuni. În stânga se află logo-ul Omarchy (lansatorul meniului) și indicatorii spațiilor de lucru. În centru ai indicatorii de stare, ceasul, Elsewhen (un ceas mondial), vremea și o insignă de actualizare Omarchy. În dreapta: tava de sistem, aranjamentul tastaturii (când este configurat mai mult de unul), agenții, bluetooth, rețeaua, sunetul, ecranul și alimentarea.
+Bara are trei secțiuni. În stânga se află logo-ul Ve OS (lansatorul meniului) și indicatorii spațiilor de lucru. În centru ai indicatorii de stare, ceasul, Elsewhen (un ceas mondial), vremea și o insignă de actualizare Ve OS. În dreapta: tava de sistem, aranjamentul tastaturii (când este configurat mai mult de unul), agenții, bluetooth, rețeaua, sunetul, ecranul și alimentarea.
 
-Câteva dintre ele apar doar când au ceva de spus. Aranjamentul tastaturii apare doar dacă ai configurat mai mult de un aranjament. Insigna de actualizare apare doar când așteaptă o actualizare Omarchy. Iar pictograma agenților apare prima dată când Omarchy găsește utilizare de programare cu AI pe mașină (vezi [AI](17-ai.md)).
+Câteva dintre ele apar doar când au ceva de spus. Aranjamentul tastaturii apare doar dacă ai configurat mai mult de un aranjament. Insigna de actualizare apare doar când așteaptă o actualizare Ve OS. Iar pictograma agenților apare prima dată când Ve OS găsește utilizare de programare cu AI pe mașină (vezi [AI](17-ai.md)).
 
 ## Clicurile
 
@@ -16,7 +16,7 @@ Aproape fiecare widget face ceva la clic stânga, dreapta și mijloc, iar mai mu
 
 | Widget | Stânga | Dreapta | Mijloc / derulare |
 | --- | --- | --- | --- |
-| Meniu | Meniul Omarchy | Terminal nou | — |
+| Meniu | Meniul Ve OS | Terminal nou | — |
 | Spații de lucru | Focalizează acel spațiu de lucru pe acest monitor | — | Derulare: spațiul de lucru următor/anterior |
 | Ceas | Fereastră pop-up cu calendar | Schimbă ciclic formatul etichetei | Mijloc: selector de fus orar |
 | Vreme | Fereastră pop-up cu prognoza | Vremea completă ca notificare | Mijloc: reîmprospătare |
@@ -29,7 +29,7 @@ Aproape fiecare widget face ceva la clic stânga, dreapta și mijloc, iar mai mu
 | Media | Redare/pauză | Fereastră pop-up cu coperta | Mijloc: următorul · derulare: anterior/următor |
 | Agenți | Panoul de agenți | Lansează agentul tău | Mijloc: abonamentul următor |
 | Tavă | Menține cursorul deasupra pentru a dezvălui sertarul | Clic dreapta pe chevron pentru a gestiona | — |
-| Actualizare Omarchy | Rulează actualizarea | — | — |
+| Actualizare Ve OS | Rulează actualizarea | — | — |
 
 Nu tot ce este în acel tabel se află pe bara ta din start. Widgetul media (MPRIS now-playing, cu o piesă și un artist care derulează) și widgetul de microfon sunt ambele integrate, dar dezactivate în mod implicit — adaugă-le dacă le vrei, așa cum este descris mai jos.
 
@@ -137,6 +137,6 @@ Fiecare widget este o singură intrare într-unul dintre cele cinci tablouri de 
 
 `center` este caseta din mijlocul barei: tot ce este în ea este centrat pe ecran ca un singur grup. `centerBegin` și `centerEnd` atârnă de o parte și de alta a casetei, motiv pentru care ceasul rămâne exact în centru chiar și atunci când vremea și insigna de actualizare vin și pleacă. Pune mai mult de un widget în `center` și ele sunt centrate împreună; las-o goală și `centerBegin` și `centerEnd` se întâlnesc în mijlocul barei.
 
-O regulă care merită interiorizată: **odată ce ai propriul tău `shell.json`, el este canonic**. Până când personalizezi ceva, shell-ul citește fișierul implicit al Omarchy. În clipa în care tragi un widget, rulezi `omarchy bar` sau editezi singur fișierul, el îți aparține — nu există o îmbinare profundă, așa că widgeturile implicite noi din versiunile viitoare Omarchy nu vor apărea automat pe bara ta. `omarchy bar defaults` readuce aranjamentul livrat ori de câte ori vrei o tablă curată.
+O regulă care merită interiorizată: **odată ce ai propriul tău `shell.json`, el este canonic**. Până când personalizezi ceva, shell-ul citește fișierul implicit al Ve OS. În clipa în care tragi un widget, rulezi `omarchy bar` sau editezi singur fișierul, el îți aparține — nu există o îmbinare profundă, așa că widgeturile implicite noi din versiunile viitoare Ve OS nu vor apărea automat pe bara ta. `omarchy bar defaults` readuce aranjamentul livrat ori de câte ori vrei o tablă curată.
 
 Același fișier ține și timpii tăi de inactivitate la nivelul superior, în afara cheii `bar`: `idle.screensaver` și `idle.lock`, ambele în secunde de când ai devenit inactiv. Așa că screensaverul implicit pornește la 150 de secunde, iar blocarea la 300.

@@ -1,4 +1,6 @@
-# Prvi koraki
+# Ve OS — Prvi koraki
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy se namesti z ISO-jem. Izberete lahko med namestitvijo na celoten disk, ki prevzame celoten pogon, ali namestitvijo v prosti prostor, ki Omarchy umesti v nedodeljeni prostor na pogonu — tako izvedete dvojni zagon ob Windows ali drugem operacijskem sistemu (glejte [namestitev z dvojnim zagonom](50-dual-boot-install.md) — upoštevajte, da morate v Windows najprej izklopiti BitLocker). V obeh primerih je namestitev privzeto povsem šifrirana, možnost namestitve na celoten disk pa bo izbrisala izbrani pogon, zato pred uporabo obstoječega pogona obvezno naredite varnostno kopijo!
 

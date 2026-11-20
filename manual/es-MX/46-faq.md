@@ -28,7 +28,7 @@ Esto mostrará domingo 10:55 AM.
 
 ### ¿Cómo cambio mi zona horaria?
 
-Ejecuta _Update > Timezone_ en el menú de Omarchy y elige de la lista. Si la zona horaria es correcta pero el reloj en sí se desfasó, _Update > Time_ reinicia la sincronización de la hora por ti.
+Ejecuta _Update > Timezone_ en el menú de Ve OS y elige de la lista. Si la zona horaria es correcta pero el reloj en sí se desfasó, _Update > Time_ reinicia la sincronización de la hora por ti.
 
 ### ¿Cómo cambio mi DNS, comparto mi Wi-Fi o reviso la velocidad de mi conexión?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Puedes hacer lo mismo para las grabaciones de pantalla usando `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap crea su directorio de capturas de pantalla automáticamente. Crea tú mismo el directorio de grabaciones de pantalla y luego reinicia Omarchy para que cualquiera de los dos cambios de entorno surta efecto.
+Omasnap crea su directorio de capturas de pantalla automáticamente. Crea tú mismo el directorio de grabaciones de pantalla y luego reinicia Ve OS para que cualquiera de los dos cambios de entorno surta efecto.
 
 ### ¿Cómo hago que funcionen las bocinas + la cámara web en mi Apple Studio Display?
 
 Uno pensaría que todo debería funcionar con solo conectar el USB C, pero desafortunadamente no es así. La solución que encontré para que funcione de forma confiable es usar [el cable WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Entonces las bocinas y la cámara web funcionan de maravilla.
 
-Recuerda que tienes control de brillo integrado en Omarchy para las pantallas Apple (tanto Studio como XDR) usando los botones normales de brillo del teclado.
+Recuerda que tienes control de brillo integrado en Ve OS para las pantallas Apple (tanto Studio como XDR) usando los botones normales de brillo del teclado.
 
 ### ¿Cómo me deshago de todo el software extra?
 
@@ -72,7 +72,7 @@ Si no quieres programas como Obsidian o LibreOffice o cualquiera de las demás c
 
 Ejecuta _Remove > Package_ para ver todos los paquetes instalados. Luego puedes seleccionar cualquier paquete que quieras eliminar con tab, y empezar a eliminar todo lo que seleccionaste con return.
 
-Y puedes usar _Remove > Web App_ desde el menú de Omarchy para eliminar cualquiera de las aplicaciones web preinstaladas que no quieras.
+Y puedes usar _Remove > Web App_ desde el menú de Ve OS para eliminar cualquiera de las aplicaciones web preinstaladas que no quieras.
 
 O ejecuta _Remove > Preinstalls_ para barrer con todos los extras preinstalados — aplicaciones web, TUIs y aplicaciones opcionales — de una sola vez. Los atajos de teclado que las abrían desaparecen con ellos, así que te queda una hoja en blanco de asignaciones para llenarla con las tuyas en `~/.config/hypr/bindings.lua`.
 

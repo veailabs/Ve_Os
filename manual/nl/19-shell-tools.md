@@ -1,6 +1,6 @@
 # Shell-tools
 
-Naast de standaard Linux-tools wordt Omarchy ook geleverd met een heleboel verbeterde shell-tools. Hier zijn de belangrijkste.
+Naast de standaard Linux-tools wordt Ve OS ook geleverd met een heleboel verbeterde shell-tools. Hier zijn de belangrijkste.
 
 ## fzf
 
@@ -58,4 +58,4 @@ De volledige handleiding vind je via `man yt-dlp`.
 
 [try](https://github.com/tobi/try) maakt het gemakkelijk om programmeerexperimenten te beheren met mappen met datumstempel. Alle experimenten leven in `~/Work/tries` en je kunt ze benaderen via `try`.
 
-Omarchy voegt de `bin/`-map van een project niet automatisch toe aan `PATH`. Voer vertrouwde project-lokale tools uit met een expliciet relatief pad, zoals `bin/rails` of `./bin/dev`.
+Ve OS voegt de `bin/`-map van een project niet automatisch toe aan `PATH`. Voer vertrouwde project-lokale tools uit met een expliciet relatief pad, zoals `bin/rails` of `./bin/dev`.

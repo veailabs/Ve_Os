@@ -1,6 +1,6 @@
 # Varnost
 
-Omarchy jemlje varnost izjemno resno. To naj bi bil operacijski sistem, ki ga lahko uporabljate za _Resno Delo_ v _Resničnem Svetu_. Kjer izguba prenosnika ne more voditi v varnostno krizo. Tukaj je, kaj delamo:
+Ve OS jemlje varnost izjemno resno. To naj bi bil operacijski sistem, ki ga lahko uporabljate za _Resno Delo_ v _Resničnem Svetu_. Kjer izguba prenosnika ne more voditi v varnostno krizo. Tukaj je, kaj delamo:
 
 1. *Šifriranje celotnega diska je privzeto vklopljeno*: To je najpomembnejši korak za zaščito fizične varnosti vaših podatkov. Če je vaš računalnik izgubljen ali ukraden, so podatki v celoti šifrirani s standardnim LUKS (Linux Unified Key Setup). Namestitveni program vam omogoča izklop za naprave za enkratno uporabo (glejte [Začetek uporabe](02-getting-started.md)); namestitev brez šifriranja nima te zaščite in vsak, ki ima disk, ga lahko prebere.
 2. *Požarni zid je privzeto omogočen*: Ves dohodni promet je privzeto blokiran, z nekaj izjemami: vrata 53317 za [LocalSend](https://localsend.org/); poizvedbe DNS do lastnega razreševalnika računalnika na naslovu mostu Docker (172.17.0.1), sprejete iz obsegov zasebnih naslovov, ki jih Docker dodeli svojim vsebnikom; in multicast DNS (vrata 5353), ki tiskalnikom in drugim napravam v vašem omrežju omogoča, da se med seboj najdejo, in tam tudi objavi ime vašega računalnika. Poleg teh požarni zid ohranja standardna dovoljenja UFW za ping, pridobivanje naslova od vašega usmerjevalnika (DHCP) in odkrivanje UPnP. Celo ssh je izklopljen, dokler ga ne vklopite prek _Nastavitev > Varnost > SSHD_, kar kot del nastavitve odpre vrata 22 (z omejitvijo hitrosti proti napadom z grobo silo). Celo dostop do Dockerja zaklenemo z nastavitvijo [ufw-docker](https://github.com/chaifeng/ufw-docker), da preprečimo, da bi bili vaši vsebniki pomotoma izpostavljeni svetu.
@@ -10,11 +10,11 @@ Omarchy jemlje varnost izjemno resno. To naj bi bil operacijski sistem, ki ga la
 
 ## Spreminjanje gesel
 
-Pri šifrirani namestitvi imate dve gesli: eno, ki ob zagonu odklene disk, in eno, s katerim se prijavite in uporabljate `sudo`. Nastavitev ju nastavi enaki. Obe lahko spremenite pod _Posodobitev > Geslo_ v meniju Omarchy — _Šifriranje diska_ za prvo, _Uporabnik_ za drugo. Spreminjanje gesla diska najprej zahteva trenutno geslo, zato ga imejte pri roki. Če je sprememba prekinjena, znova zaženite _Šifriranje diska_: zahteva geslo, ki zdaj odklene disk, in dokonča spremembo.
+Pri šifrirani namestitvi imate dve gesli: eno, ki ob zagonu odklene disk, in eno, s katerim se prijavite in uporabljate `sudo`. Nastavitev ju nastavi enaki. Obe lahko spremenite pod _Posodobitev > Geslo_ v meniju Ve OS — _Šifriranje diska_ za prvo, _Uporabnik_ za drugo. Spreminjanje gesla diska najprej zahteva trenutno geslo, zato ga imejte pri roki. Če je sprememba prekinjena, znova zaženite _Šifriranje diska_: zahteva geslo, ki zdaj odklene disk, in dokonča spremembo.
 
 ## Predaja naprave, ki ste jo že uporabljali
 
-Če svojo napravo predajate nekomu drugemu, je ni treba znova namestiti. Zaženite _Nastavitev > Ponastavi računalnik_ v meniju Omarchy, vnesite `reset` za potrditev in znova zaženite. To izbriše vsak uporabniški račun in vse v `/home`, zavrže vse pakete in sistemske spremembe, ki ste jih naredili od namestitve, ter počisti identiteto naprave — omrežne povezave, gostiteljske ključe in vse. Kar se znova zažene, je čarovnik za nastavitev s prvega zagona, pripravljen, da novi lastnik vnese svoje ime, geslo in geslo za šifriranje.
+Če svojo napravo predajate nekomu drugemu, je ni treba znova namestiti. Zaženite _Nastavitev > Ponastavi računalnik_ v meniju Ve OS, vnesite `reset` za potrditev in znova zaženite. To izbriše vsak uporabniški račun in vse v `/home`, zavrže vse pakete in sistemske spremembe, ki ste jih naredili od namestitve, ter počisti identiteto naprave — omrežne povezave, gostiteljske ključe in vse. Kar se znova zažene, je čarovnik za nastavitev s prvega zagona, pripravljen, da novi lastnik vnese svoje ime, geslo in geslo za šifriranje.
 
 Deluje tako, da obnovi osnovni posnetek, ki ga naredi namestitveni program, zato je na voljo le na napravah, nameščenih z ISO Omarchy. Na disku brez šifriranja pa je ponastavitev brisanje in ne varno brisanje, zato, če so bili podatki občutljivi, raje opravite svežo namestitev.
 
@@ -24,7 +24,7 @@ Včasih želite, da `sudo` preneha spraševati, najpogosteje, ko agent UI za vas
 
 Časovni dostop samodejno poteče, tudi takoj po prebujanju iz stanja mirovanja, ki je prekoračilo rok. Ponovni zagon računalnika ga predčasno konča. Trajni dostop preživi ponovne zagone in ostane omogočen, dokler ga ne onemogočite.
 
-Posodobitev ali odstranitev paketa z nastavitvami Omarchy konča vsako začasno dovoljenje, preden se spremeni njegova podpora za potek. Če ukaz sporoči napako pri avtorizaciji ali čiščenju, jo odpravite, preden poskusite omogočiti drugo dovoljenje; napaka ne pomeni, da dostop brez gesla ni aktiven.
+Posodobitev ali odstranitev paketa z nastavitvami Ve OS konča vsako začasno dovoljenje, preden se spremeni njegova podpora za potek. Če ukaz sporoči napako pri avtorizaciji ali čiščenju, jo odpravite, preden poskusite omogočiti drugo dovoljenje; napaka ne pomeni, da dostop brez gesla ni aktiven.
 
 Pri tem imejte odprte oči: medtem ko je vklopljeno, lahko vse, kar teče kot vaš uporabnik, brez vprašanja počne vse kot root. To je ves smisel in to je tudi vse tveganje.
 

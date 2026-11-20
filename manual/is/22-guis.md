@@ -20,7 +20,7 @@ Obsidian er ókeypis í öllum tilgangi, þar á meðal til einkanota, viðskipt
 
 Obsidian býður einnig upp á [greidda viðbót fyrir samstillingu](https://obsidian.md/sync) við farsímaforrit á iOS og Android. (https://obsidian.md/pricing).
 
-Þú ræsir Obsidian með `Super + Shift + O`. Til að nota þemasamstillingu verðurðu að velja `Omarchy` þemað undir stillingum.
+Þú ræsir Obsidian með `Super + Shift + O`. Til að nota þemasamstillingu verðurðu að velja `Ve OS` þemað undir stillingum.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Obsidian býður einnig upp á [greidda viðbót fyrir samstillingu](https://obs
 
 [LocalSend](https://localsend.org/) lætur þig senda skrár í önnur tæki á sama neti sem keyra forritið, eins og AirDrop frá Apple. Það er þó fjölpalla, svo þú getur sent skrár til og frá Windows, macOS, Android, iOS og auðvitað Linux.
 
-Þú getur opnað Share-valmyndina á `Super + Ctrl + S` eða undir _Trigger > Share_ í Omarchy-valmyndinni. Hún gefur þér fjóra kosti:
+Þú getur opnað Share-valmyndina á `Super + Ctrl + S` eða undir _Trigger > Share_ í Ve OS-valmyndinni. Hún gefur þér fjóra kosti:
 
 - **Clipboard** sendir það sem þú hefur afritað sem textaskrá. Frábært til að koma tengli eða búti yfir á símann þinn án þess að senda sjálfum þér tölvupóst.
 - **File** opnar skráaval þar sem þú getur valið nokkrar í einu.
@@ -55,7 +55,7 @@ Sama virkar frá útstöðinni með `omarchy share clipboard`, `omarchy share fi
 
 Þú getur líka sent beint úr skráastjóranum: hægrismelltu á val í Nautilus og veldu _Send via LocalSend_.
 
-Eldveggur Omarchy er lokaður sjálfgefið nema fyrir gátt LocalSend, svo þetta virkar beint úr kassanum í ferskri uppsetningu. Sjá [öryggi](48-security.md).
+Eldveggur Ve OS er lokaður sjálfgefið nema fyrir gátt LocalSend, svo þetta virkar beint úr kassanum í ferskri uppsetningu. Sjá [öryggi](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Eldveggur Omarchy er lokaður sjálfgefið nema fyrir gátt LocalSend, svo þett
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) er 3D-skákleikur frá Omarchy sjálfu. Spilaðu við vin á sömu tölvu eða innbyggða andstæðinginn á þremur erfiðleikastigum, á fjórum mótuðum settum sem hvert hreyfist á sinn hátt: sporbaugaför, útskorið tré og fílabein, skógarverur og nammi. Leikir eru án klukku og vistast eftir hvern leik.
+[Checkmate](https://github.com/omacom/checkmate) er 3D-skákleikur frá Ve OS sjálfu. Spilaðu við vin á sömu tölvu eða innbyggða andstæðinginn á þremur erfiðleikastigum, á fjórum mótuðum settum sem hvert hreyfist á sinn hátt: sporbaugaför, útskorið tré og fílabein, skógarverur og nammi. Leikir eru án klukku og vistast eftir hvern leik.
 
 Þú ræsir Checkmate í gegnum forritavalmyndina (`Super + Space`), þar sem það er skráð sem Chess. Ýttu á `?` inni í því til að sjá alla flýtilykla.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) er Klondike-kapall frá Omarchy sjálfu. Dragðu þrjú, án takmarkana á umferðum, í fjórum spilaröðum: ein teiknuð í litum þema þíns og þrjár með sitt eigið útlit. Smelltu á spil og síðan þangað sem það á að fara, dragðu það, eða tvísmelltu til að senda það á besta staðinn. Leikir vistast eftir hvern leik.
+[Cards](https://github.com/omacom/cards) er Klondike-kapall frá Ve OS sjálfu. Dragðu þrjú, án takmarkana á umferðum, í fjórum spilaröðum: ein teiknuð í litum þema þíns og þrjár með sitt eigið útlit. Smelltu á spil og síðan þangað sem það á að fara, dragðu það, eða tvísmelltu til að senda það á besta staðinn. Leikir vistast eftir hvern leik.
 
 Þú ræsir Cards í gegnum forritavalmyndina (`Super + Space`). Smelltu á nafn þess, eða ýttu á `?`, til að sjá alla flýtilykla.
 
@@ -97,7 +97,7 @@ Eldveggur Omarchy er lokaður sjálfgefið nema fyrir gátt LocalSend, svo þett
 
 [Signal](https://signal.org/) er frumkvöðullinn í enda-í-enda dulkóðuðum skilaboðum og frábær samskiptakostur fyrir alla sem vilja frekar ekki fara í gegnum eitt af stóru tæknirisunum.
 
-Þú ræsir Signal með `Super + Shift + G`. Það er ekki hluti af grunnuppsetningunni, svo í fyrsta skipti sem þú ýtir á það mun Omarchy bjóða þér að setja það upp fyrir þig (það er líka undir _Install > Service_ í Omarchy-valmyndinni).
+Þú ræsir Signal með `Super + Shift + G`. Það er ekki hluti af grunnuppsetningunni, svo í fyrsta skipti sem þú ýtir á það mun Ve OS bjóða þér að setja það upp fyrir þig (það er líka undir _Install > Service_ í Ve OS-valmyndinni).
 
 ## Omaview
 

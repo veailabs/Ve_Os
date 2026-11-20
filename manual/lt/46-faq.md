@@ -28,7 +28,7 @@ Bus rodoma Sekmadienis 10:55 AM.
 
 ### Kaip pakeisti laiko juostą?
 
-Omarchy meniu paleiskite _Update > Timezone_ ir pasirinkite iš sąrašo. Jei laiko juosta teisinga, bet pats laikrodis nukrypo, _Update > Time_ už jus iš naujo paleis laiko sinchronizavimą.
+Ve OS meniu paleiskite _Update > Timezone_ ir pasirinkite iš sąrašo. Jei laiko juosta teisinga, bet pats laikrodis nukrypo, _Update > Time_ už jus iš naujo paleis laiko sinchronizavimą.
 
 ### Kaip pakeisti DNS, bendrinti Wi-Fi arba patikrinti ryšio greitį?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Tą patį ekrano įrašams galite padaryti naudodami `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap automatiškai sukuria savo ekrano nuotraukų katalogą. Ekrano įrašų katalogą sukurkite patys, tada iš naujo paleiskite Omarchy, kad bet kuris iš šių aplinkos pakeitimų įsigaliotų.
+Omasnap automatiškai sukuria savo ekrano nuotraukų katalogą. Ekrano įrašų katalogą sukurkite patys, tada iš naujo paleiskite Ve OS, kad bet kuris iš šių aplinkos pakeitimų įsigaliotų.
 
 ### Kaip priversti veikti garsiakalbius + internetinę kamerą mano Apple Studio Display?
 
 Galvotumėte, kad viskas turėtų veikti tiesiog prijungus USB C, bet, deja, taip nėra. Sprendimas, kurį radau, kad viskas veiktų patikimai, yra naudoti [WJESOG DisplayPort + USB-A => USB-C kabelį](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Tada garsiakalbiai ir internetinė kamera veikia puikiai.
 
-Atminkite, kad Omarchy turi integruotą Apple Displays (tiek Studio, tiek XDR) ryškumo valdymą įprastais klaviatūros ryškumo mygtukais.
+Atminkite, kad Ve OS turi integruotą Apple Displays (tiek Studio, tiek XDR) ryškumo valdymą įprastais klaviatūros ryškumo mygtukais.
 
 ### Kaip atsikratyti visos papildomos programinės įrangos?
 
@@ -72,7 +72,7 @@ Jei nenorite programų, tokių kaip Obsidian ar LibreOffice, ar bet kurios kitos
 
 Paleiskite _Remove > Package_, kad pamatytumėte kiekvieną įdiegtą paketą. Tada klavišu tab galite pasirinkti bet kurį paketą, kurį norite pašalinti, o klavišu return pradėti šalinti viską, ką pasirinkote.
 
-O iš Omarchy meniu galite naudoti _Remove > Web App_, kad pašalintumėte bet kurias iš anksto įdiegtas žiniatinklio programas, kurių nenorite.
+O iš Ve OS meniu galite naudoti _Remove > Web App_, kad pašalintumėte bet kurias iš anksto įdiegtas žiniatinklio programas, kurių nenorite.
 
 Arba paleiskite _Remove > Preinstalls_, kad vienu ypu iššluotumėte visus iš anksto įdiegtus priedus — žiniatinklio programas, TUI ir pasirenkamas programas. Juos paleidę spartieji klavišai dingsta kartu su jais, todėl liekate su švaria susiejimų lentele, kurią galėsite užpildyti savais susiejimais faile `~/.config/hypr/bindings.lua`.
 

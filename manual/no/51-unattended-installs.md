@@ -1,4 +1,6 @@
-# Ubetjente installasjoner
+# Ve OS — Ubetjente installasjoner
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy-ISO-en kan installere seg selv uten noen ved tastaturet. Hvis installasjonsprogrammet finner en ekstra disk merket `cidata` som bærer konfigurasjonsfilene sine, kopierer det dem av, hopper over oppsettsveiviseren helt og starter på nytt inn i det ferdige systemet på egen hånd. Ingen spesiell ISO-bygg, ingen ekstra oppføring i oppstartsmenyen — uten en slik disk tilkoblet endres ingenting, og du får den vanlige veiviseren.
 

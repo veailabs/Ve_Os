@@ -1,14 +1,14 @@
 # Horní lišta
 
-Pruh podél horního okraje obrazovky je lišta Omarchy. Není to přišroubovaná stavová lišta, ale součást shellu Omarchy, jediného dlouho běžícího procesu Quickshell, který kreslí také menu, oznámení, vyskakovací okna OSD a zamykací obrazovku. Proto dokonale ladí se vším ostatním a proto se panel otevře okamžitě, místo aby spouštěl novou aplikaci.
+Pruh podél horního okraje obrazovky je lišta Ve OS. Není to přišroubovaná stavová lišta, ale součást shellu Ve OS, jediného dlouho běžícího procesu Quickshell, který kreslí také menu, oznámení, vyskakovací okna OSD a zamykací obrazovku. Proto dokonale ladí se vším ostatním a proto se panel otevře okamžitě, místo aby spouštěl novou aplikaci.
 
 Je to také jediná část plochy, která je neustále na obrazovce, takže stojí za to vědět, co všechny ty malé glyfy dělají.
 
 ## Co na ní je ve výchozím nastavení
 
-Lišta má tři části. Vlevo sedí logo Omarchy (spouštěč menu) a indikátory pracovních ploch. Uprostřed máte indikátory stavu, hodiny, Elsewhen (světové hodiny), počasí a odznak aktualizace Omarchy. Vpravo: systémový zásobník, rozložení klávesnice (když je nakonfigurováno více než jedno), agenty, Bluetooth, síť, zvuk, displej a napájení.
+Lišta má tři části. Vlevo sedí logo Ve OS (spouštěč menu) a indikátory pracovních ploch. Uprostřed máte indikátory stavu, hodiny, Elsewhen (světové hodiny), počasí a odznak aktualizace Ve OS. Vpravo: systémový zásobník, rozložení klávesnice (když je nakonfigurováno více než jedno), agenty, Bluetooth, síť, zvuk, displej a napájení.
 
-Některé z nich se objeví jen tehdy, když mají co říct. Rozložení klávesnice se objeví jen tehdy, pokud jste nakonfigurovali více než jedno rozložení. Odznak aktualizace se objeví jen tehdy, když čeká aktualizace Omarchy. A ikona agentů se objeví, když Omarchy poprvé najde na počítači využití AI kódování (viz [AI](17-ai.md)).
+Některé z nich se objeví jen tehdy, když mají co říct. Rozložení klávesnice se objeví jen tehdy, pokud jste nakonfigurovali více než jedno rozložení. Odznak aktualizace se objeví jen tehdy, když čeká aktualizace Ve OS. A ikona agentů se objeví, když Ve OS poprvé najde na počítači využití AI kódování (viz [AI](17-ai.md)).
 
 ## Klikání
 
@@ -16,7 +16,7 @@ Téměř každý widget něco dělá při kliknutí levým, pravým a prostředn
 
 | Widget | Levé | Pravé | Prostřední / rolování |
 | --- | --- | --- | --- |
-| Menu | Menu Omarchy | Nový terminál | — |
+| Menu | Menu Ve OS | Nový terminál | — |
 | Pracovní plochy | Zaměřit danou pracovní plochu na tomto monitoru | — | Rolování: další/předchozí pracovní plocha |
 | Hodiny | Vyskakovací kalendář | Přepínat formát popisku | Prostřední: výběr časového pásma |
 | Počasí | Vyskakovací předpověď | Úplné počasí jako oznámení | Prostřední: obnovit |
@@ -29,7 +29,7 @@ Téměř každý widget něco dělá při kliknutí levým, pravým a prostředn
 | Média | Přehrát/pozastavit | Vyskakovací okno s obalem alba | Prostřední: další · rolování: předchozí/další |
 | Agenti | Panel agentů | Spustit vašeho agenta | Prostřední: další předplatné |
 | Tray | Najetím myší odhalíte zásuvku | Pravým tlačítkem na šipku spravujete | — |
-| Aktualizace Omarchy | Spustit aktualizaci | — | — |
+| Aktualizace Ve OS | Spustit aktualizaci | — | — |
 
 Ne všechno z té tabulky máte na liště hned po vybalení. Widget médií (právě přehrávané MPRIS s posouvající se skladbou a interpretem) a widget mikrofonu jsou oba vestavěné, ale ve výchozím nastavení vypnuté — přidejte si je, pokud je chcete, jak je popsáno níže.
 
@@ -137,6 +137,6 @@ Každý widget je jedna položka v jednom z pěti polí layoutu a jeho nastaven�
 
 `center` je krabice uprostřed lišty: všechno v ní je vystředěno na obrazovce jako jedna skupina. `centerBegin` a `centerEnd` visí po obou stranách krabice, a právě tak zůstávají hodiny přesně uprostřed, i když počasí a odznak aktualizace přicházejí a odcházejí. Dejte do `center` více než jeden widget a budou vystředěny společně; nechte ho prázdné a `centerBegin` a `centerEnd` se potkají uprostřed lišty.
 
-Jedno pravidlo, které stojí za to si osvojit: **jakmile máte vlastní `shell.json`, je kanonický**. Dokud si nic nepřizpůsobíte, shell čte výchozí soubor Omarchy. V okamžiku, kdy přetáhnete widget, spustíte `omarchy bar` nebo soubor sami upravíte, vlastníte ho vy — nedochází k žádnému hlubokému slučování, takže se nové výchozí widgety z budoucích vydání Omarchy na vaší liště automaticky neobjeví. `omarchy bar defaults` vrátí dodávané rozložení zpět, kdykoli budete chtít čistý štít.
+Jedno pravidlo, které stojí za to si osvojit: **jakmile máte vlastní `shell.json`, je kanonický**. Dokud si nic nepřizpůsobíte, shell čte výchozí soubor Ve OS. V okamžiku, kdy přetáhnete widget, spustíte `omarchy bar` nebo soubor sami upravíte, vlastníte ho vy — nedochází k žádnému hlubokému slučování, takže se nové výchozí widgety z budoucích vydání Ve OS na vaší liště automaticky neobjeví. `omarchy bar defaults` vrátí dodávané rozložení zpět, kdykoli budete chtít čistý štít.
 
 Tentýž soubor také drží vaše časování nečinnosti na nejvyšší úrovni, mimo klíč `bar`: `idle.screensaver` a `idle.lock`, obojí v sekundách od doby, kdy jste odešli do nečinnosti. Takže výchozí spořič obrazovky naskočí po 150 sekundách a zámek po 300.

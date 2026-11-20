@@ -1,4 +1,6 @@
-# Prise en charge des Mac
+# Ve OS — Prise en charge des Mac
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy prend en charge nativement les **Mac Intel**. Il existe pour le moment quelques limitations connues, mais tant que vous en êtes conscient et que cela vous convient ; vous pouvez redonner un nouveau souffle à vos vieux Mac en y installant Omarchy.
 

@@ -1,4 +1,6 @@
-# Aloittaminen
+# Ve OS — Aloittaminen
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy asennetaan ISO:n avulla. Voit valita koko levyn asennuksen, joka ottaa koko aseman haltuunsa, tai vapaan tilan asennuksen, joka sijoittaa Omarchyn asemalla olevaan varaamattomaan tilaan — näin teet kaksoiskäynnistyksen Windowsin tai toisen käyttöjärjestelmän rinnalla (katso [kaksoiskäynnistysasennus](50-dual-boot-install.md) — huomaa, että sinun täytyy ensin poistaa BitLocker käytöstä Windowsissa). Kummassakin tapauksessa asennus käyttää oletusarvoisesti täyttä salausta, ja koko levyn vaihtoehto pyyhkii valitun aseman, joten muista ottaa varmuuskopio ennen kuin käytät jo käytössä olevaa asemaa!
 

@@ -86,7 +86,7 @@ run_notify 0 >"$test_tmp/not-pending.out" 2>"$test_tmp/not-pending.err"
 pass "migration notifier ignores users with no pending migrations"
 
 run_notify 1 fail >"$test_tmp/pending.out" 2>"$test_tmp/pending.err"
-grep -q 'Omarchy has pending migrations' "$test_tmp/pending.err" || fail "migration notifier explains pending migrations without notification system"
+grep -q 'Ve OS has pending migrations' "$test_tmp/pending.err" || fail "migration notifier explains pending migrations without notification system"
 grep -q '200-migration.sh' "$test_tmp/pending.err" || fail "migration notifier lists pending migration names"
 pass "migration notifier reports pending migrations"
 

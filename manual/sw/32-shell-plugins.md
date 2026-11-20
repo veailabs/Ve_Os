@@ -1,10 +1,10 @@
 # Programu-jalizi za Shell
 
-Eneo-kazi la Omarchy huendeshwa kama mchakato mmoja wa Quickshell wa muda mrefu unaoitwa `omarchy-shell`, na karibu kila kitu unachokiona kwenye skrini ni programu-jalizi ndani yake. Upau ni programu-jalizi. Vivyo hivyo paneli zinazodondoka kutoka kwake, vifuniko vya skrini nzima kama kiteuzi cha emoji na meneja wa ubao wa kunakili, menyu ya Omarchy yenyewe, skrini ya kufuli, kisogezi cha polkit, na huduma zisizo na kichwa zinazofuatilia betri yako na kupasha skrini yako moto usiku.
+Eneo-kazi la Ve OS huendeshwa kama mchakato mmoja wa Quickshell wa muda mrefu unaoitwa `omarchy-shell`, na karibu kila kitu unachokiona kwenye skrini ni programu-jalizi ndani yake. Upau ni programu-jalizi. Vivyo hivyo paneli zinazodondoka kutoka kwake, vifuniko vya skrini nzima kama kiteuzi cha emoji na meneja wa ubao wa kunakili, menyu ya Ve OS yenyewe, skrini ya kufuli, kisogezi cha polkit, na huduma zisizo na kichwa zinazofuatilia betri yako na kupasha skrini yako moto usiku.
 
-Hiyo si maelezo tu ya utekelezaji. Ina maana unaweza kuzima vipande vya eneo-kazi, kuvibadilisha, au kuandika vyako mwenyewe bila kugusa mstari wa chanzo cha Omarchy.
+Hiyo si maelezo tu ya utekelezaji. Ina maana unaweza kuzima vipande vya eneo-kazi, kuvibadilisha, au kuandika vyako mwenyewe bila kugusa mstari wa chanzo cha Ve OS.
 
-Programu-jalizi za mtu wa kwanza huja na Omarchy na kukaa katika `$OMARCHY_PATH/shell/plugins/`. Chochote unachoongeza mwenyewe — majaribio yako mwenyewe, au kitu ulichopata kwenye GitHub — hukaa katika `~/.config/omarchy/plugins/`. Zote mbili hugunduliwa kwa njia ile ile wakati wa kuanza, lakini zilizo za ndani hupokea violesura vinavyoaminika vya shell wakati programu-jalizi za wahusika wengine hupokea kiolesura kidogo kilichowekewa wigo kwa huduma na mzunguko wa maisha wao wenyewe. Nakala za zilizo za ndani huhifadhi tu usanidi maalum wa chanzo na miito ya UI inayohitajika kwa tabia ya asili.
+Programu-jalizi za mtu wa kwanza huja na Ve OS na kukaa katika `$OMARCHY_PATH/shell/plugins/`. Chochote unachoongeza mwenyewe — majaribio yako mwenyewe, au kitu ulichopata kwenye GitHub — hukaa katika `~/.config/omarchy/plugins/`. Zote mbili hugunduliwa kwa njia ile ile wakati wa kuanza, lakini zilizo za ndani hupokea violesura vinavyoaminika vya shell wakati programu-jalizi za wahusika wengine hupokea kiolesura kidogo kilichowekewa wigo kwa huduma na mzunguko wa maisha wao wenyewe. Nakala za zilizo za ndani huhifadhi tu usanidi maalum wa chanzo na miito ya UI inayohitajika kwa tabia ya asili.
 
 ## Kuona ulivyonavyo
 

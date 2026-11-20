@@ -1,4 +1,6 @@
-# Pagsisimula
+# Ve OS — Pagsisimula
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Ini-install ang Omarchy gamit ang isang ISO. Maaari kang pumili sa pagitan ng full-disk install, na sasakupin ang buong drive, o ng free-space install, na maglalagay ng Omarchy sa hindi pa nakalaang espasyo sa isang drive — ganyan ka magdu-dual boot kasama ng Windows o ng isa pang OS (tingnan ang [pag-install na dual-boot](50-dual-boot-install.md) — tandaan na kailangan mo munang i-off ang BitLocker sa Windows). Alinman ang piliin mo, naka-full encryption ang installation bilang default, at buburahin ng full-disk na opsyon ang napiling drive, kaya siguraduhing mag-backup bago gumamit ng dati nang drive!
 

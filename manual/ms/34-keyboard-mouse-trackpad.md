@@ -1,6 +1,6 @@
 # Papan Kekunci, Tetikus, Pad Sentuh
 
-Hyprland membolehkan anda mengkonfigurasi semua input anda dengan sangat terperinci. Anda boleh menukar ulangan papan kekunci supaya laju supersonik atau membuat pad sentuh menggunakan tatalan semula jadi. Anda menukar semuanya dalam `~/.config/hypr/input.lua`, yang juga boleh dicapai melalui _Setup > Input_ dalam menu Omarchy (`Super + Space`). Apa-apa sahaja yang anda tetapkan di sana menggantikan tetapan lalai Omarchy.
+Hyprland membolehkan anda mengkonfigurasi semua input anda dengan sangat terperinci. Anda boleh menukar ulangan papan kekunci supaya laju supersonik atau membuat pad sentuh menggunakan tatalan semula jadi. Anda menukar semuanya dalam `~/.config/hypr/input.lua`, yang juga boleh dicapai melalui _Setup > Input_ dalam menu Ve OS (`Super + Space`). Apa-apa sahaja yang anda tetapkan di sana menggantikan tetapan lalai Ve OS.
 
 Berikut ialah satu contoh:
 
@@ -59,7 +59,7 @@ Leret pada pad sentuh untuk bergerak di sekitar desktop:
 | --- | --- |
 | Tiga jari ke kiri / kanan | Ruang kerja sebelumnya / seterusnya, termasuk yang kosong |
 | Tiga jari ke atas | Togol konsol AI |
-| Tiga jari ke bawah | Buka menu Omarchy |
+| Tiga jari ke bawah | Buka menu Ve OS |
 | Empat jari ke kiri / kanan | Alihkan tetingkap aktif ke ruang kerja sebelumnya / seterusnya |
 | Empat jari ke bawah | Togol skrin penuh |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Untuk mematikan semua gerak isyarat Omarchy, tetapkan `omarchy_default_gestures = false` berhampiran bahagian atas `~/.config/hypr/hyprland.lua`, sebelum tetapan lalai Omarchy dimuatkan.
+Untuk mematikan semua gerak isyarat Ve OS, tetapkan `omarchy_default_gestures = false` berhampiran bahagian atas `~/.config/hypr/hyprland.lua`, sebelum tetapan lalai Ve OS dimuatkan.
 
 Pada komputer riba Dell XPS dengan pad sentuh haptik, anda juga boleh menetapkan kekuatan klik kepada rendah, sederhana, atau tinggi di bawah _Trigger > Hardware > Touchpad Haptics_.
 
 ### Menaip dalam bahasa Cina, Jepun, dan bahasa lain
 
-Pilih bahasa Jepun, Korea, Cina (Ringkas, Pinyin), Taiwan (Zhuyin), atau Hong Kong (Cangjie) apabila pemasang bertanya tentang papan kekunci anda. Omarchy mengkonfigurasi papan kekunci dan enjin input yang sepadan secara automatik, termasuk semasa persediaan but pertama luar talian. Bahasa Jepun menggunakan Mozc, bahasa Korea menggunakan Hangul dua set standard, Cina Ringkas menggunakan Pinyin, Taiwan menggunakan susunan Zhuyin standard Chewing, dan Hong Kong menggunakan Cangjie dengan bentuk aksara Hong Kong. Jepun (papan kekunci US) menyediakan Mozc dengan susun atur papan kekunci US. Kekunci Hangul, Zhuyin, dan Cangjie kekal di kedudukan standardnya walaupun anda menaip huruf Latin dengan Dvorak, Colemak, atau AZERTY. Jika anda telah menambah Hangul atau Chewing sebelum ini, nyahpilih dan pilih semula di bawah _Setup > Keyboard > Input Methods_ untuk memindahkan kekuncinya ke sana; Omarchy membiarkan sahaja enjin yang sudah anda gunakan untuk menaip.
+Pilih bahasa Jepun, Korea, Cina (Ringkas, Pinyin), Taiwan (Zhuyin), atau Hong Kong (Cangjie) apabila pemasang bertanya tentang papan kekunci anda. Ve OS mengkonfigurasi papan kekunci dan enjin input yang sepadan secara automatik, termasuk semasa persediaan but pertama luar talian. Bahasa Jepun menggunakan Mozc, bahasa Korea menggunakan Hangul dua set standard, Cina Ringkas menggunakan Pinyin, Taiwan menggunakan susunan Zhuyin standard Chewing, dan Hong Kong menggunakan Cangjie dengan bentuk aksara Hong Kong. Jepun (papan kekunci US) menyediakan Mozc dengan susun atur papan kekunci US. Kekunci Hangul, Zhuyin, dan Cangjie kekal di kedudukan standardnya walaupun anda menaip huruf Latin dengan Dvorak, Colemak, atau AZERTY. Jika anda telah menambah Hangul atau Chewing sebelum ini, nyahpilih dan pilih semula di bawah _Setup > Keyboard > Input Methods_ untuk memindahkan kekuncinya ke sana; Ve OS membiarkan sahaja enjin yang sudah anda gunakan untuk menaip.
 
 Penaipan bermula dalam mod Latin. Tekan `Super + I` untuk beralih antara kaedah input yang dikonfigurasi, dan `Super + Shift + I` untuk beralih ke belakang. Ketik `Shift` dengan sendirinya untuk keluar daripada kaedah input seperti Pinyin ke huruf Latin, dan ketiknya semula untuk kembali, seperti cara Sogou, Microsoft Pinyin, dan macOS berfungsi; `Shift` tambah huruf masih menaip huruf besar. Pada papan kekunci Jepun, 全角/半角 menogol input, 変換 menghidupkannya, dan 無変換 mematikannya. Dengan bahasa Korea, 한/영 menukar Hangul dan 한자 menukar kepada Hanja, sama ada papan kekunci anda mempunyai kekunci khas atau menghantar Right Alt dan Right Ctrl untuknya, seperti yang dilakukan oleh banyak komputer riba, jadi Right Alt dan Right Ctrl bukan pengubah biasa di sana; imlak sebaliknya ditogol dengan Alt + Space. `Ctrl + Space` kekal tersedia untuk Tmux dan Herdr; `Shift + CapsLock` kekal sebagai kekunci karang.
 
 Penunjuk papan kekunci muncul di sebelah kanan bar apabila anda mempunyai berbilang susun atur papan kekunci atau kaedah input. Kliknya untuk menukar bahasa input; bahasa Jepun memaparkan あ untuk hiragana. Untuk pilihan aksara Jepun, tukar kepada bahasa Jepun, taip perkataan seperti `nihongo`, kemudian tekan Space dua kali. Tekan Enter untuk menerima pilihan anda. Jika anda juga mempunyai berbilang susun atur papan kekunci, klik kanan pada penunjuk untuk beralih antaranya.
 
-Gunakan _Setup > Keyboard > Keyboard Inputs_ untuk memilih susun atur seperti bahasa Inggeris dan Perancis, daripada pilihan yang sama yang ditawarkan semasa pemasangan. Gunakan _Setup > Keyboard > Input Methods_ untuk memilih enjin gubahan yang aktif. Kedua-dua pemilih dibuka di dalam menu Omarchy dengan pilihan semasa anda ditanda. Klik atau tekan Enter untuk menogol pilihan; setiap perubahan berkuat kuasa serta-merta. Menyahpilih kaedah input mengeluarkannya daripada kitaran tanpa menyahpasangnya; papan kekunci kekal tersedia.
+Gunakan _Setup > Keyboard > Keyboard Inputs_ untuk memilih susun atur seperti bahasa Inggeris dan Perancis, daripada pilihan yang sama yang ditawarkan semasa pemasangan. Gunakan _Setup > Keyboard > Input Methods_ untuk memilih enjin gubahan yang aktif. Kedua-dua pemilih dibuka di dalam menu Ve OS dengan pilihan semasa anda ditanda. Klik atau tekan Enter untuk menogol pilihan; setiap perubahan berkuat kuasa serta-merta. Menyahpilih kaedah input mengeluarkannya daripada kitaran tanpa menyahpasangnya; papan kekunci kekal tersedia.
 
 Jalankan `omarchy setup keyboard` atau `omarchy setup input` untuk membuka pemilih yang sama. Untuk menambah satu bahasa daripada baris perintah, gunakan `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing`, atau `cangjie5`. Quick, Boshiamy, dan Array datang dalam pakej yang sama dengan Cangjie dan muncul dalam pemilih Input Methods. Kekunci penukaran tersuai anda dikekalkan. Untuk susun atur atau kekunci enjin alternatif, pasang `fcitx5-configtool` dengan `omarchy pkg add fcitx5-configtool` dan lancarkannya daripada terminal. Memilih bahasa input tidak menukar bahasa desktop. Memilih bahasa Jepun, Korea, atau Cina di bawah _Setup > Language_ menambah kaedah inputnya apabila anda belum mempunyai sebarang kaedah input lagi.
 

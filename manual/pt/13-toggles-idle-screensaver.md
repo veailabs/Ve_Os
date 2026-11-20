@@ -1,10 +1,10 @@
 # Alternâncias, Inatividade e a Proteção de Ecrã
 
-Muito do que alteras no dia a dia não é propriamente uma definição. É um modo que ativas por uma hora e voltas a desativar: luz noturna enquanto estás a trabalhar até tarde, não incomodar enquanto estás a fazer uma apresentação, manter acordado enquanto estás a ver alguma coisa. O Omarchy chama a isso alternâncias, e funcionam todas da mesma maneira — uma tecla de atalho, uma entrada de menu e um comando, todos a atuar sobre o mesmo interruptor.
+Muito do que alteras no dia a dia não é propriamente uma definição. É um modo que ativas por uma hora e voltas a desativar: luz noturna enquanto estás a trabalhar até tarde, não incomodar enquanto estás a fazer uma apresentação, manter acordado enquanto estás a ver alguma coisa. O Ve OS chama a isso alternâncias, e funcionam todas da mesma maneira — uma tecla de atalho, uma entrada de menu e um comando, todos a atuar sobre o mesmo interruptor.
 
 ### O menu de alternâncias
 
-`Super + Ctrl + O` abre _Trigger > Toggle_ diretamente, ou podes lá chegar a partir do menu do Omarchy (`Super + Space`). Tudo o que está nessa lista é um interruptor que podes ligar e desligar sem pensar onde vive o estado. Os interruptores relativos ao aspeto do ambiente de trabalho ficam ao lado, em _Appearance_.
+`Super + Ctrl + O` abre _Trigger > Toggle_ diretamente, ou podes lá chegar a partir do menu do Ve OS (`Super + Space`). Tudo o que está nessa lista é um interruptor que podes ligar e desligar sem pensar onde vive o estado. Os interruptores relativos ao aspeto do ambiente de trabalho ficam ao lado, em _Appearance_.
 
 A partir do terminal, os mesmos interruptores são `omarchy toggle <thing>`. Executa `omarchy toggle` sozinho para veres o grupo completo.
 
@@ -26,7 +26,7 @@ Os interruptores do painel tátil, do ecrã tátil e da GPU híbrida ficam em _T
 
 _Appearance_ reúne a barra de menus e as animações, mais algumas coisas que não são comandos `omarchy toggle` mas que se comportam da mesma forma: a percentagem da bateria na barra, a disposição predefinida da área de trabalho e, em _Windows_, os espaços entre janelas (`Super + Shift + Backspace`) e o aspeto quadrado com 1 janela (`Super + Ctrl + Backspace`).
 
-Quando o Hyprland não tem nenhuma GPU com que desenhar e renderiza antes no CPU (llvmpipe), como nos Macs cuja GPU ainda não é suportada, na maioria das máquinas virtuais, ou quando um controlador gráfico não carrega, o Omarchy desliga as animações, o desfoque e as sombras durante essa sessão e avisa-te disso uma vez com uma notificação. _Appearance > Animations On_ volta a ativar tudo isso, e o Omarchy lembra-se disso também para sessões posteriores.
+Quando o Hyprland não tem nenhuma GPU com que desenhar e renderiza antes no CPU (llvmpipe), como nos Macs cuja GPU ainda não é suportada, na maioria das máquinas virtuais, ou quando um controlador gráfico não carrega, o Ve OS desliga as animações, o desfoque e as sombras durante essa sessão e avisa-te disso uma vez com uma notificação. _Appearance > Animations On_ volta a ativar tudo isso, e o Ve OS lembra-se disso também para sessões posteriores.
 
 A maioria são apenas um ficheiro de sinalização em `~/.local/state/omarchy/toggles/`. Se quiseres condicionar um script com base num deles, `omarchy-toggle-enabled` dá-te um código de saída em vez de te obrigar a ir procurar:
 
@@ -63,11 +63,11 @@ Depois, arranca o hyprsunset ao iniciar sessão adicionando `o.launch_on_start("
 
 Mas nada se perde. As notificações silenciadas ficam retidas: volta a mostrar as últimas no ecrã com `Super + Shift + Alt + ,`. Consulta [avisos](10-notices.md) para o resto.
 
-Dois tipos de mensagens continuam a passar: os avisos de confirmação do próprio Omarchy relativos a algo que acabaste de fazer ("Theme changed", "Screenshot saved"), e os alertas críticos enviados a partir da linha de comandos. As aplicações de conversa que marcam tudo como crítico para se imporem à tua frente não contam.
+Dois tipos de mensagens continuam a passar: os avisos de confirmação do próprio Ve OS relativos a algo que acabaste de fazer ("Theme changed", "Screenshot saved"), e os alertas críticos enviados a partir da linha de comandos. As aplicações de conversa que marcam tudo como crítico para se imporem à tua frente não contam.
 
 ### Inatividade
 
-A shell do Omarchy é responsável pelo comportamento em inatividade, e as temporizações são um bloco `idle` de nível superior em `~/.config/omarchy/shell.json`:
+A shell do Ve OS é responsável pelo comportamento em inatividade, e as temporizações são um bloco `idle` de nível superior em `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Isto diz respeito ao bloqueio e à proteção de ecrã, não à energia. A suspe
 
 ### A proteção de ecrã
 
-A proteção de ecrã do Omarchy é arte ASCII a passar por efeitos de texto aleatórios, uma instância por monitor. Qualquer tecla ou movimento do rato faz sair dela.
+A proteção de ecrã do Ve OS é arte ASCII a passar por efeitos de texto aleatórios, uma instância por monitor. Qualquer tecla ou movimento do rato faz sair dela.
 
 Podes arrancá-la a pedido a partir de _System > Screensaver_ (`Super + Esc`), o que a força a aparecer mesmo que tenhas desligado a proteção de ecrã por inatividade. Por predefinição, não há nenhuma tecla de atalho associada a ela.
 
 É `omarchy toggle screensaver` que desliga a de inatividade, se preferires passar diretamente do trabalho para o bloqueio. Qualquer tecla, clique, deslocamento ou movimento do rato fecha-a.
 
-O logótipo que desenha pode ser alterado por ti, em _Appearance > Branding > Screensaver_. Carrega um png ou svg e o Omarchy converte-o para ASCII. Consulta [identidade visual](41-branding.md).
+O logótipo que desenha pode ser alterado por ti, em _Appearance > Branding > Screensaver_. Carrega um png ou svg e o Ve OS converte-o para ASCII. Consulta [identidade visual](41-branding.md).
 
 ### O ecrã de bloqueio
 
-`Super + Ctrl + L` bloqueia a máquina. Isso corre o ecrã de bloqueio da shell do Omarchy, apaga o ecrã, repõe a disposição do teclado na primeira para não estares a escrever a tua palavra-passe no alfabeto errado e — se o tiveres a correr — bloqueia o 1Password à saída.
+`Super + Ctrl + L` bloqueia a máquina. Isso corre o ecrã de bloqueio da shell do Ve OS, apaga o ecrã, repõe a disposição do teclado na primeira para não estares a escrever a tua palavra-passe no alfabeto errado e — se o tiveres a correr — bloqueia o 1Password à saída.
 
 O ecrã de bloqueio aceita uma palavra-passe, e também aceita uma impressão digital assim que tiveres configurado uma. Isso, e as outras formas de autenticação, estão tratados em [autenticação por hardware](37-hardware-authentication.md).

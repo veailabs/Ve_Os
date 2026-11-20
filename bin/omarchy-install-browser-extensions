@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Install Omarchy's bundled extensions in a Chromium-based browser, or check they are current
+# omarchy:summary=Install Ve OS's bundled extensions in a Chromium-based browser, or check they are current
 # omarchy:args=[--check] <chromium|chrome|brave|brave-origin|edge>
 # omarchy:examples=omarchy install browser extensions chromium | omarchy install browser extensions --check chrome
 # omarchy:requires-sudo=true

@@ -104,7 +104,7 @@ first_menu_kernel() {
 # boot menu would change nothing that boots. Read as omarchy-boot-direct does,
 # from efibootmgr directly, since root runs on a PATH without omarchy-*.
 direct_boot_active() {
-  efibootmgr 2>/dev/null | cut -f1 | grep -Eq '^Boot[0-9A-Fa-f]+\*[[:space:]]+Omarchy[[:space:]]*$'
+  efibootmgr 2>/dev/null | cut -f1 | grep -Eq '^Boot[0-9A-Fa-f]+\*[[:space:]]+(Omarchy|Ve OS)[[:space:]]*$'
 }
 
 # Rebuilding one kernel rewrites limine.conf in BOOT_ORDER order, which

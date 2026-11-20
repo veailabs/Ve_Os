@@ -41,7 +41,7 @@ Disse bindinger findes kun, mens Omasnap er åben, så de kan ikke kollidere med
 
 ## Skærmoptagelse
 
-`Alt + Print Screen` åbner _Trigger > Capture > Screenrecord_, som spørger, hvad du vil have på lydsporet: ingen lyd, skrivebordslyd, skrivebord plus mikrofon eller skrivebord plus mikrofon plus webcam. Den sidste mulighed vises kun, hvis du rent faktisk har et kamera tilsluttet. Vælg én, og Omarchys optagelsesvælger lader dig trække et område eller klikke på et vindue eller en skærm.
+`Alt + Print Screen` åbner _Trigger > Capture > Screenrecord_, som spørger, hvad du vil have på lydsporet: ingen lyd, skrivebordslyd, skrivebord plus mikrofon eller skrivebord plus mikrofon plus webcam. Den sidste mulighed vises kun, hvis du rent faktisk har et kamera tilsluttet. Vælg én, og Ve OSs optagelsesvælger lader dig trække et område eller klikke på et vindue eller en skærm.
 
 Optagelsen kører på gpu-screen-recorder, som encoder på GPU'en ved 60fps og falder tilbage til CPU'en, hvis den er nødt til det. Resultatet er en MP4 i `~/Videos` med navnet `screenrecording-2026-08-13_14-22-05.mp4`. Sæt `OMARCHY_SCREENRECORD_DIR` for at ændre det — men bemærk, at i modsætning til biblioteket til skærmbilleder skal dette bibliotek allerede findes, ellers nægter optagelsen at starte.
 

@@ -1,10 +1,10 @@
 # Brytere, inaktivitet og skjermspareren
 
-Mye av det du endrer fra dag til dag, er egentlig ikke en innstilling. Det er en modus du slår på i en time og av igjen: nattlys mens du jobber sent, ikke forstyrr mens du presenterer, hold våken mens du ser på noe. Omarchy kaller dem brytere, og de fungerer alle på samme måte — en hurtigtast, et menyelement og en kommando, som alle treffer samme bryter.
+Mye av det du endrer fra dag til dag, er egentlig ikke en innstilling. Det er en modus du slår på i en time og av igjen: nattlys mens du jobber sent, ikke forstyrr mens du presenterer, hold våken mens du ser på noe. Ve OS kaller dem brytere, og de fungerer alle på samme måte — en hurtigtast, et menyelement og en kommando, som alle treffer samme bryter.
 
 ### Brytermenyen
 
-`Super + Ctrl + O` åpner _Trigger > Toggle_ direkte, eller du kan gå dit fra Omarchy-menyen (`Super + Space`). Alt i den listen er en bryter du kan vippe uten å tenke på hvor tilstanden bor. Brytere for hvordan skrivebordet ser ut, sitter ved siden av, under _Appearance_.
+`Super + Ctrl + O` åpner _Trigger > Toggle_ direkte, eller du kan gå dit fra Ve OS-menyen (`Super + Space`). Alt i den listen er en bryter du kan vippe uten å tenke på hvor tilstanden bor. Brytere for hvordan skrivebordet ser ut, sitter ved siden av, under _Appearance_.
 
 Fra terminalen er de samme bryterne `omarchy toggle <thing>`. Kjør `omarchy toggle` alene for å se hele gruppen.
 
@@ -26,7 +26,7 @@ Bryterne for styreplate, berøringsskjerm og hybrid GPU bor under _Trigger > Har
 
 _Appearance_ rommer menylinjen og animasjoner, pluss noen få ting som ikke er `omarchy toggle`-kommandoer, men oppfører seg likt: batteriprosent i linjen, standardoppsettet for arbeidsområder, og under _Windows_, mellomrom mellom vinduer (`Super + Shift + Backspace`) og det kvadratiske sideforholdet med 1 vindu (`Super + Ctrl + Backspace`).
 
-Når Hyprland ikke har noen GPU å tegne med og gjengir på CPU-en i stedet (llvmpipe), som på Mac-er der GPU-en ikke er støttet ennå, i de fleste virtuelle maskiner, eller når en grafikkdriver ikke laster, slår Omarchy av animasjoner, uskarphet og skygger for den økten og forteller deg det én gang med et varsel. _Appearance > Animations On_ bringer dem tilbake, og Omarchy husker det også for senere økter.
+Når Hyprland ikke har noen GPU å tegne med og gjengir på CPU-en i stedet (llvmpipe), som på Mac-er der GPU-en ikke er støttet ennå, i de fleste virtuelle maskiner, eller når en grafikkdriver ikke laster, slår Ve OS av animasjoner, uskarphet og skygger for den økten og forteller deg det én gang med et varsel. _Appearance > Animations On_ bringer dem tilbake, og Ve OS husker det også for senere økter.
 
 De fleste av disse er bare en flaggfil under `~/.local/state/omarchy/toggles/`. Hvis du vil forgrene på en av dem i et skript, gir `omarchy-toggle-enabled` deg en avslutningskode i stedet for å få deg til å lete:
 
@@ -63,11 +63,11 @@ Start deretter hyprsunset ved innlogging ved å legge til `o.launch_on_start("hy
 
 Ingenting går tapt, da. Dempede varsler holdes tilbake: legg de siste få tilbake på skjermen med `Super + Shift + Alt + ,`. Se [varsler](10-notices.md) for resten.
 
-To typer meldinger slipper fortsatt gjennom: Omarchys egne bekreftelsesvarsler for noe du nettopp gjorde ("Theme changed", "Screenshot saved"), og kritiske varsler sendt fra kommandolinjen. Chat-apper som merker alt som kritisk for å tvinge seg foran deg, kvalifiserer ikke.
+To typer meldinger slipper fortsatt gjennom: Ve OSs egne bekreftelsesvarsler for noe du nettopp gjorde ("Theme changed", "Screenshot saved"), og kritiske varsler sendt fra kommandolinjen. Chat-apper som merker alt som kritisk for å tvinge seg foran deg, kvalifiserer ikke.
 
 ### Inaktivitet
 
-Omarchy-skallet eier atferden ved inaktivitet, og tidene er en `idle`-blokk på øverste nivå i `~/.config/omarchy/shell.json`:
+Ve OS-skallet eier atferden ved inaktivitet, og tidene er en `idle`-blokk på øverste nivå i `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Dette handler om låsing og skjermspareren, ikke strøm. Hvilemodus og dvalemodu
 
 ### Skjermspareren
 
-Omarchys skjermsparer er ASCII-kunst som kjører gjennom tilfeldige teksteffekter, én instans per skjerm. Enhver tast eller musebevegelse avslutter den.
+Ve OSs skjermsparer er ASCII-kunst som kjører gjennom tilfeldige teksteffekter, én instans per skjerm. Enhver tast eller musebevegelse avslutter den.
 
 Du kan starte den på forespørsel fra _System > Screensaver_ (`Super + Esc`), som tvinger den opp selv om du har slått av skjermspareren ved inaktivitet. Det er ingen hurtigtast bundet til den som standard.
 
 `omarchy toggle screensaver` er det som slår av den ved inaktivitet, hvis du heller vil gå rett fra arbeid til låst. Enhver tast, klikk, rulling eller musebevegelse lukker den.
 
-Logoen den tegner, er din å endre, under _Appearance > Branding > Screensaver_. Last opp en png eller svg, og Omarchy konverterer den til ASCII. Se [merkevarebygging](41-branding.md).
+Logoen den tegner, er din å endre, under _Appearance > Branding > Screensaver_. Last opp en png eller svg, og Ve OS konverterer den til ASCII. Se [merkevarebygging](41-branding.md).
 
 ### Låseskjermen
 
-`Super + Ctrl + L` låser maskinen. Det kjører låseskjermen fra Omarchy-skallet, gjør skjermen tom, tilbakestiller tastaturoppsettet ditt til det første, så du ikke skriver passordet ditt i feil alfabet, og — hvis du har den kjørende — låser 1Password på vei ut.
+`Super + Ctrl + L` låser maskinen. Det kjører låseskjermen fra Ve OS-skallet, gjør skjermen tom, tilbakestiller tastaturoppsettet ditt til det første, så du ikke skriver passordet ditt i feil alfabet, og — hvis du har den kjørende — låser 1Password på vei ut.
 
 Låseskjermen tar et passord, og den tar også et fingeravtrykk når du har satt opp ett. Det, og de andre måtene å autentisere på, dekkes i [maskinvareautentisering](37-hardware-authentication.md).

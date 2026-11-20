@@ -1,10 +1,10 @@
 # Perjungikliai, neveiklumas ir ekrano užsklanda
 
-Daugelis dalykų, kuriuos kasdien keičiate, iš tikrųjų nėra nustatymas. Tai režimas, kurį valandai įjungiate ir vėl išjungiate: naktinė šviesa, kai dirbate vėlai, netrukdymo režimas, kai pristatote, budėjimas, kai ką nors žiūrite. Omarchy juos vadina perjungikliais, ir jie visi veikia vienodai — spartusis klavišas, meniu įrašas ir komanda, visi pasiekiantys tą patį jungiklį.
+Daugelis dalykų, kuriuos kasdien keičiate, iš tikrųjų nėra nustatymas. Tai režimas, kurį valandai įjungiate ir vėl išjungiate: naktinė šviesa, kai dirbate vėlai, netrukdymo režimas, kai pristatote, budėjimas, kai ką nors žiūrite. Ve OS juos vadina perjungikliais, ir jie visi veikia vienodai — spartusis klavišas, meniu įrašas ir komanda, visi pasiekiantys tą patį jungiklį.
 
 ### Perjungiklių meniu
 
-`Super + Ctrl + O` tiesiogiai atveria _Trigger > Toggle_, arba galite ten nueiti iš Omarchy meniu (`Super + Space`). Viskas tame sąraše yra jungiklis, kurį galite perjungti negalvodami, kur saugoma jo būsena. Jungikliai, skirti darbalaukio išvaizdai, yra šalia, skiltyje _Appearance_.
+`Super + Ctrl + O` tiesiogiai atveria _Trigger > Toggle_, arba galite ten nueiti iš Ve OS meniu (`Super + Space`). Viskas tame sąraše yra jungiklis, kurį galite perjungti negalvodami, kur saugoma jo būsena. Jungikliai, skirti darbalaukio išvaizdai, yra šalia, skiltyje _Appearance_.
 
 Iš terminalo tie patys jungikliai pasiekiami kaip `omarchy toggle <thing>`. Paleiskite `omarchy toggle` vieną, kad pamatytumėte visą grupę.
 
@@ -26,7 +26,7 @@ Jutiklinio kilimėlio, jutiklinio ekrano ir hibridinio GPU jungikliai yra skilty
 
 _Appearance_ skiltyje yra meniu juosta ir animacijos, taip pat keli dalykai, kurie nėra `omarchy toggle` komandos, bet elgiasi taip pat: akumuliatoriaus įkrovos procentai juostoje, numatytasis darbo sričių išdėstymas ir skiltyje _Windows_ — langų tarpai (`Super + Shift + Backspace`) bei 1 lango kvadratinis kraštinių santykis (`Super + Ctrl + Backspace`).
 
-Kai Hyprland neturi GPU, su kuriuo galėtų piešti, ir vietoj to vaizdą atkuria naudodamas CPU (llvmpipe), kaip Mac kompiuteriuose, kurių GPU dar nepalaikomas, daugumoje virtualių mašinų arba kai nepavyksta įkelti grafikos tvarkyklės, Omarchy tai sesijai išjungia animacijas, suliejimą ir šešėlius ir vieną kartą apie tai praneša pranešimu. _Appearance > Animations On_ juos sugrąžina, ir Omarchy tai prisimena ir vėlesnėms sesijoms.
+Kai Hyprland neturi GPU, su kuriuo galėtų piešti, ir vietoj to vaizdą atkuria naudodamas CPU (llvmpipe), kaip Mac kompiuteriuose, kurių GPU dar nepalaikomas, daugumoje virtualių mašinų arba kai nepavyksta įkelti grafikos tvarkyklės, Ve OS tai sesijai išjungia animacijas, suliejimą ir šešėlius ir vieną kartą apie tai praneša pranešimu. _Appearance > Animations On_ juos sugrąžina, ir Ve OS tai prisimena ir vėlesnėms sesijoms.
 
 Dauguma jų tėra žymos failas kataloge `~/.local/state/omarchy/toggles/`. Jei scenarijuje norite pagal jį šakotis, `omarchy-toggle-enabled` pateikia išėjimo kodą, užuot vertęs jus jo ieškoti:
 
@@ -63,11 +63,11 @@ Tada paleiskite hyprsunset prisijungdami, pridėdami `o.launch_on_start("hyprsun
 
 Tačiau niekas nedingsta. Nutildyti pranešimai sulaikomi: paskutinius kelis vėl parodykite ekrane paspaudę `Super + Shift + Alt + ,`. Daugiau žr. [pranešimuose](10-notices.md).
 
-Dviejų rūšių pranešimai vis tiek prasiskverbia: patys Omarchy patvirtinimo pranešimai apie tai, ką ką tik padarėte ("Theme changed", "Screenshot saved"), ir kritiniai įspėjimai, siųsti iš komandinės eilutės. Pokalbių programos, kurios viską žymi kaip kritinius pranešimus, kad priverstinai atsidurtų priešais jus, neatitinka kriterijų.
+Dviejų rūšių pranešimai vis tiek prasiskverbia: patys Ve OS patvirtinimo pranešimai apie tai, ką ką tik padarėte ("Theme changed", "Screenshot saved"), ir kritiniai įspėjimai, siųsti iš komandinės eilutės. Pokalbių programos, kurios viską žymi kaip kritinius pranešimus, kad priverstinai atsidurtų priešais jus, neatitinka kriterijų.
 
 ### Neveiklumas
 
-Neveiklumo elgseną valdo Omarchy apvalkalas, o laikai nurodyti aukščiausio lygio `idle` bloke faile `~/.config/omarchy/shell.json`:
+Neveiklumo elgseną valdo Ve OS apvalkalas, o laikai nurodyti aukščiausio lygio `idle` bloke faile `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Tai susiję su užrakinimu ir ekrano užsklanda, o ne su maitinimu. Pristabdymas
 
 ### Ekrano užsklanda
 
-Omarchy ekrano užsklanda yra ASCII menas, leidžiamas per atsitiktinius teksto efektus, po vieną egzempliorių kiekvienam monitoriui. Bet koks klavišas ar pelės judesys ją uždaro.
+Ve OS ekrano užsklanda yra ASCII menas, leidžiamas per atsitiktinius teksto efektus, po vieną egzempliorių kiekvienam monitoriui. Bet koks klavišas ar pelės judesys ją uždaro.
 
 Ją galite paleisti pagal poreikį iš _System > Screensaver_ (`Super + Esc`) — tai priverstinai ją parodo, net jei neveiklumo ekrano užsklandą išjungėte. Pagal numatytuosius nustatymus jai nepriskirtas joks spartusis klavišas.
 
 `omarchy toggle screensaver` išjungia neveiklumo ekrano užsklandą, jei verčiau norite iš karto nuo darbo pereiti prie užrakinto ekrano. Bet koks klavišas, spustelėjimas, slinkimas ar pelės judesys ją uždaro.
 
-Jos piešiamą logotipą galite keisti skiltyje _Appearance > Branding > Screensaver_. Įkelkite png arba svg ir Omarchy jį konvertuos į ASCII. Žr. [firminį stilių](41-branding.md).
+Jos piešiamą logotipą galite keisti skiltyje _Appearance > Branding > Screensaver_. Įkelkite png arba svg ir Ve OS jį konvertuos į ASCII. Žr. [firminį stilių](41-branding.md).
 
 ### Užrakinimo ekranas
 
-`Super + Ctrl + L` užrakina kompiuterį. Tai paleidžia užrakinimo ekraną iš Omarchy apvalkalo, užtemdo ekraną, atstato klaviatūros išdėstymą į pirmąjį, kad nerašytumėte slaptažodžio netinkama abėcėle, ir — jei ją turite veikiančią — išeidamas užrakina 1Password.
+`Super + Ctrl + L` užrakina kompiuterį. Tai paleidžia užrakinimo ekraną iš Ve OS apvalkalo, užtemdo ekraną, atstato klaviatūros išdėstymą į pirmąjį, kad nerašytumėte slaptažodžio netinkama abėcėle, ir — jei ją turite veikiančią — išeidamas užrakina 1Password.
 
 Užrakinimo ekranas priima slaptažodį, o kai jį nustatysite, priims ir piršto atspaudą. Tai ir kiti autentifikavimo būdai aprašyti skyriuje [aparatinis autentifikavimas](37-hardware-authentication.md).

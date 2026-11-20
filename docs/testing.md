@@ -171,6 +171,7 @@ A test whose fixtures are dated today calls `freeze_today()` (and stamps rows wi
 
 ## Conventions worth copying
 
+- The remote-session fixture forwards real `hyprctl` calls through a test-only namespace for its capture owners and window rule. The installed desktop also observes its stub `gliff-server` and screencast events; sharing production names would make the two services race. Ownership, replacement and cleanup assertions still exercise the real service and compositor.
 - **Redirect background output.** Send background fixtures' stdout to a log or `/dev/null` and clean up the processes on exit. An inherited output pipe can hold the runner open after the test exits.
 - **Stub the world, run the real code.** Tests build a scratch `bin/` of stub
   executables (`sudo`, `tmux`, `gsettings`, helper commands) that log their

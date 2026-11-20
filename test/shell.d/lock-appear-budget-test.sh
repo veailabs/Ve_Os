@@ -12,6 +12,7 @@
 set -euo pipefail
 
 source "$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)/base-test.sh"
+source "$ROOT/test/fixtures/startup-pair.sh"
 
 require_quickshell "lock appear budget"
 require_comparable_speed "lock appear budget"
@@ -64,8 +65,7 @@ wait_scratch_quiet() {
 # The view build and the first appearance happen once per shell start, so
 # each of their samples is a cold start; the reappearances are timed on the
 # last shell.
-ready_best=""
-answer_best=""
+startup_samples=()
 first_best=""
 reopen_best=""
 for round in 1 2 3; do
@@ -75,7 +75,6 @@ for round in 1 2 3; do
   wait_scratch_shell
   end=$EPOCHREALTIME
   answer_ms=$(( (${end/[.,]/} - ${launch_start/[.,]/}) / 1000 ))
-  if [[ -z $answer_best ]] || (( answer_ms < answer_best )); then answer_best=$answer_ms; fi
 
   # The lock handler answers once its service is registered, which is
   # after the service's LockView has been built: this measurement
@@ -91,7 +90,7 @@ for round in 1 2 3; do
     sleep 0.1
   done
   [[ -n $ready_ms ]] || { sed -n '1,120p' "$SCRATCH_LOG" >&2; fail "lock service becomes available"; }
-  if [[ -z $ready_best ]] || (( ready_ms < ready_best )); then ready_best=$ready_ms; fi
+  startup_samples+=("$answer_ms" "$ready_ms")
 
   wait_scratch_quiet
   elapsed=$(appear_ms) || { sed -n '1,120p' "$SCRATCH_LOG" >&2; fail "lock preview appears and hides cleanly"; }
@@ -112,8 +111,10 @@ pass "lock preview never engages the session lock"
 # the lock answers once the plugin services are built after that, both QML
 # work on the same thread. Process starts do not scale like it: an Intel VM
 # starts them a third faster than an AMD one and builds the shell no faster.
+startup_pair=$(best_startup_pair "${startup_samples[@]}") || fail "cold startup timings are valid"
+read -r answer_best ready_best <<<"$startup_pair"
 READY_BUDGET_MS=$(( answer_best * ${OMARCHY_LOCK_READY_BUDGET_PERCENT:-400} / 100 ))
-(( ready_best <= READY_BUDGET_MS )) || fail "lock view is built within ${READY_BUDGET_MS}ms of shell start" "Fastest of three starts answered after ${ready_best}ms; the shell itself answered after ${answer_best}ms."
+(( ready_best <= READY_BUDGET_MS )) || fail "lock view is built within ${READY_BUDGET_MS}ms of shell start" "Best normalized cold start answered after ${ready_best}ms; its shell answered after ${answer_best}ms."
 pass "lock view is built within ${READY_BUDGET_MS}ms of shell start (${ready_best}ms; the shell answered after ${answer_best}ms)"
 (( first_best <= BUDGET_MS )) || fail "lock screen first appears within ${BUDGET_MS}ms" "Fastest of three first appearances took ${first_best}ms."
 pass "lock screen first appears within ${BUDGET_MS}ms (${first_best}ms)"

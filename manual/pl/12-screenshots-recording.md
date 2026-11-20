@@ -41,7 +41,7 @@ Te skróty istnieją tylko, gdy Omasnap jest otwarty, więc nie mogą kolidować
 
 ## Nagrywanie ekranu
 
-`Alt + Print Screen` otwiera _Trigger > Capture > Screenrecord_, który pyta, co chcesz mieć na ścieżce dźwiękowej: brak dźwięku, dźwięk pulpitu, dźwięk pulpitu plus mikrofon albo dźwięk pulpitu plus mikrofon plus kamerę internetową. Ta ostatnia opcja pojawia się tylko, jeśli faktycznie masz podłączoną kamerę. Wybierz jedną, a selektor nagrywania Omarchy pozwoli ci przeciągnąć region albo kliknąć okno lub monitor.
+`Alt + Print Screen` otwiera _Trigger > Capture > Screenrecord_, który pyta, co chcesz mieć na ścieżce dźwiękowej: brak dźwięku, dźwięk pulpitu, dźwięk pulpitu plus mikrofon albo dźwięk pulpitu plus mikrofon plus kamerę internetową. Ta ostatnia opcja pojawia się tylko, jeśli faktycznie masz podłączoną kamerę. Wybierz jedną, a selektor nagrywania Ve OS pozwoli ci przeciągnąć region albo kliknąć okno lub monitor.
 
 Nagrywanie działa na gpu-screen-recorder, który koduje na GPU przy 60fps i w razie potrzeby przechodzi na CPU. Efekt to plik MP4 w `~/Videos`, o nazwie `screenrecording-2026-08-13_14-22-05.mp4`. Ustaw `OMARCHY_SCREENRECORD_DIR`, aby to zmienić — ale pamiętaj, że w przeciwieństwie do katalogu zrzutów ekranu ten musi już istnieć, inaczej nagrywanie odmówi rozpoczęcia.
 

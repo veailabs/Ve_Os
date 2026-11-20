@@ -1,6 +1,6 @@
 # Kabuk Araçları
 
-Standart Linux araçlarına ek olarak Omarchy, bir sürü geliştirilmiş kabuk aracıyla da birlikte gelir. İşte temel olanlar.
+Standart Linux araçlarına ek olarak Ve OS, bir sürü geliştirilmiş kabuk aracıyla da birlikte gelir. İşte temel olanlar.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Tam kılavuzu `man yt-dlp` ile bulabilirsiniz.
 
 [try](https://github.com/tobi/try), programlama deneylerini tarih damgalı dizinlerle yönetmeyi kolaylaştırır. Tüm deneyler `~/Work/tries` içinde yaşar ve onlara `try` aracılığıyla erişebilirsiniz.
 
-Omarchy, bir projenin `bin/` dizinini `PATH`'e otomatik olarak eklemez. Güvenilir proje-yerel araçları, `bin/rails` veya `./bin/dev` gibi açık bir göreli yolla çalıştırın.
+Ve OS, bir projenin `bin/` dizinini `PATH`'e otomatik olarak eklemez. Güvenilir proje-yerel araçları, `bin/rails` veya `./bin/dev` gibi açık bir göreli yolla çalıştırın.

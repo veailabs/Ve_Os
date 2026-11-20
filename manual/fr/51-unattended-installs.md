@@ -1,4 +1,6 @@
-# Installations sans surveillance
+# Ve OS — Installations sans surveillance
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 L'ISO d'Omarchy peut s'installer toute seule, sans personne au clavier. Si le programme d'installation trouve un second lecteur étiqueté `cidata` contenant ses fichiers de configuration, il les copie, saute entièrement l'assistant de configuration et redémarre de lui-même dans le système terminé. Aucune ISO spéciale à construire, aucune entrée supplémentaire dans le menu de démarrage — sans un tel lecteur connecté, rien ne change et vous obtenez l'assistant normal.
 

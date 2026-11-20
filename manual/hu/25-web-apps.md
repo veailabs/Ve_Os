@@ -1,10 +1,10 @@
 # Webes alkalmazások
 
-Saját webes alkalmazásokat adhatsz hozzá az Omarchy menüben (`Super + Space`) az _Install > Web App_ menüponttal. Meg kell adnod az alkalmazás nevét, az alkalmazás URL-jét és az ikon URL-jét, ha nem tudja lekérni a favicon alapján. Számos népszerű webes alkalmazáshoz találsz kiváló PNG-ikonokat a [Dashboard Icons](https://dashboardicons.com) oldalon.
+Saját webes alkalmazásokat adhatsz hozzá az Ve OS menüben (`Super + Space`) az _Install > Web App_ menüponttal. Meg kell adnod az alkalmazás nevét, az alkalmazás URL-jét és az ikon URL-jét, ha nem tudja lekérni a favicon alapján. Számos népszerű webes alkalmazáshoz találsz kiváló PNG-ikonokat a [Dashboard Icons](https://dashboardicons.com) oldalon.
 
 Ezután az alkalmazásindítón (`Super + Space`) keresztül érheted el őket, és a gyönyörű, keret nélküli webalkalmazás-ablakot használják.
 
-Ha el szeretnél távolítani egy webes alkalmazást, egyszerűen lépj az Omarchy menü _Remove > Web App_ menüpontjára.
+Ha el szeretnél távolítani egy webes alkalmazást, egyszerűen lépj az Ve OS menü _Remove > Web App_ menüpontjára.
 
 A legjobb, ha a webalkalmazás-parancsikonok használata előtt egy hagyományos böngészőben jelentkezel be az összes fiókodba. A vékony keretalkalmazás nem működik jól a 1password szolgáltatással, ezért egyszerűbb, ha előbb közvetlenül bejelentkezel.
 
@@ -12,7 +12,7 @@ Ezeknek a webes alkalmazásoknak az összes billentyűparancsa módosítható a 
 
 Amikor egy webes alkalmazásban vagy, a `Shift + Alt + L` billentyűkombinációval a vágólapra másolhatod az aktuális URL-t.
 
-Az Omarchy alapértelmezetten már számos alapértelmezett alkalmazással érkezik:
+Az Ve OS alapértelmezetten már számos alapértelmezett alkalmazással érkezik:
 
 ## HEY
 
@@ -64,7 +64,7 @@ A YouTube-ot a `Super + Shift + Y` billentyűkombinációval indíthatod el.
 
 ## Zoom
 
-A [Zoom](https://zoom.us/) a legnépszerűbb videóchat-rendszer az Egyesült Államokban. Kiváló kapcsolatok világszerte. És 40 perces megbeszélések fizetős fiók nélkül is tarthatók. Az Omarchy a Zoom webes kliensét csomagolja, és a Zoom-megbeszélésekre mutató hivatkozások közvetlenül abban nyílnak meg.
+A [Zoom](https://zoom.us/) a legnépszerűbb videóchat-rendszer az Egyesült Államokban. Kiváló kapcsolatok világszerte. És 40 perces megbeszélések fizetős fiók nélkül is tarthatók. Az Ve OS a Zoom webes kliensét csomagolja, és a Zoom-megbeszélésekre mutató hivatkozások közvetlenül abban nyílnak meg.
 
 A Zoomot az alkalmazásindítóval (`Super + Space`) indíthatod el.
 
@@ -76,7 +76,7 @@ A Discordot az alkalmazásindítóval (`Super + Space`) indíthatod el.
 
 ## Microsoft-alkalmazások
 
-Válaszd az _Install > Service > Microsoft_ menüpontot az Outlook, a Word, az Excel, a PowerPoint, a Teams és a OneDrive webes alkalmazásként való hozzáadásához. Minden alkalmazásnak saját indítója van, és közvetlenül megnyílik, a kereskedelmi Microsoft 365 URL-eket és a meglévő böngészőprofilodat használva. Ugyanazokban a böngészőalkalmazás-ablakokban nyílnak meg, mint az Omarchy többi webes alkalmazása; nem telepítik a külön Teams for Linux klienst.
+Válaszd az _Install > Service > Microsoft_ menüpontot az Outlook, a Word, az Excel, a PowerPoint, a Teams és a OneDrive webes alkalmazásként való hozzáadásához. Minden alkalmazásnak saját indítója van, és közvetlenül megnyílik, a kereskedelmi Microsoft 365 URL-eket és a meglévő böngészőprofilodat használva. Ugyanazokban a böngészőalkalmazás-ablakokban nyílnak meg, mint az Ve OS többi webes alkalmazása; nem telepítik a külön Teams for Linux klienst.
 
 Távolítsd el a csomagot a _Remove > Service > Microsoft_ menüponttal, vagy távolíts el egyes alkalmazásokat a _Remove > Web App_ menüponttal. Csak a kívánt alkalmazásokat is telepítheted az _Install > Web App_ menüponttal.
 
@@ -88,4 +88,4 @@ A munkahelyi bejelentkezések elkülönítéséhez fűzz hozzá egy böngészőa
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Cseréld le a példakönyvtárat egy általad választott abszolút elérési útra, és használd ugyanazt az elérési utat mind a hat indítóhoz, hogy megoszd közöttük a munkahelyi bejelentkezéseket. A webes alkalmazások az Omarchy által kiválasztott támogatott böngészőt használják, és a Chrome-ot használják tartalékként, ha az alapértelmezett böngésző nem támogatott.
+Cseréld le a példakönyvtárat egy általad választott abszolút elérési útra, és használd ugyanazt az elérési utat mind a hat indítóhoz, hogy megoszd közöttük a munkahelyi bejelentkezéseket. A webes alkalmazások az Ve OS által kiválasztott támogatott böngészőt használják, és a Chrome-ot használják tartalékként, ha az alapértelmezett böngésző nem támogatott.

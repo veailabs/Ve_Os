@@ -1,4 +1,6 @@
-# Instal·lacions desateses
+# Ve OS — Instal·lacions desateses
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 La ISO d'Omarchy es pot instal·lar tota sola, sense ningú al teclat. Si l'instal·lador troba una segona unitat amb l'etiqueta `cidata` que contingui els seus fitxers de configuració, els copia, se salta completament l'assistent de configuració i es reinicia tot sol en el sistema acabat. Cap compilació especial de la ISO, cap entrada addicional al menú d'arrencada: sense una unitat així connectada, res no canvia i obtens l'assistent normal.
 

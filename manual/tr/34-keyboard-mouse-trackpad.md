@@ -1,6 +1,6 @@
 # Klavye, Fare, Dokunmatik Yüzey
 
-Hyprland, tüm girdilerinizi ayrıntılı biçimde yapılandırmanızı sağlar. Klavye yinelemesini süpersonik derecede hızlı yapabilir ya da dokunmatik yüzeyin doğal kaydırmayı kullanmasını sağlayabilirsiniz. Bunların tamamını `~/.config/hypr/input.lua` içinde değiştirirsiniz; buraya Omarchy menüsündeki (`Super + Space`) _Setup > Input_ üzerinden de ulaşabilirsiniz. Buraya yazdığınız her şey Omarchy varsayılanlarının yerini alır.
+Hyprland, tüm girdilerinizi ayrıntılı biçimde yapılandırmanızı sağlar. Klavye yinelemesini süpersonik derecede hızlı yapabilir ya da dokunmatik yüzeyin doğal kaydırmayı kullanmasını sağlayabilirsiniz. Bunların tamamını `~/.config/hypr/input.lua` içinde değiştirirsiniz; buraya Ve OS menüsündeki (`Super + Space`) _Setup > Input_ üzerinden de ulaşabilirsiniz. Buraya yazdığınız her şey Ve OS varsayılanlarının yerini alır.
 
 İşte bir örnek:
 
@@ -59,7 +59,7 @@ Masaüstünde gezinmek için dokunmatik yüzeyde kaydırın:
 | --- | --- |
 | Three fingers left / right | Previous / next workspace, including empty ones |
 | Three fingers up | Toggle the AI console |
-| Three fingers down | Open the Omarchy menu |
+| Three fingers down | Open the Ve OS menu |
 | Four fingers left / right | Move the active window to the previous / next workspace |
 | Four fingers down | Toggle fullscreen |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Omarchy'nin tüm hareketlerini kapatmak için, Omarchy varsayılanları yüklenmeden önce, `~/.config/hypr/hyprland.lua` dosyasının üst kısmına yakın bir yerde `omarchy_default_gestures = false` ayarını yapın.
+Ve OS'nin tüm hareketlerini kapatmak için, Ve OS varsayılanları yüklenmeden önce, `~/.config/hypr/hyprland.lua` dosyasının üst kısmına yakın bir yerde `omarchy_default_gestures = false` ayarını yapın.
 
 Dokunsal dokunmatik yüzeye sahip Dell XPS dizüstü bilgisayarlarda, tıklama gücünü _Trigger > Hardware > Touchpad Haptics_ altında düşük, orta veya yüksek olarak da ayarlayabilirsiniz.
 
 ### Çince, Japonca ve diğer dillerde yazma
 
-Kurulum programı klavyenizi sorduğunda Japonca, Korece, Çince (Simplified, Pinyin), Taiwan (Zhuyin) veya Hong Kong (Cangjie) seçin. Omarchy, çevrimdışı ilk açılış kurulumu sırasında da dahil olmak üzere, klavyeyi ve eşleşen girdi motorunu otomatik olarak yapılandırır. Japonca Mozc kullanır, Korece standart iki kümeli Hangul kullanır, Basitleştirilmiş Çince Pinyin kullanır, Taiwan, Chewing'in standart Zhuyin düzenini kullanır ve Hong Kong, Hong Kong karakter biçimleriyle Cangjie kullanır. Japanese (US keyboard), US klavye düzenine sahip Mozc sağlar. Latin harflerini Dvorak, Colemak veya AZERTY ile yazdığınızda bile Hangul, Zhuyin ve Cangjie tuşları standart konumlarında kalır. Hangul veya Chewing'i bundan önce eklediyseniz, tuşlarını buraya taşımak için _Setup > Keyboard > Input Methods_ altında seçimini kaldırıp yeniden seçin; Omarchy, halihazırda yazdığınız bir motora dokunmaz.
+Kurulum programı klavyenizi sorduğunda Japonca, Korece, Çince (Simplified, Pinyin), Taiwan (Zhuyin) veya Hong Kong (Cangjie) seçin. Ve OS, çevrimdışı ilk açılış kurulumu sırasında da dahil olmak üzere, klavyeyi ve eşleşen girdi motorunu otomatik olarak yapılandırır. Japonca Mozc kullanır, Korece standart iki kümeli Hangul kullanır, Basitleştirilmiş Çince Pinyin kullanır, Taiwan, Chewing'in standart Zhuyin düzenini kullanır ve Hong Kong, Hong Kong karakter biçimleriyle Cangjie kullanır. Japanese (US keyboard), US klavye düzenine sahip Mozc sağlar. Latin harflerini Dvorak, Colemak veya AZERTY ile yazdığınızda bile Hangul, Zhuyin ve Cangjie tuşları standart konumlarında kalır. Hangul veya Chewing'i bundan önce eklediyseniz, tuşlarını buraya taşımak için _Setup > Keyboard > Input Methods_ altında seçimini kaldırıp yeniden seçin; Ve OS, halihazırda yazdığınız bir motora dokunmaz.
 
 Yazma işlemi Latin modunda başlar. Yapılandırılmış girdi yöntemleri arasında geçiş yapmak için `Super + I` tuşlarına, geri yönde geçiş yapmak için `Super + Shift + I` tuşlarına basın. Pinyin gibi bir girdi yönteminden Latin harflerine çıkmak için `Shift` tuşuna tek başına dokunun ve geri dönmek için tekrar dokunun; Sogou, Microsoft Pinyin ve macOS böyle çalışır; `Shift` artı bir harf yine büyük harf yazar. Japonca klavyelerde 全角/半角 girdiyi açıp kapatır, 変換 açar ve 無変換 kapatır. Korece ile 한/영 Hangul arasında geçiş yapar ve 한자 Hanja'ya dönüştürür; klavyenizde ister özel tuşlar bulunsun ister birçok dizüstü bilgisayarın yaptığı gibi bunlar için Right Alt ve Right Ctrl gönderilsin, bu böyledir; dolayısıyla Right Alt ve Right Ctrl orada düz değiştirici tuşlar değildir; dikte bunun yerine Alt + Space ile açılıp kapatılır. `Ctrl + Space`, Tmux ve Herdr için kullanılabilir durumda kalır; `Shift + CapsLock` compose tuşu olarak kalır.
 
 Birden fazla klavye düzeniniz veya girdi yönteminiz olduğunda klavye göstergesi çubuğun sağ tarafında görünür. Girdi dilleri arasında geçiş yapmak için tıklayın; Japonca, hiragana için あ gösterir. Japonca karakter seçimleri için Japonca'ya geçin, `nihongo` gibi bir sözcük yazın, ardından iki kez Space tuşuna basın. Seçiminizi kabul etmek için Enter tuşuna basın. Birden fazla klavye düzeniniz de varsa, bunlar arasında geçiş yapmak için göstergeye sağ tıklayın.
 
-English ve French gibi düzenleri, kurulum sırasında sunulan seçeneklerin aynısı arasından seçmek için _Setup > Keyboard > Keyboard Inputs_ yolunu kullanın. Hangi oluşturma motorlarının etkin olacağını seçmek için _Setup > Keyboard > Input Methods_ yolunu kullanın. Her iki seçici de Omarchy menüsünün içinde, mevcut seçimleriniz işaretli olarak açılır. Bir seçimi açıp kapatmak için tıklayın veya Enter tuşuna basın; her değişiklik hemen uygulanır. Bir girdi yönteminin seçimini kaldırmak, onu kaldırmadan döngüden çıkarır; klavye kullanılabilir durumda kalır.
+English ve French gibi düzenleri, kurulum sırasında sunulan seçeneklerin aynısı arasından seçmek için _Setup > Keyboard > Keyboard Inputs_ yolunu kullanın. Hangi oluşturma motorlarının etkin olacağını seçmek için _Setup > Keyboard > Input Methods_ yolunu kullanın. Her iki seçici de Ve OS menüsünün içinde, mevcut seçimleriniz işaretli olarak açılır. Bir seçimi açıp kapatmak için tıklayın veya Enter tuşuna basın; her değişiklik hemen uygulanır. Bir girdi yönteminin seçimini kaldırmak, onu kaldırmadan döngüden çıkarır; klavye kullanılabilir durumda kalır.
 
 Aynı seçicileri açmak için `omarchy setup keyboard` veya `omarchy setup input` komutunu çalıştırın. Komut satırından tek bir dil eklemek için `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` veya `cangjie5` kullanın. Quick, Boshiamy ve Array, Cangjie ile aynı pakette gelir ve Input Methods seçicisinde görünür. Özel geçiş tuşlarınız korunur. Alternatif motor düzenleri veya tuşları için, `omarchy pkg add fcitx5-configtool` ile `fcitx5-configtool` paketini kurun ve bir terminalden başlatın. Bir girdi dili seçmek masaüstü dilini değiştirmez. _Setup > Language_ altında Japonca, Korece veya Çince seçmek, henüz hiç yoksa onun girdi yöntemini ekler.
 

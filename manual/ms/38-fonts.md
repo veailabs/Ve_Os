@@ -1,12 +1,12 @@
 # Fon
 
-Omarchy menggunakan JetBrainsMono Nerd Font sebagai fon terminal dan fon sistem secara lalai.
+Ve OS menggunakan JetBrainsMono Nerd Font sebagai fon terminal dan fon sistem secara lalai.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Anda boleh menukarnya melalui menu _Penampilan > Fon_ dalam menu Omarchy (`Super + Space`). Itu menetapkan fon monospace di mana-mana sahaja: terminal, bar, dan apa-apa lagi yang memintanya.
+Anda boleh menukarnya melalui menu _Penampilan > Fon_ dalam menu Ve OS (`Super + Space`). Itu menetapkan fon monospace di mana-mana sahaja: terminal, bar, dan apa-apa lagi yang memintanya.
 
-Anda boleh memasang fon pengaturcaraan popular yang lain melalui _Pasang > Gaya > Fon_ dalam menu Omarchy: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, dan Iosevka semuanya hanya satu klik sahaja, dalam versi Nerd Font masing-masing supaya glif dalam bar dan terminal terus berfungsi. Selepas memasang salah satunya, pilih fon itu di bawah _Penampilan > Fon_.
+Anda boleh memasang fon pengaturcaraan popular yang lain melalui _Pasang > Gaya > Fon_ dalam menu Ve OS: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, dan Iosevka semuanya hanya satu klik sahaja, dalam versi Nerd Font masing-masing supaya glif dalam bar dan terminal terus berfungsi. Selepas memasang salah satunya, pilih fon itu di bawah _Penampilan > Fon_.
 
 ## Cina, Jepun, dan Korea
 

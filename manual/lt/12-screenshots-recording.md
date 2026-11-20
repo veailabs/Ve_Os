@@ -41,7 +41,7 @@ Kol parinkimas atidarytas, pelės jums išvis nereikia:
 
 ## Ekrano įrašymas
 
-`Alt + Print Screen` atidaro _Trigger > Capture > Screenrecord_, kuris paklausia, ko norite garso takelyje: jokio garso, darbalaukio garso, darbalaukio ir mikrofono arba darbalaukio, mikrofono ir vaizdo kameros. Tas paskutinis rodomas tik jei iš tikrųjų turite prijungtą kamerą. Pasirinkite vieną ir Omarchy įrašymo parinkiklis leis jums vilkti sritį arba spustelėti langą ar monitorių.
+`Alt + Print Screen` atidaro _Trigger > Capture > Screenrecord_, kuris paklausia, ko norite garso takelyje: jokio garso, darbalaukio garso, darbalaukio ir mikrofono arba darbalaukio, mikrofono ir vaizdo kameros. Tas paskutinis rodomas tik jei iš tikrųjų turite prijungtą kamerą. Pasirinkite vieną ir Ve OS įrašymo parinkiklis leis jums vilkti sritį arba spustelėti langą ar monitorių.
 
 Įrašymas veikia su gpu-screen-recorder, kuris koduoja GPU 60fps ir, jei turi, grįžta prie CPU. Rezultatas yra MP4 faile `~/Videos`, pavadintas `screenrecording-2026-08-13_14-22-05.mp4`. Nustatykite `OMARCHY_SCREENRECORD_DIR`, kad tai pakeistumėte — bet atkreipkite dėmesį, kad, skirtingai nei ekrano kopijų katalogas, šis turi jau egzistuoti, kitaip įrašymas atsisakys prasidėti.
 

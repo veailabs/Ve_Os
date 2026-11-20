@@ -10,7 +10,7 @@ Kadi hutoa kile zinachobeba: _Nakili msimbo_ kwa misimbo ya uthibitishaji (hutun
 
 Kuzitumia bila kipanya, bonyeza `Super + Ctrl + ,`. Arifa mpya zaidi huchaguliwa na vitufe vyake hupewa namba: bonyeza namba kutumia kimojawapo, `Enter` kubofya arifa, `↑` na `↓` kusogea kati ya arifa, `Delete` kuondoa moja, na `Esc` kurudisha kibodi. Pia huachilia yenyewe baada ya sekunde chache bila shughuli.
 
-Kunyamazisha arifa huzizuia, isipokuwa uthibitishaji wa Omarchy yenyewe, tahadhari za dharura, na misimbo ya uthibitishaji, ambayo uliiomba muda mfupi uliopita. Rudisha chache za mwisho kwenye skrini, ziwe zimezuiwa au la, kwa `Super + Shift + Alt + ,`. Historia huhifadhiwa kwa siku moja.
+Kunyamazisha arifa huzizuia, isipokuwa uthibitishaji wa Ve OS yenyewe, tahadhari za dharura, na misimbo ya uthibitishaji, ambayo uliiomba muda mfupi uliopita. Rudisha chache za mwisho kwenye skrini, ziwe zimezuiwa au la, kwa `Super + Shift + Alt + ,`. Historia huhifadhiwa kwa siku moja.
 
 ## Ilani za vitufe vya haraka
 

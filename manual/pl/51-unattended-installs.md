@@ -1,4 +1,6 @@
-# Instalacje nienadzorowane
+# Ve OS — Instalacje nienadzorowane
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Obraz ISO Omarchy może zainstalować się sam, bez nikogo przy klawiaturze. Jeśli instalator znajdzie drugi dysk o etykiecie `cidata` zawierający jego pliki konfiguracyjne, skopiuje je, całkowicie pominie kreator konfiguracji i samodzielnie zrestartuje się do gotowego systemu. Nie potrzeba żadnego specjalnego obrazu ISO ani dodatkowej pozycji w menu rozruchowym — bez takiego dysku nic się nie zmienia i dostajesz normalny kreator.
 

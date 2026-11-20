@@ -6,19 +6,19 @@
 
 ### Tại sao một số ứng dụng quá lớn trên màn hình của tôi?
 
-Omarchy giả định màn hình có độ phân giải cao 2x, nên nó đặt `GDK_SCALE` thành 2 cho đến khi bạn chọn tỷ lệ trong bảng điều khiển màn hình. Nếu bạn đang dùng màn hình 1x và các ứng dụng GTK hoặc X11 bị phóng quá lớn, hãy chọn 1x cho màn hình đó trong bảng điều khiển màn hình, hoặc thêm `hl.env("GDK_SCALE", "1")` vào `~/.config/hypr/monitors.lua` (rồi khởi động lại bất kỳ ứng dụng nào đang bị phóng quá lớn). Xem [hướng dẫn về màn hình](33-monitors.md).
+Ve OS giả định màn hình có độ phân giải cao 2x, nên nó đặt `GDK_SCALE` thành 2 cho đến khi bạn chọn tỷ lệ trong bảng điều khiển màn hình. Nếu bạn đang dùng màn hình 1x và các ứng dụng GTK hoặc X11 bị phóng quá lớn, hãy chọn 1x cho màn hình đó trong bảng điều khiển màn hình, hoặc thêm `hl.env("GDK_SCALE", "1")` vào `~/.config/hypr/monitors.lua` (rồi khởi động lại bất kỳ ứng dụng nào đang bị phóng quá lớn). Xem [hướng dẫn về màn hình](33-monitors.md).
 
 Đối với Spotify, bạn có thể dùng `Ctrl + Minus` để thu nhỏ giao diện (và `Ctrl + Plus` để phóng to hơn).
 
 ### Tại sao tất cả phím tắt Super của tôi ngừng hoạt động?
 
-Trên một số laptop ASUS ROG và TUF, `Fn + Super` là một tổ hợp dễ bỏ sót, có tác dụng bật/tắt khóa phím Windows ở firmware (dành cho chơi game để bạn không thoát game ngoài ý muốn). Không có gì trên màn hình cho bạn biết điều đó đã xảy ra. Khi khóa đang bật, Super hoàn toàn không phát ra gì cả — nên mọi phím tắt Omarchy dùng Super đều ngừng hoạt động, và trông cứ như Hyprland bị hỏng.
+Trên một số laptop ASUS ROG và TUF, `Fn + Super` là một tổ hợp dễ bỏ sót, có tác dụng bật/tắt khóa phím Windows ở firmware (dành cho chơi game để bạn không thoát game ngoài ý muốn). Không có gì trên màn hình cho bạn biết điều đó đã xảy ra. Khi khóa đang bật, Super hoàn toàn không phát ra gì cả — nên mọi phím tắt Ve OS dùng Super đều ngừng hoạt động, và trông cứ như Hyprland bị hỏng.
 
 Hãy nhấn `Fn + Super` một lần trước khi đào sâu vào `~/.config/hypr/`, và nếu cách đó không đưa Super trở lại, hãy nhấn lại một lần nữa để bạn không vô tình để khóa vẫn bật. Đây không phải Fn-lock, thứ chỉ thay đổi cách hàng phím F hoạt động.
 
 ### Wi-Fi, Bluetooth, âm thanh hoặc trackpad của tôi tự nhiên ngừng hoạt động
 
-Trước khi khởi động lại, hãy thử khởi động lại riêng hệ thống con đang gặp sự cố. _Update > Hardware_ trong menu Omarchy có Wi-Fi, Bluetooth, Audio, và Trackpad, và việc tải lại một trong số đó sẽ xử lý phần lớn các tình huống "năm phút trước vẫn hoạt động" — một tai nghe Bluetooth không kết nối lại được, một trackpad chết hẳn sau khi suspend, âm thanh biến mất khi bạn rút màn hình.
+Trước khi khởi động lại, hãy thử khởi động lại riêng hệ thống con đang gặp sự cố. _Update > Hardware_ trong menu Ve OS có Wi-Fi, Bluetooth, Audio, và Trackpad, và việc tải lại một trong số đó sẽ xử lý phần lớn các tình huống "năm phút trước vẫn hoạt động" — một tai nghe Bluetooth không kết nối lại được, một trackpad chết hẳn sau khi suspend, âm thanh biến mất khi bạn rút màn hình.
 
 ### Tại sao loa ngoài của tôi không phát tiếng?
 
@@ -26,7 +26,7 @@ Có lẽ vì chúng chưa được đặt làm thiết bị đầu ra chính. Nh
 
 ### Loa laptop của tôi nghe lạ
 
-Trên một số laptop, Omarchy tự động áp dụng một tinh chỉnh loa để hiệu chỉnh đáp tuyến tần số của loa tích hợp. `omarchy audio tuning status` cho bạn biết tinh chỉnh đó có đang hoạt động trên máy của bạn hay không, và `omarchy audio tuning off` sẽ tắt nó nếu bạn muốn nghe loa ở trạng thái nguyên bản.
+Trên một số laptop, Ve OS tự động áp dụng một tinh chỉnh loa để hiệu chỉnh đáp tuyến tần số của loa tích hợp. `omarchy audio tuning status` cho bạn biết tinh chỉnh đó có đang hoạt động trên máy của bạn hay không, và `omarchy audio tuning off` sẽ tắt nó nếu bạn muốn nghe loa ở trạng thái nguyên bản.
 
 ### Tại sao tôi không thể đăng nhập hoặc sudo bằng mật khẩu của mình?
 

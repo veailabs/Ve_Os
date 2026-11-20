@@ -1,6 +1,6 @@
 # Omrežje
 
-Za omrežje v Omarchyju skrbi NetworkManager, upravljate pa ga z ikone omrežja v [zgornji vrstici](05-the-top-bar.md) ali s `Super + Ctrl + N`.
+Za omrežje v Ve OSju skrbi NetworkManager, upravljate pa ga z ikone omrežja v [zgornji vrstici](05-the-top-bar.md) ali s `Super + Ctrl + N`.
 
 Ta plošča išče omrežja Wi-Fi, prikaže moč signala in se poveže. Ethernet ne potrebuje prav ničesar — priključite ga in deluje. Če raje ostanete v terminalu, vam `nmtui` ponudi iste možnosti upravljanja, na voljo pa je tudi skupina ukazov `omarchy network`.
 
@@ -12,7 +12,7 @@ Namesto da dolgo geslo berete na glas, med povezavo Wi-Fi zaženite _Nastavitev 
 
 ## DNS
 
-Omarchy uporablja kateri koli DNS, ki mu ga vaše omrežje ponudi prek DHCP. To lahko za celoten računalnik preglasite pod _Nastavitev > Omrežje > DNS_, kjer sta Cloudflare in Google oddaljena le en klik. Izberite _Po meri_, če želite vpisati lastne strežnike.
+Ve OS uporablja kateri koli DNS, ki mu ga vaše omrežje ponudi prek DHCP. To lahko za celoten računalnik preglasite pod _Nastavitev > Omrežje > DNS_, kjer sta Cloudflare in Google oddaljena le en klik. Izberite _Po meri_, če želite vpisati lastne strežnike.
 
 Iz terminala `omarchy dns` izpiše trenutnega ponudnika, `omarchy dns Cloudflare` pa enega nastavi.
 

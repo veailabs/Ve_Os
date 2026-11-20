@@ -20,7 +20,7 @@ Obsidian est gratuit pour tous les usages, y compris l'usage personnel, commerci
 
 Obsidian propose aussi un [module complémentaire commercial pour la synchronisation](https://obsidian.md/sync) avec les applications mobiles sur iOS et Android. (https://obsidian.md/pricing).
 
-Tu lances Obsidian avec `Super + Shift + O`. Pour utiliser la synchronisation du thème, tu dois sélectionner le thème `Omarchy` dans les paramètres.
+Tu lances Obsidian avec `Super + Shift + O`. Pour utiliser la synchronisation du thème, tu dois sélectionner le thème `Ve OS` dans les paramètres.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Tu lances Aether via le lanceur d'applications (`Super + Space`).
 
 [LocalSend](https://localsend.org/) te permet d'envoyer des fichiers vers d'autres appareils sur le même réseau qui exécutent l'application, comme AirDrop d'Apple. Il est multiplateforme, par contre, donc tu peux envoyer des fichiers vers et depuis Windows, macOS, Android, iOS et, bien sûr, Linux.
 
-Tu peux ouvrir le menu Share sur `Super + Ctrl + S` ou sous _Trigger > Share_ dans le menu Omarchy. Il te propose quatre options :
+Tu peux ouvrir le menu Share sur `Super + Ctrl + S` ou sous _Trigger > Share_ dans le menu Ve OS. Il te propose quatre options :
 
 - **Clipboard** envoie tout ce que tu as copié sous forme de fichier texte. Parfait pour mettre un lien ou un extrait sur ton téléphone sans t'envoyer un e-mail à toi-même.
 - **File** ouvre un sélecteur de fichiers où tu peux en sélectionner plusieurs à la fois.
@@ -55,7 +55,7 @@ La même chose fonctionne depuis le terminal avec `omarchy share clipboard`, `om
 
 Tu peux aussi envoyer directement depuis le gestionnaire de fichiers : clique droit sur n'importe quelle sélection dans Nautilus et choisis _Send via LocalSend_.
 
-Le pare-feu d'Omarchy est fermé par défaut, sauf pour le port de LocalSend, donc ça fonctionne dès l'installation, sans rien configurer. Voir [sécurité](48-security.md).
+Le pare-feu d'Ve OS est fermé par défaut, sauf pour le port de LocalSend, donc ça fonctionne dès l'installation, sans rien configurer. Voir [sécurité](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Tu lances Signed via le lanceur d'applications (`Super + Space`), ou ouvre un PD
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) est le jeu d'échecs 3D maison d'Omarchy. Joue contre un ami sur le même ordinateur ou contre l'adversaire intégré à trois niveaux, sur quatre jeux sculptés qui se déplacent chacun à leur manière : vaisseaux orbitaux, bois sculpté et ivoire, créatures des bois, et bonbons. Les parties n'ont pas d'horloge et sont sauvegardées après chaque coup.
+[Checkmate](https://github.com/omacom/checkmate) est le jeu d'échecs 3D maison d'Ve OS. Joue contre un ami sur le même ordinateur ou contre l'adversaire intégré à trois niveaux, sur quatre jeux sculptés qui se déplacent chacun à leur manière : vaisseaux orbitaux, bois sculpté et ivoire, créatures des bois, et bonbons. Les parties n'ont pas d'horloge et sont sauvegardées après chaque coup.
 
 Tu lances Checkmate via le lanceur d'applications (`Super + Space`), où il est répertorié sous le nom de Chess. Appuie sur `?` à l'intérieur pour voir tous les raccourcis.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) est le solitaire Klondike maison d'Omarchy. Tire trois cartes, sans limite de passages, dans quatre séries de cartes : une dessinée aux couleurs de ton thème, et trois avec un style propre. Clique sur une carte puis sur l'endroit où elle va, fais-la glisser, ou double-clique pour l'envoyer au meilleur endroit. Les parties sont sauvegardées après chaque coup.
+[Cards](https://github.com/omacom/cards) est le solitaire Klondike maison d'Ve OS. Tire trois cartes, sans limite de passages, dans quatre séries de cartes : une dessinée aux couleurs de ton thème, et trois avec un style propre. Clique sur une carte puis sur l'endroit où elle va, fais-la glisser, ou double-clique pour l'envoyer au meilleur endroit. Les parties sont sauvegardées après chaque coup.
 
 Tu lances Cards via le lanceur d'applications (`Super + Space`). Clique sur son nom, ou appuie sur `?`, pour voir tous les raccourcis.
 
@@ -97,7 +97,7 @@ Tu lances Omacalc avec `Super + Shift + Q` (ou la touche calculatrice, si ton cl
 
 [Signal](https://signal.org/) est le pionnier de la messagerie chiffrée E2E, et une excellente option de communication pour quiconque préfère ne pas passer par l'un des grands conglomérats de la tech.
 
-Tu lances Signal avec `Super + Shift + G`. Il ne fait pas partie de l'installation de base, donc la première fois que tu appuies là-dessus, Omarchy te proposera de l'installer pour toi (il se trouve aussi sous _Install > Service_ dans le menu Omarchy).
+Tu lances Signal avec `Super + Shift + G`. Il ne fait pas partie de l'installation de base, donc la première fois que tu appuies là-dessus, Ve OS te proposera de l'installer pour toi (il se trouve aussi sous _Install > Service_ dans le menu Ve OS).
 
 ## Omaview
 

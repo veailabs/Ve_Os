@@ -8,7 +8,7 @@ Setiap kekunci pintas berada pada satu satah, ditetapkan oleh pengubahsuainya, d
 
 | Satah | Apa yang berada di sana | Contoh |
 | --- | --- | --- |
-| `Super + key` | Sistem: tetingkap, ruang kerja, susun atur, dan menu teras | `Super + Space` menu Omarchy, `Super + W` tutup tetingkap, `Super + F` skrin penuh |
+| `Super + key` | Sistem: tetingkap, ruang kerja, susun atur, dan menu teras | `Super + Space` menu Ve OS, `Super + W` tutup tetingkap, `Super + F` skrin penuh |
 | `Super + Shift + key` | Aplikasi | `Super + Shift + B` pelayar, `Super + Shift + E` e-mel, `Super + Shift + N` editor |
 | `Super + Ctrl + key` | Panel dan menu sistem | `Super + Ctrl + A` audio, `Super + Ctrl + N` rangkaian, `Super + Ctrl + C` menu tangkapan |
 | `Super + Ctrl + Alt + key` | Tindakan pantas dan notis | `Super + Ctrl + Alt + T` papar masa, `Super + Ctrl + Alt + B` bateri, `Super + Ctrl + Alt + C` tangkapan skrin |
@@ -34,7 +34,7 @@ Jika tetapan lalai tidak sesuai dengan anda (katakan anda mahu `Super + Shift + 
 
 | Kekunci Pintas                  | Fungsi              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Menu Omarchy (aplikasi dan segala-galanya)    |
+| `Super + Space`           | Menu Ve OS (aplikasi dan segala-galanya)    |
 | `Super + Alt + Space` | Grid aplikasi |
 | `Super + Escape` | Menu sistem (gantung, mulakan semula, dsb)  |
 | `Super + Ctrl + L` | Kunci komputer |
@@ -172,7 +172,7 @@ Tukar/tambah ikatan dalam `~/.config/hypr/bindings.lua`.
 | `Super + V`           | Tampal    |
 | `Super + Ctrl + V`           | Pengurus papan keratan    |
 
-Biasanya di Linux, anda perlu `Ctrl + Shift + C/V` untuk menyalin dan menampal dalam terminal dan `Ctrl + C/V` untuk melakukannya di semua tempat lain. Kekunci pintas papan keratan bersepadu Omarchy ini berfungsi di mana-mana sahaja.
+Biasanya di Linux, anda perlu `Ctrl + Shift + C/V` untuk menyalin dan menampal dalam terminal dan `Ctrl + C/V` untuk melakukannya di semua tempat lain. Kekunci pintas papan keratan bersepadu Ve OS ini berfungsi di mana-mana sahaja.
 
 ## Tangkapan
 
@@ -194,7 +194,7 @@ Biasanya di Linux, anda perlu `Ctrl + Shift + C/V` untuk menyalin dan menampal d
 
 Dengan rakaman skrin, kekunci pintas mula-mula bertanya audio mana yang anda mahu, kemudian memulakan rakaman. Tekan sekali lagi untuk berhenti. Lihat [tangkapan skrin dan rakaman](12-screenshots-recording.md) untuk butirannya.
 
-Semua pilihan tangkapan juga boleh diakses di bawah _Trigger > Capture_ dalam menu Omarchy (`Super + Space`).
+Semua pilihan tangkapan juga boleh diakses di bawah _Trigger > Capture_ dalam menu Ve OS (`Super + Space`).
 
 ## Pemberitahuan
 
@@ -216,9 +216,9 @@ Semua pilihan tangkapan juga boleh diakses di bawah _Trigger > Capture_ dalam me
 | `Super + Backspace` | Togol ketelusan pada tetingkap |
 | `Super + Ctrl + Backspace` | Togol aspek segi empat sama tetingkap tunggal |
 
-Imej latar belakang tambahan berada dalam `~/.config/omarchy/backgrounds/<theme name>`. Juga tersedia melalui _Install > Style > Background_ dalam menu Omarchy.
+Imej latar belakang tambahan berada dalam `~/.config/omarchy/backgrounds/<theme name>`. Juga tersedia melalui _Install > Style > Background_ dalam menu Ve OS.
 
-Semua pilihan gaya juga boleh diakses di bawah _Style_ dalam menu Omarchy (`Super + Space`).
+Semua pilihan gaya juga boleh diakses di bawah _Style_ dalam menu Ve OS (`Super + Space`).
 
 ## Togol
 
@@ -319,7 +319,7 @@ Fungsi ini mesti dijalankan di dalam sesi Tmux.
 
 ## Terminal Ghostty
 
-Terminal Ghostty dipasang menggunakan _Install > Terminal_ melalui menu Omarchy.
+Terminal Ghostty dipasang menggunakan _Install > Terminal_ melalui menu Ve OS.
 
 | Kekunci Pintas                  | Fungsi              |
 | ----------------------- | --------------------- |

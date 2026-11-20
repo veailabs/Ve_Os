@@ -1,10 +1,10 @@
 # Pluginy shellu
 
-Pracovná plocha Omarchy beží ako jeden dlho žijúci proces Quickshell s názvom `omarchy-shell` a takmer všetko, čo vidíš na obrazovke, je plugin vnútri neho. Lišta je plugin. Rovnako panely, ktoré z nej padajú, celoobrazovkové prekrytia ako výber emoji a správca schránky, samotné menu Omarchy, zamykacia obrazovka, dialóg polkit a bezhlavé služby, ktoré sledujú tvoju batériu a v noci zohrievajú tvoju obrazovku.
+Pracovná plocha Ve OS beží ako jeden dlho žijúci proces Quickshell s názvom `omarchy-shell` a takmer všetko, čo vidíš na obrazovke, je plugin vnútri neho. Lišta je plugin. Rovnako panely, ktoré z nej padajú, celoobrazovkové prekrytia ako výber emoji a správca schránky, samotné menu Ve OS, zamykacia obrazovka, dialóg polkit a bezhlavé služby, ktoré sledujú tvoju batériu a v noci zohrievajú tvoju obrazovku.
 
-To nie je len detail implementácie. To znamená, že môžeš vypnúť časti pracovnej plochy, vymeniť ich alebo napísať vlastné bez toho, aby si sa dotkol jediného riadka zdrojového kódu Omarchy.
+To nie je len detail implementácie. To znamená, že môžeš vypnúť časti pracovnej plochy, vymeniť ich alebo napísať vlastné bez toho, aby si sa dotkol jediného riadka zdrojového kódu Ve OS.
 
-Pluginy prvej strany sa dodávajú s Omarchy a žijú v `$OMARCHY_PATH/shell/plugins/`. Všetko, čo pridáš sám — vlastné experimenty alebo niečo, čo si našiel na GitHube — žije v `~/.config/omarchy/plugins/`. Oba sa zisťujú rovnakým spôsobom pri spustení, ale zabudované získavajú dôveryhodné rozhrania shellu, zatiaľ čo pluginy tretích strán získavajú obmedzené rozhranie obmedzené na ich vlastnú službu a životný cyklus. Klony zabudovaných si zachovávajú len konfiguráciu špecifickú pre zdroj a volania používateľského rozhrania potrebné pre pôvodné správanie.
+Pluginy prvej strany sa dodávajú s Ve OS a žijú v `$OMARCHY_PATH/shell/plugins/`. Všetko, čo pridáš sám — vlastné experimenty alebo niečo, čo si našiel na GitHube — žije v `~/.config/omarchy/plugins/`. Oba sa zisťujú rovnakým spôsobom pri spustení, ale zabudované získavajú dôveryhodné rozhrania shellu, zatiaľ čo pluginy tretích strán získavajú obmedzené rozhranie obmedzené na ich vlastnú službu a životný cyklus. Klony zabudovaných si zachovávajú len konfiguráciu špecifickú pre zdroj a volania používateľského rozhrania potrebné pre pôvodné správanie.
 
 ## Zobrazenie toho, čo máš
 

@@ -590,7 +590,7 @@ keyboard_form() {
     echo
     if ! omarchy_form_language_drawn "$language"; then
       # English on purpose: the console cannot draw this language to say it in.
-      say --foreground 8 "Setup stays in English. Omarchy will be in $(omarchy_form_language_label "$language") once set up."
+      say --foreground 8 "Setup stays in English. Ve OS will be in $(omarchy_form_language_label "$language") once set up."
     fi
     echo
 
@@ -1227,7 +1227,7 @@ reset_limine_config() {
       /^\/[^\/]/ { flush(); in_entry = 1 }
       !in_entry { next }
       {
-        if ($0 == "/+Omarchy") image_entry = 1
+        if ($0 == "/+Omarchy" || $0 == "/+Ve OS") image_entry = 1
         if (/^comment: machine-id=/) has_id = 1
         if (/^[[:space:]]*path: boot\(\):\/EFI\/Linux\/omarchy_/) image_uki = 1
         if (id != "" && /^comment: machine-id=/ && $0 ~ ("machine-id=" id "([[:space:]]|$)")) is_ours = 1

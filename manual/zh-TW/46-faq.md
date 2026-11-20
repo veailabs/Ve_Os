@@ -28,7 +28,7 @@ omarchy bar set omarchy.clock format "dddd h:mm AP"
 
 ### 如何變更我的時區？
 
-執行 Omarchy 選單中的 _更新 > 時區_，再從清單中挑選。如果時區正確，但時鐘本身已經漂移，_更新 > 時間_ 會為你重新啟動時間同步。
+執行 Ve OS 選單中的 _更新 > 時區_，再從清單中挑選。如果時區正確，但時鐘本身已經漂移，_更新 > 時間_ 會為你重新啟動時間同步。
 
 ### 如何變更我的 DNS、分享我的 Wi-Fi，或檢查我的連線速度？
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 你可以用 `OMARCHY_SCREENRECORD_DIR` 對螢幕錄影做同樣的事。
 
-Omasnap 會自動建立它的螢幕截圖目錄。螢幕錄影目錄請你自己建立，然後重新啟動 Omarchy，任一環境變更才會生效。
+Omasnap 會自動建立它的螢幕截圖目錄。螢幕錄影目錄請你自己建立，然後重新啟動 Ve OS，任一環境變更才會生效。
 
 ### 如何讓我 Apple Studio Display 上的喇叭 + 網路攝影機運作？
 
 你會以為只要插上 USB C 就應該全部都能運作，但很不幸地並非如此。我找到能可靠讓它運作的解決辦法，是使用 [the WJESOG DisplayPort + USB-A => USB-C cable](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/)。如此一來，喇叭與網路攝影機就運作得完美無瑕。
 
-請記得，Omarchy 針對 Apple 顯示器（Studio 與 XDR 兩者）內建了亮度控制，使用一般的鍵盤亮度按鈕即可。
+請記得，Ve OS 針對 Apple 顯示器（Studio 與 XDR 兩者）內建了亮度控制，使用一般的鍵盤亮度按鈕即可。
 
 ### 如何移除所有多餘的軟體？
 
@@ -72,7 +72,7 @@ Omasnap 會自動建立它的螢幕截圖目錄。螢幕錄影目錄請你自己
 
 執行 _移除 > 套件_ 就能看到所有已安裝的套件。接著你能用 tab 選取任何想移除的套件，並用 return 開始移除你所選的一切。
 
-你還可以使用 Omarchy 選單中的 _移除 > Web App_，來移除任何你不要的預先安裝 Web App。
+你還可以使用 Ve OS 選單中的 _移除 > Web App_，來移除任何你不要的預先安裝 Web App。
 
 或者執行 _移除 > 預先安裝項目_，一次清掉所有預先安裝的額外項目 — Web App、TUI 以及選用的應用程式。啟動它們的快捷鍵會隨之一併消失，因此你會得到一片乾淨的綁定空白，可在 `~/.config/hypr/bindings.lua` 中填入你自己的綁定。
 

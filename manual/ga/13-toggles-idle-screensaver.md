@@ -1,10 +1,10 @@
 # Lasca Scoránaithe, Díomhaointeas & an Spárálaí Scáileáin
 
-Ní socrú i ndáiríre é cuid mhór den mhéid a athraíonn tú ó lá go lá. Is mód é a chasann tú air ar feadh uaire agus as arís: solas oíche agus tú ag obair go déanach, ná cuir isteach agus tú i mbun cur i láthair, fan i do dhúiseacht agus tú ag féachaint ar rud éigin. Tugann Omarchy lasca scoránaithe orthu sin, agus oibríonn siad go léir ar an mbealach céanna — eochair aicearra, iontráil roghchláir, agus ordú, iad go léir ag bualadh na lasc céanna.
+Ní socrú i ndáiríre é cuid mhór den mhéid a athraíonn tú ó lá go lá. Is mód é a chasann tú air ar feadh uaire agus as arís: solas oíche agus tú ag obair go déanach, ná cuir isteach agus tú i mbun cur i láthair, fan i do dhúiseacht agus tú ag féachaint ar rud éigin. Tugann Ve OS lasca scoránaithe orthu sin, agus oibríonn siad go léir ar an mbealach céanna — eochair aicearra, iontráil roghchláir, agus ordú, iad go léir ag bualadh na lasc céanna.
 
 ### An roghchlár scoránaithe
 
-Osclaíonn `Super + Ctrl + O` _Spreagadh > Scorán_ go díreach, nó is féidir leat siúl ann ón roghchlár Omarchy (`Super + Space`). Lasc is ea gach rud ar an liosta sin ar féidir leat í a chasadh gan smaoineamh ar cá bhfuil an staid á stóráil. Suíonn lasca don chaoi a bhfuil cuma ar an deasc in aice leis, faoi _Cuma_.
+Osclaíonn `Super + Ctrl + O` _Spreagadh > Scorán_ go díreach, nó is féidir leat siúl ann ón roghchlár Ve OS (`Super + Space`). Lasc is ea gach rud ar an liosta sin ar féidir leat í a chasadh gan smaoineamh ar cá bhfuil an staid á stóráil. Suíonn lasca don chaoi a bhfuil cuma ar an deasc in aice leis, faoi _Cuma_.
 
 Ón teirminéal, is iad na lasca céanna ná `omarchy toggle <thing>`. Rith `omarchy toggle` leis féin chun an grúpa ar fad a fheiceáil.
 
@@ -26,7 +26,7 @@ Cónaíonn lasca an cheap tadhaill, an scáileáin tadhaill, agus an GPU hibridi
 
 Coinníonn _Cuma_ an barra roghchláir agus beochan, móide cúpla rud nach orduithe `omarchy toggle` iad ach a iompraíonn ar an mbealach céanna: céatadán na ceallra sa bharra, leagan amach réamhshocraithe an spáis oibre, agus faoi _Windows_, bearnaí fuinneoige (`Super + Shift + Backspace`) agus gné chearnógach 1 fhuinneog (`Super + Ctrl + Backspace`).
 
-Nuair nach bhfuil aon GPU ag Hyprland chun tarraingt leis agus nuair a rindreálann sé ar an CPU ina áit (llvmpipe), mar atá ar ríomhairí Mac nach dtacaítear lena GPU go fóill, sa chuid is mó de na meaisíní fíorúla, nó nuair a theipeann ar thiománaí grafaice lódáil, casann Omarchy beochan, doiléire agus scáthanna as don seisiún sin agus insíonn sé duit é uair amháin le fógra. Tugann _Cuma > Beochan Air_ ar ais iad, agus cuimhníonn Omarchy air sin do sheisiúin níos déanaí freisin.
+Nuair nach bhfuil aon GPU ag Hyprland chun tarraingt leis agus nuair a rindreálann sé ar an CPU ina áit (llvmpipe), mar atá ar ríomhairí Mac nach dtacaítear lena GPU go fóill, sa chuid is mó de na meaisíní fíorúla, nó nuair a theipeann ar thiománaí grafaice lódáil, casann Ve OS beochan, doiléire agus scáthanna as don seisiún sin agus insíonn sé duit é uair amháin le fógra. Tugann _Cuma > Beochan Air_ ar ais iad, agus cuimhníonn Ve OS air sin do sheisiúin níos déanaí freisin.
 
 Níl sa chuid is mó díobh seo ach comhad brataí faoi `~/.local/state/omarchy/toggles/`. Más mian leat brainse a dhéanamh ar cheann acu i script, tugann `omarchy-toggle-enabled` cód fágála duit in ionad tú a chur á chuardach:
 
@@ -63,11 +63,11 @@ Tostaíonn `Super + Ctrl + Alt + ,` fógraí. Ní thagann aon tósta aníos fad 
 
 Ní chailltear aon rud, áfach. Coimeádtar fógraí tostaithe siar: cuir na cinn dheireanacha ar ais ar an scáileán le `Super + Shift + Alt + ,`. Féach [fógraí](10-notices.md) don chuid eile.
 
-Tagann dhá chineál teachtaireachta tríd i gcónaí: tóstaí deimhnithe Omarchy féin do rud a rinne tú díreach ("Athraíodh an téama", "Sábháladh an seat scáileáin"), agus foláirimh chriticiúla a seoltar ón líne ordaithe. Ní cháilíonn aipeanna comhrá a mharcálann gach rud criticiúil chun a mbealach a bhrú os do chomhair.
+Tagann dhá chineál teachtaireachta tríd i gcónaí: tóstaí deimhnithe Ve OS féin do rud a rinne tú díreach ("Athraíodh an téama", "Sábháladh an seat scáileáin"), agus foláirimh chriticiúla a seoltar ón líne ordaithe. Ní cháilíonn aipeanna comhrá a mharcálann gach rud criticiúil chun a mbealach a bhrú os do chomhair.
 
 ### Díomhaointeas
 
-Is leis an mblaosc Omarchy iompraíocht dhíomhaoin, agus is bloc barrleibhéil `idle` in `~/.config/omarchy/shell.json` iad na hamanna:
+Is leis an mblaosc Ve OS iompraíocht dhíomhaoin, agus is bloc barrleibhéil `idle` in `~/.config/omarchy/shell.json` iad na hamanna:
 
 ```json
 {
@@ -89,16 +89,16 @@ Baineann sé seo le glasáil agus leis an spárálaí scáileáin, ní le cumhac
 
 ### An spárálaí scáileáin
 
-Ealaín ASCII is ea spárálaí scáileáin Omarchy ar siúl trí éifeachtaí randamacha téacs, aon chás amháin in aghaidh an mhonatóra. Fágann aon eochair nó gluaiseacht luiche é.
+Ealaín ASCII is ea spárálaí scáileáin Ve OS ar siúl trí éifeachtaí randamacha téacs, aon chás amháin in aghaidh an mhonatóra. Fágann aon eochair nó gluaiseacht luiche é.
 
 Is féidir leat é a thosú ar éileamh ó _Córas > Spárálaí Scáileáin_ (`Super + Esc`), a fhórsálann aníos é fiú má tá an spárálaí scáileáin díomhaoin casta as agat. Níl aon eochair aicearra ceangailte leis de réir réamhshocraithe.
 
 Is é `omarchy toggle screensaver` a chasann an ceann díomhaoin as, más fearr leat dul díreach ó bheith ag obair go bheith faoi ghlas. Dúnann aon eochair, cliceáil, scrolláil nó gluaiseacht luiche é.
 
-Is leatsa an lógó a tharraingíonn sé a athrú, faoi _Cuma > Brandáil > Spárálaí Scáileáin_. Uaslódáil png nó svg agus tiontaíonn Omarchy go ASCII é. Féach [brandáil](41-branding.md).
+Is leatsa an lógó a tharraingíonn sé a athrú, faoi _Cuma > Brandáil > Spárálaí Scáileáin_. Uaslódáil png nó svg agus tiontaíonn Ve OS go ASCII é. Féach [brandáil](41-branding.md).
 
 ### An scáileán glais
 
-Glasálann `Super + Ctrl + L` an meaisín. Ritheann sé sin an scáileán glais ón mblaosc Omarchy, bánann sé an taispeántas, athshocraíonn sé leagan amach do mhéarchláir go dtí an chéad cheann ionas nach bhfuil tú ag clóscríobh do phasfhocail san aibítir mhícheart, agus — má tá sé ar siúl agat — glasálann sé 1Password ar an mbealach amach.
+Glasálann `Super + Ctrl + L` an meaisín. Ritheann sé sin an scáileán glais ón mblaosc Ve OS, bánann sé an taispeántas, athshocraíonn sé leagan amach do mhéarchláir go dtí an chéad cheann ionas nach bhfuil tú ag clóscríobh do phasfhocail san aibítir mhícheart, agus — má tá sé ar siúl agat — glasálann sé 1Password ar an mbealach amach.
 
 Glacann an scáileán glais le pasfhocal, agus glacfaidh sé le méarlorg freisin a luaithe a bheidh ceann socraithe agat. Clúdaítear é sin, agus na bealaí eile chun fíordheimhniú, in [fíordheimhniú crua-earraí](37-hardware-authentication.md).

@@ -1,10 +1,10 @@
 # Conmutadores, inactividad y el protector de pantalla
 
-Mucho de lo que cambias día a día no es en realidad un ajuste. Es un modo que activas por una hora y luego vuelves a apagar: luz nocturna mientras trabajas hasta tarde, no molestar mientras estás presentando, mantener despierto mientras ves algo. Omarchy los llama conmutadores, y todos funcionan de la misma manera: un atajo de teclado, una entrada del menú y un comando, todos apuntando al mismo interruptor.
+Mucho de lo que cambias día a día no es en realidad un ajuste. Es un modo que activas por una hora y luego vuelves a apagar: luz nocturna mientras trabajas hasta tarde, no molestar mientras estás presentando, mantener despierto mientras ves algo. Ve OS los llama conmutadores, y todos funcionan de la misma manera: un atajo de teclado, una entrada del menú y un comando, todos apuntando al mismo interruptor.
 
 ### El menú de conmutadores
 
-`Super + Ctrl + O` abre directamente _Activar > Conmutador_, o puedes llegar ahí desde el menú de Omarchy (`Super + Space`). Todo lo que aparece en esa lista es un interruptor que puedes cambiar sin pensar en dónde vive el estado. Los interruptores sobre cómo se ve el escritorio están justo al lado, en _Apariencia_.
+`Super + Ctrl + O` abre directamente _Activar > Conmutador_, o puedes llegar ahí desde el menú de Ve OS (`Super + Space`). Todo lo que aparece en esa lista es un interruptor que puedes cambiar sin pensar en dónde vive el estado. Los interruptores sobre cómo se ve el escritorio están justo al lado, en _Apariencia_.
 
 Desde la terminal, los mismos interruptores son `omarchy toggle <thing>`. Ejecuta `omarchy toggle` por sí solo para ver todo el grupo.
 
@@ -26,7 +26,7 @@ Los interruptores del panel táctil, la pantalla táctil y la GPU híbrida viven
 
 _Apariencia_ contiene la barra de menú y las animaciones, además de algunas cosas que no son comandos `omarchy toggle` pero se comportan igual: el porcentaje de batería en la barra, la disposición predeterminada de los espacios de trabajo y, en _Ventanas_, los espacios entre ventanas (`Super + Shift + Backspace`) y la proporción cuadrada de 1 ventana (`Super + Ctrl + Backspace`).
 
-Cuando Hyprland no tiene una GPU con la que dibujar y renderiza con la CPU en su lugar (llvmpipe), como en las Mac cuya GPU aún no es compatible, en la mayoría de las máquinas virtuales o cuando un controlador gráfico no logra cargarse, Omarchy desactiva las animaciones, el desenfoque y las sombras para esa sesión y te lo avisa una vez con una notificación. _Apariencia > Activar animaciones_ las vuelve a activar, y Omarchy también lo recuerda para sesiones posteriores.
+Cuando Hyprland no tiene una GPU con la que dibujar y renderiza con la CPU en su lugar (llvmpipe), como en las Mac cuya GPU aún no es compatible, en la mayoría de las máquinas virtuales o cuando un controlador gráfico no logra cargarse, Ve OS desactiva las animaciones, el desenfoque y las sombras para esa sesión y te lo avisa una vez con una notificación. _Apariencia > Activar animaciones_ las vuelve a activar, y Ve OS también lo recuerda para sesiones posteriores.
 
 La mayoría de estos son simplemente un archivo de bandera en `~/.local/state/omarchy/toggles/`. Si quieres ramificar según uno en un script, `omarchy-toggle-enabled` te da un código de salida en lugar de obligarte a ir a buscarlo:
 
@@ -63,11 +63,11 @@ Luego haz que hyprsunset inicie al iniciar sesión agregando `o.launch_on_start(
 
 Sin embargo, no se pierde nada. Las notificaciones silenciadas se quedan retenidas: vuelve a poner las últimas en pantalla con `Super + Shift + Alt + ,`. Consulta [avisos](10-notices.md) para ver el resto.
 
-Dos tipos de mensajes sí logran pasar: las notificaciones emergentes de confirmación propias de Omarchy por algo que acabas de hacer ("Tema cambiado", "Captura de pantalla guardada"), y las alertas críticas enviadas desde la línea de comandos. Las aplicaciones de chat que marcan todo como crítico para imponerse frente a ti no califican.
+Dos tipos de mensajes sí logran pasar: las notificaciones emergentes de confirmación propias de Ve OS por algo que acabas de hacer ("Tema cambiado", "Captura de pantalla guardada"), y las alertas críticas enviadas desde la línea de comandos. Las aplicaciones de chat que marcan todo como crítico para imponerse frente a ti no califican.
 
 ### Inactividad
 
-El shell de Omarchy se encarga del comportamiento por inactividad, y los tiempos están en un bloque `idle` de nivel superior en `~/.config/omarchy/shell.json`:
+El shell de Ve OS se encarga del comportamiento por inactividad, y los tiempos están en un bloque `idle` de nivel superior en `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Esto es sobre el bloqueo y el protector de pantalla, no sobre la energía. La su
 
 ### El protector de pantalla
 
-El protector de pantalla de Omarchy es arte ASCII que pasa por efectos de texto aleatorios, una instancia por monitor. Cualquier tecla o movimiento del mouse lo cierra.
+El protector de pantalla de Ve OS es arte ASCII que pasa por efectos de texto aleatorios, una instancia por monitor. Cualquier tecla o movimiento del mouse lo cierra.
 
 Puedes iniciarlo cuando quieras desde _Sistema > Protector de pantalla_ (`Super + Esc`), lo que lo fuerza a aparecer incluso si desactivaste el protector de pantalla por inactividad. Por defecto no tiene ningún atajo de teclado asignado.
 
 `omarchy toggle screensaver` es lo que desactiva el de inactividad, si prefieres pasar directamente de trabajar a bloqueado. Cualquier tecla, clic, desplazamiento o movimiento del mouse lo cierra.
 
-El logotipo que dibuja lo puedes cambiar tú, en _Apariencia > Marca > Protector de pantalla_. Sube un png o svg y Omarchy lo convierte a ASCII. Consulta [marca](41-branding.md).
+El logotipo que dibuja lo puedes cambiar tú, en _Apariencia > Marca > Protector de pantalla_. Sube un png o svg y Ve OS lo convierte a ASCII. Consulta [marca](41-branding.md).
 
 ### La pantalla de bloqueo
 
-`Super + Ctrl + L` bloquea la máquina. Eso ejecuta la pantalla de bloqueo del shell de Omarchy, apaga la pantalla, restablece la distribución de tu teclado a la primera para que no escribas tu contraseña en el alfabeto equivocado y, si lo tienes en ejecución, bloquea 1Password al salir.
+`Super + Ctrl + L` bloquea la máquina. Eso ejecuta la pantalla de bloqueo del shell de Ve OS, apaga la pantalla, restablece la distribución de tu teclado a la primera para que no escribas tu contraseña en el alfabeto equivocado y, si lo tienes en ejecución, bloquea 1Password al salir.
 
 La pantalla de bloqueo acepta una contraseña, y también aceptará una huella digital una vez que hayas configurado una. Eso, y las demás formas de autenticarte, se explican en [autenticación por hardware](37-hardware-authentication.md).

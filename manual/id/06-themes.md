@@ -1,8 +1,8 @@
 # Tema
 
-Omarchy hadir dengan dua puluh dua tema yang indah. Anda dapat memilih di antaranya melalui _Appearance > Theme_ di Omarchy Menu (`Super + Space`) atau langsung menuju pemilih tema menggunakan `Super + Ctrl + T`.
+Ve OS hadir dengan dua puluh dua tema yang indah. Anda dapat memilih di antaranya melalui _Appearance > Theme_ di Ve OS Menu (`Super + Space`) atau langsung menuju pemilih tema menggunakan `Super + Ctrl + T`.
 
-Setiap tema menata desktop, terminal, neovim, layar aktivitas (btop), Chromium, dan seluruh shell Omarchy: bar atas, menu, notifikasi, OSD, dan layar kunci. (Untuk Obsidian, Anda harus memilih tema Omarchy secara manual melalui _Appearance > Themes_ di dalam aplikasi tersebut).
+Setiap tema menata desktop, terminal, neovim, layar aktivitas (btop), Chromium, dan seluruh shell Ve OS: bar atas, menu, notifikasi, OSD, dan layar kunci. (Untuk Obsidian, Anda harus memilih tema Ve OS secara manual melalui _Appearance > Themes_ di dalam aplikasi tersebut).
 
 Tema memiliki serangkaian gambar latar belakang yang dapat Anda pilih dengan menggunakan `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Ikon di peluncur aplikasi dan dock digambar dengan warna tema Anda, jadi ikon-ik
 
 Anda dapat memasang set ikon buatan orang lain dengan _Install > Style > Icons_ (atau `omarchy icons install <git url>`), dan menghapusnya lagi di bawah _Remove > Icons_. _Update > Extra Icons_ mengambil versi terbaru dari set yang telah Anda pasang.
 
-Untuk membuat set Anda sendiri, letakkan ikon Anda di `~/.config/omarchy/icons/<name>/`, satu file per aplikasi, dinamai sesuai baris `Icon=` pada file `.desktop` aplikasi tersebut. File yang berakhiran `.svg` ditampilkan apa adanya. File yang berakhiran `.svg.tpl` digambar dengan warna tema: tulis `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` atau `{{ icon_shadow }}` di tempat warna berada. Set default di `/usr/share/omarchy/icons/papercraft/` adalah tempat yang baik untuk memulai. Tambahkan `preview.png` untuk menampilkan set Anda di pemilih; tanpa file tersebut, Omarchy menggambar pratinjau dari ikon-ikon Anda. Untuk mengubah satu ikon saja dari set default, letakkan versi Anda di `~/.config/omarchy/icons/papercraft/`.
+Untuk membuat set Anda sendiri, letakkan ikon Anda di `~/.config/omarchy/icons/<name>/`, satu file per aplikasi, dinamai sesuai baris `Icon=` pada file `.desktop` aplikasi tersebut. File yang berakhiran `.svg` ditampilkan apa adanya. File yang berakhiran `.svg.tpl` digambar dengan warna tema: tulis `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` atau `{{ icon_shadow }}` di tempat warna berada. Set default di `/usr/share/omarchy/icons/papercraft/` adalah tempat yang baik untuk memulai. Tambahkan `preview.png` untuk menampilkan set Anda di pemilih; tanpa file tersebut, Ve OS menggambar pratinjau dari ikon-ikon Anda. Untuk mengubah satu ikon saja dari set default, letakkan versi Anda di `~/.config/omarchy/icons/papercraft/`.
 
 ### Buka kunci
 

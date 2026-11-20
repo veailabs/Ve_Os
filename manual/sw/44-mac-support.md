@@ -1,4 +1,6 @@
-# Usaidizi wa Mac
+# Ve OS — Usaidizi wa Mac
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ina usaidizi uliojengewa ndani kwa **Intel Macs**. Kuna mapungufu machache yanayojulikana kwa sasa, lakini mradi tu unayafahamu na uko sawa nayo; unaweza kuipa uhai mpya Mac zako za zamani kwa kupakia Omarchy.
 

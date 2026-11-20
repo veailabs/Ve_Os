@@ -1,14 +1,14 @@
 # Augšējā josla
 
-Josla gar ekrāna augšmalu ir Omarchy josla. Tā nav pieboltēta statusa josla, bet gan daļa no Omarchy čaulas, viena ilgstoši darbojošos Quickshell procesa, kas zīmē arī izvēlni, paziņojumus, OSD uznirstošos logus un bloķēšanas ekrānu. Tāpēc tā lieliski saskan ar visu pārējo un panelis atveras acumirklī, nevis palaiž jaunu lietotni.
+Josla gar ekrāna augšmalu ir Ve OS josla. Tā nav pieboltēta statusa josla, bet gan daļa no Ve OS čaulas, viena ilgstoši darbojošos Quickshell procesa, kas zīmē arī izvēlni, paziņojumus, OSD uznirstošos logus un bloķēšanas ekrānu. Tāpēc tā lieliski saskan ar visu pārējo un panelis atveras acumirklī, nevis palaiž jaunu lietotni.
 
 Tā ir arī vienīgā darbvirsmas daļa, kas vienmēr ir redzama ekrānā, tāpēc ir vērts zināt, ko dara visas tās mazās zīmes.
 
 ## Kas tajā ir pēc noklusējuma
 
-Joslai ir trīs sadaļas. Kreisajā pusē atrodas Omarchy logotips (izvēlnes palaidējs) un darbvietu indikatori. Centrā ir statusa indikatori, pulkstenis, Elsewhen (pasaules pulkstenis), laikapstākļi un Omarchy atjauninājuma nozīmīte. Labajā pusē: sistēmas tekne, tastatūras izkārtojums (kad ir konfigurēts vairāk nekā viens), aģenti, bluetooth, tīkls, audio, displejs un barošana.
+Joslai ir trīs sadaļas. Kreisajā pusē atrodas Ve OS logotips (izvēlnes palaidējs) un darbvietu indikatori. Centrā ir statusa indikatori, pulkstenis, Elsewhen (pasaules pulkstenis), laikapstākļi un Ve OS atjauninājuma nozīmīte. Labajā pusē: sistēmas tekne, tastatūras izkārtojums (kad ir konfigurēts vairāk nekā viens), aģenti, bluetooth, tīkls, audio, displejs un barošana.
 
-Daži no tiem parādās tikai tad, kad tiem ir ko teikt. Tastatūras izkārtojums parādās tikai tad, ja esi konfigurējis vairāk nekā vienu izkārtojumu. Atjauninājuma nozīmīte parādās tikai tad, kad gaida Omarchy atjauninājums. Un aģentu ikona parādās pirmo reizi, kad Omarchy datorā atrod AI kodēšanas lietojumu (skatiet [AI](17-ai.md)).
+Daži no tiem parādās tikai tad, kad tiem ir ko teikt. Tastatūras izkārtojums parādās tikai tad, ja esi konfigurējis vairāk nekā vienu izkārtojumu. Atjauninājuma nozīmīte parādās tikai tad, kad gaida Ve OS atjauninājums. Un aģentu ikona parādās pirmo reizi, kad Ve OS datorā atrod AI kodēšanas lietojumu (skatiet [AI](17-ai.md)).
 
 ## Klikšķināšana
 
@@ -16,7 +16,7 @@ Gandrīz katrs logrīks kaut ko dara ar kreiso, labo un vidējo klikšķi, un va
 
 | Logrīks | Kreisais klikšķis | Labais klikšķis | Vidējais / ritināšana |
 | --- | --- | --- | --- |
-| Izvēlne | Omarchy izvēlne | Jauns terminālis | — |
+| Izvēlne | Ve OS izvēlne | Jauns terminālis | — |
 | Darbvietas | Fokusēt šo darbvietu šajā monitorā | — | Ritināšana: nākamā/iepriekšējā darbvieta |
 | Pulkstenis | Kalendāra uznirstošais logs | Pārslēgt etiķetes formātu | Vidējais: laika joslu atlasītājs |
 | Laikapstākļi | Prognozes uznirstošais logs | Pilni laikapstākļi kā paziņojums | Vidējais: atsvaidzināt |
@@ -29,7 +29,7 @@ Gandrīz katrs logrīks kaut ko dara ar kreiso, labo un vidējo klikšķi, un va
 | Multivide | Atskaņot/pauzēt | Vāka attēla uznirstošais logs | Vidējais: nākamais · ritināšana: iepriekšējais/nākamais |
 | Aģenti | Aģentu panelis | Palaist savu aģentu | Vidējais: nākamais abonements |
 | Tekne | Novietot kursoru, lai atklātu atvilktni | Ar labo pogu uz bultiņas, lai pārvaldītu | — |
-| Omarchy atjauninājums | Palaist atjaunināšanu | — | — |
+| Ve OS atjauninājums | Palaist atjaunināšanu | — | — |
 
 Ne viss šajā tabulā uzreiz ir tavā joslā. Multivides logrīks (MPRIS pašlaik atskaņotais, ar ritinošu dziesmu un izpildītāju) un mikrofona logrīks abi ir iebūvēti, bet pēc noklusējuma izslēgti — pievieno tos, ja vēlies, kā aprakstīts tālāk.
 
@@ -137,6 +137,6 @@ Katrs logrīks ir viens ieraksts vienā no pieciem izkārtojuma masīviem, un t�
 
 `center` ir kaste joslas vidū: viss tajā kā viena grupa ir centrēts uz ekrāna. `centerBegin` un `centerEnd` karājas abās kastes pusēs, un tā pulkstenis paliek pavisam centrā pat tad, kad laikapstākļi un atjauninājuma nozīmīte nāk un iet. Ieliec `center` vairāk nekā vienu logrīku, un tie tiks centrēti kopā; atstāj to tukšu, un `centerBegin` un `centerEnd` satiksies joslas vidū.
 
-Viens noteikums, ko vērts iegaumēt: **tiklīdz tev ir savs `shell.json`, tas ir kanoniskais**. Kamēr neko nepielāgo, čaula lasa Omarchy noklusējuma failu. Tiklīdz tu pārvilksi logrīku, palaidīsi `omarchy bar` vai pats rediģēsi failu, tas pieder tev — nav dziļas sapludināšanas, tāpēc jauni noklusējuma logrīki turpmākajos Omarchy izlaidumos tavā joslā automātiski neparādīsies. `omarchy bar defaults` atjauno piegādāto izkārtojumu ikreiz, kad vēlies tīru lapu.
+Viens noteikums, ko vērts iegaumēt: **tiklīdz tev ir savs `shell.json`, tas ir kanoniskais**. Kamēr neko nepielāgo, čaula lasa Ve OS noklusējuma failu. Tiklīdz tu pārvilksi logrīku, palaidīsi `omarchy bar` vai pats rediģēsi failu, tas pieder tev — nav dziļas sapludināšanas, tāpēc jauni noklusējuma logrīki turpmākajos Ve OS izlaidumos tavā joslā automātiski neparādīsies. `omarchy bar defaults` atjauno piegādāto izkārtojumu ikreiz, kad vēlies tīru lapu.
 
 Tajā pašā failā augšējā līmenī, ārpus atslēgas `bar`, glabājas arī tavi dīkstāves laiki: `idle.screensaver` un `idle.lock`, abi sekundēs kopš brīža, kad pārgāji dīkstāvē. Tāpēc noklusējuma ekrānsaudzētājs ieslēdzas pēc 150 sekundēm un bloķēšana pēc 300.

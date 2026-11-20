@@ -1,4 +1,6 @@
-# Mga Pag-install na Walang Nagbabantay
+# Ve OS — Mga Pag-install na Walang Nagbabantay
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Kayang i-install ng Omarchy ISO ang sarili nito nang walang tao sa keyboard. Kung makakahanap ang installer ng pangalawang drive na may label na `cidata` na naglalaman ng mga configuration file nito, kokopyahin nito ang mga iyon, lalaktawan nang buo ang setup wizard, at magre-reboot papunta sa tapos nang system nang mag-isa. Walang espesyal na ISO build, walang dagdag na boot menu entry — kung walang ganoong drive na nakakabit, walang magbabago at makukuha mo ang normal na wizard.
 

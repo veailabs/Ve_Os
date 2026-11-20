@@ -1,6 +1,6 @@
 # Tastatură, Mouse, Trackpad
 
-Hyprland îți permite să configurezi toate dispozitivele de intrare în mare detaliu. Poți face repetarea tastaturii supersonică de rapidă sau poți face trackpadul să folosească derularea naturală. Schimbi totul în `~/.config/hypr/input.lua`, la care poți ajunge și prin _Setup > Input_ din meniul Omarchy (`Super + Space`). Orice setezi acolo înlocuiește setările implicite Omarchy.
+Hyprland îți permite să configurezi toate dispozitivele de intrare în mare detaliu. Poți face repetarea tastaturii supersonică de rapidă sau poți face trackpadul să folosească derularea naturală. Schimbi totul în `~/.config/hypr/input.lua`, la care poți ajunge și prin _Setup > Input_ din meniul Ve OS (`Super + Space`). Orice setezi acolo înlocuiește setările implicite Ve OS.
 
 Iată un exemplu:
 
@@ -59,7 +59,7 @@ Glisează pe trackpad pentru a te deplasa pe desktop:
 | --- | --- |
 | Trei degete spre stânga / dreapta | Spațiul de lucru anterior / următor, inclusiv cele goale |
 | Trei degete în sus | Comută consola AI |
-| Trei degete în jos | Deschide meniul Omarchy |
+| Trei degete în jos | Deschide meniul Ve OS |
 | Patru degete spre stânga / dreapta | Mută fereastra activă în spațiul de lucru anterior / următor |
 | Patru degete în jos | Comută modul ecran complet |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Pentru a dezactiva toate gesturile Omarchy, setează `omarchy_default_gestures = false` aproape de începutul fișierului `~/.config/hypr/hyprland.lua`, înainte să se încarce setările implicite Omarchy.
+Pentru a dezactiva toate gesturile Ve OS, setează `omarchy_default_gestures = false` aproape de începutul fișierului `~/.config/hypr/hyprland.lua`, înainte să se încarce setările implicite Ve OS.
 
 Pe laptopurile Dell XPS cu touchpad haptic, poți seta și intensitatea clicului la scăzută, medie sau ridicată în _Trigger > Hardware > Touchpad Haptics_.
 
 ### Tastarea în chineză, japoneză și alte limbi
 
-Selectează Japanese, Korean, Chinese (Simplified, Pinyin), Taiwan (Zhuyin) sau Hong Kong (Cangjie) când programul de instalare îți cere tastatura. Omarchy configurează automat tastatura și motorul de intrare corespunzător, inclusiv în timpul configurării offline la prima pornire. Japoneza folosește Mozc, coreeana folosește Hangul standard cu două seturi, chineza simplificată folosește Pinyin, Taiwan folosește aranjamentul Zhuyin standard din Chewing, iar Hong Kong folosește Cangjie cu formele de caractere din Hong Kong. Japanese (US keyboard) oferă Mozc cu un aranjament de tastatură US. Tastele Hangul, Zhuyin și Cangjie rămân în pozițiile lor standard chiar și atunci când tastezi litere latine cu Dvorak, Colemak sau AZERTY. Dacă ai adăugat Hangul sau Chewing înainte de asta, deselectează-l și selectează-l din nou în _Setup > Keyboard > Input Methods_ pentru a-i muta tastele acolo; Omarchy lasă în pace un motor cu care tastezi deja.
+Selectează Japanese, Korean, Chinese (Simplified, Pinyin), Taiwan (Zhuyin) sau Hong Kong (Cangjie) când programul de instalare îți cere tastatura. Ve OS configurează automat tastatura și motorul de intrare corespunzător, inclusiv în timpul configurării offline la prima pornire. Japoneza folosește Mozc, coreeana folosește Hangul standard cu două seturi, chineza simplificată folosește Pinyin, Taiwan folosește aranjamentul Zhuyin standard din Chewing, iar Hong Kong folosește Cangjie cu formele de caractere din Hong Kong. Japanese (US keyboard) oferă Mozc cu un aranjament de tastatură US. Tastele Hangul, Zhuyin și Cangjie rămân în pozițiile lor standard chiar și atunci când tastezi litere latine cu Dvorak, Colemak sau AZERTY. Dacă ai adăugat Hangul sau Chewing înainte de asta, deselectează-l și selectează-l din nou în _Setup > Keyboard > Input Methods_ pentru a-i muta tastele acolo; Ve OS lasă în pace un motor cu care tastezi deja.
 
 Tastarea începe în modul Latin. Apasă `Super + I` pentru a parcurge metodele de intrare configurate și `Super + Shift + I` pentru a parcurge înapoi. Atinge `Shift` singur pentru a ieși dintr-o metodă de intrare precum Pinyin către literele latine și atinge-l din nou pentru a reveni, așa cum funcționează Sogou, Microsoft Pinyin și macOS; `Shift` plus o literă tastează în continuare o majusculă. Pe tastaturile japoneze, 全角/半角 comută intrarea, 変換 o pornește, iar 無変換 o oprește. Cu coreeana, 한/영 comută Hangul, iar 한자 convertește în Hanja, indiferent dacă tastatura ta are taste dedicate sau trimite Right Alt și Right Ctrl pentru ele, cum fac multe laptopuri, așa că Right Alt și Right Ctrl nu sunt acolo modificatori obișnuiți; dictarea se comută în schimb cu Alt + Space. `Ctrl + Space` rămâne disponibil pentru Tmux și Herdr; `Shift + CapsLock` rămâne tasta compose.
 
 Indicatorul tastaturii apare în dreapta barei când ai mai multe aranjamente de tastatură sau metode de intrare. Fă clic pe el pentru a schimba limbile de intrare; Japanese afișează あ pentru hiragana. Pentru opțiunile de caractere japoneze, comută la Japanese, tastează un cuvânt precum `nihongo`, apoi apasă Space de două ori. Apasă Enter pentru a accepta alegerea. Dacă ai și mai multe aranjamente de tastatură, fă clic dreapta pe indicator pentru a le parcurge.
 
-Folosește _Setup > Keyboard > Keyboard Inputs_ pentru a selecta aranjamente precum English și French, dintre aceleași opțiuni oferite în timpul instalării. Folosește _Setup > Keyboard > Input Methods_ pentru a selecta ce motoare de compunere sunt active. Ambele selectoare se deschid în meniul Omarchy, cu selecțiile tale curente bifate. Fă clic sau apasă Enter pentru a comuta o opțiune; fiecare modificare se aplică imediat. Deselectarea unei metode de intrare o elimină din ciclu fără să o dezinstaleze; tastatura rămâne disponibilă.
+Folosește _Setup > Keyboard > Keyboard Inputs_ pentru a selecta aranjamente precum English și French, dintre aceleași opțiuni oferite în timpul instalării. Folosește _Setup > Keyboard > Input Methods_ pentru a selecta ce motoare de compunere sunt active. Ambele selectoare se deschid în meniul Ve OS, cu selecțiile tale curente bifate. Fă clic sau apasă Enter pentru a comuta o opțiune; fiecare modificare se aplică imediat. Deselectarea unei metode de intrare o elimină din ciclu fără să o dezinstaleze; tastatura rămâne disponibilă.
 
 Rulează `omarchy setup keyboard` sau `omarchy setup input` pentru a deschide aceleași selectoare. Pentru a adăuga o limbă din linia de comandă, folosește `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` sau `cangjie5`. Quick, Boshiamy și Array vin în același pachet ca Cangjie și apar în selectorul Input Methods. Tastele tale personalizate de comutare sunt păstrate. Pentru aranjamente sau taste alternative ale motorului, instalează `fcitx5-configtool` cu `omarchy pkg add fcitx5-configtool` și lansează-l dintr-un terminal. Selectarea unei limbi de intrare nu schimbă limba desktopului. Alegerea Japanese, Korean sau Chinese în _Setup > Language_ adaugă metoda ei de intrare când nu ai încă niciuna.
 

@@ -41,7 +41,7 @@ Ezek a billentyű-hozzárendelések csak addig léteznek, amíg az Omasnap nyitv
 
 ## Képernyőfelvétel
 
-Az `Alt + Print Screen` megnyitja a _Trigger > Capture > Screenrecord_ menüt, amely megkérdezi, mit szeretnél a hangsávon: semmilyen hangot, asztali hangot, asztali hangot és mikrofont, vagy asztali hangot, mikrofont és webkamerát. Az utolsó csak akkor jelenik meg, ha tényleg van csatlakoztatott kamerád. Válassz egyet, és az Omarchy felvételválasztója lehetővé teszi, hogy területet húzz, vagy egy ablakra vagy monitorra kattints.
+Az `Alt + Print Screen` megnyitja a _Trigger > Capture > Screenrecord_ menüt, amely megkérdezi, mit szeretnél a hangsávon: semmilyen hangot, asztali hangot, asztali hangot és mikrofont, vagy asztali hangot, mikrofont és webkamerát. Az utolsó csak akkor jelenik meg, ha tényleg van csatlakoztatott kamerád. Válassz egyet, és az Ve OS felvételválasztója lehetővé teszi, hogy területet húzz, vagy egy ablakra vagy monitorra kattints.
 
 A felvétel a gpu-screen-recorder programon fut, amely a GPU-n kódol 60fps sebességgel, és ha kell, visszavált a CPU-ra. Az eredmény egy MP4 a `~/Videos` mappában, `screenrecording-2026-08-13_14-22-05.mp4` néven. Ennek megváltoztatásához állítsd be az `OMARCHY_SCREENRECORD_DIR` változót — de vedd figyelembe, hogy a képernyőkép-könyvtárral ellentétben ennek már léteznie kell, különben a felvétel nem hajlandó elindulni.
 

@@ -9,12 +9,29 @@ require_command grim
 
 qml_fixture_scratch
 
+export OMARCHY_TEST_HYPRCTL
+OMARCHY_TEST_HYPRCTL=$(command -v hyprctl)
+cat >"$QML_FIXTURE_TMP/bin/hyprctl" <<'SH'
+#!/bin/bash
+set -euo pipefail
+if [[ ${1:-} == "eval" && $# == 2 ]]; then
+  expression=$2
+  expression=${expression//omarchy_closed_capture_owners/omarchy_test_remote_closed_capture_owners}
+  expression=${expression//omarchy_capture_owner/omarchy_test_remote_capture_owner}
+  expression=${expression//omarchy-remote-screen-share/omarchy-test-remote-screen-share}
+  set -- eval "$expression"
+fi
+exec "$OMARCHY_TEST_HYPRCTL" "$@"
+SH
+chmod +x "$QML_FIXTURE_TMP/bin/hyprctl"
+PATH="$QML_FIXTURE_TMP/bin:$PATH"
+
 cleanup() {
-  hyprctl eval 'hl.window_rule({ name = "omarchy-remote-screen-share", enabled = false }); omarchy_test_capture_rule = nil' >/dev/null
   if [[ -f $QML_FIXTURE_TMP/stub.pid ]]; then
     kill "$(<"$QML_FIXTURE_TMP/stub.pid")" 2>/dev/null || true
   fi
   qml_fixture_cleanup
+  "$OMARCHY_TEST_HYPRCTL" eval 'hl.window_rule({ name = "omarchy-test-remote-screen-share", enabled = false }); omarchy_test_capture_rule = nil; omarchy_test_remote_capture_owner = nil; omarchy_test_remote_closed_capture_owners = nil' >/dev/null
 }
 trap cleanup EXIT
 

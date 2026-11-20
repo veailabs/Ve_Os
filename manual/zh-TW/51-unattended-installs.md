@@ -1,4 +1,6 @@
-# 無人值守安裝
+# Ve OS — 無人值守安裝
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO 可以在鍵盤前沒有任何人的情況下自行完成安裝。如果安裝程式找到第二個標記為 `cidata`、且帶有其設定檔的磁碟機，它會將這些檔案複製出來、完全跳過設定精靈，並自行重新開機進入已完成的系統。不需要特殊的 ISO 建置，也不需要額外的開機選單項目——如果沒有連接這類磁碟機，一切都不會改變，你看到的仍是一般的精靈。
 

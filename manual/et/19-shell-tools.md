@@ -1,6 +1,6 @@
 # Kesta tööriistad
 
-Lisaks standardsetele Linuxi tööriistadele tuleb Omarchy ka hulga täiustatud kesta tööriistadega. Siin on peamised.
+Lisaks standardsetele Linuxi tööriistadele tuleb Ve OS ka hulga täiustatud kesta tööriistadega. Siin on peamised.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Täieliku juhendi leiad käsuga `man yt-dlp`.
 
 [try](https://github.com/tobi/try) teeb programmeerimiskatsetuste haldamise lihtsaks kuupäevatempliga kaustadega. Kõik katsetused elavad kaustas `~/Work/tries` ja saad neile ligi käsuga `try`.
 
-Omarchy ei lisa projekti kausta `bin/` automaatselt `PATH`-i. Käivita usaldusväärseid projektikohaseid tööriistu selgesõnalise suhtelise teega, näiteks `bin/rails` või `./bin/dev`.
+Ve OS ei lisa projekti kausta `bin/` automaatselt `PATH`-i. Käivita usaldusväärseid projektikohaseid tööriistu selgesõnalise suhtelise teega, näiteks `bin/rails` või `./bin/dev`.

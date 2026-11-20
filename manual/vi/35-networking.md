@@ -1,6 +1,6 @@
 # Mạng
 
-Mạng trong Omarchy do NetworkManager xử lý, và bạn điều khiển nó từ biểu tượng mạng trong [thanh trên cùng](05-the-top-bar.md) hoặc bằng `Super + Ctrl + N`.
+Mạng trong Ve OS do NetworkManager xử lý, và bạn điều khiển nó từ biểu tượng mạng trong [thanh trên cùng](05-the-top-bar.md) hoặc bằng `Super + Ctrl + N`.
 
 Bảng đó quét các mạng Wi-Fi, hiển thị cường độ tín hiệu và kết nối. Ethernet thì chẳng cần làm gì cả — cứ cắm vào là dùng được. Nếu bạn thích ở trong terminal hơn, `nmtui` cho bạn các điều khiển tương tự, và cũng có nhóm lệnh `omarchy network` nữa.
 
@@ -12,7 +12,7 @@ Nếu bạn thực sự cần chính mật khẩu, `omarchy network password <in
 
 ## DNS
 
-Omarchy dùng bất kỳ DNS nào mà mạng của bạn cấp phát qua DHCP. Bạn có thể ghi đè điều đó cho toàn bộ máy trong _Thiết lập > Mạng > DNS_, nơi Cloudflare và Google chỉ cách một cú nhấp chuột. Chọn _Tùy chỉnh_ để nhập các máy chủ của riêng bạn.
+Ve OS dùng bất kỳ DNS nào mà mạng của bạn cấp phát qua DHCP. Bạn có thể ghi đè điều đó cho toàn bộ máy trong _Thiết lập > Mạng > DNS_, nơi Cloudflare và Google chỉ cách một cú nhấp chuột. Chọn _Tùy chỉnh_ để nhập các máy chủ của riêng bạn.
 
 Từ terminal, `omarchy dns` in ra nhà cung cấp hiện tại và `omarchy dns Cloudflare` đặt một nhà cung cấp.
 

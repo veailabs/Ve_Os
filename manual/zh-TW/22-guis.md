@@ -20,7 +20,7 @@ Obsidian 在所有用途下皆免費使用，包括個人、商業和非營利�
 
 Obsidian 也提供 [用於同步的商業附加服務](https://obsidian.md/sync)，可與 iOS 和 Android 上的行動應用程式同步。(https://obsidian.md/pricing)。
 
-你用 `Super + Shift + O` 啟動 Obsidian。若要使用主題同步，你必須在設定底下選擇 `Omarchy` 主題。
+你用 `Super + Shift + O` 啟動 Obsidian。若要使用主題同步，你必須在設定底下選擇 `Ve OS` 主題。
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Obsidian 也提供 [用於同步的商業附加服務](https://obsidian.md/sync)
 
 [LocalSend](https://localsend.org/) 讓你將檔案傳送到同一網路上執行該應用程式的其他裝置，就像 Apple 的 AirDrop。只是它是跨平台的，所以你可以在 Windows、macOS、Android、iOS，當然還有 Linux 之間互傳檔案。
 
-你可以用 `Super + Ctrl + S` 開啟 Share 選單，或從 Omarchy 選單的 _Trigger > Share_ 開啟。它提供四個選項：
+你可以用 `Super + Ctrl + S` 開啟 Share 選單，或從 Ve OS 選單的 _Trigger > Share_ 開啟。它提供四個選項：
 
 - **Clipboard** 會將你複製的任何內容以文字檔傳送。非常適合把連結或程式碼片段傳到手機上，而不必寄電子郵件給自己。
 - **File** 會開啟檔案選擇器，可一次選取多個檔案。
@@ -55,7 +55,7 @@ Obsidian 也提供 [用於同步的商業附加服務](https://obsidian.md/sync)
 
 你也可以直接從檔案管理員傳送：在 Nautilus 中對任何選取項目按右鍵，並選擇 _Send via LocalSend_。
 
-Omarchy 的防火牆預設為關閉狀態，僅開放 LocalSend 的連接埠，因此在全新安裝後即可直接使用。參見[安全性](48-security.md)。
+Ve OS 的防火牆預設為關閉狀態，僅開放 LocalSend 的連接埠，因此在全新安裝後即可直接使用。參見[安全性](48-security.md)。
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Omarchy 的防火牆預設為關閉狀態，僅開放 LocalSend 的連接埠，�
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) 是 Omarchy 自家 3D 西洋棋遊戲。在同一台電腦上和朋友對弈，或挑戰三種等級的內建對手，在四組各以獨特方式移動的雕刻棋組上遊玩：軌道飛行器、雕刻木材與象牙、森林生物，以及糖果。對局沒有計時，並在每一步後儲存。
+[Checkmate](https://github.com/omacom/checkmate) 是 Ve OS 自家 3D 西洋棋遊戲。在同一台電腦上和朋友對弈，或挑戰三種等級的內建對手，在四組各以獨特方式移動的雕刻棋組上遊玩：軌道飛行器、雕刻木材與象牙、森林生物，以及糖果。對局沒有計時，並在每一步後儲存。
 
 你透過應用程式啟動器 (`Super + Space`) 啟動 Checkmate，它在那裡以 Chess 的名稱列出。在裡面按 `?` 可查看每個快捷鍵。
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) 是 Omarchy 自家 Klondike 接龍。抽三張，且不限重新翻牌次數，在四組紙牌系列中遊玩：一組以你主題的顏色繪製，另外三組各有自己的外觀。點擊一張牌，再點擊它要去的位置，拖曳它，或雙擊將它送到最佳位置。遊戲在每一步後儲存。
+[Cards](https://github.com/omacom/cards) 是 Ve OS 自家 Klondike 接龍。抽三張，且不限重新翻牌次數，在四組紙牌系列中遊玩：一組以你主題的顏色繪製，另外三組各有自己的外觀。點擊一張牌，再點擊它要去的位置，拖曳它，或雙擊將它送到最佳位置。遊戲在每一步後儲存。
 
 你透過應用程式啟動器 (`Super + Space`) 啟動 Cards。點擊它的名稱，或按 `?`，可查看每個快捷鍵。
 
@@ -97,7 +97,7 @@ Omarchy 的防火牆預設為關閉狀態，僅開放 LocalSend 的連接埠，�
 
 [Signal](https://signal.org/) 是 E2E 加密通訊的先驅，對於任何不想透過大型科技集團的人來說，是一個很棒的通訊選項。
 
-你用 `Super + Shift + G` 啟動 Signal。它不在基本安裝內，所以第一次按下時，Omarchy 會提供為你安裝（也可以在 Omarchy 選單的 _Install > Service_ 底下找到）。
+你用 `Super + Shift + G` 啟動 Signal。它不在基本安裝內，所以第一次按下時，Ve OS 會提供為你安裝（也可以在 Ve OS 選單的 _Install > Service_ 底下找到）。
 
 ## Omaview
 

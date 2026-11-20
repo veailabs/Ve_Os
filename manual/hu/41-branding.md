@@ -1,6 +1,6 @@
 # Arculat
 
-Az Omarchy lehetővé teszi, hogy vállalati logót vagy személyes képet állíts be a rendszerindítási feloldáshoz, a képernyővédőhöz és a névjegy képernyőhöz is.
+Az Ve OS lehetővé teszi, hogy vállalati logót vagy személyes képet állíts be a rendszerindítási feloldáshoz, a képernyővédőhöz és a névjegy képernyőhöz is.
 
 ### Rendszerindítási feloldás
 
@@ -24,11 +24,11 @@ Három bejegyzés van abban a menüben:
 
 - A **Szöveg szerkesztése** megnyitja a `~/.config/omarchy/branding/screensaver.txt` fájlt a szerkesztődben. Írj vagy illessz be, amit csak akarsz — ASCII-művészetet, a nevedet, egy trágár szót. Ments és lépj ki, és a képernyővédő azonnal elindul, hogy megnézhesd.
 - A **Beállítás képből** megnyit egy fájlválasztót egy png vagy svg fájlhoz, átalakítja ASCII-vé, és megmutatja az eredményt. A jól kivehető sziluettel rendelkező logók sokkal jobban működnek, mint a fotók.
-- Az **Alapértelmezett visszaállítása** visszateszi az Omarchy logót.
+- Az **Alapértelmezett visszaállítása** visszateszi az Ve OS logót.
 
 ### Névjegy képernyő
 
-Ugyanez a három lehetőség található a _Megjelenés > Arculat > Névjegy_ alatt az Omarchy menüből elérhető _Névjegy_ képernyőhöz, és azonos módon működnek — a fájl a `~/.config/omarchy/branding/about.txt`, és a Névjegy ablak minden módosítás után felugrik. A névjegy grafikája kisebb méretre van átalakítva, mint a képernyővédőé, mivel egy ablakba kell beleférnie ahelyett, hogy kitöltené a kijelződet.
+Ugyanez a három lehetőség található a _Megjelenés > Arculat > Névjegy_ alatt az Ve OS menüből elérhető _Névjegy_ képernyőhöz, és azonos módon működnek — a fájl a `~/.config/omarchy/branding/about.txt`, és a Névjegy ablak minden módosítás után felugrik. A névjegy grafikája kisebb méretre van átalakítva, mint a képernyővédőé, mivel egy ablakba kell beleférnie ahelyett, hogy kitöltené a kijelződet.
 
 Amíg az ablak nyitva van, néhány másodpercenként egy zöld csillanás suhan át a grafikán, majd ismét mozdulatlanul hagyja. A saját grafikád is megkapja ezt, feltéve, hogy minden karaktere egy oszlop széles — minden, amit a _Beállítás képből_ létrehoz, ilyen. Az emojikból vagy dupla szélességű karakterekből épített grafikák ehelyett mozdulatlanok maradnak, és a képernyő is mozdulatlan marad, ha saját fastfetch konfigurációt tartasz meg: a mozdulatlan logó ezekben az esetekben azt jelenti, hogy az animáció félreáll az útból, nem pedig azt, hogy meghibásodott, mivel egy csillanás átcsúsztatása rajtuk a sor többi részét rossz helyre tenné.
 

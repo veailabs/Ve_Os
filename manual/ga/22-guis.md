@@ -20,7 +20,7 @@ Tá Obsidian saor in aisce chun gach críche, lena n-áirítear úsáid phearsan
 
 Cuireann Obsidian [breiseán tráchtála sioncronaithe](https://obsidian.md/sync) ar fáil freisin le haghaidh feidhmchlár soghluaiste ar iOS agus Android. (https://obsidian.md/pricing).
 
-Tosaíonn tú Obsidian le `Super + Shift + O`. Chun sioncronú téamaí a úsáid, ní mór duit an téama `Omarchy` a roghnú faoi na socruithe.
+Tosaíonn tú Obsidian le `Super + Shift + O`. Chun sioncronú téamaí a úsáid, ní mór duit an téama `Ve OS` a roghnú faoi na socruithe.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Tosaíonn tú Aether tríd an tosaitheoir feidhmchlár (`Super + Space`).
 
 Ligeann [LocalSend](https://localsend.org/) duit comhaid a sheoladh chuig gléasanna eile ar an líonra céanna a bhfuil an feidhmchlár á rith acu, cosúil le AirDrop de chuid Apple. Tá sé tras-ardáin, áfach, mar sin is féidir leat comhaid a sheoladh chuig Windows, macOS, Android, iOS agus, ar ndóigh, Linux, agus uathu.
 
-Is féidir leat an roghchlár Share a oscailt le `Super + Ctrl + S` nó faoi _Trigger > Share_ i roghchlár Omarchy. Tugann sé ceithre rogha duit:
+Is féidir leat an roghchlár Share a oscailt le `Super + Ctrl + S` nó faoi _Trigger > Share_ i roghchlár Ve OS. Tugann sé ceithre rogha duit:
 
 - **Clipboard** seolann sé cibé rud a chóipeáil tú mar chomhad téacs. Iontach chun nasc nó blúire a chur ar do ghuthán gan ríomhphost a sheoladh chugat féin.
 - **File** osclaíonn sé roghnóir comhad inar féidir leat roinnt a roghnú ag an am céanna.
@@ -55,7 +55,7 @@ Oibríonn an rud céanna ón teirminéal le `omarchy share clipboard`, `omarchy 
 
 Is féidir leat seoladh go díreach ón mbainisteoir comhad freisin: deaschliceáil ar aon rogha in Nautilus agus roghnaigh _Send via LocalSend_.
 
-Tá balla dóiteáin Omarchy dúnta de réir réamhshocraithe ach amháin i gcás phort LocalSend, mar sin oibríonn sé seo díreach as an mbosca ar shuiteáil úr. Féach [slándáil](48-security.md).
+Tá balla dóiteáin Ve OS dúnta de réir réamhshocraithe ach amháin i gcás phort LocalSend, mar sin oibríonn sé seo díreach as an mbosca ar shuiteáil úr. Féach [slándáil](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Tosaíonn tú Signed tríd an tosaitheoir feidhmchlár (`Super + Space`), nó os
 
 ## Checkmate
 
-Is é [Checkmate](https://github.com/omacom/checkmate) cluiche fichille 3D Omarchy féin. Imir le cara ar an ríomhaire céanna nó in aghaidh an chéile comhraic ionsuite ar thrí leibhéal, ar cheithre shraith shnoite a ghluaiseann gach ceann acu ar a bealach féin: árthaí fithiseacha, adhmad snoite agus eabhar, créatúir na coille, agus milseán. Níl clog ag cluichí agus sábhálann siad tar éis gach gluaiseachta.
+Is é [Checkmate](https://github.com/omacom/checkmate) cluiche fichille 3D Ve OS féin. Imir le cara ar an ríomhaire céanna nó in aghaidh an chéile comhraic ionsuite ar thrí leibhéal, ar cheithre shraith shnoite a ghluaiseann gach ceann acu ar a bealach féin: árthaí fithiseacha, adhmad snoite agus eabhar, créatúir na coille, agus milseán. Níl clog ag cluichí agus sábhálann siad tar éis gach gluaiseachta.
 
 Tosaíonn tú Checkmate tríd an tosaitheoir feidhmchlár (`Super + Space`), áit a bhfuil sé liostaithe mar Chess. Brúigh `?` istigh ann chun gach aicearra a fheiceáil.
 
 ## Cards
 
-Is é [Cards](https://github.com/omacom/cards) Klondike solitaire Omarchy féin. Tarraing trí chinn, gan aon teorainn le pasanna, i gceithre shraith cártaí: ceann amháin tarraingthe i ndathanna do théama, agus trí cinn a bhfuil cuma a gcuid féin orthu. Cliceáil cárta agus ansin an áit a dtéann sé, tarraing é, nó déchliceáil chun é a sheoladh chuig an áit is fearr. Sábhálann cluichí tar éis gach gluaiseachta.
+Is é [Cards](https://github.com/omacom/cards) Klondike solitaire Ve OS féin. Tarraing trí chinn, gan aon teorainn le pasanna, i gceithre shraith cártaí: ceann amháin tarraingthe i ndathanna do théama, agus trí cinn a bhfuil cuma a gcuid féin orthu. Cliceáil cárta agus ansin an áit a dtéann sé, tarraing é, nó déchliceáil chun é a sheoladh chuig an áit is fearr. Sábhálann cluichí tar éis gach gluaiseachta.
 
 Tosaíonn tú Cards tríd an tosaitheoir feidhmchlár (`Super + Space`). Cliceáil a ainm, nó brúigh `?`, chun gach aicearra a fheiceáil.
 
@@ -97,7 +97,7 @@ Tosaíonn tú Omacalc le `Super + Shift + Q` (nó an eochair áireamháin, má t
 
 Is é [Signal](https://signal.org/) ceannródaí na teachtaireachtaí criptithe E2E, agus is rogha chumarsáide iontach é d'aon duine ar fearr leis gan dul trí cheann de na ilchuideachtaí móra teicneolaíochta.
 
-Tosaíonn tú Signal le `Super + Shift + G`. Níl sé mar chuid den bhunsuiteáil, mar sin an chéad uair a bhrúnn tú é sin, tairgfidh Omarchy é a shuiteáil duit (tá sé faoi _Install > Service_ i roghchlár Omarchy freisin).
+Tosaíonn tú Signal le `Super + Shift + G`. Níl sé mar chuid den bhunsuiteáil, mar sin an chéad uair a bhrúnn tú é sin, tairgfidh Ve OS é a shuiteáil duit (tá sé faoi _Install > Service_ i roghchlár Ve OS freisin).
 
 ## Omaview
 

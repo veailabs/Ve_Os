@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy thường được điều khiển qua các phím tắt và menu Omarchy (`Super + Space`). Nhưng bạn cũng có thể điều khiển nó qua CLI `omarchy`. Điều này đặc biệt hữu ích khi bạn để một AI agent làm việc cùng bạn về tùy chỉnh hoặc cấu hình.
+Ve OS thường được điều khiển qua các phím tắt và menu Ve OS (`Super + Space`). Nhưng bạn cũng có thể điều khiển nó qua CLI `omarchy`. Điều này đặc biệt hữu ích khi bạn để một AI agent làm việc cùng bạn về tùy chỉnh hoặc cấu hình.
 
 CLI có quyền truy cập vào toàn bộ công cụ nội bộ được dùng cả qua menu và theo những cách khác. Bạn có thể xem mọi thứ có sẵn bằng cách chạy `omarchy` trong terminal.
 
@@ -8,7 +8,7 @@ Nó trông đại khái như thế này:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Để chẩn đoán, hãy chạy trực tiếp `omarchy-debug --no-sudo --print`. Nó in ra thông tin chẩn đoán và ghi vào `/tmp/omarchy-debug.log` mà không nhắc sudo, kể cả trên những bản cài đặt gói nơi `omarchy debug` có thể thất bại với "Unknown Omarchy command".
+Để chẩn đoán, hãy chạy trực tiếp `omarchy-debug --no-sudo --print`. Nó in ra thông tin chẩn đoán và ghi vào `/tmp/omarchy-debug.log` mà không nhắc sudo, kể cả trên những bản cài đặt gói nơi `omarchy debug` có thể thất bại với "Unknown Ve OS command".
 
 Và bạn có thể đào sâu hơn vào từng nhóm:
 
@@ -60,4 +60,4 @@ Mọi lệnh cũng đều nhận `--help`, dù bạn hỏi cả một nhóm (`om
 
 ### Mở menu từ terminal
 
-Menu Omarchy cũng có thể điều khiển bằng script, rất tiện cho các keybinding của riêng bạn. `omarchy menu` mở nó ở gốc, và bạn có thể nhảy thẳng tới bất kỳ điểm nào trong cây bằng cách gọi tên nó: `omarchy menu summon appearance.theme` đi thẳng tới trình chọn theme, `omarchy menu toggle system` mở menu hệ thống và đóng lại nếu nó đã đang mở, và `omarchy menu close` đóng nó đi.
+Menu Ve OS cũng có thể điều khiển bằng script, rất tiện cho các keybinding của riêng bạn. `omarchy menu` mở nó ở gốc, và bạn có thể nhảy thẳng tới bất kỳ điểm nào trong cây bằng cách gọi tên nó: `omarchy menu summon appearance.theme` đi thẳng tới trình chọn theme, `omarchy menu toggle system` mở menu hệ thống và đóng lại nếu nó đã đang mở, và `omarchy menu close` đóng nó đi.

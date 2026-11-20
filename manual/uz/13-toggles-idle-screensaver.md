@@ -1,10 +1,10 @@
 # Almashtirgichlar, bo'sh turish va ekran saqlagichi
 
-Kundalik o'zgartiradigan narsalaringizning ko'pi aslida sozlama emas. Bu bir soatga yoqib, keyin yana o'chirib qo'yadigan rejim: kech ishlayotganingizda tungi yorug'lik, taqdimot qilayotganingizda bezovta qilinmasin, biror narsa tomosha qilayotganingizda uyg'oq turish. Omarchy bularni almashtirgichlar deb ataydi va ularning barchasi bir xil ishlaydi — tezkor tugma, menyu bandi va buyruq, barchasi bitta kalitga tegadi.
+Kundalik o'zgartiradigan narsalaringizning ko'pi aslida sozlama emas. Bu bir soatga yoqib, keyin yana o'chirib qo'yadigan rejim: kech ishlayotganingizda tungi yorug'lik, taqdimot qilayotganingizda bezovta qilinmasin, biror narsa tomosha qilayotganingizda uyg'oq turish. Ve OS bularni almashtirgichlar deb ataydi va ularning barchasi bir xil ishlaydi — tezkor tugma, menyu bandi va buyruq, barchasi bitta kalitga tegadi.
 
 ### Almashtirgich menyusi
 
-`Super + Ctrl + O` to'g'ridan-to'g'ri _Trigger > Toggle_ ni ochadi yoki Omarchy menyusidan (`Super + Space`) u yerga o'tishingiz mumkin. O'sha ro'yxatdagi hamma narsa holat qayerda saqlanishi haqida o'ylamasdan almashtirishingiz mumkin bo'lgan kalit. Ish stoli qanday ko'rinishi uchun kalitlar uning yonida, _Appearance_ ostida joylashgan.
+`Super + Ctrl + O` to'g'ridan-to'g'ri _Trigger > Toggle_ ni ochadi yoki Ve OS menyusidan (`Super + Space`) u yerga o'tishingiz mumkin. O'sha ro'yxatdagi hamma narsa holat qayerda saqlanishi haqida o'ylamasdan almashtirishingiz mumkin bo'lgan kalit. Ish stoli qanday ko'rinishi uchun kalitlar uning yonida, _Appearance_ ostida joylashgan.
 
 Terminaldan xuddi shu kalitlar `omarchy toggle <thing>` ko'rinishida bo'ladi. Butun guruhni ko'rish uchun `omarchy toggle` ni o'zini ishga tushiring.
 
@@ -26,7 +26,7 @@ Sensor panel, sensor ekran va gibrid GPU kalitlari Toggle ostida emas, _Trigger 
 
 _Appearance_ menyu paneli va animatsiyalarni, shuningdek `omarchy toggle` buyruqlari bo'lmasa ham xuddi shunday ishlaydigan bir nechta narsani o'z ichiga oladi: paneldagi batareya foizi, standart ish maydoni tartibi va _Windows_ ostida oyna bo'shliqlari (`Super + Shift + Backspace`) hamda 1 oynali kvadrat nisbat (`Super + Ctrl + Backspace`).
 
-Hyprland chizish uchun GPU topa olmasa va buning o'rniga CPU da render qilsa (llvmpipe), masalan GPU si hali qo'llab-quvvatlanmaydigan Mac larda, aksariyat virtual mashinalarda yoki grafik drayver yuklanmasa, Omarchy o'sha sessiya uchun animatsiyalar, xiralashtirish va soyalarni o'chiradi va bu haqda bir marta bildirishnoma bilan xabar beradi. _Appearance > Animations On_ ularni qaytaradi va Omarchy buni keyingi sessiyalar uchun ham eslab qoladi.
+Hyprland chizish uchun GPU topa olmasa va buning o'rniga CPU da render qilsa (llvmpipe), masalan GPU si hali qo'llab-quvvatlanmaydigan Mac larda, aksariyat virtual mashinalarda yoki grafik drayver yuklanmasa, Ve OS o'sha sessiya uchun animatsiyalar, xiralashtirish va soyalarni o'chiradi va bu haqda bir marta bildirishnoma bilan xabar beradi. _Appearance > Animations On_ ularni qaytaradi va Ve OS buni keyingi sessiyalar uchun ham eslab qoladi.
 
 Bularning aksariyati `~/.local/state/omarchy/toggles/` ostidagi shunchaki bayroq fayli. Agar skriptda ulardan biriga qarab shart tekshirmoqchi bo'lsangiz, `omarchy-toggle-enabled` sizni izlab yurishingizga majbur qilmasdan chiqish kodini beradi:
 
@@ -63,11 +63,11 @@ Keyin tizimga kirishda hyprsunset ni ishga tushirish uchun `~/.config/hypr/autos
 
 Hech narsa yo'qolmaydi. O'chirilgan bildirishnomalar ushlab turiladi: oxirgi bir nechtasini `Super + Shift + Alt + ,` bilan ekranga qaytaring. Qolganlari uchun [xabarlar](10-notices.md) ga qarang.
 
-Ikki turdagi xabar baribir o'tadi: hozirgina qilgan ishingiz uchun Omarchy ning o'z tasdiq xabarlari ("Theme changed", "Screenshot saved") va buyruq satridan yuborilgan muhim ogohlantirishlar. Hamma narsani sizning oldingizga majburlab chiqish uchun muhim deb belgilaydigan chat ilovalari bunga kirmaydi.
+Ikki turdagi xabar baribir o'tadi: hozirgina qilgan ishingiz uchun Ve OS ning o'z tasdiq xabarlari ("Theme changed", "Screenshot saved") va buyruq satridan yuborilgan muhim ogohlantirishlar. Hamma narsani sizning oldingizga majburlab chiqish uchun muhim deb belgilaydigan chat ilovalari bunga kirmaydi.
 
 ### Bo'sh turish
 
-Omarchy qobig'i bo'sh turish xatti-harakatiga egalik qiladi va vaqtlar `~/.config/omarchy/shell.json` dagi yuqori darajadagi `idle` blokida bo'ladi:
+Ve OS qobig'i bo'sh turish xatti-harakatiga egalik qiladi va vaqtlar `~/.config/omarchy/shell.json` dagi yuqori darajadagi `idle` blokida bo'ladi:
 
 ```json
 {
@@ -89,16 +89,16 @@ Bu qulflash va ekran saqlagichi haqida, quvvat haqida emas. To'xtatib turish va 
 
 ### Ekran saqlagichi
 
-Omarchy ekran saqlagichi tasodifiy matn effektlari orqali o'tadigan ASCII san'ati bo'lib, har bir monitor uchun bitta nusxadan ishlaydi. Har qanday tugma yoki sichqoncha harakati undan chiqadi.
+Ve OS ekran saqlagichi tasodifiy matn effektlari orqali o'tadigan ASCII san'ati bo'lib, har bir monitor uchun bitta nusxadan ishlaydi. Har qanday tugma yoki sichqoncha harakati undan chiqadi.
 
 Uni talab bo'yicha _System > Screensaver_ (`Super + Esc`) dan ishga tushirishingiz mumkin, bu bo'sh turgandagi ekran saqlagichini o'chirib qo'ygan bo'lsangiz ham uni majburan chiqaradi. Standart holatda unga hech qanday tezkor tugma biriktirilmagan.
 
 Agar ishlashdan to'g'ridan-to'g'ri qulflangan holatga o'tishni afzal ko'rsangiz, `omarchy toggle screensaver` bo'sh turgandagi ekran saqlagichini o'chiradi. Har qanday tugma, bosish, aylantirish yoki sichqoncha harakati uni yopadi.
 
-U chizadigan logotipni _Appearance > Branding > Screensaver_ ostida o'zgartirishingiz mumkin. png yoki svg yuklang va Omarchy uni ASCII ga aylantiradi. [brending](41-branding.md) ga qarang.
+U chizadigan logotipni _Appearance > Branding > Screensaver_ ostida o'zgartirishingiz mumkin. png yoki svg yuklang va Ve OS uni ASCII ga aylantiradi. [brending](41-branding.md) ga qarang.
 
 ### Qulflash ekrani
 
-`Super + Ctrl + L` mashinani qulflaydi. Bu Omarchy qobig'idan qulflash ekranini ishga tushiradi, displeyni qoraytiradi, parolingizni noto'g'ri alifboda yozmasligingiz uchun klaviatura tartibingizni birinchisiga qaytaradi va — agar u ishlayotgan bo'lsa — chiqishda 1Password ni qulflaydi.
+`Super + Ctrl + L` mashinani qulflaydi. Bu Ve OS qobig'idan qulflash ekranini ishga tushiradi, displeyni qoraytiradi, parolingizni noto'g'ri alifboda yozmasligingiz uchun klaviatura tartibingizni birinchisiga qaytaradi va — agar u ishlayotgan bo'lsa — chiqishda 1Password ni qulflaydi.
 
 Qulflash ekrani parolni qabul qiladi va siz barmoq izini sozlaganingizdan keyin uni ham qabul qiladi. Bu va autentifikatsiyaning boshqa usullari [uskuna autentifikatsiyasi](37-hardware-authentication.md) da yoritilgan.

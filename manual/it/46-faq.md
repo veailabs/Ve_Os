@@ -28,7 +28,7 @@ Verrà visualizzato Domenica 10:55 AM.
 
 ### Come faccio a cambiare il mio fuso orario?
 
-Esegui _Aggiorna > Fuso orario_ nel menu di Omarchy e scegli dall'elenco. Se il fuso orario è giusto ma l'orologio stesso è sfasato, _Aggiorna > Ora_ riavvia per te la sincronizzazione dell'ora.
+Esegui _Aggiorna > Fuso orario_ nel menu di Ve OS e scegli dall'elenco. Se il fuso orario è giusto ma l'orologio stesso è sfasato, _Aggiorna > Ora_ riavvia per te la sincronizzazione dell'ora.
 
 ### Come faccio a cambiare il mio DNS, condividere il mio Wi-Fi o controllare la velocità della mia connessione?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Puoi fare lo stesso per le registrazioni dello schermo usando `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap crea automaticamente la sua directory per gli screenshot. Crea tu stesso la directory per le registrazioni dello schermo, poi riavvia Omarchy affinché entrambe le modifiche alle variabili d'ambiente abbiano effetto.
+Omasnap crea automaticamente la sua directory per gli screenshot. Crea tu stesso la directory per le registrazioni dello schermo, poi riavvia Ve OS affinché entrambe le modifiche alle variabili d'ambiente abbiano effetto.
 
 ### Come faccio a far funzionare altoparlanti + webcam sul mio Apple Studio Display?
 
 Si penserebbe che debba funzionare tutto semplicemente collegando l'USB C, ma purtroppo non è così. La soluzione che ho trovato per farlo funzionare in modo affidabile è usare [il cavo WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Allora altoparlanti e webcam funzionano alla perfezione.
 
-Ricorda che in Omarchy hai il controllo integrato della luminosità per i display Apple (sia Studio che XDR) usando i normali tasti della luminosità sulla tastiera.
+Ricorda che in Ve OS hai il controllo integrato della luminosità per i display Apple (sia Studio che XDR) usando i normali tasti della luminosità sulla tastiera.
 
 ### Come faccio a sbarazzarmi di tutto il software extra?
 
@@ -72,7 +72,7 @@ Se non vuoi programmi come Obsidian o LibreOffice o qualsiasi altro software pre
 
 Esegui _Rimuovi > Pacchetto_ per vedere ogni pacchetto installato. Poi puoi selezionare qualsiasi pacchetto che desideri rimuovere con tab, e iniziare a rimuovere tutto ciò che hai selezionato con return.
 
-E puoi usare _Rimuovi > Web App_ dal menu di Omarchy per rimuovere qualsiasi web app preinstallata che non vuoi.
+E puoi usare _Rimuovi > Web App_ dal menu di Ve OS per rimuovere qualsiasi web app preinstallata che non vuoi.
 
 Oppure esegui _Rimuovi > Preinstallati_ per eliminare in un colpo solo tutti gli extra preinstallati — web app, TUI e applicazioni opzionali. I tasti di scelta rapida che le avviavano spariscono con esse, così ti resta una serie pulita di associazioni da riempire con le tue in `~/.config/hypr/bindings.lua`.
 

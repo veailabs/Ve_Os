@@ -1,4 +1,6 @@
-# Installazioni senza intervento
+# Ve OS — Installazioni senza intervento
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 L'ISO di Omarchy può installarsi da sola, senza nessuno alla tastiera. Se il programma di installazione trova una seconda unità etichettata `cidata` contenente i suoi file di configurazione, li copia, salta completamente la procedura guidata di configurazione e si riavvia da sola nel sistema finito. Nessuna build speciale dell'ISO, nessuna voce aggiuntiva nel menu di avvio: senza un'unità di questo tipo collegata, non cambia nulla e ottieni la normale procedura guidata.
 

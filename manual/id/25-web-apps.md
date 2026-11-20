@@ -1,10 +1,10 @@
 # Aplikasi Web
 
-Kamu bisa menambahkan aplikasi webmu sendiri menggunakan _Install > Web App_ di menu Omarchy (`Super + Space`). Aplikasi ini akan menanyakan nama aplikasi, URL aplikasi, dan URL ikon, jika tidak bisa mengambilnya melalui favicon. Kamu bisa mendapatkan ikon PNG yang bagus untuk banyak aplikasi web populer di [Dashboard Icons](https://dashboardicons.com).
+Kamu bisa menambahkan aplikasi webmu sendiri menggunakan _Install > Web App_ di menu Ve OS (`Super + Space`). Aplikasi ini akan menanyakan nama aplikasi, URL aplikasi, dan URL ikon, jika tidak bisa mengambilnya melalui favicon. Kamu bisa mendapatkan ikon PNG yang bagus untuk banyak aplikasi web populer di [Dashboard Icons](https://dashboardicons.com).
 
 Aplikasi-aplikasi tersebut kemudian bisa diakses melalui peluncur aplikasi (`Super + Space`), dan menggunakan jendela aplikasi web tanpa bingkai yang indah.
 
-Jika kamu ingin menghapus sebuah aplikasi web, cukup buka _Remove > Web App_ di menu Omarchy.
+Jika kamu ingin menghapus sebuah aplikasi web, cukup buka _Remove > Web App_ di menu Ve OS.
 
 Sebaiknya kamu masuk ke semua akunmu menggunakan browser biasa sebelum menggunakan pintasan aplikasi web. Bingkai pembungkus tipisnya tidak bekerja dengan baik bersama 1password, jadi lebih mudah jika kamu sudah masuk secara langsung terlebih dahulu.
 
@@ -12,7 +12,7 @@ Semua hotkey keyboard untuk aplikasi web ini bisa diubah di `~/.config/hypr/bind
 
 Saat kamu berada di dalam aplikasi web, kamu bisa menyalin URL saat ini ke clipboard menggunakan `Shift + Alt + L`.
 
-Secara default, Omarchy sudah dilengkapi dengan berbagai aplikasi default:
+Secara default, Ve OS sudah dilengkapi dengan berbagai aplikasi default:
 
 ## HEY
 
@@ -64,7 +64,7 @@ Kamu bisa memulai YouTube menggunakan `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) adalah sistem obrolan video paling populer yang digunakan di AS. Koneksi yang bagus di seluruh dunia. Dan rapat selama 40 menit bisa diadakan tanpa akun berbayar. Omarchy membungkus klien web Zoom, dan tautan rapat Zoom akan langsung terbuka di dalamnya.
+[Zoom](https://zoom.us/) adalah sistem obrolan video paling populer yang digunakan di AS. Koneksi yang bagus di seluruh dunia. Dan rapat selama 40 menit bisa diadakan tanpa akun berbayar. Ve OS membungkus klien web Zoom, dan tautan rapat Zoom akan langsung terbuka di dalamnya.
 
 Kamu memulai Zoom menggunakan peluncur aplikasi (`Super + Space`).
 
@@ -76,7 +76,7 @@ Kamu memulai Discord menggunakan peluncur aplikasi (`Super + Space`).
 
 ## Aplikasi Microsoft
 
-Pilih _Install > Service > Microsoft_ untuk menambahkan Outlook, Word, Excel, PowerPoint, Teams, dan OneDrive sebagai aplikasi web. Setiap aplikasi memiliki peluncurnya sendiri dan terbuka secara langsung, menggunakan URL Microsoft 365 komersial dan profil browser kamu yang sudah ada. Aplikasi-aplikasi tersebut terbuka di jendela aplikasi browser yang sama seperti aplikasi web Omarchy lainnya; mereka tidak menginstal klien Teams for Linux yang terpisah.
+Pilih _Install > Service > Microsoft_ untuk menambahkan Outlook, Word, Excel, PowerPoint, Teams, dan OneDrive sebagai aplikasi web. Setiap aplikasi memiliki peluncurnya sendiri dan terbuka secara langsung, menggunakan URL Microsoft 365 komersial dan profil browser kamu yang sudah ada. Aplikasi-aplikasi tersebut terbuka di jendela aplikasi browser yang sama seperti aplikasi web Ve OS lainnya; mereka tidak menginstal klien Teams for Linux yang terpisah.
 
 Hapus bundel tersebut dengan _Remove > Service > Microsoft_, atau hapus aplikasi satu per satu dengan _Remove > Web App_. Kamu juga bisa menginstal hanya aplikasi yang kamu inginkan melalui _Install > Web App_.
 
@@ -88,4 +88,4 @@ Untuk menjaga login pekerjaan tetap terpisah, tambahkan direktori data browser k
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Ganti direktori contoh dengan path absolut pilihan kamu dan gunakan path yang sama untuk keenam peluncur agar bisa berbagi login pekerjaan di antara mereka. Aplikasi web ini menggunakan browser yang didukung yang telah dipilih Omarchy, dan akan menggunakan Chrome sebagai cadangan jika browser default tidak didukung.
+Ganti direktori contoh dengan path absolut pilihan kamu dan gunakan path yang sama untuk keenam peluncur agar bisa berbagi login pekerjaan di antara mereka. Aplikasi web ini menggunakan browser yang didukung yang telah dipilih Ve OS, dan akan menggunakan Chrome sebagai cadangan jika browser default tidak didukung.

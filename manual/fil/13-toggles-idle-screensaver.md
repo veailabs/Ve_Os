@@ -1,10 +1,10 @@
 # Mga Toggle, Idle at ang Screensaver
 
-Marami sa binabago mo araw-araw ay hindi talaga setting. Isa itong mode na bubuksan mo sa loob ng isang oras at papatayin ulit: night light habang nagtatrabaho ka nang gabing-gabi, do not disturb habang nagpe-present ka, manatiling gising habang may pinapanood ka. Tinatawag iyan ng Omarchy na mga toggle, at pare-pareho ang paggana ng lahat ng iyon — isang hotkey, isang entry sa menu, at isang command, lahat tumatama sa iisang switch.
+Marami sa binabago mo araw-araw ay hindi talaga setting. Isa itong mode na bubuksan mo sa loob ng isang oras at papatayin ulit: night light habang nagtatrabaho ka nang gabing-gabi, do not disturb habang nagpe-present ka, manatiling gising habang may pinapanood ka. Tinatawag iyan ng Ve OS na mga toggle, at pare-pareho ang paggana ng lahat ng iyon — isang hotkey, isang entry sa menu, at isang command, lahat tumatama sa iisang switch.
 
 ### Ang menu ng toggle
 
-Direktang binubuksan ng `Super + Ctrl + O` ang _Trigger > Toggle_, o makakapunta ka roon sa paglalakad mula sa menu ng Omarchy (`Super + Space`). Lahat ng nasa listahang iyon ay switch na maaari mong i-flip nang hindi iniisip kung saan nakatira ang state. Katabi nito ang mga switch para sa hitsura ng desktop, sa ilalim ng _Appearance_.
+Direktang binubuksan ng `Super + Ctrl + O` ang _Trigger > Toggle_, o makakapunta ka roon sa paglalakad mula sa menu ng Ve OS (`Super + Space`). Lahat ng nasa listahang iyon ay switch na maaari mong i-flip nang hindi iniisip kung saan nakatira ang state. Katabi nito ang mga switch para sa hitsura ng desktop, sa ilalim ng _Appearance_.
 
 Mula sa terminal, ang parehong mga switch ay `omarchy toggle <thing>`. Patakbuhin ang `omarchy toggle` nang mag-isa para makita ang buong grupo.
 
@@ -26,7 +26,7 @@ Ang mga switch ng touchpad, touchscreen, at hybrid GPU ay nasa ilalim ng _Trigge
 
 Hawak ng _Appearance_ ang menu bar at mga animation, pati ilang bagay na hindi mga command na `omarchy toggle` pero pareho ang kilos: ang porsyento ng baterya sa bar, ang default na layout ng workspace, at sa ilalim ng _Windows_, ang mga gap ng window (`Super + Shift + Backspace`) at ang 1-window square aspect (`Super + Ctrl + Backspace`).
 
-Kapag walang GPU ang Hyprland na magagamit para mag-draw at sa CPU ito nagre-render sa halip (llvmpipe), gaya sa mga Mac na hindi pa suportado ang GPU, sa karamihan ng mga virtual machine, o kapag nabigong mag-load ang isang graphics driver, pinapatay ng Omarchy ang mga animation, blur at shadow para sa session na iyon at isang beses ka nitong sasabihan gamit ang isang notification. Ibinabalik sila ng _Appearance > Animations On_, at naaalala rin iyon ng Omarchy para sa mga susunod na session.
+Kapag walang GPU ang Hyprland na magagamit para mag-draw at sa CPU ito nagre-render sa halip (llvmpipe), gaya sa mga Mac na hindi pa suportado ang GPU, sa karamihan ng mga virtual machine, o kapag nabigong mag-load ang isang graphics driver, pinapatay ng Ve OS ang mga animation, blur at shadow para sa session na iyon at isang beses ka nitong sasabihan gamit ang isang notification. Ibinabalik sila ng _Appearance > Animations On_, at naaalala rin iyon ng Ve OS para sa mga susunod na session.
 
 Karamihan sa mga ito ay isang flag file lang sa ilalim ng `~/.local/state/omarchy/toggles/`. Kung gusto mong mag-branch batay sa isa nito sa isang script, bibigyan ka ng `omarchy-toggle-enabled` ng exit code sa halip na paghanapin ka pa:
 
@@ -63,11 +63,11 @@ Pinapatahimik ng `Super + Ctrl + Alt + ,` ang mga notification. Walang toast na 
 
 Wala namang mawawala, gayunman. Hinohold back ang mga pinatahimik na notification: ibalik ang huling ilan sa screen gamit ang `Super + Shift + Alt + ,`. Tingnan ang [mga notice](10-notices.md) para sa iba pa.
 
-Dalawang uri ng mensahe ang nakakalusot pa rin: ang sariling mga confirmation toast ng Omarchy para sa isang bagay na kakagawa mo lang ("Theme changed", "Screenshot saved"), at mga critical alert na ipinadala mula sa command line. Hindi kwalipikado ang mga chat app na ginagawang critical ang lahat para piliting makaharap sa iyo.
+Dalawang uri ng mensahe ang nakakalusot pa rin: ang sariling mga confirmation toast ng Ve OS para sa isang bagay na kakagawa mo lang ("Theme changed", "Screenshot saved"), at mga critical alert na ipinadala mula sa command line. Hindi kwalipikado ang mga chat app na ginagawang critical ang lahat para piliting makaharap sa iyo.
 
 ### Idle
 
-Pagmamay-ari ng Omarchy shell ang idle behavior, at ang mga timing ay isang top-level na `idle` block sa `~/.config/omarchy/shell.json`:
+Pagmamay-ari ng Ve OS shell ang idle behavior, at ang mga timing ay isang top-level na `idle` block sa `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Tungkol ito sa pag-lock at sa screensaver, hindi sa power. May sariling setup an
 
 ### Ang screensaver
 
-Ang screensaver ng Omarchy ay ASCII art na tumatakbo sa mga random na text effect, isang instance bawat monitor. Anumang key o galaw ng mouse ang magpapalabas dito.
+Ang screensaver ng Ve OS ay ASCII art na tumatakbo sa mga random na text effect, isang instance bawat monitor. Anumang key o galaw ng mouse ang magpapalabas dito.
 
 Maaari mo itong simulan on demand mula sa _System > Screensaver_ (`Super + Esc`), na pipilitin itong lumabas kahit pinatay mo ang idle screensaver. Walang hotkey na nakabind dito bilang default.
 
 Ang `omarchy toggle screensaver` ang nagpapatay sa idle na isa, kung mas gusto mong dumiretso mula sa pagtatrabaho patungo sa naka-lock. Anumang key, click, scroll o galaw ng mouse ang magsasara dito.
 
-Ang logo na dino-draw nito ay sa iyo para baguhin, sa ilalim ng _Appearance > Branding > Screensaver_. Mag-upload ng png o svg at iko-convert ito ng Omarchy sa ASCII. Tingnan ang [branding](41-branding.md).
+Ang logo na dino-draw nito ay sa iyo para baguhin, sa ilalim ng _Appearance > Branding > Screensaver_. Mag-upload ng png o svg at iko-convert ito ng Ve OS sa ASCII. Tingnan ang [branding](41-branding.md).
 
 ### Ang lock screen
 
-Ang `Super + Ctrl + L` ang nagla-lock sa machine. Pinapatakbo niyon ang lock screen mula sa Omarchy shell, bina-blank ang display, nire-reset ang keyboard layout mo sa una para hindi mo mai-type ang password mo sa maling alpabeto, at — kung pinapatakbo mo ito — nila-lock ang 1Password palabas.
+Ang `Super + Ctrl + L` ang nagla-lock sa machine. Pinapatakbo niyon ang lock screen mula sa Ve OS shell, bina-blank ang display, nire-reset ang keyboard layout mo sa una para hindi mo mai-type ang password mo sa maling alpabeto, at — kung pinapatakbo mo ito — nila-lock ang 1Password palabas.
 
 Tumatanggap ang lock screen ng password, at tatanggap din ito ng fingerprint kapag nakapag-set up ka na ng isa. Iyon, at ang iba pang paraan para mag-authenticate, ay sakop sa [hardware authentication](37-hardware-authentication.md).

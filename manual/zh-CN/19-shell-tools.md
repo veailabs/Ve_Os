@@ -1,6 +1,6 @@
 # Shell 工具
 
-除了标准的 Linux 工具，Omarchy 还自带一大堆增强的 shell 工具。以下是关键的几个。
+除了标准的 Linux 工具，Ve OS 还自带一大堆增强的 shell 工具。以下是关键的几个。
 
 ## fzf
 
@@ -58,4 +58,4 @@
 
 [try](https://github.com/tobi/try) 让你轻松管理带日期戳目录的编程实验。所有实验都放在 `~/Work/tries` 中，你可以通过 `try` 访问它们。
 
-Omarchy 不会自动将项目的 `bin/` 目录添加到 `PATH`。运行受信任的项目本地工具时使用显式相对路径，例如 `bin/rails` 或 `./bin/dev`。
+Ve OS 不会自动将项目的 `bin/` 目录添加到 `PATH`。运行受信任的项目本地工具时使用显式相对路径，例如 `bin/rails` 或 `./bin/dev`。

@@ -1,14 +1,14 @@
 # Górny pasek
 
-Pasek biegnący wzdłuż górnej krawędzi ekranu to pasek Omarchy. Nie jest dokręconym paskiem stanu, lecz częścią powłoki Omarchy, jednego długo działającego procesu Quickshell, który rysuje też menu, powiadomienia, wyskakujące okna OSD i ekran blokady. Dlatego idealnie współgra motywem z całą resztą i dlatego panel otwiera się natychmiast, zamiast uruchamiać nową aplikację.
+Pasek biegnący wzdłuż górnej krawędzi ekranu to pasek Ve OS. Nie jest dokręconym paskiem stanu, lecz częścią powłoki Ve OS, jednego długo działającego procesu Quickshell, który rysuje też menu, powiadomienia, wyskakujące okna OSD i ekran blokady. Dlatego idealnie współgra motywem z całą resztą i dlatego panel otwiera się natychmiast, zamiast uruchamiać nową aplikację.
 
 To także jedyny element pulpitu, który jest zawsze na ekranie, więc warto wiedzieć, co robią wszystkie te małe glify.
 
 ## Co jest na nim domyślnie
 
-Pasek ma trzy sekcje. Po lewej siedzi logo Omarchy (program uruchamiający menu) i wskaźniki obszarów roboczych. Na środku masz wskaźniki stanu, zegar, Elsewhen (zegar światowy), pogodę i odznakę aktualizacji Omarchy. Po prawej: zasobnik systemowy, układ klawiatury (gdy skonfigurowano więcej niż jeden), agenci, bluetooth, sieć, dźwięk, wyświetlacz i zasilanie.
+Pasek ma trzy sekcje. Po lewej siedzi logo Ve OS (program uruchamiający menu) i wskaźniki obszarów roboczych. Na środku masz wskaźniki stanu, zegar, Elsewhen (zegar światowy), pogodę i odznakę aktualizacji Ve OS. Po prawej: zasobnik systemowy, układ klawiatury (gdy skonfigurowano więcej niż jeden), agenci, bluetooth, sieć, dźwięk, wyświetlacz i zasilanie.
 
-Kilka z nich pokazuje się tylko wtedy, gdy ma coś do powiedzenia. Układ klawiatury pojawia się tylko, jeśli skonfigurowano więcej niż jeden układ. Odznaka aktualizacji pojawia się tylko, gdy czeka aktualizacja Omarchy. A ikona agentów pojawia się, gdy Omarchy po raz pierwszy znajdzie na maszynie użycie agentów AI do kodowania (zobacz [AI](17-ai.md)).
+Kilka z nich pokazuje się tylko wtedy, gdy ma coś do powiedzenia. Układ klawiatury pojawia się tylko, jeśli skonfigurowano więcej niż jeden układ. Odznaka aktualizacji pojawia się tylko, gdy czeka aktualizacja Ve OS. A ikona agentów pojawia się, gdy Ve OS po raz pierwszy znajdzie na maszynie użycie agentów AI do kodowania (zobacz [AI](17-ai.md)).
 
 ## Klikanie
 
@@ -16,7 +16,7 @@ Niemal każdy widżet robi coś po kliknięciu lewym, prawym i środkowym przyci
 
 | Widżet | Lewy | Prawy | Środkowy / przewijanie |
 | --- | --- | --- | --- |
-| Menu | Menu Omarchy | Nowy terminal | — |
+| Menu | Menu Ve OS | Nowy terminal | — |
 | Obszary robocze | Aktywuj ten obszar roboczy na tym monitorze | — | Przewijanie: następny/poprzedni obszar roboczy |
 | Zegar | Wyskakujące okno kalendarza | Przełącz format etykiety | Środkowy: wybór strefy czasowej |
 | Pogoda | Wyskakujące okno prognozy | Pełna pogoda jako powiadomienie | Środkowy: odśwież |
@@ -29,7 +29,7 @@ Niemal każdy widżet robi coś po kliknięciu lewym, prawym i środkowym przyci
 | Multimedia | Odtwórz/wstrzymaj | Wyskakujące okno okładki | Środkowy: następny · przewijanie: poprzedni/następny |
 | Agenci | Panel agentów | Uruchom swojego agenta | Środkowy: następna subskrypcja |
 | Zasobnik | Najechanie odsłania szufladę | Prawy przycisk na strzałce: zarządzanie | — |
-| Aktualizacja Omarchy | Uruchom aktualizację | — | — |
+| Aktualizacja Ve OS | Uruchom aktualizację | — | — |
 
 Nie wszystko z tej tabeli jest od razu na pasku. Widżet multimediów (MPRIS — teraz odtwarzane, z przewijającym się utworem i artystą) oraz widżet mikrofonu są wbudowane, ale domyślnie wyłączone — dodaj je, jeśli ich chcesz, jak opisano poniżej.
 
@@ -137,6 +137,6 @@ Każdy widżet to jeden wpis w jednej z pięciu tablic układu, a jego ustawieni
 
 `center` to pudełko na środku paska: wszystko w nim jest wyśrodkowane na ekranie jako jedna grupa. `centerBegin` i `centerEnd` zwisają po obu stronach pudełka, dzięki czemu zegar pozostaje dokładnie na środku, nawet gdy pogoda i odznaka aktualizacji pojawiają się i znikają. Umieść więcej niż jeden widżet w `center`, a będą wyśrodkowane razem; zostaw je puste, a `centerBegin` i `centerEnd` spotkają się na środku paska.
 
-Jedna zasada, którą warto przyswoić: **gdy jest własny `shell.json`, jest on kanoniczny**. Dopóki niczego nie zmienisz, powłoka odczytuje domyślny plik Omarchy. W chwili, gdy przeciągniesz widżet, uruchomisz `omarchy bar` lub samodzielnie wyedytujesz plik, należy on do Ciebie — nie ma głębokiego scalania, więc nowe domyślne widżety w przyszłych wydaniach Omarchy nie pojawią się na Twoim pasku automatycznie. `omarchy bar defaults` przywraca dostarczony układ zawsze, gdy chcesz mieć czystą kartę.
+Jedna zasada, którą warto przyswoić: **gdy jest własny `shell.json`, jest on kanoniczny**. Dopóki niczego nie zmienisz, powłoka odczytuje domyślny plik Ve OS. W chwili, gdy przeciągniesz widżet, uruchomisz `omarchy bar` lub samodzielnie wyedytujesz plik, należy on do Ciebie — nie ma głębokiego scalania, więc nowe domyślne widżety w przyszłych wydaniach Ve OS nie pojawią się na Twoim pasku automatycznie. `omarchy bar defaults` przywraca dostarczony układ zawsze, gdy chcesz mieć czystą kartę.
 
 Ten sam plik przechowuje też czasy bezczynności na najwyższym poziomie, poza kluczem `bar`: `idle.screensaver` i `idle.lock`, oba w sekundach od przejścia w stan bezczynności. Domyślny wygaszacz ekranu uruchamia się więc po 150 sekundach, a blokada po 300.

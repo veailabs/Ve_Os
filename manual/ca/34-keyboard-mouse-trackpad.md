@@ -1,6 +1,6 @@
 # Teclat, ratolí i panell tàctil
 
-Hyprland et permet configurar totes les entrades amb molt de detall. Pots fer que la repetició del teclat sigui supersònicament ràpida o que el panell tàctil utilitzi el desplaçament natural. Tot això ho canvies a `~/.config/hypr/input.lua`, al qual també pots arribar mitjançant _Configuració > Entrada_ al menú d'Omarchy (`Super + Space`). Qualsevol cosa que hi defineixis substitueix els valors predeterminats d'Omarchy.
+Hyprland et permet configurar totes les entrades amb molt de detall. Pots fer que la repetició del teclat sigui supersònicament ràpida o que el panell tàctil utilitzi el desplaçament natural. Tot això ho canvies a `~/.config/hypr/input.lua`, al qual també pots arribar mitjançant _Configuració > Entrada_ al menú d'Ve OS (`Super + Space`). Qualsevol cosa que hi defineixis substitueix els valors predeterminats d'Ve OS.
 
 Aquí tens un exemple:
 
@@ -59,7 +59,7 @@ Fes lliscar els dits pel panell tàctil per moure't per l'escriptori:
 | --- | --- |
 | Tres dits a l'esquerra / a la dreta | Espai de treball anterior / següent, incloent-hi els buits |
 | Tres dits cap amunt | Activa o desactiva la consola d'IA |
-| Tres dits cap avall | Obre el menú d'Omarchy |
+| Tres dits cap avall | Obre el menú d'Ve OS |
 | Quatre dits a l'esquerra / a la dreta | Mou la finestra activa a l'espai de treball anterior / següent |
 | Quatre dits cap avall | Activa o desactiva la pantalla completa |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Per desactivar tots els gestos d'Omarchy, defineix `omarchy_default_gestures = false` a prop de la part superior de `~/.config/hypr/hyprland.lua`, abans que es carreguin els valors predeterminats d'Omarchy.
+Per desactivar tots els gestos d'Ve OS, defineix `omarchy_default_gestures = false` a prop de la part superior de `~/.config/hypr/hyprland.lua`, abans que es carreguin els valors predeterminats d'Ve OS.
 
 En portàtils Dell XPS amb un panell tàctil hàptic, també pots definir la força del clic com a baixa, mitjana o alta a _Activador > Maquinari > Hàptica del panell tàctil_.
 
 ### Escriure en xinès, japonès i altres llengües
 
-Selecciona japonès, coreà, xinès (simplificat, Pinyin), Taiwan (Zhuyin) o Hong Kong (Cangjie) quan l'instal·lador et demani el teclat. Omarchy configura automàticament el teclat i el motor d'entrada corresponent, també durant la configuració sense connexió de la primera arrencada. El japonès utilitza Mozc, el coreà utilitza Hangul estàndard de dos conjunts, el xinès simplificat utilitza Pinyin, Taiwan utilitza la disposició Zhuyin estàndard de Chewing i Hong Kong utilitza Cangjie amb les formes de caràcters de Hong Kong. Japonès (teclat US) proporciona Mozc amb una disposició de teclat US. Les tecles de Hangul, Zhuyin i Cangjie es mantenen en les seves posicions estàndard fins i tot quan escrius lletres llatines amb Dvorak, Colemak o AZERTY. Si havies afegit Hangul o Chewing abans d'això, desselecciona'l i torna'l a seleccionar a _Configuració > Teclat > Mètodes d'entrada_ per moure-hi les seves tecles; Omarchy deixa tranquil un motor amb el qual ja escrius.
+Selecciona japonès, coreà, xinès (simplificat, Pinyin), Taiwan (Zhuyin) o Hong Kong (Cangjie) quan l'instal·lador et demani el teclat. Ve OS configura automàticament el teclat i el motor d'entrada corresponent, també durant la configuració sense connexió de la primera arrencada. El japonès utilitza Mozc, el coreà utilitza Hangul estàndard de dos conjunts, el xinès simplificat utilitza Pinyin, Taiwan utilitza la disposició Zhuyin estàndard de Chewing i Hong Kong utilitza Cangjie amb les formes de caràcters de Hong Kong. Japonès (teclat US) proporciona Mozc amb una disposició de teclat US. Les tecles de Hangul, Zhuyin i Cangjie es mantenen en les seves posicions estàndard fins i tot quan escrius lletres llatines amb Dvorak, Colemak o AZERTY. Si havies afegit Hangul o Chewing abans d'això, desselecciona'l i torna'l a seleccionar a _Configuració > Teclat > Mètodes d'entrada_ per moure-hi les seves tecles; Ve OS deixa tranquil un motor amb el qual ja escrius.
 
 L'escriptura comença en mode llatí. Prem `Super + I` per anar passant pels mètodes d'entrada configurats, i `Super + Shift + I` per anar passant-hi enrere. Toca `Shift` tot sol per sortir d'un mètode d'entrada com Pinyin i passar a les lletres llatines, i toca'l de nou per tornar-hi, de la manera com funcionen Sogou, Microsoft Pinyin i macOS; `Shift` més una lletra continua escrivint una majúscula. En teclats japonesos, 全角/半角 activa o desactiva l'entrada, 変換 l'activa i 無変換 la desactiva. Amb el coreà, 한/영 canvia Hangul i 한자 converteix a Hanja, tant si el teu teclat té tecles dedicades com si els envia Right Alt i Right Ctrl, com fan molts portàtils, de manera que Right Alt i Right Ctrl no són modificadors normals allà; el dictat s'activa o es desactiva amb Alt + Space, en comptes d'això. `Ctrl + Space` continua disponible per a Tmux i Herdr; `Shift + CapsLock` continua sent la tecla de composició.
 
 L'indicador del teclat apareix a la dreta de la barra quan tens diverses disposicions de teclat o mètodes d'entrada. Fes-hi clic per canviar de llengua d'entrada; el japonès mostra あ per a l'hiragana. Per a les opcions de caràcters japonesos, canvia al japonès, escriu una paraula com ara `nihongo` i després prem Space dues vegades. Prem Enter per acceptar la teva elecció. Si també tens diverses disposicions de teclat, fes clic amb el botó dret a l'indicador per anar passant-hi.
 
-Utilitza _Configuració > Teclat > Entrades de teclat_ per seleccionar disposicions com ara l'anglès i el francès, entre les mateixes opcions ofertes durant la instal·lació. Utilitza _Configuració > Teclat > Mètodes d'entrada_ per seleccionar quins motors de composició estan actius. Tots dos selectors s'obren dins del menú d'Omarchy amb les teves seleccions actuals marcades. Fes clic o prem Enter per activar o desactivar una opció; cada canvi s'aplica immediatament. Desseleccionar un mètode d'entrada el treu del cicle sense desinstal·lar-lo; el teclat continua disponible.
+Utilitza _Configuració > Teclat > Entrades de teclat_ per seleccionar disposicions com ara l'anglès i el francès, entre les mateixes opcions ofertes durant la instal·lació. Utilitza _Configuració > Teclat > Mètodes d'entrada_ per seleccionar quins motors de composició estan actius. Tots dos selectors s'obren dins del menú d'Ve OS amb les teves seleccions actuals marcades. Fes clic o prem Enter per activar o desactivar una opció; cada canvi s'aplica immediatament. Desseleccionar un mètode d'entrada el treu del cicle sense desinstal·lar-lo; el teclat continua disponible.
 
 Executa `omarchy setup keyboard` o `omarchy setup input` per obrir els mateixos selectors. Per afegir una llengua des de la línia d'ordres, utilitza `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` o `cangjie5`. Quick, Boshiamy i Array venen en el mateix paquet que Cangjie i apareixen al selector de Mètodes d'entrada. Les teves tecles de canvi personalitzades es conserven. Per a disposicions o tecles alternatives del motor, instal·la `fcitx5-configtool` amb `omarchy pkg add fcitx5-configtool` i inicia'l des d'un terminal. Seleccionar una llengua d'entrada no canvia la llengua de l'escriptori. Triar japonès, coreà o xinès a _Configuració > Llengua_ afegeix el seu mètode d'entrada quan encara no en tens cap.
 

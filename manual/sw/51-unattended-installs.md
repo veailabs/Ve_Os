@@ -1,4 +1,6 @@
-# Usakinishaji Usiosimamiwa
+# Ve OS — Usakinishaji Usiosimamiwa
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 ISO ya Omarchy inaweza kujisakinisha bila mtu yeyote kwenye kibodi. Ikiwa kisakinishi kitakuta diski ya pili yenye lebo `cidata` inayobeba faili zake za usanidi, kinakili faili hizo, kinaruka mchawi wa usanidi kabisa, na kuwasha upya kwenye mfumo uliokamilika chenyewe. Hakuna ujenzi maalum wa ISO, hakuna kiingilio cha ziada kwenye menyu ya kuwasha — bila diski kama hiyo kuambatishwa, hakuna kinachobadilika na unapata mchawi wa kawaida.
 

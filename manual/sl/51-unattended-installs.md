@@ -1,4 +1,6 @@
-# Nenadzorovane namestitve
+# Ve OS — Nenadzorovane namestitve
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 ISO Omarchy se lahko namesti sam, brez nikogar za tipkovnico. Če namestitveni program najde drugi pogon z oznako `cidata`, na katerem so njegove konfiguracijske datoteke, jih prekopira, v celoti preskoči čarovnika za nastavitev in se sam znova zažene v dokončani sistem. Brez posebne gradnje ISO, brez dodatnega vnosa v zagonskem meniju — če tak pogon ni priključen, se nič ne spremeni in dobite običajnega čarovnika.
 

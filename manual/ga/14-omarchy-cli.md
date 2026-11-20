@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Rialaítear Omarchy de ghnáth trí na heochracha te agus tríd an roghchlár Omarchy (`Super + Space`). Ach is féidir leat é a rialú freisin tríd an `omarchy` CLI. Tá sé seo an-chabhrach go háirithe nuair a bhíonn gníomhaire AI ag obair leat ar shaincheapadh nó ar chumraíocht.
+Rialaítear Ve OS de ghnáth trí na heochracha te agus tríd an roghchlár Ve OS (`Super + Space`). Ach is féidir leat é a rialú freisin tríd an `omarchy` CLI. Tá sé seo an-chabhrach go háirithe nuair a bhíonn gníomhaire AI ag obair leat ar shaincheapadh nó ar chumraíocht.
 
 Tá rochtain ag an CLI ar an uirlisíocht inmheánach go léir a úsáidtear tríd an roghchlár agus ar bhealaí eile araon. Is féidir leat gach rud atá ar fáil a fheiceáil trí `omarchy` a rith sa teirminéal.
 
@@ -8,7 +8,7 @@ Breathnaíonn sé rud éigin mar seo:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Le haghaidh diagnóisice, rith `omarchy-debug --no-sudo --print` go díreach. Priontálann sé diagnóisic agus scríobhann sé `/tmp/omarchy-debug.log` gan sudo a iarraidh, lena n-áirítear ar shuiteálacha pacáiste áit a bhféadfadh `omarchy debug` teip le "Unknown Omarchy command".
+Le haghaidh diagnóisice, rith `omarchy-debug --no-sudo --print` go díreach. Priontálann sé diagnóisic agus scríobhann sé `/tmp/omarchy-debug.log` gan sudo a iarraidh, lena n-áirítear ar shuiteálacha pacáiste áit a bhféadfadh `omarchy debug` teip le "Unknown Ve OS command".
 
 Agus is féidir leat dul níos doimhne ar gach grúpa:
 
@@ -60,4 +60,4 @@ Glacann gach ordú le `--help` freisin, cibé a iarrann tú ar ghrúpa iomlán (
 
 ### An roghchlár a oscailt ón teirminéal
 
-Is féidir an roghchlár Omarchy a scripteáil freisin, rud atá áisiúil do do cheangail eochracha féin. Osclaíonn `omarchy menu` é ag an bhfréamh, agus is féidir leat léim go díreach chuig aon phointe sa chrann trína ainmniú: téann `omarchy menu summon appearance.theme` díreach chuig an roghnóir téama, osclaíonn `omarchy menu toggle system` an roghchlár córais agus dúnann sé arís é má tá sé ar oscailt cheana, agus cuireann `omarchy menu close` ar shiúl é.
+Is féidir an roghchlár Ve OS a scripteáil freisin, rud atá áisiúil do do cheangail eochracha féin. Osclaíonn `omarchy menu` é ag an bhfréamh, agus is féidir leat léim go díreach chuig aon phointe sa chrann trína ainmniú: téann `omarchy menu summon appearance.theme` díreach chuig an roghnóir téama, osclaíonn `omarchy menu toggle system` an roghchlár córais agus dúnann sé arís é má tá sé ar oscailt cheana, agus cuireann `omarchy menu close` ar shiúl é.

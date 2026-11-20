@@ -1,4 +1,6 @@
-# Suiteálacha Gan Duine i Láthair
+# Ve OS — Suiteálacha Gan Duine i Láthair
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Is féidir le ISO Omarchy é féin a shuiteáil gan aon duine ag an méarchlár. Má aimsíonn an suiteálaí an dara tiomántán leis an lipéad `cidata` a iompraíonn a chomhaid chumraíochta, cóipeálann sé uaidh iad, scipeálann sé an treoraí socraithe ar fad, agus atosaíonn sé isteach sa chóras críochnaithe leis féin. Ní theastaíonn aon ISO speisialta, aon iontráil bhreise sa roghchlár tosaithe — gan tiomántán den sórt sin ceangailte, ní athraíonn aon rud agus faigheann tú an gnáththreoraí.
 

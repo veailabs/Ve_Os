@@ -1,8 +1,8 @@
 # Mavzular
 
-Omarchy yigirma ikkita chiroyli mavzu bilan birga keladi. Ular orasidan Omarchy Menu (`Super + Space`) ichidagi _Appearance > Theme_ orqali tanlashingiz yoki `Super + Ctrl + T` yordamida to'g'ridan-to'g'ri mavzu tanlagichga o'tishingiz mumkin.
+Ve OS yigirma ikkita chiroyli mavzu bilan birga keladi. Ular orasidan Ve OS Menu (`Super + Space`) ichidagi _Appearance > Theme_ orqali tanlashingiz yoki `Super + Ctrl + T` yordamida to'g'ridan-to'g'ri mavzu tanlagichga o'tishingiz mumkin.
 
-Har bir mavzu ish stolini, terminalni, neovim, faollik ekranini (btop), Chromium va butun Omarchy qobig'ini uslubaydi: yuqori panel, menyu, bildirishnomalar, OSD va qulf ekranini. (Obsidian uchun Omarchy mavzusini ilova ichidagi _Appearance > Themes_ orqali qo'lda tanlashingiz kerak).
+Har bir mavzu ish stolini, terminalni, neovim, faollik ekranini (btop), Chromium va butun Ve OS qobig'ini uslubaydi: yuqori panel, menyu, bildirishnomalar, OSD va qulf ekranini. (Obsidian uchun Ve OS mavzusini ilova ichidagi _Appearance > Themes_ orqali qo'lda tanlashingiz kerak).
 
 Mavzularda fon rasmlari to'plami mavjud bo'lib, ular orasidan `Super + Ctrl + W` yordamida tanlashingiz mumkin.
 
@@ -75,7 +75,7 @@ Ilova ishga tushirgichi va dokdagi ikonalar mavzuingiz ranglarida chiziladi, shu
 
 Boshqa birov yaratgan ikona to'plamini _Install > Style > Icons_ (yoki `omarchy icons install <git url>`) bilan o'rnatishingiz va uni _Remove > Icons_ ostida yana olib tashlashingiz mumkin. _Update > Extra Icons_ siz o'rnatgan to'plamlarning eng so'nggi versiyasini olib keladi.
 
-O'zingiznikini yaratish uchun ikonalaringizni `~/.config/omarchy/icons/<name>/` ichiga qo'ying, har bir ilova uchun bitta fayldan, ilovaning `.desktop` faylidagi `Icon=` qatori nomi bilan nomlang. `.svg` bilan tugaydigan fayl qanday bo'lsa, shunday ko'rsatiladi. `.svg.tpl` bilan tugaydigan fayl mavzu ranglarida chiziladi: rang ketadigan joyga `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` yoki `{{ icon_shadow }}` deb yozing. `/usr/share/omarchy/icons/papercraft/` ichidagi standart to'plam boshlash uchun yaxshi joy. To'plamingizni tanlagichda ko'rsatish uchun `preview.png` qo'shing; usiz Omarchy ikonalaringizdan oldindan ko'rish chizadi. Standart to'plamning bitta ikonasini o'zgartirish uchun o'z versiyangizni `~/.config/omarchy/icons/papercraft/` ichiga qo'ying.
+O'zingiznikini yaratish uchun ikonalaringizni `~/.config/omarchy/icons/<name>/` ichiga qo'ying, har bir ilova uchun bitta fayldan, ilovaning `.desktop` faylidagi `Icon=` qatori nomi bilan nomlang. `.svg` bilan tugaydigan fayl qanday bo'lsa, shunday ko'rsatiladi. `.svg.tpl` bilan tugaydigan fayl mavzu ranglarida chiziladi: rang ketadigan joyga `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` yoki `{{ icon_shadow }}` deb yozing. `/usr/share/omarchy/icons/papercraft/` ichidagi standart to'plam boshlash uchun yaxshi joy. To'plamingizni tanlagichda ko'rsatish uchun `preview.png` qo'shing; usiz Ve OS ikonalaringizdan oldindan ko'rish chizadi. Standart to'plamning bitta ikonasini o'zgartirish uchun o'z versiyangizni `~/.config/omarchy/icons/papercraft/` ichiga qo'ying.
 
 ### Qulf ochish ekranlari
 

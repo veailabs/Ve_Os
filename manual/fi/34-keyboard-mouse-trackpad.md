@@ -1,6 +1,6 @@
 # Näppäimistö, hiiri, kosketuslevy
 
-Hyprland antaa määrittää kaikki syöttölaitteesi erittäin tarkasti. Voit tehdä näppäimistön toistosta yliäänennopean tai asettaa kosketuslevyn käyttämään luonnollista vieritystä. Muutat kaiken tämän tiedostossa `~/.config/hypr/input.lua`, johon pääset myös Omarchy-valikon kautta kohdasta _Setup > Input_ (`Super + Space`). Kaikki sinne asettamasi korvaa Omarchyn oletukset.
+Hyprland antaa määrittää kaikki syöttölaitteesi erittäin tarkasti. Voit tehdä näppäimistön toistosta yliäänennopean tai asettaa kosketuslevyn käyttämään luonnollista vieritystä. Muutat kaiken tämän tiedostossa `~/.config/hypr/input.lua`, johon pääset myös Ve OS-valikon kautta kohdasta _Setup > Input_ (`Super + Space`). Kaikki sinne asettamasi korvaa Ve OSn oletukset.
 
 Tässä on esimerkki:
 
@@ -59,7 +59,7 @@ Liiku työpöydällä pyyhkäisemällä kosketuslevyllä:
 | --- | --- |
 | Kolme sormea vasemmalle / oikealle | Edellinen / seuraava työtila, myös tyhjät |
 | Kolme sormea ylös | AI-konsoli päälle/pois |
-| Kolme sormea alas | Omarchy-valikon avaaminen |
+| Kolme sormea alas | Ve OS-valikon avaaminen |
 | Neljä sormea vasemmalle / oikealle | Aktiivisen ikkunan siirtäminen edelliseen / seuraavaan työtilaan |
 | Neljä sormea alas | Koko näyttö päälle/pois |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Kytkeäksesi kaikki Omarchyn eleet pois päältä aseta `omarchy_default_gestures = false` lähelle tiedoston `~/.config/hypr/hyprland.lua` alkua, ennen kuin Omarchyn oletukset latautuvat.
+Kytkeäksesi kaikki Ve OSn eleet pois päältä aseta `omarchy_default_gestures = false` lähelle tiedoston `~/.config/hypr/hyprland.lua` alkua, ennen kuin Ve OSn oletukset latautuvat.
 
 Dell XPS -kannettavissa, joissa on haptinen kosketuslevy, voit myös asettaa napsautuksen voimakkuuden matalaksi, keskitasoiseksi tai korkeaksi kohdassa _Trigger > Hardware > Touchpad Haptics_.
 
 ### Kiinaksi, japaniksi ja muilla kielillä kirjoittaminen
 
-Valitse japani, korea, kiina (yksinkertaistettu, Pinyin), Taiwan (Zhuyin) tai Hongkong (Cangjie), kun asentaja kysyy näppäimistöäsi. Omarchy määrittää näppäimistön ja vastaavan syöttömoottorin automaattisesti, myös offline-tilassa tehtävän ensimmäisen käynnistyksen asennuksen aikana. Japani käyttää Mozcia, korea tavallista kaksisarjaista Hangulia, yksinkertaistettu kiina Pinyiniä, Taiwan Chewingin tavallista Zhuyin-asettelua ja Hongkong Cangjieta Hongkongin merkkimuodoilla. Japani (US-näppäimistö) tarjoaa Mozcin US-näppäimistöasettelulla. Hangul-, Zhuyin- ja Cangjie-näppäimet pysyvät vakioasemissaan, vaikka kirjoittaisit latinalaisia kirjaimia Dvorakilla, Colemakilla tai AZERTYlla. Jos lisäsit Hangulin tai Chewingin ennen tätä, poista sen valinta ja valitse se uudelleen kohdassa _Setup > Keyboard > Input Methods_ siirtääksesi sen näppäimet sinne; Omarchy jättää moottorin, jolla jo kirjoitat, rauhaan.
+Valitse japani, korea, kiina (yksinkertaistettu, Pinyin), Taiwan (Zhuyin) tai Hongkong (Cangjie), kun asentaja kysyy näppäimistöäsi. Ve OS määrittää näppäimistön ja vastaavan syöttömoottorin automaattisesti, myös offline-tilassa tehtävän ensimmäisen käynnistyksen asennuksen aikana. Japani käyttää Mozcia, korea tavallista kaksisarjaista Hangulia, yksinkertaistettu kiina Pinyiniä, Taiwan Chewingin tavallista Zhuyin-asettelua ja Hongkong Cangjieta Hongkongin merkkimuodoilla. Japani (US-näppäimistö) tarjoaa Mozcin US-näppäimistöasettelulla. Hangul-, Zhuyin- ja Cangjie-näppäimet pysyvät vakioasemissaan, vaikka kirjoittaisit latinalaisia kirjaimia Dvorakilla, Colemakilla tai AZERTYlla. Jos lisäsit Hangulin tai Chewingin ennen tätä, poista sen valinta ja valitse se uudelleen kohdassa _Setup > Keyboard > Input Methods_ siirtääksesi sen näppäimet sinne; Ve OS jättää moottorin, jolla jo kirjoitat, rauhaan.
 
 Kirjoittaminen alkaa latinalaisessa tilassa. Paina `Super + I` selataksesi määritettyjä syöttömenetelmiä ja `Super + Shift + I` selataksesi takaisinpäin. Napauta pelkkää `Shift`-näppäintä astuaksesi ulos Pinyinin kaltaisesta syöttömenetelmästä latinalaisiin kirjaimiin, ja napauta sitä uudelleen palataksesi takaisin, kuten Sogou, Microsoft Pinyin ja macOS toimivat; `Shift` plus kirjain kirjoittaa silti ison kirjaimen. Japanilaisilla näppäimistöillä 全角/半角 vaihtaa syöttöä, 変換 kytkee sen päälle ja 無変換 kytkee sen pois. Korean kanssa 한/영 vaihtaa Hanguliin ja 한자 muuntaa Hanjaan, olipa näppäimistössäsi erilliset näppäimet niitä varten tai lähettääkö se niitä varten Right Alt ja Right Ctrl, kuten monet kannettavat tekevät, joten Right Alt ja Right Ctrl eivät ole siellä tavallisia muokkausnäppäimiä; sanelu vaihtuu sen sijaan näppäimillä Alt + Space. `Ctrl + Space` pysyy käytettävissä Tmuxille ja Herdrille; `Shift + CapsLock` pysyy koostamisnäppäimenä.
 
 Näppäimistöilmaisin ilmestyy palkin oikealle puolelle, kun sinulla on useita näppäimistöasetteluja tai syöttömenetelmiä. Napsauta sitä vaihtaaksesi syöttökieliä; japani näyttää merkin あ hiraganana. Saat japanilaiset merkkivalinnat esiin vaihtamalla japaniin, kirjoittamalla sanan, kuten `nihongo`, ja painamalla sitten Space kahdesti. Hyväksy valintasi painamalla Enter. Jos sinulla on myös useita näppäimistöasetteluja, selaa niitä napsauttamalla ilmaisinta hiiren oikealla painikkeella.
 
-Käytä kohtaa _Setup > Keyboard > Keyboard Inputs_ valitaksesi asetteluja, kuten englanti ja ranska, samoista vaihtoehdoista, joita tarjotaan asennuksen aikana. Käytä kohtaa _Setup > Keyboard > Input Methods_ valitaksesi, mitkä koostamisemoottorit ovat aktiivisia. Molemmat valitsimet avautuvat Omarchy-valikon sisällä nykyiset valintasi valittuina. Napsauta tai paina Enter vaihtaaksesi valintaa; jokainen muutos tulee voimaan välittömästi. Syöttömenetelmän valinnan poistaminen poistaa sen kierrosta asentamatta sitä uudelleen; näppäimistö pysyy käytettävissä.
+Käytä kohtaa _Setup > Keyboard > Keyboard Inputs_ valitaksesi asetteluja, kuten englanti ja ranska, samoista vaihtoehdoista, joita tarjotaan asennuksen aikana. Käytä kohtaa _Setup > Keyboard > Input Methods_ valitaksesi, mitkä koostamisemoottorit ovat aktiivisia. Molemmat valitsimet avautuvat Ve OS-valikon sisällä nykyiset valintasi valittuina. Napsauta tai paina Enter vaihtaaksesi valintaa; jokainen muutos tulee voimaan välittömästi. Syöttömenetelmän valinnan poistaminen poistaa sen kierrosta asentamatta sitä uudelleen; näppäimistö pysyy käytettävissä.
 
 Aja `omarchy setup keyboard` tai `omarchy setup input` avataksesi samat valitsimet. Lisää yksi kieli komentoriviltä komennolla `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` tai `cangjie5`. Quick, Boshiamy ja Array tulevat samassa paketissa kuin Cangjie ja näkyvät Input Methods -valitsimessa. Mukautetut vaihtamisnäppäimesi säilytetään. Jos haluat vaihtoehtoisia moottorin asetteluja tai näppäimiä, asenna `fcitx5-configtool` komennolla `omarchy pkg add fcitx5-configtool` ja käynnistä se päätteestä. Syöttökielen valitseminen ei muuta työpöydän kieltä. Japanin, korean tai kiinan valitseminen kohdassa _Setup > Language_ lisää sen syöttömenetelmän, kun sinulla ei vielä ole yhtään.
 

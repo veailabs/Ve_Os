@@ -1,8 +1,8 @@
 # Navigacija
 
-Sve u Omarchyju događa se putem tipkovnice — _SVE!_ Kad se sustav prvi put pokrene, doslovno ne možete učiniti ništa samo mišem. Ali možete pritisnuti `Super + Space` da otkrijete Omarchy Menu i odavde možete učiniti gotovo sve.
+Sve u Ve OSju događa se putem tipkovnice — _SVE!_ Kad se sustav prvi put pokrene, doslovno ne možete učiniti ništa samo mišem. Ali možete pritisnuti `Super + Space` da otkrijete Ve OS Menu i odavde možete učiniti gotovo sve.
 
-Ali izbornik Omarchy čak ni nije zamišljen kao glavni način upravljanja sustavom većinu vremena. Možemo brže od toga! Sve najvažnije aplikacije izravno su povezane s pojedinačnim tipkovničkim prečacima. Terminal pokrećete sa `Super + Return`, a preglednik sa `Super + Shift + Return`. Pokušajte učiniti jedno za drugim i vidjet ćete čaroliju Hyprlandova pločastog slaganja prozora na djelu:
+Ali izbornik Ve OS čak ni nije zamišljen kao glavni način upravljanja sustavom većinu vremena. Možemo brže od toga! Sve najvažnije aplikacije izravno su povezane s pojedinačnim tipkovničkim prečacima. Terminal pokrećete sa `Super + Return`, a preglednik sa `Super + Shift + Return`. Pokušajte učiniti jedno za drugim i vidjet ćete čaroliju Hyprlandova pločastog slaganja prozora na djelu:
 
  ![navigation-browser-terminal](images/navigation-browser-terminal.webp)
 
@@ -30,7 +30,7 @@ Također možete prijeći u prikaz preko cijelog zaslona sa `Super + F` ili čak
 
 ### Dwindle naspram scrolling rasporeda
 
-Omarchyjev zadani raspored zove se dwindle. Sve prozore koje otvorite na jednom radnom prostoru održava vidljivima u svakom trenutku, čak i ako ih za to mora smanjiti.
+Ve OSjev zadani raspored zove se dwindle. Sve prozore koje otvorite na jednom radnom prostoru održava vidljivima u svakom trenutku, čak i ako ih za to mora smanjiti.
 
  ![navigation-dwindle-layout](images/navigation-dwindle-layout.webp)
 
@@ -56,7 +56,7 @@ hl.config({
 
 Plutajući radni prostor radi kao tradicionalna radna površina: prozori se preklapaju, a sami ih pomičete i mijenjate im veličinu. Svaki prozor dobiva naslovnu traku u bojama vaše teme, s gumbima za minimiziranje, maksimiziranje i zatvaranje. `Super + M` također minimizira fokusirani prozor. Minimizirani prozor čeka u docku; kliknite njegovu aplikaciju da ga vratite. Kliknite prozor da ga iznesete u prvi plan. Mijenjajte mu veličinu s bilo kojeg ruba ili kuta. Dvokliknite naslovnu traku da maksimizirate prozor uz zadržavanje gornje trake u vidljivom polju, i ponovno da mu vratite staru veličinu. Chrome i drugi preglednici temeljeni na Chromiumu, Disks i Document Viewer preskaču naslovnu traku i umjesto nje koriste vlastito zaglavlje; `Super + Alt + F` ih maksimizira, a `Super + M` ih minimizira.
 
-Plutajući radni prostor također prikazuje dock, s vašim prikvačenim aplikacijama, svime što se izvodi i mrežom svake aplikacije iza gumba za aplikacije, koji također otvaraju `Super + Alt + Space` i _Apps_ u izborniku Omarchy. Desnom tipkom miša kliknite aplikaciju na mreži, ili pritisnite `Delete`, da je deinstalirate. Kliknite aplikaciju da je otvorite ili da njezin prozor iznesete u prvi plan; kliknite ponovno da kružite kroz njezine prozore. Files vraća samo prozor s radnog prostora na kojem se nalazite i u suprotnom otvara novi, a Terminal i Agent uvijek pokreću još jedan, iako se minimizirani prozor vraća prvi. Srednji klik otvara novi prozor. Povucite ikonu duž docka da je premjestite; povlačenjem pokrenute aplikacije među ostale ona tamo ostaje. Kliknite desnom tipkom da aplikaciju zadržite u docku, izvadite je ili je zatvorite. Dock se uklanja s puta prozoru preko cijelog zaslona. Desnom tipkom kliknite gumb za aplikacije da dock premjestite na drugi rub ili da se skriva dok pokazivač ne dosegne njegov rub. Položaj je također pod _Appearance > Dock > Dock Position_, a `omarchy dock position left` i `omarchy dock autohide on` oboje postavljaju s terminala. Aplikacije koje držite u docku izblijeđene su dok se ne izvode.
+Plutajući radni prostor također prikazuje dock, s vašim prikvačenim aplikacijama, svime što se izvodi i mrežom svake aplikacije iza gumba za aplikacije, koji također otvaraju `Super + Alt + Space` i _Apps_ u izborniku Ve OS. Desnom tipkom miša kliknite aplikaciju na mreži, ili pritisnite `Delete`, da je deinstalirate. Kliknite aplikaciju da je otvorite ili da njezin prozor iznesete u prvi plan; kliknite ponovno da kružite kroz njezine prozore. Files vraća samo prozor s radnog prostora na kojem se nalazite i u suprotnom otvara novi, a Terminal i Agent uvijek pokreću još jedan, iako se minimizirani prozor vraća prvi. Srednji klik otvara novi prozor. Povucite ikonu duž docka da je premjestite; povlačenjem pokrenute aplikacije među ostale ona tamo ostaje. Kliknite desnom tipkom da aplikaciju zadržite u docku, izvadite je ili je zatvorite. Dock se uklanja s puta prozoru preko cijelog zaslona. Desnom tipkom kliknite gumb za aplikacije da dock premjestite na drugi rub ili da se skriva dok pokazivač ne dosegne njegov rub. Položaj je također pod _Appearance > Dock > Dock Position_, a `omarchy dock position left` i `omarchy dock autohide on` oboje postavljaju s terminala. Aplikacije koje držite u docku izblijeđene su dok se ne izvode.
 
 Novi radni prostori, i svi kojima niste dali vlastiti raspored pomoću `Super + L`, koriste zadani raspored. Promjena zadanoga vraća svaki radni prostor bez prozora na njega, dok onaj s prozorima na sebi zadržava raspored koji ima. Prozor minimiziran u dock i dalje se računa kao prozor na radnom prostoru koji je napustio. Odaberite ga pod _Appearance > Workspace Layout_: Tiling, Scrolling ili Floating. `omarchy-hyprland-workspace-layout-default scrolling` postavlja ga s terminala.
 

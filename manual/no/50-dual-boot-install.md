@@ -1,4 +1,6 @@
-# Installasjon med dobbeltoppstart
+# Ve OS — Installasjon med dobbeltoppstart
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Du kan installere Omarchy på én enkelt partisjon ved siden av Windows eller andre installasjoner.
 

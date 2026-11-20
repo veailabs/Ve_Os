@@ -41,7 +41,7 @@ Vistaðar skjámyndir lenda sjálfgefið í `~/Pictures/Screenshots`, með nafni
 
 ## Skjáupptaka
 
-`Alt + Print Screen` opnar _Trigger > Capture > Screenrecord_, sem spyr hvað þú viljir hafa á hljóðrásinni: ekkert hljóð, hljóð af skjáborði, skjáborð plús hljóðnemi, eða skjáborð plús hljóðnemi plús vefmyndavél. Sá síðasti birtist aðeins ef þú ert raunverulega með myndavél tengda. Veldu einn og upptökuveljari Omarchy leyfir þér að draga svæði eða smella á glugga eða skjá.
+`Alt + Print Screen` opnar _Trigger > Capture > Screenrecord_, sem spyr hvað þú viljir hafa á hljóðrásinni: ekkert hljóð, hljóð af skjáborði, skjáborð plús hljóðnemi, eða skjáborð plús hljóðnemi plús vefmyndavél. Sá síðasti birtist aðeins ef þú ert raunverulega með myndavél tengda. Veldu einn og upptökuveljari Ve OS leyfir þér að draga svæði eða smella á glugga eða skjá.
 
 Upptakan keyrir á gpu-screen-recorder, sem kóðar á GPU á 60fps og grípur til CPU ef það verður að gera það. Útkoman er MP4 í `~/Videos`, með nafninu `screenrecording-2026-08-13_14-22-05.mp4`. Stilltu `OMARCHY_SCREENRECORD_DIR` til að breyta því — en athugaðu að ólíkt skjámyndamöppunni verður þessi að vera til fyrir, annars neitar upptakan að hefjast.
 

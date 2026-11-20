@@ -1,10 +1,10 @@
 # Žiniatinklio programos
 
-Galite pridėti savų žiniatinklio programų per Omarchy meniu (`Super + Space`) pasirinkę _Install > Web App_. Bus paprašyta nurodyti programos pavadinimą, programos URL ir piktogramos URL, jei jos nepavyks gauti per favicon. Puikių PNG piktogramų daugeliui populiarių žiniatinklio programų rasite [Dashboard Icons](https://dashboardicons.com).
+Galite pridėti savų žiniatinklio programų per Ve OS meniu (`Super + Space`) pasirinkę _Install > Web App_. Bus paprašyta nurodyti programos pavadinimą, programos URL ir piktogramos URL, jei jos nepavyks gauti per favicon. Puikių PNG piktogramų daugeliui populiarių žiniatinklio programų rasite [Dashboard Icons](https://dashboardicons.com).
 
 Tuomet jas galėsite pasiekti per programų paleidyklę (`Super + Space`), ir jos naudos gražų berėmį žiniatinklio programos langą.
 
-Jei norite pašalinti žiniatinklio programą, tiesiog eikite į _Remove > Web App_ Omarchy meniu.
+Jei norite pašalinti žiniatinklio programą, tiesiog eikite į _Remove > Web App_ Ve OS meniu.
 
 Geriausia pirmiausia prisijungti prie visų savo paskyrų įprastoje naršyklėje, o tik tada naudoti žiniatinklio programų sparčiuosius paleidimo būdus. Plonas apvalkalo rėmas prastai veikia su 1password, todėl paprasčiau iš anksto prisijungti tiesiogiai.
 
@@ -12,7 +12,7 @@ Visus šių žiniatinklio programų sparčiuosius klavišus galima pakeisti `~/.
 
 Būdami žiniatinklio programoje, dabartinį URL galite nukopijuoti į iškarpinę naudodami `Shift + Alt + L`.
 
-Pagal numatytuosius nustatymus Omarchy jau pateikiama su įvairiomis numatytosiomis programomis:
+Pagal numatytuosius nustatymus Ve OS jau pateikiama su įvairiomis numatytosiomis programomis:
 
 ## HEY
 
@@ -64,7 +64,7 @@ YouTube galite paleisti naudodami `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) yra populiariausia vaizdo pokalbių sistema, naudojama JAV. Puikus ryšys visame pasaulyje. O 40 minučių susitikimus galima rengti ir be mokamos paskyros. Omarchy apgaubia Zoom žiniatinklio klientą, ir Zoom susitikimų nuorodos atsidarys tiesiai jame.
+[Zoom](https://zoom.us/) yra populiariausia vaizdo pokalbių sistema, naudojama JAV. Puikus ryšys visame pasaulyje. O 40 minučių susitikimus galima rengti ir be mokamos paskyros. Ve OS apgaubia Zoom žiniatinklio klientą, ir Zoom susitikimų nuorodos atsidarys tiesiai jame.
 
 Zoom paleisite per programų paleidyklę (`Super + Space`).
 
@@ -76,7 +76,7 @@ Discord paleisite per programų paleidyklę (`Super + Space`).
 
 ## Microsoft programos
 
-Pasirinkite _Install > Service > Microsoft_, kad pridėtumėte Outlook, Word, Excel, PowerPoint, Teams ir OneDrive kaip žiniatinklio programas. Kiekviena programa turi savo paleidyklę ir atsidaro tiesiogiai, naudodama komercinius Microsoft 365 URL ir jūsų esamą naršyklės profilį. Jos atsidaro tuose pačiuose naršyklės programų languose kaip ir kitos Omarchy žiniatinklio programos; jos neįdiegia atskiro Teams for Linux kliento.
+Pasirinkite _Install > Service > Microsoft_, kad pridėtumėte Outlook, Word, Excel, PowerPoint, Teams ir OneDrive kaip žiniatinklio programas. Kiekviena programa turi savo paleidyklę ir atsidaro tiesiogiai, naudodama komercinius Microsoft 365 URL ir jūsų esamą naršyklės profilį. Jos atsidaro tuose pačiuose naršyklės programų languose kaip ir kitos Ve OS žiniatinklio programos; jos neįdiegia atskiro Teams for Linux kliento.
 
 Pašalinkite rinkinį per _Remove > Service > Microsoft_ arba pašalinkite atskiras programas per _Remove > Web App_. Taip pat galite įdiegti tik norimas programas per _Install > Web App_.
 
@@ -88,4 +88,4 @@ Kad darbo prisijungimai liktų atskirti, prie kiekvienos paleidyklės `Exec=` ei
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Pavyzdinį katalogą pakeiskite pasirinktu absoliučiu keliu ir naudokite tą patį kelią visoms šešioms paleidyklėms, kad jos dalytųsi darbo prisijungimais. Žiniatinklio programos naudoja Omarchy pasirinktą palaikomą naršyklę, o jei numatytoji naršyklė nepalaikoma – grįžta prie Chrome.
+Pavyzdinį katalogą pakeiskite pasirinktu absoliučiu keliu ir naudokite tą patį kelią visoms šešioms paleidyklėms, kad jos dalytųsi darbo prisijungimais. Žiniatinklio programos naudoja Ve OS pasirinktą palaikomą naršyklę, o jei numatytoji naršyklė nepalaikoma – grįžta prie Chrome.

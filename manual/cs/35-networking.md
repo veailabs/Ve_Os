@@ -1,6 +1,6 @@
 # Síťové připojení
 
-Síťové připojení v Omarchy spravuje NetworkManager a ovládáte ho z ikony sítě v [horní liště](05-the-top-bar.md) nebo pomocí `Super + Ctrl + N`.
+Síťové připojení v Ve OS spravuje NetworkManager a ovládáte ho z ikony sítě v [horní liště](05-the-top-bar.md) nebo pomocí `Super + Ctrl + N`.
 
 Tento panel vyhledává Wi-Fi sítě, ukazuje sílu signálu a připojuje se k nim. Ethernet nepotřebuje vůbec nic — zapojíte ho a funguje. Pokud raději zůstanete v terminálu, `nmtui` vám nabídne stejné ovládací prvky a existuje také skupina příkazů `omarchy network`.
 
@@ -12,7 +12,7 @@ Pokud skutečně potřebujete samotné heslo, příkaz `omarchy network password
 
 ## DNS
 
-Omarchy používá DNS, které vaše síť předává přes DHCP. Pro celý počítač to můžete změnit v _Setup > Network > DNS_, kde jsou Cloudflare a Google na jedno kliknutí. Zvolte _Custom_, pokud chcete zadat vlastní servery.
+Ve OS používá DNS, které vaše síť předává přes DHCP. Pro celý počítač to můžete změnit v _Setup > Network > DNS_, kde jsou Cloudflare a Google na jedno kliknutí. Zvolte _Custom_, pokud chcete zadat vlastní servery.
 
 Z terminálu příkaz `omarchy dns` vytiskne aktuálního poskytovatele a `omarchy dns Cloudflare` jednoho nastaví.
 

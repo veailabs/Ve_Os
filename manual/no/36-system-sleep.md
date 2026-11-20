@@ -1,12 +1,12 @@
 # Systemdvale
 
-Omarchy aktiverer hvilemodus og dvalemodus som standard, men hvis du har problemer med en av dem på maskinen din, kan du slå dem av.
+Ve OS aktiverer hvilemodus og dvalemodus som standard, men hvis du har problemer med en av dem på maskinen din, kan du slå dem av.
 
 På NVIDIA GB10-maskiner, som DGX Spark og ASUS Ascent GX10, er hvilemodus og dvalemodus slått av, slik de også er i NVIDIA DGX OS, fordi hvilemodus ennå ikke har vist seg å fungere på den maskinvaren. Det samme gjelder ASUS Zenbook A16 (UX3607OA), der hvilemodus ennå ikke får brikken til å sove helt og kan henge over natten. Vekslingen for hvilemodus og oppsettet for dvalemodus gjelder ikke der. For å slå hvilemodus på igjen, fjern `/etc/systemd/sleep.conf.d/omarchy-sleep-disabled.conf` med `sudo rm`; Hvilemodus kommer da tilbake i menyen, og dvalemodus kan settes opp som på andre maskiner. Å kjøre `sudo omarchy apply hardware --install-user "$USER"` legger filen tilbake.
 
 ### Strømprofiler
 
-På en bærbar PC husker Omarchy strømprofilen din separat for når den er koblet til strøm og når den går på batteri, og bytter mellom de to når du kobler til og fra. Rett ut av boksen betyr det ytelse på nettstrøm og balansert på batteri.
+På en bærbar PC husker Ve OS strømprofilen din separat for når den er koblet til strøm og når den går på batteri, og bytter mellom de to når du kobler til og fra. Rett ut av boksen betyr det ytelse på nettstrøm og balansert på batteri.
 
 Du kan se hva maskinen din tilbyr med `omarchy powerprofiles list`, og angi den du vil ha for tilstanden du er i akkurat nå med `omarchy powerprofiles set autodetect power-saver`. For å angi den andre tilstanden uten å koble fra noe, nevner du den direkte: `omarchy powerprofiles set battery power-saver`. Uansett hva du velger, er det det du får igjen neste gang du er i den tilstanden.
 

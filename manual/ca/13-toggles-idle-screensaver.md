@@ -1,10 +1,10 @@
 # Commutadors, inactivitat i l'estalvi de pantalla
 
-Gran part del que canvies en el dia a dia no és realment un ajust. És un mode que actives durant una hora i després tornes a desactivar: la llum nocturna mentre treballes fins tard, el no molesteu mentre fas una presentació, el mantenir-te despert mentre mires alguna cosa. Omarchy els anomena commutadors, i tots funcionen de la mateixa manera: una tecla d'accés ràpid, una entrada de menú i una ordre, tots accionant el mateix interruptor.
+Gran part del que canvies en el dia a dia no és realment un ajust. És un mode que actives durant una hora i després tornes a desactivar: la llum nocturna mentre treballes fins tard, el no molesteu mentre fas una presentació, el mantenir-te despert mentre mires alguna cosa. Ve OS els anomena commutadors, i tots funcionen de la mateixa manera: una tecla d'accés ràpid, una entrada de menú i una ordre, tots accionant el mateix interruptor.
 
 ### El menú de commutadors
 
-`Super + Ctrl + O` obre _Activador > Commutador_ directament, o hi pots arribar des del menú d'Omarchy (`Super + Space`). Tot el que hi ha en aquesta llista és un interruptor que pots accionar sense pensar on viu l'estat. Els interruptors de l'aspecte de l'escriptori són al costat, a _Aparença_.
+`Super + Ctrl + O` obre _Activador > Commutador_ directament, o hi pots arribar des del menú d'Ve OS (`Super + Space`). Tot el que hi ha en aquesta llista és un interruptor que pots accionar sense pensar on viu l'estat. Els interruptors de l'aspecte de l'escriptori són al costat, a _Aparença_.
 
 Des del terminal, els mateixos interruptors són `omarchy toggle <thing>`. Executa `omarchy toggle` tot sol per veure tot el grup.
 
@@ -26,7 +26,7 @@ Els interruptors del panell tàctil, la pantalla tàctil i la GPU híbrida són 
 
 _Aparença_ conté la barra de menús i les animacions, a més d'algunes coses que no són ordres `omarchy toggle` però que es comporten igual: el percentatge de bateria a la barra, la disposició predeterminada de l'espai de treball i, a _Finestres_, els espais entre finestres (`Super + Shift + Backspace`) i l'aspecte quadrat d'1 finestra (`Super + Ctrl + Backspace`).
 
-Quan Hyprland no té cap GPU amb què dibuixar i renderitza amb la CPU (llvmpipe), com passa als Mac la GPU dels quals encara no és compatible, a la majoria de màquines virtuals o quan un controlador gràfic no es carrega, Omarchy desactiva les animacions, el difuminat i les ombres durant aquella sessió i t'ho comunica una sola vegada amb una notificació. _Aparença > Animacions activades_ els torna a activar, i Omarchy també ho recorda per a sessions posteriors.
+Quan Hyprland no té cap GPU amb què dibuixar i renderitza amb la CPU (llvmpipe), com passa als Mac la GPU dels quals encara no és compatible, a la majoria de màquines virtuals o quan un controlador gràfic no es carrega, Ve OS desactiva les animacions, el difuminat i les ombres durant aquella sessió i t'ho comunica una sola vegada amb una notificació. _Aparença > Animacions activades_ els torna a activar, i Ve OS també ho recorda per a sessions posteriors.
 
 La majoria són simplement un fitxer de marca a `~/.local/state/omarchy/toggles/`. Si en vols comprovar un en un script, `omarchy-toggle-enabled` et dona un codi de sortida en lloc d'obligar-te a anar a buscar-lo:
 
@@ -63,11 +63,11 @@ Després inicia hyprsunset en iniciar la sessió afegint `o.launch_on_start("hyp
 
 Però no es perd res. Les notificacions silenciades es retenen: torna a posar les últimes a la pantalla amb `Super + Shift + Alt + ,`. Consulta [avisos](10-notices.md) per a la resta.
 
-Dos tipus de missatges encara hi passen: les notificacions emergents de confirmació d'Omarchy per alguna cosa que acabes de fer ("Theme changed", "Screenshot saved") i les alertes crítiques enviades des de la línia d'ordres. Les aplicacions de xat que marquen tot com a crític per obrir-se pas davant teu no hi tenen dret.
+Dos tipus de missatges encara hi passen: les notificacions emergents de confirmació d'Ve OS per alguna cosa que acabes de fer ("Theme changed", "Screenshot saved") i les alertes crítiques enviades des de la línia d'ordres. Les aplicacions de xat que marquen tot com a crític per obrir-se pas davant teu no hi tenen dret.
 
 ### Inactivitat
 
-El shell d'Omarchy és el propietari del comportament d'inactivitat, i els temps són un bloc `idle` de nivell superior a `~/.config/omarchy/shell.json`:
+El shell d'Ve OS és el propietari del comportament d'inactivitat, i els temps són un bloc `idle` de nivell superior a `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Això va del bloqueig i l'estalvi de pantalla, no de l'energia. La suspensió i 
 
 ### L'estalvi de pantalla
 
-L'estalvi de pantalla d'Omarchy és art ASCII que passa per efectes de text aleatoris, una instància per monitor. Qualsevol tecla o moviment del ratolí en surt.
+L'estalvi de pantalla d'Ve OS és art ASCII que passa per efectes de text aleatoris, una instància per monitor. Qualsevol tecla o moviment del ratolí en surt.
 
 El pots iniciar a demanda des de _Sistema > Estalvi de pantalla_ (`Super + Esc`), cosa que el força a aparèixer encara que hagis desactivat l'estalvi de pantalla per inactivitat. Per defecte no hi ha cap tecla d'accés ràpid assignada.
 
 `omarchy toggle screensaver` és el que desactiva el d'inactivitat, si prefereixes passar directament de treballar a bloquejat. Qualsevol tecla, clic, desplaçament o moviment del ratolí el tanca.
 
-El logotip que dibuixa el pots canviar tu, a _Aparença > Imatge de marca > Estalvi de pantalla_. Puja un png o un svg i Omarchy el converteix en ASCII. Consulta [imatge de marca](41-branding.md).
+El logotip que dibuixa el pots canviar tu, a _Aparença > Imatge de marca > Estalvi de pantalla_. Puja un png o un svg i Ve OS el converteix en ASCII. Consulta [imatge de marca](41-branding.md).
 
 ### La pantalla de bloqueig
 
-`Super + Ctrl + L` bloqueja la màquina. Això executa la pantalla de bloqueig del shell d'Omarchy, apaga la pantalla, restableix la disposició del teclat a la primera perquè no escriguis la contrasenya en l'alfabet equivocat i, si el tens en execució, bloqueja 1Password en sortir.
+`Super + Ctrl + L` bloqueja la màquina. Això executa la pantalla de bloqueig del shell d'Ve OS, apaga la pantalla, restableix la disposició del teclat a la primera perquè no escriguis la contrasenya en l'alfabet equivocat i, si el tens en execució, bloqueja 1Password en sortir.
 
 La pantalla de bloqueig accepta una contrasenya, i també acceptarà una empremta digital un cop n'hagis configurat una. Això, i les altres maneres d'autenticar-te, es tracten a [autenticació de maquinari](37-hardware-authentication.md).

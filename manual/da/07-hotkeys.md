@@ -8,7 +8,7 @@ Hver genvejstast ligger på et plan, bestemt af dens modifikatortaster, og hvert
 
 | Plan | Hvad der hører hjemme der | Eksempler |
 | --- | --- | --- |
-| `Super + key` | Systemet: vinduer, arbejdsområder, layouts og kernemenuer | `Super + Space` Omarchy-menu, `Super + W` luk vindue, `Super + F` fuld skærm |
+| `Super + key` | Systemet: vinduer, arbejdsområder, layouts og kernemenuer | `Super + Space` Ve OS-menu, `Super + W` luk vindue, `Super + F` fuld skærm |
 | `Super + Shift + key` | Apps | `Super + Shift + B` browser, `Super + Shift + E` e-mail, `Super + Shift + N` editor |
 | `Super + Ctrl + key` | Paneler og systemmenuer | `Super + Ctrl + A` lyd, `Super + Ctrl + N` netværk, `Super + Ctrl + C` optagelsesmenu |
 | `Super + Ctrl + Alt + key` | Hurtige handlinger og meddelelser | `Super + Ctrl + Alt + T` vis klokkeslæt, `Super + Ctrl + Alt + B` batteri, `Super + Ctrl + Alt + C` skærmbillede |
@@ -34,7 +34,7 @@ Hvis en standard ikke passer dig (sig, du vil have `Super + Shift + S` til skær
 
 | Genvejstast                  | Funktion              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Omarchy-menu (apps og alt andet)    |
+| `Super + Space`           | Ve OS-menu (apps og alt andet)    |
 | `Super + Alt + Space` | App-oversigt |
 | `Super + Escape` | Systemmenu (dvale, genstart osv.)  |
 | `Super + Ctrl + L` | Lås computeren |
@@ -172,7 +172,7 @@ Genveje til ændring af størrelse bruger de fysiske taster `code:20` og `code:2
 | `Super + V`           | Indsæt    |
 | `Super + Ctrl + V`           | Udklipsholderhåndtering    |
 
-Normalt på Linux skal du bruge `Ctrl + Shift + C/V` til at kopiere og indsætte i terminalen og `Ctrl + C/V` til at gøre det alle andre steder. Disse samlede Omarchy-genveje til udklipsholderen fungerer overalt.
+Normalt på Linux skal du bruge `Ctrl + Shift + C/V` til at kopiere og indsætte i terminalen og `Ctrl + C/V` til at gøre det alle andre steder. Disse samlede Ve OS-genveje til udklipsholderen fungerer overalt.
 
 ## Optagelse
 
@@ -194,7 +194,7 @@ Normalt på Linux skal du bruge `Ctrl + Shift + C/V` til at kopiere og indsætte
 
 Med skærmoptagelser spørger genvejstasten først, hvilken lyd du vil have, og starter derefter optagelsen. Tryk på den igen for at stoppe. Se [skærmbilleder og optagelse](12-screenshots-recording.md) for detaljerne.
 
-Alle optagelsesmuligheder er også tilgængelige under _Udløser > Optagelse_ i Omarchy-menuen (`Super + Space`).
+Alle optagelsesmuligheder er også tilgængelige under _Udløser > Optagelse_ i Ve OS-menuen (`Super + Space`).
 
 ## Notifikationer
 
@@ -216,9 +216,9 @@ Alle optagelsesmuligheder er også tilgængelige under _Udløser > Optagelse_ i 
 | `Super + Backspace` | Slå gennemsigtighed til/fra på et vindue |
 | `Super + Ctrl + Backspace` | Slå kvadratisk format til/fra for et enkelt vindue |
 
-Ekstra baggrundsbilleder ligger i `~/.config/omarchy/backgrounds/<theme name>`. Også tilgængelig via _Installer > Stil > Baggrund_ i Omarchy-menuen.
+Ekstra baggrundsbilleder ligger i `~/.config/omarchy/backgrounds/<theme name>`. Også tilgængelig via _Installer > Stil > Baggrund_ i Ve OS-menuen.
 
-Alle stilmuligheder er også tilgængelige under _Stil_ i Omarchy-menuen (`Super + Space`).
+Alle stilmuligheder er også tilgængelige under _Stil_ i Ve OS-menuen (`Super + Space`).
 
 ## Til/fra-skift
 
@@ -319,7 +319,7 @@ Disse funktioner skal køres inde i en Tmux-session.
 
 ## Ghostty-terminal
 
-Ghostty-terminalen installeres ved hjælp af _Installer > Terminal_ via Omarchy-menuen.
+Ghostty-terminalen installeres ved hjælp af _Installer > Terminal_ via Ve OS-menuen.
 
 | Genvejstast                  | Funktion              |
 | ----------------------- | --------------------- |

@@ -11,6 +11,7 @@ name: Check visual evidence
 # job-level condition instead if it is ever made one.
 on:
   pull_request:
+    branches: [master]
     types: [opened, edited, synchronize, reopened, ready_for_review]
     paths:
       - 'shell/**'

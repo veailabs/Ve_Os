@@ -1,4 +1,6 @@
-# Darbo pradžia
+# Ve OS — Darbo pradžia
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy diegiama naudojant ISO. Galite rinktis diegimą į visą diską, kuris perima visą diską, arba diegimą į laisvą vietą, kuris įdeda Omarchy į nepaskirtą disko vietą — taip galite naudoti dvigubą įkrovą kartu su Windows ar kita OS (žr. [dvigubo įkrovimo diegimą](50-dual-boot-install.md) — atminkite, kad pirmiausia turėsite išjungti BitLocker sistemoje Windows). Bet kuriuo atveju diegimas pagal numatytuosius nustatymus naudoja visišką šifravimą, o pasirinkus visą diską, pasirinktas diskas bus ištrintas, todėl prieš naudodami esamą diską būtinai pasidarykite atsarginę kopiją!
 

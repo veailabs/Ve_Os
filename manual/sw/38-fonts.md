@@ -1,12 +1,12 @@
 # Fonti
 
-Omarchy hutumia JetBrainsMono Nerd Font kama fonti ya terminali na ya mfumo kwa chaguo-msingi.
+Ve OS hutumia JetBrainsMono Nerd Font kama fonti ya terminali na ya mfumo kwa chaguo-msingi.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Unaweza kubadilisha hii kupitia menyu ya _Muonekano > Fonti_ katika menyu ya Omarchy (`Super + Space`). Hiyo huweka fonti ya monospace kila mahali: terminali, upau, na kitu kingine chochote kinachoiomba.
+Unaweza kubadilisha hii kupitia menyu ya _Muonekano > Fonti_ katika menyu ya Ve OS (`Super + Space`). Hiyo huweka fonti ya monospace kila mahali: terminali, upau, na kitu kingine chochote kinachoiomba.
 
-Unaweza kusakinisha fonti nyingine maarufu za uandikaji programu kupitia _Sakinisha > Mtindo > Fonti_ katika menyu ya Omarchy: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, na Iosevka zote ziko umbali wa kubofya mara moja, katika matoleo yao ya Nerd Font ili glyphs katika upau na terminali ziendelee kufanya kazi. Baada ya kusakinisha moja, ichague chini ya _Muonekano > Fonti_.
+Unaweza kusakinisha fonti nyingine maarufu za uandikaji programu kupitia _Sakinisha > Mtindo > Fonti_ katika menyu ya Ve OS: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, na Iosevka zote ziko umbali wa kubofya mara moja, katika matoleo yao ya Nerd Font ili glyphs katika upau na terminali ziendelee kufanya kazi. Baada ya kusakinisha moja, ichague chini ya _Muonekano > Fonti_.
 
 ## Kichina, Kijapani, na Kikorea
 

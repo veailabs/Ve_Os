@@ -10,7 +10,7 @@ Kortelės siūlo tai, ką turi: _Kopijuoti kodą_ patvirtinimo kodams (nelaikoma
 
 Norėdami jais naudotis be pelės, paspauskite `Super + Ctrl + ,`. Pasirenkamas naujausias pranešimas, o jo mygtukai sunumeruojami: paspauskite skaičių, kad panaudotumėte vieną, `Enter`, kad spustelėtumėte pranešimą, `↑` ir `↓`, kad judėtumėte tarp pranešimų, `Delete`, kad atmestumėte vieną, ir `Esc`, kad grąžintumėte klaviatūrą. Po kelių neveiklumo sekundžių jis taip pat pats paleidžia.
 
-Nutildžius pranešimus, jie sulaikomi, išskyrus pačios Omarchy patvirtinimus, avarinius įspėjimus ir patvirtinimo kodus, kurių ką tik patys paprašėte. Paskutinius kelis vėl parodykite ekrane, sulaikytus ar ne, su `Super + Shift + Alt + ,`. Istorija saugoma vieną dieną.
+Nutildžius pranešimus, jie sulaikomi, išskyrus pačios Ve OS patvirtinimus, avarinius įspėjimus ir patvirtinimo kodus, kurių ką tik patys paprašėte. Paskutinius kelis vėl parodykite ekrane, sulaikytus ar ne, su `Super + Shift + Alt + ,`. Istorija saugoma vieną dieną.
 
 ## Spartųjų klavišų pranešimai
 

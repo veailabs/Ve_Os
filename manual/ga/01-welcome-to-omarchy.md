@@ -1,4 +1,6 @@
-# Fáilte go Omarchy!
+# Ve OS — Fáilte go upstream Omarchy!
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Is dáileadh Linux [omakase](https://manuals.omamix.org/3/omacom/76/omakase-computing) é Omarchy atá bunaithe ar [Arch](https://archlinux.org/), ar an mbainisteoir fuinneog tílithe [Hyprland](https://hypr.land/), agus ar an bhfoirgneamh deisce [Quickshell](https://quickshell.org/). Tagann gach rud atá de dhíth ar úsáideoir ríomhaire nua-aimseartha, cliste chun a bheith táirgiúil láithreach leis. Ó [Neovim](https://neovim.io/) (btw) go Chromium, ó [Obsidian](https://obsidian.md/) go LibreOffice, agus ó [Hype](https://github.com/omacom/hype) go [Monologue](https://github.com/omacom/monologue). Dar fia, tá seinnteoir ceoil retro ar stíl Winamp ann fiú!
 

@@ -354,3 +354,9 @@ One caveat on "all-time": the Codex collector only reads native session files
 touched in the last 30 days, and Fireworks requests the last 30 days from its
 billing API, so their totals and day counts cover that window. Claude's and
 Muse's cover every session still on disk.
+
+## Ve OS Grok controls
+
+The expandable Grok controls section opens or focuses the native Bot, closes its local window, and hands a draft to its supported deep link. Drafts are never sent automatically. Cloud tasks continue when the desktop app closes. The CLI button launches plain `grok`, preserving its official sign-in flow.
+
+CLI tasks use `omarchy-agent-grok-control` over line-delimited JSON. The panel displays streamed text and explicit permission options, and cancellation applies to this CLI task only. The bridge starts on user interaction, has no idle poller, and survives closing the panel; its bounded saved state can be reloaded on reopening the shell. Enter on the Grok row enters its controls, Tab moves between fields/actions, and Escape returns to panel navigation.

@@ -1,12 +1,12 @@
 # Skrifttyper
 
-Omarchy bruger JetBrainsMono Nerd Font som både terminal- og systemskrifttype som standard.
+Ve OS bruger JetBrainsMono Nerd Font som både terminal- og systemskrifttype som standard.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Du kan ændre det via menuen _Udseende > Skrifttype_ i Omarchy-menuen (`Super + Space`). Det indstiller monospace-skrifttypen overalt: terminalen, baren og alt andet, der beder om den.
+Du kan ændre det via menuen _Udseende > Skrifttype_ i Ve OS-menuen (`Super + Space`). Det indstiller monospace-skrifttypen overalt: terminalen, baren og alt andet, der beder om den.
 
-Du kan installere andre populære programmerskrifttyper via _Installér > Stil > Skrifttype_ i Omarchy-menuen: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono og Iosevka er alle ét klik væk, i deres Nerd Font-versioner, så glyfferne i baren og terminalen bliver ved med at virke. Når du har installeret en, skal du vælge den under _Udseende > Skrifttype_.
+Du kan installere andre populære programmerskrifttyper via _Installér > Stil > Skrifttype_ i Ve OS-menuen: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono og Iosevka er alle ét klik væk, i deres Nerd Font-versioner, så glyfferne i baren og terminalen bliver ved med at virke. Når du har installeret en, skal du vælge den under _Udseende > Skrifttype_.
 
 ## Kinesisk, japansk og koreansk
 

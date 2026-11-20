@@ -259,7 +259,7 @@ printf '#!/bin/bash\n' >"$shims/openclaw"
 chmod +x "$shims/openclaw"
 run omarchy-install-openclaw-cli --check && fail "--check refuses a mise shim ahead of the package that is OpenClaw itself"
 run omarchy-install-openclaw-cli --now && fail "--now refuses a mise shim ahead of the package that is OpenClaw itself"
-grep -q "Another openclaw is on PATH at $shims/openclaw, which Omarchy could run instead of $test_tmp/usr-bin/openclaw" "$test_tmp/output" ||
+grep -q "Another openclaw is on PATH at $shims/openclaw, which Ve OS could run instead of $test_tmp/usr-bin/openclaw" "$test_tmp/output" ||
   fail "--now names the openclaw ahead of the package's own" "$(cat "$test_tmp/output")"
 rm "$shims/openclaw"
 run omarchy-install-openclaw-cli --check || fail "--check takes the package again once nothing is ahead of it"

@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy 通常是透過快捷鍵和 Omarchy 選單（`Super + Space`）來控制。但你也可以透過 `omarchy` CLI 來控制。當你讓 AI agent 陪你一起進行自訂或設定時，這特別好用。
+Ve OS 通常是透過快捷鍵和 Ve OS 選單（`Super + Space`）來控制。但你也可以透過 `omarchy` CLI 來控制。當你讓 AI agent 陪你一起進行自訂或設定時，這特別好用。
 
 CLI 可以存取所有內部工具，這些工具同時會透過選單和其他方式使用。你只要在終端機執行 `omarchy`，就能看到所有可用的項目。
 
@@ -8,7 +8,7 @@ CLI 可以存取所有內部工具，這些工具同時會透過選單和其他�
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-若要進行診斷，請直接執行 `omarchy-debug --no-sudo --print`。它會印出診斷資訊並寫入 `/tmp/omarchy-debug.log`，且不會提示你輸入 sudo，包括在套件安裝過程中，`omarchy debug` 可能會失敗並顯示 "Unknown Omarchy command" 的情況。
+若要進行診斷，請直接執行 `omarchy-debug --no-sudo --print`。它會印出診斷資訊並寫入 `/tmp/omarchy-debug.log`，且不會提示你輸入 sudo，包括在套件安裝過程中，`omarchy debug` 可能會失敗並顯示 "Unknown Ve OS command" 的情況。
 
 你也可以深入查看每個群組：
 
@@ -60,4 +60,4 @@ Capture commands — Screenshots and screen recording:
 
 ### 從終端機開啟選單
 
-Omarchy 選單也可以用指令碼控制，這對你自訂按鍵綁定很方便。`omarchy menu` 會在根層級開啟選單，你也可以直接指定名稱，跳到樹狀結構中的任何位置：`omarchy menu summon appearance.theme` 會直接前往主題選擇器，`omarchy menu toggle system` 會開啟系統選單，若選單已經開啟，則會將它關閉，而 `omarchy menu close` 則會將選單收起。
+Ve OS 選單也可以用指令碼控制，這對你自訂按鍵綁定很方便。`omarchy menu` 會在根層級開啟選單，你也可以直接指定名稱，跳到樹狀結構中的任何位置：`omarchy menu summon appearance.theme` 會直接前往主題選擇器，`omarchy menu toggle system` 會開啟系統選單，若選單已經開啟，則會將它關閉，而 `omarchy menu close` 則會將選單收起。

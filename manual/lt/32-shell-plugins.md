@@ -1,10 +1,10 @@
 # Shell įskiepiai
 
-Omarchy darbalaukis veikia kaip vienas ilgai gyvuojantis Quickshell procesas pavadinimu `omarchy-shell`, ir beveik viskas, ką matai ekrane, yra įskiepis jame. Juosta yra įskiepis. Taip pat skydeliai, krentantys iš jos, viso ekrano perteikliai, pavyzdžiui, emoji rinkiklis ir iškarpinės tvarkyklė, pats Omarchy meniu, užrakinimo ekranas, polkit dialogas ir nematomas paslaugos, kurios stebiavo akumuliatorių ir šildo ekraną nakčiai.
+Ve OS darbalaukis veikia kaip vienas ilgai gyvuojantis Quickshell procesas pavadinimu `omarchy-shell`, ir beveik viskas, ką matai ekrane, yra įskiepis jame. Juosta yra įskiepis. Taip pat skydeliai, krentantys iš jos, viso ekrano perteikliai, pavyzdžiui, emoji rinkiklis ir iškarpinės tvarkyklė, pats Ve OS meniu, užrakinimo ekranas, polkit dialogas ir nematomas paslaugos, kurios stebiavo akumuliatorių ir šildo ekraną nakčiai.
 
-Tai ne vien įgyvendinimo detalė. Tai reiškia, kad gali išjungti darbalaukio dalis, jas pakeisti ar parašyti savo, neliesdamas nė vienos Omarchy šaltinio eilutės.
+Tai ne vien įgyvendinimo detalė. Tai reiškia, kad gali išjungti darbalaukio dalis, jas pakeisti ar parašyti savo, neliesdamas nė vienos Ve OS šaltinio eilutės.
 
-Pirmosios šalies įskiepiai pristatomi su Omarchy ir gyvena `$OMARCHY_PATH/shell/plugins/`. Viskas, ką pridedi pats — savo eksperimentai ar kažkas rasta GitHub — gyvena `~/.config/omarchy/plugins/`. Abu atrandami tuo pačiu būdu paleidimo metu, bet įtaisyti gauna patikimas shell sąsajas, o trečiųjų šalių įskiepiai gauna ribotą sąsają, apribotą jų pačių paslauga ir gyvavimo ciklu. Įtaisytųjų klonai išlaiko tik su šaltiniu susijusią konfigūraciją ir UI iškvietimus, reikalingus originaliam veikimui.
+Pirmosios šalies įskiepiai pristatomi su Ve OS ir gyvena `$OMARCHY_PATH/shell/plugins/`. Viskas, ką pridedi pats — savo eksperimentai ar kažkas rasta GitHub — gyvena `~/.config/omarchy/plugins/`. Abu atrandami tuo pačiu būdu paleidimo metu, bet įtaisyti gauna patikimas shell sąsajas, o trečiųjų šalių įskiepiai gauna ribotą sąsają, apribotą jų pačių paslauga ir gyvavimo ciklu. Įtaisytųjų klonai išlaiko tik su šaltiniu susijusią konfigūraciją ir UI iškvietimus, reikalingus originaliam veikimui.
 
 ## Pamatyti, ką turi
 

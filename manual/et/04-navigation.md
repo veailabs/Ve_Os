@@ -1,8 +1,8 @@
 # Navigeerimine
 
-Kõik Omarchys toimub klaviatuuri kaudu — _KÕIK!_ Kui süsteem esimest korda käivitub, ei saa sa hiirega üksi sõna otseses mõttes midagi teha. Kuid võid vajutada `Super + Space`, et avada Omarchy menüü, ja siit saad teha peaaegu kõike.
+Kõik Ve OSs toimub klaviatuuri kaudu — _KÕIK!_ Kui süsteem esimest korda käivitub, ei saa sa hiirega üksi sõna otseses mõttes midagi teha. Kuid võid vajutada `Super + Space`, et avada Ve OS menüü, ja siit saad teha peaaegu kõike.
 
-Kuid Omarchy menüü ei ole isegi mõeldud olema enamasti peamine viis süsteemi kasutada. Saame sellest kiiremaks! Kõik kõige olulisemad rakendused on seotud otse üksikute kiirklahvidega. Terminali käivitad klahvidega `Super + Return` ja brauseri klahvidega `Super + Shift + Return`. Proovi teha üks pärast teist ja näed tegevuses Hyprlandi paigutuse võlu:
+Kuid Ve OS menüü ei ole isegi mõeldud olema enamasti peamine viis süsteemi kasutada. Saame sellest kiiremaks! Kõik kõige olulisemad rakendused on seotud otse üksikute kiirklahvidega. Terminali käivitad klahvidega `Super + Return` ja brauseri klahvidega `Super + Shift + Return`. Proovi teha üks pärast teist ja näed tegevuses Hyprlandi paigutuse võlu:
 
  ![navigation-browser-terminal](images/navigation-browser-terminal.webp)
 
@@ -30,7 +30,7 @@ Saad ka minna täisekraanile klahvidega `Super + F` või isegi lihtsalt täislai
 
 ### Dwindle vs. keriv paigutus
 
-Omarchy vaikepaigutust nimetatakse dwindle'iks. See hoiab kõiki ühel tööalal avatud aknaid kogu aeg nähtaval, isegi kui peab neid selleks väiksemaks kahandama.
+Ve OS vaikepaigutust nimetatakse dwindle'iks. See hoiab kõiki ühel tööalal avatud aknaid kogu aeg nähtaval, isegi kui peab neid selleks väiksemaks kahandama.
 
  ![navigation-dwindle-layout](images/navigation-dwindle-layout.webp)
 
@@ -56,7 +56,7 @@ hl.config({
 
 Ujuv tööala töötab nagu traditsiooniline töölaud: aknad kattuvad ning liigutad ja muudad nende suurust ise. Iga aken saab sinu teema värvides tiitliriba nuppudega minimeerimiseks, maksimeerimiseks ja sulgemiseks. `Super + M` minimeerib ka fookuses oleva akna. Minimeeritud aken ootab dokis; klõpsa selle rakendust, et see tagasi tuua. Klõpsa akent, et tuua see ettepoole. Muuda selle suurust mis tahes servast või nurgast. Topeltklõpsa tiitliriba, et aken maksimeerida, säilitades samal ajal ülemise riba nähtavana, ja uuesti, et saada selle vana suurus tagasi. Chrome ja teised Chromiumil põhinevad brauserid, Disks ja Document Viewer jätavad tiitliriba vahele ja kasutavad selle asemel oma päist; `Super + Alt + F` maksimeerib need ja `Super + M` minimeerib need.
 
-Ujuv tööala näitab ka dokki sinu kinnitatud rakendustega, kõigega, mis töötab, ja iga rakenduse ruudustikuga rakenduste nupu taga, mille avavad ka `Super + Alt + Space` ja _Apps_ Omarchy menüüs. Rakenduse desinstallimiseks tee ruudustikul rakendusel paremklõps või vajuta `Delete`. Klõpsa rakendust, et see avada või tuua selle aken ettepoole; klõpsa uuesti, et selle aknaid tsükliliselt läbi käia. Files toob tagasi ainult akna tööalalt, millel oled, ja avab muidu uue, ning Terminal ja Agent käivitavad alati uue, kuigi minimeeritud aken tuleb kõigepealt tagasi. Keskmine klõps avab uue akna. Lohista ikooni piki dokki, et seda liigutada; töötava rakenduse lohistamine teiste sekka jätab selle sinna. Tee paremklõps, et rakendus dokis hoida, see sealt välja võtta või see sulgeda. Dokk annab teed täisekraani aknale. Tee rakenduste nupul paremklõps, et liigutada dokk teise serva või panna see peituma, kuni kursor jõuab selle servani. Asukoht on ka valiku _Appearance > Dock > Dock Position_ all ning `omarchy dock position left` ja `omarchy dock autohide on` määravad mõlemad terminalist. Rakendused, mida dokis hoiad, on tuhmid, kui nad ei tööta.
+Ujuv tööala näitab ka dokki sinu kinnitatud rakendustega, kõigega, mis töötab, ja iga rakenduse ruudustikuga rakenduste nupu taga, mille avavad ka `Super + Alt + Space` ja _Apps_ Ve OS menüüs. Rakenduse desinstallimiseks tee ruudustikul rakendusel paremklõps või vajuta `Delete`. Klõpsa rakendust, et see avada või tuua selle aken ettepoole; klõpsa uuesti, et selle aknaid tsükliliselt läbi käia. Files toob tagasi ainult akna tööalalt, millel oled, ja avab muidu uue, ning Terminal ja Agent käivitavad alati uue, kuigi minimeeritud aken tuleb kõigepealt tagasi. Keskmine klõps avab uue akna. Lohista ikooni piki dokki, et seda liigutada; töötava rakenduse lohistamine teiste sekka jätab selle sinna. Tee paremklõps, et rakendus dokis hoida, see sealt välja võtta või see sulgeda. Dokk annab teed täisekraani aknale. Tee rakenduste nupul paremklõps, et liigutada dokk teise serva või panna see peituma, kuni kursor jõuab selle servani. Asukoht on ka valiku _Appearance > Dock > Dock Position_ all ning `omarchy dock position left` ja `omarchy dock autohide on` määravad mõlemad terminalist. Rakendused, mida dokis hoiad, on tuhmid, kui nad ei tööta.
 
 Uued tööalad ja kõik, millele sa ei ole klahvidega `Super + L` oma paigutust andnud, kasutavad vaikepaigutust. Vaikeväärtuse muutmine lähtestab sellele iga akendeta tööala, samas kui akendega tööala säilitab paigutuse, mis sellel on. Dokki minimeeritud aken loeb endiselt aknaks tööalal, kust see lahkus. Vali see valiku _Appearance > Workspace Layout_ alt: Tiling, Scrolling või Floating. `omarchy-hyprland-workspace-layout-default scrolling` määrab selle terminalist.
 

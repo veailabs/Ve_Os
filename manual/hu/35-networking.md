@@ -1,6 +1,6 @@
 # Hálózat
 
-A hálózatkezelést az Omarchyban a NetworkManager végzi, és a [felső sávon](05-the-top-bar.md) lévő hálózat ikonról, vagy a `Super + Ctrl + N` billentyűkombinációval vezérelheted.
+A hálózatkezelést az Ve OSban a NetworkManager végzi, és a [felső sávon](05-the-top-bar.md) lévő hálózat ikonról, vagy a `Super + Ctrl + N` billentyűkombinációval vezérelheted.
 
 Ez a panel Wi-Fi-hálózatokat keres, mutatja a jelerősséget, és csatlakozik. Az Ethernethez semmi sem kell — bedugod, és működik. Ha inkább a terminálban maradnál, az `nmtui` ugyanazokat a vezérlőket adja, és van egy `omarchy network` parancscsoport is.
 
@@ -12,7 +12,7 @@ Ha magára a jelszóra van szükséged, az `omarchy network password <interface>
 
 ## DNS
 
-Az Omarchy azt a DNS-t használja, amelyet a hálózatod DHCP-n keresztül ad. Ezt felülírhatod az egész gépre a _Setup > Network > DNS_ alatt, ahol a Cloudflare és a Google egy kattintásra van. Válaszd a _Custom_ lehetőséget a saját szervereid beírásához.
+Az Ve OS azt a DNS-t használja, amelyet a hálózatod DHCP-n keresztül ad. Ezt felülírhatod az egész gépre a _Setup > Network > DNS_ alatt, ahol a Cloudflare és a Google egy kattintásra van. Válaszd a _Custom_ lehetőséget a saját szervereid beírásához.
 
 A terminálból az `omarchy dns` kiírja az aktuális szolgáltatót, az `omarchy dns Cloudflare` pedig beállít egyet.
 

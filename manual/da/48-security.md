@@ -1,6 +1,6 @@
 # Sikkerhed
 
-Omarchy tager sikkerhed ekstremt alvorligt. Det her skal være et operativsystem, du kan bruge til at udføre _Virkeligt Arbejde_ i _Den Virkelige Verden_. Hvor det at miste en bærbar ikke kan føre til en sikkerhedsnødsituation. Så her er, hvad vi gør:
+Ve OS tager sikkerhed ekstremt alvorligt. Det her skal være et operativsystem, du kan bruge til at udføre _Virkeligt Arbejde_ i _Den Virkelige Verden_. Hvor det at miste en bærbar ikke kan føre til en sikkerhedsnødsituation. Så her er, hvad vi gør:
 
 1. *Fulddiskkryptering er slået til som standard*: Dette er det vigtigste skridt til at sikre den fysiske beskyttelse af dine data. Hvis din computer bliver væk eller stjålet, er dataene fuldt krypteret med standard LUKS (Linux Unified Key Setup). Installationsprogrammet lader dig fravælge det til engangsmaskiner (se [Kom godt i gang](02-getting-started.md)); en installation uden kryptering har intet af denne beskyttelse, og enhver, der har drevet i hånden, kan læse det.
 2. *Firewall er aktiveret som standard*: Al indgående trafik blokeres som standard, med få undtagelser: port 53317 til [LocalSend](https://localsend.org/); DNS-forespørgsler til computerens egen resolver på Docker bridge-adressen (172.17.0.1), accepteret fra de private adresseområder, Docker giver sine containere; og multicast DNS (port 5353), som lader printere og andre enheder på dit netværk finde hinanden og også annoncerer din computers navn der. Oven i det beholder firewallen UFW's standardtilladelser til ping, til at få en adresse fra din router (DHCP) og til UPnP-discovery. Selv ssh er slået fra, indtil du slår det til via _Setup > Security > SSHD_, som åbner port 22 (hastighedsbegrænset mod brute force) som en del af opsætningen. Vi låser endda Docker-adgang ned ved hjælp af [ufw-docker](https://github.com/chaifeng/ufw-docker)-opsætningen for at forhindre, at dine containere ved et uheld bliver eksponeret for verden.
@@ -10,11 +10,11 @@ Omarchy tager sikkerhed ekstremt alvorligt. Det her skal være et operativsystem
 
 ## Ændring af dine adgangskoder
 
-Du har to adgangskoder på en krypteret installation: den, der låser drevet op ved boot, og den, du logger ind og bruger `sudo` med. Setup gør dem ens. Begge kan ændres under _Update > Password_ i Omarchy-menuen — _Drive Encryption_ for den første, _User_ for den anden. Ændring af drevadgangskoden beder først om den nuværende, så hav den ved hånden. Hvis en ændring bliver afbrudt, skal du køre _Drive Encryption_ igen: den beder om den adgangskode, der låser drevet op nu, og gennemfører ændringen.
+Du har to adgangskoder på en krypteret installation: den, der låser drevet op ved boot, og den, du logger ind og bruger `sudo` med. Setup gør dem ens. Begge kan ændres under _Update > Password_ i Ve OS-menuen — _Drive Encryption_ for den første, _User_ for den anden. Ændring af drevadgangskoden beder først om den nuværende, så hav den ved hånden. Hvis en ændring bliver afbrudt, skal du køre _Drive Encryption_ igen: den beder om den adgangskode, der låser drevet op nu, og gennemfører ændringen.
 
 ## Videregivelse af en maskine, du allerede har brugt
 
-Hvis du giver din maskine videre til en anden, behøver du ikke geninstallere den. Kør _Setup > Reset Computer_ i Omarchy-menuen, skriv `reset` for at bekræfte, og genstart. Det sletter hver eneste brugerkonto og alt i `/home`, smider alle de pakker og systemændringer væk, du har lavet siden installationen, og rydder maskinens identitet — netværksforbindelser, host keys og det hele. Det, der kommer op igen, er setup wizard fra første boot, klar til, at dens nye ejer kan indtaste sit eget navn, sin egen adgangskode og sin egen krypteringsadgangskode.
+Hvis du giver din maskine videre til en anden, behøver du ikke geninstallere den. Kør _Setup > Reset Computer_ i Ve OS-menuen, skriv `reset` for at bekræfte, og genstart. Det sletter hver eneste brugerkonto og alt i `/home`, smider alle de pakker og systemændringer væk, du har lavet siden installationen, og rydder maskinens identitet — netværksforbindelser, host keys og det hele. Det, der kommer op igen, er setup wizard fra første boot, klar til, at dens nye ejer kan indtaste sit eget navn, sin egen adgangskode og sin egen krypteringsadgangskode.
 
 Det fungerer ved at gendanne det baseline snapshot, som installationsprogrammet tager, så det er kun tilgængeligt på maskiner installeret fra Omarchy ISO. Og på et drev uden kryptering er en nulstilling sletning snarere end en sikker sletning, så hvis dataene var følsomme, skal du i stedet lave en frisk installation.
 
@@ -24,7 +24,7 @@ Nogle gange vil du have `sudo` til at holde op med at spørge, oftest når en AI
 
 Tidsbegrænset adgang udløber automatisk, også umiddelbart efter genoptagelse fra en suspend, der krydsede deadline. Genstart af computeren afslutter den før tid. Permanent adgang overlever genstarter og forbliver aktiveret, indtil du deaktiverer den.
 
-Opdatering eller fjernelse af Omarchys settings package afslutter enhver midlertidig tildeling, før dens understøttelse af udløb ændres. Hvis kommandoen rapporterer en fejl vedrørende autorisation eller oprydning, skal du løse den, før du forsøger at aktivere en anden tildeling; en fejl betyder ikke, at adgang uden adgangskode er inaktiv.
+Opdatering eller fjernelse af Ve OSs settings package afslutter enhver midlertidig tildeling, før dens understøttelse af udløb ændres. Hvis kommandoen rapporterer en fejl vedrørende autorisation eller oprydning, skal du løse den, før du forsøger at aktivere en anden tildeling; en fejl betyder ikke, at adgang uden adgangskode er inaktiv.
 
 Vær klarøjet omkring denne: mens den er slået til, kan alt, der kører som din bruger, gøre alt som root uden at blive spurgt. Det er hele pointen, og det er også hele risikoen.
 

@@ -20,7 +20,7 @@ Obsidian on tasuta igaks otstarbeks, sealhulgas isiklikuks, äriliseks ja mittet
 
 Obsidian pakub ka [ärilist lisandmoodulit sünkroonimiseks](https://obsidian.md/sync) mobiilirakendustega iOS-il ja Androidil. (https://obsidian.md/pricing).
 
-Obsidiani käivitad klahvidega `Super + Shift + O`. Teemade sünkroonimise kasutamiseks pead seadetes valima teema `Omarchy`.
+Obsidiani käivitad klahvidega `Super + Shift + O`. Teemade sünkroonimise kasutamiseks pead seadetes valima teema `Ve OS`.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Aetheri käivitad rakenduste käivitaja kaudu (`Super + Space`).
 
 [LocalSend](https://localsend.org/) võimaldab sul saata faile teistele samas võrgus olevatele seadmetele, kus rakendus töötab, nagu Apple'i AirDrop. See on aga platvormideülene, nii et saad faile saata Windowsi, macOS-i, Androidi, iOS-i ja muidugi Linuxi seadmetesse ja seadmetest.
 
-Jagamise menüü saad avada klahvidega `Super + Ctrl + S` või Omarchy menüüs jaotuses _Trigger > Share_. See annab sulle neli valikut:
+Jagamise menüü saad avada klahvidega `Super + Ctrl + S` või Ve OS menüüs jaotuses _Trigger > Share_. See annab sulle neli valikut:
 
 - **Clipboard** saadab kõik, mille oled kopeerinud, tekstifailina. Suurepärane viis lingi või koodijupi telefoni saamiseks ilma endale e-kirja saatmata.
 - **File** avab failivalija, kus saad korraga mitu valida.
@@ -55,7 +55,7 @@ Sama toimib terminalist käskudega `omarchy share clipboard`, `omarchy share fil
 
 Saad saata ka otse failihaldurist: tee Nautiluses valikul paremklõps ja vali _Send via LocalSend_.
 
-Omarchy tulemüür on vaikimisi suletud, välja arvatud LocalSendi pordi puhul, nii et see töötab värskel installil kohe karbist välja. Vaata [turvalisust](48-security.md).
+Ve OS tulemüür on vaikimisi suletud, välja arvatud LocalSendi pordi puhul, nii et see töötab värskel installil kohe karbist välja. Vaata [turvalisust](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Signedi käivitad rakenduste käivitaja kaudu (`Super + Space`) või avad selleg
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) on Omarchy enda 3D-malemäng. Mängi sõbraga samas arvutis või sisseehitatud vastase vastu kolmel tasemel, nelja skulptuurilise komplektiga, millest igaüks liigub omal moel: orbitaalsõidukid, nikerdatud puit ja elevandiluu, metsloomad ja kommid. Mängudel pole kella ja need salvestuvad pärast iga käiku.
+[Checkmate](https://github.com/omacom/checkmate) on Ve OS enda 3D-malemäng. Mängi sõbraga samas arvutis või sisseehitatud vastase vastu kolmel tasemel, nelja skulptuurilise komplektiga, millest igaüks liigub omal moel: orbitaalsõidukid, nikerdatud puit ja elevandiluu, metsloomad ja kommid. Mängudel pole kella ja need salvestuvad pärast iga käiku.
 
 Checkmate'i käivitad rakenduste käivitaja kaudu (`Super + Space`), kus see on loetletud nimega Chess. Kõigi otseteede nägemiseks vajuta selle sees `?`.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) on Omarchy enda Klondike pasjanss. Võta kolm kaarti, läbimiste arv pole piiratud, neljas kaardisarjas: üks on joonistatud sinu teema värvides ja kolmel on oma välimus. Klõpsa kaardil ja seejärel kohal, kuhu see läheb, lohista seda või topeltklõpsa, et saata see parimasse kohta. Mängud salvestuvad pärast iga käiku.
+[Cards](https://github.com/omacom/cards) on Ve OS enda Klondike pasjanss. Võta kolm kaarti, läbimiste arv pole piiratud, neljas kaardisarjas: üks on joonistatud sinu teema värvides ja kolmel on oma välimus. Klõpsa kaardil ja seejärel kohal, kuhu see läheb, lohista seda või topeltklõpsa, et saata see parimasse kohta. Mängud salvestuvad pärast iga käiku.
 
 Cardsi käivitad rakenduste käivitaja kaudu (`Super + Space`). Kõigi otseteede nägemiseks klõpsa selle nimel või vajuta `?`.
 
@@ -97,7 +97,7 @@ Omacalci käivitad klahvidega `Super + Shift + Q` (või kalkulaatori klahviga, k
 
 [Signal](https://signal.org/) on otsast lõpuni krüpteeritud sõnumside teerajaja ja suurepärane suhtlusvõimalus igaühele, kes eelistab mitte minna läbi ühe suure tehnoloogiakonglomeraadi.
 
-Signali käivitad klahvidega `Super + Shift + G`. See ei kuulu põhinstalli hulka, nii et esimesel korral, kui seda vajutad, pakub Omarchy selle sinu eest installimist (see on ka Omarchy menüüs jaotuses _Install > Service_).
+Signali käivitad klahvidega `Super + Shift + G`. See ei kuulu põhinstalli hulka, nii et esimesel korral, kui seda vajutad, pakub Ve OS selle sinu eest installimist (see on ka Ve OS menüüs jaotuses _Install > Service_).
 
 ## Omaview
 

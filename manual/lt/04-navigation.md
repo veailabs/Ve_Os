@@ -1,8 +1,8 @@
 # Naršymas
 
-Omarchy viskas vyksta klaviatūra — _VISKAS!_ Kai sistema paleidžiama pirmą kartą, vien pele tiesiog nieko negalite padaryti. Bet galite paspausti `Super + Space`, kad atvertumėte Omarchy meniu, o iš čia galite padaryti beveik viską.
+Ve OS viskas vyksta klaviatūra — _VISKAS!_ Kai sistema paleidžiama pirmą kartą, vien pele tiesiog nieko negalite padaryti. Bet galite paspausti `Super + Space`, kad atvertumėte Ve OS meniu, o iš čia galite padaryti beveik viską.
 
-Bet Omarchy meniu net nėra skirtas būti pagrindiniu būdu valdyti sistemą didžiąją laiko dalį. Galime greičiau! Visos svarbiausios programos tiesiogiai susietos su atskirais sparčiaisiais klavišais. Terminalą paleidžiate su `Super + Return`, o naršyklę — su `Super + Shift + Return`. Pabandykite vieną po kito ir pamatysite Hyprland langų dėliojimo plytelėmis magiją veikime:
+Bet Ve OS meniu net nėra skirtas būti pagrindiniu būdu valdyti sistemą didžiąją laiko dalį. Galime greičiau! Visos svarbiausios programos tiesiogiai susietos su atskirais sparčiaisiais klavišais. Terminalą paleidžiate su `Super + Return`, o naršyklę — su `Super + Shift + Return`. Pabandykite vieną po kito ir pamatysite Hyprland langų dėliojimo plytelėmis magiją veikime:
 
  ![navigation-browser-terminal](images/navigation-browser-terminal.webp)
 
@@ -30,7 +30,7 @@ Taip pat galite pereiti į viso ekrano režimą su `Super + F` arba net tik į v
 
 ### Dwindle ir slenkamasis išdėstymas
 
-Numatytasis Omarchy išdėstymas vadinamas dwindle. Jis visą laiką laiko visus vienoje darbo srityje atvertus langus matomus, net jei tenka juos sumažinti.
+Numatytasis Ve OS išdėstymas vadinamas dwindle. Jis visą laiką laiko visus vienoje darbo srityje atvertus langus matomus, net jei tenka juos sumažinti.
 
  ![navigation-dwindle-layout](images/navigation-dwindle-layout.webp)
 
@@ -56,7 +56,7 @@ hl.config({
 
 Slankioji darbo sritis veikia kaip tradicinis darbalaukis: langai persidengia, o jūs patys juos judinate ir keičiate jų dydį. Kiekvienas langas gauna antraštės juostą jūsų temos spalvomis su mygtukais sumažinti, padidinti ir uždaryti. `Super + M` taip pat sumažina sufokusuotą langą. Sumažintas langas laukia doke; spustelėkite jo programą, kad jį grąžintumėte. Spustelėkite langą, kad iškeltumėte jį į priekį. Keiskite jo dydį nuo bet kurio krašto ar kampo. Dukart spustelėkite antraštės juostą, kad padidintumėte langą palikdami viršutinę juostą matomą, ir dar kartą, kad sugrąžintumėte seną jo dydį. Chrome ir kitos Chromium pagrindu veikiančios naršyklės, Disks ir Document Viewer praleidžia antraštės juostą ir vietoj jos naudoja savo antraštę; `Super + Alt + F` jas padidina, o `Super + M` jas sumažina.
 
-Slankioji darbo sritis taip pat rodo doką su jūsų prisegtomis programomis, viskuo, kas veikia, ir visų programų tinkleliu už programų mygtuko, kurį taip pat atveria `Super + Alt + Space` ir _Apps_ Omarchy meniu. Dešiniuoju pelės mygtuku spustelėkite programą tinklelyje arba paspauskite `Delete`, kad ją pašalintumėte. Spustelėkite programą, kad ją atvertumėte arba iškeltumėte jos langą į priekį; spustelėkite dar kartą, kad ciklu pereitumėte per jos langus. Files grąžina tik langą iš darbo srities, kurioje esate, o kitu atveju atveria naują, o Terminal ir Agent visada paleidžia kitą, nors sumažintas langas grįžta pirmas. Vidurinis spustelėjimas atveria naują langą. Vilkite piktogramą išilgai doko, kad ją perkeltumėte; įvilkus veikiančią programą tarp kitų, ji ten lieka. Dešiniuoju pelės mygtuku spustelėkite, kad programą paliktumėte doke, ją iš jo išimtumėte arba ją uždarytumėte. Dokas pasitraukia iš kelio viso ekrano langui. Dešiniuoju pelės mygtuku spustelėkite programų mygtuką, kad perkeltumėte doką į kitą kraštą arba kad jis slėptųsi, kol žymeklis pasieks jo kraštą. Padėtis taip pat yra _Appearance > Dock > Dock Position_, o `omarchy dock position left` ir `omarchy dock autohide on` abi nustato iš terminalo. Programos, kurias laikote doke, yra pritemdytos, kol jos neveikia.
+Slankioji darbo sritis taip pat rodo doką su jūsų prisegtomis programomis, viskuo, kas veikia, ir visų programų tinkleliu už programų mygtuko, kurį taip pat atveria `Super + Alt + Space` ir _Apps_ Ve OS meniu. Dešiniuoju pelės mygtuku spustelėkite programą tinklelyje arba paspauskite `Delete`, kad ją pašalintumėte. Spustelėkite programą, kad ją atvertumėte arba iškeltumėte jos langą į priekį; spustelėkite dar kartą, kad ciklu pereitumėte per jos langus. Files grąžina tik langą iš darbo srities, kurioje esate, o kitu atveju atveria naują, o Terminal ir Agent visada paleidžia kitą, nors sumažintas langas grįžta pirmas. Vidurinis spustelėjimas atveria naują langą. Vilkite piktogramą išilgai doko, kad ją perkeltumėte; įvilkus veikiančią programą tarp kitų, ji ten lieka. Dešiniuoju pelės mygtuku spustelėkite, kad programą paliktumėte doke, ją iš jo išimtumėte arba ją uždarytumėte. Dokas pasitraukia iš kelio viso ekrano langui. Dešiniuoju pelės mygtuku spustelėkite programų mygtuką, kad perkeltumėte doką į kitą kraštą arba kad jis slėptųsi, kol žymeklis pasieks jo kraštą. Padėtis taip pat yra _Appearance > Dock > Dock Position_, o `omarchy dock position left` ir `omarchy dock autohide on` abi nustato iš terminalo. Programos, kurias laikote doke, yra pritemdytos, kol jos neveikia.
 
 Naujos darbo sritys ir visos, kurioms nesuteikėte jų pačių išdėstymo su `Super + L`, naudoja numatytąjį išdėstymą. Pakeitus numatytąjį, kiekviena darbo sritis be langų nustatoma į jį iš naujo, o ta, kurioje yra langų, išlaiko turimą išdėstymą. Į doką sumažintas langas vis tiek laikomas langu darbo srityje, kurią jis paliko. Pasirinkite jį dalyje _Appearance > Workspace Layout_: Tiling, Scrolling arba Floating. `omarchy-hyprland-workspace-layout-default scrolling` nustato jį iš terminalo.
 

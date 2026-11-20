@@ -1,6 +1,6 @@
 # 네트워킹
 
-Omarchy의 네트워킹은 NetworkManager가 담당하며, [상단 바](05-the-top-bar.md)의 네트워크 아이콘이나 `Super + Ctrl + N`으로 제어한다.
+Ve OS의 네트워킹은 NetworkManager가 담당하며, [상단 바](05-the-top-bar.md)의 네트워크 아이콘이나 `Super + Ctrl + N`으로 제어한다.
 
 그 패널은 Wi-Fi 네트워크를 검색하고, 신호 강도를 보여주며, 연결해 준다. Ethernet은 아무것도 할 필요가 없다 — 꽂으면 그냥 된다. 터미널에 머무르고 싶다면 `nmtui`로도 똑같이 제어할 수 있고, `omarchy network` 명령어 그룹도 있다.
 
@@ -12,7 +12,7 @@ Omarchy의 네트워킹은 NetworkManager가 담당하며, [상단 바](05-the-t
 
 ## DNS
 
-Omarchy는 네트워크가 DHCP로 넘겨주는 DNS를 그대로 쓴다. _설정 > 네트워크 > DNS_에서 기기 전체에 적용되는 설정을 바꿀 수 있고, Cloudflare와 Google은 클릭 한 번이면 된다. 직접 입력하고 싶으면 _사용자 지정_을 골라라.
+Ve OS는 네트워크가 DHCP로 넘겨주는 DNS를 그대로 쓴다. _설정 > 네트워크 > DNS_에서 기기 전체에 적용되는 설정을 바꿀 수 있고, Cloudflare와 Google은 클릭 한 번이면 된다. 직접 입력하고 싶으면 _사용자 지정_을 골라라.
 
 터미널에서는 `omarchy dns`가 현재 제공자를 출력하고, `omarchy dns Cloudflare`가 제공자를 설정한다.
 

@@ -1,4 +1,6 @@
-# 듀얼 부팅 설치
+# Ve OS — 듀얼 부팅 설치
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Windows나 다른 설치와 함께 단일 파티션에 Omarchy를 설치할 수 있습니다.
 

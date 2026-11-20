@@ -1,6 +1,6 @@
 # Verkkoyhteydet
 
-Verkkoyhteyksiä hallitsee Omarchyssa NetworkManager, ja ohjaat sitä [yläpalkin](05-the-top-bar.md) verkkokuvakkeesta tai näppäinyhdistelmällä `Super + Ctrl + N`.
+Verkkoyhteyksiä hallitsee Ve OSssa NetworkManager, ja ohjaat sitä [yläpalkin](05-the-top-bar.md) verkkokuvakkeesta tai näppäinyhdistelmällä `Super + Ctrl + N`.
 
 Paneeli etsii Wi-Fi-verkkoja, näyttää signaalin voimakkuuden ja muodostaa yhteyden. Ethernet ei tarvitse mitään — kytke se vain kiinni ja se toimii. Jos pysyt mieluummin terminaalissa, `nmtui` tarjoaa samat säätimet, ja käytettävissä on myös `omarchy network` -komentoryhmä.
 
@@ -12,7 +12,7 @@ Jos tarvitset itse salasanan, `omarchy network password <interface>` tulostaa se
 
 ## DNS
 
-Omarchy käyttää sitä DNS:ää, jonka verkkosi antaa DHCP:n kautta. Voit ohittaa sen koko koneelle kohdassa _Setup > Network > DNS_, jossa Cloudflare ja Google ovat yhden napsautuksen päässä. Valitse _Custom_ kirjoittaaksesi omat palvelimesi.
+Ve OS käyttää sitä DNS:ää, jonka verkkosi antaa DHCP:n kautta. Voit ohittaa sen koko koneelle kohdassa _Setup > Network > DNS_, jossa Cloudflare ja Google ovat yhden napsautuksen päässä. Valitse _Custom_ kirjoittaaksesi omat palvelimesi.
 
 Terminaalissa `omarchy dns` tulostaa nykyisen tarjoajan ja `omarchy dns Cloudflare` asettaa sellaisen.
 

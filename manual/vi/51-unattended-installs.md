@@ -1,4 +1,6 @@
-# Cài đặt không cần can thiệp
+# Ve OS — Cài đặt không cần can thiệp
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 ISO Omarchy có thể tự cài đặt mà không cần ai ngồi trước bàn phím. Nếu trình cài đặt tìm thấy một ổ đĩa thứ hai có nhãn `cidata` chứa các tập tin cấu hình của nó, nó sẽ sao chép chúng ra, bỏ qua hoàn toàn trình hướng dẫn thiết lập, và tự khởi động lại vào hệ thống đã hoàn thiện. Không cần bản dựng ISO đặc biệt, không cần thêm mục nào trong menu khởi động — khi không gắn ổ đĩa như vậy, mọi thứ không thay đổi và bạn sẽ thấy trình hướng dẫn bình thường.
 

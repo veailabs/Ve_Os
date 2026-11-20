@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchya ohjataan yleensä pikanäppäimillä ja Omarchy-valikolla (`Super + Space`). Mutta voit ohjata sitä myös `omarchy` CLI:n kautta. Tästä on erityisesti apua, kun käytät tekoälyagenttia apunasi mukauttamisessa tai määrittämisessä.
+Ve OSa ohjataan yleensä pikanäppäimillä ja Ve OS-valikolla (`Super + Space`). Mutta voit ohjata sitä myös `omarchy` CLI:n kautta. Tästä on erityisesti apua, kun käytät tekoälyagenttia apunasi mukauttamisessa tai määrittämisessä.
 
 CLI:llä on pääsy kaikkiin sisäisiin työkaluihin, joita käytetään sekä valikon kautta että muuten. Näet kaiken saatavilla olevan suorittamalla `omarchy` terminaalissa.
 
@@ -8,7 +8,7 @@ Se näyttää suunnilleen tältä:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Diagnostiikkaa varten suorita `omarchy-debug --no-sudo --print` suoraan. Se tulostaa diagnostiikan ja kirjoittaa `/tmp/omarchy-debug.log` kysymättä sudoa, myös pakettien asennuksissa, joissa `omarchy debug` voi epäonnistua virheellä "Unknown Omarchy command".
+Diagnostiikkaa varten suorita `omarchy-debug --no-sudo --print` suoraan. Se tulostaa diagnostiikan ja kirjoittaa `/tmp/omarchy-debug.log` kysymättä sudoa, myös pakettien asennuksissa, joissa `omarchy debug` voi epäonnistua virheellä "Unknown Ve OS command".
 
 Ja jokaiseen ryhmään voit sukeltaa syvemmälle:
 
@@ -60,4 +60,4 @@ Myös jokainen komento hyväksyy `--help`-valitsimen, kysyitpä sitä koko ryhm�
 
 ### Valikon avaaminen terminaalista
 
-Omarchy-valikko on myös skriptattavissa, mikä on kätevää omia näppäinsidoksiasi varten. `omarchy menu` avaa sen juuresta, ja voit hypätä suoraan mihin tahansa kohtaan puussa nimeämällä sen: `omarchy menu summon appearance.theme` siirtyy suoraan teeman valitsimeen, `omarchy menu toggle system` avaa järjestelmävalikon ja sulkee sen uudelleen, jos se on jo auki, ja `omarchy menu close` sulkee sen.
+Ve OS-valikko on myös skriptattavissa, mikä on kätevää omia näppäinsidoksiasi varten. `omarchy menu` avaa sen juuresta, ja voit hypätä suoraan mihin tahansa kohtaan puussa nimeämällä sen: `omarchy menu summon appearance.theme` siirtyy suoraan teeman valitsimeen, `omarchy menu toggle system` avaa järjestelmävalikon ja sulkee sen uudelleen, jos se on jo auki, ja `omarchy menu close` sulkee sen.

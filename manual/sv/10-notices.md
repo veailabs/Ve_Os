@@ -10,7 +10,7 @@ Kort erbjuder det de bär med sig: _Kopiera kod_ för verifieringskoder (hålls 
 
 För att använda dem utan mus trycker du på `Super + Ctrl + ,`. Den nyaste aviseringen väljs och dess knappar numreras: tryck på en siffra för att använda en, `Enter` för att klicka på aviseringen, `↑` och `↓` för att flytta mellan aviseringar, `Delete` för att avfärda en och `Esc` för att ge tillbaka tangentbordet. Den släpper också taget på egen hand efter några sekunders inaktivitet.
 
-Att tysta aviseringar håller dem tillbaka, förutom Omarchys egna bekräftelser, nödlägesvarningar och verifieringskoder, som du bad om för en stund sedan. Ta fram de senaste få på skärmen igen, oavsett om de hållits tillbaka eller inte, med `Super + Shift + Alt + ,`. Historiken sparas i en dag.
+Att tysta aviseringar håller dem tillbaka, förutom Ve OSs egna bekräftelser, nödlägesvarningar och verifieringskoder, som du bad om för en stund sedan. Ta fram de senaste få på skärmen igen, oavsett om de hållits tillbaka eller inte, med `Super + Shift + Alt + ,`. Historiken sparas i en dag.
 
 ## Kortkommandoaviseringar
 

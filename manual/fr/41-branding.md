@@ -1,6 +1,6 @@
 # Image de marque
 
-Omarchy vous permet de définir le logo de votre entreprise ou une image personnelle pour le déverrouillage au démarrage, l'écran de veille et l'écran À propos.
+Ve OS vous permet de définir le logo de votre entreprise ou une image personnelle pour le déverrouillage au démarrage, l'écran de veille et l'écran À propos.
 
 ### Déverrouillage au démarrage
 
@@ -24,11 +24,11 @@ Ce menu contient trois entrées :
 
 - **Modifier le texte** ouvre `~/.config/omarchy/branding/screensaver.txt` dans votre éditeur. Tapez ou collez ce que vous voulez — de l'art ASCII, votre nom, un gros mot. Enregistrez et quittez, et l'écran de veille se lance immédiatement pour que vous puissiez le voir.
 - **Définir à partir d'une image** ouvre un sélecteur de fichier pour un png ou un svg, le convertit en ASCII et vous montre le résultat. Les logos avec une silhouette nette fonctionnent bien mieux que les photos.
-- **Restaurer la valeur par défaut** remet le logo Omarchy en place.
+- **Restaurer la valeur par défaut** remet le logo Ve OS en place.
 
 ### Écran À propos
 
-Les trois mêmes options se trouvent sous _Apparence > Image de marque > À propos_ pour l'écran _À propos_ que vous obtenez depuis le menu Omarchy, et elles fonctionnent de manière identique — le fichier est `~/.config/omarchy/branding/about.txt`, et la fenêtre À propos s'affiche après chaque changement. L'art À propos est converti dans une taille plus petite que celle de l'écran de veille, puisqu'il doit tenir dans une fenêtre plutôt que remplir votre écran.
+Les trois mêmes options se trouvent sous _Apparence > Image de marque > À propos_ pour l'écran _À propos_ que vous obtenez depuis le menu Ve OS, et elles fonctionnent de manière identique — le fichier est `~/.config/omarchy/branding/about.txt`, et la fenêtre À propos s'affiche après chaque changement. L'art À propos est converti dans une taille plus petite que celle de l'écran de veille, puisqu'il doit tenir dans une fenêtre plutôt que remplir votre écran.
 
 Pendant que la fenêtre est ouverte, un reflet vert traverse l'art en diagonale toutes les quelques secondes, puis le laisse à nouveau immobile. Votre propre art y a droit aussi, tant que chaque caractère qu'il contient occupe une seule colonne — c'est le cas de tout ce que produit _Définir à partir d'une image_. L'art construit à partir d'emoji ou de caractères double largeur reste immobile à la place, et il en va de même pour l'écran si vous conservez votre propre config fastfetch : dans ces cas, un logo immobile signifie que l'animation se tient à l'écart plutôt qu'elle échoue, car faire glisser un reflet dessus placerait le reste de la ligne au mauvais endroit.
 

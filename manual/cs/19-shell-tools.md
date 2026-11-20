@@ -1,6 +1,6 @@
 # Nástroje shellu
 
-Kromě standardních nástrojů Linuxu je Omarchy dodávána také s řadou vylepšených nástrojů shellu. Tady jsou ty klíčové.
+Kromě standardních nástrojů Linuxu je Ve OS dodávána také s řadou vylepšených nástrojů shellu. Tady jsou ty klíčové.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Tento nástroj používá také Neovim, když zadáte `Space S G`.
 
 [try](https://github.com/tobi/try) usnadňuje správu programovacích experimentů pomocí adresářů s datovým razítkem. Všechny experimenty žijí v adresáři `~/Work/tries` a můžete k nim přistupovat prostřednictvím příkazu `try`.
 
-Omarchy nepřidává adresář `bin/` projektu do proměnné `PATH` automaticky. Důvěryhodné nástroje místní pro projekt spouštějte explicitní relativní cestou, například `bin/rails` nebo `./bin/dev`.
+Ve OS nepřidává adresář `bin/` projektu do proměnné `PATH` automaticky. Důvěryhodné nástroje místní pro projekt spouštějte explicitní relativní cestou, například `bin/rails` nebo `./bin/dev`.

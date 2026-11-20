@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy کو عام طور پر ہاٹ کیز اور Omarchy مینیو (`Super + Space`) کے ذریعے کنٹرول کیا جاتا ہے۔ لیکن آپ اسے `omarchy` CLI کے ذریعے بھی کنٹرول کر سکتے ہیں۔ یہ خاص طور پر اس وقت مددگار ہوتا ہے جب آپ کسی AI ایجنٹ سے تخصیص یا ترتیب پر اپنے ساتھ کام کروا رہے ہوں۔
+Ve OS کو عام طور پر ہاٹ کیز اور Ve OS مینیو (`Super + Space`) کے ذریعے کنٹرول کیا جاتا ہے۔ لیکن آپ اسے `omarchy` CLI کے ذریعے بھی کنٹرول کر سکتے ہیں۔ یہ خاص طور پر اس وقت مددگار ہوتا ہے جب آپ کسی AI ایجنٹ سے تخصیص یا ترتیب پر اپنے ساتھ کام کروا رہے ہوں۔
 
 CLI کو ان تمام اندرونی اوزاروں تک رسائی حاصل ہے جو مینیو کے ذریعے بھی استعمال ہوتے ہیں اور دیگر طریقوں سے بھی۔ آپ ٹرمینل میں `omarchy` چلا کر سب کچھ دیکھ سکتے ہیں جو دستیاب ہے۔
 
@@ -8,7 +8,7 @@ CLI کو ان تمام اندرونی اوزاروں تک رسائی حاصل ہ
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-تشخیص کے لیے، براہِ راست `omarchy-debug --no-sudo --print` چلائیں۔ یہ تشخیصی معلومات پرنٹ کرتا ہے اور sudo کے لیے پوچھے بغیر `/tmp/omarchy-debug.log` لکھتا ہے، بشمول ان پیکیج تنصیبات پر جہاں `omarchy debug` "Unknown Omarchy command" کے ساتھ ناکام ہو سکتی ہے۔
+تشخیص کے لیے، براہِ راست `omarchy-debug --no-sudo --print` چلائیں۔ یہ تشخیصی معلومات پرنٹ کرتا ہے اور sudo کے لیے پوچھے بغیر `/tmp/omarchy-debug.log` لکھتا ہے، بشمول ان پیکیج تنصیبات پر جہاں `omarchy debug` "Unknown Ve OS command" کے ساتھ ناکام ہو سکتی ہے۔
 
 اور آپ ہر گروپ میں مزید گہرائی تک جا سکتے ہیں:
 
@@ -60,4 +60,4 @@ Capture commands — Screenshots and screen recording:
 
 ### ٹرمینل سے مینیو کھولنا
 
-Omarchy مینیو اسکرپٹ کے قابل بھی ہے، جو آپ کی اپنی کی بائنڈنگز کے لیے کارآمد ہے۔ `omarchy menu` اسے روٹ پر کھولتا ہے، اور آپ اس کا نام بتا کر درخت میں کسی بھی مقام پر براہِ راست چھلانگ لگا سکتے ہیں: `omarchy menu summon appearance.theme` براہِ راست تھیم منتخب کرنے والے تک لے جاتا ہے، `omarchy menu toggle system` سسٹم مینیو کھولتا ہے اور اگر وہ پہلے سے کھلا ہو تو اسے دوبارہ بند کر دیتا ہے، اور `omarchy menu close` اسے ہٹا دیتا ہے۔
+Ve OS مینیو اسکرپٹ کے قابل بھی ہے، جو آپ کی اپنی کی بائنڈنگز کے لیے کارآمد ہے۔ `omarchy menu` اسے روٹ پر کھولتا ہے، اور آپ اس کا نام بتا کر درخت میں کسی بھی مقام پر براہِ راست چھلانگ لگا سکتے ہیں: `omarchy menu summon appearance.theme` براہِ راست تھیم منتخب کرنے والے تک لے جاتا ہے، `omarchy menu toggle system` سسٹم مینیو کھولتا ہے اور اگر وہ پہلے سے کھلا ہو تو اسے دوبارہ بند کر دیتا ہے، اور `omarchy menu close` اسے ہٹا دیتا ہے۔

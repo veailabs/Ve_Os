@@ -1,10 +1,10 @@
 # Togol, Melahu & Penyelamat Skrin
 
-Banyak perkara yang anda ubah dari hari ke hari sebenarnya bukan tetapan. Ia mod yang anda hidupkan selama sejam dan matikan semula: cahaya malam semasa anda bekerja lewat, jangan ganggu semasa anda membuat pembentangan, kekal berjaga semasa anda menonton sesuatu. Omarchy memanggilnya togol, dan semuanya berfungsi dengan cara yang sama — kekunci pintas, entri menu, dan perintah, semuanya memetik suis yang sama.
+Banyak perkara yang anda ubah dari hari ke hari sebenarnya bukan tetapan. Ia mod yang anda hidupkan selama sejam dan matikan semula: cahaya malam semasa anda bekerja lewat, jangan ganggu semasa anda membuat pembentangan, kekal berjaga semasa anda menonton sesuatu. Ve OS memanggilnya togol, dan semuanya berfungsi dengan cara yang sama — kekunci pintas, entri menu, dan perintah, semuanya memetik suis yang sama.
 
 ### Menu togol
 
-`Super + Ctrl + O` membuka _Trigger > Toggle_ secara terus, atau anda boleh pergi ke sana dari menu Omarchy (`Super + Space`). Semua dalam senarai itu ialah suis yang boleh anda petik tanpa memikirkan di mana keadaannya disimpan. Suis untuk rupa desktop berada di sebelahnya, di bawah _Appearance_.
+`Super + Ctrl + O` membuka _Trigger > Toggle_ secara terus, atau anda boleh pergi ke sana dari menu Ve OS (`Super + Space`). Semua dalam senarai itu ialah suis yang boleh anda petik tanpa memikirkan di mana keadaannya disimpan. Suis untuk rupa desktop berada di sebelahnya, di bawah _Appearance_.
 
 Dari terminal, suis yang sama ialah `omarchy toggle <thing>`. Jalankan `omarchy toggle` bersendirian untuk melihat keseluruhan kumpulan itu.
 
@@ -26,7 +26,7 @@ Suis pad sentuh, skrin sentuh, dan GPU hibrid berada di bawah _Trigger > Hardwar
 
 _Appearance_ memegang bar menu dan animasi, serta beberapa perkara yang bukan perintah `omarchy toggle` tetapi berkelakuan sama: peratusan bateri dalam bar, susun atur ruang kerja lalai, dan di bawah _Windows_, jurang tetingkap (`Super + Shift + Backspace`) dan aspek segi empat sama 1 tetingkap (`Super + Ctrl + Backspace`).
 
-Apabila Hyprland tiada GPU untuk melukis dan sebaliknya membuat render pada CPU (llvmpipe), seperti pada Mac yang GPU-nya belum disokong, dalam kebanyakan VM, atau apabila pemacu grafik gagal dimuatkan, Omarchy mematikan animasi, kabur dan bayang untuk sesi itu dan memberitahu anda sekali sahaja melalui pemberitahuan. _Appearance > Animations On_ menghidupkannya semula, dan Omarchy mengingati pilihan itu untuk sesi kemudian juga.
+Apabila Hyprland tiada GPU untuk melukis dan sebaliknya membuat render pada CPU (llvmpipe), seperti pada Mac yang GPU-nya belum disokong, dalam kebanyakan VM, atau apabila pemacu grafik gagal dimuatkan, Ve OS mematikan animasi, kabur dan bayang untuk sesi itu dan memberitahu anda sekali sahaja melalui pemberitahuan. _Appearance > Animations On_ menghidupkannya semula, dan Ve OS mengingati pilihan itu untuk sesi kemudian juga.
 
 Kebanyakan togol ini hanyalah fail bendera di bawah `~/.local/state/omarchy/toggles/`. Jika anda mahu bercabang berdasarkannya dalam skrip, `omarchy-toggle-enabled` memberi anda kod keluar dan bukan memaksa anda mencarinya sendiri:
 
@@ -63,11 +63,11 @@ Kemudian mulakan hyprsunset semasa log masuk dengan menambah `o.launch_on_start(
 
 Tiada apa yang hilang, walau bagaimanapun. Pemberitahuan yang disenyapkan ditahan: paparkan semula beberapa yang terakhir pada skrin dengan `Super + Shift + Alt + ,`. Lihat [notis](10-notices.md) untuk selebihnya.
 
-Dua jenis mesej masih dapat menembusinya: toast pengesahan Omarchy sendiri untuk sesuatu yang baru anda lakukan ("Theme changed", "Screenshot saved"), dan amaran kritikal yang dihantar dari baris perintah. Aplikasi sembang yang menandakan semuanya sebagai kritikal untuk memaksa lalu di hadapan anda tidak layak.
+Dua jenis mesej masih dapat menembusinya: toast pengesahan Ve OS sendiri untuk sesuatu yang baru anda lakukan ("Theme changed", "Screenshot saved"), dan amaran kritikal yang dihantar dari baris perintah. Aplikasi sembang yang menandakan semuanya sebagai kritikal untuk memaksa lalu di hadapan anda tidak layak.
 
 ### Melahu
 
-Shell Omarchy memiliki tingkah laku melahu, dan pemasaan ialah blok `idle` peringkat atas dalam `~/.config/omarchy/shell.json`:
+Shell Ve OS memiliki tingkah laku melahu, dan pemasaan ialah blok `idle` peringkat atas dalam `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Ini tentang penguncian dan penyelamat skrin, bukan kuasa. Tangguh dan hibernasi 
 
 ### Penyelamat skrin
 
-Penyelamat skrin Omarchy ialah seni ASCII yang berjalan melalui kesan teks rawak, satu kejadian bagi setiap monitor. Sebarang kekunci atau pergerakan tetikus akan menutupnya.
+Penyelamat skrin Ve OS ialah seni ASCII yang berjalan melalui kesan teks rawak, satu kejadian bagi setiap monitor. Sebarang kekunci atau pergerakan tetikus akan menutupnya.
 
 Anda boleh memulakannya atas permintaan dari _System > Screensaver_ (`Super + Esc`), yang memaksanya muncul walaupun anda telah mematikan penyelamat skrin melahu. Tiada kekunci pintas yang diikat kepadanya secara lalai.
 
 `omarchy toggle screensaver` ialah yang mematikan yang melahu itu, jika anda lebih suka terus dari bekerja kepada terkunci. Sebarang kekunci, klik, skrol atau pergerakan tetikus menutupnya.
 
-Logo yang dilukisnya terserah kepada anda untuk diubah, di bawah _Appearance > Branding > Screensaver_. Muat naik png atau svg dan Omarchy menukarnya kepada ASCII. Lihat [penjenamaan](41-branding.md).
+Logo yang dilukisnya terserah kepada anda untuk diubah, di bawah _Appearance > Branding > Screensaver_. Muat naik png atau svg dan Ve OS menukarnya kepada ASCII. Lihat [penjenamaan](41-branding.md).
 
 ### Skrin kunci
 
-`Super + Ctrl + L` mengunci mesin. Itu menjalankan skrin kunci dari shell Omarchy, mengosongkan paparan, menetapkan semula susun atur papan kekunci anda kepada yang pertama supaya anda tidak menaip kata laluan dalam abjad yang salah, dan — jika anda menjalankannya — mengunci 1Password dalam perjalanan keluar.
+`Super + Ctrl + L` mengunci mesin. Itu menjalankan skrin kunci dari shell Ve OS, mengosongkan paparan, menetapkan semula susun atur papan kekunci anda kepada yang pertama supaya anda tidak menaip kata laluan dalam abjad yang salah, dan — jika anda menjalankannya — mengunci 1Password dalam perjalanan keluar.
 
 Skrin kunci menerima kata laluan, dan ia juga akan menerima cap jari setelah anda menyediakannya. Itu, dan cara lain untuk mengesahkan, dibincangkan dalam [pengesahan perkakasan](37-hardware-authentication.md).

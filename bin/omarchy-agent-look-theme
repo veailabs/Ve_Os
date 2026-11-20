@@ -83,9 +83,12 @@ if not images:
 for name in images:
     p = os.path.join(bgdir, name)
     try:
-        info = subprocess.run(["magick", p, "-format", "%w %h %[fx:mean] %[fx:standard_deviation]", "info:"],
-                              capture_output=True, text=True, timeout=30).stdout.split()
+        info = subprocess.run(["magick", "-limit", "thread", "1", p, "-format", "%w %h %[fx:mean] %[fx:standard_deviation]", "info:"],
+                              capture_output=True, text=True, timeout=60).stdout.split()
         w, h, mean, sd = int(info[0]), int(info[1]), float(info[2]), float(info[3])
+    except subprocess.TimeoutExpired:
+        problems.append(f"backgrounds/{name} statistics timed out after 60 seconds")
+        continue
     except Exception:
         problems.append(f"backgrounds/{name} can't be read as an image")
         continue

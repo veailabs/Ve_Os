@@ -1,10 +1,10 @@
 # Przełączniki, bezczynność i wygaszacz ekranu
 
-Wiele z tego, co zmieniasz na co dzień, tak naprawdę nie jest ustawieniem. To tryb, który włączasz na godzinę i z powrotem wyłączasz: światło nocne, gdy pracujesz do późna, nie przeszkadzać, gdy prowadzisz prezentację, czuwanie, gdy coś oglądasz. Omarchy nazywa je przełącznikami i wszystkie działają w ten sam sposób — skrót klawiszowy, pozycja w menu i komenda, wszystkie trafiające w ten sam przełącznik.
+Wiele z tego, co zmieniasz na co dzień, tak naprawdę nie jest ustawieniem. To tryb, który włączasz na godzinę i z powrotem wyłączasz: światło nocne, gdy pracujesz do późna, nie przeszkadzać, gdy prowadzisz prezentację, czuwanie, gdy coś oglądasz. Ve OS nazywa je przełącznikami i wszystkie działają w ten sam sposób — skrót klawiszowy, pozycja w menu i komenda, wszystkie trafiające w ten sam przełącznik.
 
 ### Menu przełączników
 
-`Super + Ctrl + O` otwiera bezpośrednio _Trigger > Toggle_, albo możesz dojść tam z menu Omarchy (`Super + Space`). Wszystko na tej liście to przełącznik, który możesz przełączyć, nie zastanawiając się, gdzie przechowywany jest stan. Przełączniki dotyczące wyglądu pulpitu znajdują się tuż obok, w _Appearance_.
+`Super + Ctrl + O` otwiera bezpośrednio _Trigger > Toggle_, albo możesz dojść tam z menu Ve OS (`Super + Space`). Wszystko na tej liście to przełącznik, który możesz przełączyć, nie zastanawiając się, gdzie przechowywany jest stan. Przełączniki dotyczące wyglądu pulpitu znajdują się tuż obok, w _Appearance_.
 
 Z terminala te same przełączniki to `omarchy toggle <thing>`. Uruchom samo `omarchy toggle`, aby zobaczyć całą grupę.
 
@@ -26,7 +26,7 @@ Przełączniki panelu dotykowego, ekranu dotykowego i hybrydowego GPU znajdują 
 
 _Appearance_ zawiera pasek menu i animacje, a także kilka rzeczy, które nie są komendami `omarchy toggle`, ale zachowują się tak samo: procent baterii na pasku, domyślny układ obszaru roboczego oraz, w _Windows_, odstępy okien (`Super + Shift + Backspace`) i proporcje kwadratu przy 1 oknie (`Super + Ctrl + Backspace`).
 
-Gdy Hyprland nie ma GPU, na którym mógłby rysować, i renderuje zamiast tego na CPU (llvmpipe), jak na Macach, których GPU nie jest jeszcze obsługiwane, w większości maszyn wirtualnych lub gdy sterownik graficzny nie wczyta się, Omarchy wyłącza animacje, rozmycie i cienie na tę sesję i informuje cię o tym raz powiadomieniem. _Appearance > Animations On_ przywraca je, a Omarchy zapamiętuje to także na późniejsze sesje.
+Gdy Hyprland nie ma GPU, na którym mógłby rysować, i renderuje zamiast tego na CPU (llvmpipe), jak na Macach, których GPU nie jest jeszcze obsługiwane, w większości maszyn wirtualnych lub gdy sterownik graficzny nie wczyta się, Ve OS wyłącza animacje, rozmycie i cienie na tę sesję i informuje cię o tym raz powiadomieniem. _Appearance > Animations On_ przywraca je, a Ve OS zapamiętuje to także na późniejsze sesje.
 
 Większość z nich to po prostu plik flagi w `~/.local/state/omarchy/toggles/`. Jeśli chcesz rozgałęziać na podstawie któregoś z nich w skrypcie, `omarchy-toggle-enabled` zwraca ci kod wyjścia, zamiast zmuszać cię do szukania:
 
@@ -63,11 +63,11 @@ Następnie uruchamiaj hyprsunset przy logowaniu, dodając `o.launch_on_start("hy
 
 Nic jednak nie ginie. Wyciszone powiadomienia są wstrzymywane: przywróć kilka ostatnich na ekran za pomocą `Super + Shift + Alt + ,`. Resztę znajdziesz w [powiadomieniach](10-notices.md).
 
-Dwa rodzaje wiadomości nadal się przedostają: własne powiadomienia potwierdzające Omarchy dla czegoś, co właśnie zrobiłeś ("Theme changed", "Screenshot saved"), oraz krytyczne alerty wysłane z wiersza poleceń. Aplikacje czatu, które oznaczają wszystko jako krytyczne, aby na siłę przebić się przed ciebie, się nie kwalifikują.
+Dwa rodzaje wiadomości nadal się przedostają: własne powiadomienia potwierdzające Ve OS dla czegoś, co właśnie zrobiłeś ("Theme changed", "Screenshot saved"), oraz krytyczne alerty wysłane z wiersza poleceń. Aplikacje czatu, które oznaczają wszystko jako krytyczne, aby na siłę przebić się przed ciebie, się nie kwalifikują.
 
 ### Bezczynność
 
-Powłoka Omarchy zarządza zachowaniem przy bezczynności, a czasy określa blok `idle` na najwyższym poziomie w `~/.config/omarchy/shell.json`:
+Powłoka Ve OS zarządza zachowaniem przy bezczynności, a czasy określa blok `idle` na najwyższym poziomie w `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Chodzi tu o blokowanie i wygaszacz ekranu, nie o zasilanie. Wstrzymanie i hibern
 
 ### Wygaszacz ekranu
 
-Wygaszacz ekranu Omarchy to grafika ASCII przechodząca przez losowe efekty tekstowe, jedna instancja na monitor. Dowolny klawisz lub ruch myszy go wyłącza.
+Wygaszacz ekranu Ve OS to grafika ASCII przechodząca przez losowe efekty tekstowe, jedna instancja na monitor. Dowolny klawisz lub ruch myszy go wyłącza.
 
 Możesz uruchomić go na żądanie z _System > Screensaver_ (`Super + Esc`), co wymusza jego pojawienie się, nawet jeśli wyłączyłeś wygaszacz przy bezczynności. Domyślnie nie jest do niego przypisany żaden skrót klawiszowy.
 
 `omarchy toggle screensaver` wyłącza ten przy bezczynności, jeśli wolisz przechodzić prosto od pracy do blokady. Dowolny klawisz, kliknięcie, przewinięcie lub ruch myszy go zamyka.
 
-Logo, które rysuje, możesz zmienić w _Appearance > Branding > Screensaver_. Prześlij png lub svg, a Omarchy przekształci je na ASCII. Zobacz [branding](41-branding.md).
+Logo, które rysuje, możesz zmienić w _Appearance > Branding > Screensaver_. Prześlij png lub svg, a Ve OS przekształci je na ASCII. Zobacz [branding](41-branding.md).
 
 ### Ekran blokady
 
-`Super + Ctrl + L` blokuje maszynę. Uruchamia to ekran blokady z powłoki Omarchy, wygasza wyświetlacz, resetuje układ klawiatury do pierwszego, abyś nie wpisywał hasła w złym alfabecie, oraz — jeśli masz go uruchomionego — blokuje po drodze 1Password.
+`Super + Ctrl + L` blokuje maszynę. Uruchamia to ekran blokady z powłoki Ve OS, wygasza wyświetlacz, resetuje układ klawiatury do pierwszego, abyś nie wpisywał hasła w złym alfabecie, oraz — jeśli masz go uruchomionego — blokuje po drodze 1Password.
 
 Ekran blokady przyjmuje hasło, a przyjmie też odcisk palca, gdy już go skonfigurujesz. To oraz inne sposoby uwierzytelniania opisano w [uwierzytelnianiu sprzętowym](37-hardware-authentication.md).

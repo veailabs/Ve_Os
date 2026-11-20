@@ -35,7 +35,7 @@ fi
 # Check if theme exists before attempting removal
 if [[ ! -d $THEME_PATH ]]; then
   if [[ -d $OMARCHY_PATH/themes/$THEME_NAME ]]; then
-    echo "Error: Theme '$THEME_NAME' comes with Omarchy and cannot be removed."
+    echo "Error: Theme '$THEME_NAME' comes with Ve OS and cannot be removed."
   else
     echo "Error: Theme '$THEME_NAME' not found."
   fi

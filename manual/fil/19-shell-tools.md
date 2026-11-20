@@ -1,6 +1,6 @@
 # Mga Tool ng Shell
 
-Bukod sa mga standard na tool ng Linux, may kasama ring maraming pinahusay na tool ng shell ang Omarchy. Narito ang mga pangunahing iyon.
+Bukod sa mga standard na tool ng Linux, may kasama ring maraming pinahusay na tool ng shell ang Ve OS. Narito ang mga pangunahing iyon.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Makikita ang buong manual sa pamamagitan ng `man yt-dlp`.
 
 Pinapadali ng [try](https://github.com/tobi/try) ang pamamahala ng mga eksperimento sa programming gamit ang mga direktoryong may date stamp. Nakatira ang lahat ng eksperimento sa `~/Work/tries` at maa-access mo ang mga ito sa pamamagitan ng `try`.
 
-Hindi awtomatikong idinaragdag ng Omarchy ang `bin/` directory ng isang proyekto sa `PATH`. Patakbuhin ang mga pinagkakatiwalaang project-local tool gamit ang tahasang relative path, tulad ng `bin/rails` o `./bin/dev`.
+Hindi awtomatikong idinaragdag ng Ve OS ang `bin/` directory ng isang proyekto sa `PATH`. Patakbuhin ang mga pinagkakatiwalaang project-local tool gamit ang tahasang relative path, tulad ng `bin/rails` o `./bin/dev`.

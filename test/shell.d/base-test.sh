@@ -258,6 +258,7 @@ setup_scratch_shell() {
 
   mkdir -p "$SCRATCH_ROOT" "$SCRATCH_BIN"
   cp -a "$ROOT/shell" "$SCRATCH_ROOT/shell"
+  ln -s "$ROOT/logo.svg" "$SCRATCH_ROOT/logo.svg"
   ln -s "$ROOT/config" "$SCRATCH_ROOT/config"
   ln -s "$ROOT/bin" "$SCRATCH_ROOT/bin"
   ln -s "$ROOT/default" "$SCRATCH_ROOT/default"

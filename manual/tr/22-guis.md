@@ -20,7 +20,7 @@ Obsidian, kişisel, ticari ve kâr amacı gütmeyen kullanım da dahil olmak üz
 
 Obsidian ayrıca iOS ve Android'deki mobil uygulamalarla [senkronizasyon için ticari bir eklenti](https://obsidian.md/sync) de sunar. (https://obsidian.md/pricing).
 
-Obsidian'ı `Super + Shift + O` ile başlatırsınız. Tema senkronizasyonunu kullanmak için ayarlar altında `Omarchy` temasını seçmelisiniz.
+Obsidian'ı `Super + Shift + O` ile başlatırsınız. Tema senkronizasyonunu kullanmak için ayarlar altında `Ve OS` temasını seçmelisiniz.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Aether'ı uygulama başlatıcı (`Super + Space`) aracılığıyla başlatırsı
 
 [LocalSend](https://localsend.org/), Apple'ın AirDrop'u gibi, uygulamayı çalıştıran aynı ağdaki diğer cihazlara dosya göndermenizi sağlar. Ancak platformlar arası çalışır; böylece Windows, macOS, Android, iOS ve tabii ki Linux ile karşılıklı dosya gönderebilirsiniz.
 
-Share menüsünü `Super + Ctrl + S` ile veya Omarchy menüsünde _Trigger > Share_ altında açabilirsiniz. Size dört seçenek sunar:
+Share menüsünü `Super + Ctrl + S` ile veya Ve OS menüsünde _Trigger > Share_ altında açabilirsiniz. Size dört seçenek sunar:
 
 - **Clipboard**, kopyaladığınız her şeyi bir metin dosyası olarak gönderir. Kendinize e-posta göndermeden telefonunuza bir bağlantı veya bir parça metin aktarmak için harikadır.
 - **File**, aynı anda birkaç tane seçebileceğiniz bir dosya seçici açar.
@@ -55,7 +55,7 @@ Aynı şey terminalden `omarchy share clipboard`, `omarchy share file [path]` ve
 
 Doğrudan dosya yöneticisinden de gönderebilirsiniz: Nautilus'ta herhangi bir seçime sağ tıklayın ve _Send via LocalSend_ seçeneğini seçin.
 
-Omarchy'nin güvenlik duvarı, LocalSend'in portu dışında varsayılan olarak kapalıdır; bu yüzden bu, yeni bir kurulumda kutudan çıktığı gibi çalışır. Bkz. [güvenlik](48-security.md).
+Ve OS'nin güvenlik duvarı, LocalSend'in portu dışında varsayılan olarak kapalıdır; bu yüzden bu, yeni bir kurulumda kutudan çıktığı gibi çalışır. Bkz. [güvenlik](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Signed'ı uygulama başlatıcı (`Super + Space`) aracılığıyla başlatırsı
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate), Omarchy'nin kendi 3D satranç oyunudur. Aynı bilgisayarda bir arkadaşınızla veya üç seviyede yerleşik rakibe karşı, her biri kendine özgü şekilde hareket eden dört yontulmuş setle oynayın: yörünge araçları, oyulmuş ahşap ve fildişi, orman yaratıkları ve şeker. Oyunlarda saat yoktur ve her hamleden sonra kaydedilir.
+[Checkmate](https://github.com/omacom/checkmate), Ve OS'nin kendi 3D satranç oyunudur. Aynı bilgisayarda bir arkadaşınızla veya üç seviyede yerleşik rakibe karşı, her biri kendine özgü şekilde hareket eden dört yontulmuş setle oynayın: yörünge araçları, oyulmuş ahşap ve fildişi, orman yaratıkları ve şeker. Oyunlarda saat yoktur ve her hamleden sonra kaydedilir.
 
 Checkmate'i uygulama başlatıcı (`Super + Space`) aracılığıyla başlatırsınız; orada Chess olarak listelenir. Tüm kısayolları görmek için içindeyken `?` tuşuna basın.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards), Omarchy'nin kendi Klondike solitaire oyunudur. Dört kart serisiyle, turlarda sınır olmadan üçerli çekin: biri temanızın renkleriyle çizilmiş, üçü de kendine özgü bir görünüme sahiptir. Bir karta ve ardından gideceği yere tıklayın, onu sürükleyin veya en iyi yere göndermek için çift tıklayın. Oyunlar her hamleden sonra kaydedilir.
+[Cards](https://github.com/omacom/cards), Ve OS'nin kendi Klondike solitaire oyunudur. Dört kart serisiyle, turlarda sınır olmadan üçerli çekin: biri temanızın renkleriyle çizilmiş, üçü de kendine özgü bir görünüme sahiptir. Bir karta ve ardından gideceği yere tıklayın, onu sürükleyin veya en iyi yere göndermek için çift tıklayın. Oyunlar her hamleden sonra kaydedilir.
 
 Cards'ı uygulama başlatıcı (`Super + Space`) aracılığıyla başlatırsınız. Tüm kısayolları görmek için adına tıklayın veya `?` tuşuna basın.
 
@@ -97,7 +97,7 @@ Omacalc'ı `Super + Shift + Q` ile başlatırsınız (veya klavyenizde varsa hes
 
 [Signal](https://signal.org/), E2E şifreli mesajlaşmanın öncüsüdür ve büyük teknoloji şirketlerinden birinden geçmemeyi tercih eden herkes için harika bir iletişim seçeneğidir.
 
-Signal'i `Super + Shift + G` ile başlatırsınız. Temel kurulumun bir parçası değildir; bu yüzden o tuşlara ilk bastığınızda Omarchy size onu kurmayı teklif eder (ayrıca Omarchy menüsünde _Install > Service_ altındadır).
+Signal'i `Super + Shift + G` ile başlatırsınız. Temel kurulumun bir parçası değildir; bu yüzden o tuşlara ilk bastığınızda Ve OS size onu kurmayı teklif eder (ayrıca Ve OS menüsünde _Install > Service_ altındadır).
 
 ## Omaview
 

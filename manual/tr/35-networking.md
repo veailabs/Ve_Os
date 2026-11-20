@@ -1,6 +1,6 @@
 # Ağ
 
-Omarchy'de ağ bağlantısı NetworkManager tarafından yönetilir ve bunu [üst çubuktaki](05-the-top-bar.md) ağ simgesinden ya da `Super + Ctrl + N` ile kontrol edersiniz.
+Ve OS'de ağ bağlantısı NetworkManager tarafından yönetilir ve bunu [üst çubuktaki](05-the-top-bar.md) ağ simgesinden ya da `Super + Ctrl + N` ile kontrol edersiniz.
 
 Bu panel Wi-Fi ağlarını tarar, sinyal gücünü gösterir ve bağlantı kurar. Ethernet için hiçbir şey gerekmez — kabloyu takın ve çalışır. Terminalde kalmayı tercih ederseniz, `nmtui` size aynı kontrolleri sunar ve bir de `omarchy network` komut grubu vardır.
 
@@ -12,7 +12,7 @@ Parolanın kendisine gerçekten ihtiyacınız varsa, `omarchy network password <
 
 ## DNS
 
-Omarchy, ağınızın DHCP üzerinden verdiği DNS'i kullanır. Bunu tüm makine için _Setup > Network > DNS_ altında geçersiz kılabilirsiniz; burada Cloudflare ve Google tek tık uzağınızdadır. Kendi sunucularınızı yazmak için _Custom_ seçeneğini seçin.
+Ve OS, ağınızın DHCP üzerinden verdiği DNS'i kullanır. Bunu tüm makine için _Setup > Network > DNS_ altında geçersiz kılabilirsiniz; burada Cloudflare ve Google tek tık uzağınızdadır. Kendi sunucularınızı yazmak için _Custom_ seçeneğini seçin.
 
 Terminalden, `omarchy dns` geçerli sağlayıcıyı yazdırır ve `omarchy dns Cloudflare` birini ayarlar.
 

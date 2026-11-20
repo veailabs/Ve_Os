@@ -1,12 +1,12 @@
 # Písma
 
-Omarchy predvolene používa JetBrainsMono Nerd Font ako terminálové aj systémové písmo.
+Ve OS predvolene používa JetBrainsMono Nerd Font ako terminálové aj systémové písmo.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Zmeniť to môžete cez ponuku _Vzhľad > Písmo_ v ponuke Omarchy (`Super + Space`). Tým nastavíte monospace písmo všade: v termináli, na lište a vo všetkom ostatnom, čo si ho vyžiada.
+Zmeniť to môžete cez ponuku _Vzhľad > Písmo_ v ponuke Ve OS (`Super + Space`). Tým nastavíte monospace písmo všade: v termináli, na lište a vo všetkom ostatnom, čo si ho vyžiada.
 
-Ďalšie populárne programátorské písma si môžete nainštalovať cez _Inštalovať > Štýl > Písmo_ v ponuke Omarchy: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono a Iosevka máte všetky na jedno kliknutie, v ich verziách Nerd Font, takže glyfy na lište a v termináli budú naďalej fungovať. Po nainštalovaní niektorého z nich si ho vyberte v ponuke _Vzhľad > Písmo_.
+Ďalšie populárne programátorské písma si môžete nainštalovať cez _Inštalovať > Štýl > Písmo_ v ponuke Ve OS: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono a Iosevka máte všetky na jedno kliknutie, v ich verziách Nerd Font, takže glyfy na lište a v termináli budú naďalej fungovať. Po nainštalovaní niektorého z nich si ho vyberte v ponuke _Vzhľad > Písmo_.
 
 ## Čínština, japončina a kórejčina
 

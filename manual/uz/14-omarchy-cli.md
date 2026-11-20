@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy odatda tezkor tugmalar va Omarchy menyusi (`Super + Space`) orqali boshqariladi. Lekin uni `omarchy` CLI orqali ham boshqarishingiz mumkin. Bu, ayniqsa, moslashtirish yoki sozlash ustida AI agent siz bilan birga ishlayotganda juda qo'l keladi.
+Ve OS odatda tezkor tugmalar va Ve OS menyusi (`Super + Space`) orqali boshqariladi. Lekin uni `omarchy` CLI orqali ham boshqarishingiz mumkin. Bu, ayniqsa, moslashtirish yoki sozlash ustida AI agent siz bilan birga ishlayotganda juda qo'l keladi.
 
 CLI menyu orqali ham, boshqa yo'llar bilan ham ishlatiladigan barcha ichki vositalarga kirish imkoniga ega. Terminalda `omarchy` ni ishga tushirib, mavjud barcha narsani ko'rishingiz mumkin.
 
@@ -8,7 +8,7 @@ U taxminan shunday ko'rinadi:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Diagnostika uchun `omarchy-debug --no-sudo --print` ni to'g'ridan-to'g'ri ishga tushiring. U diagnostikani chop etadi va sudo so'ramasdan `/tmp/omarchy-debug.log` ga yozadi, jumladan, `omarchy debug` "Unknown Omarchy command" xatosi bilan muvaffaqiyatsiz bo'lishi mumkin bo'lgan paket o'rnatishlarida ham.
+Diagnostika uchun `omarchy-debug --no-sudo --print` ni to'g'ridan-to'g'ri ishga tushiring. U diagnostikani chop etadi va sudo so'ramasdan `/tmp/omarchy-debug.log` ga yozadi, jumladan, `omarchy debug` "Unknown Ve OS command" xatosi bilan muvaffaqiyatsiz bo'lishi mumkin bo'lgan paket o'rnatishlarida ham.
 
 Va har bir guruhni chuqurroq o'rganishingiz mumkin:
 
@@ -60,4 +60,4 @@ Har bir buyruq `--help` ni ham qabul qiladi, xoh butun guruhni so'rang (`omarchy
 
 ### Menyuni terminaldan ochish
 
-Omarchy menyusini skriptlash ham mumkin, bu o'z tugmalar birikmalaringiz uchun qulay. `omarchy menu` uni ildizda ochadi va siz uni nomlab, daraxtning istalgan nuqtasiga to'g'ridan-to'g'ri o'tishingiz mumkin: `omarchy menu summon appearance.theme` to'g'ridan-to'g'ri mavzu tanlagichga o'tadi, `omarchy menu toggle system` tizim menyusini ochadi va agar u allaqachon ochiq bo'lsa, uni yana yopadi, `omarchy menu close` esa uni yopib qo'yadi.
+Ve OS menyusini skriptlash ham mumkin, bu o'z tugmalar birikmalaringiz uchun qulay. `omarchy menu` uni ildizda ochadi va siz uni nomlab, daraxtning istalgan nuqtasiga to'g'ridan-to'g'ri o'tishingiz mumkin: `omarchy menu summon appearance.theme` to'g'ridan-to'g'ri mavzu tanlagichga o'tadi, `omarchy menu toggle system` tizim menyusini ochadi va agar u allaqachon ochiq bo'lsa, uni yana yopadi, `omarchy menu close` esa uni yopib qo'yadi.

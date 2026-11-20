@@ -41,7 +41,7 @@ Need seosed on olemas ainult kuni Omasnap on avatud, nii et need ei saa sinu end
 
 ## Ekraani salvestamine
 
-`Alt + Print Screen` avab _Trigger > Capture > Screenrecord_, mis küsib, mida sa heliribale soovid: heli puudub, töölauaheli, töölaud koos mikrofoniga või töölaud koos mikrofoni ja veebikaameraga. Viimane ilmub ainult siis, kui sul on kaamera tegelikult ühendatud. Vali üks ja Omarchy salvestusvalija laseb sul lohistada piirkonna või klõpsata aknal või monitoril.
+`Alt + Print Screen` avab _Trigger > Capture > Screenrecord_, mis küsib, mida sa heliribale soovid: heli puudub, töölauaheli, töölaud koos mikrofoniga või töölaud koos mikrofoni ja veebikaameraga. Viimane ilmub ainult siis, kui sul on kaamera tegelikult ühendatud. Vali üks ja Ve OS salvestusvalija laseb sul lohistada piirkonna või klõpsata aknal või monitoril.
 
 Salvestamine töötab gpu-screen-recorderiga, mis kodeerib GPU peal kiirusega 60fps ja läheb vajadusel tagasi CPU peale. Tulemuseks on MP4 kaustas `~/Videos` nimega `screenrecording-2026-08-13_14-22-05.mp4`. Selle muutmiseks määra `OMARCHY_SCREENRECORD_DIR` — aga pane tähele, et erinevalt ekraanipiltide kaustast peab see juba olemas olema, muidu keeldub salvestamine käivitumast.
 

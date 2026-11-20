@@ -1,10 +1,10 @@
 # Nettapper
 
-Du kan legge til dine egne nettapper med _Install > Web App_ i Omarchy-menyen (`Super + Space`). Den ber deg om appnavn, app-URL og ikon-URL, hvis den ikke kan hente det via favicon. Du kan få flotte PNG-ikoner for mange populære nettapper på [Dashboard Icons](https://dashboardicons.com).
+Du kan legge til dine egne nettapper med _Install > Web App_ i Ve OS-menyen (`Super + Space`). Den ber deg om appnavn, app-URL og ikon-URL, hvis den ikke kan hente det via favicon. Du kan få flotte PNG-ikoner for mange populære nettapper på [Dashboard Icons](https://dashboardicons.com).
 
 De blir deretter tilgjengelige via appstarteren (`Super + Space`), og bruker det vakre, rammeløse nettappvinduet.
 
-Hvis du vil fjerne en nettapp, går du bare til _Remove > Web App_ i Omarchy-menyen.
+Hvis du vil fjerne en nettapp, går du bare til _Remove > Web App_ i Ve OS-menyen.
 
 Det er best å logge inn på alle kontoene dine i en vanlig nettleser før du bruker snarveiene til nettappene. Den tynne innpakkingsrammen fungerer ikke godt med 1password, så det er rett og slett enklere å være logget inn direkte på forhånd.
 
@@ -12,7 +12,7 @@ Alle hurtigtastene for disse nettappene kan endres i `~/.config/hypr/bindings.lu
 
 Når du er i en nettapp, kan du kopiere gjeldende URL til utklippstavlen med `Shift + Alt + L`.
 
-Som standard leveres Omarchy allerede med et utvalg standardapper:
+Som standard leveres Ve OS allerede med et utvalg standardapper:
 
 ## HEY
 
@@ -64,7 +64,7 @@ Du kan starte YouTube med `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) er det mest populære videochatsystemet som brukes i USA. Flotte forbindelser over hele verden. Og møter på 40 minutter kan holdes uten en betalende konto. Omarchy pakker inn Zooms nettklient, og lenker til Zoom-møter åpnes rett i den.
+[Zoom](https://zoom.us/) er det mest populære videochatsystemet som brukes i USA. Flotte forbindelser over hele verden. Og møter på 40 minutter kan holdes uten en betalende konto. Ve OS pakker inn Zooms nettklient, og lenker til Zoom-møter åpnes rett i den.
 
 Du starter Zoom med appstarteren (`Super + Space`).
 
@@ -76,7 +76,7 @@ Du starter Discord med appstarteren (`Super + Space`).
 
 ## Microsoft-apper
 
-Velg _Install > Service > Microsoft_ for å legge til Outlook, Word, Excel, PowerPoint, Teams og OneDrive som nettapper. Hver app har sin egen starter og åpnes direkte, med de kommersielle Microsoft 365-URL-ene og din eksisterende nettleserprofil. De åpnes i de samme nettleserappvinduene som Omarchys andre nettapper; de installerer ikke den separate Teams for Linux-klienten.
+Velg _Install > Service > Microsoft_ for å legge til Outlook, Word, Excel, PowerPoint, Teams og OneDrive som nettapper. Hver app har sin egen starter og åpnes direkte, med de kommersielle Microsoft 365-URL-ene og din eksisterende nettleserprofil. De åpnes i de samme nettleserappvinduene som Ve OSs andre nettapper; de installerer ikke den separate Teams for Linux-klienten.
 
 Fjern pakken med _Remove > Service > Microsoft_, eller fjern enkeltapper med _Remove > Web App_. Du kan også installere bare appene du vil ha via _Install > Web App_.
 
@@ -88,4 +88,4 @@ For å holde jobbinnlogginger adskilt legger du til en mappe for nettleserdata p
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Erstatt eksempelmappen med en absolutt bane du velger selv, og bruk den samme banen for alle de seks starterne for å dele jobbinnlogginger mellom dem. Nettappene bruker Omarchys valgte støttede nettleser, og faller tilbake på Chrome når standardnettleseren ikke støttes.
+Erstatt eksempelmappen med en absolutt bane du velger selv, og bruk den samme banen for alle de seks starterne for å dele jobbinnlogginger mellom dem. Nettappene bruker Ve OSs valgte støttede nettleser, og faller tilbake på Chrome når standardnettleseren ikke støttes.

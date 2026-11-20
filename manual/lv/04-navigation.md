@@ -1,8 +1,8 @@
 # Navigācija
 
-Omarchy viss notiek ar tastatūru — _VISU!_ Kad sistēma tikko startējusies, ar peli vien jūs burtiski nevarat izdarīt neko. Bet varat nospiest `Super + Space`, lai atvērtu Omarchy Menu, un no šejienes varat darīt gandrīz visu.
+Ve OS viss notiek ar tastatūru — _VISU!_ Kad sistēma tikko startējusies, ar peli vien jūs burtiski nevarat izdarīt neko. Bet varat nospiest `Super + Space`, lai atvērtu Ve OS Menu, un no šejienes varat darīt gandrīz visu.
 
-Bet Omarchy izvēlne pat nav paredzēta kā galvenais veids, kā lielāko daļu laika vadīt sistēmu. Mēs varam ātrāk! Visas svarīgākās lietotnes ir piesaistītas tieši atsevišķiem karstajiem taustiņiem. Termināli palaižat ar `Super + Return`, bet pārlūku — ar `Super + Shift + Return`. Pamēģiniet vienu pēc otra, un redzēsiet Hyprland flīzēšanas maģiju darbībā:
+Bet Ve OS izvēlne pat nav paredzēta kā galvenais veids, kā lielāko daļu laika vadīt sistēmu. Mēs varam ātrāk! Visas svarīgākās lietotnes ir piesaistītas tieši atsevišķiem karstajiem taustiņiem. Termināli palaižat ar `Super + Return`, bet pārlūku — ar `Super + Shift + Return`. Pamēģiniet vienu pēc otra, un redzēsiet Hyprland flīzēšanas maģiju darbībā:
 
  ![navigation-browser-terminal](images/navigation-browser-terminal.webp)
 
@@ -30,7 +30,7 @@ Varat arī pāriet pilnekrāna režīmā ar `Super + F` vai pat tikai pilnā pla
 
 ### Dwindle pret ritināšanas izkārtojumu
 
-Omarchy noklusējuma izkārtojumu sauc par dwindle. Tas vienmēr tur visus logus, ko atverat vienā darbvietā, redzamus, pat ja tam tie jāsamazina.
+Ve OS noklusējuma izkārtojumu sauc par dwindle. Tas vienmēr tur visus logus, ko atverat vienā darbvietā, redzamus, pat ja tam tie jāsamazina.
 
  ![navigation-dwindle-layout](images/navigation-dwindle-layout.webp)
 
@@ -56,7 +56,7 @@ hl.config({
 
 Peldoša darbvieta darbojas kā tradicionāla darbvirsma: logi pārklājas, un jūs tos pārvietojat un maināt to izmēru paši. Katrs logs iegūst virsraksta joslu jūsu motīva krāsās ar pogām minimizēšanai, maksimizēšanai un aizvēršanai. `Super + M` arī minimizē fokusēto logu. Minimizēts logs gaida dokā; noklikšķiniet uz tā lietotnes, lai to atgrieztu. Noklikšķiniet uz loga, lai to izvirzītu priekšplānā. Mainiet tā izmēru no jebkuras malas vai stūra. Veiciet dubultklikšķi uz virsraksta joslas, lai maksimizētu logu, saglabājot augšējo joslu redzamu, un vēlreiz, lai atgūtu tā veco izmēru. Chrome un citi uz Chromium balstīti pārlūki, Disks un Document Viewer izlaiž virsraksta joslu un tā vietā izmanto savu galveni; `Super + Alt + F` tos maksimizē, un `Super + M` tos minimizē.
 
-Peldoša darbvieta rāda arī doku ar jūsu piespraustajām lietotnēm, visu, kas darbojas, un visu lietotņu režģi aiz lietotņu pogas, ko atver arī `Super + Alt + Space` un _Apps_ Omarchy izvēlnē. Ar labo pogu noklikšķiniet uz lietotnes režģī vai nospiediet `Delete`, lai to atinstalētu. Noklikšķiniet uz lietotnes, lai to atvērtu vai izvirzītu tās logu priekšplānā; noklikšķiniet vēlreiz, lai cikliski pārslēgtos starp tās logiem. Files atgriež tikai logu no darbvietas, kurā atrodaties, un citādi atver jaunu, un Terminal un Agent vienmēr palaiž vēl vienu, lai gan minimizēts logs atgriežas vispirms. Klikšķis ar vidējo pogu atver jaunu logu. Velciet ikonu gar doku, lai to pārvietotu; ievelkot darbojošos lietotni starp citām, tā tur paliek. Ar labo pogu noklikšķiniet, lai paturētu lietotni dokā, izņemtu to vai izietu no tās. Doks atkāpjas pilnekrāna loga priekšā. Ar labo pogu noklikšķiniet uz lietotņu pogas, lai pārvietotu doku uz citu malu vai liktu tam slēpties, līdz rādītājs sasniedz tā malu. Pozīcija ir arī zem _Appearance > Dock > Dock Position_, un `omarchy dock position left` un `omarchy dock autohide on` abas iestata no termināļa. Lietotnes, ko paturat dokā, ir izbalējušas, kamēr tās nedarbojas.
+Peldoša darbvieta rāda arī doku ar jūsu piespraustajām lietotnēm, visu, kas darbojas, un visu lietotņu režģi aiz lietotņu pogas, ko atver arī `Super + Alt + Space` un _Apps_ Ve OS izvēlnē. Ar labo pogu noklikšķiniet uz lietotnes režģī vai nospiediet `Delete`, lai to atinstalētu. Noklikšķiniet uz lietotnes, lai to atvērtu vai izvirzītu tās logu priekšplānā; noklikšķiniet vēlreiz, lai cikliski pārslēgtos starp tās logiem. Files atgriež tikai logu no darbvietas, kurā atrodaties, un citādi atver jaunu, un Terminal un Agent vienmēr palaiž vēl vienu, lai gan minimizēts logs atgriežas vispirms. Klikšķis ar vidējo pogu atver jaunu logu. Velciet ikonu gar doku, lai to pārvietotu; ievelkot darbojošos lietotni starp citām, tā tur paliek. Ar labo pogu noklikšķiniet, lai paturētu lietotni dokā, izņemtu to vai izietu no tās. Doks atkāpjas pilnekrāna loga priekšā. Ar labo pogu noklikšķiniet uz lietotņu pogas, lai pārvietotu doku uz citu malu vai liktu tam slēpties, līdz rādītājs sasniedz tā malu. Pozīcija ir arī zem _Appearance > Dock > Dock Position_, un `omarchy dock position left` un `omarchy dock autohide on` abas iestata no termināļa. Lietotnes, ko paturat dokā, ir izbalējušas, kamēr tās nedarbojas.
 
 Jaunas darbvietas un visas, kurām neesat piešķīruši savu izkārtojumu ar `Super + L`, izmanto noklusējuma izkārtojumu. Mainot noklusējumu, katra darbvieta bez logiem tiek atiestatīta uz to, bet tā, kurā ir logi, saglabā izkārtojumu, kas tai ir. Logs, kas minimizēts dokā, joprojām skaitās kā logs darbvietā, ko tas pameta. Izvēlieties to zem _Appearance > Workspace Layout_: Tiling, Scrolling vai Floating. `omarchy-hyprland-workspace-layout-default scrolling` to iestata no termināļa.
 

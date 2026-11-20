@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Karaniwang kinokontrol ang Omarchy gamit ang mga hotkey at ang menu ng Omarchy (`Super + Space`). Pero maaari mo rin itong kontrolin gamit ang `omarchy` CLI. Partikular itong kapaki-pakinabang kapag may AI agent kang katulong sa pag-customize o pag-configure.
+Karaniwang kinokontrol ang Ve OS gamit ang mga hotkey at ang menu ng Ve OS (`Super + Space`). Pero maaari mo rin itong kontrolin gamit ang `omarchy` CLI. Partikular itong kapaki-pakinabang kapag may AI agent kang katulong sa pag-customize o pag-configure.
 
 May access ang CLI sa lahat ng internal tooling na ginagamit sa menu at sa iba pang paraan. Makikita mo ang lahat ng available sa pamamagitan ng pagpapatakbo ng `omarchy` sa terminal.
 
@@ -8,7 +8,7 @@ Ganito ang hitsura nito:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Para sa diagnostics, direktang patakbuhin ang `omarchy-debug --no-sudo --print`. Nagpi-print ito ng diagnostics at nagsusulat sa `/tmp/omarchy-debug.log` nang hindi humihingi ng sudo, pati na sa mga package install kung saan maaaring mabigo ang `omarchy debug` sa "Unknown Omarchy command".
+Para sa diagnostics, direktang patakbuhin ang `omarchy-debug --no-sudo --print`. Nagpi-print ito ng diagnostics at nagsusulat sa `/tmp/omarchy-debug.log` nang hindi humihingi ng sudo, pati na sa mga package install kung saan maaaring mabigo ang `omarchy debug` sa "Unknown Ve OS command".
 
 At maaari kang sumisid nang mas malalim sa bawat grupo:
 
@@ -60,4 +60,4 @@ Tumatanggap din ang bawat command ng `--help`, tanungin mo man ang isang buong g
 
 ### Pagbubukas ng menu mula sa terminal
 
-Maaari ding i-script ang menu ng Omarchy, na madaling gamitin para sa sarili mong mga keybinding. Binubuksan ito ng `omarchy menu` sa root, at maaari kang dumiretso sa anumang punto sa tree sa pamamagitan ng pagbanggit dito: dumidiretso ang `omarchy menu summon appearance.theme` sa theme picker, binubuksan ng `omarchy menu toggle system` ang system menu at isinasara itong muli kung nakabukas na ito, at itinatago ito ng `omarchy menu close`.
+Maaari ding i-script ang menu ng Ve OS, na madaling gamitin para sa sarili mong mga keybinding. Binubuksan ito ng `omarchy menu` sa root, at maaari kang dumiretso sa anumang punto sa tree sa pamamagitan ng pagbanggit dito: dumidiretso ang `omarchy menu summon appearance.theme` sa theme picker, binubuksan ng `omarchy menu toggle system` ang system menu at isinasara itong muli kung nakabukas na ito, at itinatago ito ng `omarchy menu close`.

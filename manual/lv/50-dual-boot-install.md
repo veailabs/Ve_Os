@@ -1,4 +1,6 @@
-# Divkāršās sāknēšanas instalēšana
+# Ve OS — Divkāršās sāknēšanas instalēšana
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy var instalēt vienā nodalījumā līdzās Windows vai citām instalācijām.
 

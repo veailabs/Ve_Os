@@ -8,7 +8,7 @@ Setiap pintasan keyboard berada di satu bidang, ditentukan oleh pengubahnya, dan
 
 | Bidang | Isinya | Contoh |
 | --- | --- | --- |
-| `Super + key` | Sistem: jendela, ruang kerja, tata letak, dan menu inti | `Super + Space` menu Omarchy, `Super + W` tutup jendela, `Super + F` layar penuh |
+| `Super + key` | Sistem: jendela, ruang kerja, tata letak, dan menu inti | `Super + Space` menu Ve OS, `Super + W` tutup jendela, `Super + F` layar penuh |
 | `Super + Shift + key` | Aplikasi | `Super + Shift + B` browser, `Super + Shift + E` email, `Super + Shift + N` editor |
 | `Super + Ctrl + key` | Panel dan menu sistem | `Super + Ctrl + A` audio, `Super + Ctrl + N` jaringan, `Super + Ctrl + C` menu tangkapan |
 | `Super + Ctrl + Alt + key` | Tindakan cepat dan pemberitahuan | `Super + Ctrl + Alt + T` tampilkan waktu, `Super + Ctrl + Alt + B` baterai, `Super + Ctrl + Alt + C` tangkapan layar |
@@ -34,7 +34,7 @@ Jika bawaan tidak cocok untuk Anda (misalnya Anda ingin `Super + Shift + S` untu
 
 | Pintasan                  | Fungsi              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Menu Omarchy (aplikasi dan segala hal lainnya)    |
+| `Super + Space`           | Menu Ve OS (aplikasi dan segala hal lainnya)    |
 | `Super + Alt + Space` | Kisi aplikasi |
 | `Super + Escape` | Menu sistem (tangguhkan, mulai ulang, dll)  |
 | `Super + Ctrl + L` | Kunci komputer |
@@ -172,7 +172,7 @@ Ubah/tambah ikatan di `~/.config/hypr/bindings.lua`.
 | `Super + V`           | Tempel    |
 | `Super + Ctrl + V`           | Pengelola papan klip    |
 
-Biasanya di Linux, Anda perlu `Ctrl + Shift + C/V` untuk menyalin dan menempel di terminal dan `Ctrl + C/V` untuk melakukannya di tempat lain. Pintasan papan klip terpadu Omarchy ini bekerja di mana pun.
+Biasanya di Linux, Anda perlu `Ctrl + Shift + C/V` untuk menyalin dan menempel di terminal dan `Ctrl + C/V` untuk melakukannya di tempat lain. Pintasan papan klip terpadu Ve OS ini bekerja di mana pun.
 
 ## Tangkapan
 
@@ -194,7 +194,7 @@ Biasanya di Linux, Anda perlu `Ctrl + Shift + C/V` untuk menyalin dan menempel d
 
 Dengan perekaman layar, pintasan pertama-tama menanyakan audio mana yang Anda inginkan, lalu mulai merekam. Tekan lagi untuk berhenti. Lihat [tangkapan layar dan perekaman](12-screenshots-recording.md) untuk detailnya.
 
-Semua opsi tangkapan juga dapat diakses di bawah _Trigger > Capture_ di menu Omarchy (`Super + Space`).
+Semua opsi tangkapan juga dapat diakses di bawah _Trigger > Capture_ di menu Ve OS (`Super + Space`).
 
 ## Notifikasi
 
@@ -216,9 +216,9 @@ Semua opsi tangkapan juga dapat diakses di bawah _Trigger > Capture_ di menu Oma
 | `Super + Backspace` | Alihkan transparansi pada jendela |
 | `Super + Ctrl + Backspace` | Alihkan aspek persegi jendela tunggal |
 
-Gambar latar belakang tambahan berada di `~/.config/omarchy/backgrounds/<theme name>`. Juga tersedia melalui _Install > Style > Background_ di menu Omarchy.
+Gambar latar belakang tambahan berada di `~/.config/omarchy/backgrounds/<theme name>`. Juga tersedia melalui _Install > Style > Background_ di menu Ve OS.
 
-Semua opsi gaya juga dapat diakses di bawah _Style_ di menu Omarchy (`Super + Space`).
+Semua opsi gaya juga dapat diakses di bawah _Style_ di menu Ve OS (`Super + Space`).
 
 ## Pengalihan
 
@@ -319,7 +319,7 @@ Fungsi-fungsi ini harus dijalankan di dalam sesi Tmux.
 
 ## Terminal Ghostty
 
-Terminal Ghostty dipasang menggunakan _Install > Terminal_ melalui menu Omarchy.
+Terminal Ghostty dipasang menggunakan _Install > Terminal_ melalui menu Ve OS.
 
 | Pintasan                  | Fungsi              |
 | ----------------------- | --------------------- |

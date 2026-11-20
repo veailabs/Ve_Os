@@ -1,6 +1,6 @@
 # Branding
 
-Omarchy låter dig ställa in din företagslogotyp eller personliga bild för både upplåsningen vid start, skärmsläckaren och Om-skärmen.
+Ve OS låter dig ställa in din företagslogotyp eller personliga bild för både upplåsningen vid start, skärmsläckaren och Om-skärmen.
 
 ### Upplåsning vid start
 
@@ -24,11 +24,11 @@ Det finns tre poster i den menyn:
 
 - **Edit Text** öppnar `~/.config/omarchy/branding/screensaver.txt` i din textredigerare. Skriv eller klistra in vad du vill — ASCII-konst, ditt namn, ett fult ord. Spara och avsluta, så startar skärmsläckaren omedelbart så att du kan se den.
 - **Set From Image** öppnar en filväljare för en png eller svg, konverterar den till ASCII och visar dig resultatet. Logotyper med en tydlig silhuett fungerar mycket bättre än foton.
-- **Restore Default** sätter tillbaka Omarchy-logotypen.
+- **Restore Default** sätter tillbaka Ve OS-logotypen.
 
 ### Om-skärmen
 
-Samma tre alternativ finns under _Appearance > Branding > About_ för _About_-skärmen som du får från Omarchy-menyn, och de fungerar identiskt — filen är `~/.config/omarchy/branding/about.txt`, och About-fönstret dyker upp efter varje ändring. About-konsten konverteras till en mindre storlek än skärmsläckarens, eftersom den måste få plats i ett fönster i stället för att fylla hela din skärm.
+Samma tre alternativ finns under _Appearance > Branding > About_ för _About_-skärmen som du får från Ve OS-menyn, och de fungerar identiskt — filen är `~/.config/omarchy/branding/about.txt`, och About-fönstret dyker upp efter varje ändring. About-konsten konverteras till en mindre storlek än skärmsläckarens, eftersom den måste få plats i ett fönster i stället för att fylla hela din skärm.
 
 Medan fönstret är öppet sveper en grön glimt över konsten med några sekunders mellanrum och lämnar den sedan stilla igen. Din egen konst får den också, så länge varje tecken i den är en kolumn brett — allt som _Set From Image_ producerar är det. Konst byggd av emoji eller tecken med dubbel bredd förblir i stället stilla, och det gör skärmen också om du behåller en egen fastfetch-konfiguration: en stilla logotyp i de fallen är animationen som håller sig undan snarare än den som misslyckas, eftersom en glimt som skjuts över dem skulle få resten av raden att hamna på fel plats.
 

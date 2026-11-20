@@ -221,7 +221,7 @@ remove_theme "Walk Handmade Theme" || fail "omarchy-theme-remove removes a folde
 if remove_theme "Tokyo Night"; then
   fail "omarchy-theme-remove refuses a bundled theme"
 fi
-grep -Fq "comes with Omarchy" "$test_tmp/out" || fail "omarchy-theme-remove says a bundled theme cannot be removed" "$(cat "$test_tmp/out")"
+grep -Fq "comes with Ve OS" "$test_tmp/out" || fail "omarchy-theme-remove says a bundled theme cannot be removed" "$(cat "$test_tmp/out")"
 [[ -d $ROOT/themes/tokyo-night ]] || fail "omarchy-theme-remove leaves the bundled theme alone"
 
 pass "a theme is removed by the name omarchy-theme-list shows"

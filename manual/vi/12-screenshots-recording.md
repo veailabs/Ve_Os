@@ -41,7 +41,7 @@ Các phím này chỉ tồn tại khi Omasnap đang mở, nên chúng không th�
 
 ## Quay màn hình
 
-`Alt + Print Screen` mở _Trigger > Capture > Screenrecord_, nơi sẽ hỏi bạn muốn gì trong phần âm thanh: không có âm thanh, âm thanh desktop, desktop kèm microphone, hoặc desktop kèm microphone kèm webcam. Lựa chọn cuối cùng đó chỉ xuất hiện nếu bạn thực sự đang cắm một camera. Chọn một lựa chọn và bộ chọn quay của Omarchy sẽ cho bạn kéo một vùng hoặc nhấp vào một cửa sổ hay màn hình.
+`Alt + Print Screen` mở _Trigger > Capture > Screenrecord_, nơi sẽ hỏi bạn muốn gì trong phần âm thanh: không có âm thanh, âm thanh desktop, desktop kèm microphone, hoặc desktop kèm microphone kèm webcam. Lựa chọn cuối cùng đó chỉ xuất hiện nếu bạn thực sự đang cắm một camera. Chọn một lựa chọn và bộ chọn quay của Ve OS sẽ cho bạn kéo một vùng hoặc nhấp vào một cửa sổ hay màn hình.
 
 Việc quay chạy trên gpu-screen-recorder, phần mềm mã hóa trên GPU ở 60fps và chuyển về CPU nếu buộc phải làm vậy. Kết quả là một MP4 trong `~/Videos`, có tên là `screenrecording-2026-08-13_14-22-05.mp4`. Đặt `OMARCHY_SCREENRECORD_DIR` để thay đổi điều đó — nhưng lưu ý rằng không giống thư mục ảnh chụp màn hình, thư mục này phải tồn tại sẵn, nếu không bản quay sẽ từ chối bắt đầu.
 

@@ -6,19 +6,19 @@
 
 ### Bazı uygulamalar neden ekranımda bu kadar büyük görünüyor?
 
-Omarchy 2x yüksek çözünürlüklü bir ekranınız olduğunu varsayar, bu yüzden monitör panelinde bir ölçek seçene kadar `GDK_SCALE` değerini 2 olarak ayarlar. 1x bir ekrandaysanız ve GTK veya X11 uygulamaları aşırı büyük çıkıyorsa, monitör panelinde onun için 1x seçin veya `~/.config/hypr/monitors.lua` dosyasına `hl.env("GDK_SCALE", "1")` ekleyin (sonra aşırı büyük olan uygulamaları yeniden başlatın). Bkz. [monitörler hakkındaki kılavuz](33-monitors.md).
+Ve OS 2x yüksek çözünürlüklü bir ekranınız olduğunu varsayar, bu yüzden monitör panelinde bir ölçek seçene kadar `GDK_SCALE` değerini 2 olarak ayarlar. 1x bir ekrandaysanız ve GTK veya X11 uygulamaları aşırı büyük çıkıyorsa, monitör panelinde onun için 1x seçin veya `~/.config/hypr/monitors.lua` dosyasına `hl.env("GDK_SCALE", "1")` ekleyin (sonra aşırı büyük olan uygulamaları yeniden başlatın). Bkz. [monitörler hakkındaki kılavuz](33-monitors.md).
 
 Spotify için, arayüzü küçültmek için `Ctrl + Minus` kullanabilirsiniz (büyütmek için de `Ctrl + Plus`).
 
 ### Tüm Super tuşu kısayollarım neden çalışmayı bıraktı?
 
-Bazı ASUS ROG ve TUF dizüstü bilgisayarlarda, `Fn + Super` fark edilmesi zor bir kombinasyondur ve donanım yazılımı düzeyinde bir Windows tuşu kilidini açıp kapatır (oyun oynarken yanlışlıkla oyundan çıkmamanız için tasarlanmıştır). Ekranda bunun olduğunu gösteren hiçbir şey çıkmaz. Kilit açıkken, Super hiçbir şey göndermez — bu yüzden Super kullanan her Omarchy kısayolu çalışmayı bırakır ve Hyprland bozulmuş gibi görünür.
+Bazı ASUS ROG ve TUF dizüstü bilgisayarlarda, `Fn + Super` fark edilmesi zor bir kombinasyondur ve donanım yazılımı düzeyinde bir Windows tuşu kilidini açıp kapatır (oyun oynarken yanlışlıkla oyundan çıkmamanız için tasarlanmıştır). Ekranda bunun olduğunu gösteren hiçbir şey çıkmaz. Kilit açıkken, Super hiçbir şey göndermez — bu yüzden Super kullanan her Ve OS kısayolu çalışmayı bırakır ve Hyprland bozulmuş gibi görünür.
 
 `~/.config/hypr/` içinde kurcalamaya başlamadan önce bir kez `Fn + Super` tuşlarına basın, bu Super'i geri getirmezse kilidi açık bırakmamak için bir kez daha basın. Bu Fn-lock değildir; Fn-lock yalnızca F tuşu sırasının ne yaptığını değiştirir.
 
 ### Wi-Fi, Bluetooth, ses veya trackpad'im az önce çalışmayı bıraktı
 
-Yeniden başlatmadan önce, sorun çıkaran alt sistemi kendi başına yeniden başlatmayı deneyin. Omarchy menüsündeki _Update > Hardware_ altında Wi-Fi, Bluetooth, Audio ve Trackpad bulunur ve bunlardan birini yeniden yüklemek "beş dakika önce çalışıyordu" durumlarının büyük çoğunluğunu düzeltir — yeniden bağlanmayan bir Bluetooth kulaklık, askıya alma sonrası ölen bir trackpad, bir monitörün fişini çektiğinizde kaybolan ses.
+Yeniden başlatmadan önce, sorun çıkaran alt sistemi kendi başına yeniden başlatmayı deneyin. Ve OS menüsündeki _Update > Hardware_ altında Wi-Fi, Bluetooth, Audio ve Trackpad bulunur ve bunlardan birini yeniden yüklemek "beş dakika önce çalışıyordu" durumlarının büyük çoğunluğunu düzeltir — yeniden bağlanmayan bir Bluetooth kulaklık, askıya alma sonrası ölen bir trackpad, bir monitörün fişini çektiğinizde kaybolan ses.
 
 ### Harici hoparlörlerim neden ses vermiyor?
 
@@ -26,7 +26,7 @@ Muhtemelen birincil çıkış olarak ayarlanmadıkları için. Çubuğun sağ ta
 
 ### Dizüstü bilgisayar hoparlörlerimin sesi garip geliyor
 
-Bazı dizüstü bilgisayarlarda, Omarchy yerleşik hoparlörlerin frekans tepkisini düzelten bir hoparlör ayarını otomatik olarak uygular. `omarchy audio tuning status` makinenizde bir ayarın etkin olup olmadığını söyler ve hoparlörleri ham haliyle duymayı tercih ederseniz `omarchy audio tuning off` bunu kapatır.
+Bazı dizüstü bilgisayarlarda, Ve OS yerleşik hoparlörlerin frekans tepkisini düzelten bir hoparlör ayarını otomatik olarak uygular. `omarchy audio tuning status` makinenizde bir ayarın etkin olup olmadığını söyler ve hoparlörleri ham haliyle duymayı tercih ederseniz `omarchy audio tuning off` bunu kapatır.
 
 ### Neden parolamla giriş yapamıyorum veya sudo kullanamıyorum?
 

@@ -74,12 +74,12 @@ install)
   fi
 
   if [[ -s $LIVE_OMARCHY_LOG ]]; then
-    printf '\n========================================\nOMARCHY INSTALL LOG (%s)\n========================================\n\n' "$LIVE_OMARCHY_LOG" >>"$TEMP_LOG"
+    printf '\n========================================\nVE OS INSTALL LOG (%s)\n========================================\n\n' "$LIVE_OMARCHY_LOG" >>"$TEMP_LOG"
     cat "$LIVE_OMARCHY_LOG" >>"$TEMP_LOG"
   fi
 
   if [[ -s $TARGET_OMARCHY_LOG ]] && ! same_or_prefix_log "$LIVE_OMARCHY_LOG" "$TARGET_OMARCHY_LOG"; then
-    printf '\n========================================\nTARGET OMARCHY INSTALL LOG (%s)\n========================================\n\n' "$TARGET_OMARCHY_LOG" >>"$TEMP_LOG"
+    printf '\n========================================\nTARGET VE OS INSTALL LOG (%s)\n========================================\n\n' "$TARGET_OMARCHY_LOG" >>"$TEMP_LOG"
     cat "$TARGET_OMARCHY_LOG" >>"$TEMP_LOG"
   fi
 

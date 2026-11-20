@@ -1,6 +1,6 @@
 # Netkerfi
 
-Netkerfi í Omarchy er í höndum NetworkManager, og þú stjórnar því frá nettákninu í [efstu stikunni](05-the-top-bar.md) eða með `Super + Ctrl + N`.
+Netkerfi í Ve OS er í höndum NetworkManager, og þú stjórnar því frá nettákninu í [efstu stikunni](05-the-top-bar.md) eða með `Super + Ctrl + N`.
 
 Það spjald skannar eftir Wi-Fi netum, sýnir merkjastyrk og tengist. Ethernet þarf alls ekkert — stinga því bara í samband og það virkar. Ef þú vilt frekar vera í skelinni gefur `nmtui` þér sömu stjórntæki, og það er líka til `omarchy network` skipanahópur.
 
@@ -12,7 +12,7 @@ Ef þú þarft í raun lykilorðið sjálft prentar `omarchy network password <i
 
 ## DNS
 
-Omarchy notar það DNS sem netið þitt afhendir yfir DHCP. Þú getur hnekkt því fyrir alla vélina undir _Setup > Network > DNS_, þar sem Cloudflare og Google eru í eins smellis fjarlægð. Veldu _Custom_ til að slá inn eigin netþjóna.
+Ve OS notar það DNS sem netið þitt afhendir yfir DHCP. Þú getur hnekkt því fyrir alla vélina undir _Setup > Network > DNS_, þar sem Cloudflare og Google eru í eins smellis fjarlægð. Veldu _Custom_ til að slá inn eigin netþjóna.
 
 Frá skelinni prentar `omarchy dns` núverandi veitu og `omarchy dns Cloudflare` stillir eina.
 

@@ -459,3 +459,29 @@ assertEqual(progress(10, 10), 0.9, 'a start reaches 90% at the time the last one
 assert(progress(20, 10) > progress(15, 10) && progress(15, 10) > 0.9, 'a start that runs long keeps creeping')
 assert(progress(1000, 10) < 0.99, 'the bar never fills before the model is ready')
 JS
+
+run_node_test <<'JS'
+const fs = require('fs')
+const source = fs.readFileSync(root + '/shell/plugins/agents/GrokControls.qml', 'utf8')
+const receiveSource = source.match(/function receive\([^]*?\n  \}/)[0]
+const state = {status: 'idle', sessionId: '', result: '', error: '', permission: null}
+const directory = {text: '/new-workspace'}
+const receive = new Function('state', 'directory', 'Commons', 'with (state) { ' + receiveSource + '; return receive }')(state, directory, {I18n: {t: key => key}})
+receive(JSON.stringify({type: 'status', status: 'completed', text: 'Saved result', sessionId: 'previous', cwd: '/saved-workspace'}))
+assertEqual(directory.text, '/saved-workspace', 'restoring a session restores its workspace for resume')
+assertEqual(state.result, 'Saved result', 'restored result remains readable')
+receive(JSON.stringify({type: 'status', status: 'running', text: '', sessionId: 'next', cwd: '/next-workspace'}))
+receive(JSON.stringify({type: 'text', text: 'First '}))
+receive(JSON.stringify({type: 'text', text: 'second'}))
+assertEqual(state.result, 'First second', 'stream chunks append once')
+receive(JSON.stringify({type: 'permission', id: 7, title: 'Write file', options: [{optionId: 'yes', name: 'Allow once', kind: 'allow_once'}]}))
+assertEqual(state.status, 'permission', 'tool request waits for explicit decision')
+assertEqual(state.permission.id, 7, 'permission retains protocol request identity')
+receive(JSON.stringify({type: 'status', status: 'cancelled', text: 'First second'}))
+assertEqual(state.permission, null, 'cancellation removes stale permission controls')
+receive(JSON.stringify({type: 'status', status: 'starting'}))
+receive(JSON.stringify({type: 'error', message: 'Directory unavailable'}))
+assertEqual(state.status, 'error', 'validation failure unlocks start controls')
+receive('malformed')
+assertEqual(state.error, 'agents.grokInvalidResponse', 'malformed events produce a visible error')
+JS

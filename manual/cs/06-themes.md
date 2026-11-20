@@ -1,8 +1,8 @@
 # Motivy
 
-Omarchy přichází s dvaadvaceti krásnými motivy. Můžete mezi nimi vybírat přes _Vzhled > Motiv_ v nabídce Omarchy (`Super + Space`) nebo přejít přímo do výběru motivu pomocí `Super + Ctrl + T`.
+Ve OS přichází s dvaadvaceti krásnými motivy. Můžete mezi nimi vybírat přes _Vzhled > Motiv_ v nabídce Ve OS (`Super + Space`) nebo přejít přímo do výběru motivu pomocí `Super + Ctrl + T`.
 
-Každý motiv upravuje vzhled plochy, terminálu, neovim, obrazovky aktivity (btop), Chromium a celého shellu Omarchy: horní lišty, nabídky, oznámení, OSD a zamykací obrazovky. (V Obsidianu musíte motiv Omarchy vybrat ručně přes _Vzhled > Motivy_ uvnitř aplikace).
+Každý motiv upravuje vzhled plochy, terminálu, neovim, obrazovky aktivity (btop), Chromium a celého shellu Ve OS: horní lišty, nabídky, oznámení, OSD a zamykací obrazovky. (V Obsidianu musíte motiv Ve OS vybrat ručně přes _Vzhled > Motivy_ uvnitř aplikace).
 
 Motivy mají sadu obrázků na pozadí, mezi kterými můžete vybírat pomocí `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Ikony ve spouštěči aplikací a v docku jsou vykresleny v barvách vašeho mot
 
 Sadu ikon, kterou vytvořil někdo jiný, můžete nainstalovat přes _Instalace > Styl > Ikony_ (nebo `omarchy icons install <git url>`) a znovu ji odstranit v části _Odebrat > Ikony_. _Aktualizace > Další ikony_ stáhne nejnovější verzi sad, které máte nainstalované.
 
-Chcete-li vytvořit vlastní, vložte své ikony do `~/.config/omarchy/icons/<name>/`, jeden soubor pro každou aplikaci, pojmenovaný podle řádku `Icon=` v souboru `.desktop` dané aplikace. Soubor končící na `.svg` se zobrazí tak, jak je. Soubor končící na `.svg.tpl` se vykreslí v barvách motivu: tam, kam patří barva, napište `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` nebo `{{ icon_shadow }}`. Výchozí sada v `/usr/share/omarchy/icons/papercraft/` je dobrým výchozím bodem. Přidejte `preview.png`, aby se vaše sada zobrazovala ve výběru; bez něj Omarchy vykreslí náhled z vašich ikon. Chcete-li změnit jedinou ikonu výchozí sady, vložte svou verzi do `~/.config/omarchy/icons/papercraft/`.
+Chcete-li vytvořit vlastní, vložte své ikony do `~/.config/omarchy/icons/<name>/`, jeden soubor pro každou aplikaci, pojmenovaný podle řádku `Icon=` v souboru `.desktop` dané aplikace. Soubor končící na `.svg` se zobrazí tak, jak je. Soubor končící na `.svg.tpl` se vykreslí v barvách motivu: tam, kam patří barva, napište `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` nebo `{{ icon_shadow }}`. Výchozí sada v `/usr/share/omarchy/icons/papercraft/` je dobrým výchozím bodem. Přidejte `preview.png`, aby se vaše sada zobrazovala ve výběru; bez něj Ve OS vykreslí náhled z vašich ikon. Chcete-li změnit jedinou ikonu výchozí sady, vložte svou verzi do `~/.config/omarchy/icons/papercraft/`.
 
 ### Odemykání
 

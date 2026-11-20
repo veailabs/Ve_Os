@@ -1,10 +1,10 @@
 # Wtyczki powłoki
 
-Pulpit Omarchy działa jako pojedynczy długotrwały proces Quickshell o nazwie `omarchy-shell`, a prawie wszystko, co widzisz na ekranie, jest wtyczką wewnątrz niego. Pasek jest wtyczką. Podobnie jak panele, które opadają z niego, nakładki pełnoekranowe, takie jak selektor emoji i menedżer schowka, samo menu Omarchy, ekran blokady, dialog polkit i bezgłowe usługi, które obserwują twoją baterię i ocieplają ekran w nocy.
+Pulpit Ve OS działa jako pojedynczy długotrwały proces Quickshell o nazwie `omarchy-shell`, a prawie wszystko, co widzisz na ekranie, jest wtyczką wewnątrz niego. Pasek jest wtyczką. Podobnie jak panele, które opadają z niego, nakładki pełnoekranowe, takie jak selektor emoji i menedżer schowka, samo menu Ve OS, ekran blokady, dialog polkit i bezgłowe usługi, które obserwują twoją baterię i ocieplają ekran w nocy.
 
-To nie jest tylko szczegół implementacyjny. Oznacza to, że możesz wyłączać fragmenty pulpitu, wymieniać je lub pisać własne bez dotykania ani jednej linii kodu źródłowego Omarchy.
+To nie jest tylko szczegół implementacyjny. Oznacza to, że możesz wyłączać fragmenty pulpitu, wymieniać je lub pisać własne bez dotykania ani jednej linii kodu źródłowego Ve OS.
 
-Wtyczki własne są dostarczane z Omarchy i żyją w `$OMARCHY_PATH/shell/plugins/`. Wszystko, co dodasz sam — własne eksperymenty lub coś, co znalazłeś na GitHub — żyje w `~/.config/omarchy/plugins/`. Oba są wykrywane w ten sam sposób przy uruchomieniu, ale wbudowane otrzymują zaufane interfejsy powłoki, podczas gdy wtyczki stron trzecich otrzymują ograniczony interfejs ograniczony do ich własnej usługi i cyklu życia. Klony wbudowanych zachowują tylko konfigurację specyficzną dla źródła i wywołania interfejsu użytkownika potrzebne do pierwotnego zachowania.
+Wtyczki własne są dostarczane z Ve OS i żyją w `$OMARCHY_PATH/shell/plugins/`. Wszystko, co dodasz sam — własne eksperymenty lub coś, co znalazłeś na GitHub — żyje w `~/.config/omarchy/plugins/`. Oba są wykrywane w ten sam sposób przy uruchomieniu, ale wbudowane otrzymują zaufane interfejsy powłoki, podczas gdy wtyczki stron trzecich otrzymują ograniczony interfejs ograniczony do ich własnej usługi i cyklu życia. Klony wbudowanych zachowują tylko konfigurację specyficzną dla źródła i wywołania interfejsu użytkownika potrzebne do pierwotnego zachowania.
 
 ## Zobacz, co masz
 

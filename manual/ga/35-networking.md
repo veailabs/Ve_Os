@@ -1,6 +1,6 @@
 # Líonrú
 
-Is é NetworkManager a láimhseálann an líonrú in Omarchy, agus tiomáineann tú é ón deilbhín líonra sa [barra uachtarach](05-the-top-bar.md) nó le `Super + Ctrl + N`.
+Is é NetworkManager a láimhseálann an líonrú in Ve OS, agus tiomáineann tú é ón deilbhín líonra sa [barra uachtarach](05-the-top-bar.md) nó le `Super + Ctrl + N`.
 
 Scanann an painéal sin líonraí Wi-Fi, taispeánann sé neart an chomhartha, agus ceanglaíonn sé. Ní theastaíonn dada ar chor ar bith ó Ethernet — plocáil isteach é agus oibríonn sé. Más fearr leat fanacht sa teirminéal, tugann `nmtui` na rialuithe céanna duit, agus tá grúpa ordaithe `omarchy network` ann freisin.
 
@@ -12,7 +12,7 @@ Más é an pasfhocal féin a theastaíonn uait i ndáiríre, priontálann `omarc
 
 ## DNS
 
-Úsáideann Omarchy cibé DNS a thugann do líonra dó thar DHCP. Is féidir leat é sin a shárú don mheaisín ar fad faoi _Setup > Network > DNS_, áit a bhfuil Cloudflare agus Google cliceáil amháin ar shiúl. Roghnaigh _Custom_ chun do fhreastalaithe féin a chlóscríobh isteach.
+Úsáideann Ve OS cibé DNS a thugann do líonra dó thar DHCP. Is féidir leat é sin a shárú don mheaisín ar fad faoi _Setup > Network > DNS_, áit a bhfuil Cloudflare agus Google cliceáil amháin ar shiúl. Roghnaigh _Custom_ chun do fhreastalaithe féin a chlóscríobh isteach.
 
 Ón teirminéal, priontálann `omarchy dns` an soláthraí reatha agus socraíonn `omarchy dns Cloudflare` ceann.
 

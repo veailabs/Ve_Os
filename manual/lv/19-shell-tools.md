@@ -1,6 +1,6 @@
 # Čaulas rīki
 
-Papildus standarta Linux rīkiem Omarchy tiek piegādāts arī ar veselām daudzām uzlabotām čaulas rīkām. Šeit ir svarīgākie.
+Papildus standarta Linux rīkiem Ve OS tiek piegādāts arī ar veselām daudzām uzlabotām čaulas rīkām. Šeit ir svarīgākie.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Pilno rokasgrāmatu var atrast ar `man yt-dlp`.
 
 [try](https://github.com/tobi/try) atvieglo programmēšanas eksperimentu pārvaldību, izmantojot ar datumu marķētas direktorijas. Visi eksperimenti dzīvo mapē `~/Work/tries`, un tiem var piekļūt ar `try`.
 
-Omarchy automātiski nepievieno projekta `bin/` direktoriju mainīgajam `PATH`. Palaidiet uzticamus projekta lokālos rīkus, norādot skaidru relatīvo ceļu, piemēram, `bin/rails` vai `./bin/dev`.
+Ve OS automātiski nepievieno projekta `bin/` direktoriju mainīgajam `PATH`. Palaidiet uzticamus projekta lokālos rīkus, norādot skaidru relatīvo ceļu, piemēram, `bin/rails` vai `./bin/dev`.

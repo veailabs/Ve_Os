@@ -1,6 +1,6 @@
 # Pagba-brand
 
-Hinahayaan ka ng Omarchy na itakda ang logo ng kumpanya mo o personal na larawan mo para sa pag-unlock sa boot, sa screensaver, at sa screen na About.
+Hinahayaan ka ng Ve OS na itakda ang logo ng kumpanya mo o personal na larawan mo para sa pag-unlock sa boot, sa screensaver, at sa screen na About.
 
 ### Pag-unlock sa boot
 
@@ -24,11 +24,11 @@ May tatlong entry sa menu na iyon:
 
 - **I-edit ang Teksto** binubuksan ang `~/.config/omarchy/branding/screensaver.txt` sa editor mo. I-type o i-paste ang kahit anong gusto mo — ASCII art, pangalan mo, isang bastos na salita. I-save at lumabas, at agad na magsisimula ang screensaver para makita mo ito.
 - **Itakda Mula sa Larawan** binubuksan ang file picker para sa isang png o svg, iko-convert ito sa ASCII, at ipapakita sa iyo ang resulta. Mas gumagana nang mas mahusay ang mga logong may malinaw na silhouette kaysa sa mga litrato.
-- **Ibalik ang Default** ibinabalik ang logo ng Omarchy.
+- **Ibalik ang Default** ibinabalik ang logo ng Ve OS.
 
 ### Screen na About
 
-Ang parehong tatlong opsyon ay nasa ilalim ng _Appearance > Branding > About_ para sa screen na _About_ na makukuha mo mula sa menu ng Omarchy, at gumagana ang mga ito nang magkapareho — ang file ay `~/.config/omarchy/branding/about.txt`, at lumalabas ang window ng About pagkatapos ng bawat pagbabago. Iko-convert ang art ng About sa mas maliit na sukat kaysa sa screensaver, dahil kailangan itong magkasya sa isang window sa halip na punuin ang display mo.
+Ang parehong tatlong opsyon ay nasa ilalim ng _Appearance > Branding > About_ para sa screen na _About_ na makukuha mo mula sa menu ng Ve OS, at gumagana ang mga ito nang magkapareho — ang file ay `~/.config/omarchy/branding/about.txt`, at lumalabas ang window ng About pagkatapos ng bawat pagbabago. Iko-convert ang art ng About sa mas maliit na sukat kaysa sa screensaver, dahil kailangan itong magkasya sa isang window sa halip na punuin ang display mo.
 
 Habang nakabukas ang window, isang kislap ng berde ang dumadaplis sa art tuwing ilang segundo at pagkatapos ay iniiwan ulit itong nakatigil. Makukuha rin ito ng sarili mong art, basta isang column lang ang lapad ng bawat character dito — lahat ng ginagawa ng _Set From Image_ ay ganoon. Nananatiling nakatigil naman ang art na gawa sa emoji o double-width na mga character, at ganoon din ang screen kung pinapanatili mo ang sarili mong fastfetch config: ang nakatigil na logo sa mga kasong iyon ay ang animation na umiiwas lang sa halip na nabibigo, dahil ang pagpapadulas ng kislap sa mga ito ay maglalagay sa natitirang bahagi ng linya sa maling lugar.
 

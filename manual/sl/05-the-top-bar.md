@@ -1,14 +1,14 @@
 # Zgornja vrstica
 
-Trak na vrhu tvojega zaslona je vrstica Omarchy. Ni privijačena vrstica stanja, temveč del lupine Omarchy, enega samega dolgo delujočega procesa Quickshell, ki riše tudi meni, obvestila, pojavna okna OSD in zaklenjeni zaslon. Zato se tematsko popolnoma ujema z vsem ostalim in zato se plošča odpre takoj, namesto da bi zagnala novo aplikacijo.
+Trak na vrhu tvojega zaslona je vrstica Ve OS. Ni privijačena vrstica stanja, temveč del lupine Ve OS, enega samega dolgo delujočega procesa Quickshell, ki riše tudi meni, obvestila, pojavna okna OSD in zaklenjeni zaslon. Zato se tematsko popolnoma ujema z vsem ostalim in zato se plošča odpre takoj, namesto da bi zagnala novo aplikacijo.
 
 Je tudi edini kos namizja, ki je vedno na zaslonu, zato je vredno vedeti, kaj počnejo vsi tisti mali glifi.
 
 ## Kaj je privzeto na njej
 
-Vrstica ima tri razdelke. Na levi sedita logotip Omarchy (zaganjalnik menija) in kazalniki delovnih prostorov. V sredini dobiš kazalnike stanja, uro, Elsewhen (svetovno uro), vreme in značko za posodobitev Omarchy. Na desni: sistemski pladenj, postavitev tipkovnice (kadar je nastavljena več kot ena), agenti, bluetooth, omrežje, zvok, zaslon in napajanje.
+Vrstica ima tri razdelke. Na levi sedita logotip Ve OS (zaganjalnik menija) in kazalniki delovnih prostorov. V sredini dobiš kazalnike stanja, uro, Elsewhen (svetovno uro), vreme in značko za posodobitev Ve OS. Na desni: sistemski pladenj, postavitev tipkovnice (kadar je nastavljena več kot ena), agenti, bluetooth, omrežje, zvok, zaslon in napajanje.
 
-Nekateri od teh se prikažejo le, kadar imajo kaj povedati. Postavitev tipkovnice se prikaže le, če si nastavil več kot eno postavitev. Značka za posodobitev se prikaže le, kadar te čaka posodobitev Omarchy. In ikona agentov se prikaže prvič, ko Omarchy na napravi najde uporabo kodiranja z AI (glej [AI](17-ai.md)).
+Nekateri od teh se prikažejo le, kadar imajo kaj povedati. Postavitev tipkovnice se prikaže le, če si nastavil več kot eno postavitev. Značka za posodobitev se prikaže le, kadar te čaka posodobitev Ve OS. In ikona agentov se prikaže prvič, ko Ve OS na napravi najde uporabo kodiranja z AI (glej [AI](17-ai.md)).
 
 ## Klikanje naokrog
 
@@ -16,7 +16,7 @@ Skoraj vsak pripomoček naredi nekaj ob levem, desnem in srednjem kliku, več pa
 
 | Pripomoček | Levi | Desni | Srednji / drsenje |
 | --- | --- | --- | --- |
-| Meni | Meni Omarchy | Nov terminal | — |
+| Meni | Meni Ve OS | Nov terminal | — |
 | Delovni prostori | Osredotoči ta delovni prostor na tem zaslonu | — | Drsenje: naslednji/prejšnji delovni prostor |
 | Ura | Pojavno okno koledarja | Kroži obliko zapisa oznake | Srednji: izbirnik časovnega pasu |
 | Vreme | Pojavno okno napovedi | Celotno vreme kot obvestilo | Srednji: osveži |
@@ -29,7 +29,7 @@ Skoraj vsak pripomoček naredi nekaj ob levem, desnem in srednjem kliku, več pa
 | Predstavnost | Predvajanje/pavza | Pojavno okno naslovnice | Srednji: naslednja · drsenje: prejšnja/naslednja |
 | Agenti | Plošča za agente | Zaženi svojega agenta | Srednji: naslednja naročnina |
 | Pladenj | Zadrži kazalec, da razkriješ predal | Desni klik na puščico za upravljanje | — |
-| Posodobitev Omarchy | Zaženi posodobitev | — | — |
+| Posodobitev Ve OS | Zaženi posodobitev | — | — |
 
 Vse v tej tabeli ni na tvoji vrstici takoj po namestitvi. Pripomoček za predstavnost (MPRIS za trenutno predvajanje, z drsečo skladbo in izvajalcem) in pripomoček za mikrofon sta oba vgrajena, vendar privzeto izklopljena — dodaj ju, če ju želiš, kot je opisano spodaj.
 
@@ -137,6 +137,6 @@ Vsak pripomoček je en vnos v eni od petih matrik postavitve, njegove nastavitve
 
 `center` je okvir na sredini vrstice: vse v njem je na zaslonu centrirano kot ena skupina. `centerBegin` in `centerEnd` visita ob obeh straneh okvirja, tako ura ostane točno na sredini, tudi ko vreme in oznaka za posodobitev prihajata in odhajata. V `center` vstavi več kot en pripomoček in centrirani so skupaj; pusti ga praznega in `centerBegin` ter `centerEnd` se srečata na sredini vrstice.
 
-Eno pravilo si je vredno vtisniti: **ko imaš svoj `shell.json`, je kanoničen**. Dokler ničesar ne prilagodiš, lupina bere privzeto datoteko Omarchy. V trenutku, ko povlečeš pripomoček, zaženeš `omarchy bar` ali sam urediš datoteko, je tvoja — ni globokega spajanja, tako da se novi privzeti pripomočki v prihodnjih izdajah Omarchy ne bodo samodejno pojavili na tvoji vrstici. `omarchy bar defaults` dobavljeno postavitev postavi nazaj, kadar koli želiš čist začetek.
+Eno pravilo si je vredno vtisniti: **ko imaš svoj `shell.json`, je kanoničen**. Dokler ničesar ne prilagodiš, lupina bere privzeto datoteko Ve OS. V trenutku, ko povlečeš pripomoček, zaženeš `omarchy bar` ali sam urediš datoteko, je tvoja — ni globokega spajanja, tako da se novi privzeti pripomočki v prihodnjih izdajah Ve OS ne bodo samodejno pojavili na tvoji vrstici. `omarchy bar defaults` dobavljeno postavitev postavi nazaj, kadar koli želiš čist začetek.
 
 Ista datoteka hrani tudi tvoje časovne nastavitve nedejavnosti na zgornji ravni, zunaj ključa `bar`: `idle.screensaver` in `idle.lock`, obe v sekundah, odkar si nedejaven. Tako se privzeti ohranjevalnik zaslona vklopi v 150 sekundah in zaklepanje v 300.

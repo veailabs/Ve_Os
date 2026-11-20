@@ -1,4 +1,6 @@
-# 雙重開機安裝
+# Ve OS — 雙重開機安裝
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 你可以將 Omarchy 安裝到單一分割區，與 Windows 或其他安裝並存。
 

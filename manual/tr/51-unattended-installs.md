@@ -1,4 +1,6 @@
-# Katılımsız Kurulumlar
+# Ve OS — Katılımsız Kurulumlar
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO'su, klavye başında kimse olmadan kendini kurabilir. Kurulum programı, yapılandırma dosyalarını taşıyan `cidata` etiketli ikinci bir sürücü bulursa dosyaları kopyalar, kurulum sihirbazını tamamen atlar ve kendi kendine bitmiş sisteme yeniden başlar. Özel bir ISO derlemesi yok, fazladan bir önyükleme menüsü girişi yok — böyle bir sürücü takılı değilse hiçbir şey değişmez ve normal sihirbazı alırsınız.
 

@@ -8,8 +8,9 @@ name: Tests
 
 on:
   pull_request:
-  push:
-    branches: [quattro]
+    branches: [master]
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,7 +21,8 @@ concurrency:
 
 jobs:
   test:
-    runs-on: ubuntu-26.04
+    if: ${{ github.event_name != 'pull_request' || !github.event.pull_request.draft }}
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
       SITE: https://nightly.omarchy.org
@@ -34,6 +36,16 @@ jobs:
           repository: omacom/omarchy-pkgs
           path: src/omarchy-pkgs
           persist-credentials: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Check translation structure
+        working-directory: src/omarchy
+        run: |
+          I18N_STRUCTURAL=1 bash test/shell.d/i18n-test.sh
+          python3 scripts/i18n-sync.py extract-scan --check
 
       - name: Install the fetch tools
         run: |
@@ -122,3 +134,10 @@ jobs:
           path: out/
           if-no-files-found: ignore
           retention-days: 14
+
+  ci-ok:
+    needs: test
+    if: ${{ always() && (github.event_name != 'pull_request' || !github.event.pull_request.draft) }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: test "${{ needs.test.result }}" = success

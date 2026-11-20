@@ -28,7 +28,7 @@ Dette vil vise søndag 10:55 AM.
 
 ### Hvordan endrer jeg tidssonen min?
 
-Kjør _Oppdater > Tidssone_ i Omarchy-menyen og velg fra listen. Hvis tidssonen er riktig, men selve klokken har drevet ut, starter _Oppdater > Tid_ tidssynkroniseringen på nytt for deg.
+Kjør _Oppdater > Tidssone_ i Ve OS-menyen og velg fra listen. Hvis tidssonen er riktig, men selve klokken har drevet ut, starter _Oppdater > Tid_ tidssynkroniseringen på nytt for deg.
 
 ### Hvordan endrer jeg DNS-en min, deler Wi-Fi-en min eller sjekker tilkoblingshastigheten min?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Du kan gjøre det samme for skjermopptak ved å bruke `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap oppretter skjermbildemappen sin automatisk. Opprett mappen for skjermopptak selv, og start deretter Omarchy på nytt for at begge miljøendringene skal tre i kraft.
+Omasnap oppretter skjermbildemappen sin automatisk. Opprett mappen for skjermopptak selv, og start deretter Ve OS på nytt for at begge miljøendringene skal tre i kraft.
 
 ### Hvordan får jeg høyttalerne + webkameraet til å fungere på Apple Studio Display-en min?
 
 Du skulle tro at alt bare fungerte ved å koble til USB C, men dessverre er det ikke slik. Løsningen jeg har funnet for å få det til å fungere pålitelig, er å bruke [WJESOG DisplayPort + USB-A => USB-C-kabelen](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Da fungerer høyttalere og webkamera som en drøm.
 
-Husk at du har innebygd lysstyrkekontroll i Omarchy for Apple-skjermene (både Studio og XDR) med de vanlige lysstyrkeknappene på tastaturet.
+Husk at du har innebygd lysstyrkekontroll i Ve OS for Apple-skjermene (både Studio og XDR) med de vanlige lysstyrkeknappene på tastaturet.
 
 ### Hvordan kvitter jeg meg med all den ekstra programvaren?
 
@@ -72,7 +72,7 @@ Hvis du ikke vil ha programmer som Obsidian eller LibreOffice eller noe annet av
 
 Kjør _Fjern > Pakke_ for å se hver eneste pakke som er installert. Deretter kan du velge hvilken som helst pakke du vil fjerne med tab, og begynne å fjerne alt du har valgt med return.
 
-Og du kan bruke _Fjern > Nettapp_ fra Omarchy-menyen til å fjerne alle de forhåndsinstallerte nettappene du ikke vil ha.
+Og du kan bruke _Fjern > Nettapp_ fra Ve OS-menyen til å fjerne alle de forhåndsinstallerte nettappene du ikke vil ha.
 
 Eller kjør _Fjern > Forhåndsinstallerte_ for å feie ut alt det forhåndsinstallerte ekstra — nettapper, TUI-er og valgfrie programmer — i ett jafs. Hurtigtastene som startet dem, forsvinner med dem, så du sitter igjen med helt blanke bindinger som du kan fylle med dine egne i `~/.config/hypr/bindings.lua`.
 

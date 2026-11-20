@@ -1,6 +1,6 @@
 # Klawiatura, mysz, trackpad
 
-Hyprland pozwala skonfigurować wszystkie urządzenia wejściowe w najdrobniejszych szczegółach. Możesz ustawić powtarzanie klawiszy na naddźwiękową prędkość albo sprawić, że trackpad będzie używał naturalnego przewijania. Wszystko to zmienisz w `~/.config/hypr/input.lua`, do którego możesz też dotrzeć przez _Setup > Input_ w menu Omarchy (`Super + Space`). Wszystko, co tam ustawisz, zastępuje domyślne ustawienia Omarchy.
+Hyprland pozwala skonfigurować wszystkie urządzenia wejściowe w najdrobniejszych szczegółach. Możesz ustawić powtarzanie klawiszy na naddźwiękową prędkość albo sprawić, że trackpad będzie używał naturalnego przewijania. Wszystko to zmienisz w `~/.config/hypr/input.lua`, do którego możesz też dotrzeć przez _Setup > Input_ w menu Ve OS (`Super + Space`). Wszystko, co tam ustawisz, zastępuje domyślne ustawienia Ve OS.
 
 Oto przykład:
 
@@ -59,7 +59,7 @@ Przesuwaj palcami po trackpadzie, aby poruszać się po pulpicie:
 | --- | --- |
 | Trzy palce w lewo / w prawo | Poprzedni / następny obszar roboczy, w tym puste |
 | Trzy palce w górę | Przełącz konsolę AI |
-| Trzy palce w dół | Otwórz menu Omarchy |
+| Trzy palce w dół | Otwórz menu Ve OS |
 | Cztery palce w lewo / w prawo | Przenieś aktywne okno na poprzedni / następny obszar roboczy |
 | Cztery palce w dół | Przełącz pełny ekran |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Aby wyłączyć wszystkie gesty Omarchy, ustaw `omarchy_default_gestures = false` bliżej początku `~/.config/hypr/hyprland.lua`, zanim wczytają się domyślne ustawienia Omarchy.
+Aby wyłączyć wszystkie gesty Ve OS, ustaw `omarchy_default_gestures = false` bliżej początku `~/.config/hypr/hyprland.lua`, zanim wczytają się domyślne ustawienia Ve OS.
 
 Na laptopach Dell XPS z haptycznym touchpadem możesz też ustawić siłę kliknięcia na niską, średnią lub wysoką w _Trigger > Hardware > Touchpad Haptics_.
 
 ### Pisanie po chińsku, japońsku i w innych językach
 
-Gdy instalator zapyta o twoją klawiaturę, wybierz japoński, koreański, chiński (uproszczony, Pinyin), Tajwan (Zhuyin) lub Hongkong (Cangjie). Omarchy automatycznie konfiguruje klawiaturę i pasujący silnik wprowadzania, także podczas konfiguracji offline przy pierwszym uruchomieniu. Japoński używa Mozc, koreański używa standardowego dwuzestawowego układu Hangul, chiński uproszczony używa Pinyin, Tajwan używa standardowego układu Zhuyin silnika Chewing, a Hongkong używa Cangjie z hongkońskimi formami znaków. Japoński (klawiatura US) zapewnia Mozc z układem klawiatury US. Klawisze Hangul, Zhuyin i Cangjie pozostają w swoich standardowych pozycjach, nawet gdy piszesz litery łacińskie w układach Dvorak, Colemak lub AZERTY. Jeśli dodałeś Hangul lub Chewing przed tą zmianą, odznacz i ponownie zaznacz to w _Setup > Keyboard > Input Methods_, aby przenieść jego klawisze w te miejsca; Omarchy zostawia w spokoju silnik, na którym już piszesz.
+Gdy instalator zapyta o twoją klawiaturę, wybierz japoński, koreański, chiński (uproszczony, Pinyin), Tajwan (Zhuyin) lub Hongkong (Cangjie). Ve OS automatycznie konfiguruje klawiaturę i pasujący silnik wprowadzania, także podczas konfiguracji offline przy pierwszym uruchomieniu. Japoński używa Mozc, koreański używa standardowego dwuzestawowego układu Hangul, chiński uproszczony używa Pinyin, Tajwan używa standardowego układu Zhuyin silnika Chewing, a Hongkong używa Cangjie z hongkońskimi formami znaków. Japoński (klawiatura US) zapewnia Mozc z układem klawiatury US. Klawisze Hangul, Zhuyin i Cangjie pozostają w swoich standardowych pozycjach, nawet gdy piszesz litery łacińskie w układach Dvorak, Colemak lub AZERTY. Jeśli dodałeś Hangul lub Chewing przed tą zmianą, odznacz i ponownie zaznacz to w _Setup > Keyboard > Input Methods_, aby przenieść jego klawisze w te miejsca; Ve OS zostawia w spokoju silnik, na którym już piszesz.
 
 Pisanie zaczyna się w trybie łacińskim. Naciśnij `Super + I`, aby przechodzić cyklicznie przez skonfigurowane metody wprowadzania, oraz `Super + Shift + I`, aby przechodzić w odwrotną stronę. Dotknij samego `Shift`, aby wyjść z metody wprowadzania takiej jak Pinyin do liter łacińskich, i dotknij go ponownie, aby wrócić, tak jak działają Sogou, Microsoft Pinyin i macOS; `Shift` wraz z literą nadal wpisuje wielką literę. Na klawiaturach japońskich 全角/半角 przełącza wprowadzanie, 変換 je włącza, a 無変換 je wyłącza. W przypadku koreańskiego 한/영 przełącza Hangul, a 한자 konwertuje na Hanja, niezależnie od tego, czy twoja klawiatura ma dedykowane klawisze, czy wysyła za nie Right Alt i Right Ctrl, jak robi to wiele laptopów, więc Right Alt i Right Ctrl nie są tam zwykłymi modyfikatorami; dyktowanie przełącza się zamiast tego za pomocą Alt + Space. `Ctrl + Space` pozostaje dostępne dla Tmux i Herdr; `Shift + CapsLock` pozostaje klawiszem compose.
 
 Wskaźnik klawiatury pojawia się po prawej stronie paska, gdy masz wiele układów klawiatury lub metod wprowadzania. Kliknij go, aby przełączać języki wprowadzania; japoński wyświetla あ dla hiragany. Aby wybrać japońskie znaki, przełącz na japoński, wpisz słowo takie jak `nihongo`, a następnie naciśnij Space dwa razy. Naciśnij Enter, aby zaakceptować swój wybór. Jeśli masz też wiele układów klawiatury, kliknij wskaźnik prawym przyciskiem myszy, aby przechodzić między nimi cyklicznie.
 
-Użyj _Setup > Keyboard > Keyboard Inputs_, aby wybrać układy takie jak angielski i francuski spośród tych samych opcji oferowanych podczas instalacji. Użyj _Setup > Keyboard > Input Methods_, aby wybrać, które silniki składania znaków są aktywne. Oba narzędzia wyboru otwierają się wewnątrz menu Omarchy z zaznaczonymi twoimi bieżącymi wyborami. Kliknij lub naciśnij Enter, aby przełączyć wybór; każda zmiana obowiązuje natychmiast. Odznaczenie metody wprowadzania usuwa ją z cyklu bez jej odinstalowywania; klawiatura pozostaje dostępna.
+Użyj _Setup > Keyboard > Keyboard Inputs_, aby wybrać układy takie jak angielski i francuski spośród tych samych opcji oferowanych podczas instalacji. Użyj _Setup > Keyboard > Input Methods_, aby wybrać, które silniki składania znaków są aktywne. Oba narzędzia wyboru otwierają się wewnątrz menu Ve OS z zaznaczonymi twoimi bieżącymi wyborami. Kliknij lub naciśnij Enter, aby przełączyć wybór; każda zmiana obowiązuje natychmiast. Odznaczenie metody wprowadzania usuwa ją z cyklu bez jej odinstalowywania; klawiatura pozostaje dostępna.
 
 Uruchom `omarchy setup keyboard` lub `omarchy setup input`, aby otworzyć te same narzędzia wyboru. Aby dodać jeden język z wiersza poleceń, użyj `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` lub `cangjie5`. Quick, Boshiamy i Array znajdują się w tym samym pakiecie co Cangjie i pojawiają się w narzędziu wyboru Input Methods. Twoje niestandardowe klawisze przełączania są zachowywane. Aby ustawić alternatywne układy lub klawisze silnika, zainstaluj `fcitx5-configtool` za pomocą `omarchy pkg add fcitx5-configtool` i uruchom go z terminala. Wybranie języka wprowadzania nie zmienia języka pulpitu. Wybranie japońskiego, koreańskiego lub chińskiego w _Setup > Language_ dodaje jego metodę wprowadzania, gdy nie masz jeszcze żadnej.
 

@@ -1,6 +1,6 @@
 # Identidade visual
 
-Omarchy permite que você defina o logotipo da sua empresa ou uma imagem pessoal tanto para o desbloqueio da inicialização quanto para o protetor de tela e a tela Sobre.
+Ve OS permite que você defina o logotipo da sua empresa ou uma imagem pessoal tanto para o desbloqueio da inicialização quanto para o protetor de tela e a tela Sobre.
 
 ### Desbloqueio da inicialização
 
@@ -24,11 +24,11 @@ Há três entradas nesse menu:
 
 - **Editar texto** abre `~/.config/omarchy/branding/screensaver.txt` no seu editor. Digite ou cole o que quiser — arte ASCII, seu nome, um palavrão. Salve e saia, e o protetor de tela é iniciado imediatamente para você ver o resultado.
 - **Definir a partir de imagem** abre um seletor de arquivos para um png ou svg, converte para ASCII e mostra o resultado. Logotipos com uma silhueta nítida funcionam muito melhor do que fotos.
-- **Restaurar padrão** coloca o logotipo do Omarchy de volta.
+- **Restaurar padrão** coloca o logotipo do Ve OS de volta.
 
 ### Tela Sobre
 
-As mesmas três opções estão em _Aparência > Identidade visual > Sobre_ para a tela _Sobre_ que você abre pelo menu do Omarchy, e funcionam de forma idêntica — o arquivo é `~/.config/omarchy/branding/about.txt`, e a janela Sobre aparece após cada alteração. A arte do Sobre é convertida para um tamanho menor do que a do protetor de tela, já que ela precisa caber em uma janela em vez de preencher sua tela.
+As mesmas três opções estão em _Aparência > Identidade visual > Sobre_ para a tela _Sobre_ que você abre pelo menu do Ve OS, e funcionam de forma idêntica — o arquivo é `~/.config/omarchy/branding/about.txt`, e a janela Sobre aparece após cada alteração. A arte do Sobre é convertida para um tamanho menor do que a do protetor de tela, já que ela precisa caber em uma janela em vez de preencher sua tela.
 
 Enquanto a janela está aberta, um brilho verde atravessa a arte inclinado a cada poucos segundos e depois a deixa parada de novo. Sua própria arte também recebe esse efeito, desde que cada caractere nela tenha uma coluna de largura — tudo o que _Definir a partir de imagem_ produz tem. Arte feita com emoji ou caracteres de largura dupla fica parada, e a tela também fica se você mantiver uma config do fastfetch própria: um logotipo parado nesses casos é a animação saindo do caminho em vez de falhando, já que deslizar um brilho por eles colocaria o restante da linha no lugar errado.
 

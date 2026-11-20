@@ -1,6 +1,6 @@
 # Bezpieczeństwo
 
-Omarchy traktuje bezpieczeństwo niezwykle poważnie. To ma być system operacyjny, którego możesz używać do _Prawdziwej Pracy_ w _Prawdziwym Świecie_. Gdzie zgubienie laptopa nie może prowadzić do awaryjnej sytuacji związanej z bezpieczeństwem. Oto co robimy:
+Ve OS traktuje bezpieczeństwo niezwykle poważnie. To ma być system operacyjny, którego możesz używać do _Prawdziwej Pracy_ w _Prawdziwym Świecie_. Gdzie zgubienie laptopa nie może prowadzić do awaryjnej sytuacji związanej z bezpieczeństwem. Oto co robimy:
 
 1. *Szyfrowanie całego dysku jest włączone domyślnie*: To najważniejszy krok w zabezpieczeniu fizycznej ochrony Twoich danych. Jeśli Twój komputer zostanie zgubiony lub ukradziony, dane są w pełni zaszyfrowane przy użyciu standardowego LUKS (Linux Unified Key Setup). Instalator pozwala zrezygnować z tego w przypadku maszyn przeznaczonych do wyrzucenia (zobacz [Pierwsze kroki](02-getting-started.md)); instalacja bez szyfrowania nie ma żadnej z tych zabezpieczeń i każdy, kto trzyma dysk, może go odczytać.
 2. *Zapora sieciowa jest włączona domyślnie*: Cały ruch przychodzący jest domyślnie blokowany, z kilkoma wyjątkami: port 53317 dla [LocalSend](https://localsend.org/); zapytania DNS do własnego resolvera komputera pod adresem mostka Docker (172.17.0.1), przyjmowane z prywatnych zakresów adresów, które Docker przydziela swoim kontenerom; oraz multicast DNS (port 5353), który pozwala drukarkom i innym urządzeniom w Twojej sieci odnajdywać się nawzajem, a także rozgłasza tam nazwę Twojego komputera. Oprócz tego zapora zachowuje standardowe zezwolenia UFW dla pingu, pobierania adresu z routera (DHCP) oraz wykrywania UPnP. Nawet ssh jest wyłączone, dopóki nie włączysz go przez _Setup > Security > SSHD_, co otwiera port 22 (z ograniczeniem liczby prób, chroniącym przed atakami brute force) jako część konfiguracji. Ograniczamy nawet dostęp do Dockera, używając konfiguracji [ufw-docker](https://github.com/chaifeng/ufw-docker), aby zapobiec przypadkowemu wystawieniu Twoich kontenerów na świat.
@@ -10,11 +10,11 @@ Omarchy traktuje bezpieczeństwo niezwykle poważnie. To ma być system operacyj
 
 ## Zmiana haseł
 
-W instalacji z szyfrowaniem masz dwa hasła: jedno odblokowuje dysk przy starcie, a drugie służy do logowania i `sudo`. Kreator konfiguracji ustawia je jako takie same. Oba można zmienić w menu Omarchy w _Update > Password_ — _Drive Encryption_ dla pierwszego, _User_ dla drugiego. Zmiana hasła dysku najpierw wymaga podania obecnego, więc miej je pod ręką. Jeśli zmiana zostanie przerwana, uruchom ponownie _Drive Encryption_: poprosi o hasło, które obecnie odblokowuje dysk, i dokończy zmianę.
+W instalacji z szyfrowaniem masz dwa hasła: jedno odblokowuje dysk przy starcie, a drugie służy do logowania i `sudo`. Kreator konfiguracji ustawia je jako takie same. Oba można zmienić w menu Ve OS w _Update > Password_ — _Drive Encryption_ dla pierwszego, _User_ dla drugiego. Zmiana hasła dysku najpierw wymaga podania obecnego, więc miej je pod ręką. Jeśli zmiana zostanie przerwana, uruchom ponownie _Drive Encryption_: poprosi o hasło, które obecnie odblokowuje dysk, i dokończy zmianę.
 
 ## Przekazywanie komputera, którego już używałeś
 
-Jeśli przekazujesz swój komputer komuś innemu, nie musisz go ponownie instalować. Uruchom _Setup > Reset Computer_ w menu Omarchy, wpisz `reset`, aby potwierdzić, i uruchom komputer ponownie. Spowoduje to usunięcie każdego konta użytkownika i wszystkiego w `/home`, odrzucenie wszystkich pakietów i zmian systemowych, które wprowadziłeś od czasu instalacji, oraz wyczyszczenie tożsamości komputera — połączeń sieciowych, kluczy hosta i wszystkiego. Po ponownym uruchomieniu pojawi się kreator konfiguracji z pierwszego uruchomienia, gotowy, aby nowy właściciel wprowadził własne imię i nazwisko, hasło oraz hasło szyfrowania.
+Jeśli przekazujesz swój komputer komuś innemu, nie musisz go ponownie instalować. Uruchom _Setup > Reset Computer_ w menu Ve OS, wpisz `reset`, aby potwierdzić, i uruchom komputer ponownie. Spowoduje to usunięcie każdego konta użytkownika i wszystkiego w `/home`, odrzucenie wszystkich pakietów i zmian systemowych, które wprowadziłeś od czasu instalacji, oraz wyczyszczenie tożsamości komputera — połączeń sieciowych, kluczy hosta i wszystkiego. Po ponownym uruchomieniu pojawi się kreator konfiguracji z pierwszego uruchomienia, gotowy, aby nowy właściciel wprowadził własne imię i nazwisko, hasło oraz hasło szyfrowania.
 
 Działa to poprzez przywrócenie migawki bazowej, którą wykonuje instalator, więc jest dostępne tylko na komputerach zainstalowanych z obrazu ISO Omarchy. A na dysku bez szyfrowania reset jest usunięciem, a nie bezpiecznym wymazaniem, więc jeśli dane były wrażliwe, zamiast tego wykonaj świeżą instalację.
 
@@ -24,7 +24,7 @@ Czasami chcesz, aby `sudo` przestało pytać, najczęściej gdy agent AI wykonuj
 
 Dostęp czasowy wygasa automatycznie, w tym natychmiast po wznowieniu z uśpienia, które przekroczyło termin. Ponowne uruchomienie komputera kończy go wcześniej. Dostęp stały przetrwa ponowne uruchomienia i pozostaje włączony, dopóki go nie wyłączysz.
 
-Aktualizacja lub usunięcie pakietu ustawień Omarchy kończy każde tymczasowe przyznanie dostępu, zanim zmieni się jego obsługa wygaśnięcia. Jeśli polecenie zgłosi błąd autoryzacji lub czyszczenia, rozwiąż go przed próbą włączenia kolejnego przyznania dostępu; błąd nie oznacza, że dostęp bez hasła jest nieaktywny.
+Aktualizacja lub usunięcie pakietu ustawień Ve OS kończy każde tymczasowe przyznanie dostępu, zanim zmieni się jego obsługa wygaśnięcia. Jeśli polecenie zgłosi błąd autoryzacji lub czyszczenia, rozwiąż go przed próbą włączenia kolejnego przyznania dostępu; błąd nie oznacza, że dostęp bez hasła jest nieaktywny.
 
 Bądź tego w pełni świadomy: gdy jest to włączone, wszystko działające jako Twój użytkownik może wykonać wszystko jako root bez pytania. To cały sens i to także całe ryzyko.
 

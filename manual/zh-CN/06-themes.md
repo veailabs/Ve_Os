@@ -1,8 +1,8 @@
 # 主题
 
-Omarchy 自带二十二个精美的主题。你可以在 Omarchy 菜单（`Super + Space`）里通过 _Appearance > Theme_ 在它们之间选择，或者使用 `Super + Ctrl + T` 直接跳到主题选择器。
+Ve OS 自带二十二个精美的主题。你可以在 Ve OS 菜单（`Super + Space`）里通过 _Appearance > Theme_ 在它们之间选择，或者使用 `Super + Ctrl + T` 直接跳到主题选择器。
 
-每个主题都会为桌面、终端、neovim、活动屏幕（btop）、Chromium 以及整个 Omarchy shell 定制样式：顶部栏、菜单、通知、OSD 和锁屏。（对于 Obsidian，你必须在应用内通过 _Appearance > Themes_ 手动选择 Omarchy 主题）。
+每个主题都会为桌面、终端、neovim、活动屏幕（btop）、Chromium 以及整个 Ve OS shell 定制样式：顶部栏、菜单、通知、OSD 和锁屏。（对于 Obsidian，你必须在应用内通过 _Appearance > Themes_ 手动选择 Ve OS 主题）。
 
 主题带有一组背景图片，你可以使用 `Super + Ctrl + W` 在它们之间挑选。
 
@@ -75,7 +75,7 @@ _White_
 
 你可以通过 _Install > Style > Icons_（或 `omarchy icons install <git url>`）安装别人制作的图标集，并在 _Remove > Icons_ 下将其再次移除。_Update > Extra Icons_ 会获取你已安装的图标集的最新版本。
 
-要制作你自己的图标集，把你的图标放在 `~/.config/omarchy/icons/<name>/` 中，每个应用一个文件，以该应用的 `.desktop` 文件中的 `Icon=` 行命名。以 `.svg` 结尾的文件会按原样显示。以 `.svg.tpl` 结尾的文件会以主题的配色绘制：在需要填写颜色的位置写上 `{{ icon_main }}`、`{{ icon_mark }}`、`{{ icon_paper }}`、`{{ icon_body }}`、`{{ icon_edge }}`、`{{ icon_ink }}` 或 `{{ icon_shadow }}`。`/usr/share/omarchy/icons/papercraft/` 中的默认图标集是一个很好的起点。添加一个 `preview.png`，以便在选择器中展示你的图标集；如果没有，Omarchy 会根据你的图标绘制预览。要更改默认图标集中的单个图标，把你的版本放在 `~/.config/omarchy/icons/papercraft/` 中。
+要制作你自己的图标集，把你的图标放在 `~/.config/omarchy/icons/<name>/` 中，每个应用一个文件，以该应用的 `.desktop` 文件中的 `Icon=` 行命名。以 `.svg` 结尾的文件会按原样显示。以 `.svg.tpl` 结尾的文件会以主题的配色绘制：在需要填写颜色的位置写上 `{{ icon_main }}`、`{{ icon_mark }}`、`{{ icon_paper }}`、`{{ icon_body }}`、`{{ icon_edge }}`、`{{ icon_ink }}` 或 `{{ icon_shadow }}`。`/usr/share/omarchy/icons/papercraft/` 中的默认图标集是一个很好的起点。添加一个 `preview.png`，以便在选择器中展示你的图标集；如果没有，Ve OS 会根据你的图标绘制预览。要更改默认图标集中的单个图标，把你的版本放在 `~/.config/omarchy/icons/papercraft/` 中。
 
 ### 解锁设计
 

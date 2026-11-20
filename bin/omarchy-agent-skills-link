@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Link Omarchy's agent skills into every agent harness
+# omarchy:summary=Link Ve OS's agent skills into every agent harness
 # omarchy:args=[omarchy-root]
 # omarchy:hidden=true
 

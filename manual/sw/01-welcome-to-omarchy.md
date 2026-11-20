@@ -1,4 +1,6 @@
-# Karibu Omarchy!
+# Ve OS — Karibu upstream Omarchy!
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ni usambazaji wa Linux wa [omakase](https://manuals.omamix.org/3/omacom/76/omakase-computing) unaotegemea [Arch](https://archlinux.org/), kidhibiti cha madirisha cha vigae [Hyprland](https://hypr.land/), na kitendanishi cha ujenzi wa eneo-kazi [Quickshell](https://quickshell.org/). Ina kila kitu ambacho mtumiaji wa kisasa na mwenye ujuzi wa kompyuta anahitaji ili kufanya kazi kwa ufanisi mara moja. Kuanzia [Neovim](https://neovim.io/) (btw) hadi Chromium, [Obsidian](https://obsidian.md/) hadi LibreOffice, na [Hype](https://github.com/omacom/hype) hadi [Monologue](https://github.com/omacom/monologue). Hata kicheza muziki cha mtindo wa Winamp wa zamani kipo!
 

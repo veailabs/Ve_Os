@@ -1,6 +1,6 @@
 # Shell-eszközök
 
-A szokásos Linux-eszközökön felül az Omarchy számos továbbfejlesztett shell-eszközzel is érkezik. Íme a legfontosabbak.
+A szokásos Linux-eszközökön felül az Ve OS számos továbbfejlesztett shell-eszközzel is érkezik. Íme a legfontosabbak.
 
 ## fzf
 
@@ -58,4 +58,4 @@ A teljes kézikönyv a `man yt-dlp` paranccsal érhető el.
 
 A [try](https://github.com/tobi/try) megkönnyíti a programozási kísérletek kezelését dátumbélyeges könyvtárakkal. Minden kísérlet a `~/Work/tries` alatt él, és a `try` paranccsal érheted el őket.
 
-Az Omarchy nem adja hozzá automatikusan egy projekt `bin/` könyvtárát a `PATH`-hez. A megbízható, projektbeli eszközöket futtasd explicit relatív útvonallal, például `bin/rails` vagy `./bin/dev` formában.
+Az Ve OS nem adja hozzá automatikusan egy projekt `bin/` könyvtárát a `PATH`-hez. A megbízható, projektbeli eszközöket futtasd explicit relatív útvonallal, például `bin/rails` vagy `./bin/dev` formában.

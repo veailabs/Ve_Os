@@ -1,0 +1,376 @@
+#!/usr/bin/python3
+# omarchy:summary=Control a Grok Build task through JSON lines
+# omarchy:hidden=true
+
+import json
+import os
+import queue
+import signal
+import subprocess
+import sys
+import tempfile
+import threading
+import time
+from pathlib import Path
+
+LIMIT = 65536
+
+
+class Control:
+  def __init__(self):
+    self.events = queue.Queue(maxsize=256)
+    self.child = None
+    self.outbox = None
+    self.writer_stop = None
+    self.write_error = False
+    self.generation = 0
+    self.serial = 0
+    self.requests = {}
+    self.permissions = {}
+    self.permission_started = None
+    self.cancel_at = None
+    self.prompt = ""
+    self.load_supported = False
+    self.state = {"status": "idle", "text": "", "sessionId": "", "cwd": ""}
+    self.directory = Path(os.environ.get("XDG_STATE_HOME", str(Path.home() / ".local/state"))) / "omarchy/grok-control"
+    self.path = self.directory / "last.json"
+    try:
+      with self.path.open() as stream:
+        saved = json.loads(stream.read(LIMIT * 4))
+      if isinstance(saved, dict):
+        for key in self.state:
+          if isinstance(saved.get(key), str):
+            self.state[key] = saved[key][:LIMIT]
+        if self.state["status"] not in ("completed", "cancelled", "error", "sign_in_required", "idle"):
+          self.state["status"] = "interrupted"
+    except (OSError, ValueError):
+      pass
+
+  def emit(self, kind, **fields):
+    print(json.dumps({"type": kind, **fields}, ensure_ascii=False), flush=True)
+
+  def status(self, value):
+    self.state["status"] = value
+    self.emit("status", **self.state)
+    self.save()
+
+  def save(self):
+    try:
+      self.directory.mkdir(mode=0o700, parents=True, exist_ok=True)
+      fd, name = tempfile.mkstemp(prefix=".last-", dir=self.directory)
+      try:
+        with os.fdopen(fd, "w") as stream:
+          json.dump(self.state, stream, ensure_ascii=False)
+        os.replace(name, self.path)
+      finally:
+        if os.path.exists(name):
+          os.unlink(name)
+    except OSError:
+      self.emit("error", message="Could not save the local task result.")
+
+  def read(self, stream, source, generation):
+    try:
+      while True:
+        line = stream.readline(LIMIT * 4)
+        if not line:
+          break
+        if len(line) >= LIMIT * 4:
+          self.events.put((source, generation, None))
+          return
+        try:
+          value = json.loads(line)
+        except ValueError:
+          value = None
+        self.events.put((source, generation, value))
+    finally:
+      if source == "agent":
+        stream.close()
+      self.events.put((source + "-eof", generation, None))
+
+  def write(self, stream, outbox, stopped, generation):
+    try:
+      while not stopped.is_set():
+        value = outbox.get()
+        if value is None or stopped.is_set():
+          break
+        stream.write(value)
+        stream.flush()
+    except (BrokenPipeError, OSError, ValueError):
+      self.events.put(("agent-write-error", generation, None))
+    finally:
+      try:
+        stream.close()
+      except (BrokenPipeError, OSError, ValueError):
+        pass
+
+  def send(self, value):
+    if self.child is None:
+      return
+    try:
+      self.outbox.put_nowait(json.dumps({"jsonrpc": "2.0", **value}) + "\n")
+    except queue.Full:
+      self.write_error = True
+
+  def request(self, method, params):
+    self.serial += 1
+    deadline = time.monotonic() + (1800 if method == "session/prompt" else 30)
+    self.requests[self.serial] = (method, deadline)
+    self.send({"id": self.serial, "method": method, "params": params})
+
+  def stop(self):
+    child, self.child = self.child, None
+    if self.writer_stop is not None:
+      self.writer_stop.set()
+      try:
+        self.outbox.put_nowait(None)
+      except queue.Full:
+        pass
+    self.outbox = None
+    self.writer_stop = None
+    self.write_error = False
+    if child is not None:
+      try:
+        os.killpg(child.pid, signal.SIGTERM)
+      except ProcessLookupError:
+        pass
+      try:
+        child.wait(timeout=1)
+      except subprocess.TimeoutExpired:
+        pass
+      try:
+        os.killpg(child.pid, signal.SIGKILL)
+      except ProcessLookupError:
+        pass
+      try:
+        child.wait(timeout=1)
+      except subprocess.TimeoutExpired:
+        pass
+    self.requests.clear()
+    self.permissions.clear()
+    self.permission_started = None
+    self.cancel_at = None
+
+  def fail(self, message, status="error"):
+    self.stop()
+    self.emit("error", message=message)
+    self.status(status)
+
+  def input_error(self, message):
+    self.emit("error", message=message)
+    self.emit("status", **self.state)
+
+  def start(self, command):
+    if self.child is not None:
+      self.input_error("Cancel or finish the current task first.")
+      return
+    cwd, prompt = command.get("cwd"), command.get("prompt")
+    if not isinstance(cwd, str) or "\0" in cwd or not Path(cwd).is_absolute() or not Path(cwd).is_dir():
+      self.input_error("Choose an existing absolute workspace directory.")
+      return
+    if not isinstance(prompt, str) or not prompt.strip() or len(prompt) > LIMIT:
+      self.input_error("Enter a task of at most 65,536 characters.")
+      return
+    resume = command.get("resume") is True
+    cwd = str(Path(cwd).resolve())
+    if resume and (not self.state["sessionId"] or self.state["cwd"] != cwd):
+      self.input_error("Resume requires the saved task's workspace. Select that directory or start a new task.")
+      return
+    self.state = {"status": "starting", "text": "", "sessionId": self.state["sessionId"] if resume else "", "cwd": cwd}
+    self.prompt = prompt
+    self.generation += 1
+    try:
+      self.child = subprocess.Popen(["grok", "--permission-mode", "default", "agent", "stdio"], cwd=self.state["cwd"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True, start_new_session=True)
+    except OSError:
+      self.fail("Could not start Grok Build. Install or repair the Grok CLI first.")
+      return
+    self.outbox = queue.Queue(maxsize=16)
+    self.writer_stop = threading.Event()
+    threading.Thread(target=self.write, args=(self.child.stdin, self.outbox, self.writer_stop, self.generation), daemon=True).start()
+    threading.Thread(target=self.read, args=(self.child.stdout, "agent", self.generation), daemon=True).start()
+    self.status("starting")
+    self.request("initialize", {"protocolVersion": 1, "clientCapabilities": {}})
+
+  def input(self, value):
+    if not isinstance(value, dict):
+      self.input_error("Expected a JSON object.")
+      return
+    action = value.get("action")
+    if action == "start":
+      self.start(value)
+    elif action == "status":
+      self.emit("status", **self.state)
+    elif action == "cancel":
+      if self.child is not None:
+        self.cancel_at = time.monotonic() + 3
+        for request_id in list(self.permissions):
+          self.send({"id": request_id, "result": {"outcome": {"outcome": "cancelled"}}})
+        self.permissions.clear()
+        if self.state["sessionId"]:
+          self.send({"method": "session/cancel", "params": {"sessionId": self.state["sessionId"]}})
+        self.status("cancelling")
+    elif action == "permission":
+      request_id, option = value.get("id"), value.get("optionId")
+      if not isinstance(request_id, (str, int)) or isinstance(request_id, bool) or request_id not in self.permissions:
+        self.input_error("This permission request is no longer pending.")
+        return
+      options = self.permissions[request_id]
+      if option is not None and (not isinstance(option, str) or option not in options):
+        self.input_error("Choose one of the displayed permission options.")
+        return
+      del self.permissions[request_id]
+      if self.permission_started is not None:
+        elapsed = time.monotonic() - self.permission_started
+        self.requests = {key: (method, deadline + elapsed) for key, (method, deadline) in self.requests.items()}
+        self.permission_started = None
+      outcome = {"outcome": "cancelled"} if option is None else {"outcome": "selected", "optionId": option}
+      self.send({"id": request_id, "result": {"outcome": outcome}})
+      self.status("permission" if self.permissions else "running")
+    else:
+      self.input_error("Unknown control action.")
+
+  def agent(self, value):
+    if not isinstance(value, dict):
+      self.fail("Grok Build returned an invalid protocol message.")
+      return
+    method, request_id = value.get("method"), value.get("id")
+    if method == "session/update":
+      params = value.get("params", {})
+      if not isinstance(params, dict) or params.get("sessionId") != self.state["sessionId"]:
+        return
+      update = params.get("update", {})
+      if isinstance(update, dict) and update.get("sessionUpdate") == "agent_message_chunk":
+        content = update.get("content", {})
+        if isinstance(content, dict) and content.get("type") == "text" and isinstance(content.get("text"), str):
+          chunk = content["text"][:LIMIT]
+          self.state["text"] = (self.state["text"] + chunk)[-LIMIT:]
+          self.emit("text", text=chunk)
+      return
+    if method is not None and request_id is not None:
+      if not isinstance(request_id, (int, str)) or isinstance(request_id, bool):
+        self.fail("Grok Build returned an invalid request identifier.")
+        return
+      params = value.get("params", {})
+      if method != "session/request_permission":
+        self.send({"id": request_id, "error": {"code": -32601, "message": "Client capability not supported"}})
+        return
+      options = params.get("options", []) if isinstance(params, dict) else []
+      options = [o for o in options if isinstance(o, dict) and isinstance(o.get("optionId"), str) and isinstance(o.get("name"), str) and o.get("kind") in ("allow_once", "reject_once")] if isinstance(options, list) else []
+      if self.cancel_at or self.permissions or not options or params.get("sessionId") != self.state["sessionId"]:
+        self.send({"id": request_id, "result": {"outcome": {"outcome": "cancelled"}}})
+        return
+      call = params.get("toolCall", {})
+      title = call.get("title", "Allow this task action?") if isinstance(call, dict) else "Allow this task action?"
+      self.permissions[request_id] = {o["optionId"] for o in options}
+      self.permission_started = time.monotonic()
+      self.status("permission")
+      self.emit("permission", id=request_id, title=str(title)[:4096], options=[{k: o[k] for k in ("optionId", "name", "kind")} for o in options])
+      return
+    if not isinstance(request_id, int) or request_id not in self.requests:
+      return
+    requested, _ = self.requests.pop(request_id)
+    if self.cancel_at:
+      self.stop()
+      self.status("cancelled")
+      return
+    if "error" in value:
+      error = value["error"]
+      data = error.get("data", {}) if isinstance(error, dict) else {}
+      auth_related = isinstance(data, dict) and data.get("authRelated") is True
+      if isinstance(error, dict):
+        auth_related = auth_related or "auth" in str(error.get("message", "")).lower()
+      needs_auth = requested == "authenticate" or (requested in ("session/new", "session/load") and isinstance(error, dict) and error.get("code") == -32000 and auth_related)
+      self.fail("Sign in through Grok Build and try again." if needs_auth else "Grok Build could not complete the requested operation.", "sign_in_required" if needs_auth else "error")
+      return
+    result = value.get("result", {})
+    if not isinstance(result, dict):
+      self.fail("Grok Build returned an invalid operation result.")
+      return
+    if requested == "initialize":
+      if result.get("protocolVersion") != 1:
+        self.fail("This Grok Build version uses an unsupported control protocol.")
+        return
+      methods = result.get("authMethods", [])
+      capabilities = result.get("agentCapabilities", {})
+      self.load_supported = isinstance(capabilities, dict) and capabilities.get("loadSession") is True
+      if isinstance(methods, list) and any(isinstance(m, dict) and m.get("id") == "cached_token" for m in methods):
+        self.request("authenticate", {"methodId": "cached_token", "_meta": {"headless": True}})
+      else:
+        self.new_session()
+    elif requested == "authenticate":
+      self.new_session()
+    elif requested in ("session/new", "session/load"):
+      session = result.get("sessionId", self.state["sessionId"])
+      if not isinstance(session, str) or not session or len(session) > 4096:
+        self.fail("Grok Build did not provide a valid session.")
+        return
+      self.state["sessionId"] = session
+      self.emit("session", sessionId=session)
+      self.status("running")
+      self.request("session/prompt", {"sessionId": session, "prompt": [{"type": "text", "text": self.prompt}]})
+      self.prompt = ""
+    elif requested == "session/prompt":
+      cancelled = result.get("stopReason") == "cancelled"
+      self.stop()
+      self.status("cancelled" if cancelled else "completed")
+
+  def new_session(self):
+    params = {"cwd": self.state["cwd"], "mcpServers": []}
+    if self.state["sessionId"]:
+      if not self.load_supported:
+        self.fail("This Grok Build version cannot resume the saved session. Start a new task.")
+        return
+      params["sessionId"] = self.state["sessionId"]
+      self.request("session/load", params)
+    else:
+      self.request("session/new", params)
+
+  def run(self):
+    threading.Thread(target=self.read, args=(sys.stdin, "input", 0), daemon=True).start()
+    self.emit("status", **self.state)
+    try:
+      while True:
+        deadlines = [self.cancel_at] if self.cancel_at else []
+        if self.child and not self.permissions:
+          deadlines.extend(deadline for _, deadline in self.requests.values())
+        timeout = max(0, min(deadlines) - time.monotonic()) if deadlines else None
+        try:
+          source, generation, value = self.events.get(timeout=timeout)
+        except queue.Empty:
+          source = "tick"
+        if source == "input-eof":
+          break
+        if source == "input":
+          self.input(value)
+        elif source.startswith("agent") and generation == self.generation and self.child is not None:
+          if source == "agent-write-error":
+            self.fail("Grok Build disconnected while receiving a command.")
+          elif source == "agent-eof":
+            self.fail("Grok Build disconnected before the task finished.")
+          else:
+            self.agent(value)
+        now = time.monotonic()
+        if self.write_error:
+          self.fail("Grok Build could not receive commands. Try the task again.")
+        elif self.cancel_at and now >= self.cancel_at:
+          self.stop()
+          self.status("cancelled")
+        elif self.child and not self.permissions and any(now > deadline for _, deadline in self.requests.values()):
+          self.fail("Grok Build timed out. Try the task again.")
+    finally:
+      if self.child is not None:
+        self.stop()
+        self.status("interrupted")
+
+
+def interrupted(signum, frame):
+  raise KeyboardInterrupt
+
+
+if __name__ == "__main__":
+  os.umask(0o077)
+  signal.signal(signal.SIGTERM, interrupted)
+  signal.signal(signal.SIGHUP, interrupted)
+  try:
+    Control().run()
+  except (BrokenPipeError, KeyboardInterrupt):
+    pass

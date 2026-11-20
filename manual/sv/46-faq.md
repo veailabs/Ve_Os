@@ -28,7 +28,7 @@ Detta visar Sunday 10:55 AM.
 
 ### Hur ändrar jag min tidszon?
 
-Kör _Update > Timezone_ i Omarchy-menyn och välj från listan. Om tidszonen är rätt men själva klockan har drivit iväg startar _Update > Time_ om tidssynkroniseringen åt dig.
+Kör _Update > Timezone_ i Ve OS-menyn och välj från listan. Om tidszonen är rätt men själva klockan har drivit iväg startar _Update > Time_ om tidssynkroniseringen åt dig.
 
 ### Hur ändrar jag min DNS, delar mitt Wi-Fi eller kontrollerar min anslutningshastighet?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Du kan göra samma sak för screenrecordings med `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap skapar sin screenshot-katalog automatiskt. Skapa screenrecording-katalogen själv, och starta sedan om Omarchy för att någon av miljövariabeländringarna ska börja gälla.
+Omasnap skapar sin screenshot-katalog automatiskt. Skapa screenrecording-katalogen själv, och starta sedan om Ve OS för att någon av miljövariabeländringarna ska börja gälla.
 
 ### Hur får jag högtalarna + webbkameran att fungera på min Apple Studio Display?
 
 Man skulle tro att allt bara ska fungera genom att koppla in USB C, men så är det tyvärr inte. Lösningen jag har hittat för att få det att fungera pålitligt är att använda [the WJESOG DisplayPort + USB-A => USB-C cable](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Då fungerar högtalare och webbkamera som en dröm.
 
-Kom ihåg att du har inbyggd ljusstyrkekontroll i Omarchy för Apple Displays (både Studio och XDR) med de vanliga tangentbordsknapparna för ljusstyrka.
+Kom ihåg att du har inbyggd ljusstyrkekontroll i Ve OS för Apple Displays (både Studio och XDR) med de vanliga tangentbordsknapparna för ljusstyrka.
 
 ### Hur blir jag av med all extra mjukvara?
 
@@ -72,7 +72,7 @@ Om du inte vill ha program som Obsidian eller LibreOffice eller något av det an
 
 Kör _Remove > Package_ för att se varje paket som är installerat. Sedan kan du välja vilket paket du vill ta bort med tab, och börja ta bort allt du har valt med return.
 
-Och du kan använda _Remove > Web App_ från Omarchy-menyn för att ta bort någon av de förinstallerade webbappar du inte vill ha.
+Och du kan använda _Remove > Web App_ från Ve OS-menyn för att ta bort någon av de förinstallerade webbappar du inte vill ha.
 
 Eller kör _Remove > Preinstalls_ för att sopa ut alla förinstallerade tillbehör — webbappar, TUIs och valfria applikationer — i ett svep. Snabbkommandona som startade dem försvinner med dem, så du lämnas med en ren tavla av bindningar att fylla med dina egna i `~/.config/hypr/bindings.lua`.
 

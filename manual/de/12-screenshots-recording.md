@@ -41,7 +41,7 @@ Diese Bindings existieren nur, solange Omasnap offen ist, also können sie mit n
 
 ## Bildschirmaufnahme
 
-`Alt + Print Screen` öffnet _Trigger > Capture > Screenrecord_, das fragt, was du auf dem Soundtrack haben willst: kein Audio, Desktop-Audio, Desktop plus Mikrofon oder Desktop plus Mikrofon plus Webcam. Das Letzte taucht nur auf, wenn du tatsächlich eine Kamera angeschlossen hast. Wähle eins, und Omarchys Aufnahmeauswahl lässt dich einen Bereich aufziehen oder auf ein Fenster oder einen Monitor klicken.
+`Alt + Print Screen` öffnet _Trigger > Capture > Screenrecord_, das fragt, was du auf dem Soundtrack haben willst: kein Audio, Desktop-Audio, Desktop plus Mikrofon oder Desktop plus Mikrofon plus Webcam. Das Letzte taucht nur auf, wenn du tatsächlich eine Kamera angeschlossen hast. Wähle eins, und Ve OSs Aufnahmeauswahl lässt dich einen Bereich aufziehen oder auf ein Fenster oder einen Monitor klicken.
 
 Die Aufnahme läuft auf gpu-screen-recorder, der auf der GPU mit 60fps encodiert und notfalls auf die CPU zurückfällt. Das Ergebnis ist eine MP4 in `~/Videos`, namens `screenrecording-2026-08-13_14-22-05.mp4`. Setze `OMARCHY_SCREENRECORD_DIR`, um das zu ändern — aber beachte, dass dieses Verzeichnis anders als das Screenshot-Verzeichnis bereits existieren muss, sonst weigert sich die Aufnahme zu starten.
 

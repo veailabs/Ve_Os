@@ -1,6 +1,6 @@
 # Branding
 
-Omarchy vám umožňuje nastaviť logo vašej firmy alebo osobný obrázok pre odomknutie pri spustení, pre šetrič obrazovky aj pre obrazovku s informáciami.
+Ve OS vám umožňuje nastaviť logo vašej firmy alebo osobný obrázok pre odomknutie pri spustení, pre šetrič obrazovky aj pre obrazovku s informáciami.
 
 ### Odomknutie pri spustení
 
@@ -24,11 +24,11 @@ V tej ponuke sú tri položky:
 
 - **Edit Text** otvorí `~/.config/omarchy/branding/screensaver.txt` vo vašom editore. Napíšte alebo prilepte, čo len chcete — ASCII art, vaše meno, neslušné slovo. Uložte a ukončite a šetrič obrazovky sa okamžite spustí, aby ste ho videli.
 - **Set From Image** otvorí výber súboru pre png alebo svg, prekonvertuje ho do ASCII a ukáže vám výsledok. Logá s jasnou siluetou fungujú oveľa lepšie než fotografie.
-- **Restore Default** vráti späť logo Omarchy.
+- **Restore Default** vráti späť logo Ve OS.
 
 ### Obrazovka s informáciami
 
-Rovnaké tri možnosti sú v časti _Appearance > Branding > About_ pre obrazovku _About_, ktorú získate z ponuky Omarchy, a fungujú identicky — súbor je `~/.config/omarchy/branding/about.txt` a okno About sa po každej zmene zobrazí. Grafika pre About sa konvertuje na menšiu veľkosť než grafika šetriča obrazovky, pretože sa musí zmestiť do okna, namiesto aby zaplnila celý displej.
+Rovnaké tri možnosti sú v časti _Appearance > Branding > About_ pre obrazovku _About_, ktorú získate z ponuky Ve OS, a fungujú identicky — súbor je `~/.config/omarchy/branding/about.txt` a okno About sa po každej zmene zobrazí. Grafika pre About sa konvertuje na menšiu veľkosť než grafika šetriča obrazovky, pretože sa musí zmestiť do okna, namiesto aby zaplnila celý displej.
 
 Kým je okno otvorené, každých pár sekúnd sa cez grafiku šikmo preženie zelený záblesk a potom ju opäť nechá v pokoji. Vaša vlastná grafika ho dostane tiež, pokiaľ je každý znak v nej široký jeden stĺpec — a všetko, čo vyprodukuje _Set From Image_, takým je. Grafika vytvorená z emoji alebo zo znakov s dvojitou šírkou zostáva namiesto toho nehybná a rovnako aj obrazovka, ak si ponecháte vlastnú konfiguráciu fastfetch: nehybné logo je v týchto prípadoch tým, že animácia zostáva bokom, a nie zlyhaním, pretože posúvanie záblesku cez ne by zvyšok riadka dostalo na nesprávne miesto.
 

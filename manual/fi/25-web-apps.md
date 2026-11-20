@@ -1,10 +1,10 @@
 # Verkkosovellukset
 
-Voit lisätä omia verkkosovelluksiasi Omarchy-valikon kohdasta _Asenna > Verkkosovellus_ (`Super + Space`). Se kysyy sinulta sovelluksen nimen, sovelluksen URL-osoitteen ja kuvakkeen URL-osoitteen, jos se ei saa sitä haettua faviconin kautta. Löydät upeita PNG-kuvakkeita monille suosituille verkkosovelluksille sivustolta [Dashboard Icons](https://dashboardicons.com).
+Voit lisätä omia verkkosovelluksiasi Ve OS-valikon kohdasta _Asenna > Verkkosovellus_ (`Super + Space`). Se kysyy sinulta sovelluksen nimen, sovelluksen URL-osoitteen ja kuvakkeen URL-osoitteen, jos se ei saa sitä haettua faviconin kautta. Löydät upeita PNG-kuvakkeita monille suosituille verkkosovelluksille sivustolta [Dashboard Icons](https://dashboardicons.com).
 
 Ne ovat sen jälkeen käytettävissä sovelluskäynnistimen (`Super + Space`) kautta, ja ne käyttävät kaunista kehyksetöntä verkkosovellusikkunaa.
 
-Jos haluat poistaa verkkosovelluksen, siirry vain Omarchy-valikon kohtaan _Poista > Verkkosovellus_.
+Jos haluat poistaa verkkosovelluksen, siirry vain Ve OS-valikon kohtaan _Poista > Verkkosovellus_.
 
 On parasta, jos kirjaudut kaikkiin tileihisi tavallisella selaimella ennen verkkosovellusten pikakuvakkeiden käyttämistä. Ohut wrapper-kehys ei toimi hyvin 1passwordin kanssa, joten on vain helpompaa olla kirjautuneena suoraan valmiiksi.
 
@@ -12,7 +12,7 @@ Kaikkia näiden verkkosovellusten pikanäppäimiä voi muuttaa tiedostossa `~/.c
 
 Kun olet verkkosovelluksessa, voit kopioida nykyisen URL-osoitteen leikepöydälle näppäinyhdistelmällä `Shift + Alt + L`.
 
-Oletuksena Omarchyn mukana tulee jo valikoima oletussovelluksia:
+Oletuksena Ve OSn mukana tulee jo valikoima oletussovelluksia:
 
 ## HEY
 
@@ -64,7 +64,7 @@ Voit käynnistää YouTuben näppäinyhdistelmällä `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) on suosituin Yhdysvalloissa käytetty videokeskustelujärjestelmä. Loistavat yhteydet kaikkialle maailmaan. Ja 40 minuutin kokouksia voi pitää ilman maksullista tiliä. Omarchy paketoi Zoomin verkkoasiakkaan, ja Zoom-kokouslinkit avautuvat suoraan siihen.
+[Zoom](https://zoom.us/) on suosituin Yhdysvalloissa käytetty videokeskustelujärjestelmä. Loistavat yhteydet kaikkialle maailmaan. Ja 40 minuutin kokouksia voi pitää ilman maksullista tiliä. Ve OS paketoi Zoomin verkkoasiakkaan, ja Zoom-kokouslinkit avautuvat suoraan siihen.
 
 Käynnistät Zoomin sovelluskäynnistimellä (`Super + Space`).
 
@@ -76,7 +76,7 @@ Käynnistät Discordin sovelluskäynnistimellä (`Super + Space`).
 
 ## Microsoft-sovellukset
 
-Valitse _Asenna > Palvelu > Microsoft_ lisätäksesi Outlookin, Wordin, Excelin, PowerPointin, Teamsin ja OneDriven verkkosovelluksina. Jokaisella sovelluksella on oma käynnistimensä ja se avautuu suoraan käyttäen kaupallisia Microsoft 365 -URL-osoitteita ja nykyistä selainprofiiliasi. Ne avautuvat samoihin selainohjelmien ikkunoihin kuin Omarchyn muutkin verkkosovellukset; ne eivät asenna erillistä Teams for Linux -asiakasta.
+Valitse _Asenna > Palvelu > Microsoft_ lisätäksesi Outlookin, Wordin, Excelin, PowerPointin, Teamsin ja OneDriven verkkosovelluksina. Jokaisella sovelluksella on oma käynnistimensä ja se avautuu suoraan käyttäen kaupallisia Microsoft 365 -URL-osoitteita ja nykyistä selainprofiiliasi. Ne avautuvat samoihin selainohjelmien ikkunoihin kuin Ve OSn muutkin verkkosovellukset; ne eivät asenna erillistä Teams for Linux -asiakasta.
 
 Poista paketti kohdasta _Poista > Palvelu > Microsoft_ tai poista yksittäisiä sovelluksia kohdasta _Poista > Verkkosovellus_. Voit myös asentaa vain haluamasi sovellukset kohdan _Asenna > Verkkosovellus_ kautta.
 
@@ -88,4 +88,4 @@ Jotta työkirjautumiset pysyvät erillään, lisää selaimen datakansio jokaise
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Korvaa esimerkkikansio valitsemallasi absoluuttisella polulla ja käytä samaa polkua kaikissa kuudessa käynnistimessä, jotta työkirjautumiset jaetaan niiden kesken. Verkkosovellukset käyttävät Omarchyn valitsemaa tuettua selainta ja turvautuvat Chromeen, kun oletusselainta ei tueta.
+Korvaa esimerkkikansio valitsemallasi absoluuttisella polulla ja käytä samaa polkua kaikissa kuudessa käynnistimessä, jotta työkirjautumiset jaetaan niiden kesken. Verkkosovellukset käyttävät Ve OSn valitsemaa tuettua selainta ja turvautuvat Chromeen, kun oletusselainta ei tueta.

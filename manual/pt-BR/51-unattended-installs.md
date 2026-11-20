@@ -1,4 +1,6 @@
-# Instalações autônomas
+# Ve OS — Instalações autônomas
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 A ISO do Omarchy pode se instalar sem ninguém no teclado. Se o instalador encontrar um segundo disco com o rótulo `cidata` contendo seus arquivos de configuração, ele os copia, pula o assistente de configuração por completo e reinicia sozinho no sistema pronto. Nenhuma versão especial da ISO, nenhuma entrada extra no menu de inicialização — sem um disco assim conectado, nada muda e você tem o assistente normal.
 

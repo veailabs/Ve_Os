@@ -1,14 +1,14 @@
 # De bovenbalk
 
-De strip bovenaan je scherm is de Omarchy-balk. Het is geen erop geschroefde statusbalk, maar onderdeel van de Omarchy-shell, dat ene langlopende Quickshell-proces dat ook het menu, de meldingen, de OSD-popups en het vergrendelscherm tekent. Daarom sluit het qua thema perfect aan op al het andere en opent een paneel meteen, in plaats van een nieuwe app te starten.
+De strip bovenaan je scherm is de Ve OS-balk. Het is geen erop geschroefde statusbalk, maar onderdeel van de Ve OS-shell, dat ene langlopende Quickshell-proces dat ook het menu, de meldingen, de OSD-popups en het vergrendelscherm tekent. Daarom sluit het qua thema perfect aan op al het andere en opent een paneel meteen, in plaats van een nieuwe app te starten.
 
 Het is ook het enige onderdeel van de desktop dat altijd in beeld is, dus het is de moeite waard om te weten wat al die kleine glyphs doen.
 
 ## Wat er standaard op staat
 
-De balk heeft drie delen. Links zit het Omarchy-logo (de menustarter) en de werkruimte-indicatoren. In het midden krijg je de statusindicatoren, de klok, Elsewhen (een wereldklok), het weer en een Omarchy-updatebadge. Rechts: het systeemvak, de toetsenbordindeling (wanneer er meer dan één is geconfigureerd), agents, bluetooth, netwerk, audio, scherm en stroom.
+De balk heeft drie delen. Links zit het Ve OS-logo (de menustarter) en de werkruimte-indicatoren. In het midden krijg je de statusindicatoren, de klok, Elsewhen (een wereldklok), het weer en een Ve OS-updatebadge. Rechts: het systeemvak, de toetsenbordindeling (wanneer er meer dan één is geconfigureerd), agents, bluetooth, netwerk, audio, scherm en stroom.
 
-Een paar daarvan verschijnen alleen als ze iets te melden hebben. De toetsenbordindeling verschijnt alleen als je meer dan één indeling hebt geconfigureerd. De updatebadge verschijnt alleen wanneer er een Omarchy-update klaarstaat. En het agents-pictogram verschijnt de eerste keer dat Omarchy AI-codeergebruik op de machine vindt (zie [AI](17-ai.md)).
+Een paar daarvan verschijnen alleen als ze iets te melden hebben. De toetsenbordindeling verschijnt alleen als je meer dan één indeling hebt geconfigureerd. De updatebadge verschijnt alleen wanneer er een Ve OS-update klaarstaat. En het agents-pictogram verschijnt de eerste keer dat Ve OS AI-codeergebruik op de machine vindt (zie [AI](17-ai.md)).
 
 ## Rondklikken
 
@@ -16,7 +16,7 @@ Bijna elke widget doet iets bij klikken met links, rechts en de middelste knop, 
 
 | Widget | Links | Rechts | Midden / scrollen |
 | --- | --- | --- | --- |
-| Menu | Omarchy-menu | Nieuwe terminal | — |
+| Menu | Ve OS-menu | Nieuwe terminal | — |
 | Werkruimten | Focus die werkruimte op deze monitor | — | Scrollen: volgende/vorige werkruimte |
 | Klok | Kalenderpopup | Door de labelformaten bladeren | Midden: tijdzonekiezer |
 | Weer | Popup met weersverwachting | Volledig weer als melding | Midden: vernieuwen |
@@ -29,7 +29,7 @@ Bijna elke widget doet iets bij klikken met links, rechts en de middelste knop, 
 | Media | Afspelen/pauzeren | Popup met coverafbeelding | Midden: volgende · scrollen: vorige/volgende |
 | Agents | Agents-paneel | Start je agent | Midden: volgend abonnement |
 | Systeemvak | Beweeg eroverheen om de lade te onthullen | Rechtsklik op de chevron om te beheren | — |
-| Omarchy-update | Voer de update uit | — | — |
+| Ve OS-update | Voer de update uit | — | — |
 
 Niet alles in die tabel staat standaard op je balk. De mediawidget (MPRIS now-playing, met een scrollende track en artiest) en de microfoonwidget zijn allebei ingebouwd, maar staan standaard uit — voeg ze toe als je ze wilt, zoals hieronder beschreven.
 
@@ -137,6 +137,6 @@ Elke widget is één item in een van de vijf layout-arrays en zijn instellingen 
 
 `center` is het vak in het midden van de balk: alles erin wordt als één groep in het midden van het scherm gecentreerd. `centerBegin` en `centerEnd` hangen aan weerszijden van het vak, waardoor de klok precies in het midden blijft, ook als het weer en de updatebadge komen en gaan. Zet meer dan één widget in `center` en ze worden samen gecentreerd; laat het leeg en `centerBegin` en `centerEnd` komen samen in het midden van de balk.
 
-Eén regel die de moeite waard is om te internaliseren: **zodra je je eigen `shell.json` hebt, is die canoniek**. Totdat je iets aanpast, leest de shell het standaardbestand van Omarchy. Zodra je een widget sleept, `omarchy bar` uitvoert of het bestand zelf bewerkt, is het van jou — er is geen deep merge, dus nieuwe standaardwidgets in toekomstige Omarchy-releases verschijnen niet automatisch op je balk. `omarchy bar defaults` zet de meegeleverde indeling terug wanneer je met een schone lei wilt beginnen.
+Eén regel die de moeite waard is om te internaliseren: **zodra je je eigen `shell.json` hebt, is die canoniek**. Totdat je iets aanpast, leest de shell het standaardbestand van Ve OS. Zodra je een widget sleept, `omarchy bar` uitvoert of het bestand zelf bewerkt, is het van jou — er is geen deep merge, dus nieuwe standaardwidgets in toekomstige Ve OS-releases verschijnen niet automatisch op je balk. `omarchy bar defaults` zet de meegeleverde indeling terug wanneer je met een schone lei wilt beginnen.
 
 Hetzelfde bestand bevat ook je idle-tijden op het hoogste niveau, buiten de `bar`-sleutel: `idle.screensaver` en `idle.lock`, beide in seconden sinds je inactief werd. Dus de standaard screensaver treedt in werking na 150 seconden en de vergrendeling na 300.

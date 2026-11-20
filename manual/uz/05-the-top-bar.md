@@ -1,14 +1,14 @@
 # Yuqori panel
 
-Ekraningizning yuqori qismi bo‘ylab cho‘zilgan chiziq — Omarchy paneli. Bu yopishtirib qo‘yilgan holat paneli emas, balki Omarchy qobig‘ining bir qismi, menyuni, bildirishnomalarni, OSD qalqib chiquvchi oynalarini va qulflash ekranini ham chizadigan yagona, uzoq ishlaydigan Quickshell jarayonidir. Shuning uchun u qolgan hamma narsa bilan mukammal uyg‘unlashadi va shuning uchun panel yangi ilovani ishga tushirmasdan, darhol ochiladi.
+Ekraningizning yuqori qismi bo‘ylab cho‘zilgan chiziq — Ve OS paneli. Bu yopishtirib qo‘yilgan holat paneli emas, balki Ve OS qobig‘ining bir qismi, menyuni, bildirishnomalarni, OSD qalqib chiquvchi oynalarini va qulflash ekranini ham chizadigan yagona, uzoq ishlaydigan Quickshell jarayonidir. Shuning uchun u qolgan hamma narsa bilan mukammal uyg‘unlashadi va shuning uchun panel yangi ilovani ishga tushirmasdan, darhol ochiladi.
 
 Bu, shuningdek, doim ekranda qoladigan yagona ish stoli qismi, shuning uchun o‘sha kichkina belgilar nima qilishini bilib olishga arziydi.
 
 ## Odatiy holatda unda nimalar bor
 
-Panel uchta bo‘limdan iborat. Chap tomonda Omarchy logotipi (menyu ishga tushirgichi) va ish joylari indikatorlari joylashgan. Markazda holat indikatorlari, soat, Elsewhen (jahon soati), ob-havo va Omarchy yangilanishi belgisi beriladi. O‘ng tomonda: tizim treyi, klaviatura tartibi (birdan ortiq tartib sozlangan bo‘lsa), agentlar, bluetooth, tarmoq, audio, displey va quvvat.
+Panel uchta bo‘limdan iborat. Chap tomonda Ve OS logotipi (menyu ishga tushirgichi) va ish joylari indikatorlari joylashgan. Markazda holat indikatorlari, soat, Elsewhen (jahon soati), ob-havo va Ve OS yangilanishi belgisi beriladi. O‘ng tomonda: tizim treyi, klaviatura tartibi (birdan ortiq tartib sozlangan bo‘lsa), agentlar, bluetooth, tarmoq, audio, displey va quvvat.
 
-Ulardan ba’zilari faqat aytadigan gapi bo‘lgandagina ko‘rinadi. Klaviatura tartibi faqat birdan ortiq tartib sozlagan bo‘lsangizgina chiqadi. Yangilanish belgisi faqat Omarchy yangilanishi kutib turgandagina chiqadi. Agentlar belgisi esa Omarchy mashinada AI kodlashdan foydalanishni birinchi marta topganida chiqadi (qarang: [AI](17-ai.md)).
+Ulardan ba’zilari faqat aytadigan gapi bo‘lgandagina ko‘rinadi. Klaviatura tartibi faqat birdan ortiq tartib sozlagan bo‘lsangizgina chiqadi. Yangilanish belgisi faqat Ve OS yangilanishi kutib turgandagina chiqadi. Agentlar belgisi esa Ve OS mashinada AI kodlashdan foydalanishni birinchi marta topganida chiqadi (qarang: [AI](17-ai.md)).
 
 ## Atrofni bosish
 
@@ -16,7 +16,7 @@ Deyarli har bir vidjet chap, o‘ng va o‘rta bosishda nimadir qiladi, bir nech
 
 | Vidjet | Chap | O‘ng | O‘rta / aylantirish |
 | --- | --- | --- | --- |
-| Menyu | Omarchy menyusi | Yangi terminal | — |
+| Menyu | Ve OS menyusi | Yangi terminal | — |
 | Ish joylari | Shu monitorda o‘sha ish joyiga fokuslash | — | Aylantirish: keyingi/oldingi ish joyi |
 | Soat | Kalendar qalqib chiquvchi oynasi | Yorliq formatini almashtirish | O‘rta: vaqt mintaqasini tanlagich |
 | Ob-havo | Bashorat qalqib chiquvchi oynasi | To‘liq ob-havo bildirishnoma sifatida | O‘rta: yangilash |
@@ -29,7 +29,7 @@ Deyarli har bir vidjet chap, o‘ng va o‘rta bosishda nimadir qiladi, bir nech
 | Media | Ijro/pauza | Muqova rasmi qalqib chiquvchi oynasi | O‘rta: keyingi · aylantirish: oldingi/keyingi |
 | Agentlar | Agentlar paneli | Agentingizni ishga tushirish | O‘rta: keyingi obuna |
 | Trey | Tortmani ko‘rsatish uchun sichqonchani olib boring | Boshqarish uchun shevron ustida o‘ng tugma | — |
-| Omarchy yangilanishi | Yangilanishni ishga tushirish | — | — |
+| Ve OS yangilanishi | Yangilanishni ishga tushirish | — | — |
 
 O‘sha jadvaldagi hamma narsa ham panelingizda tayyor holatda bo‘lmaydi. Media vidjeti (aylanadigan trek va ijrochi ko‘rinadigan MPRIS hozir ijro etilayotgani) ham, mikrofon vidjeti ham ichiga o‘rnatilgan, lekin odatiy holatda o‘chiq — xohlasangiz, quyida tasvirlanganidek, ularni qo‘shing.
 
@@ -137,6 +137,6 @@ Har bir vidjet beshta tartib massividan biridagi bitta yozuvdir va uning sozlama
 
 `center` — panel o‘rtasidagi quti: undagi hamma narsa bitta guruh sifatida ekranda markazlashadi. `centerBegin` va `centerEnd` qutining ikki tomoniga osilib turadi, soat aynan shu tufayli ob-havo va yangilanish belgisi kelib-ketib turganda ham roppa-rosa markazda qoladi. `center` ga birdan ortiq vidjet qo‘ysangiz, ular birga markazlashadi; uni bo‘sh qoldirsangiz, `centerBegin` va `centerEnd` panel o‘rtasida uchrashadi.
 
-Ichga singdirishga arziydigan bitta qoida: **o‘z `shell.json` ingiz paydo bo‘lgan zahoti, u kanonikdir**. Hech narsani o‘zingiz sozlamaguningizcha qobiq Omarchy ning odatiy faylini o‘qiydi. Vidjetni sudragan, `omarchy bar` ni ishga tushirgan yoki faylni o‘zingiz tahrirlagan zahotingiz, u sizniki bo‘ladi — chuqur birlashtirish yo‘q, shuning uchun kelajakdagi Omarchy nashrlaridagi yangi odatiy vidjetlar panelingizda avtomatik chiqmaydi. Toza holatdan boshlashni xohlagan har safaringizda `omarchy bar defaults` yetkazib berilgan tartibni qaytaradi.
+Ichga singdirishga arziydigan bitta qoida: **o‘z `shell.json` ingiz paydo bo‘lgan zahoti, u kanonikdir**. Hech narsani o‘zingiz sozlamaguningizcha qobiq Ve OS ning odatiy faylini o‘qiydi. Vidjetni sudragan, `omarchy bar` ni ishga tushirgan yoki faylni o‘zingiz tahrirlagan zahotingiz, u sizniki bo‘ladi — chuqur birlashtirish yo‘q, shuning uchun kelajakdagi Ve OS nashrlaridagi yangi odatiy vidjetlar panelingizda avtomatik chiqmaydi. Toza holatdan boshlashni xohlagan har safaringizda `omarchy bar defaults` yetkazib berilgan tartibni qaytaradi.
 
 Xuddi shu fayl yuqori darajada, `bar` kalitidan tashqarida, harakatsizlik vaqtlaringizni ham saqlaydi: `idle.screensaver` va `idle.lock`, ikkalasi ham harakatsiz qolganingizdan beri soniyalarda. Shuning uchun odatiy ekran saqlagichi 150 soniyada, qulf esa 300 soniyada ishga tushadi.

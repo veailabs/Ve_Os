@@ -1,6 +1,6 @@
 # Shellverktyg
 
-Utöver de vanliga Linux-verktygen levereras Omarchy också med en massa förbättrade shellverktyg. Här är de viktigaste.
+Utöver de vanliga Linux-verktygen levereras Ve OS också med en massa förbättrade shellverktyg. Här är de viktigaste.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Den fullständiga manualen finns via `man yt-dlp`.
 
 [try](https://github.com/tobi/try) gör det enkelt att hantera programmeringsexperiment med datumstämplade kataloger. Alla experiment bor i `~/Work/tries` och du når dem via `try`.
 
-Omarchy lägger inte till ett projekts `bin/`-katalog i `PATH` automatiskt. Kör betrodda projektlokala verktyg med en explicit relativ sökväg, som `bin/rails` eller `./bin/dev`.
+Ve OS lägger inte till ett projekts `bin/`-katalog i `PATH` automatiskt. Kör betrodda projektlokala verktyg med en explicit relativ sökväg, som `bin/rails` eller `./bin/dev`.

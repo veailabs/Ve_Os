@@ -1,6 +1,6 @@
 # Usalama
 
-Omarchy inachukulia usalama kwa uzito mkubwa sana. Hii imekusudiwa kuwa mfumo wa uendeshaji ambao unaweza kuutumia kufanya _Kazi Halisi_ katika _Ulimwengu Halisi_. Ambapo kupoteza kompyuta mpakato hakuwezi kusababisha dharura ya kiusalama. Kwa hivyo hivi ndivyo tunavyofanya:
+Ve OS inachukulia usalama kwa uzito mkubwa sana. Hii imekusudiwa kuwa mfumo wa uendeshaji ambao unaweza kuutumia kufanya _Kazi Halisi_ katika _Ulimwengu Halisi_. Ambapo kupoteza kompyuta mpakato hakuwezi kusababisha dharura ya kiusalama. Kwa hivyo hivi ndivyo tunavyofanya:
 
 1. *Usimbaji fiche wa diski nzima umewashwa kwa chaguo-msingi*: Hii ni hatua muhimu zaidi ya kulinda usalama wa kimwili wa data yako. Ikiwa kompyuta yako imepotea au imeibwa, data imesimbwa kwa fiche kikamilifu kwa kutumia LUKS ya kawaida (Linux Unified Key Setup). Kisakinishi kinakuruhusu kujiondoa kwa mashine za kutupwa (tazama [Kuanza](02-getting-started.md)); usakinishaji usio na usimbaji fiche hauna ulinzi huu wowote, na mtu yeyote aliye na kiendeshi anaweza kuisoma.
 2. *Kingo ya mtandao imewashwa kwa chaguo-msingi*: Trafiki yote inayoingia imezuiwa kwa chaguo-msingi, isipokuwa chache: mlango 53317 kwa ajili ya [LocalSend](https://localsend.org/); maswali ya DNS kwenda kwenye kisuluhishi cha kompyuta yenyewe katika anwani ya daraja la Docker (172.17.0.1), yanayokubaliwa kutoka kwenye safu za anwani za faragha ambazo Docker huwapa vyombo vyake; na DNS ya multicast (mlango 5353), ambayo inaruhusu vichapishi na vifaa vingine kwenye mtandao wako kupatana na pia kutangaza jina la kompyuta yako hapo. Zaidi ya hayo, kingo ya mtandao huhifadhi ruhusa za kawaida za UFW kwa ping, kupata anwani kutoka kwa kipanga njia chako (DHCP), na ugunduzi wa UPnP. Hata ssh imezimwa hadi utakapoiwasha kupitia _Setup > Security > SSHD_, ambayo hufungua mlango 22 (imepunguzwa kasi dhidi ya mashambulizi ya nguvu) kama sehemu ya usanidi. Hata tunafunga ufikiaji wa Docker kwa kutumia usanidi wa [ufw-docker](https://github.com/chaifeng/ufw-docker) ili kuzuia vyombo vyako visifichuliwe kwa ulimwengu kwa bahati mbaya.
@@ -10,11 +10,11 @@ Omarchy inachukulia usalama kwa uzito mkubwa sana. Hii imekusudiwa kuwa mfumo wa
 
 ## Kubadilisha nywila zako
 
-Una nywila mbili kwenye usakinishaji uliosimbwa kwa fiche: ile inayofungua kiendeshi wakati wa kuwasha, na ile unayotumia kuingia na `sudo`. Usanidi huziweka ziwe sawa. Zote mbili zinaweza kubadilishwa chini ya _Update > Password_ katika menyu ya Omarchy — _Drive Encryption_ kwa ya kwanza, _User_ kwa ya pili. Kubadilisha nywila ya kiendeshi huomba ya sasa kwanza, kwa hivyo iweke karibu. Ikiwa mabadiliko yataingiliwa, endesha _Drive Encryption_ tena: inaomba nywila inayofungua kiendeshi sasa na kumalizia mabadiliko.
+Una nywila mbili kwenye usakinishaji uliosimbwa kwa fiche: ile inayofungua kiendeshi wakati wa kuwasha, na ile unayotumia kuingia na `sudo`. Usanidi huziweka ziwe sawa. Zote mbili zinaweza kubadilishwa chini ya _Update > Password_ katika menyu ya Ve OS — _Drive Encryption_ kwa ya kwanza, _User_ kwa ya pili. Kubadilisha nywila ya kiendeshi huomba ya sasa kwanza, kwa hivyo iweke karibu. Ikiwa mabadiliko yataingiliwa, endesha _Drive Encryption_ tena: inaomba nywila inayofungua kiendeshi sasa na kumalizia mabadiliko.
 
 ## Kukabidhi mashine ambayo tayari umeitumia
 
-Ikiwa unakabidhi mashine yako kwa mtu mwingine, sio lazima uisakinishe tena. Endesha _Setup > Reset Computer_ katika menyu ya Omarchy, andika `reset` kuthibitisha, na uwashe upya. Hiyo hufuta kila akaunti ya mtumiaji na kila kitu kilicho katika `/home`, hutupa vifurushi vyote na mabadiliko ya mfumo uliyofanya tangu usakinishaji, na hufuta utambulisho wa mashine — miunganisho ya mtandao, funguo za mpangishi, na vyote. Kinachorejea ni mchawi wa usanidi kutoka kwenye uanzishaji wa kwanza, tayari kwa mmiliki wake mpya kuingiza jina lake mwenyewe, nywila, na nywila ya usimbaji fiche.
+Ikiwa unakabidhi mashine yako kwa mtu mwingine, sio lazima uisakinishe tena. Endesha _Setup > Reset Computer_ katika menyu ya Ve OS, andika `reset` kuthibitisha, na uwashe upya. Hiyo hufuta kila akaunti ya mtumiaji na kila kitu kilicho katika `/home`, hutupa vifurushi vyote na mabadiliko ya mfumo uliyofanya tangu usakinishaji, na hufuta utambulisho wa mashine — miunganisho ya mtandao, funguo za mpangishi, na vyote. Kinachorejea ni mchawi wa usanidi kutoka kwenye uanzishaji wa kwanza, tayari kwa mmiliki wake mpya kuingiza jina lake mwenyewe, nywila, na nywila ya usimbaji fiche.
 
 Inafanya kazi kwa kurejesha taswira ya msingi ambayo kisakinishi huchukua, kwa hivyo inapatikana tu kwenye mashine zilizosakinishwa kutoka kwenye ISO ya Omarchy. Na kwenye kiendeshi kisicho na usimbaji fiche, urejeshaji ni ufutaji badala ya ufutaji salama, kwa hivyo ikiwa data ilikuwa nyeti, fanya usakinishaji mpya badala yake.
 
@@ -24,7 +24,7 @@ Wakati mwingine unataka `sudo` iache kuomba, mara nyingi zaidi wakati wakala wa 
 
 Ufikiaji wa muda huisha kiotomatiki, ikiwa ni pamoja na mara tu baada ya kuendelea kutoka kwenye kusimamishwa kulikopita tarehe ya mwisho. Kuwasha kompyuta upya huumaliza mapema. Ufikiaji wa kudumu hudumu kupitia kuwasha upya na hubaki umewashwa hadi utakapouzima.
 
-Kusasisha au kuondoa kifurushi cha mipangilio cha Omarchy humaliza ruzuku yoyote ya muda kabla ya usaidizi wake wa kuisha kubadilika. Ikiwa amri inaripoti hitilafu ya idhini au usafishaji, isuluhishe kabla ya kujaribu kuwezesha ruzuku nyingine; hitilafu haimaanishi kuwa ufikiaji usio na nywila haufanyi kazi.
+Kusasisha au kuondoa kifurushi cha mipangilio cha Ve OS humaliza ruzuku yoyote ya muda kabla ya usaidizi wake wa kuisha kubadilika. Ikiwa amri inaripoti hitilafu ya idhini au usafishaji, isuluhishe kabla ya kujaribu kuwezesha ruzuku nyingine; hitilafu haimaanishi kuwa ufikiaji usio na nywila haufanyi kazi.
 
 Kuwa mwangalifu kuhusu hili: wakati umewashwa, chochote kinachoendeshwa kama mtumiaji wako kinaweza kufanya chochote kama root bila kuulizwa. Hiyo ndiyo sababu nzima, na pia ndio hatari nzima.
 

@@ -1,4 +1,6 @@
-# Suiteáil le Tosú Dúbailte
+# Ve OS — Suiteáil le Tosú Dúbailte
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Is féidir leat Omarchy a shuiteáil ar dheighilt aonair taobh le Windows nó suiteálacha eile.
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Overwrite the Herdr desktop app's keys with the Omarchy default (backs up your version).
+# omarchy:summary=Overwrite the Herdr desktop app's keys with the Ve OS default (backs up your version).
 
 set -euo pipefail
 
@@ -9,7 +9,7 @@ default_keys="$OMARCHY_PATH/default/herdr-app/keys.json"
 user_keys="$app_home/keys.json"
 
 # Herdr reloads keys.json live. It also treats any keys file it didn't write as
-# the person's own and stops adding new default shortcuts to it, so the Omarchy
+# the person's own and stops adding new default shortcuts to it, so the Ve OS
 # file is Herdr's full default keymap with the terminal herdr bindings on top.
 mkdir -p "$app_home"
 
@@ -21,7 +21,7 @@ else
   if [[ -f $user_keys ]]; then
     backup_keys="$user_keys.bak.$(date +%s)"
     cp -f "$user_keys" "$backup_keys"
-    echo "Replaced $user_keys with the Omarchy default. Saved backup as $backup_keys."
+    echo "Replaced $user_keys with the Ve OS default. Saved backup as $backup_keys."
   fi
   cp -f "$default_keys" "$user_keys"
 fi

@@ -1,6 +1,6 @@
 # Bezpečnosť
 
-Omarchy berie bezpečnosť mimoriadne vážne. Toto má byť operačný systém, ktorý môžete používať na _Skutočnú Prácu_ v _Skutočnom Svete_. Kde strata notebooku nemôže viesť k bezpečnostnej núdzovej situácii. Takže tu je, čo robíme:
+Ve OS berie bezpečnosť mimoriadne vážne. Toto má byť operačný systém, ktorý môžete používať na _Skutočnú Prácu_ v _Skutočnom Svete_. Kde strata notebooku nemôže viesť k bezpečnostnej núdzovej situácii. Takže tu je, čo robíme:
 
 1. *Šifrovanie celého disku je predvolene zapnuté*: Toto je najdôležitejší krok k zabezpečeniu fyzickej ochrany vašich dát. Ak sa váš počítač stratí alebo ho ukradnú, dáta sú plne zašifrované pomocou štandardného LUKS (Linux Unified Key Setup). Inštalátor vám umožní túto možnosť vypnúť pre stroje na jedno použitie (pozri [Začíname](02-getting-started.md)); inštalácia bez šifrovania nemá žiadnu z tejto ochrany a ktokoľvek, kto má disk v rukách, si ho môže prečítať.
 2. *Firewall je predvolene povolený*: Všetka prichádzajúca prevádzka je predvolene blokovaná, s niekoľkými výnimkami: port 53317 pre [LocalSend](https://localsend.org/); DNS dotazy na vlastný resolver počítača na adrese Docker bridge (172.17.0.1), prijímané zo súkromných rozsahov adries, ktoré Docker prideľuje svojim kontajnerom; a multicast DNS (port 5353), ktoré umožňuje tlačiarňam a iným zariadeniam vo vašej sieti nájsť sa navzájom a zároveň tam oznamuje názov vášho počítača. Okrem toho si firewall zachováva štandardné povolenia UFW pre ping, získanie adresy z vášho routera (DHCP) a vyhľadávanie UPnP. Dokonca aj ssh je vypnuté, kým ho nezapnete cez _Setup > Security > SSHD_, čo otvorí port 22 (s obmedzením frekvencie proti brute force) ako súčasť nastavenia. Dokonca uzamykame prístup Dockeru pomocou nastavenia [ufw-docker](https://github.com/chaifeng/ufw-docker), aby sme zabránili náhodnému vystaveniu vašich kontajnerov svetu.
@@ -10,11 +10,11 @@ Omarchy berie bezpečnosť mimoriadne vážne. Toto má byť operačný systém,
 
 ## Zmena vašich hesiel
 
-Pri zašifrovanej inštalácii máte dve heslá: jedno, ktoré odomyká disk pri spustení, a druhé, ktorým sa prihlasujete a používate `sudo`. Pri nastavení sa nastavia ako rovnaké. Obe je možné zmeniť v časti _Update > Password_ v menu Omarchy — _Drive Encryption_ pre prvé, _User_ pre druhé. Zmena hesla disku si najprv vyžiada aktuálne heslo, takže ho majte poruke. Ak sa zmena preruší, spustite _Drive Encryption_ znova: vyžiada si heslo, ktoré teraz odomyká disk, a dokončí zmenu.
+Pri zašifrovanej inštalácii máte dve heslá: jedno, ktoré odomyká disk pri spustení, a druhé, ktorým sa prihlasujete a používate `sudo`. Pri nastavení sa nastavia ako rovnaké. Obe je možné zmeniť v časti _Update > Password_ v menu Ve OS — _Drive Encryption_ pre prvé, _User_ pre druhé. Zmena hesla disku si najprv vyžiada aktuálne heslo, takže ho majte poruke. Ak sa zmena preruší, spustite _Drive Encryption_ znova: vyžiada si heslo, ktoré teraz odomyká disk, a dokončí zmenu.
 
 ## Odovzdanie stroja, ktorý ste už používali
 
-Ak svoj stroj odovzdávate niekomu inému, nemusíte ho preinštalovať. Spustite _Setup > Reset Computer_ v menu Omarchy, napíšte `reset` na potvrdenie a reštartujte. Tým sa vymažú všetky používateľské účty a všetko v `/home`, zahodia sa všetky balíčky a systémové zmeny, ktoré ste vykonali od inštalácie, a vymaže sa identita stroja — sieťové pripojenia, kľúče hostiteľa a všetko. Čo sa po spustení vráti, je sprievodca nastavením z prvého spustenia, pripravený pre nového majiteľa, aby zadal svoje vlastné meno, heslo a heslo na šifrovanie.
+Ak svoj stroj odovzdávate niekomu inému, nemusíte ho preinštalovať. Spustite _Setup > Reset Computer_ v menu Ve OS, napíšte `reset` na potvrdenie a reštartujte. Tým sa vymažú všetky používateľské účty a všetko v `/home`, zahodia sa všetky balíčky a systémové zmeny, ktoré ste vykonali od inštalácie, a vymaže sa identita stroja — sieťové pripojenia, kľúče hostiteľa a všetko. Čo sa po spustení vráti, je sprievodca nastavením z prvého spustenia, pripravený pre nového majiteľa, aby zadal svoje vlastné meno, heslo a heslo na šifrovanie.
 
 Funguje to obnovením základného snapshotu, ktorý inštalátor vytvorí, takže je k dispozícii len na strojoch nainštalovaných z Omarchy ISO. A na disku bez šifrovania je resetovanie vymazaním, nie bezpečným vymazaním, takže ak boli dáta citlivé, vykonajte namiesto toho čerstvú inštaláciu.
 
@@ -24,7 +24,7 @@ Niekedy chcete, aby `sudo` prestalo pýtať heslo, najčastejšie vtedy, keď pr
 
 Časovaný prístup automaticky vyprší, a to aj okamžite po obnovení z režimu uspania, ktorý prekročil termín. Reštartovanie počítača ho ukončí predčasne. Trvalý prístup prežije reštarty a zostane povolený, kým ho nezakážete.
 
-Aktualizácia alebo odstránenie balíčka nastavení Omarchy ukončí akýkoľvek dočasný grant skôr, ako sa zmení podpora jeho exspirácie. Ak príkaz nahlási chybu autorizácie alebo čistenia, vyriešte ju pred pokusom o povolenie ďalšieho grantu; chyba neznamená, že prístup bez hesla je neaktívny.
+Aktualizácia alebo odstránenie balíčka nastavení Ve OS ukončí akýkoľvek dočasný grant skôr, ako sa zmení podpora jeho exspirácie. Ak príkaz nahlási chybu autorizácie alebo čistenia, vyriešte ju pred pokusom o povolenie ďalšieho grantu; chyba neznamená, že prístup bez hesla je neaktívny.
 
 Buďte v tejto veci triezvi: kým je to zapnuté, čokoľvek bežiace pod vaším používateľom môže robiť čokoľvek ako root bez toho, aby sa pýtalo. To je celý zmysel a zároveň celé riziko.
 

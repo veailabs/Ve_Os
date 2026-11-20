@@ -8,7 +8,7 @@ Chaque raccourci clavier se trouve sur un plan, défini par ses modificateurs, e
 
 | Plan | Ce qui s'y trouve | Exemples |
 | --- | --- | --- |
-| `Super + key` | Le système : fenêtres, espaces de travail, dispositions et menus principaux | `Super + Space` menu Omarchy, `Super + W` fermer la fenêtre, `Super + F` plein écran |
+| `Super + key` | Le système : fenêtres, espaces de travail, dispositions et menus principaux | `Super + Space` menu Ve OS, `Super + W` fermer la fenêtre, `Super + F` plein écran |
 | `Super + Shift + key` | Applications | `Super + Shift + B` navigateur, `Super + Shift + E` e-mail, `Super + Shift + N` éditeur |
 | `Super + Ctrl + key` | Panneaux et menus système | `Super + Ctrl + A` audio, `Super + Ctrl + N` réseau, `Super + Ctrl + C` menu de capture |
 | `Super + Ctrl + Alt + key` | Actions rapides et notifications | `Super + Ctrl + Alt + T` afficher l'heure, `Super + Ctrl + Alt + B` batterie, `Super + Ctrl + Alt + C` capture d'écran |
@@ -34,7 +34,7 @@ Si un réglage par défaut ne vous convient pas (disons que vous voulez `Super +
 
 | Raccourci clavier                  | Fonction              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Menu Omarchy (applications et tout le reste)    |
+| `Super + Space`           | Menu Ve OS (applications et tout le reste)    |
 | `Super + Alt + Space` | Grille d'applications |
 | `Super + Escape` | Menu système (mise en veille, redémarrage, etc.)  |
 | `Super + Ctrl + L` | Verrouiller l'ordinateur |
@@ -172,7 +172,7 @@ Modifiez/ajoutez des raccourcis dans `~/.config/hypr/bindings.lua`.
 | `Super + V`           | Coller    |
 | `Super + Ctrl + V`           | Gestionnaire de presse-papiers    |
 
-En général sous Linux, il faut `Ctrl + Shift + C/V` pour copier-coller dans le terminal et `Ctrl + C/V` pour le faire partout ailleurs. Ces raccourcis de presse-papiers unifiés d'Omarchy fonctionnent partout.
+En général sous Linux, il faut `Ctrl + Shift + C/V` pour copier-coller dans le terminal et `Ctrl + C/V` pour le faire partout ailleurs. Ces raccourcis de presse-papiers unifiés d'Ve OS fonctionnent partout.
 
 ## Capture
 
@@ -194,7 +194,7 @@ En général sous Linux, il faut `Ctrl + Shift + C/V` pour copier-coller dans le
 
 Pour les enregistrements d'écran, le raccourci demande d'abord quel audio vous voulez, puis démarre l'enregistrement. Appuyez à nouveau pour arrêter. Voir [captures d'écran et enregistrement](12-screenshots-recording.md) pour les détails.
 
-Toutes les options de capture sont aussi accessibles sous _Trigger > Capture_ dans le menu Omarchy (`Super + Space`).
+Toutes les options de capture sont aussi accessibles sous _Trigger > Capture_ dans le menu Ve OS (`Super + Space`).
 
 ## Notifications
 
@@ -216,9 +216,9 @@ Toutes les options de capture sont aussi accessibles sous _Trigger > Capture_ da
 | `Super + Backspace` | Activer/désactiver la transparence d'une fenêtre |
 | `Super + Ctrl + Backspace` | Activer/désactiver l'aspect carré d'une seule fenêtre |
 
-Les images d'arrière-plan supplémentaires se trouvent dans `~/.config/omarchy/backgrounds/<theme name>`. Également disponible via _Install > Style > Background_ dans le menu Omarchy.
+Les images d'arrière-plan supplémentaires se trouvent dans `~/.config/omarchy/backgrounds/<theme name>`. Également disponible via _Install > Style > Background_ dans le menu Ve OS.
 
-Toutes les options de style sont aussi accessibles sous _Style_ dans le menu Omarchy (`Super + Space`).
+Toutes les options de style sont aussi accessibles sous _Style_ dans le menu Ve OS (`Super + Space`).
 
 ## Bascules
 
@@ -319,7 +319,7 @@ Ces fonctions doivent être exécutées dans une session Tmux.
 
 ## Terminal Ghostty
 
-Le terminal Ghostty s'installe via _Install > Terminal_ dans le menu Omarchy.
+Le terminal Ghostty s'installe via _Install > Terminal_ dans le menu Ve OS.
 
 | Raccourci clavier                  | Fonction              |
 | ----------------------- | --------------------- |

@@ -1,10 +1,10 @@
 # Toggle, Idle & Screensaver
 
-Banyak hal yang Anda ubah sehari-hari sebenarnya bukan sebuah pengaturan. Itu adalah mode yang Anda aktifkan selama satu jam lalu matikan lagi: lampu malam saat Anda bekerja hingga larut, jangan ganggu saat Anda presentasi, tetap terjaga saat Anda menonton sesuatu. Omarchy menyebutnya toggle, dan semuanya bekerja dengan cara yang sama — sebuah hotkey, entri menu, dan perintah, semuanya mengenai sakelar yang sama.
+Banyak hal yang Anda ubah sehari-hari sebenarnya bukan sebuah pengaturan. Itu adalah mode yang Anda aktifkan selama satu jam lalu matikan lagi: lampu malam saat Anda bekerja hingga larut, jangan ganggu saat Anda presentasi, tetap terjaga saat Anda menonton sesuatu. Ve OS menyebutnya toggle, dan semuanya bekerja dengan cara yang sama — sebuah hotkey, entri menu, dan perintah, semuanya mengenai sakelar yang sama.
 
 ### Menu toggle
 
-`Super + Ctrl + O` membuka _Trigger > Toggle_ secara langsung, atau Anda bisa menuju ke sana dari menu Omarchy (`Super + Space`). Semua yang ada di daftar itu adalah sakelar yang bisa Anda balik tanpa memikirkan di mana statusnya disimpan. Sakelar untuk tampilan desktop berada di sampingnya, di bawah _Appearance_.
+`Super + Ctrl + O` membuka _Trigger > Toggle_ secara langsung, atau Anda bisa menuju ke sana dari menu Ve OS (`Super + Space`). Semua yang ada di daftar itu adalah sakelar yang bisa Anda balik tanpa memikirkan di mana statusnya disimpan. Sakelar untuk tampilan desktop berada di sampingnya, di bawah _Appearance_.
 
 Dari terminal, sakelar yang sama adalah `omarchy toggle <thing>`. Jalankan `omarchy toggle` sendiri untuk melihat seluruh grupnya.
 
@@ -26,7 +26,7 @@ Sakelar touchpad, layar sentuh, dan hybrid GPU berada di bawah _Trigger > Hardwa
 
 _Appearance_ menampung bilah menu dan animasi, plus beberapa hal yang bukan perintah `omarchy toggle` tetapi berperilaku sama: persentase baterai di bilah, tata letak workspace default, dan di bawah _Windows_, celah jendela (`Super + Shift + Backspace`) dan aspek persegi 1 jendela (`Super + Ctrl + Backspace`).
 
-Saat Hyprland tidak memiliki GPU untuk menggambar dan merender menggunakan CPU sebagai gantinya (llvmpipe), seperti pada Mac yang GPU-nya belum didukung, di sebagian besar virtual machines, atau saat driver grafis gagal dimuat, Omarchy mematikan animasi, blur, dan bayangan untuk sesi tersebut dan memberi tahu Anda sekali melalui notifikasi. _Appearance > Animations On_ mengembalikannya, dan Omarchy mengingatnya juga untuk sesi-sesi berikutnya.
+Saat Hyprland tidak memiliki GPU untuk menggambar dan merender menggunakan CPU sebagai gantinya (llvmpipe), seperti pada Mac yang GPU-nya belum didukung, di sebagian besar virtual machines, atau saat driver grafis gagal dimuat, Ve OS mematikan animasi, blur, dan bayangan untuk sesi tersebut dan memberi tahu Anda sekali melalui notifikasi. _Appearance > Animations On_ mengembalikannya, dan Ve OS mengingatnya juga untuk sesi-sesi berikutnya.
 
 Sebagian besar ini hanyalah file flag di bawah `~/.local/state/omarchy/toggles/`. Jika Anda ingin bercabang berdasarkan salah satunya dalam skrip, `omarchy-toggle-enabled` memberi Anda kode keluar alih-alih membuat Anda mencarinya:
 
@@ -63,11 +63,11 @@ Kemudian jalankan hyprsunset saat login dengan menambahkan `o.launch_on_start("h
 
 Tidak ada yang hilang, kok. Notifikasi yang disenyapkan ditahan: tampilkan kembali beberapa yang terakhir di layar dengan `Super + Shift + Alt + ,`. Lihat [pemberitahuan](10-notices.md) untuk sisanya.
 
-Dua jenis pesan tetap bisa masuk: toast konfirmasi Omarchy sendiri untuk sesuatu yang baru saja Anda lakukan ("Theme changed", "Screenshot saved"), dan peringatan kritis yang dikirim dari baris perintah. Aplikasi chat yang menandai semuanya sebagai kritis untuk memaksakan diri di depan Anda tidak termasuk.
+Dua jenis pesan tetap bisa masuk: toast konfirmasi Ve OS sendiri untuk sesuatu yang baru saja Anda lakukan ("Theme changed", "Screenshot saved"), dan peringatan kritis yang dikirim dari baris perintah. Aplikasi chat yang menandai semuanya sebagai kritis untuk memaksakan diri di depan Anda tidak termasuk.
 
 ### Idle
 
-Shell Omarchy memiliki perilaku idle, dan waktunya adalah blok `idle` tingkat atas di `~/.config/omarchy/shell.json`:
+Shell Ve OS memiliki perilaku idle, dan waktunya adalah blok `idle` tingkat atas di `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Ini tentang penguncian dan screensaver, bukan daya. Suspend dan hibernasi memili
 
 ### Screensaver
 
-Screensaver Omarchy adalah seni ASCII yang berjalan melalui efek teks acak, satu instance per monitor. Tombol apa pun atau gerakan mouse akan keluar darinya.
+Screensaver Ve OS adalah seni ASCII yang berjalan melalui efek teks acak, satu instance per monitor. Tombol apa pun atau gerakan mouse akan keluar darinya.
 
 Anda bisa menjalankannya sesuai permintaan dari _System > Screensaver_ (`Super + Esc`), yang memaksanya muncul bahkan jika Anda telah mematikan screensaver idle. Tidak ada hotkey yang terikat padanya secara default.
 
 `omarchy toggle screensaver` adalah yang mematikan yang idle, jika Anda lebih suka langsung dari bekerja ke terkunci. Tombol, klik, gulir, atau gerakan mouse apa pun akan menutupnya.
 
-Logo yang digambarnya bisa Anda ubah, di bawah _Appearance > Branding > Screensaver_. Unggah png atau svg dan Omarchy akan mengonversinya ke ASCII. Lihat [branding](41-branding.md).
+Logo yang digambarnya bisa Anda ubah, di bawah _Appearance > Branding > Screensaver_. Unggah png atau svg dan Ve OS akan mengonversinya ke ASCII. Lihat [branding](41-branding.md).
 
 ### Layar kunci
 
-`Super + Ctrl + L` mengunci mesin. Itu menjalankan layar kunci dari shell Omarchy, mengosongkan tampilan, mengatur ulang tata letak keyboard Anda ke yang pertama agar Anda tidak mengetik kata sandi dalam alfabet yang salah, dan — jika Anda menjalankannya — mengunci 1Password saat keluar.
+`Super + Ctrl + L` mengunci mesin. Itu menjalankan layar kunci dari shell Ve OS, mengosongkan tampilan, mengatur ulang tata letak keyboard Anda ke yang pertama agar Anda tidak mengetik kata sandi dalam alfabet yang salah, dan — jika Anda menjalankannya — mengunci 1Password saat keluar.
 
 Layar kunci menerima kata sandi, dan juga akan menerima sidik jari setelah Anda mengaturnya. Itu, dan cara lain untuk mengautentikasi, dibahas di [autentikasi perangkat keras](37-hardware-authentication.md).

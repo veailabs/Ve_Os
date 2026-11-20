@@ -1,12 +1,12 @@
 # Si véns de Mac o Windows
 
-Si has passat anys a macOS o Windows, els teus dits saben cent coses que el teu cervell ha oblidat que mai va aprendre. Aquest capítol és la capa de traducció: on van a parar aquests instints a Omarchy. Les funcions en si es tracten en profunditat en altres llocs — això només és el mapa.
+Si has passat anys a macOS o Windows, els teus dits saben cent coses que el teu cervell ha oblidat que mai va aprendre. Aquest capítol és la capa de traducció: on van a parar aquests instints a Ve OS. Les funcions en si es tracten en profunditat en altres llocs — això només és el mapa.
 
 ### Super és el centre de tot
 
-Tota la memòria muscular que has construït al voltant de Cmd o de la tecla Windows es transfereix a una sola tecla: Super. És la tecla Windows en un teclat de PC, i és l'àncora de gairebé totes les tecles d'accés ràpid d'Omarchy.
+Tota la memòria muscular que has construït al voltant de Cmd o de la tecla Windows es transfereix a una sola tecla: Super. És la tecla Windows en un teclat de PC, i és l'àncora de gairebé totes les tecles d'accés ràpid d'Ve OS.
 
-El teu reflex d'Spotlight, de Raycast o del menú Inici esdevé `Super + Space`. Això obre el menú d'Omarchy, que llança aplicacions, canvia ajustos, instal·la programari, captura la pantalla — pràcticament de tot. Comença a escriure per filtrar. `Super + Alt + Space` mostra totes les aplicacions en una sola graella, com fa Launchpad. Consulta [navegació](04-navigation.md).
+El teu reflex d'Spotlight, de Raycast o del menú Inici esdevé `Super + Space`. Això obre el menú d'Ve OS, que llança aplicacions, canvia ajustos, instal·la programari, captura la pantalla — pràcticament de tot. Comença a escriure per filtrar. `Super + Alt + Space` mostra totes les aplicacions en una sola graella, com fa Launchpad. Consulta [navegació](04-navigation.md).
 
 ### No hi ha dock ni icones d'escriptori
 
@@ -22,15 +22,15 @@ Els espais de treball et resultaran familiars: són els Spaces de macOS o els es
 
 ### Copiar i enganxar simplement funcionen
 
-Al Mac tenies Cmd + C a tot arreu. A Windows tenies Ctrl + C a tot arreu — excepte al terminal, on mata el programa. Omarchy et dona `Super + C`, `Super + X` i `Super + V`, i funcionen a tot arreu, inclòs el terminal. Cap reflex separat per aprendre per a la shell.
+Al Mac tenies Cmd + C a tot arreu. A Windows tenies Ctrl + C a tot arreu — excepte al terminal, on mata el programa. Ve OS et dona `Super + C`, `Super + X` i `Super + V`, i funcionen a tot arreu, inclòs el terminal. Cap reflex separat per aprendre per a la shell.
 
 Gent de Windows: el vostre historial del porta-retalls de Win + V viu a `Super + Ctrl + V`, i guarda imatges a més de text. Consulta [porta-retalls i historial unificats](08-unified-clipboard-history.md).
 
 ### La taula de traducció
 
-| El que busques | A Omarchy |
+| El que busques | A Ve OS |
 | ------------- | ---------- |
-| Spotlight / Raycast / menú Inici | `Super + Space` — el menú d'Omarchy |
+| Spotlight / Raycast / menú Inici | `Super + Space` — el menú d'Ve OS |
 | AirDrop | LocalSend, mitjançant `Super + Ctrl + S` — consulta [GUIs](22-guis.md) |
 | Cmd + Shift + 4 / Win + Shift + S | `Super + Ctrl + Alt + C` o `Print Screen` — consulta [captures de pantalla i gravació](12-screenshots-recording.md) |
 | Centre de notificacions | Historial de notificacions a `Super + Shift + Alt + ,` |
@@ -42,7 +42,7 @@ Gent de Windows: el vostre historial del porta-retalls de Win + V viu a `Super +
 
 Molts ajustos viuen en fitxers de text que edites, no en panells on fas clic. Això sembla primitiu fins que t'adones que vol dir que cada retoc es pot veure, copiar a la teva màquina següent i posar sota control de versions. El menú _Configuració_ et deixa directament al fitxer correcte i reinicia el que calgui reiniciar quan has acabat.
 
-Les actualitzacions arriben amb una sola ordre — _Actualitza > Omarchy_ — que actualitza el mateix Omarchy i tots els paquets del sistema, fent primer una instantània. Cap actualitzador per aplicació que et molesti en moments aleatoris. Consulta [actualitzacions](30-updates.md).
+Les actualitzacions arriben amb una sola ordre — _Actualitza > Ve OS_ — que actualitza el mateix Ve OS i tots els paquets del sistema, fent primer una instantània. Cap actualitzador per aplicació que et molesti en moments aleatoris. Consulta [actualitzacions](30-updates.md).
 
 El programari ve d'un gestor de paquets, no d'instal·ladors descarregats.
 
@@ -50,7 +50,7 @@ I quan tanques una finestra, l'aplicació realment es tanca. No hi ha cap limbe 
 
 ### En maquinari Mac
 
-Omarchy funciona bé en Macs amb Intel — consulta [compatibilitat amb Mac](44-mac-support.md). I el teclat et tracta bé: Omarchy no reassigna res, i Linux tracta la tecla Command com a Super, així que Super és exactament on sempre hi havia Cmd. El teu polze no notarà el canvi.
+Ve OS funciona bé en Macs amb Intel — consulta [compatibilitat amb Mac](44-mac-support.md). I el teclat et tracta bé: Ve OS no reassigna res, i Linux tracta la tecla Command com a Super, així que Super és exactament on sempre hi havia Cmd. El teu polze no notarà el canvi.
 
 ### Dona-li dues setmanes
 

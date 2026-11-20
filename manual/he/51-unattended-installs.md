@@ -1,4 +1,6 @@
-# התקנות ללא התערבות
+# Ve OS — התקנות ללא התערבות
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 קובץ ה-ISO של Omarchy יכול להתקין את עצמו בלי אף אחד שיושב מול המקלדת. אם המתקין מוצא כונן שני עם התווית `cidata` שמכיל את קובצי התצורה שלו, הוא מעתיק אותם ממנו, מדלג לחלוטין על אשף ההגדרה ומאתחל בעצמו אל תוך המערכת המוכנה. לא צריך בניית ISO מיוחדת, לא צריך ערך נוסף בתפריט האתחול — אם לא מחובר כונן כזה, שום דבר לא משתנה ומקבלים את האשף הרגיל.
 

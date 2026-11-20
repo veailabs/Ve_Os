@@ -10,7 +10,7 @@ Karty oferują to, co zawierają: _Kopiuj kod_ dla kodów weryfikacyjnych (przec
 
 Aby używać ich bez myszy, naciśnij `Super + Ctrl + ,`. Najnowsze powiadomienie jest zaznaczone, a jego przyciski ponumerowane: naciśnij numer, aby użyć jednego z nich, `Enter`, aby kliknąć powiadomienie, `↑` i `↓`, aby przechodzić między powiadomieniami, `Delete`, aby odrzucić jedno, oraz `Esc`, aby oddać klawiaturę. Po kilku sekundach bezczynności samo ustępuje.
 
-Wyciszenie powiadomień wstrzymuje je, z wyjątkiem własnych potwierdzeń Omarchy, alertów awaryjnych i kodów weryfikacyjnych, o które prosiłeś przed chwilą. Wyświetl ponownie ostatnie kilka powiadomień, wstrzymanych lub nie, za pomocą `Super + Shift + Alt + ,`. Historia jest przechowywana przez jeden dzień.
+Wyciszenie powiadomień wstrzymuje je, z wyjątkiem własnych potwierdzeń Ve OS, alertów awaryjnych i kodów weryfikacyjnych, o które prosiłeś przed chwilą. Wyświetl ponownie ostatnie kilka powiadomień, wstrzymanych lub nie, za pomocą `Super + Shift + Alt + ,`. Historia jest przechowywana przez jeden dzień.
 
 ## Powiadomienia na skróty klawiszowe
 

@@ -10,7 +10,7 @@ Kartice ponujajo, kar prinašajo: _Kopiraj kodo_ za potrditvene kode (ne shranij
 
 Za uporabo brez miške pritisnite `Super + Ctrl + ,`. Izbrano je najnovejše obvestilo, njegovi gumbi pa so oštevilčeni: pritisnite številko, da uporabite enega, `Enter`, da kliknete obvestilo, `↑` in `↓`, da se premikate med obvestili, `Delete`, da zavrnete enega, in `Esc`, da vrnete tipkovnico. Po nekaj sekundah nedejavnosti se tudi samo sprosti.
 
-Utišanje obvestil jih zadrži, razen Omarchyjevih lastnih potrditev, nujnih opozoril in potrditvenih kod, ki ste jih zahtevali pred trenutkom. Zadnjih nekaj jih vrnete na zaslon, zadržanih ali ne, s `Super + Shift + Alt + ,`. Zgodovina se hrani en dan.
+Utišanje obvestil jih zadrži, razen Ve OSjevih lastnih potrditev, nujnih opozoril in potrditvenih kod, ki ste jih zahtevali pred trenutkom. Zadnjih nekaj jih vrnete na zaslon, zadržanih ali ne, s `Super + Shift + Alt + ,`. Zgodovina se hrani en dan.
 
 ## Obvestila z bližnjicami
 

@@ -1,12 +1,12 @@
 # Schriftarten
 
-Omarchy verwendet standardmäßig JetBrainsMono Nerd Font sowohl als Terminal- als auch als Systemschriftart.
+Ve OS verwendet standardmäßig JetBrainsMono Nerd Font sowohl als Terminal- als auch als Systemschriftart.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Du kannst das über das Menü _Darstellung > Schriftart_ im Omarchy-Menü (`Super + Space`) ändern. Dadurch wird die Monospace-Schriftart überall festgelegt: im Terminal, in der Leiste und bei allem anderen, das danach fragt.
+Du kannst das über das Menü _Darstellung > Schriftart_ im Ve OS-Menü (`Super + Space`) ändern. Dadurch wird die Monospace-Schriftart überall festgelegt: im Terminal, in der Leiste und bei allem anderen, das danach fragt.
 
-Du kannst andere beliebte Programmierschriftarten über _Installieren > Stil > Schriftart_ im Omarchy-Menü installieren: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono und Iosevka sind alle nur einen Klick entfernt, in ihren Nerd Font-Versionen, damit die Glyphen in der Leiste und im Terminal weiterhin funktionieren. Nachdem du eine installiert hast, wähle sie unter _Darstellung > Schriftart_ aus.
+Du kannst andere beliebte Programmierschriftarten über _Installieren > Stil > Schriftart_ im Ve OS-Menü installieren: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono und Iosevka sind alle nur einen Klick entfernt, in ihren Nerd Font-Versionen, damit die Glyphen in der Leiste und im Terminal weiterhin funktionieren. Nachdem du eine installiert hast, wähle sie unter _Darstellung > Schriftart_ aus.
 
 ## Chinesisch, Japanisch und Koreanisch
 

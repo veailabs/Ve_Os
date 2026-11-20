@@ -1,12 +1,12 @@
 # Svefn kerfis
 
-Omarchy virkjar svæfu og dvala sjálfgefið, en ef þú lendir í vandræðum með annað hvort á vélinni þinni geturðu slökkt á þeim.
+Ve OS virkjar svæfu og dvala sjálfgefið, en ef þú lendir í vandræðum með annað hvort á vélinni þinni geturðu slökkt á þeim.
 
 Á NVIDIA GB10 vélum, eins og DGX Spark og ASUS Ascent GX10, er slökkt á svæfu og dvala, eins og í DGX OS frá NVIDIA, vegna þess að svefn hefur ekki enn reynst virka á þeim vélbúnaði. Sama gildir um ASUS Zenbook A16 (UX3607OA), þar sem svæfa lætur kubbinn ekki enn sofna að fullu og getur frosið yfir nótt. Rofinn fyrir svæfu og uppsetning dvala eiga ekki við þar. Til að kveikja aftur á svefni skaltu fjarlægja `/etc/systemd/sleep.conf.d/omarchy-sleep-disabled.conf` með `sudo rm`; Svæfa birtist þá aftur í valmyndinni og hægt er að setja upp dvala eins og á öðrum vélum. Að keyra `sudo omarchy apply hardware --install-user "$USER"` setur skrána aftur inn.
 
 ### Orkusnið
 
-Á fartölvu man Omarchy orkusniðið þitt aðgreint fyrir hvort hún er í sambandi eða keyrir á rafhlöðu og skiptir á milli þeirra tveggja þegar þú stingur í samband og tekur úr sambandi. Sjálfgefið þýðir það afkastasnið á rafmagni og jafnvægissnið á rafhlöðu.
+Á fartölvu man Ve OS orkusniðið þitt aðgreint fyrir hvort hún er í sambandi eða keyrir á rafhlöðu og skiptir á milli þeirra tveggja þegar þú stingur í samband og tekur úr sambandi. Sjálfgefið þýðir það afkastasnið á rafmagni og jafnvægissnið á rafhlöðu.
 
 Þú getur séð hvað vélin þín býður upp á með `omarchy powerprofiles list` og stillt það sem þú vilt fyrir ástandið sem þú ert í núna með `omarchy powerprofiles set autodetect power-saver`. Til að stilla hitt ástandið án þess að taka neitt úr sambandi skaltu nefna það beint: `omarchy powerprofiles set battery power-saver`. Hvað sem þú velur er það sem þú færð aftur næst þegar þú ert í því ástandi.
 

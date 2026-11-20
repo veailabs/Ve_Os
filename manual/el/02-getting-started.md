@@ -1,4 +1,6 @@
-# Ξεκινώντας
+# Ve OS — Ξεκινώντας
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Το Omarchy εγκαθίσταται χρησιμοποιώντας ένα ISO. Μπορείτε να επιλέξετε ανάμεσα σε εγκατάσταση πλήρους δίσκου, η οποία καταλαμβάνει ολόκληρο τον δίσκο, ή εγκατάσταση ελεύθερου χώρου, η οποία τοποθετεί το Omarchy στον μη εκχωρημένο χώρο ενός δίσκου — έτσι κάνετε dual boot μαζί με Windows ή άλλο λειτουργικό σύστημα (δείτε [εγκατάσταση dual-boot](50-dual-boot-install.md) — σημειώστε ότι θα χρειαστεί πρώτα να απενεργοποιήσετε το BitLocker στα Windows). Σε κάθε περίπτωση, η εγκατάσταση χρησιμοποιεί από προεπιλογή πλήρη κρυπτογράφηση, και η επιλογή πλήρους δίσκου θα διαγράψει τον επιλεγμένο δίσκο, οπότε φροντίστε να πάρετε αντίγραφο ασφαλείας πριν χρησιμοποιήσετε έναν υπάρχοντα!
 

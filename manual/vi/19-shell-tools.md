@@ -1,6 +1,6 @@
 # Công cụ shell
 
-Ngoài các công cụ Linux tiêu chuẩn, Omarchy còn đi kèm một loạt công cụ shell nâng cao. Dưới đây là những công cụ chính.
+Ngoài các công cụ Linux tiêu chuẩn, Ve OS còn đi kèm một loạt công cụ shell nâng cao. Dưới đây là những công cụ chính.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Bạn có thể tìm hướng dẫn đầy đủ qua `man yt-dlp`.
 
 [try](https://github.com/tobi/try) giúp bạn dễ dàng quản lý các thí nghiệm lập trình với các thư mục đóng dấu ngày tháng. Mọi thí nghiệm đều nằm trong `~/Work/tries` và bạn có thể truy cập chúng qua `try`.
 
-Omarchy không tự động thêm thư mục `bin/` của một dự án vào `PATH`. Hãy chạy các công cụ cục bộ đáng tin cậy của dự án bằng đường dẫn tương đối rõ ràng, chẳng hạn `bin/rails` hoặc `./bin/dev`.
+Ve OS không tự động thêm thư mục `bin/` của một dự án vào `PATH`. Hãy chạy các công cụ cục bộ đáng tin cậy của dự án bằng đường dẫn tương đối rõ ràng, chẳng hạn `bin/rails` hoặc `./bin/dev`.

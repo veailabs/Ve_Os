@@ -1,4 +1,6 @@
-# Aan de slag
+# Ve OS — Aan de slag
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy wordt geïnstalleerd met behulp van een ISO. Je kunt kiezen tussen een installatie op de volledige schijf, die de hele schijf overneemt, of een installatie in vrije ruimte, die Omarchy in de niet-toegewezen ruimte op een schijf plaatst — zo dual-boot je naast Windows of een ander OS (zie [dual-boot-installatie](50-dual-boot-install.md) — let op dat je eerst BitLocker in Windows moet uitschakelen). Hoe dan ook is de installatie standaard volledig versleuteld, en de optie voor de volledige schijf wist de geselecteerde schijf, dus zorg ervoor dat je een back-up maakt voordat je een bestaande schijf gebruikt!
 

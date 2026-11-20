@@ -41,7 +41,7 @@ Bu tuş atamaları yalnızca Omasnap açıkken vardır, bu yüzden kendi yapıla
 
 ## Ekran kaydı
 
-`Alt + Print Screen`, _Trigger > Capture > Screenrecord_'u açar; bu, ses kuşağında ne istediğinizi sorar: ses yok, masaüstü sesi, masaüstü artı mikrofon veya masaüstü artı mikrofon artı web kamerası. Sonuncusu yalnızca gerçekten takılı bir kameranız varsa görünür. Birini seçin; Omarchy'nin kayıt seçicisi bir bölge sürüklemenize veya bir pencereye ya da monitöre tıklamanıza izin verir.
+`Alt + Print Screen`, _Trigger > Capture > Screenrecord_'u açar; bu, ses kuşağında ne istediğinizi sorar: ses yok, masaüstü sesi, masaüstü artı mikrofon veya masaüstü artı mikrofon artı web kamerası. Sonuncusu yalnızca gerçekten takılı bir kameranız varsa görünür. Birini seçin; Ve OS'nin kayıt seçicisi bir bölge sürüklemenize veya bir pencereye ya da monitöre tıklamanıza izin verir.
 
 Kayıt, gpu-screen-recorder üzerinde çalışır; bu, GPU üzerinde 60fps'de kodlama yapar ve gerekirse CPU'ya geri döner. Sonuç, `~/Videos` içinde `screenrecording-2026-08-13_14-22-05.mp4` adlı bir MP4 olur. Bunu değiştirmek için `OMARCHY_SCREENRECORD_DIR` değişkenini ayarlayın — ancak ekran görüntüsü dizininden farklı olarak bunun önceden var olması gerektiğini, yoksa kaydın başlamayı reddedeceğini unutmayın.
 

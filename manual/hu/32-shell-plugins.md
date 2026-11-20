@@ -1,10 +1,10 @@
 # Shell-bővítmények
 
-Az Omarchy asztal egyetlen hosszú életű Quickshell-folyamatként fut, az `omarchy-shell` néven, és szinte minden, amit a képernyőn látsz, annak egy bővítménye. A sáv bővítmény. Ugyanúgy a róla lenyíló panelek, a teljes képernyős rátakarások, mint az emoji-választó és a vágólapkezelő, az Omarchy menü maga, a zárolási képernyő, a polkit párbeszédablaka és a fejnélküli szolgáltatások, amelyek figyelik az akkumulátorod, és éjszaka felmelegítik a képernyődet.
+Az Ve OS asztal egyetlen hosszú életű Quickshell-folyamatként fut, az `omarchy-shell` néven, és szinte minden, amit a képernyőn látsz, annak egy bővítménye. A sáv bővítmény. Ugyanúgy a róla lenyíló panelek, a teljes képernyős rátakarások, mint az emoji-választó és a vágólapkezelő, az Ve OS menü maga, a zárolási képernyő, a polkit párbeszédablaka és a fejnélküli szolgáltatások, amelyek figyelik az akkumulátorod, és éjszaka felmelegítik a képernyődet.
 
-Ez nem csak egy implementációs részlet. Ez azt jelenti, hogy az asztal egyes részeit kikapcsolhatod, kicserélheted, vagy írhatsz sajátokat, anélkül, hogy az Omarchy forráskódjának egyetlen sorát is megérintenéd.
+Ez nem csak egy implementációs részlet. Ez azt jelenti, hogy az asztal egyes részeit kikapcsolhatod, kicserélheted, vagy írhatsz sajátokat, anélkül, hogy az Ve OS forráskódjának egyetlen sorát is megérintenéd.
 
-Az első fél bővítményei az Omarchyval érkeznek, és a `$OMARCHY_PATH/shell/plugins/` helyen élnek. Bármi, amit magad adsz hozzá — saját kísérleteid, vagy valami, amit a GitHubon találtál — a `~/.config/omarchy/plugins/` helyen él. Mindkettő ugyanazon a módon fedeződik fel induláskor, de a beépítettek megbízható shell-felületeket kapnak, míg a harmadik felek korlátozott felületet kapnak, saját szolgáltatásuk és életciklusuk megkötve. A beépítettek klónjai csak az eredeti viselkedéshez szükséges forrásspecifikus konfigurációt és felületi hívásokat őrzik meg.
+Az első fél bővítményei az Ve OSval érkeznek, és a `$OMARCHY_PATH/shell/plugins/` helyen élnek. Bármi, amit magad adsz hozzá — saját kísérleteid, vagy valami, amit a GitHubon találtál — a `~/.config/omarchy/plugins/` helyen él. Mindkettő ugyanazon a módon fedeződik fel induláskor, de a beépítettek megbízható shell-felületeket kapnak, míg a harmadik felek korlátozott felületet kapnak, saját szolgáltatásuk és életciklusuk megkötve. A beépítettek klónjai csak az eredeti viselkedéshez szükséges forrásspecifikus konfigurációt és felületi hívásokat őrzik meg.
 
 ## Megnézni, hogy mi van
 

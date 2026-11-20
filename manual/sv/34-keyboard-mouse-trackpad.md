@@ -1,6 +1,6 @@
 # Tangentbord, mus, styrplatta
 
-Hyprland låter dig konfigurera alla dina inmatningsenheter in i minsta detalj. Du kan göra tangentbordsupprepningen supersoniskt snabb eller få styrplattan att använda naturlig rullning. Du ändrar allt i `~/.config/hypr/input.lua`, som du också kan nå via _Setup > Input_ i Omarchy-menyn (`Super + Space`). Allt du ställer in där ersätter Omarchys standardinställningar.
+Hyprland låter dig konfigurera alla dina inmatningsenheter in i minsta detalj. Du kan göra tangentbordsupprepningen supersoniskt snabb eller få styrplattan att använda naturlig rullning. Du ändrar allt i `~/.config/hypr/input.lua`, som du också kan nå via _Setup > Input_ i Ve OS-menyn (`Super + Space`). Allt du ställer in där ersätter Ve OSs standardinställningar.
 
 Här är ett exempel:
 
@@ -59,7 +59,7 @@ Svep på styrplattan för att röra dig runt på skrivbordet:
 | --- | --- |
 | Tre fingrar åt vänster / höger | Föregående / nästa arbetsyta, inklusive tomma |
 | Tre fingrar upp | Växla AI-konsolen |
-| Tre fingrar ned | Öppna Omarchy-menyn |
+| Tre fingrar ned | Öppna Ve OS-menyn |
 | Fyra fingrar åt vänster / höger | Flytta det aktiva fönstret till föregående / nästa arbetsyta |
 | Fyra fingrar ned | Växla helskärm |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-För att stänga av alla Omarchys gester ställer du in `omarchy_default_gestures = false` nära början av `~/.config/hypr/hyprland.lua`, innan Omarchys standardinställningar laddas.
+För att stänga av alla Ve OSs gester ställer du in `omarchy_default_gestures = false` nära början av `~/.config/hypr/hyprland.lua`, innan Ve OSs standardinställningar laddas.
 
 På bärbara Dell XPS-datorer med haptisk styrplatta kan du också ställa in klickstyrkan på låg, medel eller hög under _Trigger > Hardware > Touchpad Haptics_.
 
 ### Att skriva på kinesiska, japanska och andra språk
 
-Välj Japanese, Korean, Chinese (Simplified, Pinyin), Taiwan (Zhuyin) eller Hong Kong (Cangjie) när installationsprogrammet frågar efter ditt tangentbord. Omarchy konfigurerar tangentbordet och den matchande inmatningsmotorn automatiskt, även under offlinekonfigurationen vid första uppstarten. Japanese använder Mozc, Korean använder standard-Hangul med två uppsättningar, Simplified Chinese använder Pinyin, Taiwan använder Chewings standardarrangemang för Zhuyin och Hong Kong använder Cangjie med teckenformer från Hong Kong. Japanese (US keyboard) ger Mozc med en amerikansk tangentbordslayout. Tangenterna för Hangul, Zhuyin och Cangjie stannar kvar på sina standardpositioner även när du skriver latinska bokstäver med Dvorak, Colemak eller AZERTY. Om du lade till Hangul eller Chewing innan detta avmarkerar du det och väljer det igen under _Setup > Keyboard > Input Methods_ för att flytta dess tangenter dit; Omarchy lämnar en motor som du redan skriver med i fred.
+Välj Japanese, Korean, Chinese (Simplified, Pinyin), Taiwan (Zhuyin) eller Hong Kong (Cangjie) när installationsprogrammet frågar efter ditt tangentbord. Ve OS konfigurerar tangentbordet och den matchande inmatningsmotorn automatiskt, även under offlinekonfigurationen vid första uppstarten. Japanese använder Mozc, Korean använder standard-Hangul med två uppsättningar, Simplified Chinese använder Pinyin, Taiwan använder Chewings standardarrangemang för Zhuyin och Hong Kong använder Cangjie med teckenformer från Hong Kong. Japanese (US keyboard) ger Mozc med en amerikansk tangentbordslayout. Tangenterna för Hangul, Zhuyin och Cangjie stannar kvar på sina standardpositioner även när du skriver latinska bokstäver med Dvorak, Colemak eller AZERTY. Om du lade till Hangul eller Chewing innan detta avmarkerar du det och väljer det igen under _Setup > Keyboard > Input Methods_ för att flytta dess tangenter dit; Ve OS lämnar en motor som du redan skriver med i fred.
 
 Skrivandet börjar i latinskt läge. Tryck på `Super + I` för att växla mellan konfigurerade inmatningsmetoder, och `Super + Shift + I` för att växla tillbaka. Tryck på `Shift` för sig själv för att kliva ur en inmatningsmetod som Pinyin till latinska bokstäver, och tryck på den igen för att gå tillbaka, på samma sätt som Sogou, Microsoft Pinyin och macOS fungerar; `Shift` plus en bokstav skriver fortfarande en versal. På japanska tangentbord växlar 全角/半角 inmatning, 変換 slår på den och 無変換 stänger av den. Med Korean växlar 한/영 Hangul och 한자 konverterar till Hanja, oavsett om ditt tangentbord har särskilda tangenter eller skickar Right Alt och Right Ctrl för dem, som många bärbara datorer gör, så Right Alt och Right Ctrl är inte vanliga modifieringstangenter där; diktering växlar i stället med Alt + Space. `Ctrl + Space` förblir tillgängligt för Tmux och Herdr; `Shift + CapsLock` förblir compose-tangenten.
 
 Tangentbordsindikatorn visas till höger i panelen när du har flera tangentbordslayouter eller inmatningsmetoder. Klicka på den för att byta inmatningsspråk; Japanese visar あ för hiragana. För japanska teckenval byter du till Japanese, skriver ett ord som `nihongo` och trycker sedan på Space två gånger. Tryck på Enter för att acceptera ditt val. Om du också har flera tangentbordslayouter högerklickar du på indikatorn för att växla mellan dem.
 
-Använd _Setup > Keyboard > Keyboard Inputs_ för att välja layouter som English och French, från samma val som erbjöds under installationen. Använd _Setup > Keyboard > Input Methods_ för att välja vilka kompositionsmotorer som är aktiva. Båda väljarna öppnas inuti Omarchy-menyn med dina nuvarande val markerade. Klicka eller tryck på Enter för att växla ett val; varje ändring börjar gälla omedelbart. Att avmarkera en inmatningsmetod tar bort den från växlingen utan att avinstallera den; tangentbordet förblir tillgängligt.
+Använd _Setup > Keyboard > Keyboard Inputs_ för att välja layouter som English och French, från samma val som erbjöds under installationen. Använd _Setup > Keyboard > Input Methods_ för att välja vilka kompositionsmotorer som är aktiva. Båda väljarna öppnas inuti Ve OS-menyn med dina nuvarande val markerade. Klicka eller tryck på Enter för att växla ett val; varje ändring börjar gälla omedelbart. Att avmarkera en inmatningsmetod tar bort den från växlingen utan att avinstallera den; tangentbordet förblir tillgängligt.
 
 Kör `omarchy setup keyboard` eller `omarchy setup input` för att öppna samma väljare. För att lägga till ett språk från kommandoraden använder du `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` eller `cangjie5`. Quick, Boshiamy och Array levereras i samma paket som Cangjie och visas i väljaren Input Methods. Dina anpassade växlingstangenter bevaras. För alternativa motorlayouter eller tangenter installerar du `fcitx5-configtool` med `omarchy pkg add fcitx5-configtool` och startar det från en terminal. Att välja ett inmatningsspråk ändrar inte skrivbordsspråket. Att välja Japanese, Korean eller Chinese under _Setup > Language_ lägger till dess inmatningsmetod när du inte har någon ännu.
 

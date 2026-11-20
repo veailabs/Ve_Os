@@ -1,10 +1,10 @@
 # Slēdži, dīkstāve un ekrānsaudzētājs
 
-Liela daļa no tā, ko ikdienā maini, patiesībā nav nekāds iestatījums. Tas ir režīms, ko ieslēdz uz stundu un pēc tam atkal izslēdz: nakts gaisma, kamēr vakarā strādā, netraucēt, kamēr prezentē, palikt nomodā, kamēr kaut ko skaties. Omarchy tos sauc par slēdžiem, un tie visi darbojas vienādi — karstais taustiņš, izvēlnes ieraksts un komanda, visi trāpa vienam un tam pašam slēdzim.
+Liela daļa no tā, ko ikdienā maini, patiesībā nav nekāds iestatījums. Tas ir režīms, ko ieslēdz uz stundu un pēc tam atkal izslēdz: nakts gaisma, kamēr vakarā strādā, netraucēt, kamēr prezentē, palikt nomodā, kamēr kaut ko skaties. Ve OS tos sauc par slēdžiem, un tie visi darbojas vienādi — karstais taustiņš, izvēlnes ieraksts un komanda, visi trāpa vienam un tam pašam slēdzim.
 
 ### Slēdžu izvēlne
 
-`Super + Ctrl + O` atver _Trigger > Toggle_ tieši, vai arī vari tur nonākt no Omarchy izvēlnes (`Super + Space`). Viss šajā sarakstā ir slēdzis, ko vari pārslēgt, nedomājot par to, kur glabājas stāvoklis. Slēdži tam, kā izskatās darbvirsma, atrodas tai blakus, zem _Appearance_.
+`Super + Ctrl + O` atver _Trigger > Toggle_ tieši, vai arī vari tur nonākt no Ve OS izvēlnes (`Super + Space`). Viss šajā sarakstā ir slēdzis, ko vari pārslēgt, nedomājot par to, kur glabājas stāvoklis. Slēdži tam, kā izskatās darbvirsma, atrodas tai blakus, zem _Appearance_.
 
 No termināļa tie paši slēdži ir `omarchy toggle <thing>`. Palaid `omarchy toggle` vienu pašu, lai redzētu visu grupu.
 
@@ -26,7 +26,7 @@ Skārienpaliktņa, skārienekrāna un hibrīdā GPU slēdži atrodas zem _Trigge
 
 _Appearance_ satur izvēlnes joslu un animācijas, kā arī dažas lietas, kas nav `omarchy toggle` komandas, bet uzvedas tāpat: akumulatora procentus joslā, noklusējuma darbvietas izkārtojumu un zem _Windows_ — logu atstarpes (`Super + Shift + Backspace`) un 1 loga kvadrātisko malu attiecību (`Super + Ctrl + Backspace`).
 
-Kad Hyprland nav GPU, ar ko zīmēt, un tā vietā tas renderē ar CPU (llvmpipe), kā tas ir Mac datoros, kuru GPU vēl netiek atbalstīts, lielākajā daļā virtuālo mašīnu vai kad grafikas draiveris neielādējas, Omarchy šai sesijai izslēdz animācijas, izpludināšanu un ēnas un vienreiz par to paziņo ar paziņojumu. _Appearance > Animations On_ tās atgriež atpakaļ, un Omarchy to atceras arī vēlākām sesijām.
+Kad Hyprland nav GPU, ar ko zīmēt, un tā vietā tas renderē ar CPU (llvmpipe), kā tas ir Mac datoros, kuru GPU vēl netiek atbalstīts, lielākajā daļā virtuālo mašīnu vai kad grafikas draiveris neielādējas, Ve OS šai sesijai izslēdz animācijas, izpludināšanu un ēnas un vienreiz par to paziņo ar paziņojumu. _Appearance > Animations On_ tās atgriež atpakaļ, un Ve OS to atceras arī vēlākām sesijām.
 
 Lielākā daļa no tiem ir vienkārši karoga fails zem `~/.local/state/omarchy/toggles/`. Ja skriptā gribi no kāda zaroties, `omarchy-toggle-enabled` tev iedod izejas kodu, nevis liek pašam meklēt:
 
@@ -63,11 +63,11 @@ Pēc tam startē hyprsunset pie pieteikšanās, pievienojot `o.launch_on_start("
 
 Tomēr nekas nepazūd. Apklusinātie paziņojumi tiek aizturēti: pēdējos dažus atgriez ekrānā ar `Super + Shift + Alt + ,`. Pārējo skati sadaļā [paziņojumi](10-notices.md).
 
-Divu veidu ziņojumi joprojām tiek cauri: paša Omarchy apstiprinājuma uznirstošie paziņojumi par kaut ko, ko tikko izdarīji ("Motīvs nomainīts", "Ekrānuzņēmums saglabāts"), un kritiskie brīdinājumi, kas nosūtīti no komandrindas. Tērzēšanas lietotnes, kas visu atzīmē kā kritisku, lai ar varu izlauztos tev priekšā, tam nekvalificējas.
+Divu veidu ziņojumi joprojām tiek cauri: paša Ve OS apstiprinājuma uznirstošie paziņojumi par kaut ko, ko tikko izdarīji ("Motīvs nomainīts", "Ekrānuzņēmums saglabāts"), un kritiskie brīdinājumi, kas nosūtīti no komandrindas. Tērzēšanas lietotnes, kas visu atzīmē kā kritisku, lai ar varu izlauztos tev priekšā, tam nekvalificējas.
 
 ### Dīkstāve
 
-Dīkstāves uzvedība pieder Omarchy čaulai, un laiki ir augšējā līmeņa `idle` bloks failā `~/.config/omarchy/shell.json`:
+Dīkstāves uzvedība pieder Ve OS čaulai, un laiki ir augšējā līmeņa `idle` bloks failā `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Lai pavisam pārtrauktu bloķēšanu dīkstāvē, `Super + Ctrl + I` — vai `om
 
 ### Ekrānsaudzētājs
 
-Omarchy ekrānsaudzētājs ir ASCII māksla, kas skrien cauri nejaušiem teksta efektiem, pa vienam eksemplāram uz katru monitoru. Jebkurš taustiņš vai peles kustība no tā iziet.
+Ve OS ekrānsaudzētājs ir ASCII māksla, kas skrien cauri nejaušiem teksta efektiem, pa vienam eksemplāram uz katru monitoru. Jebkurš taustiņš vai peles kustība no tā iziet.
 
 Vari to startēt pēc pieprasījuma no _System > Screensaver_ (`Super + Esc`), kas to uzspiež pat tad, ja dīkstāves ekrānsaudzētāju esi izslēdzis. Pēc noklusējuma tam nav piesaistīts neviens karstais taustiņš.
 
 `omarchy toggle screensaver` ir tas, kas izslēdz dīkstāves ekrānsaudzētāju, ja labāk gribi iet tieši no darba uz bloķētu stāvokli. Jebkurš taustiņš, klikšķis, ritināšana vai peles kustība to aizver.
 
-Logo, ko tas zīmē, vari mainīt pats, zem _Appearance > Branding > Screensaver_. Augšupielādē png vai svg, un Omarchy to pārveidos par ASCII. Skati [zīmola noformējumu](41-branding.md).
+Logo, ko tas zīmē, vari mainīt pats, zem _Appearance > Branding > Screensaver_. Augšupielādē png vai svg, un Ve OS to pārveidos par ASCII. Skati [zīmola noformējumu](41-branding.md).
 
 ### Bloķēšanas ekrāns
 
-`Super + Ctrl + L` bloķē mašīnu. Tas palaiž bloķēšanas ekrānu no Omarchy čaulas, aptumšo displeju, atiestata tastatūras izkārtojumu uz pirmo, lai nerakstītu paroli nepareizā alfabētā, un — ja tev tas darbojas — izejot bloķē 1Password.
+`Super + Ctrl + L` bloķē mašīnu. Tas palaiž bloķēšanas ekrānu no Ve OS čaulas, aptumšo displeju, atiestata tastatūras izkārtojumu uz pirmo, lai nerakstītu paroli nepareizā alfabētā, un — ja tev tas darbojas — izejot bloķē 1Password.
 
 Bloķēšanas ekrāns pieņem paroli, un tas pieņems arī pirksta nospiedumu, kad būsi tādu iestatījis. Tas un pārējie autentificēšanās veidi ir aprakstīti sadaļā [aparatūras autentifikācija](37-hardware-authentication.md).

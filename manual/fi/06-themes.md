@@ -1,8 +1,8 @@
 # Teemat
 
-Omarchyn mukana tulee kaksikymmentäkaksi upeaa teemaa. Voit valita niiden välillä Omarchy Menu -valikossa kohdasta _Appearance > Theme_ (`Super + Space`) tai hypätä suoraan teemanvalitsimeen näppäinyhdistelmällä `Super + Ctrl + T`.
+Ve OSn mukana tulee kaksikymmentäkaksi upeaa teemaa. Voit valita niiden välillä Ve OS Menu -valikossa kohdasta _Appearance > Theme_ (`Super + Space`) tai hypätä suoraan teemanvalitsimeen näppäinyhdistelmällä `Super + Ctrl + T`.
 
-Jokainen teema tyylittää työpöydän, terminaalin, neovimin, aktiviteettinäytön (btop), Chromiumin ja koko Omarchy-kuoren: yläpalkin, valikon, ilmoitukset, OSD:n ja lukitusnäytön. (Obsidianissa sinun on valittava Omarchy-teema manuaalisesti sovelluksen sisältä kohdasta _Appearance > Themes_).
+Jokainen teema tyylittää työpöydän, terminaalin, neovimin, aktiviteettinäytön (btop), Chromiumin ja koko Ve OS-kuoren: yläpalkin, valikon, ilmoitukset, OSD:n ja lukitusnäytön. (Obsidianissa sinun on valittava Ve OS-teema manuaalisesti sovelluksen sisältä kohdasta _Appearance > Themes_).
 
 Teemoissa on joukko taustakuvia, joiden välillä voit valita näppäinyhdistelmällä `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Sovelluskäynnistimen ja telakan kuvakkeet piirretään teemasi väreissä, jote
 
 Voit asentaa jonkun toisen tekemän kuvakejoukon kohdasta _Install > Style > Icons_ (tai komennolla `omarchy icons install <git url>`) ja poistaa sen taas kohdasta _Remove > Icons_. _Update > Extra Icons_ hakee asentamiesi joukkojen uusimman version.
 
-Tehdäksesi oman joukkosi laita kuvakkeesi hakemistoon `~/.config/omarchy/icons/<name>/`, yksi tiedosto sovellusta kohden, nimetty sovelluksen `.desktop`-tiedoston `Icon=`-rivin mukaan. `.svg`-päätteinen tiedosto näytetään sellaisenaan. `.svg.tpl`-päätteinen tiedosto piirretään teeman väreissä: kirjoita `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` tai `{{ icon_shadow }}` kohtaan, johon väri tulee. Oletusjoukko hakemistossa `/usr/share/omarchy/icons/papercraft/` on hyvä lähtökohta. Lisää `preview.png` näyttääksesi joukkosi valitsimessa; ilman sitä Omarchy piirtää esikatselun kuvakkeistasi. Muuttaaksesi oletusjoukon yksittäistä kuvaketta laita oma versiosi hakemistoon `~/.config/omarchy/icons/papercraft/`.
+Tehdäksesi oman joukkosi laita kuvakkeesi hakemistoon `~/.config/omarchy/icons/<name>/`, yksi tiedosto sovellusta kohden, nimetty sovelluksen `.desktop`-tiedoston `Icon=`-rivin mukaan. `.svg`-päätteinen tiedosto näytetään sellaisenaan. `.svg.tpl`-päätteinen tiedosto piirretään teeman väreissä: kirjoita `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` tai `{{ icon_shadow }}` kohtaan, johon väri tulee. Oletusjoukko hakemistossa `/usr/share/omarchy/icons/papercraft/` on hyvä lähtökohta. Lisää `preview.png` näyttääksesi joukkosi valitsimessa; ilman sitä Ve OS piirtää esikatselun kuvakkeistasi. Muuttaaksesi oletusjoukon yksittäistä kuvaketta laita oma versiosi hakemistoon `~/.config/omarchy/icons/papercraft/`.
 
 ### Lukituksen avaus
 

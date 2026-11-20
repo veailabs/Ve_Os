@@ -1,6 +1,6 @@
 # Zana za Shell
 
-Mbali na zana za kawaida za Linux, Omarchy pia huja na zana nyingi za shell zilizoboreshwa. Hizi hapa ndizo muhimu zaidi.
+Mbali na zana za kawaida za Linux, Ve OS pia huja na zana nyingi za shell zilizoboreshwa. Hizi hapa ndizo muhimu zaidi.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Mwongozo kamili unaweza kupatikana kupitia `man yt-dlp`.
 
 [try](https://github.com/tobi/try) hufanya iwe rahisi kusimamia majaribio ya programu yenye saraka zenye muhuri wa tarehe. Majaribio yote hukaa katika `~/Work/tries` na unaweza kuyafikia kupitia `try`.
 
-Omarchy haiongezi saraka ya `bin/` ya mradi kwenye `PATH` kiotomatiki. Endesha zana za ndani za mradi zinazoaminika kwa njia dhahiri ya uhusiano, kama `bin/rails` au `./bin/dev`.
+Ve OS haiongezi saraka ya `bin/` ya mradi kwenye `PATH` kiotomatiki. Endesha zana za ndani za mradi zinazoaminika kwa njia dhahiri ya uhusiano, kama `bin/rails` au `./bin/dev`.

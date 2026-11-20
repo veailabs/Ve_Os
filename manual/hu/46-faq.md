@@ -28,7 +28,7 @@ Ez így fog megjelenni: vasárnap 10:55 AM.
 
 ### Hogyan változtathatom meg az időzónámat?
 
-Futtasd a _Frissítés > Időzóna_ lehetőséget az Omarchy menüben, és válassz a listából. Ha az időzóna helyes, de maga az óra eltért, a _Frissítés > Idő_ újraindítja neked az időszinkronizálást.
+Futtasd a _Frissítés > Időzóna_ lehetőséget az Ve OS menüben, és válassz a listából. Ha az időzóna helyes, de maga az óra eltért, a _Frissítés > Idő_ újraindítja neked az időszinkronizálást.
 
 ### Hogyan változtathatom meg a DNS-emet, oszthatom meg a Wi-Fi-met, vagy ellenőrizhetem a kapcsolatom sebességét?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Ugyanezt megteheted a képernyőfelvételekhez is az `OMARCHY_SCREENRECORD_DIR` használatával.
 
-Az Omasnap automatikusan létrehozza a képernyőképek könyvtárát. A képernyőfelvételek könyvtárát magad hozd létre, majd indítsd újra az Omarchy-t, hogy bármelyik környezeti változtatás érvénybe lépjen.
+Az Omasnap automatikusan létrehozza a képernyőképek könyvtárát. A képernyőfelvételek könyvtárát magad hozd létre, majd indítsd újra az Ve OS-t, hogy bármelyik környezeti változtatás érvénybe lépjen.
 
 ### Hogyan kelthetem életre a hangszórókat + webkamerát az Apple Studio Display kijelzőmön?
 
 Az ember azt hinné, hogy az egésznek működnie kellene pusztán az USB C bedugásával, de sajnos nem ez a helyzet. Az általam talált megoldás, amely megbízhatóan működik, [a WJESOG DisplayPort + USB-A => USB-C kábel](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/) használata. Onnantól a hangszórók és a webkamera úgy működnek, mint a karikacsapás.
 
-Ne feledd, hogy az Omarchy beépített fényerő-szabályozással rendelkezik az Apple kijelzőkhöz (a Studio és az XDR modellekhez is) a szokásos billentyűzeti fényerőgombokkal.
+Ne feledd, hogy az Ve OS beépített fényerő-szabályozással rendelkezik az Apple kijelzőkhöz (a Studio és az XDR modellekhez is) a szokásos billentyűzeti fényerőgombokkal.
 
 ### Hogyan szabadulhatok meg az összes extra szoftvertől?
 
@@ -72,7 +72,7 @@ Ha nem akarsz olyan programokat, mint az Obsidian vagy a LibreOffice, vagy bárm
 
 Futtasd az _Eltávolítás > Csomag_ lehetőséget az összes telepített csomag megtekintéséhez. Ezután a tab billentyűvel bármelyik eltávolítani kívánt csomagot kiválaszthatod, a return billentyűvel pedig megkezdheted az összes kiválasztott eltávolítását.
 
-Az Omarchy menü _Eltávolítás > Web App_ pontjával pedig eltávolíthatod az előre telepített webalkalmazások bármelyikét, amelyet nem akarsz.
+Az Ve OS menü _Eltávolítás > Web App_ pontjával pedig eltávolíthatod az előre telepített webalkalmazások bármelyikét, amelyet nem akarsz.
 
 Vagy futtasd az _Eltávolítás > Előre telepítettek_ lehetőséget, hogy egy menetben kisöpörd az összes előre telepített extrát — webalkalmazásokat, TUI-kat és opcionális alkalmazásokat. Az őket indító gyorsbillentyűk velük együtt eltűnnek, így tiszta lappal maradsz a billentyűkiosztásokhoz, amelyeket a sajátjaiddal tölthetsz meg a `~/.config/hypr/bindings.lua` fájlban.
 

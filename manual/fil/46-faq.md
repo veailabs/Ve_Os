@@ -28,7 +28,7 @@ Ipapakita nito ang Linggo 10:55 AM.
 
 ### Paano ko babaguhin ang aking timezone?
 
-Patakbuhin ang _I-update > Timezone_ sa menu ng Omarchy at pumili mula sa listahan. Kung tama ang timezone pero ang orasan mismo ay lumihis na, ire-restart ng _I-update > Time_ ang pag-synchronize ng oras para sa iyo.
+Patakbuhin ang _I-update > Timezone_ sa menu ng Ve OS at pumili mula sa listahan. Kung tama ang timezone pero ang orasan mismo ay lumihis na, ire-restart ng _I-update > Time_ ang pag-synchronize ng oras para sa iyo.
 
 ### Paano ko babaguhin ang aking DNS, ibabahagi ang aking Wi-Fi, o susuriin ang bilis ng aking koneksyon?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Magagawa mo rin ang pareho para sa mga screenrecording gamit ang `OMARCHY_SCREENRECORD_DIR`.
 
-Awtomatikong ginagawa ng Omasnap ang screenshot directory nito. Ikaw mismo ang gumawa ng screenrecording directory, pagkatapos ay i-restart ang Omarchy para magkabisa ang alinmang pagbabago sa environment.
+Awtomatikong ginagawa ng Omasnap ang screenshot directory nito. Ikaw mismo ang gumawa ng screenrecording directory, pagkatapos ay i-restart ang Ve OS para magkabisa ang alinmang pagbabago sa environment.
 
 ### Paano ko pagaganahin ang mga speaker + webcam sa aking Apple Studio Display?
 
 Iisipin mong dapat gumana ang lahat sa pamamagitan lang ng pagsaksak ng USB C, pero sa kasamaang-palad, hindi ganoon. Ang solusyong nakita kong maaasahang nagpapagana nito ay ang paggamit ng [ang WJESOG DisplayPort + USB-A => USB-C na kable](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Pagkatapos, gumagana nang walang problema ang mga speaker at webcam.
 
-Tandaan na mayroon kang built-in na kontrol sa brightness sa Omarchy para sa mga Apple Display (parehong Studio at XDR) gamit ang regular na mga button ng brightness sa keyboard.
+Tandaan na mayroon kang built-in na kontrol sa brightness sa Ve OS para sa mga Apple Display (parehong Studio at XDR) gamit ang regular na mga button ng brightness sa keyboard.
 
 ### Paano ko aalisin ang lahat ng dagdag na software?
 
@@ -72,7 +72,7 @@ Kung ayaw mo ng mga program tulad ng Obsidian o LibreOffice o alinman sa iba pan
 
 Patakbuhin ang _Mag-alis > Package_ para makita ang bawat package na naka-install. Pagkatapos, maaari mong piliin ang anumang package na gusto mong alisin gamit ang tab, at simulan ang pag-alis sa lahat ng pinili mo gamit ang return.
 
-At maaari mong gamitin ang _Mag-alis > Web App_ mula sa menu ng Omarchy para alisin ang anumang naka-preinstall na web app na ayaw mo.
+At maaari mong gamitin ang _Mag-alis > Web App_ mula sa menu ng Ve OS para alisin ang anumang naka-preinstall na web app na ayaw mo.
 
 O patakbuhin ang _Mag-alis > Mga Preinstall_ para alisin sa isang pasada ang lahat ng naka-preinstall na dagdag — mga web app, TUI, at opsyonal na application. Mawawala kasama ng mga ito ang mga hotkey na nagbubukas sa kanila, kaya maiiwan ka ng malinis na hanay ng mga binding na pupunan ng sarili mo sa `~/.config/hypr/bindings.lua`.
 

@@ -1,4 +1,6 @@
-# Instal·lació amb arrencada dual
+# Ve OS — Instal·lació amb arrencada dual
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Pots instal·lar Omarchy en una sola partició al costat de Windows o d'altres instal·lacions.
 

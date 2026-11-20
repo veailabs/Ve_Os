@@ -1,10 +1,10 @@
 # Preklopi, nedejavnost in ohranjevalnik zaslona
 
-Veliko tega, kar vsak dan spreminjaš, v resnici ni nastavitev. Je način, ki ga vklopiš za eno uro in nato spet izklopiš: nočna svetloba, ko delaš pozno, ne moti, ko predstavljaš, ostani buden, ko nekaj gledaš. Omarchy jim pravi preklopi in vsi delujejo enako — bližnjica na tipkovnici, vnos v meniju in ukaz, vsi sprožijo isto stikalo.
+Veliko tega, kar vsak dan spreminjaš, v resnici ni nastavitev. Je način, ki ga vklopiš za eno uro in nato spet izklopiš: nočna svetloba, ko delaš pozno, ne moti, ko predstavljaš, ostani buden, ko nekaj gledaš. Ve OS jim pravi preklopi in vsi delujejo enako — bližnjica na tipkovnici, vnos v meniju in ukaz, vsi sprožijo isto stikalo.
 
 ### Meni preklopov
 
-`Super + Ctrl + O` neposredno odpre _Sprožilec > Preklop_, lahko pa prideš tja tudi iz menija Omarchy (`Super + Space`). Vse na tem seznamu je stikalo, ki ga lahko preklopiš, ne da bi razmišljal, kje je stanje shranjeno. Stikala za videz namizja so zraven, pod _Videz_.
+`Super + Ctrl + O` neposredno odpre _Sprožilec > Preklop_, lahko pa prideš tja tudi iz menija Ve OS (`Super + Space`). Vse na tem seznamu je stikalo, ki ga lahko preklopiš, ne da bi razmišljal, kje je stanje shranjeno. Stikala za videz namizja so zraven, pod _Videz_.
 
 Iz terminala so ista stikala `omarchy toggle <thing>`. Zaženi samo `omarchy toggle`, da vidiš celotno skupino.
 
@@ -26,7 +26,7 @@ Stikala za sledilno ploščico, zaslon na dotik in hibridni GPU so pod _Sprožil
 
 _Videz_ vsebuje menijsko vrstico in animacije ter nekaj stvari, ki niso ukazi `omarchy toggle`, a se obnašajo enako: prikaz odstotka baterije v vrstici, privzeto postavitev delovnih površin ter pod _Okna_ razmike med okni (`Super + Shift + Backspace`) in kvadratno obliko pri enem oknu (`Super + Ctrl + Backspace`).
 
-Ko Hyprland nima GPU-ja, s katerim bi risal, in namesto tega riše s CPU-jem (llvmpipe), kot na Macih, katerih GPU še ni podprt, v večini virtualnih strojev ali ko se grafični gonilnik ne naloži, Omarchy za to sejo izklopi animacije, zameglitev in sence ter ti to enkrat pove z obvestilom. _Videz > Vklopi animacije_ jih vrne nazaj in Omarchy si to zapomni tudi za kasnejše seje.
+Ko Hyprland nima GPU-ja, s katerim bi risal, in namesto tega riše s CPU-jem (llvmpipe), kot na Macih, katerih GPU še ni podprt, v večini virtualnih strojev ali ko se grafični gonilnik ne naloži, Ve OS za to sejo izklopi animacije, zameglitev in sence ter ti to enkrat pove z obvestilom. _Videz > Vklopi animacije_ jih vrne nazaj in Ve OS si to zapomni tudi za kasnejše seje.
 
 Večina teh je le datoteka z zastavico pod `~/.local/state/omarchy/toggles/`. Če želiš v skripti vejiti glede na eno od njih, ti `omarchy-toggle-enabled` vrne izhodno kodo, namesto da bi moral iti iskat:
 
@@ -63,11 +63,11 @@ Nato zaženi hyprsunset ob prijavi tako, da dodaš `o.launch_on_start("hyprsunse
 
 Vendar se nič ne izgubi. Utišana obvestila so zadržana: zadnjih nekaj jih vrni na zaslon s `Super + Shift + Alt + ,`. Za ostalo glej [obvestila](10-notices.md).
 
-Vseeno prideta skozi dve vrsti sporočil: lastna potrditvena pojavna obvestila Omarchyja za nekaj, kar si pravkar naredil ("Tema spremenjena", "Posnetek zaslona shranjen"), in kritična opozorila, poslana iz ukazne vrstice. Klepetalne aplikacije, ki vse označijo kot kritično, da bi se ti vsilile v ospredje, ne pridejo v poštev.
+Vseeno prideta skozi dve vrsti sporočil: lastna potrditvena pojavna obvestila Ve OSja za nekaj, kar si pravkar naredil ("Tema spremenjena", "Posnetek zaslona shranjen"), in kritična opozorila, poslana iz ukazne vrstice. Klepetalne aplikacije, ki vse označijo kot kritično, da bi se ti vsilile v ospredje, ne pridejo v poštev.
 
 ### Nedejavnost
 
-Obnašanje ob nedejavnosti upravlja lupina Omarchy, časovne nastavitve pa so blok `idle` na najvišji ravni v `~/.config/omarchy/shell.json`:
+Obnašanje ob nedejavnosti upravlja lupina Ve OS, časovne nastavitve pa so blok `idle` na najvišji ravni v `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Tu gre za zaklepanje in ohranjevalnik zaslona, ne za napajanje. Mirovanje in hib
 
 ### Ohranjevalnik zaslona
 
-Ohranjevalnik zaslona v Omarchyju je ASCII umetnost, ki teče skozi naključne besedilne učinke, en primerek na monitor. Vsaka tipka ali premik miške ga zapre.
+Ohranjevalnik zaslona v Ve OSju je ASCII umetnost, ki teče skozi naključne besedilne učinke, en primerek na monitor. Vsaka tipka ali premik miške ga zapre.
 
 Na zahtevo ga lahko zaženeš iz _Sistem > Ohranjevalnik zaslona_ (`Super + Esc`), kar ga prisilno prikaže, tudi če si ohranjevalnik zaslona ob nedejavnosti izklopil. Privzeto nanj ni vezana nobena bližnjica.
 
 `omarchy toggle screensaver` izklopi tistega ob nedejavnosti, če greš raje naravnost od dela do zaklenjenega stanja. Vsaka tipka, klik, drsenje ali premik miške ga zapre.
 
-Logotip, ki ga riše, lahko spremeniš pod _Videz > Grafična podoba > Ohranjevalnik zaslona_. Naloži png ali svg in Omarchy ga pretvori v ASCII. Glej [grafično podobo](41-branding.md).
+Logotip, ki ga riše, lahko spremeniš pod _Videz > Grafična podoba > Ohranjevalnik zaslona_. Naloži png ali svg in Ve OS ga pretvori v ASCII. Glej [grafično podobo](41-branding.md).
 
 ### Zaklenjeni zaslon
 
-`Super + Ctrl + L` zaklene stroj. To zažene zaklenjeni zaslon iz lupine Omarchy, zatemni zaslon, ponastavi postavitev tipkovnice na prvo, da gesla ne vnašaš v napačni abecedi, in — če ga imaš zagnanega — ob odhodu zaklene 1Password.
+`Super + Ctrl + L` zaklene stroj. To zažene zaklenjeni zaslon iz lupine Ve OS, zatemni zaslon, ponastavi postavitev tipkovnice na prvo, da gesla ne vnašaš v napačni abecedi, in — če ga imaš zagnanega — ob odhodu zaklene 1Password.
 
 Zaklenjeni zaslon sprejme geslo, sprejel pa bo tudi prstni odtis, ko ga nastaviš. To in druge načine avtentikacije obravnava [strojna avtentikacija](37-hardware-authentication.md).

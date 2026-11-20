@@ -1,14 +1,14 @@
 # Gornja traka
 
-Traka duž gornjeg dijela vašeg zaslona je Omarchy traka. Nije naknadno pričvršćena statusna traka, nego dio Omarchy shella, jednog dugovječnog Quickshell procesa koji također crta izbornik, obavijesti, OSD skočne prozore i zaslon za zaključavanje. Zato se savršeno tematski uklapa sa svime ostalim i zato se panel otvara trenutno umjesto da pokreće novu aplikaciju.
+Traka duž gornjeg dijela vašeg zaslona je Ve OS traka. Nije naknadno pričvršćena statusna traka, nego dio Ve OS shella, jednog dugovječnog Quickshell procesa koji također crta izbornik, obavijesti, OSD skočne prozore i zaslon za zaključavanje. Zato se savršeno tematski uklapa sa svime ostalim i zato se panel otvara trenutno umjesto da pokreće novu aplikaciju.
 
 To je ujedno jedini dio desktopa koji je uvijek na zaslonu, pa vrijedi znati što svi ti mali znakovi rade.
 
 ## Što je na njoj prema zadanim postavkama
 
-Traka ima tri dijela. S lijeve strane nalaze se Omarchy logotip (pokretač izbornika) i pokazatelji radnih prostora. U sredini dobivate pokazatelje statusa, sat, Elsewhen (svjetski sat), vremensku prognozu i značku za Omarchy ažuriranje. S desne strane: sistemska ladica, raspored tipkovnice (kada je konfigurirano više od jednog), agenti, bluetooth, mreža, zvuk, zaslon i napajanje.
+Traka ima tri dijela. S lijeve strane nalaze se Ve OS logotip (pokretač izbornika) i pokazatelji radnih prostora. U sredini dobivate pokazatelje statusa, sat, Elsewhen (svjetski sat), vremensku prognozu i značku za Ve OS ažuriranje. S desne strane: sistemska ladica, raspored tipkovnice (kada je konfigurirano više od jednog), agenti, bluetooth, mreža, zvuk, zaslon i napajanje.
 
-Nekoliko njih pojavljuje se samo kada imaju što reći. Raspored tipkovnice pojavljuje se samo ako ste konfigurirali više od jednog rasporeda. Značka za ažuriranje pojavljuje se samo kada čeka Omarchy ažuriranje. A ikona agenata pojavljuje se prvi put kada Omarchy pronađe korištenje AI kodiranja na računalu (vidi [AI](17-ai.md)).
+Nekoliko njih pojavljuje se samo kada imaju što reći. Raspored tipkovnice pojavljuje se samo ako ste konfigurirali više od jednog rasporeda. Značka za ažuriranje pojavljuje se samo kada čeka Ve OS ažuriranje. A ikona agenata pojavljuje se prvi put kada Ve OS pronađe korištenje AI kodiranja na računalu (vidi [AI](17-ai.md)).
 
 ## Klikanje uokolo
 
@@ -16,7 +16,7 @@ Gotovo svaki widget nešto radi na lijevi, desni i srednji klik, a nekoliko ih r
 
 | Widget | Lijevi | Desni | Srednji / pomicanje |
 | --- | --- | --- | --- |
-| Izbornik | Omarchy izbornik | Novi terminal | — |
+| Izbornik | Ve OS izbornik | Novi terminal | — |
 | Radni prostori | Fokusiraj taj radni prostor na ovom monitoru | — | Pomicanje: sljedeći/prethodni radni prostor |
 | Sat | Skočni kalendar | Kružite formatom oznake | Srednji: birač vremenske zone |
 | Vrijeme | Skočna prognoza | Potpuna vremenska prognoza kao obavijest | Srednji: osvježi |
@@ -29,7 +29,7 @@ Gotovo svaki widget nešto radi na lijevi, desni i srednji klik, a nekoliko ih r
 | Mediji | Reproduciraj/pauziraj | Skočni prikaz naslovnice | Srednji: sljedeće · pomicanje: prethodno/sljedeće |
 | Agenti | Panel za agente | Pokreni svog agenta | Srednji: sljedeća pretplata |
 | Ladica | Lebdite za otkrivanje ladice | Desni klik na ševron za upravljanje | — |
-| Omarchy ažuriranje | Pokreni ažuriranje | — | — |
+| Ve OS ažuriranje | Pokreni ažuriranje | — | — |
 
 Nije sve iz te tablice na vašoj traci odmah po instalaciji. Medijski widget (MPRIS trenutno se reproducira, s pjesmom i izvođačem koji se pomiču) i widget za mikrofon ugrađeni su, ali isključeni prema zadanim postavkama — dodajte ih ako ih želite, kao što je opisano u nastavku.
 
@@ -137,6 +137,6 @@ Svaki widget je jedan unos u jednom od pet polja rasporeda, a njegove postavke n
 
 `center` je kutija u sredini trake: sve u njoj centrirano je na zaslonu kao jedna skupina. `centerBegin` i `centerEnd` vise s obje strane kutije, što je način na koji sat ostaje točno u sredini čak i dok vremenska prognoza i značka za ažuriranje dolaze i odlaze. Stavite više od jednog widgeta u `center` i centrirani su zajedno; ostavite ga praznim i `centerBegin` i `centerEnd` sastaju se u sredini trake.
 
-Jedno pravilo koje vrijedi usvojiti: **kada imate vlastiti `shell.json`, on je kanonski**. Dok ništa ne prilagodite, shell čita zadanu Omarchy datoteku. U trenutku kada povučete widget, pokrenete `omarchy bar` ili sami uredite datoteku, ona je vaša — nema dubokog spajanja, pa se novi zadani widgeti u budućim Omarchy izdanjima neće automatski pojaviti na vašoj traci. `omarchy bar defaults` vraća isporučeni raspored kad god želite čistu ploču.
+Jedno pravilo koje vrijedi usvojiti: **kada imate vlastiti `shell.json`, on je kanonski**. Dok ništa ne prilagodite, shell čita zadanu Ve OS datoteku. U trenutku kada povučete widget, pokrenete `omarchy bar` ili sami uredite datoteku, ona je vaša — nema dubokog spajanja, pa se novi zadani widgeti u budućim Ve OS izdanjima neće automatski pojaviti na vašoj traci. `omarchy bar defaults` vraća isporučeni raspored kad god želite čistu ploču.
 
 Ista datoteka također sadrži vaša vremena mirovanja na najvišoj razini, izvan ključa `bar`: `idle.screensaver` i `idle.lock`, oba u sekundama od kada ste postali neaktivni. Tako se zadani čuvar zaslona uključuje nakon 150 sekundi, a zaključavanje nakon 300.

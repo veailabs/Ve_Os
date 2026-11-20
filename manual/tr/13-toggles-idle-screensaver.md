@@ -1,10 +1,10 @@
 # Geçişler, Boşta Kalma ve Ekran Koruyucu
 
-Gün içinde değiştirdiğiniz şeylerin çoğu aslında bir ayar değildir. Bir saatliğine açıp sonra tekrar kapattığınız bir moddur: gece geç saatlere kadar çalışırken gece ışığı, sunum yaparken rahatsız etme, bir şey izlerken uyanık kalma. Omarchy bunlara geçişler diyor ve hepsi aynı şekilde çalışıyor — bir kısayol tuşu, bir menü girdisi ve bir komut, hepsi aynı anahtara basıyor.
+Gün içinde değiştirdiğiniz şeylerin çoğu aslında bir ayar değildir. Bir saatliğine açıp sonra tekrar kapattığınız bir moddur: gece geç saatlere kadar çalışırken gece ışığı, sunum yaparken rahatsız etme, bir şey izlerken uyanık kalma. Ve OS bunlara geçişler diyor ve hepsi aynı şekilde çalışıyor — bir kısayol tuşu, bir menü girdisi ve bir komut, hepsi aynı anahtara basıyor.
 
 ### Geçiş menüsü
 
-`Super + Ctrl + O`, _Tetikleyici > Geçiş_ bölümünü doğrudan açar ya da Omarchy menüsünden (`Super + Space`) oraya gidebilirsiniz. O listedeki her şey, durumun nerede yaşandığını düşünmeden çevirebileceğiniz bir anahtardır. Masaüstünün nasıl göründüğüne dair anahtarlar, yanındaki _Görünüm_ bölümünün altında durur.
+`Super + Ctrl + O`, _Tetikleyici > Geçiş_ bölümünü doğrudan açar ya da Ve OS menüsünden (`Super + Space`) oraya gidebilirsiniz. O listedeki her şey, durumun nerede yaşandığını düşünmeden çevirebileceğiniz bir anahtardır. Masaüstünün nasıl göründüğüne dair anahtarlar, yanındaki _Görünüm_ bölümünün altında durur.
 
 Terminalden aynı anahtarlar `omarchy toggle <thing>` şeklindedir. Grubun tamamını görmek için tek başına `omarchy toggle` çalıştırın.
 
@@ -26,7 +26,7 @@ Dokunmatik yüzey, dokunmatik ekran ve hibrit GPU anahtarları, Geçiş altında
 
 _Görünüm_, menü çubuğunu ve animasyonları barındırır; ayrıca `omarchy toggle` komutu olmayan ama aynı şekilde davranan birkaç şeyi de: çubuktaki pil yüzdesi, varsayılan çalışma alanı düzeni ve _Pencereler_ altında pencere boşlukları (`Super + Shift + Backspace`) ile 1 pencerelik kare en-boy oranı (`Super + Ctrl + Backspace`).
 
-Hyprland'ın çizecek bir GPU'su olmadığında ve bunun yerine CPU üzerinde render yaptığında (llvmpipe), GPU'su henüz desteklenmeyen Mac'lerde, çoğu sanal makinede veya bir grafik sürücüsü yüklenemediğinde olduğu gibi, Omarchy o oturum için animasyonları, bulanıklığı ve gölgeleri kapatır ve bunu size bir kez bir bildirimle söyler. _Görünüm > Animasyonlar Açık_ bunları geri getirir ve Omarchy bunu sonraki oturumlar için de hatırlar.
+Hyprland'ın çizecek bir GPU'su olmadığında ve bunun yerine CPU üzerinde render yaptığında (llvmpipe), GPU'su henüz desteklenmeyen Mac'lerde, çoğu sanal makinede veya bir grafik sürücüsü yüklenemediğinde olduğu gibi, Ve OS o oturum için animasyonları, bulanıklığı ve gölgeleri kapatır ve bunu size bir kez bir bildirimle söyler. _Görünüm > Animasyonlar Açık_ bunları geri getirir ve Ve OS bunu sonraki oturumlar için de hatırlar.
 
 Bunların çoğu yalnızca `~/.local/state/omarchy/toggles/` altında bir bayrak dosyasıdır. Bir betikte birine göre dallanmak isterseniz, `omarchy-toggle-enabled` size gidip aramak zorunda kalmadan bir çıkış kodu verir:
 
@@ -63,11 +63,11 @@ Ardından `~/.config/hypr/autostart.lua` dosyasına `o.launch_on_start("hyprsuns
 
 Yine de hiçbir şey kaybolmaz. Sessize alınan bildirimler geri tutulur: son birkaçını `Super + Shift + Alt + ,` ile tekrar ekrana getirin. Geri kalanı için [bildirimlere](10-notices.md) bakın.
 
-İki tür mesaj hâlâ geçer: Omarchy'nin az önce yaptığınız bir şey için kendi onay bildirimleri ("Tema değiştirildi", "Ekran görüntüsü kaydedildi") ve komut satırından gönderilen kritik uyarılar. Her şeyi önünüze çıkmak için kritik olarak işaretleyen sohbet uygulamaları buna hak kazanmaz.
+İki tür mesaj hâlâ geçer: Ve OS'nin az önce yaptığınız bir şey için kendi onay bildirimleri ("Tema değiştirildi", "Ekran görüntüsü kaydedildi") ve komut satırından gönderilen kritik uyarılar. Her şeyi önünüze çıkmak için kritik olarak işaretleyen sohbet uygulamaları buna hak kazanmaz.
 
 ### Boşta kalma
 
-Boşta kalma davranışının sahibi Omarchy kabuğudur ve zamanlamalar, `~/.config/omarchy/shell.json` içinde üst düzey bir `idle` bloğudur:
+Boşta kalma davranışının sahibi Ve OS kabuğudur ve zamanlamalar, `~/.config/omarchy/shell.json` içinde üst düzey bir `idle` bloğudur:
 
 ```json
 {
@@ -89,16 +89,16 @@ Bu, güçle değil kilitleme ve ekran koruyucuyla ilgilidir. Askıya alma ve haz
 
 ### Ekran koruyucu
 
-Omarchy'nin ekran koruyucusu, rastgele metin efektlerinden geçen ASCII sanatıdır, monitör başına bir örnek çalışır. Herhangi bir tuş veya fare hareketi ondan çıkar.
+Ve OS'nin ekran koruyucusu, rastgele metin efektlerinden geçen ASCII sanatıdır, monitör başına bir örnek çalışır. Herhangi bir tuş veya fare hareketi ondan çıkar.
 
 Onu _Sistem > Ekran Koruyucu_ (`Super + Esc`) bölümünden isteğe bağlı başlatabilirsiniz; bu, boşta ekran koruyucuyu kapatmış olsanız bile onu zorla açar. Varsayılan olarak ona bağlı bir kısayol tuşu yoktur.
 
 Çalışmaktan doğrudan kilitli duruma geçmeyi tercih ederseniz, boşta olanı kapatan şey `omarchy toggle screensaver` komutudur. Herhangi bir tuş, tıklama, kaydırma veya fare hareketi onu kapatır.
 
-Çizdiği logo, _Görünüm > Markalama > Ekran Koruyucu_ altında değiştirmeniz için sizindir. Bir png veya svg yükleyin, Omarchy onu ASCII'ye dönüştürür. [markalamaya](41-branding.md) bakın.
+Çizdiği logo, _Görünüm > Markalama > Ekran Koruyucu_ altında değiştirmeniz için sizindir. Bir png veya svg yükleyin, Ve OS onu ASCII'ye dönüştürür. [markalamaya](41-branding.md) bakın.
 
 ### Kilit ekranı
 
-`Super + Ctrl + L` makineyi kilitler. Bu, Omarchy kabuğundan kilit ekranını çalıştırır, ekranı karartır, parolanızı yanlış alfabede yazmamanız için klavye düzeninizi ilkine sıfırlar ve — çalıştırıyorsanız — çıkış yolunda 1Password'ü kilitler.
+`Super + Ctrl + L` makineyi kilitler. Bu, Ve OS kabuğundan kilit ekranını çalıştırır, ekranı karartır, parolanızı yanlış alfabede yazmamanız için klavye düzeninizi ilkine sıfırlar ve — çalıştırıyorsanız — çıkış yolunda 1Password'ü kilitler.
 
 Kilit ekranı bir parola kabul eder ve bir parmak izi ayarladıktan sonra onu da kabul eder. Bu ve kimlik doğrulamanın diğer yolları, [donanım kimlik doğrulamasında](37-hardware-authentication.md) ele alınır.

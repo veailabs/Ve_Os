@@ -1,8 +1,8 @@
 [Metadata]
-Name=Omarchy
+Name=Ve OS
 Version=1
 Author=Omarchy
-Description=Generated from the current Omarchy theme
+Description=Generated from the current Ve OS theme
 ScaleWithDPI=True
 
 [InputPanel]

@@ -1,6 +1,6 @@
 # Tastatur, mus, trackpad
 
-Hyprland lader dig konfigurere alle dine input i mindste detalje. Du kan gøre tastaturgentagelsen supersonisk hurtig eller få trackpadden til at bruge naturlig rulning. Du ændrer det hele i `~/.config/hypr/input.lua`, som du også kan nå via _Setup > Input_ i Omarchy-menuen (`Super + Space`). Alt, hvad du angiver der, erstatter Omarchys standardindstillinger.
+Hyprland lader dig konfigurere alle dine input i mindste detalje. Du kan gøre tastaturgentagelsen supersonisk hurtig eller få trackpadden til at bruge naturlig rulning. Du ændrer det hele i `~/.config/hypr/input.lua`, som du også kan nå via _Setup > Input_ i Ve OS-menuen (`Super + Space`). Alt, hvad du angiver der, erstatter Ve OSs standardindstillinger.
 
 Her er et eksempel:
 
@@ -59,7 +59,7 @@ Stryg på trackpadden for at bevæge dig rundt på skrivebordet:
 | --- | --- |
 | Tre fingre til venstre / højre | Forrige / næste arbejdsområde, inklusive tomme |
 | Tre fingre op | Slå AI-konsollen til/fra |
-| Tre fingre ned | Åbn Omarchy-menuen |
+| Tre fingre ned | Åbn Ve OS-menuen |
 | Fire fingre til venstre / højre | Flyt det aktive vindue til det forrige / næste arbejdsområde |
 | Fire fingre ned | Slå fuldskærm til/fra |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-For at slå alle Omarchys bevægelser fra skal du sætte `omarchy_default_gestures = false` nær toppen af `~/.config/hypr/hyprland.lua`, før Omarchys standardindstillinger indlæses.
+For at slå alle Ve OSs bevægelser fra skal du sætte `omarchy_default_gestures = false` nær toppen af `~/.config/hypr/hyprland.lua`, før Ve OSs standardindstillinger indlæses.
 
 På Dell XPS-bærbare med en haptisk touchpad kan du også sætte klikstyrken til lav, mellem eller høj under _Trigger > Hardware > Touchpad Haptics_.
 
 ### Skrivning på kinesisk, japansk og andre sprog
 
-Vælg Japanese, Korean, Chinese (Simplified, Pinyin), Taiwan (Zhuyin) eller Hong Kong (Cangjie), når installationsprogrammet spørger til dit tastatur. Omarchy konfigurerer automatisk tastaturet og den tilsvarende inputmotor, også under offline opsætning ved første opstart. Japanese bruger Mozc, Korean bruger standard to-sæt Hangul, Simplified Chinese bruger Pinyin, Taiwan bruger Chewings standard Zhuyin-layout, og Hong Kong bruger Cangjie med tegnformer fra Hong Kong. Japanese (US keyboard) giver Mozc med et amerikansk tastaturlayout. Tasterne til Hangul, Zhuyin og Cangjie bliver på deres standardpositioner, selv når du skriver latinske bogstaver med Dvorak, Colemak eller AZERTY. Hvis du tidligere har tilføjet Hangul eller Chewing, skal du fravælge og vælge det igen under _Setup > Keyboard > Input Methods_ for at flytte dets taster dertil; Omarchy lader en motor, du allerede skriver med, være i fred.
+Vælg Japanese, Korean, Chinese (Simplified, Pinyin), Taiwan (Zhuyin) eller Hong Kong (Cangjie), når installationsprogrammet spørger til dit tastatur. Ve OS konfigurerer automatisk tastaturet og den tilsvarende inputmotor, også under offline opsætning ved første opstart. Japanese bruger Mozc, Korean bruger standard to-sæt Hangul, Simplified Chinese bruger Pinyin, Taiwan bruger Chewings standard Zhuyin-layout, og Hong Kong bruger Cangjie med tegnformer fra Hong Kong. Japanese (US keyboard) giver Mozc med et amerikansk tastaturlayout. Tasterne til Hangul, Zhuyin og Cangjie bliver på deres standardpositioner, selv når du skriver latinske bogstaver med Dvorak, Colemak eller AZERTY. Hvis du tidligere har tilføjet Hangul eller Chewing, skal du fravælge og vælge det igen under _Setup > Keyboard > Input Methods_ for at flytte dets taster dertil; Ve OS lader en motor, du allerede skriver med, være i fred.
 
 Skrivningen starter i latinsk tilstand. Tryk på `Super + I` for at bladre gennem de konfigurerede inputmetoder, og `Super + Shift + I` for at bladre tilbage. Tryk på `Shift` alene for at træde ud af en inputmetode som Pinyin og over til latinske bogstaver, og tryk på den igen for at gå tilbage, på samme måde som Sogou, Microsoft Pinyin og macOS fungerer; `Shift` plus et bogstav skriver stadig et stort bogstav. På japanske tastaturer slår 全角/半角 input til/fra, 変換 slår det til, og 無変換 slår det fra. Med Korean skifter 한/영 Hangul, og 한자 konverterer til Hanja, uanset om dit tastatur har dedikerede taster eller sender Right Alt og Right Ctrl for dem, som mange bærbare gør, så Right Alt og Right Ctrl er ikke almindelige modifikatortaster der; diktering slås i stedet til/fra med Alt + Space. `Ctrl + Space` forbliver tilgængelig til Tmux og Herdr; `Shift + CapsLock` forbliver compose-tasten.
 
 Tastaturindikatoren vises til højre på bjælken, når du har flere tastaturlayouter eller inputmetoder. Klik på den for at skifte inputsprog; Japanese viser あ for hiragana. For at vælge japanske tegn skal du skifte til Japanese, skrive et ord som `nihongo` og derefter trykke to gange på Space. Tryk på Enter for at acceptere dit valg. Hvis du også har flere tastaturlayouter, skal du højreklikke på indikatoren for at bladre gennem dem.
 
-Brug _Setup > Keyboard > Keyboard Inputs_ til at vælge layouter som English og French blandt de samme valgmuligheder, der tilbydes under installationen. Brug _Setup > Keyboard > Input Methods_ til at vælge, hvilke kompositionsmotorer der er aktive. Begge vælgere åbner inde i Omarchy-menuen med dine nuværende valg markeret. Klik eller tryk på Enter for at slå et valg til/fra; hver ændring træder i kraft med det samme. Hvis du fravælger en inputmetode, fjernes den fra cyklussen uden at blive afinstalleret; tastaturet forbliver tilgængeligt.
+Brug _Setup > Keyboard > Keyboard Inputs_ til at vælge layouter som English og French blandt de samme valgmuligheder, der tilbydes under installationen. Brug _Setup > Keyboard > Input Methods_ til at vælge, hvilke kompositionsmotorer der er aktive. Begge vælgere åbner inde i Ve OS-menuen med dine nuværende valg markeret. Klik eller tryk på Enter for at slå et valg til/fra; hver ændring træder i kraft med det samme. Hvis du fravælger en inputmetode, fjernes den fra cyklussen uden at blive afinstalleret; tastaturet forbliver tilgængeligt.
 
 Kør `omarchy setup keyboard` eller `omarchy setup input` for at åbne de samme vælgere. For at tilføje ét sprog fra kommandolinjen skal du bruge `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` eller `cangjie5`. Quick, Boshiamy og Array følger med i samme pakke som Cangjie og vises i Input Methods-vælgeren. Dine brugerdefinerede skiftetaster bevares. Til alternative motorlayouter eller taster skal du installere `fcitx5-configtool` med `omarchy pkg add fcitx5-configtool` og starte det fra en terminal. At vælge et inputsprog ændrer ikke skrivebordssproget. Hvis du vælger Japanese, Korean eller Chinese under _Setup > Language_, tilføjes den tilhørende inputmetode, når du ikke har nogen endnu.
 

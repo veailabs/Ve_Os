@@ -1,10 +1,10 @@
 # Aplicativos Web
 
-Você pode adicionar seus próprios aplicativos web usando _Install > Web App_ no menu do Omarchy (`Super + Space`). Ele vai pedir o nome do aplicativo, a URL do aplicativo e a URL do ícone, se não conseguir obtê-lo pelo favicon. Você pode conseguir ótimos ícones PNG para muitos aplicativos web populares no [Dashboard Icons](https://dashboardicons.com).
+Você pode adicionar seus próprios aplicativos web usando _Install > Web App_ no menu do Ve OS (`Super + Space`). Ele vai pedir o nome do aplicativo, a URL do aplicativo e a URL do ícone, se não conseguir obtê-lo pelo favicon. Você pode conseguir ótimos ícones PNG para muitos aplicativos web populares no [Dashboard Icons](https://dashboardicons.com).
 
 Eles ficarão então acessíveis pelo lançador de aplicativos (`Super + Space`) e usarão a bela janela de aplicativo web sem moldura.
 
-Se quiser remover um aplicativo web, basta ir até _Remove > Web App_ no menu do Omarchy.
+Se quiser remover um aplicativo web, basta ir até _Remove > Web App_ no menu do Ve OS.
 
 É melhor entrar em todas as suas contas usando um navegador comum antes de usar os atalhos dos aplicativos web. A fina moldura do wrapper não funciona bem com o 1password, então é simplesmente mais fácil já estar logado diretamente.
 
@@ -12,7 +12,7 @@ Todos os atalhos de teclado desses aplicativos web podem ser alterados em `~/.co
 
 Quando estiver em um aplicativo web, você pode copiar a URL atual para a área de transferência usando `Shift + Alt + L`.
 
-Por padrão, o Omarchy já vem com uma variedade de aplicativos padrão:
+Por padrão, o Ve OS já vem com uma variedade de aplicativos padrão:
 
 ## HEY
 
@@ -64,7 +64,7 @@ Você pode iniciar o YouTube usando `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) é o sistema de videochamadas mais popular usado nos EUA. Ótimas conexões pelo mundo todo. E reuniões de 40 minutos podem ser feitas sem uma conta paga. O Omarchy encapsula o cliente web do Zoom, e os links de reuniões do Zoom abrirão direto nele.
+[Zoom](https://zoom.us/) é o sistema de videochamadas mais popular usado nos EUA. Ótimas conexões pelo mundo todo. E reuniões de 40 minutos podem ser feitas sem uma conta paga. O Ve OS encapsula o cliente web do Zoom, e os links de reuniões do Zoom abrirão direto nele.
 
 Você inicia o Zoom usando o lançador de aplicativos (`Super + Space`).
 
@@ -76,7 +76,7 @@ Você inicia o Discord usando o lançador de aplicativos (`Super + Space`).
 
 ## Aplicativos da Microsoft
 
-Selecione _Install > Service > Microsoft_ para adicionar Outlook, Word, Excel, PowerPoint, Teams e OneDrive como aplicativos web. Cada aplicativo tem seu próprio lançador e abre diretamente, usando as URLs comerciais do Microsoft 365 e seu perfil de navegador existente. Eles abrem nas mesmas janelas de aplicativo do navegador que os outros aplicativos web do Omarchy; eles não instalam o cliente separado Teams for Linux.
+Selecione _Install > Service > Microsoft_ para adicionar Outlook, Word, Excel, PowerPoint, Teams e OneDrive como aplicativos web. Cada aplicativo tem seu próprio lançador e abre diretamente, usando as URLs comerciais do Microsoft 365 e seu perfil de navegador existente. Eles abrem nas mesmas janelas de aplicativo do navegador que os outros aplicativos web do Ve OS; eles não instalam o cliente separado Teams for Linux.
 
 Remova o pacote com _Remove > Service > Microsoft_, ou remova aplicativos individuais com _Remove > Web App_. Você também pode instalar apenas os aplicativos que quiser por meio de _Install > Web App_.
 
@@ -88,4 +88,4 @@ Para manter os logins de trabalho separados, acrescente um diretório de dados d
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Substitua o diretório de exemplo por um caminho absoluto de sua escolha e use o mesmo caminho para todos os seis lançadores para compartilhar os logins de trabalho entre eles. Os aplicativos web usam o navegador compatível selecionado do Omarchy, recorrendo ao Chrome quando o navegador padrão não é compatível.
+Substitua o diretório de exemplo por um caminho absoluto de sua escolha e use o mesmo caminho para todos os seis lançadores para compartilhar os logins de trabalho entre eles. Os aplicativos web usam o navegador compatível selecionado do Ve OS, recorrendo ao Chrome quando o navegador padrão não é compatível.

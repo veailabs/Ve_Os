@@ -41,7 +41,7 @@ Kamēr izvēle ir atvērta, pele tev vispār nav jāizmanto:
 
 ## Ekrāna ierakstīšana
 
-`Alt + Print Screen` atver _Trigger > Capture > Screenrecord_, kas jautā, ko vēlies skaņu celiņā: bez audio, darbvirsmas audio, darbvirsmas plus mikrofona vai darbvirsmas plus mikrofona plus tīmekļa kameras. Tas pēdējais parādās tikai tad, ja tev tiešām ir pieslēgta kamera. Izvēlies vienu, un Omarchy ieraksta atlasītājs ļauj tev vilkt apgabalu vai noklikšķināt uz loga vai monitora.
+`Alt + Print Screen` atver _Trigger > Capture > Screenrecord_, kas jautā, ko vēlies skaņu celiņā: bez audio, darbvirsmas audio, darbvirsmas plus mikrofona vai darbvirsmas plus mikrofona plus tīmekļa kameras. Tas pēdējais parādās tikai tad, ja tev tiešām ir pieslēgta kamera. Izvēlies vienu, un Ve OS ieraksta atlasītājs ļauj tev vilkt apgabalu vai noklikšķināt uz loga vai monitora.
 
 Ierakstīšana darbojas uz gpu-screen-recorder, kas kodē uz GPU ar 60fps un, ja nākas, pārslēdzas atpakaļ uz CPU. Rezultāts ir MP4 failā `~/Videos` ar nosaukumu `screenrecording-2026-08-13_14-22-05.mp4`. Iestati `OMARCHY_SCREENRECORD_DIR`, lai to mainītu — bet ņem vērā, ka atšķirībā no ekrānuzņēmumu direktorijas šai jau iepriekš ir jāpastāv, citādi ieraksts atsakās sākties.
 

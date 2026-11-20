@@ -1,6 +1,6 @@
 # Tipkovnica, miš, dodirna pločica
 
-Hyprland vam omogućuje da vrlo detaljno konfigurirate sve svoje ulazne uređaje. Ponovljanje tipkovnice možete postaviti na nadzvučnu brzinu ili postaviti dodirnu pločicu da koristi prirodno pomicanje. Sve to mijenjate u `~/.config/hypr/input.lua`, do čega možete doći i putem _Setup > Input_ u izborniku Omarchy (`Super + Space`). Sve što tamo postavite zamjenjuje zadane postavke Omarchyja.
+Hyprland vam omogućuje da vrlo detaljno konfigurirate sve svoje ulazne uređaje. Ponovljanje tipkovnice možete postaviti na nadzvučnu brzinu ili postaviti dodirnu pločicu da koristi prirodno pomicanje. Sve to mijenjate u `~/.config/hypr/input.lua`, do čega možete doći i putem _Setup > Input_ u izborniku Ve OS (`Super + Space`). Sve što tamo postavite zamjenjuje zadane postavke Ve OSja.
 
 Evo primjera:
 
@@ -59,7 +59,7 @@ Kliznite po dodirnoj pločici za kretanje po radnoj površini:
 | --- | --- |
 | Tri prsta lijevo / desno | Prethodna / sljedeća radna površina, uključujući prazne |
 | Tri prsta gore | Uključivanje/isključivanje AI konzole |
-| Tri prsta dolje | Otvaranje izbornika Omarchy |
+| Tri prsta dolje | Otvaranje izbornika Ve OS |
 | Četiri prsta lijevo / desno | Premještanje aktivnog prozora na prethodnu / sljedeću radnu površinu |
 | Četiri prsta dolje | Uključivanje/isključivanje prikaza preko cijelog zaslona |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Da biste isključili sve geste Omarchyja, postavite `omarchy_default_gestures = false` pri vrhu datoteke `~/.config/hypr/hyprland.lua`, prije nego što se učitaju zadane postavke Omarchyja.
+Da biste isključili sve geste Ve OSja, postavite `omarchy_default_gestures = false` pri vrhu datoteke `~/.config/hypr/hyprland.lua`, prije nego što se učitaju zadane postavke Ve OSja.
 
 Na prijenosnim računalima Dell XPS s haptičkom dodirnom pločicom snagu klika možete postaviti i na nisku, srednju ili visoku pod _Trigger > Hardware > Touchpad Haptics_.
 
 ### Tipkanje na kineskom, japanskom i drugim jezicima
 
-Kada vas instalacijski program upita za tipkovnicu, odaberite japanski, korejski, kineski (pojednostavljeni, Pinyin), tajvanski (Zhuyin) ili hongkonški (Cangjie). Omarchy automatski konfigurira tipkovnicu i odgovarajući mehanizam unosa, uključujući tijekom izvanmrežnog postavljanja pri prvom pokretanju. Japanski koristi Mozc, korejski koristi standardni Hangul s dva skupa, pojednostavljeni kineski koristi Pinyin, Tajvan koristi standardni raspored Zhuyin sustava Chewing, a Hong Kong koristi Cangjie s hongkonškim oblicima znakova. Japanski (američka tipkovnica) pruža Mozc s američkim rasporedom tipkovnice. Tipke za Hangul, Zhuyin i Cangjie ostaju na svojim standardnim položajima čak i kada latinična slova tipkate s rasporedima Dvorak, Colemak ili AZERTY. Ako ste Hangul ili Chewing dodali prije ovoga, poništite njegov odabir i ponovno ga odaberite pod _Setup > Keyboard > Input Methods_ da biste mu tipke premjestili tamo; Omarchy mehanizam kojim već tipkate ostavlja na miru.
+Kada vas instalacijski program upita za tipkovnicu, odaberite japanski, korejski, kineski (pojednostavljeni, Pinyin), tajvanski (Zhuyin) ili hongkonški (Cangjie). Ve OS automatski konfigurira tipkovnicu i odgovarajući mehanizam unosa, uključujući tijekom izvanmrežnog postavljanja pri prvom pokretanju. Japanski koristi Mozc, korejski koristi standardni Hangul s dva skupa, pojednostavljeni kineski koristi Pinyin, Tajvan koristi standardni raspored Zhuyin sustava Chewing, a Hong Kong koristi Cangjie s hongkonškim oblicima znakova. Japanski (američka tipkovnica) pruža Mozc s američkim rasporedom tipkovnice. Tipke za Hangul, Zhuyin i Cangjie ostaju na svojim standardnim položajima čak i kada latinična slova tipkate s rasporedima Dvorak, Colemak ili AZERTY. Ako ste Hangul ili Chewing dodali prije ovoga, poništite njegov odabir i ponovno ga odaberite pod _Setup > Keyboard > Input Methods_ da biste mu tipke premjestili tamo; Ve OS mehanizam kojim već tipkate ostavlja na miru.
 
 Tipkanje započinje u latiničnom načinu. Pritisnite `Super + I` za kruženje kroz konfigurirane metode unosa, a `Super + Shift + I` za kruženje unatrag. Dodirnite sam `Shift` da biste iz metode unosa kao što je Pinyin izašli u latinična slova i dodirnite ga ponovno za povratak, onako kako rade Sogou, Microsoft Pinyin i macOS; `Shift` plus slovo i dalje tipka veliko slovo. Na japanskim tipkovnicama 全角/半角 uključuje/isključuje unos, 変換 ga uključuje, a 無変換 ga isključuje. S korejskim 한/영 prebacuje Hangul, a 한자 pretvara u Hanja, bez obzira ima li vaša tipkovnica namjenske tipke ili za njih šalje Right Alt i Right Ctrl, kao što to čine mnoga prijenosna računala, pa Right Alt i Right Ctrl tamo nisu obični modifikatori; diktiranje se umjesto toga prebacuje pomoću Alt + Space. `Ctrl + Space` ostaje dostupan za Tmux i Herdr; `Shift + CapsLock` ostaje tipka compose.
 
 Pokazivač tipkovnice pojavljuje se na desnoj strani trake kada imate više rasporeda tipkovnice ili metoda unosa. Kliknite ga za promjenu jezika unosa; japanski prikazuje あ za hiraganu. Za odabir japanskih znakova prebacite se na japanski, upišite riječ kao što je `nihongo`, zatim dvaput pritisnite Space. Pritisnite Enter za prihvaćanje odabira. Ako imate i više rasporeda tipkovnice, desnom tipkom miša kliknite pokazivač za kruženje kroz njih.
 
-Koristite _Setup > Keyboard > Keyboard Inputs_ za odabir rasporeda kao što su engleski i francuski, među istim izborima koji se nude tijekom instalacije. Koristite _Setup > Keyboard > Input Methods_ za odabir aktivnih mehanizama za sastavljanje teksta. Oba birača otvaraju se unutar izbornika Omarchy s označenim vašim trenutačnim odabirima. Kliknite ili pritisnite Enter za uključivanje/isključivanje izbora; svaka promjena primjenjuje se odmah. Poništavanje odabira metode unosa uklanja je iz ciklusa bez njezina deinstaliranja; tipkovnica ostaje dostupna.
+Koristite _Setup > Keyboard > Keyboard Inputs_ za odabir rasporeda kao što su engleski i francuski, među istim izborima koji se nude tijekom instalacije. Koristite _Setup > Keyboard > Input Methods_ za odabir aktivnih mehanizama za sastavljanje teksta. Oba birača otvaraju se unutar izbornika Ve OS s označenim vašim trenutačnim odabirima. Kliknite ili pritisnite Enter za uključivanje/isključivanje izbora; svaka promjena primjenjuje se odmah. Poništavanje odabira metode unosa uklanja je iz ciklusa bez njezina deinstaliranja; tipkovnica ostaje dostupna.
 
 Pokrenite `omarchy setup keyboard` ili `omarchy setup input` da biste otvorili iste birače. Da biste iz naredbenog retka dodali jedan jezik, upotrijebite `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` ili `cangjie5`. Quick, Boshiamy i Array dolaze u istom paketu kao Cangjie i pojavljuju se u biraču Input Methods. Vaše prilagođene tipke za prebacivanje ostaju sačuvane. Za alternativne rasporede ili tipke mehanizma instalirajte `fcitx5-configtool` pomoću `omarchy pkg add fcitx5-configtool` i pokrenite ga iz terminala. Odabir jezika unosa ne mijenja jezik radne površine. Odabir japanskog, korejskog ili kineskog pod _Setup > Language_ dodaje njegovu metodu unosa kada još nemate nijednu.
 

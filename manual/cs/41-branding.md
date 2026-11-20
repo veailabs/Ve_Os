@@ -1,6 +1,6 @@
 # Branding
 
-Omarchy vám umožňuje nastavit firemní logo nebo osobní obrázek pro odemčení při bootu, spořič obrazovky i obrazovku O aplikaci.
+Ve OS vám umožňuje nastavit firemní logo nebo osobní obrázek pro odemčení při bootu, spořič obrazovky i obrazovku O aplikaci.
 
 ### Odemčení při bootu
 
@@ -24,11 +24,11 @@ V tomto menu jsou tři položky:
 
 - **Upravit text** otevře `~/.config/omarchy/branding/screensaver.txt` ve vašem editoru. Napište nebo vložte, co chcete — ASCII art, své jméno, sprosté slovo. Uložte a zavřete a spořič obrazovky se okamžitě spustí, abyste ho viděli.
 - **Nastavit z obrázku** otevře výběr souboru pro png nebo svg, převede ho do ASCII a ukáže vám výsledek. Loga s jasnou siluetou fungují mnohem lépe než fotografie.
-- **Obnovit výchozí** vrátí zpět logo Omarchy.
+- **Obnovit výchozí** vrátí zpět logo Ve OS.
 
 ### Obrazovka O aplikaci
 
-Stejné tři možnosti jsou v _Vzhled > Branding > O aplikaci_ pro obrazovku _O aplikaci_, kterou získáte z menu Omarchy, a fungují identicky — soubor je `~/.config/omarchy/branding/about.txt` a okno O aplikaci se po každé změně objeví. Kresba pro O aplikaci se převádí do menší velikosti než ta pro spořič obrazovky, protože se musí vejít do okna, místo aby vyplnila celý displej.
+Stejné tři možnosti jsou v _Vzhled > Branding > O aplikaci_ pro obrazovku _O aplikaci_, kterou získáte z menu Ve OS, a fungují identicky — soubor je `~/.config/omarchy/branding/about.txt` a okno O aplikaci se po každé změně objeví. Kresba pro O aplikaci se převádí do menší velikosti než ta pro spořič obrazovky, protože se musí vejít do okna, místo aby vyplnila celý displej.
 
 Dokud je okno otevřené, každých pár sekund se přes kresbu přežene zelený záblesk a pak ji zase nechá v klidu. Vaše vlastní kresba ho dostane také, pokud je každý znak v ní široký jeden sloupec — a všechno, co vytvoří _Nastavit z obrázku_, takové je. Kresba sestavená z emoji nebo znaků s dvojitou šířkou místo toho zůstává v klidu, a stejně tak obrazovka, pokud si ponecháte vlastní konfiguraci fastfetch: nehybné logo v těchto případech znamená, že se animace drží stranou, nikoli že selhává, protože posunutí záblesku přes ně by zbytek řádku dostalo na špatné místo.
 

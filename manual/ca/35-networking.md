@@ -1,6 +1,6 @@
 # Xarxes
 
-Les xarxes a Omarchy les gestiona NetworkManager, i les controleu des de la icona de xarxa de la [barra superior](05-the-top-bar.md) o amb `Super + Ctrl + N`.
+Les xarxes a Ve OS les gestiona NetworkManager, i les controleu des de la icona de xarxa de la [barra superior](05-the-top-bar.md) o amb `Super + Ctrl + N`.
 
 Aquest tauler cerca xarxes Wi-Fi, mostra la força del senyal i s'hi connecta. Ethernet no necessita res de res: connecteu-lo i funciona. Si preferiu quedar-vos al terminal, `nmtui` us ofereix els mateixos controls, i també hi ha un grup d'ordres `omarchy network`.
 
@@ -12,7 +12,7 @@ Si realment necessiteu la contrasenya en si, `omarchy network password <interfac
 
 ## DNS
 
-Omarchy utilitza el DNS que la vostra xarxa li proporciona per DHCP. Podeu canviar-ho per a tota la màquina a _Configuració > Xarxa > DNS_, on Cloudflare i Google són a un clic de distància. Trieu _Personalitzat_ per introduir els vostres propis servidors.
+Ve OS utilitza el DNS que la vostra xarxa li proporciona per DHCP. Podeu canviar-ho per a tota la màquina a _Configuració > Xarxa > DNS_, on Cloudflare i Google són a un clic de distància. Trieu _Personalitzat_ per introduir els vostres propis servidors.
 
 Des del terminal, `omarchy dns` mostra el proveïdor actual i `omarchy dns Cloudflare` en defineix un.
 

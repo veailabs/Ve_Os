@@ -1,0 +1,48 @@
+#!/bin/bash
+set -euo pipefail
+
+[[ $(uname -s):$(uname -m) == Darwin:arm64 ]] || { echo 'Ve OS.app requires an Apple Silicon Mac.' >&2; exit 1; }
+root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
+app=${1:-"$HOME/Applications/Ve OS.app"}
+runtime='/Applications/Try Omarchy.app/Contents/Resources/scripts/run-qemu-gpu.sh'
+[[ -x $runtime ]] || { echo 'Install Try Omarchy before building Ve OS.app.' >&2; exit 1; }
+[[ $app == /* && $app == *.app && ! -e $app ]] || { echo 'Choose an unused absolute .app destination.' >&2; exit 1; }
+mkdir -p "$(dirname -- "$app")"
+staging=$(mktemp -d "$(dirname -- "$app")/.ve-os.XXXXXXXX")
+trap 'rm -rf "$staging"' EXIT
+bundle="$staging/Ve OS.app"
+mkdir -p "$bundle/Contents/MacOS" "$bundle/Contents/Resources"
+cp "$root/default/ve/Ve.icns" "$bundle/Contents/Resources/Ve.icns"
+printf '%s\n' "$root" > "$bundle/Contents/Resources/checkout-path"
+cat > "$bundle/Contents/Info.plist" <<'PLIST'
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleIdentifier</key><string>ai.ve.os.dev</string>
+<key>CFBundleName</key><string>Ve OS</string>
+<key>CFBundleDisplayName</key><string>Ve OS</string>
+<key>CFBundleExecutable</key><string>ve-os</string>
+<key>CFBundleIconFile</key><string>Ve.icns</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleShortVersionString</key><string>0.1.0</string>
+<key>CFBundleVersion</key><string>1</string>
+<key>LSUIElement</key><true/>
+</dict></plist>
+PLIST
+cat > "$bundle/Contents/MacOS/ve-os" <<'LAUNCHER'
+#!/bin/bash
+set -euo pipefail
+resources=$(cd -- "$(dirname -- "$0")/../Resources" && pwd)
+export OMARCHY_PRODUCT_NAME='Ve OS'
+export OMARCHY_PRODUCT_ICON="$resources/Ve.icns"
+IFS= read -r OMARCHY_QEMU_GPU_SHARED_FOLDER < "$resources/checkout-path"
+export OMARCHY_QEMU_GPU_SHARED_FOLDER
+mkdir -p "$HOME/Library/Logs/Ve OS"
+exec /usr/bin/arch -arm64 /bin/bash '/Applications/Try Omarchy.app/Contents/Resources/scripts/run-qemu-gpu.sh' > "$HOME/Library/Logs/Ve OS/runtime.log" 2>&1
+LAUNCHER
+chmod +x "$bundle/Contents/MacOS/ve-os"
+plutil -lint "$bundle/Contents/Info.plist"
+codesign --force --sign - "$bundle"
+codesign --verify --deep --strict "$bundle"
+mv "$bundle" "$app"
+printf 'Created %s\n' "$app"

@@ -1,12 +1,12 @@
 # Pagtulog ng sistema
 
-Sa Omarchy, naka-enable ang suspend at hibernation bilang default, pero kung nagkakaproblema ka sa alinman sa mga ito sa machine mo, puwede mo silang i-toggle off.
+Sa Ve OS, naka-enable ang suspend at hibernation bilang default, pero kung nagkakaproblema ka sa alinman sa mga ito sa machine mo, puwede mo silang i-toggle off.
 
 Sa mga NVIDIA GB10 machine, gaya ng DGX Spark at ng ASUS Ascent GX10, naka-off ang suspend at hibernation, tulad sa DGX OS ng NVIDIA, dahil hindi pa napapatunayang gumagana ang sleep sa hardware na iyon. Ganoon din sa ASUS Zenbook A16 (UX3607OA), kung saan hindi pa ganap na napapatulog ng suspend ang chip at puwede itong mag-hang sa buong gabi. Hindi naaangkop doon ang toggle ng suspend at ang pag-setup ng hibernation. Para i-on ulit ang sleep, alisin ang `/etc/systemd/sleep.conf.d/omarchy-sleep-disabled.conf` gamit ang `sudo rm`; babalik ang Suspend sa menu, at puwedeng i-setup ang hibernation tulad sa ibang machine. Ibabalik ng pagpapatakbo ng `sudo omarchy apply hardware --install-user "$USER"` ang file.
 
 ### Mga power profile
 
-Sa laptop, hiwalay na tinatandaan ng Omarchy ang power profile mo para kapag nakasaksak at kapag nasa baterya, at lumilipat ito sa pagitan ng dalawa habang nagsasaksak at nagtatanggal ka ng plug. Paglabas ng kahon, performance iyon sa AC at balanced sa baterya.
+Sa laptop, hiwalay na tinatandaan ng Ve OS ang power profile mo para kapag nakasaksak at kapag nasa baterya, at lumilipat ito sa pagitan ng dalawa habang nagsasaksak at nagtatanggal ka ng plug. Paglabas ng kahon, performance iyon sa AC at balanced sa baterya.
 
 Makikita mo kung ano ang inaalok ng machine mo gamit ang `omarchy powerprofiles list`, at itakda ang gusto mo para sa state na kinaroroonan mo ngayon gamit ang `omarchy powerprofiles set autodetect power-saver`. Para itakda ang kabilang state nang walang tinatanggal na plug, tuwirang pangalanan ito: `omarchy powerprofiles set battery power-saver`. Ano man ang piliin mo, iyon din ang makukuha mo sa susunod na nasa state na iyon ka.
 

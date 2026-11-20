@@ -1,20 +1,16 @@
 # Mac support
 
-Omarchy has built-in support for **Intel Macs**. There are a couple of known limitations at the moment, but as long as you're aware and OK with those; you can breathe some new life into your old Macs by loading Omarchy.
+## Apple Silicon development VM
 
-Please note that installing on an M-series Mac is not directly supported at this time. You can find out more about the state of this in #omarchy-on-other in our [Discord](https://discord.gg/tXFUdasqhY).
+Ve OS development on Apple Silicon uses the existing Try Omarchy runtime. The Ve macOS launcher changes the app name and icon while keeping that signed runtime and its VM disk. It does not install Linux directly on the Mac or replace macOS.
 
-In a simple test, we were able to achieve 36% performance gains on a 2019 MacBook Pro just by installing Omarchy.
+With Try Omarchy installed, run `scripts/ve-os-macos-app` from the Ve repository to create `~/Applications/Ve OS.app`. Close the existing VM before opening the Ve launcher because both use the same disk. The runtime log is `~/Library/Logs/Ve OS/runtime.log`.
 
- ![macbook-omarchy](images/macbook-omarchy.webp)
+Inside Linux, activate the Ve source checkout using the [Getting Started](02-getting-started.md) instructions. A shared folder makes source visible to the VM; it does not by itself switch the installed desktop to that source.
 
-### Installing Omarchy on Mac
+## Intel Mac installation reference
 
-Omarchy only supports being the **only** OS installed at the moment. During the installation, the drive will be wiped and MacOS will no longer be bootable.
-
-You can still restore it later via Internet Recovery if you'd like.
-
-For the sake of this part, we'll assume you've already reviewed [Getting Started](02-getting-started.md) and have your USB drive ready. If you don't go ahead and do that now.
+The inherited installer contains Intel Mac hardware support. The reference below describes upstream Omarchy installation and known hardware limitations, not a Ve hardware certification. Upstream screenshots and community projects retain their own branding. Review [Getting Started](02-getting-started.md) and back up the Mac before any disk installation. The full-disk installation option erases the selected drive.
 
 #### Disable Secure Boot
 

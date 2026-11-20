@@ -1,6 +1,6 @@
 # Thương hiệu
 
-Omarchy cho phép bạn đặt logo công ty hoặc hình ảnh cá nhân cho cả màn hình mở khóa khi khởi động, trình bảo vệ màn hình và màn hình giới thiệu.
+Ve OS cho phép bạn đặt logo công ty hoặc hình ảnh cá nhân cho cả màn hình mở khóa khi khởi động, trình bảo vệ màn hình và màn hình giới thiệu.
 
 ### Mở khóa khi khởi động
 
@@ -24,11 +24,11 @@ Có ba mục trong menu đó:
 
 - **Chỉnh sửa văn bản** mở `~/.config/omarchy/branding/screensaver.txt` trong trình soạn thảo của bạn. Nhập hoặc dán bất cứ thứ gì bạn thích — nghệ thuật ASCII, tên của bạn, một từ thô tục. Lưu và thoát, và trình bảo vệ màn hình sẽ khởi động ngay lập tức để bạn có thể xem nó.
 - **Đặt từ hình ảnh** mở một trình chọn tệp cho png hoặc svg, chuyển đổi nó thành ASCII và hiển thị kết quả cho bạn. Các logo có hình bóng rõ ràng hoạt động tốt hơn nhiều so với ảnh chụp.
-- **Khôi phục mặc định** đưa logo Omarchy trở lại.
+- **Khôi phục mặc định** đưa logo Ve OS trở lại.
 
 ### Màn hình giới thiệu
 
-Ba tùy chọn tương tự nằm trong _Appearance > Branding > About_ dành cho màn hình _About_ bạn mở từ menu Omarchy, và chúng hoạt động giống hệt — tệp là `~/.config/omarchy/branding/about.txt`, và cửa sổ About sẽ bật lên sau mỗi thay đổi. Hình ảnh About được chuyển đổi sang kích thước nhỏ hơn so với của trình bảo vệ màn hình, vì nó phải vừa trong một cửa sổ thay vì lấp đầy màn hình của bạn.
+Ba tùy chọn tương tự nằm trong _Appearance > Branding > About_ dành cho màn hình _About_ bạn mở từ menu Ve OS, và chúng hoạt động giống hệt — tệp là `~/.config/omarchy/branding/about.txt`, và cửa sổ About sẽ bật lên sau mỗi thay đổi. Hình ảnh About được chuyển đổi sang kích thước nhỏ hơn so với của trình bảo vệ màn hình, vì nó phải vừa trong một cửa sổ thay vì lấp đầy màn hình của bạn.
 
 Khi cửa sổ đang mở, một vệt sáng xanh lục lướt nghiêng qua hình ảnh vài giây một lần rồi lại để nó đứng yên. Hình ảnh của chính bạn cũng có hiệu ứng đó, miễn là mọi ký tự trong đó đều rộng một cột — bất cứ thứ gì _Set From Image_ tạo ra đều như vậy. Hình ảnh được tạo từ emoji hoặc các ký tự có độ rộng gấp đôi sẽ đứng yên thay vào đó, và màn hình cũng vậy nếu bạn giữ một cấu hình fastfetch của riêng mình: một logo đứng yên trong những trường hợp đó là do hoạt ảnh tránh làm phiền chứ không phải bị lỗi, vì việc trượt một vệt sáng qua chúng sẽ khiến phần còn lại của dòng bị lệch vị trí.
 

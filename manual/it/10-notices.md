@@ -10,7 +10,7 @@ Le schede offrono ciò che contengono: _Copia codice_ per i codici di verifica (
 
 Per usarle senza mouse, premi `Super + Ctrl + ,`. Viene selezionata la notifica più recente e i suoi pulsanti vengono numerati: premi un numero per usarne uno, `Enter` per fare clic sulla notifica, `↑` e `↓` per spostarti tra le notifiche, `Delete` per chiuderne una ed `Esc` per restituire il controllo alla tastiera. Si rilascia anche da sola dopo qualche secondo di inattività.
 
-Silenziare le notifiche le trattiene, tranne le conferme di Omarchy, gli avvisi di emergenza e i codici di verifica, che hai chiesto un attimo fa. Riporta le ultime sullo schermo, trattenute o no, con `Super + Shift + Alt + ,`. La cronologia viene conservata per un giorno.
+Silenziare le notifiche le trattiene, tranne le conferme di Ve OS, gli avvisi di emergenza e i codici di verifica, che hai chiesto un attimo fa. Riporta le ultime sullo schermo, trattenute o no, con `Super + Shift + Alt + ,`. La cronologia viene conservata per un giorno.
 
 ## Avvisi con scorciatoie
 

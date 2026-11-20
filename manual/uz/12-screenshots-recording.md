@@ -41,7 +41,7 @@ Bu birikmalar faqat Omasnap ochiq bo‘lgandagina mavjud, shu sababli ular o‘z
 
 ## Ekranni yozib olish
 
-`Alt + Print Screen` _Trigger > Capture > Screenrecord_ ni ochadi, u saundtrekda nima bo‘lishini so‘raydi: audio yo‘q, ish stoli audiosi, ish stoli va mikrofon yoki ish stoli, mikrofon va veb-kamera. Oxirgisi faqat sizda haqiqatan ham kamera ulangan bo‘lsagina ko‘rinadi. Bittasini tanlang va Omarchy ning yozib olish tanlagichi hududni tortib tanlashingizga yoki oyna yoxud monitorni bosishingizga imkon beradi.
+`Alt + Print Screen` _Trigger > Capture > Screenrecord_ ni ochadi, u saundtrekda nima bo‘lishini so‘raydi: audio yo‘q, ish stoli audiosi, ish stoli va mikrofon yoki ish stoli, mikrofon va veb-kamera. Oxirgisi faqat sizda haqiqatan ham kamera ulangan bo‘lsagina ko‘rinadi. Bittasini tanlang va Ve OS ning yozib olish tanlagichi hududni tortib tanlashingizga yoki oyna yoxud monitorni bosishingizga imkon beradi.
 
 Yozib olish gpu-screen-recorder da ishlaydi, u GPU da 60fps da kodlaydi va zarur bo‘lsa CPU ga qaytadi. Natija `~/Videos` dagi MP4 bo‘ladi va `screenrecording-2026-08-13_14-22-05.mp4` deb nomlanadi. Buni o‘zgartirish uchun `OMARCHY_SCREENRECORD_DIR` ni o‘rnating — lekin shuni yodda tutingki, skrinshot katalogidan farqli o‘laroq, bu katalog allaqachon mavjud bo‘lishi kerak, aks holda yozib olish boshlanishdan bosh tortadi.
 

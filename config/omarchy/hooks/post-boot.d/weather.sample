@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Show the weather status notification after Omarchy has started.
+# Show the weather status notification after Ve OS has started.
 # To put it into use, remove .sample from this file name.
 
 # The status fails when the weather is unavailable, in whatever language it says so.

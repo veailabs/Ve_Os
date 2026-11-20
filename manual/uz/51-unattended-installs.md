@@ -1,4 +1,6 @@
-# Nazoratsiz o'rnatishlar
+# Ve OS — Nazoratsiz o'rnatishlar
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO hech kim klaviatura oldida bo'lmasa ham o'zini o'zi o'rnatishi mumkin. Agar o'rnatuvchi konfiguratsiya fayllarini o'z ichiga olgan `cidata` yorlig'li ikkinchi diskni topsa, u ularni nusxalaydi, sozlash ustasini butunlay o'tkazib yuboradi va mustaqil ravishda tayyor tizimga qayta yuklanadi. Maxsus ISO yig'ilishi ham, qo'shimcha yuklash menyusi bandi ham kerak emas — bunday disk ulanmagan bo'lsa, hech narsa o'zgarmaydi va siz oddiy ustani olasiz.
 

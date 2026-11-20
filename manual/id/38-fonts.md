@@ -1,12 +1,12 @@
 # Font
 
-Omarchy menggunakan JetBrainsMono Nerd Font sebagai font terminal sekaligus font sistem secara default.
+Ve OS menggunakan JetBrainsMono Nerd Font sebagai font terminal sekaligus font sistem secara default.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Kamu bisa mengubahnya melalui menu _Tampilan > Font_ di menu Omarchy (`Super + Space`). Itu mengatur font monospace di mana-mana: terminal, bar, dan apa pun lainnya yang memintanya.
+Kamu bisa mengubahnya melalui menu _Tampilan > Font_ di menu Ve OS (`Super + Space`). Itu mengatur font monospace di mana-mana: terminal, bar, dan apa pun lainnya yang memintanya.
 
-Kamu bisa menginstal font pemrograman populer lainnya melalui _Instal > Gaya > Font_ di menu Omarchy: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, dan Iosevka semuanya hanya berjarak satu klik, dalam versi Nerd Font mereka agar glyph di bar dan terminal tetap berfungsi. Setelah menginstal salah satunya, pilih font tersebut di bawah _Tampilan > Font_.
+Kamu bisa menginstal font pemrograman populer lainnya melalui _Instal > Gaya > Font_ di menu Ve OS: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, dan Iosevka semuanya hanya berjarak satu klik, dalam versi Nerd Font mereka agar glyph di bar dan terminal tetap berfungsi. Setelah menginstal salah satunya, pilih font tersebut di bawah _Tampilan > Font_.
 
 ## Tionghoa, Jepang, dan Korea
 

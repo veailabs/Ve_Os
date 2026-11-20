@@ -1,6 +1,6 @@
 # Imagen de marca
 
-Omarchy te permite establecer el logo de tu empresa o una imagen personal tanto para el desbloqueo al arrancar, como para el protector de pantalla y la pantalla Acerca de.
+Ve OS te permite establecer el logo de tu empresa o una imagen personal tanto para el desbloqueo al arrancar, como para el protector de pantalla y la pantalla Acerca de.
 
 ### Desbloqueo al arrancar
 
@@ -24,11 +24,11 @@ Hay tres entradas en ese menú:
 
 - **Editar texto** abre `~/.config/omarchy/branding/screensaver.txt` en tu editor. Escribe o pega lo que quieras — arte ASCII, tu nombre, una grosería. Guarda y sal, y el protector de pantalla se activa de inmediato para que puedas verlo.
 - **Establecer desde una imagen** abre un selector de archivos para un png o svg, lo convierte a ASCII y te muestra el resultado. Los logos con una silueta clara funcionan mucho mejor que las fotos.
-- **Restaurar predeterminado** vuelve a poner el logo de Omarchy.
+- **Restaurar predeterminado** vuelve a poner el logo de Ve OS.
 
 ### Pantalla Acerca de
 
-Las mismas tres opciones están en _Apariencia > Imagen de marca > Acerca de_ para la pantalla _Acerca de_ que obtienes desde el menú de Omarchy, y funcionan de forma idéntica — el archivo es `~/.config/omarchy/branding/about.txt`, y la ventana Acerca de aparece después de cada cambio. El arte de Acerca de se convierte a un tamaño más pequeño que el del protector de pantalla, ya que tiene que caber en una ventana en lugar de llenar tu pantalla.
+Las mismas tres opciones están en _Apariencia > Imagen de marca > Acerca de_ para la pantalla _Acerca de_ que obtienes desde el menú de Ve OS, y funcionan de forma idéntica — el archivo es `~/.config/omarchy/branding/about.txt`, y la ventana Acerca de aparece después de cada cambio. El arte de Acerca de se convierte a un tamaño más pequeño que el del protector de pantalla, ya que tiene que caber en una ventana en lugar de llenar tu pantalla.
 
 Mientras la ventana está abierta, un destello verde se desliza sobre el arte cada pocos segundos y luego lo vuelve a dejar quieto. Tu propio arte también lo recibe, siempre que cada carácter en él ocupe una sola columna — todo lo que produce _Establecer desde una imagen_ cumple con eso. El arte hecho con emoji o caracteres de doble ancho se queda quieto, en cambio, y también la pantalla si conservas una configuración de fastfetch propia: un logo quieto en esos casos es la animación haciéndose a un lado en lugar de fallar, ya que deslizar un destello sobre ellos dejaría el resto de la línea en el lugar equivocado.
 

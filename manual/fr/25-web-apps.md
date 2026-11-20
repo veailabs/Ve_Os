@@ -1,10 +1,10 @@
 # Applications web
 
-Vous pouvez ajouter vos propres applications web via _Installer > Application web_ dans le menu Omarchy (`Super + Space`). Il vous demandera le nom de l'application, l'URL de l'application et l'URL de l'icône, s'il ne peut pas la récupérer via le favicon. Vous pouvez obtenir de superbes icônes PNG pour de nombreuses applications web populaires sur [Dashboard Icons](https://dashboardicons.com).
+Vous pouvez ajouter vos propres applications web via _Installer > Application web_ dans le menu Ve OS (`Super + Space`). Il vous demandera le nom de l'application, l'URL de l'application et l'URL de l'icône, s'il ne peut pas la récupérer via le favicon. Vous pouvez obtenir de superbes icônes PNG pour de nombreuses applications web populaires sur [Dashboard Icons](https://dashboardicons.com).
 
 Elles seront ensuite accessibles via le lanceur d'applications (`Super + Space`), et utiliseront la magnifique fenêtre d'application web sans cadre.
 
-Si vous souhaitez supprimer une application web, allez simplement dans _Retirer > Application web_ dans le menu Omarchy.
+Si vous souhaitez supprimer une application web, allez simplement dans _Retirer > Application web_ dans le menu Ve OS.
 
 Il est préférable de vous connecter à tous vos comptes à l'aide d'un navigateur classique avant d'utiliser les raccourcis des applications web. Le mince cadre d'encapsulation fonctionne mal avec 1password, il est donc simplement plus facile de vous connecter directement au préalable.
 
@@ -12,7 +12,7 @@ Tous les raccourcis clavier de ces applications web peuvent être modifiés dans
 
 Lorsque vous êtes dans une application web, vous pouvez copier l'URL actuelle dans le presse-papiers à l'aide de `Shift + Alt + L`.
 
-Par défaut, Omarchy fournit déjà un assortiment d'applications par défaut :
+Par défaut, Ve OS fournit déjà un assortiment d'applications par défaut :
 
 ## HEY
 
@@ -64,7 +64,7 @@ Vous pouvez lancer YouTube à l'aide de `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) est le système de visioconférence le plus populaire utilisé aux États-Unis. D'excellentes connexions à travers le monde. Et des réunions de 40 minutes peuvent être organisées sans compte payant. Omarchy encapsule le client web de Zoom, et les liens de réunion Zoom s'ouvriront directement dedans.
+[Zoom](https://zoom.us/) est le système de visioconférence le plus populaire utilisé aux États-Unis. D'excellentes connexions à travers le monde. Et des réunions de 40 minutes peuvent être organisées sans compte payant. Ve OS encapsule le client web de Zoom, et les liens de réunion Zoom s'ouvriront directement dedans.
 
 Vous lancez Zoom à l'aide du lanceur d'applications (`Super + Space`).
 
@@ -76,7 +76,7 @@ Vous lancez Discord à l'aide du lanceur d'applications (`Super + Space`).
 
 ## Applications Microsoft
 
-Sélectionnez _Installer > Service > Microsoft_ pour ajouter Outlook, Word, Excel, PowerPoint, Teams et OneDrive en tant qu'applications web. Chaque application possède son propre lanceur et s'ouvre directement, en utilisant les URL commerciales de Microsoft 365 et votre profil de navigateur existant. Elles s'ouvrent dans les mêmes fenêtres d'application navigateur que les autres applications web d'Omarchy ; elles n'installent pas le client Teams for Linux séparé.
+Sélectionnez _Installer > Service > Microsoft_ pour ajouter Outlook, Word, Excel, PowerPoint, Teams et OneDrive en tant qu'applications web. Chaque application possède son propre lanceur et s'ouvre directement, en utilisant les URL commerciales de Microsoft 365 et votre profil de navigateur existant. Elles s'ouvrent dans les mêmes fenêtres d'application navigateur que les autres applications web d'Ve OS ; elles n'installent pas le client Teams for Linux séparé.
 
 Retirez l'ensemble avec _Retirer > Service > Microsoft_, ou retirez des applications individuelles avec _Retirer > Application web_. Vous pouvez aussi installer uniquement les applications que vous voulez via _Installer > Application web_.
 
@@ -88,4 +88,4 @@ Pour séparer les connexions professionnelles, ajoutez un répertoire de donnée
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Remplacez le répertoire d'exemple par un chemin absolu de votre choix et utilisez le même chemin pour les six lanceurs afin de partager les connexions professionnelles entre eux. Les applications web utilisent le navigateur pris en charge sélectionné par Omarchy, et se rabattent sur Chrome lorsque le navigateur par défaut n'est pas pris en charge.
+Remplacez le répertoire d'exemple par un chemin absolu de votre choix et utilisez le même chemin pour les six lanceurs afin de partager les connexions professionnelles entre eux. Les applications web utilisent le navigateur pris en charge sélectionné par Ve OS, et se rabattent sur Chrome lorsque le navigateur par défaut n'est pas pris en charge.

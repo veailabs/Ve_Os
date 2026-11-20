@@ -1,10 +1,10 @@
 # 웹 앱
 
-Omarchy 메뉴(`Super + Space`)에서 _Install > Web App_을 이용해 나만의 웹 앱을 추가할 수 있다. 앱 이름, 앱 URL, 그리고 favicon으로 가져올 수 없는 경우 아이콘 URL을 물어본다. 인기 있는 많은 웹 앱을 위한 훌륭한 PNG 아이콘은 [Dashboard Icons](https://dashboardicons.com)에서 구할 수 있다.
+Ve OS 메뉴(`Super + Space`)에서 _Install > Web App_을 이용해 나만의 웹 앱을 추가할 수 있다. 앱 이름, 앱 URL, 그리고 favicon으로 가져올 수 없는 경우 아이콘 URL을 물어본다. 인기 있는 많은 웹 앱을 위한 훌륭한 PNG 아이콘은 [Dashboard Icons](https://dashboardicons.com)에서 구할 수 있다.
 
 이렇게 추가한 앱은 앱 런처(`Super + Space`)를 통해 사용할 수 있으며, 아름다운 프레임 없는 웹 앱 창으로 열린다.
 
-웹 앱을 제거하려면 Omarchy 메뉴에서 _Remove > Web App_으로 가면 된다.
+웹 앱을 제거하려면 Ve OS 메뉴에서 _Remove > Web App_으로 가면 된다.
 
 웹 앱 바로가기를 사용하기 전에 일반 브라우저를 이용해 모든 계정에 로그인해 두는 것이 가장 좋다. 얇은 래퍼 프레임은 1password와 잘 맞지 않으니, 처음부터 직접 로그인해 두는 편이 그냥 더 쉽다.
 
@@ -12,7 +12,7 @@ Omarchy 메뉴(`Super + Space`)에서 _Install > Web App_을 이용해 나만의
 
 웹 앱 안에 있을 때는 `Shift + Alt + L`을 이용해 현재 URL을 클립보드에 복사할 수 있다.
 
-기본적으로 Omarchy에는 이미 다양한 기본 앱이 포함되어 있다:
+기본적으로 Ve OS에는 이미 다양한 기본 앱이 포함되어 있다:
 
 ## HEY
 
@@ -64,7 +64,7 @@ X는 뉴스가 터지는 곳이다.
 
 ## Zoom
 
-[Zoom](https://zoom.us/)은 미국에서 가장 인기 있는 화상 채팅 시스템이다. 전 세계에서 훌륭한 연결을 제공한다. 그리고 유료 계정 없이도 40분 회의를 열 수 있다. Omarchy는 Zoom의 웹 클라이언트를 감싸며, zoom 회의 링크는 바로 그 안에서 열린다.
+[Zoom](https://zoom.us/)은 미국에서 가장 인기 있는 화상 채팅 시스템이다. 전 세계에서 훌륭한 연결을 제공한다. 그리고 유료 계정 없이도 40분 회의를 열 수 있다. Ve OS는 Zoom의 웹 클라이언트를 감싸며, zoom 회의 링크는 바로 그 안에서 열린다.
 
 애플리케이션 런처(`Super + Space`)를 이용해 Zoom을 시작한다.
 
@@ -76,7 +76,7 @@ X는 뉴스가 터지는 곳이다.
 
 ## Microsoft 앱
 
-_Install > Service > Microsoft_를 선택하면 Outlook, Word, Excel, PowerPoint, Teams, OneDrive를 웹 앱으로 추가할 수 있다. 각 앱은 자체 런처를 갖고 있으며, 상용 Microsoft 365 URL과 기존 브라우저 프로필을 이용해 바로 열린다. Omarchy의 다른 웹 앱과 같은 브라우저 앱 창에서 열리며, 별도의 Teams for Linux 클라이언트를 설치하지 않는다.
+_Install > Service > Microsoft_를 선택하면 Outlook, Word, Excel, PowerPoint, Teams, OneDrive를 웹 앱으로 추가할 수 있다. 각 앱은 자체 런처를 갖고 있으며, 상용 Microsoft 365 URL과 기존 브라우저 프로필을 이용해 바로 열린다. Ve OS의 다른 웹 앱과 같은 브라우저 앱 창에서 열리며, 별도의 Teams for Linux 클라이언트를 설치하지 않는다.
 
 _Remove > Service > Microsoft_로 번들을 제거하거나, _Remove > Web App_으로 개별 앱을 제거할 수 있다. _Install > Web App_을 통해 원하는 앱만 설치할 수도 있다.
 
@@ -88,4 +88,4 @@ _Remove > Service > Microsoft_로 번들을 제거하거나, _Remove > Web App_�
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-예시 디렉터리를 원하는 절대 경로로 바꾸고, 여섯 개의 런처 모두에 같은 경로를 사용하면 그 사이에서 업무용 로그인을 공유할 수 있다. 웹 앱은 Omarchy에서 선택한 지원 브라우저를 사용하며, 기본 브라우저가 지원되지 않으면 Chrome으로 대체한다.
+예시 디렉터리를 원하는 절대 경로로 바꾸고, 여섯 개의 런처 모두에 같은 경로를 사용하면 그 사이에서 업무용 로그인을 공유할 수 있다. 웹 앱은 Ve OS에서 선택한 지원 브라우저를 사용하며, 기본 브라우저가 지원되지 않으면 Chrome으로 대체한다.

@@ -1,12 +1,12 @@
 # Fontes
 
-O Omarchy usa a JetBrainsMono Nerd Font como fonte do terminal e do sistema por padrão.
+O Ve OS usa a JetBrainsMono Nerd Font como fonte do terminal e do sistema por padrão.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Você pode mudar isso pelo menu _Aparência > Fonte_ no menu do Omarchy (`Super + Space`). Isso define a fonte monoespaçada em tudo: o terminal, a barra e qualquer outra coisa que a solicite.
+Você pode mudar isso pelo menu _Aparência > Fonte_ no menu do Ve OS (`Super + Space`). Isso define a fonte monoespaçada em tudo: o terminal, a barra e qualquer outra coisa que a solicite.
 
-Você pode instalar outras fontes de programação populares via _Instalar > Estilo > Fonte_ no menu do Omarchy: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono e Iosevka estão a um clique de distância, em suas versões Nerd Font para que os glifos na barra e no terminal continuem funcionando. Depois de instalar uma, escolha-a em _Aparência > Fonte_.
+Você pode instalar outras fontes de programação populares via _Instalar > Estilo > Fonte_ no menu do Ve OS: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono e Iosevka estão a um clique de distância, em suas versões Nerd Font para que os glifos na barra e no terminal continuem funcionando. Depois de instalar uma, escolha-a em _Aparência > Fonte_.
 
 ## Chinês, Japonês e Coreano
 

@@ -1,6 +1,6 @@
 # Brändäys
 
-Omarchy antaa sinun asettaa yrityksesi logon tai henkilökohtaisen kuvan sekä käynnistyksen lukituksen avaukseen, näytönsäästäjään että Tietoja-näyttöön.
+Ve OS antaa sinun asettaa yrityksesi logon tai henkilökohtaisen kuvan sekä käynnistyksen lukituksen avaukseen, näytönsäästäjään että Tietoja-näyttöön.
 
 ### Käynnistyksen lukituksen avaus
 
@@ -24,11 +24,11 @@ Valikossa on kolme kohtaa:
 
 - **Muokkaa tekstiä** avaa tiedoston `~/.config/omarchy/branding/screensaver.txt` editorissasi. Kirjoita tai liitä mitä haluat — ASCII-taidetta, nimesi, ruma sana. Tallenna ja lopeta, ja näytönsäästäjä käynnistyy heti, jotta näet sen.
 - **Aseta kuvasta** avaa tiedostonvalitsimen png- tai svg-kuvalle, muuttaa sen ASCII-muotoon ja näyttää tuloksen. Logot, joissa on selkeä siluetti, toimivat paljon paremmin kuin valokuvat.
-- **Palauta oletus** palauttaa Omarchy-logon takaisin.
+- **Palauta oletus** palauttaa Ve OS-logon takaisin.
 
 ### Tietoja-näyttö
 
-Samat kolme vaihtoehtoa ovat kohdassa _Ulkoasu > Brändäys > Tietoja_ Omarchy-valikosta avautuvalle _Tietoja_-näytölle, ja ne toimivat täsmälleen samalla tavalla — tiedosto on `~/.config/omarchy/branding/about.txt`, ja Tietoja-ikkuna ponnahtaa esiin jokaisen muutoksen jälkeen. Tietoja-taide muutetaan pienempään kokoon kuin näytönsäästäjän taide, koska sen on mahduttava ikkunaan sen sijaan, että se täyttäisi näyttösi.
+Samat kolme vaihtoehtoa ovat kohdassa _Ulkoasu > Brändäys > Tietoja_ Ve OS-valikosta avautuvalle _Tietoja_-näytölle, ja ne toimivat täsmälleen samalla tavalla — tiedosto on `~/.config/omarchy/branding/about.txt`, ja Tietoja-ikkuna ponnahtaa esiin jokaisen muutoksen jälkeen. Tietoja-taide muutetaan pienempään kokoon kuin näytönsäästäjän taide, koska sen on mahduttava ikkunaan sen sijaan, että se täyttäisi näyttösi.
 
 Kun ikkuna on auki, vihreä välähdys nojaa taiteen yli muutaman sekunnin välein ja jättää sen sitten taas paikalleen. Myös oma taiteesi saa sen, kunhan jokainen sen merkki on yhden sarakkeen levyinen — kaikki _Aseta kuvasta_ -toiminnon tuottama on. Emojeista tai kaksinkertaisen levyisistä merkeistä tehty taide pysyy sen sijaan paikallaan, ja niin pysyy näyttökin, jos sinulla on oma fastfetch-asetuksesi: liikkumaton logo on näissä tapauksissa animaatio, joka pysyy poissa tieltä, eikä merkki epäonnistumisesta, koska välähdyksen liu'uttaminen niiden yli saisi rivin loppuosan väärään paikkaan.
 

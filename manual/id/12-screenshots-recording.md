@@ -41,7 +41,7 @@ Ikatan ini hanya ada saat Omasnap terbuka, jadi tidak akan bertabrakan dengan ap
 
 ## Perekaman layar
 
-`Alt + Print Screen` membuka _Trigger > Capture > Screenrecord_, yang menanyakan apa yang Anda inginkan pada soundtrack-nya: tanpa audio, audio desktop, desktop plus mikrofon, atau desktop plus mikrofon plus webcam. Pilihan terakhir itu hanya muncul jika Anda benar-benar memiliki kamera yang terhubung. Pilih salah satu dan pemilih perekaman Omarchy memungkinkan Anda menyeret suatu area atau mengklik jendela atau monitor.
+`Alt + Print Screen` membuka _Trigger > Capture > Screenrecord_, yang menanyakan apa yang Anda inginkan pada soundtrack-nya: tanpa audio, audio desktop, desktop plus mikrofon, atau desktop plus mikrofon plus webcam. Pilihan terakhir itu hanya muncul jika Anda benar-benar memiliki kamera yang terhubung. Pilih salah satu dan pemilih perekaman Ve OS memungkinkan Anda menyeret suatu area atau mengklik jendela atau monitor.
 
 Perekaman berjalan di gpu-screen-recorder, yang mengenkode pada GPU pada 60fps dan beralih ke CPU jika terpaksa. Hasilnya adalah MP4 di `~/Videos`, bernama `screenrecording-2026-08-13_14-22-05.mp4`. Atur `OMARCHY_SCREENRECORD_DIR` untuk mengubahnya — tetapi perlu dicatat bahwa tidak seperti direktori tangkapan layar, direktori ini harus sudah ada, atau perekaman akan menolak untuk dimulai.
 

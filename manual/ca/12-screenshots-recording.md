@@ -41,7 +41,7 @@ Aquestes assignacions només existeixen mentre Omasnap està obert, de manera qu
 
 ## Gravació de pantalla
 
-`Alt + Print Screen` obre _Trigger > Capture > Screenrecord_, que et demana què vols a la banda sonora: sense àudio, àudio de l'escriptori, escriptori més micròfon, o escriptori més micròfon més càmera web. Aquesta última opció només apareix si realment tens una càmera connectada. Tria'n una i el selector de gravació d'Omarchy et deixa arrossegar una regió o fer clic en una finestra o un monitor.
+`Alt + Print Screen` obre _Trigger > Capture > Screenrecord_, que et demana què vols a la banda sonora: sense àudio, àudio de l'escriptori, escriptori més micròfon, o escriptori més micròfon més càmera web. Aquesta última opció només apareix si realment tens una càmera connectada. Tria'n una i el selector de gravació d'Ve OS et deixa arrossegar una regió o fer clic en una finestra o un monitor.
 
 La gravació funciona amb gpu-screen-recorder, que codifica a la GPU a 60fps i recorre a la CPU si no li queda cap altre remei. El resultat és un MP4 a `~/Videos`, amb un nom com ara `screenrecording-2026-08-13_14-22-05.mp4`. Defineix `OMARCHY_SCREENRECORD_DIR` per canviar-ho — però tingues en compte que, a diferència del directori de captures de pantalla, aquest ja ha d'existir, o la gravació es nega a començar.
 

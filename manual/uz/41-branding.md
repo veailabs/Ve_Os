@@ -1,6 +1,6 @@
 # Brending
 
-Omarchy sizga kompaniyangiz logotipini yoki shaxsiy rasmingizni yuklanishda qulfni ochish ekrani, ekran saqlagichi va "Haqida" ekrani uchun o'rnatish imkonini beradi.
+Ve OS sizga kompaniyangiz logotipini yoki shaxsiy rasmingizni yuklanishda qulfni ochish ekrani, ekran saqlagichi va "Haqida" ekrani uchun o'rnatish imkonini beradi.
 
 ### Yuklanishda qulfni ochish
 
@@ -24,11 +24,11 @@ O'sha menyuda uchta band bor:
 
 - **Matnni tahrirlash** muharriringizda `~/.config/omarchy/branding/screensaver.txt` ni ochadi. Xohlaganingizni yozing yoki joylashtiring — ASCII san'at, ismingiz, qo'pol bir so'z. Saqlang va chiqing, ekran saqlagichi uni ko'rishingiz uchun darhol ishga tushadi.
 - **Rasmdan o'rnatish** png yoki svg uchun fayl tanlagichni ochadi, uni ASCII ga aylantiradi va natijani ko'rsatadi. Aniq siluetga ega logotiplar fotosuratlarga qaraganda ancha yaxshi ishlaydi.
-- **Standartni tiklash** Omarchy logotipini qaytarib qo'yadi.
+- **Standartni tiklash** Ve OS logotipini qaytarib qo'yadi.
 
 ### "Haqida" ekrani
 
-Xuddi shu uchta variant Omarchy menyusidan oladigan _Haqida_ ekraningiz uchun _Tashqi ko'rinish > Brending > Haqida_ bo'limida ham bor va ular xuddi shunday ishlaydi — fayl `~/.config/omarchy/branding/about.txt`, "Haqida" oynasi esa har bir o'zgarishdan keyin ochiladi. "Haqida" rasmi ekran saqlagichinikiga qaraganda kichikroq o'lchamga aylantiriladi, chunki u butun displeyni to'ldirmasdan, oynaga sig'ishi kerak.
+Xuddi shu uchta variant Ve OS menyusidan oladigan _Haqida_ ekraningiz uchun _Tashqi ko'rinish > Brending > Haqida_ bo'limida ham bor va ular xuddi shunday ishlaydi — fayl `~/.config/omarchy/branding/about.txt`, "Haqida" oynasi esa har bir o'zgarishdan keyin ochiladi. "Haqida" rasmi ekran saqlagichinikiga qaraganda kichikroq o'lchamga aylantiriladi, chunki u butun displeyni to'ldirmasdan, oynaga sig'ishi kerak.
 
 Oyna ochiq ekan, har bir necha soniyada rasm ustidan yashil shu'la egilib o'tadi va keyin uni yana harakatsiz qoldiradi. Sizning o'z rasmingiz ham shuni oladi, basharti undagi har bir belgi bir ustun kengligida bo'lsa — _Rasmdan o'rnatish_ yaratgan har qanday narsa shunday. Emoji yoki qo'sh kenglikdagi belgilardan qurilgan rasm buning o'rniga harakatsiz qoladi, agar o'zingizning fastfetch konfiguratsiyangizni saqlasangiz, ekran ham shunday qoladi: bunday hollarda harakatsiz logotip animatsiya ishlamay qolgani emas, balki u yo'ldan chetga chiqayotgani, chunki shu'lani ular ustidan sirpantirish qatorning qolgan qismini noto'g'ri joyga tushirib qo'ygan bo'lardi.
 

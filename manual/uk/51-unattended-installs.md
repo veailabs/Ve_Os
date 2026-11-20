@@ -1,4 +1,6 @@
-# Встановлення без участі користувача
+# Ve OS — Встановлення без участі користувача
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Образ ISO Omarchy може встановити себе сам, коли нікого немає за клавіатурою. Якщо програма встановлення знаходить другий диск із міткою `cidata`, на якому є її файли конфігурації, вона копіює їх, повністю пропускає майстер налаштування й самостійно перезавантажується в готову систему. Не потрібна жодна спеціальна збірка ISO, жоден додатковий пункт у меню завантаження — якщо такого диска не підключено, нічого не змінюється, і ви отримуєте звичайний майстер.
 

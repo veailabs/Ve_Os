@@ -8,7 +8,7 @@ Her kısayol tuşu, değiştiricileri tarafından belirlenen bir düzlemde yer a
 
 | Düzlem | Orada ne bulunur | Örnekler |
 | --- | --- | --- |
-| `Super + key` | Sistem: pencereler, çalışma alanları, düzenler ve temel menüler | `Super + Space` Omarchy menüsü, `Super + W` pencereyi kapat, `Super + F` tam ekran |
+| `Super + key` | Sistem: pencereler, çalışma alanları, düzenler ve temel menüler | `Super + Space` Ve OS menüsü, `Super + W` pencereyi kapat, `Super + F` tam ekran |
 | `Super + Shift + key` | Uygulamalar | `Super + Shift + B` tarayıcı, `Super + Shift + E` e-posta, `Super + Shift + N` düzenleyici |
 | `Super + Ctrl + key` | Paneller ve sistem menüleri | `Super + Ctrl + A` ses, `Super + Ctrl + N` ağ, `Super + Ctrl + C` yakalama menüsü |
 | `Super + Ctrl + Alt + key` | Hızlı eylemler ve bilgilendirmeler | `Super + Ctrl + Alt + T` saati göster, `Super + Ctrl + Alt + B` pil, `Super + Ctrl + Alt + C` ekran görüntüsü |
@@ -34,7 +34,7 @@ Bir varsayılan size uymuyorsa (diyelim ki Windows'taki gibi ekran görüntüler
 
 | Kısayol Tuşu                  | İşlev              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Omarchy menüsü (uygulamalar ve diğer her şey)    |
+| `Super + Space`           | Ve OS menüsü (uygulamalar ve diğer her şey)    |
 | `Super + Alt + Space` | Uygulama ızgarası |
 | `Super + Escape` | Sistem menüsü (askıya al, yeniden başlat, vb.)  |
 | `Super + Ctrl + L` | Bilgisayarı kilitle |
@@ -172,7 +172,7 @@ Bağlamaları `~/.config/hypr/bindings.lua` içinde değiştirin/ekleyin.
 | `Super + V`           | Yapıştır    |
 | `Super + Ctrl + V`           | Pano yöneticisi    |
 
-Normalde Linux'ta terminalde kopyalayıp yapıştırmak için `Ctrl + Shift + C/V`, diğer her yerde yapmak için `Ctrl + C/V` kullanmanız gerekir. Bu Omarchy birleşik pano kısayol tuşları her yerde çalışır.
+Normalde Linux'ta terminalde kopyalayıp yapıştırmak için `Ctrl + Shift + C/V`, diğer her yerde yapmak için `Ctrl + C/V` kullanmanız gerekir. Bu Ve OS birleşik pano kısayol tuşları her yerde çalışır.
 
 ## Yakalama
 
@@ -194,7 +194,7 @@ Normalde Linux'ta terminalde kopyalayıp yapıştırmak için `Ctrl + Shift + C/
 
 Ekran kayıtlarında, kısayol tuşu önce hangi sesi istediğinizi sorar, sonra kaydı başlatır. Durdurmak için tekrar basın. Ayrıntılar için [ekran görüntüleri ve kayıt](12-screenshots-recording.md) bölümüne bakın.
 
-Tüm yakalama seçeneklerine Omarchy menüsünde (`Super + Space`) _Trigger > Capture_ altında da erişilebilir.
+Tüm yakalama seçeneklerine Ve OS menüsünde (`Super + Space`) _Trigger > Capture_ altında da erişilebilir.
 
 ## Bildirimler
 
@@ -216,9 +216,9 @@ Tüm yakalama seçeneklerine Omarchy menüsünde (`Super + Space`) _Trigger > Ca
 | `Super + Backspace` | Bir pencerede şeffaflığı aç/kapat |
 | `Super + Ctrl + Backspace` | Tek pencere kare en-boy oranını aç/kapat |
 
-Ekstra arka plan görselleri `~/.config/omarchy/backgrounds/<theme name>` içinde bulunur. Omarchy menüsünde _Install > Style > Background_ üzerinden de kullanılabilir.
+Ekstra arka plan görselleri `~/.config/omarchy/backgrounds/<theme name>` içinde bulunur. Ve OS menüsünde _Install > Style > Background_ üzerinden de kullanılabilir.
 
-Tüm stil seçeneklerine Omarchy menüsünde (`Super + Space`) _Style_ altında da erişilebilir.
+Tüm stil seçeneklerine Ve OS menüsünde (`Super + Space`) _Style_ altında da erişilebilir.
 
 ## Aç/Kapat
 
@@ -319,7 +319,7 @@ Bu işlevler bir Tmux oturumu içinde çalıştırılmalıdır.
 
 ## Ghostty Terminal
 
-Ghostty terminali, Omarchy menüsü üzerinden _Install > Terminal_ kullanılarak kurulur.
+Ghostty terminali, Ve OS menüsü üzerinden _Install > Terminal_ kullanılarak kurulur.
 
 | Kısayol Tuşu                  | İşlev              |
 | ----------------------- | --------------------- |

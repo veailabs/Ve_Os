@@ -119,7 +119,10 @@ def main():
         return desktop.call(pid, None, operation, args or {})["result"]
 
       assert read("displays")
-      capture("success-veos-01-original")
+      wait_for(
+        lambda: visible_text("success-veos-01-original", command("date", "+%A")),
+        "Initial desktop clock did not become visible",
+      )
       apps = read("apps")
       app = next(a for a in apps if a["id"] == "foot.desktop")
       act("open_app", {"app_id": app["id"]})
@@ -335,7 +338,10 @@ def main():
         lambda: "omarchy-menu" in command("hyprctl", "layers", "-j"),
         "Appearance settings panel did not open",
       )
-      capture("success-veos-07-settings-panel")
+      wait_for(
+        lambda: visible_text("success-veos-07-settings-panel", "Theme"),
+        "Appearance settings content did not become visible",
+      )
       command("omarchy-menu", "close")
       passed("existing appearance settings panel opens in the Wayland shell")
   except BaseException:

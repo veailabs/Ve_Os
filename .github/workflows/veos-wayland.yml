@@ -39,6 +39,12 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq --no-install-recommends aria2 jq
 
+      - name: Build the package for installed desktop acceptance
+        run: |
+          mkdir -p src/omarchy/packages/veos-runtime/artifacts/wayland-wheel
+          python3 -m pip wheel --no-deps --wheel-dir src/omarchy/packages/veos-runtime/artifacts/wayland-wheel src/omarchy/packages/veos-runtime
+          python3 -m pip download --no-deps --dest src/omarchy/packages/veos-runtime/artifacts/wayland-wheel pip
+
       # The image of the current release: an installed Omarchy with user
       # omarchy, built and boot-tested by omarchy-iso. It is fetched from
       # Cloudflare on every run, into RAM: runners write their disk at 200
@@ -78,7 +84,7 @@ jobs:
               # that drops one file must not fail the run: try again.
               sed -i "1i Server = https://mirror.omarchy.org/\$repo/os/\$arch" /etc/pacman.d/mirrorlist
               for attempt in 1 2 3; do
-                if pacman -Syu --noconfirm --needed qemu-system-x86 qemu-hw-display-virtio-gpu qemu-hw-display-virtio-vga qemu-img openssh >/dev/null; then
+                if pacman -Syu --noconfirm --needed qemu-system-x86 qemu-hw-display-virtio-gpu qemu-hw-display-virtio-vga qemu-img openssh python >/dev/null; then
                   break
                 elif (( attempt < 3 )); then
                   echo "pacman failed, attempt $attempt of 3; trying again in 15 s"

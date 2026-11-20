@@ -80,6 +80,10 @@ trap cleanup EXIT
 ssh-keygen -q -t ed25519 -N '' -C ci-vm -f "$state/id_ed25519"
 keys=$(printf 'd /home/omarchy/.ssh 0700 omarchy omarchy -\nf+ /home/omarchy/.ssh/authorized_keys 0600 omarchy omarchy - %s\n' \
   "$(cat "$state/id_ed25519.pub")" | base64 -w0)
+vm_controls=()
+if [[ $suite == "veos-controls" ]]; then
+  vm_controls=(-qmp "unix:$state/qmp.sock,server=on,wait=off")
+fi
 
 qemu-img create -qf qcow2 -b "$(realpath "$image/base.qcow2")" -F qcow2 "$state/run.qcow2"
 started=$SECONDS
@@ -93,6 +97,7 @@ qemu-system-x86_64 -cpu host -enable-kvm -machine q35,accel=kvm -smp "${SMP:-4}"
   -drive "file=$state/run.qcow2,format=qcow2,if=none,id=d0" -device virtio-blk-pci,drive=d0 \
   -smbios "type=11,value=io.systemd.credential.binary:tmpfiles.extra=$keys" \
   -device virtio-vga -device virtio-rng-pci -display none \
+  "${vm_controls[@]}" \
   -netdev "user,id=n0,hostfwd=tcp:127.0.0.1:$port-:22" -device virtio-net-pci,netdev=n0 \
   -pidfile "$state/qemu.pid" -daemonize
 
@@ -140,6 +145,12 @@ ssh_vm "systemd-run --user --quiet --collect --same-dir \
   -E OMARCHY_PKGS_PATH=\$HOME/src/omarchy-pkgs bash -c $(printf %q "$command")"
 last_report="" next_report=0
 until ssh_vm '[[ -s ~/rc ]]' 2>/dev/null; do
+  # The installed widget test moves the pointer to its observed geometry.
+  # Send one real mouse click only to this disposable VM, never the host.
+  if [[ $suite == "veos-controls" ]] && ssh_vm '[[ -f ~/veos-acceptance/widget-click-request ]]' 2>/dev/null; then
+    python3 "$(dirname -- "${BASH_SOURCE[0]}")/ci-vm-click.py" "$state/qmp.sock"
+    ssh_vm 'mv ~/veos-acceptance/widget-click-request ~/veos-acceptance/widget-click-sent'
+  fi
   if (( $(seconds) >= ${CI_VM_TIMEOUT:-1500} )); then
     echo "test/ci-vm: the tests did not finish in ${CI_VM_TIMEOUT:-1500} s" >&2
     ssh_vm 'cat ~/run.log' >"$out/run.log" || true

@@ -107,15 +107,22 @@ def main():
 
     def call(operation, **args):
       response = subprocess.run(
-        ["/usr/bin/python3", str(adapter)],
+        [
+          "/usr/bin/python3",
+          "-c",
+          "import runpy,sys,json; module=runpy.run_path(sys.argv[1]); request=json.loads(sys.stdin.read()); print(json.dumps(module['execute'](request['operation'],request['args'])))",
+          str(adapter),
+        ],
         input=json.dumps(
           {"operation": operation, "args": {"app_pid": process.pid, **args}}
         ),
         capture_output=True,
         text=True,
         timeout=15,
-        check=True,
+        check=False,
       )
+      # Fixture-only traceback: production's CLI intentionally sanitizes errors.
+      assert response.returncode == 0, response.stderr
       return json.loads(response.stdout)
 
     deadline = time.monotonic() + 20

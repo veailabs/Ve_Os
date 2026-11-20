@@ -5,6 +5,7 @@
 window.createVeOSVoice = function ({ api, onStatus, onTask, onTranscript, audioOutput }) {
   let pc, channel, stream, connection, timer, projectId;
   let generation = 0;
+  let responding = false;
   const audio = audioOutput || new Audio();
   audio.autoplay = true;
   const calls = new Map();
@@ -31,6 +32,7 @@ window.createVeOSVoice = function ({ api, onStatus, onTask, onTranscript, audioO
     audio.srcObject = null;
     audio.hidden = true;
     projectId = null;
+    responding = false;
     const previous = connection;
     connection = null;
     calls.clear();
@@ -80,6 +82,9 @@ window.createVeOSVoice = function ({ api, onStatus, onTask, onTranscript, audioO
         if (current !== generation || event.data.length > 100000) return;
         let item;
         try { item = JSON.parse(event.data); } catch { return; }
+        if (!item || typeof item !== "object" || Array.isArray(item)) return;
+        if (item.type === "response.created") responding = true;
+        if (item.type === "response.done") responding = false;
         if (item.type === "conversation.item.input_audio_transcription.completed") onTranscript("You", item.transcript || "");
         if (item.type === "response.output_audio_transcript.done") onTranscript("Ve", item.transcript || "");
         if (item.type === "error") onStatus("Voice reported an error. Check the local task before trying again.", true);
@@ -99,10 +104,10 @@ window.createVeOSVoice = function ({ api, onStatus, onTask, onTranscript, audioO
           calls.set(item.call_id,pending);
         }
         const result = await pending.result;
-        if (result.task_id) onTask(result.task_id);
         if (current !== generation) return;
         if (pending.delivered) return;
         pending.delivered = true;
+        if (result.task_id) onTask(result.task_id);
         send({type:"conversation.item.create",item:{type:"function_call_output",call_id:item.call_id,output:JSON.stringify(result)}});
         send({type:"response.create"});
       };
@@ -133,7 +138,7 @@ window.createVeOSVoice = function ({ api, onStatus, onTask, onTranscript, audioO
     }
   }
   function stopSpeaking() {
-    send({type:"response.cancel"});
+    if (responding) send({type:"response.cancel"});
     send({type:"output_audio_buffer.clear"});
     onStatus("Speech stopped. Local tasks continue until you cancel or pause them.", true);
   }

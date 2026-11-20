@@ -54,7 +54,13 @@ test('one dispatch and one correlated output for duplicate voice tool events', a
 });
 
 test('stop speaking clears audio without cancelling local work; disconnect closes microphone', async()=>{
-  const f=fixture();await f.client.start('project','claude');f.client.stopSpeaking();
+  const f=fixture();await f.client.start('project','claude');
+  await f.peers[0].channel.onmessage({data:'null'});
+  await f.peers[0].channel.onmessage({data:'[]'});
+  f.client.stopSpeaking();
+  assert.equal(f.messages.filter(m=>m.type==='response.cancel').length,0);
+  await f.peers[0].channel.onmessage({data:'{"type":"response.created"}'});
+  f.client.stopSpeaking();
   assert.ok(f.messages.some(m=>m.type==='response.cancel'));
   assert.ok(f.messages.some(m=>m.type==='output_audio_buffer.clear'));
   assert.equal(f.requests.filter(r=>r.url==='/api/harness/tools').length,0);

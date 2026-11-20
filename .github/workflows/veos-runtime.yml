@@ -17,6 +17,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  ci-ok:
+    runs-on: ubuntu-24.04
+    needs: [runtime]
+    if: always()
+    steps:
+      - name: Require runtime qualification
+        env:
+          RESULT: ${{ needs.runtime.result }}
+        run: test "$RESULT" = success
+
   runtime:
     runs-on: ubuntu-24.04
     timeout-minutes: 15

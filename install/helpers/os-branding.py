@@ -9,7 +9,7 @@ def apply_branding(root=Path("/")):
   target = root / "etc/os-release"
   source = target if target.exists() else root / "usr/lib/os-release"
   original = source.read_text()
-  fields = {"NAME": 'NAME="Ve OS"', "PRETTY_NAME": 'PRETTY_NAME="Ve OS"'}
+  fields = {"NAME": 'NAME="Ve OS"', "PRETTY_NAME": 'PRETTY_NAME="Ve OS"', "LOGO": 'LOGO="ve"'}
   lines = []
   for line in original.splitlines():
     key = line.partition("=")[0]

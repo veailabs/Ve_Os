@@ -40,7 +40,7 @@ with tempfile.TemporaryDirectory() as directory:
     assert "OMARCHY_PATH does not match this Ve OS command" in result.stderr, result.stderr
     assert not marker.exists()
 print("ok - privileged entrypoint rejects an unrelated source tree and non-root execution before writes or subprocesses")
-original = 'NAME="Arch Linux"\nPRETTY_NAME="Arch Linux"\nID=arch\nID_LIKE=arch\nVERSION_ID=rolling\nHOME_URL="https://archlinux.org/"\n'
+original = 'NAME="Arch Linux"\nPRETTY_NAME="Arch Linux"\nLOGO=archlinux-logo\nID=arch\nID_LIKE=arch\nVERSION_ID=rolling\nHOME_URL="https://archlinux.org/"\n'
 for kind in ("symlink", "file", "absent"):
   with tempfile.TemporaryDirectory() as directory:
     root = Path(directory)
@@ -55,7 +55,7 @@ for kind in ("symlink", "file", "absent"):
       target.write_text(original)
     backup = branding.apply_branding(root)
     assert not target.is_symlink()
-    assert target.read_text() == original.replace('NAME="Arch Linux"', 'NAME="Ve OS"')
+    assert target.read_text() == original.replace('NAME="Arch Linux"', 'NAME="Ve OS"').replace('LOGO=archlinux-logo', 'LOGO="ve"')
     assert vendor.read_text() == original
     assert target.stat().st_mode & 0o777 == 0o644
     before = target.stat().st_ino

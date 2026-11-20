@@ -45,12 +45,6 @@ jobs:
           node --check src/veos_runtime/web/voice.js
           node --test tests/voice_client.test.cjs > artifacts/voice-client.log 2>&1
           cat artifacts/voice-client.log
-      - name: Exercise native accessibility in a disposable desktop
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y python3-gi gir1.2-atspi-2.0 gir1.2-gtk-3.0 at-spi2-core xvfb dbus-x11 python3-pil poppler-utils tesseract-ocr fonts-dejavu-core
-          NO_AT_BRIDGE=0 GTK_MODULES=atk-bridge dbus-run-session -- xvfb-run -a python tests/native_accessibility_smoke.py > artifacts/native-accessibility.log 2>&1 || { cat artifacts/native-accessibility.log; exit 1; }
-          cat artifacts/native-accessibility.log
       - name: Build and verify the installed wheel
         run: |
           python -m build --wheel
@@ -68,5 +62,29 @@ jobs:
         if: always()
         with:
           name: veos-runtime-checks
+          path: packages/veos-runtime/artifacts/
+          retention-days: 14
+
+  native-controls:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: packages/veos-runtime
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Exercise native accessibility and document readers
+        run: |
+          mkdir -p artifacts
+          sudo apt-get update -qq
+          sudo apt-get install -y python3-gi gir1.2-atspi-2.0 gir1.2-gtk-3.0 at-spi2-core xvfb dbus-x11 python3-pil poppler-utils tesseract-ocr fonts-dejavu-core
+          PYTHONPATH=src NO_AT_BRIDGE=0 GTK_MODULES=atk-bridge dbus-run-session -- xvfb-run -a /usr/bin/python3 tests/native_accessibility_smoke.py > artifacts/native-accessibility.log 2>&1 || { cat artifacts/native-accessibility.log; exit 1; }
+          cat artifacts/native-accessibility.log
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: veos-native-controls-checks
           path: packages/veos-runtime/artifacts/
           retention-days: 14

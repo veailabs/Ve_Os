@@ -13,6 +13,21 @@ let state = {
   claims: [],
   actions: [],
   claim_evidence: [],
+  claim_revisions: [],
+  memories: [],
+  entities: [],
+  signals: [],
+  links: [],
+};
+const memoryKinds = {
+  executive: ["strategy", "preference", "risk_appetite", "operating_rule", "priority"],
+  project: ["decision", "outcome", "next_action", "timeline", "note"],
+  procedural: ["workflow", "tool_performance", "retry_lesson", "failure_pattern"],
+};
+const memoryScopes = {
+  executive: "Your direction",
+  project: "This project",
+  procedural: "How work is done",
 };
 let selected = sessionStorage.getItem("veos-project");
 let revision = 0;
@@ -85,6 +100,124 @@ function project() {
 }
 function localTime(time) {
   return new Date(time * 1000).toLocaleString();
+}
+function memoryDialog(memory) {
+  const form = $("memory-form"),
+    scope = form.elements.scope,
+    kind = form.elements.kind;
+  const kinds = () =>
+    kind.replaceChildren(
+      ...memoryKinds[scope.value].map((k) => {
+        const o = node("option", k.replaceAll("_", " "));
+        o.value = k;
+        return o;
+      }),
+    );
+  form.reset();
+  form.dataset.revise = memory?.id || "";
+  scope.value = memory?.scope || "executive";
+  scope.onchange = kinds;
+  kinds();
+  if (memory) {
+    kind.value = memory.kind;
+    form.elements.statement.value = memory.statement;
+  }
+  scope.disabled = kind.disabled = !!memory;
+  $("memory-dialog").showModal();
+}
+function memoryCard(m) {
+  const c = node("article", undefined, "card"),
+    meta = node("div", undefined, "meta"),
+    actions = node("div", undefined, "actions"),
+    origin = state.projects.find((p) => p.id === m.project_id);
+  meta.append(
+    node("span", `${memoryScopes[m.scope]} · ${m.kind.replaceAll("_", " ")}`),
+    badge(m.state),
+  );
+  c.append(
+    meta,
+    node("p", m.statement),
+    blank(
+      `${m.author === "agent" ? `Written by an agent${origin ? ` in ${origin.name}` : ""}` : "Written by you"} · ${localTime(m.created)}`,
+    ),
+  );
+  if (m.state === "proposed")
+    actions.append(
+      button("Accept", () => api(`/api/memory/${m.id}/accept`, {}), "primary"),
+      button("Reject", () => api(`/api/memory/${m.id}/reject`, {})),
+    );
+  else {
+    if (m.state === "needs_review")
+      actions.append(
+        button("Keep", () => api(`/api/memory/${m.id}/accept`, {}), "primary"),
+      );
+    actions.append(
+      button("Revise", async () => memoryDialog(m)),
+      button("Retract", () => {
+        if (confirm("Retract this memory? Agents will stop receiving it."))
+          return api(`/api/memory/${m.id}/retract`, {});
+      }),
+    );
+  }
+  c.append(actions);
+  return c;
+}
+function entityCard(e) {
+  const c = node("article", undefined, "card"),
+    meta = node("div", undefined, "meta"),
+    actions = node("div", undefined, "actions");
+  meta.append(node("span", `Entity · ${e.kind}`), badge(e.state));
+  c.append(
+    meta,
+    node("p", e.name),
+    blank("An agent could not tell whether this is a record you already have."),
+  );
+  for (const link of state.links.filter(
+    (l) => l.relation === "possible_same_as" && l.subject_id === e.id,
+  )) {
+    const other = state.entities.find((x) => x.id === link.object_id);
+    if (other)
+      actions.append(
+        button(`Same as ${other.name}`, () =>
+          api("/api/entities/merge", { pid: selected, id: e.id, into: other.id }),
+        ),
+      );
+  }
+  actions.append(
+    button("A different entity", () =>
+      api("/api/entities/distinct", { pid: selected, id: e.id }),
+    ),
+  );
+  c.append(actions);
+  return c;
+}
+function count(n, one, many = `${one}s`) {
+  return `${n} ${n === 1 ? one : many}`;
+}
+function renderMemory() {
+  const order = ["proposed", "needs_review", "active"],
+    memories = state.memories
+      .filter(
+        (m) =>
+          order.includes(m.state) &&
+          (m.scope !== "project" || m.project_id === selected),
+      )
+      .sort(
+        (a, b) =>
+          order.indexOf(a.state) - order.indexOf(b.state) ||
+          b.created - a.created,
+      ),
+    unsettled = scoped("entities").filter((e) => e.state === "ambiguous"),
+    entities = scoped("entities").filter((e) => e.state !== "merged").length;
+  $("memory").replaceChildren(
+    ...unsettled.map(entityCard),
+    ...memories.map(memoryCard),
+    blank(
+      memories.length || unsettled.length
+        ? `Recorded in this project: ${count(entities, "entity", "entities")}, ${count(scoped("signals").length, "signal")}, ${count(scoped("links").length, "link")}.`
+        : "Nothing remembered yet. Add your standing direction, or let an agent record what this project decides.",
+    ),
+  );
 }
 function render() {
   $("projects").replaceChildren(
@@ -213,6 +346,15 @@ function render() {
             meta = node("div", undefined, "meta");
           meta.append(node("span", c.kind), badge(c.state));
           e.append(meta, node("h3", c.statement));
+          const scores = state.claim_revisions
+            .filter((r) => r.claim_id === c.id && r.confidence !== null)
+            .map((r) => r.confidence);
+          if (c.confidence !== null && c.confidence !== undefined)
+            e.append(
+              blank(
+                `Confidence ${c.confidence}%${scores.length > 1 && scores.at(-1) < scores.at(-2) ? ` · lowered from ${scores.at(-2)}%` : ""}`,
+              ),
+            );
           for (const link of state.claim_evidence.filter(
             (x) => x.claim_id === c.id,
           )) {
@@ -326,6 +468,7 @@ function render() {
           ),
         ]),
   );
+  renderMemory();
   browserStatus().catch((error) => message(error.message));
   desktopStatus().catch((error) => message(error.message));
 }
@@ -512,6 +655,7 @@ $("new-task").onclick = () => {
   $("task-dialog").showModal();
 };
 $("new-evidence").onclick = () => $("evidence-dialog").showModal();
+$("new-memory").onclick = () => memoryDialog();
 $("new-claim").onclick = () => {
   for (const field of ["supporting", "contradicting"])
     $("claim-form").elements[field].replaceChildren(
@@ -574,6 +718,19 @@ form("evidence-form", (f) =>
     uri: f.get("uri"),
     excerpt: f.get("excerpt"),
   }),
+);
+form("memory-form", (f) =>
+  $("memory-form").dataset.revise
+    ? api("/api/memory/revise", {
+        id: $("memory-form").dataset.revise,
+        statement: f.get("statement"),
+      })
+    : api("/api/memory", {
+        scope: f.get("scope"),
+        kind: f.get("kind"),
+        statement: f.get("statement"),
+        pid: f.get("scope") === "project" ? selected : null,
+      }),
 );
 form("claim-form", (f) =>
   api("/api/claims", {

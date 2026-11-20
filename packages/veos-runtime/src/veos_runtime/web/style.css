@@ -318,6 +318,8 @@ h2 {
 .badge.blocked,
 .badge.pending,
 .badge.contested,
+.badge.proposed,
+.badge.ambiguous,
 .badge.needs_review {
   background: #fff2dc;
   color: #996526;

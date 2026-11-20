@@ -290,31 +290,44 @@ def main():
       )
 
       before = paths[0].read_bytes()
-      input_before = paths[1].read_bytes()
-      autoreload_before = option("misc.disable_autoreload")["bool"]
-      command("hyprctl", "eval", "hl.config({ misc = { disable_autoreload = true } })")
       try:
-        paths[1].write_bytes(
-          input_before + b"\nhl.config({ general = { veos_invalid_option = true } })\n"
-        )
+        proposal("configure", {"area": "appearance", "values": {"rounding": 999}})
+      except Refused:
+        pass
+      else:
+        raise AssertionError("Unsupported settings were accepted")
+      assert paths[0].read_bytes() == before
+      passed("unsupported settings rejected before modifying the live configuration")
+
+      # One command failure tests the real write/rollback transaction without
+      # deliberately corrupting a user's Lua config. The installed Hyprland
+      # 0.56.2 can deadlock on malformed Lua; that separate upstream failure
+      # cannot be recovered by reloading the same unresponsive compositor.
+      real_runner = controls.runner
+      reload_failed = False
+
+      def fail_first_reload(argv, **kwargs):
+        nonlocal reload_failed
+        if argv == ["hyprctl", "reload"] and not reload_failed:
+          reload_failed = True
+          return subprocess.CompletedProcess(argv, 1)
+        return real_runner(argv, **kwargs)
+
+      controls.runner = fail_first_reload
+      try:
         tid, aid = proposal(
           "configure", {"area": "appearance", "values": {"rounding": 17}}
         )
         assert desktop.decide(aid, True)["state"] == "failed", store.task_actions(tid)
+        assert reload_failed
         assert paths[0].read_bytes() == before
       finally:
-        paths[1].write_bytes(input_before)
-        command("hyprctl", "reload")
-        command(
-          "hyprctl",
-          "eval",
-          "hl.config({ misc = { disable_autoreload = "
-          + str(autoreload_before).lower()
-          + " } })",
-        )
+        controls.runner = real_runner
       assert command("hyprctl", "configerrors") in {"", "ok"}
       assert option("decoration.rounding")["int"] == 13
-      passed("actual compositor parse failure rolls back the changed settings file")
+      passed(
+        "injected reload failure restores the file, followed by a real recovery reload"
+      )
 
       wait_for(shell_ready, "Shell did not become ready")
       act("open_settings", {"area": "appearance"})

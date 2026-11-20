@@ -73,7 +73,9 @@ def execute(operation, args):
       text = item.get_text_iface() if "Text" in interfaces else None
       if text:
         count = text.get_character_count()
-        content = text.get_text(0, min(count, 10000))
+        # GI returns Accessible, whose legacy get_text() names the interface.
+        # Call the Text interface explicitly to read a character range.
+        content = Atspi.Text.get_text(text, 0, min(count, 10000)) or ""
         row["text"] = content[:2000]
         row["text_length"] = count
         row["text_truncated"] = count > 2000
@@ -135,7 +137,9 @@ def execute(operation, args):
     delivered = editor.set_text_contents(text)
     reader = item.get_text_iface()
     observed = (
-      reader.get_text(0, min(reader.get_character_count(), 10001)) if reader else None
+      Atspi.Text.get_text(reader, 0, min(reader.get_character_count(), 10001))
+      if reader
+      else None
     )
     return {
       "input_completed": bool(delivered),

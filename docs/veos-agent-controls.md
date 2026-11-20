@@ -44,6 +44,8 @@ The agent first calls `available_tools`, which includes operation availability, 
 
 Configuration fields currently supported directly: appearance `gaps_in`, `gaps_out`, `border_size`, `rounding`; input `sensitivity`, `natural_scroll`, `tap_to_click`. Other customizations open the existing Omarchy settings/editor. No arbitrary package installation, arbitrary Lua, arbitrary screen coordinates or unrestricted OS command is exposed through this tool.
 
+Generated overrides target the current Lua option names, including `input.touchpad.tap_to_click`, following the [Hyprland configuration contract](https://github.com/hyprwm/hyprland-wiki/blob/main/content/configuring/core/config-options.md).
+
 The settings panel exposes branding, themes/backgrounds, fonts/icons, bar/dock, window/layout settings, keyboard/input, default apps, plugins, native agent selection, networking, monitor configuration, startup and notifications. OS agent selection is Omarchy's native setting; it does not add a new executable adapter to the Mission Desk worker. Codex and Claude remain the worker's qualified adapter implementations; Hermes is not silently mapped to either.
 
 The native adapter refuses browser/terminal processes, web-document trees and Mission Desk administration. It cannot be used to bypass project browser grants or operate its own action-review page. An incomplete native tree cannot be used to propose a mutation. Applications with embedded web interfaces may therefore need a supported browser/API integration instead.

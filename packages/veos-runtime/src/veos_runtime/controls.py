@@ -335,7 +335,7 @@ class Controls:
       "input": {
         "sensitivity": ("input.sensitivity", float, -1, 1),
         "natural_scroll": ("input.touchpad.natural_scroll", bool, None, None),
-        "tap_to_click": ("input.touchpad.tap-to-click", bool, None, None),
+        "tap_to_click": ("input.touchpad.tap_to_click", bool, None, None),
       },
     }
     if area not in schema or set(values) - set(schema[area]):

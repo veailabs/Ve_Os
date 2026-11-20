@@ -35,6 +35,7 @@ def main():
   assert os.environ.get("WAYLAND_DISPLAY")
   artifacts = Path(os.environ["OMARCHY_ACCEPTANCE_DIR"])
   artifacts.mkdir(parents=True, exist_ok=True)
+  (artifacts / "version.log").write_text(command("hyprctl", "version") + "\n")
   config = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config")) / "hypr"
   paths = [config / "looknfeel.lua", config / "input.lua"]
   original_files = {p: p.read_bytes() if p.exists() else None for p in paths}
@@ -51,6 +52,7 @@ def main():
   checks = []
   changed_theme = changed_font = False
   cleanup_errors = []
+  native_fixture = None
 
   def capture(name):
     subprocess.run(["grim", str(artifacts / (name + ".png"))], check=True, timeout=15)
@@ -134,6 +136,78 @@ def main():
         "installed application discovery, reviewed launch and actual Wayland focus"
       )
 
+      native_fixture = subprocess.Popen(
+        [
+          "/usr/bin/python3",
+          str(Path(__file__).with_name("native_accessibility_smoke.py")),
+          "--fixture",
+        ],
+        env={
+          **os.environ,
+          "GDK_BACKEND": "wayland",
+          "NO_AT_BRIDGE": "0",
+          "GTK_MODULES": "atk-bridge",
+        },
+        stdout=subprocess.DEVNULL,
+      )
+
+      def native_snapshot():
+        assert native_fixture.poll() is None, "GTK Wayland fixture exited"
+        try:
+          snapshot = read("native_read", {"app_pid": native_fixture.pid})
+        except Refused:
+          return None
+        return (
+          snapshot
+          if any(n["name"] == "Message" for n in snapshot.get("nodes", []))
+          else None
+        )
+
+      snapshot = wait_for(
+        native_snapshot, "GTK Wayland application did not expose accessibility"
+      )
+      assert "NEVER_EXPOSE_NATIVE_SECRET" not in json.dumps(snapshot)
+      entry = next(n for n in snapshot["nodes"] if n["name"] == "Message")
+      result = act(
+        "native_fill",
+        {
+          "app_pid": native_fixture.pid,
+          "node": entry["id"],
+          "revision": snapshot["revision"],
+          "text": "Wayland edit",
+        },
+      )
+      assert result["result"]["verified"] is True
+      snapshot = native_snapshot()
+      assert (
+        next(n for n in snapshot["nodes"] if n["name"] == "Message")["text"]
+        == "Wayland edit"
+      )
+      capture("success-veos-02b-native-edited")
+      button = next(n for n in snapshot["nodes"] if n["name"] == "Apply fixture")
+      result = act(
+        "native_action",
+        {
+          "app_pid": native_fixture.pid,
+          "node": button["id"],
+          "revision": snapshot["revision"],
+          "action": button["actions"][0],
+        },
+      )
+      assert result["result"]["input_completed"] is True
+      assert result["business_outcome_confirmed"] is False
+      assert (
+        next(n for n in native_snapshot()["nodes"] if n["name"] == "Message")["text"]
+        == "Applied"
+      )
+      capture("success-veos-02c-native-applied")
+      native_fixture.terminate()
+      native_fixture.wait(timeout=10)
+      native_fixture = None
+      passed(
+        "real Wayland GTK accessibility, reviewed edit/action, secret omission and separate outcome observation"
+      )
+
       act("clipboard_write", {"text": "VeOS disposable clipboard baseline"})
       tid, aid = proposal("clipboard_write", {"text": "must wait for approval"})
       assert read("clipboard_read")["text"] == "VeOS disposable clipboard baseline"
@@ -202,9 +276,11 @@ def main():
 
       before = paths[0].read_bytes()
       input_before = paths[1].read_bytes()
+      autoreload_before = option("misc.disable_autoreload")["bool"]
+      command("hyprctl", "eval", "hl.config({ misc = { disable_autoreload = true } })")
       try:
         paths[1].write_bytes(
-          input_before + b'\nerror("VeOS disposable reload fault")\n'
+          input_before + b"\nhl.config({ general = { veos_invalid_option = true } })\n"
         )
         tid, aid = proposal(
           "configure", {"area": "appearance", "values": {"rounding": 17}}
@@ -214,6 +290,13 @@ def main():
       finally:
         paths[1].write_bytes(input_before)
         command("hyprctl", "reload")
+        command(
+          "hyprctl",
+          "eval",
+          "hl.config({ misc = { disable_autoreload = "
+          + str(autoreload_before).lower()
+          + " } })",
+        )
       assert command("hyprctl", "configerrors") in {"", "ok"}
       assert option("decoration.rounding")["int"] == 13
       passed("actual compositor parse failure rolls back the changed settings file")
@@ -228,9 +311,25 @@ def main():
       command("omarchy-menu", "close")
       passed("existing appearance settings panel opens in the Wayland shell")
   except BaseException:
-    capture("failure-veos-controls")
+    for label, args in {
+      "version": ["hyprctl", "version"],
+      "configerrors": ["hyprctl", "configerrors"],
+      "windows": ["hyprctl", "clients", "-j"],
+    }.items():
+      try:
+        diagnostic = subprocess.run(args, capture_output=True, text=True, timeout=5)
+        (artifacts / (label + ".log")).write_text(diagnostic.stdout + diagnostic.stderr)
+      except subprocess.TimeoutExpired:
+        (artifacts / (label + ".log")).write_text("Compositor command timed out\n")
+    try:
+      capture("failure-veos-controls")
+    except subprocess.SubprocessError:
+      pass
     raise
   finally:
+    if native_fixture is not None:
+      native_fixture.terminate()
+      native_fixture.wait(timeout=10)
     cleanup_call("omarchy-menu", "close")
     if changed_theme:
       cleanup_call("omarchy-theme-set", original_theme)

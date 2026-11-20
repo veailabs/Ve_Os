@@ -1,4 +1,6 @@
-# Uppdateringar
+# Ve OS — Uppdateringar
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy och dina paket hålls uppdaterade via _Uppdatera > Omarchy_ i Omarchy-menyn (`Super + Space`).
 

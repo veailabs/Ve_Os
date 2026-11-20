@@ -8,7 +8,7 @@ Bawat hotkey ay nasa isang plane, na itinatakda ng mga modifier nito, at bawat p
 
 | Antas | Ano ang nandoon | Mga halimbawa |
 | --- | --- | --- |
-| `Super + key` | Ang sistema: mga window, workspace, layout, at pangunahing menu | `Super + Space` menu ng Omarchy, `Super + W` isara ang window, `Super + F` buong screen |
+| `Super + key` | Ang sistema: mga window, workspace, layout, at pangunahing menu | `Super + Space` menu ng Ve OS, `Super + W` isara ang window, `Super + F` buong screen |
 | `Super + Shift + key` | Mga app | `Super + Shift + B` browser, `Super + Shift + E` email, `Super + Shift + N` editor |
 | `Super + Ctrl + key` | Mga panel at menu ng sistema | `Super + Ctrl + A` audio, `Super + Ctrl + N` network, `Super + Ctrl + C` menu ng pagkuha |
 | `Super + Ctrl + Alt + key` | Mabilisang mga aksyon at paunawa | `Super + Ctrl + Alt + T` ipakita ang oras, `Super + Ctrl + Alt + B` baterya, `Super + Ctrl + Alt + C` screenshot |
@@ -34,7 +34,7 @@ Kung hindi angkop sa iyo ang isang default (halimbawa, gusto mo ang `Super + Shi
 
 | Hotkey                  | Tungkulin              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Menu ng Omarchy (mga app at lahat ng iba pa)    |
+| `Super + Space`           | Menu ng Ve OS (mga app at lahat ng iba pa)    |
 | `Super + Alt + Space` | Grid ng mga app |
 | `Super + Escape` | Menu ng sistema (suspend, restart, atbp.)  |
 | `Super + Ctrl + L` | I-lock ang computer |
@@ -172,7 +172,7 @@ Baguhin/magdagdag ng mga binding sa `~/.config/hypr/bindings.lua`.
 | `Super + V`           | I-paste    |
 | `Super + Ctrl + V`           | Tagapamahala ng clipboard    |
 
-Karaniwan sa Linux, kailangan mo ng `Ctrl + Shift + C/V` para mag-copy'n'paste sa terminal at `Ctrl + C/V` para gawin ito sa lahat ng iba pang lugar. Gumagana ang mga pinag-isang clipboard hotkey ng Omarchy na ito kahit saan.
+Karaniwan sa Linux, kailangan mo ng `Ctrl + Shift + C/V` para mag-copy'n'paste sa terminal at `Ctrl + C/V` para gawin ito sa lahat ng iba pang lugar. Gumagana ang mga pinag-isang clipboard hotkey ng Ve OS na ito kahit saan.
 
 ## Pagkuha
 
@@ -194,7 +194,7 @@ Karaniwan sa Linux, kailangan mo ng `Ctrl + Shift + C/V` para mag-copy'n'paste s
 
 Sa mga screenrecording, tatanungin ka muna ng hotkey kung aling audio ang gusto mo, pagkatapos ay magsisimula ang pag-record. Pindutin ito ulit para huminto. Tingnan ang [mga screenshot at pag-record](12-screenshots-recording.md) para sa mga detalye.
 
-Maa-access din ang lahat ng opsyon sa pagkuha sa ilalim ng _Trigger > Capture_ sa menu ng Omarchy (`Super + Space`).
+Maa-access din ang lahat ng opsyon sa pagkuha sa ilalim ng _Trigger > Capture_ sa menu ng Ve OS (`Super + Space`).
 
 ## Mga abiso
 
@@ -216,9 +216,9 @@ Maa-access din ang lahat ng opsyon sa pagkuha sa ilalim ng _Trigger > Capture_ s
 | `Super + Backspace` | I-toggle ang transparency sa isang window |
 | `Super + Ctrl + Backspace` | I-toggle ang parisukat na aspect ng iisang window |
 
-Ang mga karagdagang background image ay nasa `~/.config/omarchy/backgrounds/<theme name>`. Maa-access din sa pamamagitan ng _Install > Style > Background_ sa menu ng Omarchy.
+Ang mga karagdagang background image ay nasa `~/.config/omarchy/backgrounds/<theme name>`. Maa-access din sa pamamagitan ng _Install > Style > Background_ sa menu ng Ve OS.
 
-Maa-access din ang lahat ng opsyon sa estilo sa ilalim ng _Style_ sa menu ng Omarchy (`Super + Space`).
+Maa-access din ang lahat ng opsyon sa estilo sa ilalim ng _Style_ sa menu ng Ve OS (`Super + Space`).
 
 ## Mga toggle
 
@@ -319,7 +319,7 @@ Dapat patakbuhin ang mga function na ito sa loob ng isang Tmux session.
 
 ## Terminal ng Ghostty
 
-Ini-install ang Ghostty terminal gamit ang _Install > Terminal_ sa pamamagitan ng menu ng Omarchy.
+Ini-install ang Ghostty terminal gamit ang _Install > Terminal_ sa pamamagitan ng menu ng Ve OS.
 
 | Hotkey                  | Tungkulin              |
 | ----------------------- | --------------------- |

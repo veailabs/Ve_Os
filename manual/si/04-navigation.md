@@ -1,8 +1,8 @@
 # සංචාලනය
 
-Omarchy එකේ හැම දෙයක්ම වෙන්නේ keyboard එක හරහා — _හැම දෙයක්ම!_ පද්ධතිය මුලින්ම පටන් ගන්නකොට, mouse එකෙන් විතරක් ඔබට ඇත්තටම කිසිම දෙයක් කරන්න බැහැ. හැබැයි ඔබට `Super + Space` ඔබලා Omarchy Menu එක පෙන්නගන්න පුළුවන්, මෙතන ඉඳන් ඔබට ඕනෑම දෙයක් වගේ කරන්න පුළුවන්.
+Ve OS එකේ හැම දෙයක්ම වෙන්නේ keyboard එක හරහා — _හැම දෙයක්ම!_ පද්ධතිය මුලින්ම පටන් ගන්නකොට, mouse එකෙන් විතරක් ඔබට ඇත්තටම කිසිම දෙයක් කරන්න බැහැ. හැබැයි ඔබට `Super + Space` ඔබලා Ve OS Menu එක පෙන්නගන්න පුළුවන්, මෙතන ඉඳන් ඔබට ඕනෑම දෙයක් වගේ කරන්න පුළුවන්.
 
-හැබැයි Omarchy menu එක වැඩි වෙලාවක් පද්ධතිය ක්‍රියාත්මක කරන ප්‍රධාන ක්‍රමය වෙන්න අදහස් කරලාවත් නැහැ. අපිට ඊට වඩා වේගවත් වෙන්න පුළුවන්! වැදගත්ම applications ඔක්කොම කෙලින්ම තනි hotkeys වලට සම්බන්ධ කරලා තියෙනවා. ඔබ terminal එක පටන් ගන්නේ `Super + Return` වලින්, browser එකක් `Super + Shift + Return` වලින්. එක පිට එක කරලා බලන්න, එතකොට Hyprland tiling එකේ මැජික් එක ක්‍රියාත්මක වෙන හැටි ඔබට පෙනෙයි:
+හැබැයි Ve OS menu එක වැඩි වෙලාවක් පද්ධතිය ක්‍රියාත්මක කරන ප්‍රධාන ක්‍රමය වෙන්න අදහස් කරලාවත් නැහැ. අපිට ඊට වඩා වේගවත් වෙන්න පුළුවන්! වැදගත්ම applications ඔක්කොම කෙලින්ම තනි hotkeys වලට සම්බන්ධ කරලා තියෙනවා. ඔබ terminal එක පටන් ගන්නේ `Super + Return` වලින්, browser එකක් `Super + Shift + Return` වලින්. එක පිට එක කරලා බලන්න, එතකොට Hyprland tiling එකේ මැජික් එක ක්‍රියාත්මක වෙන හැටි ඔබට පෙනෙයි:
 
  ![navigation-browser-terminal](images/navigation-browser-terminal.webp)
 
@@ -30,7 +30,7 @@ Monitor එකකට වඩා තියෙනවා නම්, හැම monito
 
 ### Dwindle එදිරිව scrolling layout
 
-Omarchy එකේ default layout එකට කියන්නේ dwindle කියලා. ඒක workspace එකක් උඩ ඔබ අරින windows ඔක්කොම හැම වෙලාවෙම පේන විදියට තියනවා, ඒවා පොඩි කරන්න සිද්ධ වුණත් එහෙමයි.
+Ve OS එකේ default layout එකට කියන්නේ dwindle කියලා. ඒක workspace එකක් උඩ ඔබ අරින windows ඔක්කොම හැම වෙලාවෙම පේන විදියට තියනවා, ඒවා පොඩි කරන්න සිද්ධ වුණත් එහෙමයි.
 
  ![navigation-dwindle-layout](images/navigation-dwindle-layout.webp)
 
@@ -56,7 +56,7 @@ hl.config({
 
 Floating workspace එකක් සාම්ප්‍රදායික desktop එකක් වගේ වැඩ කරනවා: windows එක උඩ එක වැටෙනවා, ඔබම ඒවා move කරලා size එක හදනවා. හැම window එකකටම ඔබේ theme එකේ පාටින් titlebar එකක් ලැබෙනවා, minimize, maximize, සහ close කරන්න buttons එක්ක. `Super + M` focus වෙලා තියෙන window එකත් minimize කරනවා. Minimize වුණ window එකක් dock එකේ ඉන්නවා; ඒක ආපහු ගේන්න ඒකේ app එක click කරන්න. Window එකක් ඉස්සරහට ගේන්න ඒක click කරන්න. ඕනෑම අද්දරකින් හරි කොනකින් හරි ඒක resize කරන්න. Top bar එක පේන ගමන් window එක maximize කරන්න titlebar එක double-click කරන්න, ඒකේ පරණ size එක ආපහු ගන්න ආයෙත් එහෙම කරන්න. Chrome සහ අනිත් Chromium-based browsers, Disks සහ Document Viewer titlebar එක අතහැරලා ඒ වෙනුවට තමන්ගේම header එක පාවිච්චි කරනවා; `Super + Alt + F` ඒවා maximize කරනවා, සහ `Super + M` ඒවා minimize කරනවා.
 
-Floating workspace එකක් dock එකකුත් පෙන්නනවා, ඔබේ pinned apps, run වෙන හැම දෙයක්ම, සහ apps button එක පිටිපස්සේ හැම app එකකම grid එකක් එක්ක, ඒක `Super + Alt + Space` වලිනුත් Omarchy menu එකේ _Apps_ වලිනුත් අරිනවා. Grid එක උඩ app එකක් uninstall කරන්න ඒක right-click කරන්න, නැත්නම් `Delete` ඔබන්න. App එකක් අරින්න, නැත්නම් ඒකේ window එක ඉස්සරහට ගේන්න ඒක click කරන්න; ඒකේ windows අතර cycle වෙන්න ආයෙත් click කරන්න. Files ඔබ ඉන්න workspace එකෙන් window එකක් විතරක් ආපහු ගේනවා, නැත්නම් අලුත් එකක් අරිනවා, සහ Terminal සහ Agent හැම වෙලාවෙම තවත් එකක් පටන් ගන්නවා, හැබැයි minimize වෙච්ච window එකක් මුලින්ම ආපහු එනවා. Middle-click අලුත් window එකක් අරිනවා. Icon එකක් dock එක දිගේ drag කරලා ඒක move කරන්න; run වෙන app එකක් අනිත් ඒවා අතරට drag කළොත් ඒක එතනම ඉතිරි වෙනවා. App එකක් dock එකේ තියාගන්න, ඒකෙන් අයින් කරන්න, නැත්නම් ඒක quit කරන්න right-click කරන්න. Dock එක fullscreen window එකකට ඉඩ දීලා අයින් වෙනවා. Dock එක වෙනත් අද්දරකට ගෙනියන්න, නැත්නම් pointer එක ඒකේ අද්දරට එනකන් ඒක හංගන්න apps button එක right-click කරන්න. ඒ position එක _Appearance > Dock > Dock Position_ යටතෙත් තියෙනවා, සහ `omarchy dock position left` සහ `omarchy dock autohide on` terminal එකකින් දෙකම set කරනවා. ඔබ dock එකේ තියාගන්න apps run නොවෙන වෙලාවට faded වෙලා තියෙනවා.
+Floating workspace එකක් dock එකකුත් පෙන්නනවා, ඔබේ pinned apps, run වෙන හැම දෙයක්ම, සහ apps button එක පිටිපස්සේ හැම app එකකම grid එකක් එක්ක, ඒක `Super + Alt + Space` වලිනුත් Ve OS menu එකේ _Apps_ වලිනුත් අරිනවා. Grid එක උඩ app එකක් uninstall කරන්න ඒක right-click කරන්න, නැත්නම් `Delete` ඔබන්න. App එකක් අරින්න, නැත්නම් ඒකේ window එක ඉස්සරහට ගේන්න ඒක click කරන්න; ඒකේ windows අතර cycle වෙන්න ආයෙත් click කරන්න. Files ඔබ ඉන්න workspace එකෙන් window එකක් විතරක් ආපහු ගේනවා, නැත්නම් අලුත් එකක් අරිනවා, සහ Terminal සහ Agent හැම වෙලාවෙම තවත් එකක් පටන් ගන්නවා, හැබැයි minimize වෙච්ච window එකක් මුලින්ම ආපහු එනවා. Middle-click අලුත් window එකක් අරිනවා. Icon එකක් dock එක දිගේ drag කරලා ඒක move කරන්න; run වෙන app එකක් අනිත් ඒවා අතරට drag කළොත් ඒක එතනම ඉතිරි වෙනවා. App එකක් dock එකේ තියාගන්න, ඒකෙන් අයින් කරන්න, නැත්නම් ඒක quit කරන්න right-click කරන්න. Dock එක fullscreen window එකකට ඉඩ දීලා අයින් වෙනවා. Dock එක වෙනත් අද්දරකට ගෙනියන්න, නැත්නම් pointer එක ඒකේ අද්දරට එනකන් ඒක හංගන්න apps button එක right-click කරන්න. ඒ position එක _Appearance > Dock > Dock Position_ යටතෙත් තියෙනවා, සහ `omarchy dock position left` සහ `omarchy dock autohide on` terminal එකකින් දෙකම set කරනවා. ඔබ dock එකේ තියාගන්න apps run නොවෙන වෙලාවට faded වෙලා තියෙනවා.
 
 අලුත් workspaces, සහ ඔබ `Super + L` වලින් තමන්ගේම layout එකක් දීලා නැති ඕනෑම එකක්, default layout එක පාවිච්චි කරනවා. Default එක වෙනස් කළොත් windows නැති හැම workspace එකක්ම ඒකට reset වෙනවා, windows තියෙන එකක් තමන්ගේ තියෙන layout එකම තියාගන්නවා. Dock එකට minimize වෙච්ච window එකක් ඒක අතහැරපු workspace එක උඩ window එකක් විදියට තාමත් ගණන් ගන්නවා. ඒක _Appearance > Workspace Layout_ යටතේ තෝරන්න: Tiling, Scrolling, නැත්නම් Floating. `omarchy-hyprland-workspace-layout-default scrolling` terminal එකකින් ඒක set කරනවා.
 

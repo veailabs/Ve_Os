@@ -1,10 +1,10 @@
 # Interruttori, inattività e lo screensaver
 
-Molte delle cose che cambi giorno per giorno non sono davvero un'impostazione. Sono una modalità che attivi per un'ora e poi disattivi di nuovo: la luce notturna mentre lavori fino a tardi, il non disturbare mentre fai una presentazione, restare attivo mentre guardi qualcosa. Omarchy le chiama interruttori, e funzionano tutti allo stesso modo — una scorciatoia, una voce di menu e un comando, tutti sullo stesso interruttore.
+Molte delle cose che cambi giorno per giorno non sono davvero un'impostazione. Sono una modalità che attivi per un'ora e poi disattivi di nuovo: la luce notturna mentre lavori fino a tardi, il non disturbare mentre fai una presentazione, restare attivo mentre guardi qualcosa. Ve OS le chiama interruttori, e funzionano tutti allo stesso modo — una scorciatoia, una voce di menu e un comando, tutti sullo stesso interruttore.
 
 ### Il menu degli interruttori
 
-`Super + Ctrl + O` apre direttamente _Trigger > Toggle_, oppure puoi arrivarci dal menu di Omarchy (`Super + Space`). Tutto ciò che trovi in quell'elenco è un interruttore che puoi attivare o disattivare senza pensare a dove vive lo stato. Gli interruttori per l'aspetto del desktop si trovano accanto, sotto _Appearance_.
+`Super + Ctrl + O` apre direttamente _Trigger > Toggle_, oppure puoi arrivarci dal menu di Ve OS (`Super + Space`). Tutto ciò che trovi in quell'elenco è un interruttore che puoi attivare o disattivare senza pensare a dove vive lo stato. Gli interruttori per l'aspetto del desktop si trovano accanto, sotto _Appearance_.
 
 Dal terminale, gli stessi interruttori sono `omarchy toggle <thing>`. Esegui `omarchy toggle` da solo per vedere l'intero gruppo.
 
@@ -26,7 +26,7 @@ Gli interruttori di touchpad, touchscreen e GPU ibrida si trovano sotto _Trigger
 
 _Appearance_ contiene la barra dei menu e le animazioni, oltre a poche cose che non sono comandi `omarchy toggle` ma si comportano allo stesso modo: la percentuale della batteria nella barra, il layout predefinito degli spazi di lavoro e, sotto _Windows_, gli spazi tra le finestre (`Super + Shift + Backspace`) e l'aspetto quadrato a 1 finestra (`Super + Ctrl + Backspace`).
 
-Quando Hyprland non ha una GPU con cui disegnare e renderizza invece sulla CPU (llvmpipe), come sui Mac la cui GPU non è ancora supportata, nella maggior parte delle macchine virtuali, o quando un driver grafico non si carica, Omarchy disattiva animazioni, sfocatura e ombre per quella sessione e te lo comunica una volta con una notifica. _Appearance > Animations On_ le riattiva, e Omarchy lo ricorda anche per le sessioni successive.
+Quando Hyprland non ha una GPU con cui disegnare e renderizza invece sulla CPU (llvmpipe), come sui Mac la cui GPU non è ancora supportata, nella maggior parte delle macchine virtuali, o quando un driver grafico non si carica, Ve OS disattiva animazioni, sfocatura e ombre per quella sessione e te lo comunica una volta con una notifica. _Appearance > Animations On_ le riattiva, e Ve OS lo ricorda anche per le sessioni successive.
 
 La maggior parte di questi è solo un file flag sotto `~/.local/state/omarchy/toggles/`. Se vuoi usarne uno in uno script, `omarchy-toggle-enabled` ti dà un codice di uscita invece di costringerti a cercarlo:
 
@@ -63,11 +63,11 @@ Avvia quindi hyprsunset all'accesso aggiungendo `o.launch_on_start("hyprsunset")
 
 Non si perde nulla, però. Le notifiche silenziate vengono trattenute: rimetti le ultime sullo schermo con `Super + Shift + Alt + ,`. Vedi [avvisi](10-notices.md) per il resto.
 
-Due tipi di messaggi passano comunque: i toast di conferma di Omarchy per qualcosa che hai appena fatto ("Theme changed", "Screenshot saved"), e gli avvisi critici inviati da riga di comando. Le app di chat che marcano tutto come critico per forzarti la mano non rientrano in questa categoria.
+Due tipi di messaggi passano comunque: i toast di conferma di Ve OS per qualcosa che hai appena fatto ("Theme changed", "Screenshot saved"), e gli avvisi critici inviati da riga di comando. Le app di chat che marcano tutto come critico per forzarti la mano non rientrano in questa categoria.
 
 ### Inattività
 
-La shell di Omarchy gestisce il comportamento in inattività, e i tempi sono un blocco `idle` di primo livello in `~/.config/omarchy/shell.json`:
+La shell di Ve OS gestisce il comportamento in inattività, e i tempi sono un blocco `idle` di primo livello in `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Qui si parla di blocco e screensaver, non di alimentazione. Sospensione e iberna
 
 ### Lo screensaver
 
-Lo screensaver di Omarchy è arte ASCII che passa attraverso effetti di testo casuali, un'istanza per monitor. Qualsiasi tasto o movimento del mouse lo chiude.
+Lo screensaver di Ve OS è arte ASCII che passa attraverso effetti di testo casuali, un'istanza per monitor. Qualsiasi tasto o movimento del mouse lo chiude.
 
 Puoi avviarlo su richiesta da _System > Screensaver_ (`Super + Esc`), che lo forza anche se hai disattivato lo screensaver per inattività. Per impostazione predefinita non c'è una scorciatoia associata.
 
 `omarchy toggle screensaver` è ciò che disattiva quello per inattività, se preferisci passare direttamente dal lavoro al blocco. Qualsiasi tasto, clic, scorrimento o movimento del mouse lo chiude.
 
-Il logo che disegna è tuo da cambiare, sotto _Appearance > Branding > Screensaver_. Carica un png o un svg e Omarchy lo converte in ASCII. Vedi [branding](41-branding.md).
+Il logo che disegna è tuo da cambiare, sotto _Appearance > Branding > Screensaver_. Carica un png o un svg e Ve OS lo converte in ASCII. Vedi [branding](41-branding.md).
 
 ### La schermata di blocco
 
-`Super + Ctrl + L` blocca la macchina. Questo esegue la schermata di blocco dalla shell di Omarchy, oscura il display, reimposta il layout della tastiera sul primo in modo da non digitare la password nell'alfabeto sbagliato e — se lo hai in esecuzione — blocca 1Password all'uscita.
+`Super + Ctrl + L` blocca la macchina. Questo esegue la schermata di blocco dalla shell di Ve OS, oscura il display, reimposta il layout della tastiera sul primo in modo da non digitare la password nell'alfabeto sbagliato e — se lo hai in esecuzione — blocca 1Password all'uscita.
 
 La schermata di blocco accetta una password, e accetterà anche un'impronta digitale una volta che ne avrai configurata una. Questo, e gli altri modi per autenticarti, sono trattati in [autenticazione hardware](37-hardware-authentication.md).

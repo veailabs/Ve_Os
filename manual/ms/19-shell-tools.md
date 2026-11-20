@@ -1,6 +1,6 @@
 # Alatan Shell
 
-Selain alatan Linux standard, Omarchy juga dilengkapi dengan banyak alatan shell yang dipertingkat. Berikut ialah yang utama.
+Selain alatan Linux standard, Ve OS juga dilengkapi dengan banyak alatan shell yang dipertingkat. Berikut ialah yang utama.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Manual penuh boleh didapati melalui `man yt-dlp`.
 
 [try](https://github.com/tobi/try) memudahkan pengurusan eksperimen pengaturcaraan dengan direktori bercop tarikh. Semua eksperimen berada dalam `~/Work/tries` dan anda boleh mengaksesnya melalui `try`.
 
-Omarchy tidak menambah direktori `bin/` projek ke `PATH` secara automatik. Jalankan alatan tempatan projek yang dipercayai dengan laluan relatif yang eksplisit, seperti `bin/rails` atau `./bin/dev`.
+Ve OS tidak menambah direktori `bin/` projek ke `PATH` secara automatik. Jalankan alatan tempatan projek yang dipercayai dengan laluan relatif yang eksplisit, seperti `bin/rails` atau `./bin/dev`.

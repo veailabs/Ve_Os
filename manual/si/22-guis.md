@@ -20,7 +20,7 @@ Obsidian පුද්ගලික, වාණිජ සහ ලාභ නොලබ
 
 Obsidian iOS සහ Android මත වන ජංගම යෙදුම් සමඟ සමමුහුර්ත කිරීම සඳහා [වාණිජ අතිරේකයක්ද](https://obsidian.md/sync) පිරිනමයි. (https://obsidian.md/pricing).
 
-ඔබ Obsidian ආරම්භ කරන්නේ `Super + Shift + O` මඟිනි. Theme syncing භාවිත කිරීමට, settings යටතේ ඔබ `Omarchy` theme එක තෝරා ගත යුතුය.
+ඔබ Obsidian ආරම්භ කරන්නේ `Super + Shift + O` මඟිනි. Theme syncing භාවිත කිරීමට, settings යටතේ ඔබ `Ve OS` theme එක තෝරා ගත යුතුය.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Obsidian iOS සහ Android මත වන ජංගම යෙදුම් සම
 
 [LocalSend](https://localsend.org/) මඟින් ඔබට එම යෙදුම ධාවනය වන එකම ජාලයේ ඇති වෙනත් උපාංගවලට, Apple හි AirDrop මෙන්, ගොනු යැවිය හැක. කෙසේ වෙතත්, එය cross-platform බැවින් ඔබට Windows, macOS, Android, iOS සහ ඇත්තෙන්ම Linux වෙත සහ ඉන් පිටතට ගොනු යැවිය හැක.
 
-ඔබට Share menu එක `Super + Ctrl + S` මත හෝ Omarchy menu එකේ _Trigger > Share_ යටතේ විවෘත කළ හැක. එය ඔබට විකල්ප හතරක් ලබා දෙයි:
+ඔබට Share menu එක `Super + Ctrl + S` මත හෝ Ve OS menu එකේ _Trigger > Share_ යටතේ විවෘත කළ හැක. එය ඔබට විකල්ප හතරක් ලබා දෙයි:
 
 - **Clipboard** මඟින් ඔබ පිටපත් කර ඇති ඕනෑම දෙයක් පෙළ ගොනුවක් ලෙස යවයි. ඔබටම email නොකර ඔබේ දුරකථනයට link එකක් හෝ snippet එකක් ලබා ගැනීම සඳහා විශිෂ්ටයි.
 - **File** මඟින් ඔබට එකවර කිහිපයක් තෝරා ගත හැකි file picker එකක් විවෘත කරයි.
@@ -55,7 +55,7 @@ Terminal එකෙන්ද එම දෙයම `omarchy share clipboard`, `omar
 
 ඔබට file manager එකෙන් සෘජුවමද යැවිය හැක: Nautilus හි ඕනෑම තේරීමක් මත right-click කර _Send via LocalSend_ තෝරන්න.
 
-Omarchy හි firewall එක පෙරනිමියෙන් LocalSend හි port එක හැර වසා ඇති බැවින්, මෙය අලුත් install එකක කිසිදු සැකසීමකින් තොරවම ක්‍රියා කරයි. [ආරක්ෂාව](48-security.md) බලන්න.
+Ve OS හි firewall එක පෙරනිමියෙන් LocalSend හි port එක හැර වසා ඇති බැවින්, මෙය අලුත් install එකක කිසිදු සැකසීමකින් තොරවම ක්‍රියා කරයි. [ආරක්ෂාව](48-security.md) බලන්න.
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Omarchy හි firewall එක පෙරනිමියෙන් LocalSend හ�
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) යනු Omarchy හිම ඇති 3D chess ක්‍රීඩාවයි. එකම පරිගණකයේ මිතුරෙකු සමඟ හෝ මට්ටම් තුනක ඇති built-in ප්‍රතිවාදියාට එරෙහිව, ඒ ඒ ආකාරයෙන් චලනය වන මූර්තිමත් කට්ටල හතරක් මත ක්‍රීඩා කරන්න: orbital craft, කැටයම් කළ දැව සහ ඇත්දළ, වන සතුන් සහ candy. ක්‍රීඩාවලට clock එකක් නැති අතර සෑම move එකකින් පසුවම save වේ.
+[Checkmate](https://github.com/omacom/checkmate) යනු Ve OS හිම ඇති 3D chess ක්‍රීඩාවයි. එකම පරිගණකයේ මිතුරෙකු සමඟ හෝ මට්ටම් තුනක ඇති built-in ප්‍රතිවාදියාට එරෙහිව, ඒ ඒ ආකාරයෙන් චලනය වන මූර්තිමත් කට්ටල හතරක් මත ක්‍රීඩා කරන්න: orbital craft, කැටයම් කළ දැව සහ ඇත්දළ, වන සතුන් සහ candy. ක්‍රීඩාවලට clock එකක් නැති අතර සෑම move එකකින් පසුවම save වේ.
 
 ඔබ Checkmate ආරම්භ කරන්නේ application launcher එක හරහාය (`Super + Space`), එහි එය Chess ලෙස ලැයිස්තුගත කර ඇත. සෑම shortcut එකක්ම බැලීමට එහි ඇතුළත `?` ඔබන්න.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) යනු Omarchy හිම ඇති Klondike solitaire එකයි. Passes සඳහා සීමාවක් නොමැතිව, card series හතරක් තුළ තුනක් අදින්න: එකක් ඔබේ theme එකේ වර්ණවලින් ඇඳ ඇති අතර, තුනකට තමන්ගේම පෙනුමක් ඇත. Card එකක් ක්ලික් කර පසුව එය යන තැන ක්ලික් කරන්න, එය drag කරන්න, නැතහොත් හොඳම තැනට යැවීමට double-click කරන්න. ක්‍රීඩා සෑම move එකකින් පසුවම save වේ.
+[Cards](https://github.com/omacom/cards) යනු Ve OS හිම ඇති Klondike solitaire එකයි. Passes සඳහා සීමාවක් නොමැතිව, card series හතරක් තුළ තුනක් අදින්න: එකක් ඔබේ theme එකේ වර්ණවලින් ඇඳ ඇති අතර, තුනකට තමන්ගේම පෙනුමක් ඇත. Card එකක් ක්ලික් කර පසුව එය යන තැන ක්ලික් කරන්න, එය drag කරන්න, නැතහොත් හොඳම තැනට යැවීමට double-click කරන්න. ක්‍රීඩා සෑම move එකකින් පසුවම save වේ.
 
 ඔබ Cards ආරම්භ කරන්නේ application launcher එක හරහාය (`Super + Space`). සෑම shortcut එකක්ම බැලීමට එහි නම ක්ලික් කරන්න, නැතහොත් `?` ඔබන්න.
 
@@ -97,7 +97,7 @@ Omarchy හි firewall එක පෙරනිමියෙන් LocalSend හ�
 
 [Signal](https://signal.org/) යනු E2E encrypted messaging හි පුරෝගාමියා වන අතර, විශාල තාක්ෂණික සමාගම් සමූහයකින් එකක් හරහා යාමට අකමැති ඕනෑම කෙනෙකු සඳහා විශිෂ්ට සන්නිවේදන විකල්පයකි.
 
-ඔබ Signal ආරම්භ කරන්නේ `Super + Shift + G` මඟිනි. එය base install එකේ කොටසක් නොවන බැවින්, ඔබ පළමු වරට එය එබූ විට, Omarchy එය ඔබ වෙනුවෙන් install කිරීමට ඉදිරිපත් වේ (එය Omarchy menu එකේ _Install > Service_ යටතේද ඇත).
+ඔබ Signal ආරම්භ කරන්නේ `Super + Shift + G` මඟිනි. එය base install එකේ කොටසක් නොවන බැවින්, ඔබ පළමු වරට එය එබූ විට, Ve OS එය ඔබ වෙනුවෙන් install කිරීමට ඉදිරිපත් වේ (එය Ve OS menu එකේ _Install > Service_ යටතේද ඇත).
 
 ## Omaview
 

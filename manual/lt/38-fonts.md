@@ -1,12 +1,12 @@
 # Šriftai
 
-Omarchy pagal numatytuosius nustatymus kaip terminalo ir sistemos šriftą naudoja JetBrainsMono Nerd Font.
+Ve OS pagal numatytuosius nustatymus kaip terminalo ir sistemos šriftą naudoja JetBrainsMono Nerd Font.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Tai galite pakeisti per Omarchy meniu (`Super + Space`) esantį _Appearance > Font_ meniu. Taip vienodo pločio šriftas nustatomas visur: terminale, juostoje ir visur kitur, kur jo reikia.
+Tai galite pakeisti per Ve OS meniu (`Super + Space`) esantį _Appearance > Font_ meniu. Taip vienodo pločio šriftas nustatomas visur: terminale, juostoje ir visur kitur, kur jo reikia.
 
-Kitus populiarius programavimo šriftus galite įdiegti per Omarchy meniu _Install > Style > Font_: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono ir Iosevka – visi pasiekiami vienu spustelėjimu, jų Nerd Font versijomis, kad juostos ir terminalo glifai toliau veiktų. Įdiegę vieną iš jų, pasirinkite jį skiltyje _Appearance > Font_.
+Kitus populiarius programavimo šriftus galite įdiegti per Ve OS meniu _Install > Style > Font_: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono ir Iosevka – visi pasiekiami vienu spustelėjimu, jų Nerd Font versijomis, kad juostos ir terminalo glifai toliau veiktų. Įdiegę vieną iš jų, pasirinkite jį skiltyje _Appearance > Font_.
 
 ## Kinų, japonų ir korėjiečių
 

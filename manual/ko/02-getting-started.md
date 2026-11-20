@@ -1,4 +1,6 @@
-# 시작하기
+# Ve OS — 시작하기
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy는 ISO를 사용해 설치합니다. 전체 드라이브를 차지하는 전체 디스크 설치와, 드라이브의 할당되지 않은 공간에 Omarchy를 설치하는 여유 공간 설치 중에서 선택할 수 있습니다 — 여유 공간 설치가 Windows나 다른 OS와 함께 듀얼 부팅하는 방법입니다([이중 부팅 설치](50-dual-boot-install.md) 참조 — 먼저 Windows에서 BitLocker를 꺼야 합니다). 어느 경우든 설치는 기본적으로 전체 암호화를 사용하며, 전체 디스크 옵션은 선택한 드라이브를 지우므로, 기존 드라이브를 사용하기 전에 반드시 백업하세요!
 

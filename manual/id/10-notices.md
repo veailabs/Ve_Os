@@ -10,7 +10,7 @@ Kartu menawarkan apa yang dibawanya: _Salin kode_ untuk kode verifikasi (disimpa
 
 Untuk menggunakannya tanpa mouse, tekan `Super + Ctrl + ,`. Notifikasi terbaru dipilih dan tombol-tombolnya diberi nomor: tekan nomor untuk menggunakan salah satu tombol, `Enter` untuk mengklik notifikasi, `↑` dan `↓` untuk berpindah antar-notifikasi, `Delete` untuk menutup satu notifikasi, dan `Esc` untuk mengembalikan keyboard. Ia juga lepas dengan sendirinya setelah beberapa detik tidak digunakan.
 
-Mendiamkan notifikasi menahannya, kecuali konfirmasi milik Omarchy sendiri, peringatan darurat, dan kode verifikasi, yang baru saja Anda minta beberapa saat lalu. Tampilkan kembali beberapa notifikasi terakhir di layar, ditahan atau tidak, dengan `Super + Shift + Alt + ,`. Riwayat disimpan selama sehari.
+Mendiamkan notifikasi menahannya, kecuali konfirmasi milik Ve OS sendiri, peringatan darurat, dan kode verifikasi, yang baru saja Anda minta beberapa saat lalu. Tampilkan kembali beberapa notifikasi terakhir di layar, ditahan atau tidak, dengan `Super + Shift + Alt + ,`. Riwayat disimpan selama sehari.
 
 ## Pemberitahuan hotkey
 

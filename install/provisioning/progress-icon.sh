@@ -1,4 +1,4 @@
-# The install progress screen: Omarchy's icon traced as setup progresses, with
+# The install progress screen: Ve OS's mark traced as setup progresses, with
 # the percentage, a status line and a tip beneath it.
 #
 # The ISO install dashboard and first-boot setup (omarchy-provision-owner) both
@@ -22,7 +22,7 @@ PROGRESS_ICON_ESCAPE=$'\033''\[[0-9;?]*[A-Za-z]'
 
 # The icon uses half-block glyphs, scaled to the terminal's actual cell aspect
 # ratio so its square silhouette stays square. No graphics protocol is needed.
-# Coordinates follow the 15 x 15 grid of Omarchy's icon.svg. Each segment
+# Coordinates follow the 15 x 15 grid of Ve OS's mark.svg. Each segment
 # paints the full stroke width, starting at the bottom middle of the outer ring.
 ICON_WIDTH=30
 ICON_COLUMN=2
@@ -80,37 +80,7 @@ PY
 
 progress_icon_term_size() { stty size 2>/dev/null <"$ICON_TTY" || printf '24 80\n'; }
 
-progress_icon_segment() {
-  local scale="$1" x1="$2" y1="$3" x2="$4" y2="$5"
-  local x y from to
-  if (( y1 == y2 )); then
-    from=$(( (x1 * ICON_WIDTH + 14) / 15 ))
-    to=$(( ((x2 + 1) * ICON_WIDTH + 14) / 15 ))
-    if (( x2 < x1 )); then
-      from=$(( ((x1 + 1) * ICON_WIDTH + 14) / 15 - 1 ))
-      to=$(( (x2 * ICON_WIDTH + 14) / 15 - 1 ))
-    fi
-    for ((x=from; x!=to; x+=(x2 >= x1 ? 1 : -1))); do
-      for ((y=y1 * scale; y<(y1 + 1) * scale; y++)); do
-        progress_icon_pixel "$((y * ICON_WIDTH + x))"
-      done
-    done
-  else
-    from=$(( y1 * scale ))
-    to=$(( (y2 + 1) * scale ))
-    if (( y2 < y1 )); then
-      from=$(( (y1 + 1) * scale - 1 ))
-      to=$(( y2 * scale - 1 ))
-    fi
-    for ((y=from; y!=to; y+=(y2 >= y1 ? 1 : -1))); do
-      for ((x=(x1 * ICON_WIDTH + 14) / 15; x<((x1 + 1) * ICON_WIDTH + 14) / 15; x++)); do
-        progress_icon_pixel "$((y * ICON_WIDTH + x))"
-      done
-    done
-  fi
-}
-
-# The screen columns each of the icon's 15 grid columns takes at <scale>. Every
+# The screen columns each of the mark's 30 grid columns takes at <scale>. Every
 # grid column gets the same whole number, the nearest to square in this font,
 # so a font that isn't 2:1, like sun12x22, neither drops a column nor draws some
 # strokes narrower than others.
@@ -130,53 +100,37 @@ progress_icon_pixel() {
 progress_icon_build() {
   local scale="$1" x y row
   local -a mask=(
-    111111111111111
-    100000010000001
-    101111110001101
-    101000000000101
-    101000000000101
-    101000000000101
-    101000000000101
-    111000000000101
-    101000000000101
-    101000000000101
-    101000000000101
-    101000000000101
-    101111111111101
-    100000010000001
-    111111110111111
+    001111000000111110000111111100
+    111111000000111110011111111110
+    111111000001111100111111111110
+    011111000011111011111111111111
+    011111000011111011111000111111
+    011111000111111111111000111111
+    001111001111110111111111111111
+    001111101111100111111111111110
+    001111101111100111111111111000
+    001111111111000111110000000000
+    001111111111000111110000001000
+    001111111110000111111111111100
+    001111111100000011111111111000
+    000111111100000001111111110000
+    000111110000000000111111100000
   )
   progress_icon_column "$scale"
-  ICON_WIDTH=$((15 * ICON_COLUMN))
+  ICON_WIDTH=$((30 * ICON_COLUMN))
   ICON_HEIGHT=$(((15 * scale + 1) / 2))
   ICON_ORDER=() ICON_TRACE=() ICON_FILL=()
   ICON_DRAWN=0
-  # Start at the bottom middle, follow the outer left edge to the top cross,
-  # then descend into the inner shape. Fill its two bridges as we reach them.
-  progress_icon_segment "$scale" 7 14 0 14
-  progress_icon_segment "$scale" 0 14 0 0
-  progress_icon_segment "$scale" 0 0 7 0
-  progress_icon_segment "$scale" 7 0 7 2
-  progress_icon_segment "$scale" 7 2 2 2
-  progress_icon_segment "$scale" 2 2 2 7
-  progress_icon_segment "$scale" 2 7 0 7
-  progress_icon_segment "$scale" 2 7 2 12
-  progress_icon_segment "$scale" 2 12 7 12
-  progress_icon_segment "$scale" 7 12 7 14
-  progress_icon_segment "$scale" 7 12 12 12
-  progress_icon_segment "$scale" 12 12 12 2
-  progress_icon_segment "$scale" 12 2 11 2
-  # Finish from the top cross: right along the outside, down, then left.
-  progress_icon_segment "$scale" 7 0 14 0
-  progress_icon_segment "$scale" 14 0 14 14
-  progress_icon_segment "$scale" 14 14 9 14
-  ICON_STEPS=${#ICON_ORDER[@]}
-  for ((y=0; y<15 * scale; y++)); do
-    row=${mask[y / scale]}
-    for ((x=0; x<ICON_WIDTH; x++)); do
-      ICON_FILL[y * ICON_WIDTH + x]=${row:x * 15 / ICON_WIDTH:1}
+  for ((x=0; x<ICON_WIDTH; x++)); do
+    for ((y=0; y<15 * scale; y++)); do
+      row=${mask[y / scale]}
+      ICON_FILL[y * ICON_WIDTH + x]=${row:x / ICON_COLUMN:1}
+      if (( ICON_FILL[y * ICON_WIDTH + x] )); then
+        progress_icon_pixel "$((y * ICON_WIDTH + x))"
+      fi
     done
   done
+  ICON_STEPS=${#ICON_ORDER[@]}
 }
 
 # Append one cell with independently colored upper/lower pixels. This also
@@ -184,15 +138,15 @@ progress_icon_build() {
 progress_icon_cell() {
   local pixel="$1" drawn="$2" solid="$3" upper=0 lower=0 step
   if (( solid )); then
-    (( ICON_FILL[pixel] )) && upper=32
-    (( ${ICON_FILL[pixel + ICON_WIDTH]:-0} )) && lower=32
+    (( ICON_FILL[pixel] )) && upper=34
+    (( ${ICON_FILL[pixel + ICON_WIDTH]:-0} )) && lower=34
   else
     step=${ICON_TRACE[pixel]:-0}
     (( step > 0 )) && upper=90
-    (( step > 0 && step <= drawn )) && upper=32
+    (( step > 0 && step <= drawn )) && upper=34
     step=${ICON_TRACE[pixel + ICON_WIDTH]:-0}
     (( step > 0 )) && lower=90
-    (( step > 0 && step <= drawn )) && lower=32
+    (( step > 0 && step <= drawn )) && lower=34
   fi
   if (( upper == 0 && lower == 0 )); then
     ICON_FRAME+="${PROGRESS_ICON_RESET} "
@@ -277,7 +231,7 @@ progress_icon_layout() {
   (( rows >= 34 && cols >= 49 )) && scale=2
   (( rows >= 50 && cols >= 64 )) && scale=3
   progress_icon_column "$scale"
-  while (( scale > 1 && 15 * ICON_COLUMN > cols - 4 )); do
+  while (( scale > 1 && 30 * ICON_COLUMN > cols - 4 )); do
     scale=$((scale - 1))
     progress_icon_column "$scale"
   done
@@ -319,7 +273,7 @@ progress_icon_frame() {
   progress_icon_render "$ICON_DISPLAY_PM"
 
   printf '%s%d;1H' "$PROGRESS_ICON_CSI" "$((ICON_TOP + ICON_HEIGHT + 1))"
-  progress_icon_line "${PROGRESS_ICON_CSI}32m$((ICON_DISPLAY_PM / 10))%"
+  progress_icon_line "${PROGRESS_ICON_CSI}34m$((ICON_DISPLAY_PM / 10))%"
   progress_icon_line ""
   if [[ -n $status ]]; then
     progress_icon_truncate shown_status "$status"

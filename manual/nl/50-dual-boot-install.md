@@ -1,4 +1,6 @@
-# Dualboot-installatie
+# Ve OS — Dualboot-installatie
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Je kunt Omarchy installeren op een enkele partitie naast Windows of andere installaties.
 

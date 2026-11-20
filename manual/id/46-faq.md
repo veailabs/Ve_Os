@@ -28,7 +28,7 @@ Ini akan menampilkan Minggu 10:55 AM.
 
 ### Bagaimana cara mengubah zona waktu saya?
 
-Jalankan _Update > Timezone_ di menu Omarchy dan pilih dari daftar. Jika zona waktunya sudah benar tetapi jamnya sendiri bergeser, _Update > Time_ akan memulai ulang sinkronisasi waktu untuk Anda.
+Jalankan _Update > Timezone_ di menu Ve OS dan pilih dari daftar. Jika zona waktunya sudah benar tetapi jamnya sendiri bergeser, _Update > Time_ akan memulai ulang sinkronisasi waktu untuk Anda.
 
 ### Bagaimana cara mengubah DNS saya, membagikan Wi-Fi saya, atau memeriksa kecepatan koneksi saya?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Anda bisa melakukan hal yang sama untuk perekaman layar menggunakan `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap membuat direktori tangkapan layarnya secara otomatis. Buat sendiri direktori perekaman layar, lalu mulai ulang Omarchy agar perubahan lingkungan mana pun berlaku.
+Omasnap membuat direktori tangkapan layarnya secara otomatis. Buat sendiri direktori perekaman layar, lalu mulai ulang Ve OS agar perubahan lingkungan mana pun berlaku.
 
 ### Bagaimana cara membuat speaker + webcam berfungsi di Apple Studio Display saya?
 
 Anda mungkin mengira semuanya seharusnya bekerja hanya dengan mencolokkan USB C, tetapi sayangnya tidak begitu. Solusi yang saya temukan agar ini bekerja dengan andal adalah menggunakan [kabel WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Kemudian speaker dan webcam bekerja dengan sempurna.
 
-Ingat bahwa Anda memiliki kontrol kecerahan bawaan di Omarchy untuk Apple Displays (baik Studio maupun XDR) menggunakan tombol kecerahan keyboard biasa.
+Ingat bahwa Anda memiliki kontrol kecerahan bawaan di Ve OS untuk Apple Displays (baik Studio maupun XDR) menggunakan tombol kecerahan keyboard biasa.
 
 ### Bagaimana cara menyingkirkan semua perangkat lunak tambahan?
 
@@ -72,7 +72,7 @@ Jika Anda tidak menginginkan program seperti Obsidian atau LibreOffice atau pera
 
 Jalankan _Remove > Package_ untuk melihat setiap paket yang terinstal. Kemudian Anda bisa memilih paket mana pun yang ingin Anda hapus dengan tab, dan mulai menghapus semua yang telah Anda pilih dengan return.
 
-Dan Anda bisa menggunakan _Remove > Web App_ dari menu Omarchy untuk menghapus aplikasi web pra-instal mana pun yang tidak Anda inginkan.
+Dan Anda bisa menggunakan _Remove > Web App_ dari menu Ve OS untuk menghapus aplikasi web pra-instal mana pun yang tidak Anda inginkan.
 
 Atau jalankan _Remove > Preinstalls_ untuk menyapu bersih semua ekstra pra-instal — aplikasi web, TUIs, dan aplikasi opsional — sekaligus. Hotkey yang meluncurkannya ikut hilang bersama mereka, jadi Anda ditinggalkan dengan lembaran bersih berisi binding untuk diisi dengan milik Anda sendiri di `~/.config/hypr/bindings.lua`.
 

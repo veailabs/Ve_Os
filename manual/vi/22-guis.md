@@ -20,7 +20,7 @@ Obsidian miễn phí cho mọi mục đích, bao gồm sử dụng cá nhân, th
 
 Obsidian cũng cung cấp một [tiện ích bổ sung thương mại để đồng bộ hóa](https://obsidian.md/sync) với các ứng dụng di động trên iOS và Android. (https://obsidian.md/pricing).
 
-Bạn khởi chạy Obsidian bằng `Super + Shift + O`. Để sử dụng đồng bộ hóa giao diện, bạn phải chọn giao diện `Omarchy` trong phần cài đặt.
+Bạn khởi chạy Obsidian bằng `Super + Shift + O`. Để sử dụng đồng bộ hóa giao diện, bạn phải chọn giao diện `Ve OS` trong phần cài đặt.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Bạn khởi chạy Aether qua trình khởi chạy ứng dụng (`Super + Space
 
 [LocalSend](https://localsend.org/) cho phép bạn gửi tệp tới các thiết bị khác trên cùng mạng đang chạy ứng dụng, giống như AirDrop của Apple. Tuy nhiên, nó đa nền tảng, nên bạn có thể gửi tệp đến và đi từ Windows, macOS, Android, iOS, và tất nhiên là Linux.
 
-Bạn có thể mở menu Share bằng `Super + Ctrl + S` hoặc trong _Trigger > Share_ trong menu Omarchy. Nó cung cấp cho bạn bốn tùy chọn:
+Bạn có thể mở menu Share bằng `Super + Ctrl + S` hoặc trong _Trigger > Share_ trong menu Ve OS. Nó cung cấp cho bạn bốn tùy chọn:
 
 - **Clipboard** gửi bất cứ thứ gì bạn đã sao chép dưới dạng tệp văn bản. Rất tuyệt để đưa một liên kết hoặc một đoạn mã lên điện thoại mà không cần tự gửi email cho mình.
 - **File** mở trình chọn tệp, nơi bạn có thể chọn nhiều tệp cùng lúc.
@@ -55,7 +55,7 @@ Việc tương tự cũng hoạt động từ terminal với `omarchy share clip
 
 Bạn cũng có thể gửi thẳng từ trình quản lý tệp: nhấp chuột phải vào bất kỳ lựa chọn nào trong Nautilus và chọn _Send via LocalSend_.
 
-Tường lửa của Omarchy đóng theo mặc định ngoại trừ cổng của LocalSend, nên tính năng này hoạt động ngay lập tức trên một bản cài đặt mới. Xem [bảo mật](48-security.md).
+Tường lửa của Ve OS đóng theo mặc định ngoại trừ cổng của LocalSend, nên tính năng này hoạt động ngay lập tức trên một bản cài đặt mới. Xem [bảo mật](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Bạn khởi chạy Signed qua trình khởi chạy ứng dụng (`Super + Space
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) là trò chơi cờ vua 3D của chính Omarchy. Chơi với một người bạn trên cùng máy tính hoặc đối thủ tích hợp sẵn ở ba cấp độ, trên bốn bộ cờ được điêu khắc mà mỗi bộ di chuyển theo cách riêng của chúng: tàu quỹ đạo, gỗ và ngà voi chạm khắc, sinh vật rừng, và kẹo. Các ván cờ không có đồng hồ và lưu lại sau mỗi nước đi.
+[Checkmate](https://github.com/omacom/checkmate) là trò chơi cờ vua 3D của chính Ve OS. Chơi với một người bạn trên cùng máy tính hoặc đối thủ tích hợp sẵn ở ba cấp độ, trên bốn bộ cờ được điêu khắc mà mỗi bộ di chuyển theo cách riêng của chúng: tàu quỹ đạo, gỗ và ngà voi chạm khắc, sinh vật rừng, và kẹo. Các ván cờ không có đồng hồ và lưu lại sau mỗi nước đi.
 
 Bạn khởi chạy Checkmate qua trình khởi chạy ứng dụng (`Super + Space`), nơi nó được liệt kê là Chess. Nhấn `?` bên trong nó để xem mọi phím tắt.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) là trò chơi xếp bài Klondike solitaire của chính Omarchy. Rút ba lá, không giới hạn số lượt đi qua, trong bốn bộ bài: một bộ được vẽ bằng màu sắc giao diện của bạn, và ba bộ có diện mạo riêng. Nhấp vào một lá bài rồi nhấp vào nơi nó đến, kéo nó, hoặc nhấp đúp để gửi nó đến vị trí tốt nhất. Các ván chơi lưu lại sau mỗi nước đi.
+[Cards](https://github.com/omacom/cards) là trò chơi xếp bài Klondike solitaire của chính Ve OS. Rút ba lá, không giới hạn số lượt đi qua, trong bốn bộ bài: một bộ được vẽ bằng màu sắc giao diện của bạn, và ba bộ có diện mạo riêng. Nhấp vào một lá bài rồi nhấp vào nơi nó đến, kéo nó, hoặc nhấp đúp để gửi nó đến vị trí tốt nhất. Các ván chơi lưu lại sau mỗi nước đi.
 
 Bạn khởi chạy Cards qua trình khởi chạy ứng dụng (`Super + Space`). Nhấp vào tên của nó, hoặc nhấn `?`, để xem mọi phím tắt.
 
@@ -97,7 +97,7 @@ Bạn khởi chạy Omacalc bằng `Super + Shift + Q` (hoặc phím máy tính,
 
 [Signal](https://signal.org/) là tiên phong của nhắn tin mã hóa E2E, và là một lựa chọn liên lạc tuyệt vời cho bất kỳ ai không muốn thông qua một trong những tập đoàn công nghệ lớn.
 
-Bạn khởi chạy Signal bằng `Super + Shift + G`. Nó không phải là một phần của bản cài đặt cơ sở, nên lần đầu tiên bạn nhấn phím đó, Omarchy sẽ đề nghị cài đặt nó cho bạn (nó cũng nằm trong _Install > Service_ trong menu Omarchy).
+Bạn khởi chạy Signal bằng `Super + Shift + G`. Nó không phải là một phần của bản cài đặt cơ sở, nên lần đầu tiên bạn nhấn phím đó, Ve OS sẽ đề nghị cài đặt nó cho bạn (nó cũng nằm trong _Install > Service_ trong menu Ve OS).
 
 ## Omaview
 

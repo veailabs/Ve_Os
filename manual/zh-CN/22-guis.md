@@ -20,7 +20,7 @@ Obsidian 可免费用于所有用途，包括个人、商业和非营利用途�
 
 Obsidian 还提供了一个[用于同步的商业附加组件](https://obsidian.md/sync)，可与 iOS 和 Android 上的移动应用同步。(https://obsidian.md/pricing)。
 
-按 `Super + Shift + O` 启动 Obsidian。要使用主题同步，你必须在设置中选择 `Omarchy` 主题。
+按 `Super + Shift + O` 启动 Obsidian。要使用主题同步，你必须在设置中选择 `Ve OS` 主题。
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Obsidian 还提供了一个[用于同步的商业附加组件](https://obsidian.
 
 [LocalSend](https://localsend.org/) 让你可以向同一网络上运行该应用的其他设备发送文件，就像 Apple 的 AirDrop。不过它是跨平台的，因此你可以与 Windows、macOS、Android、iOS，以及当然还有 Linux 之间互传文件。
 
-你可以按 `Super + Ctrl + S` 打开 Share 菜单，或在 Omarchy 菜单的 _Trigger > Share_ 下打开。它提供四个选项：
+你可以按 `Super + Ctrl + S` 打开 Share 菜单，或在 Ve OS 菜单的 _Trigger > Share_ 下打开。它提供四个选项：
 
 - **Clipboard** 会把你复制的任何内容作为文本文件发送。想把链接或代码片段弄到手机上，又不想给自己发邮件时，它再合适不过了。
 - **File** 打开一个文件选择器，你可以一次选择多个文件。
@@ -55,7 +55,7 @@ Obsidian 还提供了一个[用于同步的商业附加组件](https://obsidian.
 
 你也可以直接从文件管理器发送：在 Nautilus 中右键点击任意选中的内容，选择 _Send via LocalSend_。
 
-Omarchy 的防火墙默认关闭所有端口，只有 LocalSend 的端口例外，因此在全新安装的系统上，开箱即可使用。参见[安全](48-security.md)。
+Ve OS 的防火墙默认关闭所有端口，只有 LocalSend 的端口例外，因此在全新安装的系统上，开箱即可使用。参见[安全](48-security.md)。
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Omarchy 的防火墙默认关闭所有端口，只有 LocalSend 的端口例外�
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) 是 Omarchy 自家的 3D 国际象棋游戏。在同一台电脑上和朋友对弈，或挑战内置的三个难度等级的对手，使用四套造型精雕细琢、每套都有自己独特走法的棋子：轨道飞行器、雕刻木材与象牙、林地生物和糖果。对局没有计时，每走一步都会保存。
+[Checkmate](https://github.com/omacom/checkmate) 是 Ve OS 自家的 3D 国际象棋游戏。在同一台电脑上和朋友对弈，或挑战内置的三个难度等级的对手，使用四套造型精雕细琢、每套都有自己独特走法的棋子：轨道飞行器、雕刻木材与象牙、林地生物和糖果。对局没有计时，每走一步都会保存。
 
 通过应用启动器（`Super + Space`）启动 Checkmate，它在那里列为 Chess。在应用内按 `?` 查看所有快捷键。
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) 是 Omarchy 自家的 Klondike 接龙。每次翻三张牌，过牌轮次不限，有四套牌组系列：一套以你的主题颜色绘制，另外三套各有自己的外观。点击一张牌，再点击它要去的位置，或直接拖拽它，或双击将它送到最佳位置。每走一步都会保存游戏。
+[Cards](https://github.com/omacom/cards) 是 Ve OS 自家的 Klondike 接龙。每次翻三张牌，过牌轮次不限，有四套牌组系列：一套以你的主题颜色绘制，另外三套各有自己的外观。点击一张牌，再点击它要去的位置，或直接拖拽它，或双击将它送到最佳位置。每走一步都会保存游戏。
 
 通过应用启动器（`Super + Space`）启动 Cards。点击它的名称，或按 `?`，查看所有快捷键。
 
@@ -97,7 +97,7 @@ Omarchy 的防火墙默认关闭所有端口，只有 LocalSend 的端口例外�
 
 [Signal](https://signal.org/) 是 E2E 加密消息的先驱，对于任何不想经过科技巨头的人来说，都是绝佳的通讯选择。
 
-按 `Super + Shift + G` 启动 Signal。它不在基础安装中，因此你第一次按下该快捷键时，Omarchy 会主动为你安装它（它也在 Omarchy 菜单的 _Install > Service_ 下）。
+按 `Super + Shift + G` 启动 Signal。它不在基础安装中，因此你第一次按下该快捷键时，Ve OS 会主动为你安装它（它也在 Ve OS 菜单的 _Install > Service_ 下）。
 
 ## Omaview
 

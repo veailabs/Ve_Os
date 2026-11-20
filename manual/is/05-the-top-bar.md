@@ -1,14 +1,14 @@
 # Efsta stikan
 
-Ræman efst á skjánum þínum er Omarchy-stikan. Hún er ekki ábætt stöðustika heldur hluti af Omarchy-skelinni, eina langlífa Quickshell-ferlinu sem teiknar líka valmyndina, tilkynningarnar, OSD-sprettgluggana og læsiskjáinn. Þess vegna fellur hún fullkomlega að öllu öðru og þess vegna opnast spjald samstundis í stað þess að ræsa nýtt forrit.
+Ræman efst á skjánum þínum er Ve OS-stikan. Hún er ekki ábætt stöðustika heldur hluti af Ve OS-skelinni, eina langlífa Quickshell-ferlinu sem teiknar líka valmyndina, tilkynningarnar, OSD-sprettgluggana og læsiskjáinn. Þess vegna fellur hún fullkomlega að öllu öðru og þess vegna opnast spjald samstundis í stað þess að ræsa nýtt forrit.
 
 Hún er líka eini hluti skjáborðsins sem er alltaf á skjánum, svo það borgar sig að vita hvað öll þessi litlu tákn gera.
 
 ## Hvað er á henni sjálfgefið
 
-Stikan hefur þrjá hluta. Vinstra megin situr Omarchy-merkið (ræsir valmyndina) og vinnusvæðavísarnir. Í miðjunni færðu stöðuvísana, klukkuna, Elsewhen (heimsklukku), veðrið og Omarchy-uppfærslumerki. Hægra megin: kerfisbakkin, lyklaborðsuppsetningin (þegar fleiri en ein er stillt), umboð, bluetooth, net, hljóð, skjár og orka.
+Stikan hefur þrjá hluta. Vinstra megin situr Ve OS-merkið (ræsir valmyndina) og vinnusvæðavísarnir. Í miðjunni færðu stöðuvísana, klukkuna, Elsewhen (heimsklukku), veðrið og Ve OS-uppfærslumerki. Hægra megin: kerfisbakkin, lyklaborðsuppsetningin (þegar fleiri en ein er stillt), umboð, bluetooth, net, hljóð, skjár og orka.
 
-Nokkrir þeirra birtast aðeins þegar þeir hafa eitthvað að segja. Lyklaborðsuppsetningin birtist aðeins ef þú hefur stillt fleiri en eina uppsetningu. Uppfærslumerkið birtist aðeins þegar Omarchy-uppfærsla bíður. Og umboðstáknið birtist í fyrsta skipti sem Omarchy finnur notkun gervigreindar við forritun á vélinni (sjá [AI](17-ai.md)).
+Nokkrir þeirra birtast aðeins þegar þeir hafa eitthvað að segja. Lyklaborðsuppsetningin birtist aðeins ef þú hefur stillt fleiri en eina uppsetningu. Uppfærslumerkið birtist aðeins þegar Ve OS-uppfærsla bíður. Og umboðstáknið birtist í fyrsta skipti sem Ve OS finnur notkun gervigreindar við forritun á vélinni (sjá [AI](17-ai.md)).
 
 ## Að smella um
 
@@ -16,7 +16,7 @@ Næstum sérhver græja gerir eitthvað við vinstri, hægri og miðsmell, og no
 
 | Græja | Vinstri | Hægri | Miðja / skrun |
 | --- | --- | --- | --- |
-| Valmynd | Omarchy-valmynd | Ný útstöð | — |
+| Valmynd | Ve OS-valmynd | Ný útstöð | — |
 | Vinnusvæði | Beina fókus að því vinnusvæði á þessum skjá | — | Skrun: næsta/fyrra vinnusvæði |
 | Klukka | Dagatalssprettigluggi | Skipta um snið merkingarinnar | Miðja: tímabeltisval |
 | Veður | Sprettigluggi með veðurspá | Veður í heild sem tilkynning | Miðja: endurnýja |
@@ -29,7 +29,7 @@ Næstum sérhver græja gerir eitthvað við vinstri, hægri og miðsmell, og no
 | Margmiðlun | Spila/setja í hlé | Sprettigluggi með umslagsmynd | Miðja: næsta · skrun: fyrra/næsta |
 | Umboð | Umboðaspjald | Ræsa umboðið þitt | Miðja: næsta áskrift |
 | Bakki | Sveima yfir til að opinbera skúffuna | Hægri á örinni til að stjórna | — |
-| Omarchy-uppfærsla | Keyra uppfærsluna | — | — |
+| Ve OS-uppfærsla | Keyra uppfærsluna | — | — |
 
 Ekki er allt í þessari töflu á stikunni þinni beint úr kassanum. Margmiðlunargræjan (MPRIS sem sýnir það sem er í spilun núna, með skrunandi lagi og listamanni) og hljóðnemagræjan eru báðar innbyggðar en slökktar sjálfgefið — bættu þeim við ef þú vilt þær, eins og lýst er hér að neðan.
 
@@ -137,6 +137,6 @@ Sérhver græja er ein færsla í einum af fimm uppröðunarfylkjunum og stillin
 
 `center` er kassinn í miðju stikunnar: allt í honum er miðjað á skjánum sem einn hópur. `centerBegin` og `centerEnd` hanga á hvorri hlið kassans, sem er hvernig klukkan helst nákvæmlega í miðjunni jafnvel þegar veðrið og uppfærslumerkið koma og fara. Settu fleiri en eina græju í `center` og þær miðjast saman; skildu hann eftir tóman og `centerBegin` og `centerEnd` mætast í miðju stikunnar.
 
-Ein regla sem vert er að leggja á minnið: **þegar þú átt þína eigin `shell.json` er hún ráðandi**. Þangað til þú aðlagar eitthvað les skelin sjálfgefna skrá Omarchy. Um leið og þú dregur græju, keyrir `omarchy bar` eða breytir skránni sjálfur átt þú hana — það er engin djúp samruni, svo nýjar sjálfgefnar græjur í framtíðarútgáfum Omarchy munu ekki birtast sjálfkrafa á stikunni þinni. `omarchy bar defaults` setur meðfylgjandi uppröðun til baka hvenær sem þú vilt hreint borð.
+Ein regla sem vert er að leggja á minnið: **þegar þú átt þína eigin `shell.json` er hún ráðandi**. Þangað til þú aðlagar eitthvað les skelin sjálfgefna skrá Ve OS. Um leið og þú dregur græju, keyrir `omarchy bar` eða breytir skránni sjálfur átt þú hana — það er engin djúp samruni, svo nýjar sjálfgefnar græjur í framtíðarútgáfum Ve OS munu ekki birtast sjálfkrafa á stikunni þinni. `omarchy bar defaults` setur meðfylgjandi uppröðun til baka hvenær sem þú vilt hreint borð.
 
 Sama skráin geymir líka aðgerðaleysistíma þína á efsta stigi, utan `bar` lykilsins: `idle.screensaver` og `idle.lock`, bæði í sekúndum síðan þú fórst í aðgerðaleysi. Svo sjálfgefni skjávörðurinn fer í gang eftir 150 sekúndur og læsingin eftir 300.

@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchyjem se obično upravlja putem tipkovničkih prečaca i izbornika Omarchy (`Super + Space`). No njime možete upravljati i putem `omarchy` CLI-ja. To je posebno korisno kada AI agent radi s vama na prilagođavanju ili konfiguraciji.
+Ve OSjem se obično upravlja putem tipkovničkih prečaca i izbornika Ve OS (`Super + Space`). No njime možete upravljati i putem `omarchy` CLI-ja. To je posebno korisno kada AI agent radi s vama na prilagođavanju ili konfiguraciji.
 
 CLI ima pristup svim internim alatima koji se koriste i putem izbornika i na druge načine. Sve što je dostupno možete vidjeti pokretanjem naredbe `omarchy` u terminalu.
 
@@ -8,7 +8,7 @@ Izgleda otprilike ovako:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Za dijagnostiku izravno pokrenite `omarchy-debug --no-sudo --print`. Ispisuje dijagnostiku i zapisuje u `/tmp/omarchy-debug.log` bez traženja sudo ovlaštenja, uključujući instalacije paketa u kojima `omarchy debug` može zakazati s porukom "Unknown Omarchy command".
+Za dijagnostiku izravno pokrenite `omarchy-debug --no-sudo --print`. Ispisuje dijagnostiku i zapisuje u `/tmp/omarchy-debug.log` bez traženja sudo ovlaštenja, uključujući instalacije paketa u kojima `omarchy debug` može zakazati s porukom "Unknown Ve OS command".
 
 A možete i dublje zaroniti u svaku grupu:
 
@@ -60,4 +60,4 @@ Svaka naredba prihvaća i `--help`, bilo da tražite cijelu grupu (`omarchy capt
 
 ### Otvaranje izbornika iz terminala
 
-Izbornik Omarchy također je moguće skriptirati, što je praktično za vlastite tipkovničke prečace. `omarchy menu` otvara ga u korijenu, a na bilo koju točku u stablu možete skočiti izravno tako da je navedete: `omarchy menu summon appearance.theme` vodi izravno do birača tema, `omarchy menu toggle system` otvara izbornik sustava i zatvara ga ponovno ako je već otvoren, a `omarchy menu close` ga sklanja.
+Izbornik Ve OS također je moguće skriptirati, što je praktično za vlastite tipkovničke prečace. `omarchy menu` otvara ga u korijenu, a na bilo koju točku u stablu možete skočiti izravno tako da je navedete: `omarchy menu summon appearance.theme` vodi izravno do birača tema, `omarchy menu toggle system` otvara izbornik sustava i zatvara ga ponovno ako je već otvoren, a `omarchy menu close` ga sklanja.

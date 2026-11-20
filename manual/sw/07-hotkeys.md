@@ -8,7 +8,7 @@ Kila funguo ya mkato imo kwenye ndege, inayowekwa na virekebishaji vyake, na kil
 
 | Ndege | Kinachoishi hapo | Mifano |
 | --- | --- | --- |
-| `Super + key` | Mfumo: madirisha, nafasi za kazi, mipangilio, na menyu kuu | `Super + Space` menyu ya Omarchy, `Super + W` funga dirisha, `Super + F` skrini nzima |
+| `Super + key` | Mfumo: madirisha, nafasi za kazi, mipangilio, na menyu kuu | `Super + Space` menyu ya Ve OS, `Super + W` funga dirisha, `Super + F` skrini nzima |
 | `Super + Shift + key` | Programu | `Super + Shift + B` kivinjari, `Super + Shift + E` barua pepe, `Super + Shift + N` kihariri |
 | `Super + Ctrl + key` | Paneli na menyu za mfumo | `Super + Ctrl + A` sauti, `Super + Ctrl + N` mtandao, `Super + Ctrl + C` menyu ya kunasa |
 | `Super + Ctrl + Alt + key` | Vitendo vya haraka na notisi | `Super + Ctrl + Alt + T` onyesha muda, `Super + Ctrl + Alt + B` betri, `Super + Ctrl + Alt + C` picha ya skrini |
@@ -34,7 +34,7 @@ Ikiwa chaguo-msingi halikufai (tuseme unataka `Super + Shift + S` kwa picha za s
 
 | Funguo ya Mkato                  | Kazi              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Menyu ya Omarchy (programu na kila kitu kingine)    |
+| `Super + Space`           | Menyu ya Ve OS (programu na kila kitu kingine)    |
 | `Super + Alt + Space` | Gridi ya programu |
 | `Super + Escape` | Menyu ya mfumo (sitisha, anzisha upya, n.k.)  |
 | `Super + Ctrl + L` | Funga kompyuta |
@@ -172,7 +172,7 @@ Badilisha/ongeza vifungashio katika `~/.config/hypr/bindings.lua`.
 | `Super + V`           | Bandika    |
 | `Super + Ctrl + V`           | Kidhibiti ubao wa kunakili    |
 
-Kwa kawaida kwenye Linux, unahitaji `Ctrl + Shift + C/V` kunakili na kubandika katika terminali na `Ctrl + C/V` kufanya hivyo kila mahali pengine. Funguo hizi za mkato za ubao wa kunakili zilizounganishwa za Omarchy hufanya kazi kila mahali.
+Kwa kawaida kwenye Linux, unahitaji `Ctrl + Shift + C/V` kunakili na kubandika katika terminali na `Ctrl + C/V` kufanya hivyo kila mahali pengine. Funguo hizi za mkato za ubao wa kunakili zilizounganishwa za Ve OS hufanya kazi kila mahali.
 
 ## Kunasa
 
@@ -194,7 +194,7 @@ Kwa kawaida kwenye Linux, unahitaji `Ctrl + Shift + C/V` kunakili na kubandika k
 
 Kwa rekodi za skrini, funguo ya mkato kwanza huuliza sauti unayotaka, kisha huanza kurekodi. Igonge tena kusimamisha. Tazama [picha za skrini na kurekodi](12-screenshots-recording.md) kwa maelezo.
 
-Chaguo zote za kunasa pia zinapatikana chini ya _Trigger > Capture_ katika menyu ya Omarchy (`Super + Space`).
+Chaguo zote za kunasa pia zinapatikana chini ya _Trigger > Capture_ katika menyu ya Ve OS (`Super + Space`).
 
 ## Arifa
 
@@ -216,9 +216,9 @@ Chaguo zote za kunasa pia zinapatikana chini ya _Trigger > Capture_ katika menyu
 | `Super + Backspace` | Badilisha uwazi kwenye dirisha |
 | `Super + Ctrl + Backspace` | Badilisha uwiano wa mraba wa dirisha moja |
 
-Picha za ziada za usuli huishi katika `~/.config/omarchy/backgrounds/<theme name>`. Pia zinapatikana kupitia _Install > Style > Background_ katika menyu ya Omarchy.
+Picha za ziada za usuli huishi katika `~/.config/omarchy/backgrounds/<theme name>`. Pia zinapatikana kupitia _Install > Style > Background_ katika menyu ya Ve OS.
 
-Chaguo zote za mtindo pia zinapatikana chini ya _Style_ katika menyu ya Omarchy (`Super + Space`).
+Chaguo zote za mtindo pia zinapatikana chini ya _Style_ katika menyu ya Ve OS (`Super + Space`).
 
 ## Kubadilisha
 
@@ -319,7 +319,7 @@ Vitendakazi hivi lazima viendeshwe ndani ya kipindi cha Tmux.
 
 ## Terminali ya Ghostty
 
-Terminali ya Ghostty imesakinishwa kwa kutumia _Install > Terminal_ kupitia menyu ya Omarchy.
+Terminali ya Ghostty imesakinishwa kwa kutumia _Install > Terminal_ kupitia menyu ya Ve OS.
 
 | Funguo ya Mkato                  | Kazi              |
 | ----------------------- | --------------------- |

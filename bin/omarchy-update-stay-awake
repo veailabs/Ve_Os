@@ -29,7 +29,7 @@ launch_pending=0
 launch_token=""
 
 fail_state_boundary() {
-  echo "Refusing to use an unsafe Omarchy update inhibitor state path." >&2
+  echo "Refusing to use an unsafe Ve OS update inhibitor state path." >&2
   return 1
 }
 
@@ -218,7 +218,7 @@ cleanup_pending_launch() {
 
   trap - EXIT HUP INT TERM
   if ! rollback_pending_launch; then
-    echo "Failed to roll back the pending Omarchy update sleep inhibitor." >&2
+    echo "Failed to roll back the pending Ve OS update sleep inhibitor." >&2
     (( status != 0 )) || status=1
   fi
   exit "$status"
@@ -389,7 +389,7 @@ stop_locked() {
         omarchy-toggle-idle allow-idle >/dev/null 2>&1 || true
       fi
     else
-      echo "Ignoring unsafe Omarchy update idle ownership state." >&2
+      echo "Ignoring unsafe Ve OS update idle ownership state." >&2
       failed=1
     fi
     rm -f -- "$idle_owner_file"
@@ -419,13 +419,13 @@ stop_locked() {
         fi
       fi
     else
-      echo "Ignoring unsafe Omarchy update sleep inhibitor state." >&2
+      echo "Ignoring unsafe Ve OS update sleep inhibitor state." >&2
       failed=1
     fi
     if [[ -n $inhibit_pid ]] && (( remove_inhibit_state == 1 )); then
       if process_matches "$inhibit_pid" "$recorded_start_time" "$recorded_owner" "$token"; then
         if ! terminate_inhibitor "$inhibit_pid" "$recorded_start_time" "$recorded_owner" "$token"; then
-          echo "Failed to stop the Omarchy update sleep inhibitor." >&2
+          echo "Failed to stop the Ve OS update sleep inhibitor." >&2
           failed=1
           remove_inhibit_state=0
         fi

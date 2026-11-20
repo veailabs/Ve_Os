@@ -1,6 +1,6 @@
 # Nätverk
 
-Nätverk i Omarchy hanteras av NetworkManager, och du styr det från nätverksikonen i [övre listen](05-the-top-bar.md) eller med `Super + Ctrl + N`.
+Nätverk i Ve OS hanteras av NetworkManager, och du styr det från nätverksikonen i [övre listen](05-the-top-bar.md) eller med `Super + Ctrl + N`.
 
 Den panelen söker efter Wi-Fi-nätverk, visar signalstyrka och ansluter. Ethernet kräver ingenting alls — anslut kabeln så fungerar det. Om du hellre stannar i terminalen ger `nmtui` dig samma kontroller, och det finns också en kommandogrupp `omarchy network`.
 
@@ -12,7 +12,7 @@ Om du faktiskt behöver själva lösenordet skriver `omarchy network password <i
 
 ## DNS
 
-Omarchy använder den DNS som ditt nätverk delar ut via DHCP. Du kan åsidosätta det för hela datorn under _Inställningar > Nätverk > DNS_, där Cloudflare och Google finns ett klick bort. Välj _Anpassad_ för att skriva in dina egna servrar.
+Ve OS använder den DNS som ditt nätverk delar ut via DHCP. Du kan åsidosätta det för hela datorn under _Inställningar > Nätverk > DNS_, där Cloudflare och Google finns ett klick bort. Välj _Anpassad_ för att skriva in dina egna servrar.
 
 Från terminalen skriver `omarchy dns` ut den aktuella leverantören och `omarchy dns Cloudflare` anger en.
 

@@ -1,6 +1,6 @@
-# Tailscale Omarchy Widget
+# Tailscale Ve OS Widget
 
-Native Omarchy bar widget for Tailscale.
+Native Ve OS bar widget for Tailscale.
 
 ## Features
 

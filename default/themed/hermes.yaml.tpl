@@ -1,5 +1,5 @@
-name: omarchy
-description: Omarchy system theme
+name: ve
+description: Ve OS system theme
 colors:
   background: "{{ background }}"
   ui_text: "{{ foreground }}"

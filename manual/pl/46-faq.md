@@ -28,7 +28,7 @@ Wyświetli to Niedziela 10:55 AM.
 
 ### Jak zmienić moją strefę czasową?
 
-Uruchom _Aktualizacja > Strefa czasowa_ w menu Omarchy i wybierz z listy. Jeśli strefa czasowa jest prawidłowa, ale sam zegar się rozjechał, _Aktualizacja > Czas_ uruchomi dla Ciebie ponownie synchronizację czasu.
+Uruchom _Aktualizacja > Strefa czasowa_ w menu Ve OS i wybierz z listy. Jeśli strefa czasowa jest prawidłowa, ale sam zegar się rozjechał, _Aktualizacja > Czas_ uruchomi dla Ciebie ponownie synchronizację czasu.
 
 ### Jak zmienić mój DNS, udostępnić moje Wi-Fi lub sprawdzić prędkość mojego połączenia?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Możesz zrobić to samo dla nagrań ekranu, używając `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap tworzy swój katalog zrzutów ekranu automatycznie. Katalog nagrań ekranu utwórz samodzielnie, a następnie uruchom ponownie Omarchy, aby dowolna zmiana środowiska weszła w życie.
+Omasnap tworzy swój katalog zrzutów ekranu automatycznie. Katalog nagrań ekranu utwórz samodzielnie, a następnie uruchom ponownie Ve OS, aby dowolna zmiana środowiska weszła w życie.
 
 ### Jak sprawić, by głośniki + kamera internetowa działały na moim Apple Studio Display?
 
 Można by pomyśleć, że wszystko powinno działać po prostu po podłączeniu USB C, ale niestety tak nie jest. Rozwiązaniem, które znalazłem, aby działało to niezawodnie, jest użycie [kabla WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Wtedy głośniki i kamera internetowa działają jak marzenie.
 
-Pamiętaj, że w Omarchy masz wbudowaną regulację jasności dla monitorów Apple (zarówno Studio, jak i XDR) za pomocą zwykłych klawiszy jasności na klawiaturze.
+Pamiętaj, że w Ve OS masz wbudowaną regulację jasności dla monitorów Apple (zarówno Studio, jak i XDR) za pomocą zwykłych klawiszy jasności na klawiaturze.
 
 ### Jak pozbyć się całego dodatkowego oprogramowania?
 
@@ -72,7 +72,7 @@ Jeśli nie chcesz programów takich jak Obsidian czy LibreOffice ani żadnego in
 
 Uruchom _Usuń > Pakiet_, aby zobaczyć każdy zainstalowany pakiet. Następnie możesz wybrać za pomocą tab dowolny pakiet, który chcesz usunąć, i rozpocząć usuwanie wszystkiego, co wybrałeś, za pomocą return.
 
-A możesz użyć _Usuń > Aplikacja internetowa_ z menu Omarchy, aby usunąć dowolne preinstalowane aplikacje internetowe, których nie chcesz.
+A możesz użyć _Usuń > Aplikacja internetowa_ z menu Ve OS, aby usunąć dowolne preinstalowane aplikacje internetowe, których nie chcesz.
 
 Albo uruchom _Usuń > Preinstalowane_, aby za jednym razem wymieść wszystkie preinstalowane dodatki — aplikacje internetowe, TUI i opcjonalne aplikacje. Skróty klawiszowe, które je uruchamiały, znikają wraz z nimi, więc zostaje Ci czysta karta powiązań do wypełnienia własnymi w `~/.config/hypr/bindings.lua`.
 

@@ -113,7 +113,7 @@ Ukrainian|ua'
 OMARCHY_USERNAME_PATTERN='^[a-z_][a-z0-9_-]*[$]?$'
 OMARCHY_RESERVED_USERNAMES='^(root|bin|daemon|mail|ftp|http|nobody|dbus|systemd-coredump|systemd-network|systemd-oom|systemd-journal-remote|systemd-resolve|systemd-timesync|tss|uuidd|alpm|git|avahi|cups|cups-browsed|lp|_talkd|polkitd|rtkit|qemu|brltty|gluster|rpc|libvirt-qemu|pcscd|nvidia-persistenced|sddm)$'
 OMARCHY_HOSTNAME_PATTERN='^[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?$'
-OMARCHY_HOSTNAME_DEFAULT='omarchy'
+OMARCHY_HOSTNAME_DEFAULT='ve-os'
 
 # Installer targets are empty, so any account is fair game; first-boot setup
 # overrides this because its machine already has users.
@@ -240,7 +240,7 @@ omarchy_persist_input_selection() {
 omarchy_prompt_username() {
   local status
   while true; do
-    username=$(gum input --placeholder "$(omarchy_form_text setupForm.usernamePlaceholder)" --prompt.foreground="#845DF9" --prompt "$(omarchy_form_text setupForm.usernamePrompt)") && status=0 || status=$?
+    username=$(gum input --placeholder "$(omarchy_form_text setupForm.usernamePlaceholder)" --prompt.foreground="#007CEC" --prompt "$(omarchy_form_text setupForm.usernamePrompt)") && status=0 || status=$?
     ((status == 0)) || return $status
 
     if [[ "$username" =~ $OMARCHY_USERNAME_PATTERN ]]; then
@@ -260,9 +260,9 @@ omarchy_prompt_username() {
 omarchy_prompt_password() {
   local status
   while true; do
-    password=$(gum input --placeholder "$(omarchy_form_text setupForm.passwordPlaceholder)" --prompt.foreground="#845DF9" --password --prompt "$(omarchy_form_text setupForm.passwordPrompt)") && status=0 || status=$?
+    password=$(gum input --placeholder "$(omarchy_form_text setupForm.passwordPlaceholder)" --prompt.foreground="#007CEC" --password --prompt "$(omarchy_form_text setupForm.passwordPrompt)") && status=0 || status=$?
     ((status == 0)) || return $status
-    password_confirmation=$(gum input --placeholder "$(omarchy_form_text setupForm.confirmPlaceholder)" --prompt.foreground="#845DF9" --password --prompt "$(omarchy_form_text setupForm.confirmPrompt)") && status=0 || status=$?
+    password_confirmation=$(gum input --placeholder "$(omarchy_form_text setupForm.confirmPlaceholder)" --prompt.foreground="#007CEC" --password --prompt "$(omarchy_form_text setupForm.confirmPrompt)") && status=0 || status=$?
     ((status == 0)) || return $status
 
     if [[ -n "$password" && "$password" == "$password_confirmation" ]]; then
@@ -280,16 +280,16 @@ omarchy_prompt_password() {
 # only Esc/Ctrl+C end the prompt early.
 omarchy_prompt_identity() {
   local status
-  full_name=$(gum input --placeholder "Used for git authentication (hit return to skip)" --prompt.foreground="#845DF9" --prompt "Full name> ") && status=0 || status=$?
+  full_name=$(gum input --placeholder "Used for git authentication (hit return to skip)" --prompt.foreground="#007CEC" --prompt "Full name> ") && status=0 || status=$?
   ((status == 0)) || return $status
-  email_address=$(gum input --placeholder "Used for git authentication (hit return to skip)" --prompt.foreground="#845DF9" --prompt "Email address> ") && status=0 || status=$?
+  email_address=$(gum input --placeholder "Used for git authentication (hit return to skip)" --prompt.foreground="#007CEC" --prompt "Email address> ") && status=0 || status=$?
   return $status
 }
 
 omarchy_prompt_hostname() {
   local status
   while true; do
-    hostname=$(gum input --placeholder "$(omarchy_form_text setupForm.hostnamePlaceholder)" --prompt.foreground="#845DF9" --prompt "$(omarchy_form_text setupForm.hostnamePrompt)") && status=0 || status=$?
+    hostname=$(gum input --placeholder "$(omarchy_form_text setupForm.hostnamePlaceholder)" --prompt.foreground="#007CEC" --prompt "$(omarchy_form_text setupForm.hostnamePrompt)") && status=0 || status=$?
     ((status == 0)) || return $status
 
     if [[ -z $hostname ]]; then

@@ -1,10 +1,10 @@
 # වෙබ් යෙදුම්
 
-Omarchy මෙනුවේ (`Super + Space`) _Install > Web App_ භාවිතයෙන් ඔබට ඔබේම වෙබ් යෙදුම් එක් කළ හැකියි. එය ඔබෙන් යෙදුමේ නම, යෙදුමේ URL එක සහ, favicon එක හරහා එය ලබාගත නොහැකි නම්, අයිකනයේ URL එක විමසනු ඇත. බොහෝ ජනප්‍රිය වෙබ් යෙදුම් සඳහා විශිෂ්ට PNG අයිකන [Dashboard Icons](https://dashboardicons.com) වෙතින් ලබාගත හැකියි.
+Ve OS මෙනුවේ (`Super + Space`) _Install > Web App_ භාවිතයෙන් ඔබට ඔබේම වෙබ් යෙදුම් එක් කළ හැකියි. එය ඔබෙන් යෙදුමේ නම, යෙදුමේ URL එක සහ, favicon එක හරහා එය ලබාගත නොහැකි නම්, අයිකනයේ URL එක විමසනු ඇත. බොහෝ ජනප්‍රිය වෙබ් යෙදුම් සඳහා විශිෂ්ට PNG අයිකන [Dashboard Icons](https://dashboardicons.com) වෙතින් ලබාගත හැකියි.
 
 ඉන්පසු ඒවා app launcher එක (`Super + Space`) හරහා ප්‍රවේශ විය හැකි වන අතර, ලස්සන රාමු රහිත web-app කවුළුව භාවිත කරනු ඇත.
 
-වෙබ් යෙදුමක් ඉවත් කිරීමට අවශ්‍ය නම්, Omarchy මෙනුවේ _Remove > Web App_ වෙත යන්න.
+වෙබ් යෙදුමක් ඉවත් කිරීමට අවශ්‍ය නම්, Ve OS මෙනුවේ _Remove > Web App_ වෙත යන්න.
 
 web app කෙටිමං භාවිත කිරීමට පෙර සාමාන්‍ය browser එකක් භාවිතයෙන් ඔබේ සියලුම ගිණුම්වලට log වීම වඩාත් හොඳයි. සිහින් wrapper රාමුව 1password සමඟ හොඳින් ක්‍රියා නොකරන බැවින්, කෙලින්ම පළමුව log වී සිටීම පහසුයි.
 
@@ -12,7 +12,7 @@ web app කෙටිමං භාවිත කිරීමට පෙර සා�
 
 ඔබ වෙබ් යෙදුමක සිටින විට, `Shift + Alt + L` භාවිතයෙන් වත්මන් URL එක clipboard එකට පිටපත් කළ හැකියි.
 
-පෙරනිමියෙන්, Omarchy දැනටමත් පෙරනිමි යෙදුම් එකතුවක් සමඟ පැමිණේ:
+පෙරනිමියෙන්, Ve OS දැනටමත් පෙරනිමි යෙදුම් එකතුවක් සමඟ පැමිණේ:
 
 ## HEY
 
@@ -64,7 +64,7 @@ X යනු ප්‍රවෘත්ති බිඳෙන තැනයි.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) යනු US හි භාවිත වන වඩාත්ම ජනප්‍රිය video chat පද්ධතියයි. ලොව පුරා විශිෂ්ට සම්බන්ධතා. තවද ගෙවන ගිණුමක් නොමැතිව විනාඩි 40ක රැස්වීම් පැවැත්විය හැකියි. Omarchy විසින් Zoom හි web client එක ඔතා ඇති අතර, zoom meeting links කෙලින්ම එය තුළ විවෘත වනු ඇත.
+[Zoom](https://zoom.us/) යනු US හි භාවිත වන වඩාත්ම ජනප්‍රිය video chat පද්ධතියයි. ලොව පුරා විශිෂ්ට සම්බන්ධතා. තවද ගෙවන ගිණුමක් නොමැතිව විනාඩි 40ක රැස්වීම් පැවැත්විය හැකියි. Ve OS විසින් Zoom හි web client එක ඔතා ඇති අතර, zoom meeting links කෙලින්ම එය තුළ විවෘත වනු ඇත.
 
 ඔබ application launcher එක (`Super + Space`) භාවිතයෙන් Zoom ආරම්භ කරයි.
 
@@ -76,7 +76,7 @@ X යනු ප්‍රවෘත්ති බිඳෙන තැනයි.
 
 ## Microsoft apps
 
-Outlook, Word, Excel, PowerPoint, Teams, සහ OneDrive වෙබ් යෙදුම් ලෙස එක් කිරීමට _Install > Service > Microsoft_ තෝරන්න. සෑම යෙදුමකටම තමන්ගේම launcher එකක් ඇති අතර වාණිජ Microsoft 365 URLs සහ ඔබේ පවතින browser profile එක භාවිත කරමින් කෙලින්ම විවෘත වේ. ඒවා Omarchy හි අනෙකුත් වෙබ් යෙදුම් මෙන්ම එකම browser app කවුළුවල විවෘත වේ; ඒවා වෙනම Teams for Linux client එක install නොකරයි.
+Outlook, Word, Excel, PowerPoint, Teams, සහ OneDrive වෙබ් යෙදුම් ලෙස එක් කිරීමට _Install > Service > Microsoft_ තෝරන්න. සෑම යෙදුමකටම තමන්ගේම launcher එකක් ඇති අතර වාණිජ Microsoft 365 URLs සහ ඔබේ පවතින browser profile එක භාවිත කරමින් කෙලින්ම විවෘත වේ. ඒවා Ve OS හි අනෙකුත් වෙබ් යෙදුම් මෙන්ම එකම browser app කවුළුවල විවෘත වේ; ඒවා වෙනම Teams for Linux client එක install නොකරයි.
 
 _Remove > Service > Microsoft_ සමඟ bundle එක ඉවත් කරන්න, නැතහොත් _Remove > Web App_ සමඟ තනි යෙදුම් ඉවත් කරන්න. ඔබට අවශ්‍ය යෙදුම් පමණක් _Install > Web App_ හරහාද install කළ හැකියි.
 
@@ -88,4 +88,4 @@ _Remove > Service > Microsoft_ සමඟ bundle එක ඉවත් කරන්
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-උදාහරණ directory එක ඔබ කැමති absolute path එකකින් ප්‍රතිස්ථාපනය කර, වැඩ sign-ins ඒවා අතර බෙදා ගැනීමට launchers හයම සඳහා එකම path එක භාවිත කරන්න. වෙබ් යෙදුම් Omarchy විසින් තෝරාගත් සහාය දක්වන browser එක භාවිත කරන අතර, පෙරනිමි browser එකට සහාය නොදක්වන්නේ නම් Chrome වෙත ආපසු යයි.
+උදාහරණ directory එක ඔබ කැමති absolute path එකකින් ප්‍රතිස්ථාපනය කර, වැඩ sign-ins ඒවා අතර බෙදා ගැනීමට launchers හයම සඳහා එකම path එක භාවිත කරන්න. වෙබ් යෙදුම් Ve OS විසින් තෝරාගත් සහාය දක්වන browser එක භාවිත කරන අතර, පෙරනිමි browser එකට සහාය නොදක්වන්නේ නම් Chrome වෙත ආපසු යයි.

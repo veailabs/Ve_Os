@@ -1,4 +1,6 @@
-# Ανεπιτήρητες Εγκαταστάσεις
+# Ve OS — Ανεπιτήρητες Εγκαταστάσεις
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Το ISO του Omarchy μπορεί να εγκατασταθεί μόνο του χωρίς κανέναν στο πληκτρολόγιο. Αν το πρόγραμμα εγκατάστασης βρει μια δεύτερη μονάδα με ετικέτα `cidata` που περιέχει τα αρχεία ρυθμίσεών του, τα αντιγράφει, παραλείπει εντελώς τον οδηγό εγκατάστασης και επανεκκινεί μόνο του στο ολοκληρωμένο σύστημα. Δεν χρειάζεται ειδική έκδοση του ISO, ούτε πρόσθετη καταχώριση στο μενού εκκίνησης — χωρίς συνδεδεμένη τέτοια μονάδα, τίποτα δεν αλλάζει και εμφανίζεται ο κανονικός οδηγός.
 

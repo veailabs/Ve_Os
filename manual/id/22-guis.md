@@ -20,7 +20,7 @@ Obsidian gratis untuk semua tujuan, termasuk penggunaan pribadi, komersial, dan 
 
 Obsidian juga menawarkan [add-on komersial untuk sinkronisasi](https://obsidian.md/sync) dengan aplikasi seluler di iOS dan Android. (https://obsidian.md/pricing).
 
-Anda memulai Obsidian dengan `Super + Shift + O`. Untuk menggunakan sinkronisasi tema, Anda harus memilih tema `Omarchy` di pengaturan.
+Anda memulai Obsidian dengan `Super + Shift + O`. Untuk menggunakan sinkronisasi tema, Anda harus memilih tema `Ve OS` di pengaturan.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Anda memulai Aether melalui peluncur aplikasi (`Super + Space`).
 
 [LocalSend](https://localsend.org/) memungkinkan Anda mengirim berkas ke perangkat lain di jaringan yang sama yang menjalankan aplikasi ini, seperti AirDrop dari Apple. Namun ini lintas platform, jadi Anda dapat mengirim berkas ke dan dari Windows, macOS, Android, iOS, dan tentu saja Linux.
 
-Anda dapat membuka menu Share dengan `Super + Ctrl + S` atau di _Trigger > Share_ dalam menu Omarchy. Menu ini memberi Anda empat opsi:
+Anda dapat membuka menu Share dengan `Super + Ctrl + S` atau di _Trigger > Share_ dalam menu Ve OS. Menu ini memberi Anda empat opsi:
 
 - **Clipboard** mengirim apa pun yang telah Anda salin sebagai berkas teks. Bagus untuk memindahkan tautan atau cuplikan ke ponsel Anda tanpa mengirim email ke diri sendiri.
 - **File** membuka pemilih berkas tempat Anda dapat memilih beberapa berkas sekaligus.
@@ -55,7 +55,7 @@ Hal yang sama bekerja dari terminal dengan `omarchy share clipboard`, `omarchy s
 
 Anda juga dapat mengirim langsung dari manajer berkas: klik kanan pilihan apa pun di Nautilus dan pilih _Send via LocalSend_.
 
-Firewall Omarchy tertutup secara default kecuali untuk port LocalSend, jadi ini langsung berfungsi pada instalasi baru. Lihat [keamanan](48-security.md).
+Firewall Ve OS tertutup secara default kecuali untuk port LocalSend, jadi ini langsung berfungsi pada instalasi baru. Lihat [keamanan](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Anda memulai Signed melalui peluncur aplikasi (`Super + Space`), atau membuka PD
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) adalah game catur 3D milik Omarchy sendiri. Mainkan teman di komputer yang sama atau lawan bawaan pada tiga level, pada empat set pahatan yang masing-masing bergerak dengan caranya sendiri: wahana orbital, kayu dan gading ukiran, makhluk hutan, dan permen. Permainan tidak memakai jam dan tersimpan setelah setiap langkah.
+[Checkmate](https://github.com/omacom/checkmate) adalah game catur 3D milik Ve OS sendiri. Mainkan teman di komputer yang sama atau lawan bawaan pada tiga level, pada empat set pahatan yang masing-masing bergerak dengan caranya sendiri: wahana orbital, kayu dan gading ukiran, makhluk hutan, dan permen. Permainan tidak memakai jam dan tersimpan setelah setiap langkah.
 
 Anda memulai Checkmate melalui peluncur aplikasi (`Super + Space`), di mana aplikasi ini terdaftar sebagai Chess. Tekan `?` di dalamnya untuk melihat setiap pintasan.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) adalah Klondike solitaire milik Omarchy sendiri. Ambil tiga kartu, tanpa batas jumlah putaran, dalam empat seri kartu: satu digambar dengan warna tema Anda, dan tiga dengan tampilannya sendiri. Klik kartu lalu tempat tujuannya, seret kartu itu, atau klik dua kali untuk mengirimnya ke tempat terbaik. Permainan tersimpan setelah setiap langkah.
+[Cards](https://github.com/omacom/cards) adalah Klondike solitaire milik Ve OS sendiri. Ambil tiga kartu, tanpa batas jumlah putaran, dalam empat seri kartu: satu digambar dengan warna tema Anda, dan tiga dengan tampilannya sendiri. Klik kartu lalu tempat tujuannya, seret kartu itu, atau klik dua kali untuk mengirimnya ke tempat terbaik. Permainan tersimpan setelah setiap langkah.
 
 Anda memulai Cards melalui peluncur aplikasi (`Super + Space`). Klik namanya, atau tekan `?`, untuk melihat setiap pintasan.
 
@@ -97,7 +97,7 @@ Anda memulai Omacalc dengan `Super + Shift + Q` (atau tombol kalkulator, jika ke
 
 [Signal](https://signal.org/) adalah pelopor perpesanan terenkripsi E2E, dan pilihan komunikasi yang bagus bagi siapa pun yang lebih memilih tidak melewati salah satu konglomerat teknologi besar.
 
-Anda memulai Signal dengan `Super + Shift + G`. Aplikasi ini bukan bagian dari instalasi dasar, jadi pertama kali Anda menekan itu, Omarchy akan menawarkan untuk menginstalnya untuk Anda (ini juga ada di _Install > Service_ dalam menu Omarchy).
+Anda memulai Signal dengan `Super + Shift + G`. Aplikasi ini bukan bagian dari instalasi dasar, jadi pertama kali Anda menekan itu, Ve OS akan menawarkan untuk menginstalnya untuk Anda (ini juga ada di _Install > Service_ dalam menu Ve OS).
 
 ## Omaview
 

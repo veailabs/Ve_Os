@@ -1,10 +1,10 @@
 # Aplicații web
 
-Îți poți adăuga propriile aplicații web folosind _Install > Web App_ din meniul Omarchy (`Super + Space`). Îți va cere numele aplicației, URL-ul aplicației și URL-ul pictogramei, dacă nu îl poate prelua prin favicon. Poți obține pictograme PNG excelente pentru multe aplicații web populare de pe [Dashboard Icons](https://dashboardicons.com).
+Îți poți adăuga propriile aplicații web folosind _Install > Web App_ din meniul Ve OS (`Super + Space`). Îți va cere numele aplicației, URL-ul aplicației și URL-ul pictogramei, dacă nu îl poate prelua prin favicon. Poți obține pictograme PNG excelente pentru multe aplicații web populare de pe [Dashboard Icons](https://dashboardicons.com).
 
 Vor fi apoi accesibile prin lansatorul de aplicații (`Super + Space`) și vor folosi frumoasa fereastră de aplicație web fără ramă.
 
-Dacă vrei să elimini o aplicație web, mergi pur și simplu la _Remove > Web App_ din meniul Omarchy.
+Dacă vrei să elimini o aplicație web, mergi pur și simplu la _Remove > Web App_ din meniul Ve OS.
 
 Cel mai bine este să te autentifici în toate conturile folosind un browser obișnuit înainte să folosești scurtăturile aplicațiilor web. Rama subțire a wrapperului nu funcționează bine cu 1password, așa că e mai ușor să fii autentificat direct de la început.
 
@@ -12,7 +12,7 @@ Toate scurtăturile de tastatură pentru aceste aplicații web pot fi modificate
 
 Când ești într-o aplicație web, poți copia URL-ul curent în clipboard folosind `Shift + Alt + L`.
 
-În mod implicit, Omarchy vine deja cu un sortiment de aplicații implicite:
+În mod implicit, Ve OS vine deja cu un sortiment de aplicații implicite:
 
 ## HEY
 
@@ -64,7 +64,7 @@ Poți porni YouTube folosind `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) este cel mai popular sistem de chat video folosit în SUA. Conexiuni excelente în întreaga lume. Iar întâlnirile de 40 de minute pot fi ținute fără un cont plătit. Omarchy înfășoară clientul web Zoom, iar linkurile de întâlnire Zoom se vor deschide direct în el.
+[Zoom](https://zoom.us/) este cel mai popular sistem de chat video folosit în SUA. Conexiuni excelente în întreaga lume. Iar întâlnirile de 40 de minute pot fi ținute fără un cont plătit. Ve OS înfășoară clientul web Zoom, iar linkurile de întâlnire Zoom se vor deschide direct în el.
 
 Pornești Zoom folosind lansatorul de aplicații (`Super + Space`).
 
@@ -76,7 +76,7 @@ Pornești Discord folosind lansatorul de aplicații (`Super + Space`).
 
 ## Aplicații Microsoft
 
-Selectează _Install > Service > Microsoft_ pentru a adăuga Outlook, Word, Excel, PowerPoint, Teams și OneDrive ca aplicații web. Fiecare aplicație are propriul lansator și se deschide direct, folosind URL-urile comerciale Microsoft 365 și profilul tău de browser existent. Se deschid în aceleași ferestre de aplicație de browser ca celelalte aplicații web ale Omarchy; nu instalează clientul separat Teams for Linux.
+Selectează _Install > Service > Microsoft_ pentru a adăuga Outlook, Word, Excel, PowerPoint, Teams și OneDrive ca aplicații web. Fiecare aplicație are propriul lansator și se deschide direct, folosind URL-urile comerciale Microsoft 365 și profilul tău de browser existent. Se deschid în aceleași ferestre de aplicație de browser ca celelalte aplicații web ale Ve OS; nu instalează clientul separat Teams for Linux.
 
 Elimină pachetul cu _Remove > Service > Microsoft_ sau elimină aplicații individuale cu _Remove > Web App_. Poți, de asemenea, să instalezi doar aplicațiile pe care le vrei prin _Install > Web App_.
 
@@ -88,4 +88,4 @@ Pentru a păstra autentificările de serviciu separate, adaugă un director de d
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Înlocuiește directorul din exemplu cu o cale absolută la alegerea ta și folosește aceeași cale pentru toate cele șase lansatoare, pentru a partaja autentificările de serviciu între ele. Aplicațiile web folosesc browserul acceptat selectat de Omarchy, revenind la Chrome atunci când browserul implicit nu este acceptat.
+Înlocuiește directorul din exemplu cu o cale absolută la alegerea ta și folosește aceeași cale pentru toate cele șase lansatoare, pentru a partaja autentificările de serviciu între ele. Aplicațiile web folosesc browserul acceptat selectat de Ve OS, revenind la Chrome atunci când browserul implicit nu este acceptat.

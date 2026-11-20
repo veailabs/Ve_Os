@@ -1,6 +1,6 @@
 # Branding
 
-Omarchy lader dig indstille dit firmalogo eller et personligt billede til både opstartsoplåsningen, pauseskærmen og Om-skærmen.
+Ve OS lader dig indstille dit firmalogo eller et personligt billede til både opstartsoplåsningen, pauseskærmen og Om-skærmen.
 
 ### Opstartsoplåsning
 
@@ -24,11 +24,11 @@ Der er tre punkter i den menu:
 
 - **Edit Text** åbner `~/.config/omarchy/branding/screensaver.txt` i din editor. Skriv eller indsæt, hvad du har lyst til — ASCII-kunst, dit navn, et frækt ord. Gem og luk, så starter pauseskærmen med det samme, så du kan se det.
 - **Set From Image** åbner en filvælger til en png eller svg, konverterer den til ASCII og viser dig resultatet. Logoer med en tydelig silhuet fungerer langt bedre end fotos.
-- **Restore Default** sætter Omarchy-logoet tilbage.
+- **Restore Default** sætter Ve OS-logoet tilbage.
 
 ### Om-skærm
 
-De samme tre muligheder findes under _Appearance > Branding > About_ til den _About_-skærm, du får fra Omarchy-menuen, og de fungerer identisk — filen er `~/.config/omarchy/branding/about.txt`, og About-vinduet dukker op efter hver ændring. About-kunsten konverteres til en mindre størrelse end pauseskærmens, da den skal passe i et vindue i stedet for at fylde hele din skærm.
+De samme tre muligheder findes under _Appearance > Branding > About_ til den _About_-skærm, du får fra Ve OS-menuen, og de fungerer identisk — filen er `~/.config/omarchy/branding/about.txt`, og About-vinduet dukker op efter hver ændring. About-kunsten konverteres til en mindre størrelse end pauseskærmens, da den skal passe i et vindue i stedet for at fylde hele din skærm.
 
 Mens vinduet er åbent, glider et grønt glimt hen over kunsten med få sekunders mellemrum og lader den derefter stå stille igen. Din egen kunst får det også, så længe hvert tegn i den er én kolonne bred — det er alt, hvad _Set From Image_ producerer. Kunst bygget af emoji eller tegn med dobbelt bredde forbliver i stedet stille, og det gør skærmen også, hvis du beholder en fastfetch-konfiguration, du selv har lavet: et stille logo i de tilfælde er animationen, der holder sig af vejen, snarere end at fejle, eftersom at lade et glimt glide hen over dem ville få resten af linjen til at lande det forkerte sted.
 

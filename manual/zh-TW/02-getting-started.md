@@ -1,4 +1,6 @@
-# 開始使用
+# Ve OS — 開始使用
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy 使用 ISO 來安裝。你可以選擇全磁碟安裝，也就是接管整個磁碟機；或是空閒空間安裝，也就是把 Omarchy 裝進磁碟機上未配置的空間——這就是與 Windows 或其他作業系統並存雙重開機的方式（請參閱 [雙重開機安裝](50-dual-boot-install.md)——請注意，你必須先在 Windows 中關閉 BitLocker）。無論選哪一種，安裝預設都會使用完整加密，而全磁碟選項會清除所選磁碟機的內容，所以使用現有磁碟機之前，務必先做好備份！
 

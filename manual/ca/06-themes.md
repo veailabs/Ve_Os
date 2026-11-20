@@ -1,8 +1,8 @@
 # Temes
 
-Omarchy inclou vint-i-dos temes preciosos. Pots triar entre ells a través de _Aparença > Tema_ al menú d'Omarchy (`Super + Space`) o anar directament al selector de temes amb `Super + Ctrl + T`.
+Ve OS inclou vint-i-dos temes preciosos. Pots triar entre ells a través de _Aparença > Tema_ al menú d'Ve OS (`Super + Space`) o anar directament al selector de temes amb `Super + Ctrl + T`.
 
-Cada tema dona estil a l'escriptori, el terminal, neovim, la pantalla d'activitat (btop), Chromium i tota la interfície d'Omarchy: la barra superior, el menú, les notificacions, l'OSD i la pantalla de bloqueig. (Per a Obsidian, has de seleccionar manualment el tema d'Omarchy a través de _Aparença > Temes_ dins de l'aplicació).
+Cada tema dona estil a l'escriptori, el terminal, neovim, la pantalla d'activitat (btop), Chromium i tota la interfície d'Ve OS: la barra superior, el menú, les notificacions, l'OSD i la pantalla de bloqueig. (Per a Obsidian, has de seleccionar manualment el tema d'Ve OS a través de _Aparença > Temes_ dins de l'aplicació).
 
 Els temes tenen un conjunt d'imatges de fons entre les quals pots triar amb `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Les icones del llançador d'aplicacions i del dock es dibuixen amb els colors de
 
 Pots instal·lar un conjunt d'icones que hagi fet algú altre amb _Instal·la > Estil > Icones_ (o `omarchy icons install <git url>`), i tornar-lo a eliminar a _Elimina > Icones_. _Actualitza > Icones addicionals_ obté la versió més recent dels conjunts que tens instal·lats.
 
-Per crear el teu propi conjunt, posa les teves icones a `~/.config/omarchy/icons/<name>/`, un fitxer per aplicació, amb el nom segons la línia `Icon=` del fitxer `.desktop` de l'aplicació. Un fitxer que acaba en `.svg` es mostra tal com és. Un fitxer que acaba en `.svg.tpl` es dibuixa amb els colors del tema: escriu `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` o `{{ icon_shadow }}` on vagi un color. El conjunt predeterminat de `/usr/share/omarchy/icons/papercraft/` és un bon lloc per començar. Afegeix un `preview.png` per mostrar el teu conjunt al selector; sense un, Omarchy dibuixa una vista prèvia a partir de les teves icones. Per canviar una sola icona del conjunt predeterminat, posa la teva versió a `~/.config/omarchy/icons/papercraft/`.
+Per crear el teu propi conjunt, posa les teves icones a `~/.config/omarchy/icons/<name>/`, un fitxer per aplicació, amb el nom segons la línia `Icon=` del fitxer `.desktop` de l'aplicació. Un fitxer que acaba en `.svg` es mostra tal com és. Un fitxer que acaba en `.svg.tpl` es dibuixa amb els colors del tema: escriu `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` o `{{ icon_shadow }}` on vagi un color. El conjunt predeterminat de `/usr/share/omarchy/icons/papercraft/` és un bon lloc per començar. Afegeix un `preview.png` per mostrar el teu conjunt al selector; sense un, Ve OS dibuixa una vista prèvia a partir de les teves icones. Per canviar una sola icona del conjunt predeterminat, posa la teva versió a `~/.config/omarchy/icons/papercraft/`.
 
 ### Desbloqueigs
 

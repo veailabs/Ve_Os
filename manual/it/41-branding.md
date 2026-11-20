@@ -1,6 +1,6 @@
 # Branding
 
-Omarchy ti permette di impostare il logo della tua azienda o un'immagine personale per lo sblocco all'avvio, il salvaschermo e la schermata Informazioni.
+Ve OS ti permette di impostare il logo della tua azienda o un'immagine personale per lo sblocco all'avvio, il salvaschermo e la schermata Informazioni.
 
 ### Sblocco all'avvio
 
@@ -24,11 +24,11 @@ In quel menu ci sono tre voci:
 
 - **Modifica testo** apre `~/.config/omarchy/branding/screensaver.txt` nel tuo editor. Digita o incolla quello che vuoi — arte ASCII, il tuo nome, una parolaccia. Salva ed esci, e il salvaschermo si avvia immediatamente così puoi vederlo.
 - **Imposta da immagine** apre un selettore di file per un png o svg, lo converte in ASCII e te ne mostra il risultato. I loghi con una silhouette netta funzionano molto meglio delle foto.
-- **Ripristina predefinito** rimette il logo di Omarchy.
+- **Ripristina predefinito** rimette il logo di Ve OS.
 
 ### Schermata Informazioni
 
-Le stesse tre opzioni si trovano in _Aspetto > Branding > Informazioni_ per la schermata _Informazioni_ che ottieni dal menu di Omarchy, e funzionano in modo identico — il file è `~/.config/omarchy/branding/about.txt`, e la finestra Informazioni compare dopo ogni modifica. L'immagine di Informazioni viene convertita in una dimensione più piccola rispetto a quella del salvaschermo, perché deve stare dentro una finestra invece di riempire lo schermo.
+Le stesse tre opzioni si trovano in _Aspetto > Branding > Informazioni_ per la schermata _Informazioni_ che ottieni dal menu di Ve OS, e funzionano in modo identico — il file è `~/.config/omarchy/branding/about.txt`, e la finestra Informazioni compare dopo ogni modifica. L'immagine di Informazioni viene convertita in una dimensione più piccola rispetto a quella del salvaschermo, perché deve stare dentro una finestra invece di riempire lo schermo.
 
 Mentre la finestra è aperta, un riflesso verde attraversa l'immagine ogni pochi secondi e poi la lascia di nuovo immobile. Anche la tua immagine personale lo riceve, purché ogni suo carattere sia largo una sola colonna — e qualsiasi cosa prodotta da _Imposta da immagine_ lo è. Le immagini composte da emoji o caratteri a doppia larghezza restano invece immobili, e lo stesso vale per la schermata se mantieni una configurazione fastfetch tua: in questi casi un logo immobile significa che l'animazione si fa da parte anziché non funzionare, perché far scorrere un riflesso su di esse sposterebbe il resto della riga nella posizione sbagliata.
 

@@ -28,7 +28,7 @@ Tämä näyttää sunnuntai 10:55 AM.
 
 ### Miten vaihdan aikavyöhykkeeni?
 
-Aja Omarchy-valikossa _Päivitä > Aikavyöhyke_ ja valitse luettelosta. Jos aikavyöhyke on oikein, mutta kello on itse ajautunut, _Päivitä > Aika_ käynnistää ajan synkronoinnin uudelleen puolestasi.
+Aja Ve OS-valikossa _Päivitä > Aikavyöhyke_ ja valitse luettelosta. Jos aikavyöhyke on oikein, mutta kello on itse ajautunut, _Päivitä > Aika_ käynnistää ajan synkronoinnin uudelleen puolestasi.
 
 ### Miten vaihdan DNS:ni, jaan Wi-Fi:ni tai tarkistan yhteysnopeuteni?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Voit tehdä saman näyttötallenteille käyttämällä asetusta `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap luo kuvakaappaushakemistonsa automaattisesti. Luo näyttötallenteiden hakemisto itse ja käynnistä sitten Omarchy uudelleen, jotta kumpikin ympäristömuutos tulee voimaan.
+Omasnap luo kuvakaappaushakemistonsa automaattisesti. Luo näyttötallenteiden hakemisto itse ja käynnistä sitten Ve OS uudelleen, jotta kumpikin ympäristömuutos tulee voimaan.
 
 ### Miten saan kaiuttimet + web-kameran toimimaan Apple Studio Display -näytössäni?
 
 Luulisi, että kaiken pitäisi toimia vain kytkemällä USB C, mutta valitettavasti niin ei ole. Ratkaisu, jonka olen todennut toimivan luotettavasti, on käyttää [WJESOG DisplayPort + USB-A => USB-C -kaapelia](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Silloin kaiuttimet ja web-kamera toimivat loistavasti.
 
-Muista, että Omarchyssa on sisäänrakennettu kirkkauden säätö Apple-näytöille (sekä Studio että XDR) tavallisilla näppäimistön kirkkausnäppäimillä.
+Muista, että Ve OSssa on sisäänrakennettu kirkkauden säätö Apple-näytöille (sekä Studio että XDR) tavallisilla näppäimistön kirkkausnäppäimillä.
 
 ### Miten pääsen eroon kaikista ylimääräisistä ohjelmistoista?
 
@@ -72,7 +72,7 @@ Jos et halua ohjelmia kuten Obsidian tai LibreOffice tai mitään muuta esiasenn
 
 Aja _Poista > Paketti_ nähdäksesi jokaisen asennetun paketin. Sitten voit valita sarkaimella minkä tahansa poistettavan paketin, ja aloittaa kaikkien valitsemiesi poistamisen return-näppäimellä.
 
-Ja voit käyttää Omarchy-valikon kohtaa _Poista > Verkkosovellus_ poistaaksesi esiasennetut verkkosovellukset, joita et halua.
+Ja voit käyttää Ve OS-valikon kohtaa _Poista > Verkkosovellus_ poistaaksesi esiasennetut verkkosovellukset, joita et halua.
 
 Tai aja _Poista > Esiasennetut_ lakaistaksesi kaikki esiasennetut ekstrat — verkkosovellukset, TUI:t ja valinnaiset sovellukset — yhdellä kertaa. Niitä käynnistäneet pikanäppäimet katoavat niiden mukana, joten jäljelle jää puhdas taulu sidoksia, jotka voit täyttää omillasi tiedostossa `~/.config/hypr/bindings.lua`.
 

@@ -86,7 +86,7 @@ elif [[ ${2:-} == "--execute" ]]; then
   if [[ $action == "shutdown" ]]; then
     # Block lid handling explicitly: it ignores high-level sleep inhibitors.
     systemd-inhibit --what=sleep:idle:handle-lid-switch \
-      --who=Omarchy --why="Shutdown in progress" --mode=block \
+      --who="Ve OS" --why="Shutdown in progress" --mode=block \
       "$0" "$action" --inhibited
   else
     exit_session

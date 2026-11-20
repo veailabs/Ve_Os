@@ -41,7 +41,7 @@ Aceste legături există doar cât timp Omasnap este deschis, așa că nu pot in
 
 ## Înregistrarea ecranului
 
-`Alt + Print Screen` deschide _Trigger > Capture > Screenrecord_, care te întreabă ce vrei pe coloana sonoră: fără audio, audio de pe desktop, desktop plus microfon sau desktop plus microfon plus cameră web. Ultima variantă apare doar dacă chiar ai o cameră conectată. Alege una și selectorul de înregistrare din Omarchy te lasă să tragi o regiune sau să dai clic pe o fereastră ori pe un monitor.
+`Alt + Print Screen` deschide _Trigger > Capture > Screenrecord_, care te întreabă ce vrei pe coloana sonoră: fără audio, audio de pe desktop, desktop plus microfon sau desktop plus microfon plus cameră web. Ultima variantă apare doar dacă chiar ai o cameră conectată. Alege una și selectorul de înregistrare din Ve OS te lasă să tragi o regiune sau să dai clic pe o fereastră ori pe un monitor.
 
 Înregistrarea rulează pe gpu-screen-recorder, care codează pe GPU la 60fps și trece pe CPU dacă trebuie. Rezultatul este un MP4 în `~/Videos`, numit `screenrecording-2026-08-13_14-22-05.mp4`. Setează `OMARCHY_SCREENRECORD_DIR` ca să schimbi asta — dar reține că, spre deosebire de directorul pentru capturi de ecran, acesta trebuie să existe deja, altfel înregistrarea refuză să pornească.
 

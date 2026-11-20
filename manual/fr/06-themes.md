@@ -1,8 +1,8 @@
 # Thèmes
 
-Omarchy est livré avec vingt-deux magnifiques thèmes. Vous pouvez choisir entre eux via _Apparence > Thème_ dans le menu Omarchy (`Super + Space`) ou accéder directement au sélecteur de thème avec `Super + Ctrl + T`.
+Ve OS est livré avec vingt-deux magnifiques thèmes. Vous pouvez choisir entre eux via _Apparence > Thème_ dans le menu Ve OS (`Super + Space`) ou accéder directement au sélecteur de thème avec `Super + Ctrl + T`.
 
-Chaque thème habille le bureau, le terminal, neovim, l'écran d'activité (btop), Chromium et l'ensemble de l'interface Omarchy : barre supérieure, menu, notifications, OSD et écran de verrouillage. (Pour Obsidian, vous devez sélectionner manuellement le thème Omarchy via _Apparence > Thèmes_ dans l'application).
+Chaque thème habille le bureau, le terminal, neovim, l'écran d'activité (btop), Chromium et l'ensemble de l'interface Ve OS : barre supérieure, menu, notifications, OSD et écran de verrouillage. (Pour Obsidian, vous devez sélectionner manuellement le thème Ve OS via _Apparence > Thèmes_ dans l'application).
 
 Les thèmes disposent d'un ensemble d'images d'arrière-plan parmi lesquelles vous pouvez choisir avec `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Les icônes du lanceur d'applications et du dock sont dessinées aux couleurs de
 
 Vous pouvez installer un jeu d'icônes créé par quelqu'un d'autre avec _Installer > Style > Icônes_ (ou `omarchy icons install <git url>`), et le supprimer à nouveau sous _Supprimer > Icônes_. _Mettre à jour > Icônes supplémentaires_ récupère la dernière version des jeux que vous avez installés.
 
-Pour créer le vôtre, placez vos icônes dans `~/.config/omarchy/icons/<name>/`, un fichier par application, nommé d'après la ligne `Icon=` du fichier `.desktop` de l'application. Un fichier se terminant par `.svg` est affiché tel quel. Un fichier se terminant par `.svg.tpl` est dessiné aux couleurs du thème : écrivez `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` ou `{{ icon_shadow }}` là où va une couleur. Le jeu par défaut dans `/usr/share/omarchy/icons/papercraft/` est un bon point de départ. Ajoutez un `preview.png` pour afficher votre jeu dans le sélecteur ; sans cela, Omarchy dessine un aperçu à partir de vos icônes. Pour modifier une seule icône du jeu par défaut, placez votre version dans `~/.config/omarchy/icons/papercraft/`.
+Pour créer le vôtre, placez vos icônes dans `~/.config/omarchy/icons/<name>/`, un fichier par application, nommé d'après la ligne `Icon=` du fichier `.desktop` de l'application. Un fichier se terminant par `.svg` est affiché tel quel. Un fichier se terminant par `.svg.tpl` est dessiné aux couleurs du thème : écrivez `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` ou `{{ icon_shadow }}` là où va une couleur. Le jeu par défaut dans `/usr/share/omarchy/icons/papercraft/` est un bon point de départ. Ajoutez un `preview.png` pour afficher votre jeu dans le sélecteur ; sans cela, Ve OS dessine un aperçu à partir de vos icônes. Pour modifier une seule icône du jeu par défaut, placez votre version dans `~/.config/omarchy/icons/papercraft/`.
 
 ### Déverrouillages
 

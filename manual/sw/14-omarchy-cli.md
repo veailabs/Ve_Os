@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Kwa kawaida Omarchy hudhibitiwa kupitia vitufe vya haraka na menyu ya Omarchy (`Super + Space`). Lakini unaweza pia kuidhibiti kupitia CLI ya `omarchy`. Hii ni muhimu hasa unapokuwa na wakala wa AI anayefanya kazi nawe katika ubinafsishaji au usanidi.
+Kwa kawaida Ve OS hudhibitiwa kupitia vitufe vya haraka na menyu ya Ve OS (`Super + Space`). Lakini unaweza pia kuidhibiti kupitia CLI ya `omarchy`. Hii ni muhimu hasa unapokuwa na wakala wa AI anayefanya kazi nawe katika ubinafsishaji au usanidi.
 
 CLI ina ufikiaji wa zana zote za ndani zinazotumika kupitia menyu na vinginevyo. Unaweza kuona kila kitu kilichopo kwa kuendesha `omarchy` kwenye terminal.
 
@@ -8,7 +8,7 @@ Inaonekana kama hivi:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Kwa uchunguzi, endesha `omarchy-debug --no-sudo --print` moja kwa moja. Huchapisha uchunguzi na kuandika `/tmp/omarchy-debug.log` bila kuomba sudo, ikiwemo kwenye usakinishaji wa vifurushi ambapo `omarchy debug` inaweza kushindwa kwa "Unknown Omarchy command".
+Kwa uchunguzi, endesha `omarchy-debug --no-sudo --print` moja kwa moja. Huchapisha uchunguzi na kuandika `/tmp/omarchy-debug.log` bila kuomba sudo, ikiwemo kwenye usakinishaji wa vifurushi ambapo `omarchy debug` inaweza kushindwa kwa "Unknown Ve OS command".
 
 Na unaweza kuchimba zaidi katika kila kikundi:
 
@@ -60,4 +60,4 @@ Kila amri pia hupokea `--help`, iwe unauliza kikundi kizima (`omarchy capture --
 
 ### Kufungua menyu kutoka kwenye terminal
 
-Menyu ya Omarchy pia inaweza kuendeshwa kwa skripti, jambo linalofaa kwa vifungo vyako vya vitufe. `omarchy menu` huifungua kutoka kwenye mzizi, na unaweza kuruka moja kwa moja hadi sehemu yoyote ya mti kwa kuitaja: `omarchy menu summon appearance.theme` huenda moja kwa moja kwenye kichagua mandhari, `omarchy menu toggle system` hufungua menyu ya mfumo na kuifunga tena ikiwa tayari iko wazi, na `omarchy menu close` huiondoa.
+Menyu ya Ve OS pia inaweza kuendeshwa kwa skripti, jambo linalofaa kwa vifungo vyako vya vitufe. `omarchy menu` huifungua kutoka kwenye mzizi, na unaweza kuruka moja kwa moja hadi sehemu yoyote ya mti kwa kuitaja: `omarchy menu summon appearance.theme` huenda moja kwa moja kwenye kichagua mandhari, `omarchy menu toggle system` hufungua menyu ya mfumo na kuifunga tena ikiwa tayari iko wazi, na `omarchy menu close` huiondoa.

@@ -1,4 +1,6 @@
-# ڈوئل بوٹ انسٹال
+# Ve OS — ڈوئل بوٹ انسٹال
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 آپ Windows یا دیگر انسٹالیشنز کے ساتھ ساتھ ایک ہی پارٹیشن پر Omarchy انسٹال کر سکتے ہیں۔
 

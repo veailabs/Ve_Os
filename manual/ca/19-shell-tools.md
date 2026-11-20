@@ -1,6 +1,6 @@
 # Eines de l'intèrpret d'ordres
 
-A més de les eines estàndard de Linux, Omarchy també ve amb una pila d'eines millorades per a l'intèrpret d'ordres. Aquí tens les principals.
+A més de les eines estàndard de Linux, Ve OS també ve amb una pila d'eines millorades per a l'intèrpret d'ordres. Aquí tens les principals.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Trobareu el manual complet amb `man yt-dlp`.
 
 [try](https://github.com/tobi/try) facilita la gestió d'experiments de programació amb directoris amb data. Tots els experiments viuen a `~/Work/tries` i hi pots accedir amb `try`.
 
-Omarchy no afegeix automàticament el directori `bin/` d'un projecte a `PATH`. Executa les eines locals de projecte en què confies amb una ruta relativa explícita, com ara `bin/rails` o `./bin/dev`.
+Ve OS no afegeix automàticament el directori `bin/` d'un projecte a `PATH`. Executa les eines locals de projecte en què confies amb una ruta relativa explícita, com ara `bin/rails` o `./bin/dev`.

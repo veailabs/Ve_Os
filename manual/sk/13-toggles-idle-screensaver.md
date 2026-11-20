@@ -1,10 +1,10 @@
 # Prepínače, nečinnosť a šetrič obrazovky
 
-Veľa z toho, čo meníte každý deň, vlastne nie je nastavenie. Je to režim, ktorý zapnete na hodinu a potom zase vypnete: nočné svetlo, keď pracujete do noci, režim nerušiť, keď prezentujete, zostať bdelý, keď niečo pozeráte. Omarchy ich nazýva prepínače a všetky fungujú rovnako — klávesová skratka, položka v menu a príkaz, všetky trafia ten istý prepínač.
+Veľa z toho, čo meníte každý deň, vlastne nie je nastavenie. Je to režim, ktorý zapnete na hodinu a potom zase vypnete: nočné svetlo, keď pracujete do noci, režim nerušiť, keď prezentujete, zostať bdelý, keď niečo pozeráte. Ve OS ich nazýva prepínače a všetky fungujú rovnako — klávesová skratka, položka v menu a príkaz, všetky trafia ten istý prepínač.
 
 ### Menu prepínačov
 
-`Super + Ctrl + O` otvorí priamo _Spúšťač > Prepínač_, alebo sa tam môžete dostať z menu Omarchy (`Super + Space`). Všetko v tom zozname je prepínač, ktorý môžete prepnúť bez premýšľania o tom, kde sa ukladá jeho stav. Prepínače toho, ako pracovná plocha vyzerá, nájdete hneď vedľa, pod _Vzhľad_.
+`Super + Ctrl + O` otvorí priamo _Spúšťač > Prepínač_, alebo sa tam môžete dostať z menu Ve OS (`Super + Space`). Všetko v tom zozname je prepínač, ktorý môžete prepnúť bez premýšľania o tom, kde sa ukladá jeho stav. Prepínače toho, ako pracovná plocha vyzerá, nájdete hneď vedľa, pod _Vzhľad_.
 
 Z terminálu sú tie isté prepínače `omarchy toggle <thing>`. Spustite `omarchy toggle` samostatne a uvidíte celú skupinu.
 
@@ -26,7 +26,7 @@ Prepínače touchpadu, dotykovej obrazovky a hybridnej GPU nájdete pod _Spúš�
 
 _Vzhľad_ obsahuje lištu menu a animácie plus niekoľko vecí, ktoré nie sú príkazmi `omarchy toggle`, ale správajú sa rovnako: percento batérie v lište, predvolené rozloženie pracovných plôch a pod _Okná_ medzery medzi oknami (`Super + Shift + Backspace`) a štvorcový pomer strán pri jednom okne (`Super + Ctrl + Backspace`).
 
-Keď Hyprland nemá GPU, pomocou ktorej by kreslil, a vykresľuje namiesto toho na CPU (llvmpipe), ako na počítačoch Mac, ktorých GPU zatiaľ nie je podporovaná, vo väčšine virtuálnych počítačov alebo keď sa nepodarí načítať grafický ovládač, Omarchy pre danú reláciu vypne animácie, rozostrenie a tiene a raz vám to oznámi oznámením. _Vzhľad > Zapnúť animácie_ ich vráti späť a Omarchy si to zapamätá aj pre neskoršie relácie.
+Keď Hyprland nemá GPU, pomocou ktorej by kreslil, a vykresľuje namiesto toho na CPU (llvmpipe), ako na počítačoch Mac, ktorých GPU zatiaľ nie je podporovaná, vo väčšine virtuálnych počítačov alebo keď sa nepodarí načítať grafický ovládač, Ve OS pre danú reláciu vypne animácie, rozostrenie a tiene a raz vám to oznámi oznámením. _Vzhľad > Zapnúť animácie_ ich vráti späť a Ve OS si to zapamätá aj pre neskoršie relácie.
 
 Väčšina z nich je len súbor s príznakom pod `~/.local/state/omarchy/toggles/`. Ak sa na niektorý chcete vo skripte vetviť, `omarchy-toggle-enabled` vám namiesto hľadania dá návratový kód:
 
@@ -63,11 +63,11 @@ Potom spustite hyprsunset pri prihlásení pridaním `o.launch_on_start("hyprsun
 
 Nič sa však nestratí. Stíšené oznámenia sa podržia: posledných pár vrátite na obrazovku pomocou `Super + Shift + Alt + ,`. Zvyšok nájdete v [oznámeniach](10-notices.md).
 
-Dva druhy správ aj tak prejdú: vlastné potvrdzovacie toasty Omarchy k niečomu, čo ste práve urobili ("Theme changed", "Screenshot saved"), a kritické upozornenia odoslané z príkazového riadka. Chatovacie aplikácie, ktoré označujú všetko za kritické, aby si vynútili cestu pred vás, sa nekvalifikujú.
+Dva druhy správ aj tak prejdú: vlastné potvrdzovacie toasty Ve OS k niečomu, čo ste práve urobili ("Theme changed", "Screenshot saved"), a kritické upozornenia odoslané z príkazového riadka. Chatovacie aplikácie, ktoré označujú všetko za kritické, aby si vynútili cestu pred vás, sa nekvalifikujú.
 
 ### Nečinnosť
 
-Správanie pri nečinnosti vlastní shell Omarchy a časy sú blokom `idle` na najvyššej úrovni v `~/.config/omarchy/shell.json`:
+Správanie pri nečinnosti vlastní shell Ve OS a časy sú blokom `idle` na najvyššej úrovni v `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Toto sa týka zamykania a šetriča obrazovky, nie napájania. Uspávanie a hibe
 
 ### Šetrič obrazovky
 
-Šetrič obrazovky Omarchy je ASCII art prechádzajúci náhodnými textovými efektmi, jedna inštancia na monitor. Ukončí ho akákoľvek klávesa alebo pohyb myši.
+Šetrič obrazovky Ve OS je ASCII art prechádzajúci náhodnými textovými efektmi, jedna inštancia na monitor. Ukončí ho akákoľvek klávesa alebo pohyb myši.
 
 Môžete ho spustiť na požiadanie zo _Systém > Šetrič obrazovky_ (`Super + Esc`), čo ho vynúti hore aj vtedy, ak ste šetrič obrazovky pri nečinnosti vypli. Predvolene k nemu nie je priradená žiadna klávesová skratka.
 
 `omarchy toggle screensaver` je to, čo vypne ten pri nečinnosti, ak chcete ísť radšej rovno z práce na zamknutú obrazovku. Zatvorí ho akákoľvek klávesa, kliknutie, posun alebo pohyb myši.
 
-Logo, ktoré kreslí, si môžete zmeniť pod _Vzhľad > Vizuálna identita > Šetrič obrazovky_. Nahrajte png alebo svg a Omarchy ho prevedie do ASCII. Pozrite si [vizuálnu identitu](41-branding.md).
+Logo, ktoré kreslí, si môžete zmeniť pod _Vzhľad > Vizuálna identita > Šetrič obrazovky_. Nahrajte png alebo svg a Ve OS ho prevedie do ASCII. Pozrite si [vizuálnu identitu](41-branding.md).
 
 ### Uzamknutá obrazovka
 
-`Super + Ctrl + L` zamkne počítač. Tým sa spustí uzamknutá obrazovka zo shellu Omarchy, vypne sa displej, rozloženie klávesnice sa resetuje na prvé, aby ste heslo nepísali v nesprávnej abecede, a — ak ho máte spustený — cestou von sa zamkne aj 1Password.
+`Super + Ctrl + L` zamkne počítač. Tým sa spustí uzamknutá obrazovka zo shellu Ve OS, vypne sa displej, rozloženie klávesnice sa resetuje na prvé, aby ste heslo nepísali v nesprávnej abecede, a — ak ho máte spustený — cestou von sa zamkne aj 1Password.
 
 Uzamknutá obrazovka prijíma heslo a prijme aj odtlačok prsta, keď si ho nastavíte. To a ďalšie spôsoby overovania pokrýva [hardvérové overovanie](37-hardware-authentication.md).

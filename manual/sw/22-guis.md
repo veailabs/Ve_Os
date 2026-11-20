@@ -20,7 +20,7 @@ Obsidian ni bure kwa madhumuni yote, ikiwa ni pamoja na matumizi ya kibinafsi, y
 
 Obsidian pia inatoa [nyongeza ya kibiashara ya kusawazisha](https://obsidian.md/sync) na programu za simu kwenye iOS na Android. (https://obsidian.md/pricing).
 
-Unaanzisha Obsidian kwa `Super + Shift + O`. Ili kutumia usawazishaji wa mandhari, lazima uchague mandhari ya `Omarchy` chini ya mipangilio.
+Unaanzisha Obsidian kwa `Super + Shift + O`. Ili kutumia usawazishaji wa mandhari, lazima uchague mandhari ya `Ve OS` chini ya mipangilio.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Unaanzisha Aether kupitia kianzisha programu (`Super + Space`).
 
 [LocalSend](https://localsend.org/) hukuwezesha kutuma faili kwa vifaa vingine vilivyo kwenye mtandao huohuo vinavyoendesha programu hiyo, kama AirDrop ya Apple. Ni ya majukwaa mengi, hata hivyo, hivyo unaweza kutuma faili kwenda na kutoka Windows, macOS, Android, iOS, na bila shaka Linux.
 
-Unaweza kufungua menyu ya Share kwenye `Super + Ctrl + S` au chini ya _Trigger > Share_ katika menyu ya Omarchy. Hukupa chaguo nne:
+Unaweza kufungua menyu ya Share kwenye `Super + Ctrl + S` au chini ya _Trigger > Share_ katika menyu ya Ve OS. Hukupa chaguo nne:
 
 - **Clipboard** hutuma chochote ulichonakili kama faili ya maandishi. Ni nzuri kwa kupeleka kiungo au kipande cha maandishi kwenye simu yako bila kujitumIa barua pepe.
 - **File** hufungua kichagua faili ambapo unaweza kuchagua kadhaa mara moja.
@@ -55,7 +55,7 @@ Jambo hilohilo hufanya kazi kutoka kwenye terminali kwa `omarchy share clipboard
 
 Unaweza pia kutuma moja kwa moja kutoka kwenye kidhibiti faili: bofya kulia chaguo lolote katika Nautilus na uchague _Send via LocalSend_.
 
-Firewall ya Omarchy imefungwa kwa chaguo-msingi isipokuwa kwa port ya LocalSend, hivyo hii hufanya kazi mara moja kwenye usakinishaji mpya. Tazama [usalama](48-security.md).
+Firewall ya Ve OS imefungwa kwa chaguo-msingi isipokuwa kwa port ya LocalSend, hivyo hii hufanya kazi mara moja kwenye usakinishaji mpya. Tazama [usalama](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Unaanzisha Signed kupitia kianzisha programu (`Super + Space`), au unafungua PDF
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) ni mchezo wa Omarchy wenyewe wa sataranji wa 3D. Cheza na rafiki kwenye kompyuta hiyohiyo au mpinzani aliyejengwa ndani katika viwango vitatu, kwenye seti nne zilizochongwa ambazo kila moja husogea kwa namna yake: vyombo vya angani, mbao na pembe za ndovu zilizochongwa, viumbe wa msituni, na pipi. Michezo haina saa na huhifadhiwa baada ya kila sogezo.
+[Checkmate](https://github.com/omacom/checkmate) ni mchezo wa Ve OS wenyewe wa sataranji wa 3D. Cheza na rafiki kwenye kompyuta hiyohiyo au mpinzani aliyejengwa ndani katika viwango vitatu, kwenye seti nne zilizochongwa ambazo kila moja husogea kwa namna yake: vyombo vya angani, mbao na pembe za ndovu zilizochongwa, viumbe wa msituni, na pipi. Michezo haina saa na huhifadhiwa baada ya kila sogezo.
 
 Unaanzisha Checkmate kupitia kianzisha programu (`Super + Space`), ambapo imeorodheshwa kama Chess. Bonyeza `?` ndani yake kuona kila njia ya mkato.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) ni Klondike solitaire ya Omarchy yenyewe. Chora tatu, bila kikomo cha kupita, katika mfululizo minne ya kadi: mmoja umechorwa kwa rangi za mandhari yako, na mitatu yenye mwonekano wake yenyewe. Bofya kadi kisha pale inapoenda, iburute, au ubofye mara mbili kuituma mahali bora zaidi. Michezo huhifadhiwa baada ya kila sogezo.
+[Cards](https://github.com/omacom/cards) ni Klondike solitaire ya Ve OS yenyewe. Chora tatu, bila kikomo cha kupita, katika mfululizo minne ya kadi: mmoja umechorwa kwa rangi za mandhari yako, na mitatu yenye mwonekano wake yenyewe. Bofya kadi kisha pale inapoenda, iburute, au ubofye mara mbili kuituma mahali bora zaidi. Michezo huhifadhiwa baada ya kila sogezo.
 
 Unaanzisha Cards kupitia kianzisha programu (`Super + Space`). Bofya jina lake, au bonyeza `?`, kuona kila njia ya mkato.
 
@@ -97,7 +97,7 @@ Unaanzisha Omacalc kwa `Super + Shift + Q` (au kitufe cha kikokotoo, ikiwa kibod
 
 [Signal](https://signal.org/) ni mwanzilishi wa ujumbe uliosimbwa kwa E2E, na chaguo zuri la mawasiliano kwa yeyote ambaye angependelea kutopitia mojawapo ya makampuni makubwa ya teknolojia.
 
-Unaanzisha Signal kwa `Super + Shift + G`. Sio sehemu ya usakinishaji wa msingi, hivyo mara ya kwanza unapobonyeza hiyo, Omarchy itakupa kuisakinisha kwa ajili yako (pia iko chini ya _Install > Service_ katika menyu ya Omarchy).
+Unaanzisha Signal kwa `Super + Shift + G`. Sio sehemu ya usakinishaji wa msingi, hivyo mara ya kwanza unapobonyeza hiyo, Ve OS itakupa kuisakinisha kwa ajili yako (pia iko chini ya _Install > Service_ katika menyu ya Ve OS).
 
 ## Omaview
 

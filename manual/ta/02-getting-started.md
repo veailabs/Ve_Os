@@ -1,4 +1,6 @@
-# தொடங்குவது
+# Ve OS — தொடங்குவது
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ஒரு ISO மூலம் நிறுவப்படுகிறது. முழு வட்டையும் கைப்பற்றும் முழு-வட்டு நிறுவல், அல்லது ஒரு வட்டில் ஒதுக்கப்படாத இடத்தில் Omarchy ஐ வைக்கும் காலி-இட நிறுவல் ஆகியவற்றில் ஒன்றை நீங்கள் தேர்வு செய்யலாம் — Windows அல்லது வேறொரு OS உடன் இணைந்து dual boot செய்வது இப்படித்தான் (பார்க்கவும் [dual-boot நிறுவல்](50-dual-boot-install.md) — நீங்கள் முதலில் Windows இல் BitLocker ஐ அணைக்க வேண்டும் என்பதைக் கவனியுங்கள்). எப்படி இருந்தாலும், நிறுவல் இயல்பாகவே முழு குறியாக்கத்துடன் வருகிறது, முழு-வட்டு விருப்பம் தேர்ந்தெடுக்கப்பட்ட வட்டை அழித்துவிடும், எனவே ஏற்கனவே உள்ள வட்டைப் பயன்படுத்துவதற்கு முன் கண்டிப்பாக காப்புப்பிரதி எடுத்துக்கொள்ளுங்கள்!
 

@@ -1,10 +1,10 @@
 # Aplicacions web
 
-Pots afegir les teves pròpies aplicacions web amb _Install > Web App_ al menú d'Omarchy (`Super + Space`). Et demanarà el nom de l'aplicació, l'URL de l'aplicació i l'URL de la icona, si no la pot obtenir mitjançant el favicon. Pots aconseguir icones PNG fantàstiques per a moltes aplicacions web populars a [Dashboard Icons](https://dashboardicons.com).
+Pots afegir les teves pròpies aplicacions web amb _Install > Web App_ al menú d'Ve OS (`Super + Space`). Et demanarà el nom de l'aplicació, l'URL de l'aplicació i l'URL de la icona, si no la pot obtenir mitjançant el favicon. Pots aconseguir icones PNG fantàstiques per a moltes aplicacions web populars a [Dashboard Icons](https://dashboardicons.com).
 
 Aleshores hi podràs accedir mitjançant el llançador d'aplicacions (`Super + Space`), i utilitzen la bonica finestra d'aplicació web sense marc.
 
-Si vols eliminar una aplicació web, vés simplement a _Remove > Web App_ al menú d'Omarchy.
+Si vols eliminar una aplicació web, vés simplement a _Remove > Web App_ al menú d'Ve OS.
 
 El millor és que iniciïs sessió en tots els teus comptes amb un navegador normal abans d'utilitzar les dreceres de les aplicacions web. El marc prim de l'embolcall no funciona bé amb 1password, així que simplement és més fàcil haver iniciat sessió directament abans.
 
@@ -12,7 +12,7 @@ Totes les dreceres de teclat d'aquestes aplicacions web es poden canviar a `~/.c
 
 Quan siguis en una aplicació web, pots copiar l'URL actual al porta-retalls amb `Shift + Alt + L`.
 
-Per defecte, Omarchy ja inclou una selecció d'aplicacions predeterminades:
+Per defecte, Ve OS ja inclou una selecció d'aplicacions predeterminades:
 
 ## HEY
 
@@ -64,7 +64,7 @@ Pots obrir YouTube amb `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) és el sistema de videoxat més popular dels EUA. Connexions fantàstiques arreu del món. I es poden fer reunions de 40 minuts sense un compte de pagament. Omarchy embolcalla el client web de Zoom, i els enllaços de reunions de Zoom s'hi obriran directament.
+[Zoom](https://zoom.us/) és el sistema de videoxat més popular dels EUA. Connexions fantàstiques arreu del món. I es poden fer reunions de 40 minuts sense un compte de pagament. Ve OS embolcalla el client web de Zoom, i els enllaços de reunions de Zoom s'hi obriran directament.
 
 Obres Zoom amb el llançador d'aplicacions (`Super + Space`).
 
@@ -76,7 +76,7 @@ Obres Discord amb el llançador d'aplicacions (`Super + Space`).
 
 ## Aplicacions de Microsoft
 
-Selecciona _Install > Service > Microsoft_ per afegir Outlook, Word, Excel, PowerPoint, Teams i OneDrive com a aplicacions web. Cada aplicació té el seu propi llançador i s'obre directament, amb els URL comercials de Microsoft 365 i el teu perfil de navegador existent. S'obren en les mateixes finestres d'aplicació de navegador que les altres aplicacions web d'Omarchy; no instal·len el client separat Teams for Linux.
+Selecciona _Install > Service > Microsoft_ per afegir Outlook, Word, Excel, PowerPoint, Teams i OneDrive com a aplicacions web. Cada aplicació té el seu propi llançador i s'obre directament, amb els URL comercials de Microsoft 365 i el teu perfil de navegador existent. S'obren en les mateixes finestres d'aplicació de navegador que les altres aplicacions web d'Ve OS; no instal·len el client separat Teams for Linux.
 
 Elimina el paquet amb _Remove > Service > Microsoft_, o elimina aplicacions individuals amb _Remove > Web App_. També pots instal·lar només les aplicacions que vulguis mitjançant _Install > Web App_.
 
@@ -88,4 +88,4 @@ Per mantenir separats els inicis de sessió de la feina, afegeix un directori de
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Substitueix el directori d'exemple per una ruta absoluta que triïs tu i utilitza la mateixa ruta per als sis llançadors per compartir entre ells els inicis de sessió de la feina. Les aplicacions web utilitzen el navegador compatible seleccionat d'Omarchy, i recorren a Chrome quan el navegador predeterminat no és compatible.
+Substitueix el directori d'exemple per una ruta absoluta que triïs tu i utilitza la mateixa ruta per als sis llançadors per compartir entre ells els inicis de sessió de la feina. Les aplicacions web utilitzen el navegador compatible seleccionat d'Ve OS, i recorren a Chrome quan el navegador predeterminat no és compatible.

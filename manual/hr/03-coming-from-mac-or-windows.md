@@ -1,12 +1,12 @@
 # Dolazak s Maca ili Windowsa
 
-Ako ste godinama na macOS-u ili Windowsima, vaši prsti znaju stotinu stvari za koje je vaš mozak zaboravio da ih je ikada naučio. Ovo poglavlje je sloj za prevođenje: kamo ti instinkti odlaze u Omarchyju. Same značajke detaljno su obrađene drugdje — ovo je samo karta.
+Ako ste godinama na macOS-u ili Windowsima, vaši prsti znaju stotinu stvari za koje je vaš mozak zaboravio da ih je ikada naučio. Ovo poglavlje je sloj za prevođenje: kamo ti instinkti odlaze u Ve OSju. Same značajke detaljno su obrađene drugdje — ovo je samo karta.
 
 ### Super je središte svega
 
-Sva mišićna memorija koju ste izgradili oko Cmd ili tipke Windows prenosi se na jednu tipku: Super. To je tipka Windows na PC tipkovnici i sidro je za gotovo svaki prečac u Omarchyju.
+Sva mišićna memorija koju ste izgradili oko Cmd ili tipke Windows prenosi se na jednu tipku: Super. To je tipka Windows na PC tipkovnici i sidro je za gotovo svaki prečac u Ve OSju.
 
-Vaš refleks za Spotlight ili Raycast ili izbornik Start postaje `Super + Space`. Time se otvara izbornik Omarchy, koji pokreće aplikacije, mijenja postavke, instalira softver, snima zaslon — gotovo sve. Počnite tipkati za filtriranje. `Super + Alt + Space` prikazuje svaku aplikaciju na jednoj mreži, onako kako to radi Launchpad. Pogledajte [navigaciju](04-navigation.md).
+Vaš refleks za Spotlight ili Raycast ili izbornik Start postaje `Super + Space`. Time se otvara izbornik Ve OS, koji pokreće aplikacije, mijenja postavke, instalira softver, snima zaslon — gotovo sve. Počnite tipkati za filtriranje. `Super + Alt + Space` prikazuje svaku aplikaciju na jednoj mreži, onako kako to radi Launchpad. Pogledajte [navigaciju](04-navigation.md).
 
 ### Nema docka ni ikona na radnoj površini
 
@@ -22,15 +22,15 @@ Radni prostori djelovat će poznato: to su macOS Spaces ili virtualne radne povr
 
 ### Kopiranje i lijepljenje jednostavno rade
 
-Na Macu ste posvuda imali Cmd + C. Na Windowsima ste posvuda imali Ctrl + C — osim u terminalu, gdje to ubija vaš program. Omarchy vam daje `Super + C`, `Super + X` i `Super + V`, i oni rade posvuda, uključujući terminal. Nema zasebnog refleksa koji treba naučiti za ljusku.
+Na Macu ste posvuda imali Cmd + C. Na Windowsima ste posvuda imali Ctrl + C — osim u terminalu, gdje to ubija vaš program. Ve OS vam daje `Super + C`, `Super + X` i `Super + V`, i oni rade posvuda, uključujući terminal. Nema zasebnog refleksa koji treba naučiti za ljusku.
 
 Ljudi s Windowsa: vaša povijest međuspremnika s Win + V živi na `Super + Ctrl + V` i drži slike kao i tekst. Pogledajte [ujedinjeni međuspremnik i povijest](08-unified-clipboard-history.md).
 
 ### Tablica prevođenja
 
-| Posežete za | U Omarchyju |
+| Posežete za | U Ve OSju |
 | ------------- | ---------- |
-| Spotlight / Raycast / Start menu | `Super + Space` — izbornik Omarchy |
+| Spotlight / Raycast / Start menu | `Super + Space` — izbornik Ve OS |
 | AirDrop | LocalSend, putem `Super + Ctrl + S` — pogledajte [GUIs](22-guis.md) |
 | Cmd + Shift + 4 / Win + Shift + S | `Super + Ctrl + Alt + C` ili `Print Screen` — pogledajte [snimke zaslona i snimanje](12-screenshots-recording.md) |
 | Notification Center | Povijest obavijesti na `Super + Shift + Alt + ,` |
@@ -42,7 +42,7 @@ Ljudi s Windowsa: vaša povijest međuspremnika s Win + V živi na `Super + Ctrl
 
 Mnogo postavki živi u tekstualnim datotekama koje uređujete, a ne u panelima kroz koje klikate. To zvuči primitivno dok ne shvatite da to znači da se svaka prilagodba može vidjeti, kopirati na vaše sljedeće računalo i staviti pod kontrolu verzija. Izbornik _Postavljanje_ baca vas ravno u pravu datoteku i ponovno pokreće što god treba ponovno pokrenuti kada završite.
 
-Ažuriranja dolaze kroz jednu naredbu — _Ažuriranje > Omarchy_ — koja ažurira sam Omarchy i svaki paket na sustavu, a prvo napravi snimku. Nema programa za ažuriranje pojedinačnih aplikacija koji vas gnjave nasumično. Pogledajte [ažuriranja](30-updates.md).
+Ažuriranja dolaze kroz jednu naredbu — _Ažuriranje > Ve OS_ — koja ažurira sam Ve OS i svaki paket na sustavu, a prvo napravi snimku. Nema programa za ažuriranje pojedinačnih aplikacija koji vas gnjave nasumično. Pogledajte [ažuriranja](30-updates.md).
 
 Softver dolazi iz upravitelja paketa, a ne iz preuzetih instalacijskih programa.
 
@@ -50,7 +50,7 @@ A kada zatvorite prozor, aplikacija se stvarno zatvara. Nema macOS limba u kojem
 
 ### Na Mac hardveru
 
-Omarchy dobro radi na Intel Mac računalima — pogledajte [podršku za Mac](44-mac-support.md). A tipkovnica je ljubazna prema vama: Omarchy ništa ne remapira, a Linux tipku Command tretira kao Super, pa Super sjedi točno tamo gdje je Cmd uvijek bio. Vaš palac neće primijetiti selidbu.
+Ve OS dobro radi na Intel Mac računalima — pogledajte [podršku za Mac](44-mac-support.md). A tipkovnica je ljubazna prema vama: Ve OS ništa ne remapira, a Linux tipku Command tretira kao Super, pa Super sjedi točno tamo gdje je Cmd uvijek bio. Vaš palac neće primijetiti selidbu.
 
 ### Dajte tome dva tjedna
 

@@ -1,10 +1,10 @@
 # 网页应用
 
-你可以使用 Omarchy 菜单（`Super + Space`）中的 _安装 > Web 应用_ 添加你自己的网页应用。如果它无法通过 favicon 获取图标，它会要求你提供应用名称、应用 URL 和图标 URL。你可以在 [Dashboard Icons](https://dashboardicons.com) 上为许多热门网页应用找到精美的 PNG 图标。
+你可以使用 Ve OS 菜单（`Super + Space`）中的 _安装 > Web 应用_ 添加你自己的网页应用。如果它无法通过 favicon 获取图标，它会要求你提供应用名称、应用 URL 和图标 URL。你可以在 [Dashboard Icons](https://dashboardicons.com) 上为许多热门网页应用找到精美的 PNG 图标。
 
 然后，你就可以通过应用启动器（`Super + Space`）访问它们，并使用美观的无边框网页应用窗口。
 
-如果你想删除某个网页应用，只需进入 Omarchy 菜单中的 _移除 > Web 应用_。
+如果你想删除某个网页应用，只需进入 Ve OS 菜单中的 _移除 > Web 应用_。
 
 最好先用普通浏览器登录你的所有账户，然后再使用网页应用快捷方式。这个轻量包装框架与 1password 配合得不太好，所以先直接登录会更省事。
 
@@ -12,7 +12,7 @@
 
 当你在网页应用中时，你可以使用 `Shift + Alt + L` 将当前 URL 复制到剪贴板。
 
-默认情况下，Omarchy 已经附带了一系列默认应用：
+默认情况下，Ve OS 已经附带了一系列默认应用：
 
 ## HEY
 
@@ -64,7 +64,7 @@ X 是新闻爆料的地方。
 
 ## Zoom
 
-[Zoom](https://zoom.us/) 是美国最受欢迎的视频聊天系统。与世界各地的人连接效果极佳。而且无需付费账户即可举行 40 分钟的会议。Omarchy 包装了 Zoom 的 Web 客户端，Zoom 会议链接会直接在其中打开。
+[Zoom](https://zoom.us/) 是美国最受欢迎的视频聊天系统。与世界各地的人连接效果极佳。而且无需付费账户即可举行 40 分钟的会议。Ve OS 包装了 Zoom 的 Web 客户端，Zoom 会议链接会直接在其中打开。
 
 你可以使用应用启动器（`Super + Space`）启动 Zoom。
 
@@ -76,7 +76,7 @@ X 是新闻爆料的地方。
 
 ## Microsoft 应用
 
-选择 _安装 > 服务 > Microsoft_，即可将 Outlook、Word、Excel、PowerPoint、Teams 和 OneDrive 添加为网页应用。每个应用都有自己的启动器并可直接打开，使用 Microsoft 365 的商业 URL 和你现有的浏览器配置文件。它们会在与 Omarchy 其他网页应用相同的浏览器应用窗口中打开；它们不会安装单独的 Teams for Linux 客户端。
+选择 _安装 > 服务 > Microsoft_，即可将 Outlook、Word、Excel、PowerPoint、Teams 和 OneDrive 添加为网页应用。每个应用都有自己的启动器并可直接打开，使用 Microsoft 365 的商业 URL 和你现有的浏览器配置文件。它们会在与 Ve OS 其他网页应用相同的浏览器应用窗口中打开；它们不会安装单独的 Teams for Linux 客户端。
 
 使用 _移除 > 服务 > Microsoft_ 删除该套件，或使用 _移除 > Web 应用_ 删除单个应用。你也可以通过 _安装 > Web 应用_ 只安装你想要的应用。
 
@@ -88,4 +88,4 @@ X 是新闻爆料的地方。
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-将示例目录替换为你选择的绝对路径，并为全部六个启动器使用相同路径，以便在它们之间共享工作登录。这些网页应用会使用 Omarchy 所选的受支持浏览器；当默认浏览器不受支持时，会回退到 Chrome。
+将示例目录替换为你选择的绝对路径，并为全部六个启动器使用相同路径，以便在它们之间共享工作登录。这些网页应用会使用 Ve OS 所选的受支持浏览器；当默认浏览器不受支持时，会回退到 Chrome。

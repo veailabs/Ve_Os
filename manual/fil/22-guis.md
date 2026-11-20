@@ -20,7 +20,7 @@ Libre ang Obsidian para sa lahat ng layunin, kabilang ang personal, komersyal, a
 
 Nag-aalok din ang Obsidian ng [komersyal na add-on para sa pag-sync](https://obsidian.md/sync) sa mga mobile app sa iOS at Android. (https://obsidian.md/pricing).
 
-Sinisimulan mo ang Obsidian gamit ang `Super + Shift + O`. Para magamit ang theme syncing, kailangan mong piliin ang `Omarchy` theme sa ilalim ng settings.
+Sinisimulan mo ang Obsidian gamit ang `Super + Shift + O`. Para magamit ang theme syncing, kailangan mong piliin ang `Ve OS` theme sa ilalim ng settings.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Sinisimulan mo ang Aether sa pamamagitan ng application launcher (`Super + Space
 
 Hinahayaan ka ng [LocalSend](https://localsend.org/) na magpadala ng mga file sa iba pang device sa parehong network na nagpapatakbo ng app, tulad ng AirDrop ng Apple. Cross-platform nga lang ito, kaya makapagpapadala ka ng mga file papunta at mula sa Windows, macOS, Android, iOS, at siyempre sa Linux.
 
-Mabubuksan mo ang Share menu sa `Super + Ctrl + S` o sa ilalim ng _Trigger > Share_ sa menu ng Omarchy. Binibigyan ka nito ng apat na opsyon:
+Mabubuksan mo ang Share menu sa `Super + Ctrl + S` o sa ilalim ng _Trigger > Share_ sa menu ng Ve OS. Binibigyan ka nito ng apat na opsyon:
 
 - Ipinapadala ng **Clipboard** bilang text file ang anumang kinopya mo. Mahusay ito para mailagay ang isang link o snippet sa telepono mo nang hindi nag-e-email sa sarili mo.
 - Binubuksan ng **File** ang isang file picker kung saan makakapili ka ng ilan nang sabay-sabay.
@@ -55,7 +55,7 @@ Gumagana rin ang parehong bagay mula sa terminal gamit ang `omarchy share clipbo
 
 Maaari ka ring magpadala nang diretso mula sa file manager: i-right-click ang anumang pinili sa Nautilus at piliin ang _Send via LocalSend_.
 
-Sarado ang firewall ng Omarchy bilang default maliban sa port ng LocalSend, kaya gumagana ito agad sa isang bagong install. Tingnan ang [security](48-security.md).
+Sarado ang firewall ng Ve OS bilang default maliban sa port ng LocalSend, kaya gumagana ito agad sa isang bagong install. Tingnan ang [security](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Sinisimulan mo ang Signed sa pamamagitan ng application launcher (`Super + Space
 
 ## Checkmate
 
-Ang [Checkmate](https://github.com/omacom/checkmate) ang sariling 3D chess game ng Omarchy. Laruin ang isang kaibigan sa parehong computer o ang built-in na kalaban sa tatlong antas, sa apat na inukit na set na bawat isa ay gumagalaw sa sarili nitong paraan: orbital craft, inukit na kahoy at ivory, mga nilalang sa kakahuyan, at candy. Walang orasan ang mga laro at nagse-save pagkatapos ng bawat galaw.
+Ang [Checkmate](https://github.com/omacom/checkmate) ang sariling 3D chess game ng Ve OS. Laruin ang isang kaibigan sa parehong computer o ang built-in na kalaban sa tatlong antas, sa apat na inukit na set na bawat isa ay gumagalaw sa sarili nitong paraan: orbital craft, inukit na kahoy at ivory, mga nilalang sa kakahuyan, at candy. Walang orasan ang mga laro at nagse-save pagkatapos ng bawat galaw.
 
 Sinisimulan mo ang Checkmate sa pamamagitan ng application launcher (`Super + Space`), kung saan nakalista ito bilang Chess. Pindutin ang `?` sa loob nito para makita ang bawat shortcut.
 
 ## Cards
 
-Ang [Cards](https://github.com/omacom/cards) ang sariling Klondike solitaire ng Omarchy. Bumunot ng tatlo, nang walang limitasyon sa mga pass, sa apat na serye ng baraha: isa ang iginuhit sa mga kulay ng theme mo, at tatlo ang may sariling hitsura. I-click ang isang baraha at pagkatapos ay kung saan ito pupunta, i-drag ito, o i-double-click para ipadala ito sa pinakamagandang lugar. Nagse-save ang mga laro pagkatapos ng bawat galaw.
+Ang [Cards](https://github.com/omacom/cards) ang sariling Klondike solitaire ng Ve OS. Bumunot ng tatlo, nang walang limitasyon sa mga pass, sa apat na serye ng baraha: isa ang iginuhit sa mga kulay ng theme mo, at tatlo ang may sariling hitsura. I-click ang isang baraha at pagkatapos ay kung saan ito pupunta, i-drag ito, o i-double-click para ipadala ito sa pinakamagandang lugar. Nagse-save ang mga laro pagkatapos ng bawat galaw.
 
 Sinisimulan mo ang Cards sa pamamagitan ng application launcher (`Super + Space`). I-click ang pangalan nito, o pindutin ang `?`, para makita ang bawat shortcut.
 
@@ -97,7 +97,7 @@ Sinisimulan mo ang Omacalc gamit ang `Super + Shift + Q` (o ang calculator key, 
 
 Ang [Signal](https://signal.org/) ang nanguna sa E2E encrypted messaging, at isang mahusay na opsyon sa komunikasyon para sa sinumang mas gugustuhing hindi dumaan sa isa sa malalaking tech conglomerate.
 
-Sinisimulan mo ang Signal gamit ang `Super + Shift + G`. Hindi ito bahagi ng base install, kaya sa unang beses na pindutin mo iyon, aalukin ka ng Omarchy na i-install ito para sa iyo (nasa ilalim din ito ng _Install > Service_ sa menu ng Omarchy).
+Sinisimulan mo ang Signal gamit ang `Super + Shift + G`. Hindi ito bahagi ng base install, kaya sa unang beses na pindutin mo iyon, aalukin ka ng Ve OS na i-install ito para sa iyo (nasa ilalim din ito ng _Install > Service_ sa menu ng Ve OS).
 
 ## Omaview
 

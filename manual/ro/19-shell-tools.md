@@ -1,6 +1,6 @@
 # Instrumente de shell
 
-Pe lângă instrumentele Linux standard, Omarchy vine și cu o mulțime de instrumente de shell îmbunătățite. Iată-le pe cele mai importante.
+Pe lângă instrumentele Linux standard, Ve OS vine și cu o mulțime de instrumente de shell îmbunătățite. Iată-le pe cele mai importante.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Manualul complet poate fi găsit prin `man yt-dlp`.
 
 [try](https://github.com/tobi/try) face ușoară gestionarea experimentelor de programare cu directoare ștampilate cu data. Toate experimentele trăiesc în `~/Work/tries` și le poți accesa prin `try`.
 
-Omarchy nu adaugă automat directorul `bin/` al unui proiect la `PATH`. Rulează instrumentele locale ale proiectului în care ai încredere cu o cale relativă explicită, cum ar fi `bin/rails` sau `./bin/dev`.
+Ve OS nu adaugă automat directorul `bin/` al unui proiect la `PATH`. Rulează instrumentele locale ale proiectului în care ai încredere cu o cale relativă explicită, cum ar fi `bin/rails` sau `./bin/dev`.

@@ -1,10 +1,10 @@
 # Zásuvné moduly shellu
 
-Pracovní prostředí Omarchy běží jako jeden dlouhodobě běžící proces Quickshell nazývaný `omarchy-shell` a téměř vše, co vidíte na obrazovce, je zásuvný modul uvnitř něj. Panel je zásuvný modul. Stejně tak panely, které z něj sjíždějí dolů, celoobrazovkové překryvy, jako je výběr emoji a správce schránky, samotná nabídka Omarchy, zamykací obrazovka, dialog polkit a bezhlavové služby, které hlídají vaši baterii a v noci vaši obrazovku ohřívají.
+Pracovní prostředí Ve OS běží jako jeden dlouhodobě běžící proces Quickshell nazývaný `omarchy-shell` a téměř vše, co vidíte na obrazovce, je zásuvný modul uvnitř něj. Panel je zásuvný modul. Stejně tak panely, které z něj sjíždějí dolů, celoobrazovkové překryvy, jako je výběr emoji a správce schránky, samotná nabídka Ve OS, zamykací obrazovka, dialog polkit a bezhlavové služby, které hlídají vaši baterii a v noci vaši obrazovku ohřívají.
 
-To není jen implementační detail. Znamená to, že můžete části pracovního prostředí vypínat, vyměňovat je nebo psát své vlastní, aniž byste se dotkli jediného řádku zdrojového kódu Omarchy.
+To není jen implementační detail. Znamená to, že můžete části pracovního prostředí vypínat, vyměňovat je nebo psát své vlastní, aniž byste se dotkli jediného řádku zdrojového kódu Ve OS.
 
-Zásuvné moduly první strany jsou dodávány s Omarchy a žijí v adresáři `$OMARCHY_PATH/shell/plugins/`. Cokoli, co sami přidáte — vlastní experimenty, nebo něco, co jste našli na GitHubu — žije v adresáři `~/.config/omarchy/plugins/`. Oboje se při spuštění zjišťuje stejným způsobem, ale integrované zásuvné moduly dostávají důvěryhodná rozhraní shellu, zatímco zásuvné moduly třetích stran dostávají omezené rozhraní vymezené pro jejich vlastní službu a životní cyklus. Klonům integrovaných modulů zůstává pouze konfigurace specifická pro zdroj a volání uživatelského rozhraní potřebná pro původní chování.
+Zásuvné moduly první strany jsou dodávány s Ve OS a žijí v adresáři `$OMARCHY_PATH/shell/plugins/`. Cokoli, co sami přidáte — vlastní experimenty, nebo něco, co jste našli na GitHubu — žije v adresáři `~/.config/omarchy/plugins/`. Oboje se při spuštění zjišťuje stejným způsobem, ale integrované zásuvné moduly dostávají důvěryhodná rozhraní shellu, zatímco zásuvné moduly třetích stran dostávají omezené rozhraní vymezené pro jejich vlastní službu a životní cyklus. Klonům integrovaných modulů zůstává pouze konfigurace specifická pro zdroj a volání uživatelského rozhraní potřebná pro původní chování.
 
 ## Zobrazení toho, co máte
 

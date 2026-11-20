@@ -28,7 +28,7 @@ Taispeánfaidh sé seo Dé Domhnaigh 10:55 AM.
 
 ### Conas a athraím mo chrios ama?
 
-Rith _Update > Timezone_ sa roghchlár Omarchy agus roghnaigh ón liosta. Má tá an crios ama ceart ach má tá an clog féin tar éis imeacht le sruth, atosaíonn _Update > Time_ an sioncronú ama duit.
+Rith _Update > Timezone_ sa roghchlár Ve OS agus roghnaigh ón liosta. Má tá an crios ama ceart ach má tá an clog féin tar éis imeacht le sruth, atosaíonn _Update > Time_ an sioncronú ama duit.
 
 ### Conas a athraím mo DNS, a roinnim mo Wi-Fi, nó a sheiceálaim luas mo cheangail?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Is féidir leat an rud céanna a dhéanamh do thaifeadtaí scáileáin ag úsáid `OMARCHY_SCREENRECORD_DIR`.
 
-Cruthaíonn Omasnap a eolaire seatanna scáileáin go huathoibríoch. Cruthaigh an t-eolaire taifeadtaí scáileáin tú féin, ansin atosaigh Omarchy chun go dtiocfaidh ceachtar athrú timpeallachta i bhfeidhm.
+Cruthaíonn Omasnap a eolaire seatanna scáileáin go huathoibríoch. Cruthaigh an t-eolaire taifeadtaí scáileáin tú féin, ansin atosaigh Ve OS chun go dtiocfaidh ceachtar athrú timpeallachta i bhfeidhm.
 
 ### Conas a chuirim na callairí + an ceamara gréasáin ag obair ar mo Apple Studio Display?
 
 Shílfeá gur chóir go n-oibreodh sé go léir ach é a phlugáil isteach le USB C, ach ar an drochuair ní mar sin atá. Is é an réiteach a d'aimsigh mé chun é a chur ag obair go hiontaofa ná [an cábla WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/) a úsáid. Ansin oibríonn na callairí agus an ceamara gréasáin go binn.
 
-Cuimhnigh go bhfuil rialú gile ionsuite agat in Omarchy do na Apple Displays (Studio agus XDR araon) ag úsáid na ngnáthchnaipe gile méarchláir.
+Cuimhnigh go bhfuil rialú gile ionsuite agat in Ve OS do na Apple Displays (Studio agus XDR araon) ag úsáid na ngnáthchnaipe gile méarchláir.
 
 ### Conas a fhaighim réidh leis na bogearraí breise go léir?
 
@@ -72,7 +72,7 @@ Mura dteastaíonn cláir cosúil le Obsidian nó LibreOffice nó aon cheann den 
 
 Rith _Remove > Package_ chun gach pacáiste atá suiteáilte a fheiceáil. Ansin is féidir leat aon phacáiste ar mhaith leat é a bhaint a roghnú le tab, agus tosú ag baint gach rud atá roghnaithe agat le return.
 
-Agus is féidir leat _Remove > Web App_ a úsáid ón roghchlár Omarchy chun aon cheann de na haipeanna gréasáin réamhshuiteáilte nach dteastaíonn uait a bhaint.
+Agus is féidir leat _Remove > Web App_ a úsáid ón roghchlár Ve OS chun aon cheann de na haipeanna gréasáin réamhshuiteáilte nach dteastaíonn uait a bhaint.
 
 Nó rith _Remove > Preinstalls_ chun na breiseáin réamhshuiteáilte go léir — aipeanna gréasáin, TUIs, agus feidhmchláir roghnacha — a scuabadh amach in aon iarracht amháin. Imíonn na hotkeys a lainseáil iad in éineacht leo, mar sin fágtar slate glan ceangal agat le líonadh le do chuid féin i `~/.config/hypr/bindings.lua`.
 

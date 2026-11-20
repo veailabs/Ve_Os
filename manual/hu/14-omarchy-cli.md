@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Az Omarchy-t általában a gyorsbillentyűkkel és az Omarchy menüvel (`Super + Space`) lehet vezérelni. De a `omarchy` CLI-n keresztül is vezérelheted. Ez különösen hasznos, amikor egy AI-ügynök dolgozik veled együtt a testreszabáson vagy a konfiguráción.
+Az Ve OS-t általában a gyorsbillentyűkkel és az Ve OS menüvel (`Super + Space`) lehet vezérelni. De a `omarchy` CLI-n keresztül is vezérelheted. Ez különösen hasznos, amikor egy AI-ügynök dolgozik veled együtt a testreszabáson vagy a konfiguráción.
 
 A CLI hozzáfér minden belső eszközhöz, amelyet a menün keresztül és egyébként is használnak. Mindent megnézhetsz, ami elérhető, ha a terminálban futtatod az `omarchy` parancsot.
 
@@ -8,7 +8,7 @@ Valahogy így néz ki:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Diagnosztikához futtasd közvetlenül az `omarchy-debug --no-sudo --print` parancsot. Kiírja a diagnosztikát, és sudo kérése nélkül ír a `/tmp/omarchy-debug.log` fájlba, beleértve azokat a csomagtelepítéseket is, ahol az `omarchy debug` az "Unknown Omarchy command" hibával elszállhat.
+Diagnosztikához futtasd közvetlenül az `omarchy-debug --no-sudo --print` parancsot. Kiírja a diagnosztikát, és sudo kérése nélkül ír a `/tmp/omarchy-debug.log` fájlba, beleértve azokat a csomagtelepítéseket is, ahol az `omarchy debug` az "Unknown Ve OS command" hibával elszállhat.
 
 És minden csoportba mélyebben is beleáshatod magad:
 
@@ -60,4 +60,4 @@ Minden parancs elfogadja a `--help` kapcsolót is, akár egy egész csoportról 
 
 ### A menü megnyitása a terminálból
 
-Az Omarchy menü szintén szkriptelhető, ami hasznos a saját billentyűparancsaidhoz. Az `omarchy menu` a gyökérnél nyitja meg, és közvetlenül a fa bármely pontjára ugorhatsz, ha megnevezed: az `omarchy menu summon appearance.theme` egyenesen a témaválasztóhoz visz, az `omarchy menu toggle system` megnyitja a rendszermenüt, és ha már nyitva van, újra be is zárja, az `omarchy menu close` pedig eltünteti.
+Az Ve OS menü szintén szkriptelhető, ami hasznos a saját billentyűparancsaidhoz. Az `omarchy menu` a gyökérnél nyitja meg, és közvetlenül a fa bármely pontjára ugorhatsz, ha megnevezed: az `omarchy menu summon appearance.theme` egyenesen a témaválasztóhoz visz, az `omarchy menu toggle system` megnyitja a rendszermenüt, és ha már nyitva van, újra be is zárja, az `omarchy menu close` pedig eltünteti.

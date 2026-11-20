@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Open the Omarchy icon set switcher
+# omarchy:summary=Open the Ve OS icon set switcher
 
 # The picker the theme switcher uses, over one large preview per icon set, and
 # it prints the set that was picked. A set brings its own preview.png; the

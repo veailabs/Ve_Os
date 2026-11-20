@@ -1,6 +1,6 @@
 # Zīmols
 
-Omarchy ļauj iestatīt sava uzņēmuma logotipu vai personīgo attēlu gan sāknēšanas atbloķēšanai, gan ekrānsaudzētājam, gan ekrānam Par.
+Ve OS ļauj iestatīt sava uzņēmuma logotipu vai personīgo attēlu gan sāknēšanas atbloķēšanai, gan ekrānsaudzētājam, gan ekrānam Par.
 
 ### Sāknēšanas atbloķēšana
 
@@ -24,11 +24,11 @@ Tajā izvēlnē ir trīs ieraksti:
 
 - **Rediģēt tekstu** atver `~/.config/omarchy/branding/screensaver.txt` jūsu redaktorā. Ierakstiet vai ielīmējiet, ko vien vēlaties — ASCII mākslu, savu vārdu, rupju vārdu. Saglabājiet un aizveriet, un ekrānsaudzētājs nekavējoties ieslēgsies, lai jūs to varētu redzēt.
 - **Iestatīt no attēla** atver failu izvēli png vai svg failam, pārveido to par ASCII un parāda rezultātu. Logotipi ar skaidru siluetu darbojas daudz labāk nekā fotogrāfijas.
-- **Atjaunot noklusējumu** atgriež Omarchy logotipu.
+- **Atjaunot noklusējumu** atgriež Ve OS logotipu.
 
 ### Ekrāns Par
 
-Tās pašas trīs opcijas atrodas sadaļā _Izskats > Zīmols > Par_ ekrānam _Par_, ko iegūstat no Omarchy izvēlnes, un tās darbojas identiski — fails ir `~/.config/omarchy/branding/about.txt`, un logs Par parādās pēc katrām izmaiņām. Attēls ekrānam Par tiek pārvērsts mazākā izmērā nekā ekrānsaudzētājam, jo tam jāietilpst logā, nevis jāaizpilda viss jūsu displejs.
+Tās pašas trīs opcijas atrodas sadaļā _Izskats > Zīmols > Par_ ekrānam _Par_, ko iegūstat no Ve OS izvēlnes, un tās darbojas identiski — fails ir `~/.config/omarchy/branding/about.txt`, un logs Par parādās pēc katrām izmaiņām. Attēls ekrānam Par tiek pārvērsts mazākā izmērā nekā ekrānsaudzētājam, jo tam jāietilpst logā, nevis jāaizpilda viss jūsu displejs.
 
 Kamēr logs ir atvērts, zaļš atspīdums ik pēc dažām sekundēm pārslīd pāri attēlam un pēc tam atkal atstāj to nekustīgu. Arī jūsu paša attēls to saņem, ja vien katra rakstzīme tajā ir vienas kolonnas platumā — viss, ko izveido _Iestatīt no attēla_, tāds ir. Attēls, kas veidots no emocijzīmēm vai dubulta platuma rakstzīmēm, tā vietā paliek nekustīgs, un tāpat paliek arī ekrāns, ja jums ir sava fastfetch konfigurācija: nekustīgs logotips šajos gadījumos nozīmē, ka animācija netraucē, nevis ka tā ir izgāzusies, jo atspīduma slīdēšana pāri tiem novietotu pārējo rindas daļu nepareizā vietā.
 

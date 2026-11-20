@@ -1,8 +1,8 @@
-# Omarchy icon font
+# Ve OS icon font
 
 The private-use glyphs in `omarchy.ttf` are:
 
-- `U+E900` — Omarchy
+- `U+E900` — Ve, from the canonical [Ve logo](../../../logo.svg), using both paths as a monochrome outline
 - `U+E901` — Pi, from <https://pi.dev/logo-auto.svg>
 - `U+E902` — OpenCode, from <https://opencode.ai/favicon-96x96-v3.png>
 - `U+E903` — omp, from <https://omp.sh/favicon.svg>
@@ -37,3 +37,7 @@ The private-use glyphs in `omarchy.ttf` are:
 
 The agent marks are monochrome so the menu can render them using the active
 theme's foreground and selection colors.
+
+The font retains the `omarchy` family, existing glyph names, and codepoints for compatibility. Ve replaces only the U+E900 product mark; the other brand glyphs retain their upstream outlines and provenance.
+
+The packaged font lives at `/usr/share/fonts/omarchy/omarchy.ttf`. Publishing this file requires updating that package-owned copy through the Ve OS branding setup or a settings package release, refreshing the font cache, and restarting the shell. A checkout update alone does not replace the installed font. Avoid registering a second copy of the same family.

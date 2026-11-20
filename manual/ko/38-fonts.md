@@ -1,12 +1,12 @@
 # 글꼴
 
-Omarchy는 기본적으로 JetBrainsMono Nerd Font를 터미널 글꼴이자 시스템 글꼴로 사용한다.
+Ve OS는 기본적으로 JetBrainsMono Nerd Font를 터미널 글꼴이자 시스템 글꼴로 사용한다.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Omarchy 메뉴(`Super + Space`)의 _Appearance > Font_ 메뉴에서 이를 변경할 수 있다. 그러면 터미널, 바, 그리고 고정폭 글꼴을 요청하는 모든 곳에 해당 글꼴이 설정된다.
+Ve OS 메뉴(`Super + Space`)의 _Appearance > Font_ 메뉴에서 이를 변경할 수 있다. 그러면 터미널, 바, 그리고 고정폭 글꼴을 요청하는 모든 곳에 해당 글꼴이 설정된다.
 
-Omarchy 메뉴의 _Install > Style > Font_를 통해 다른 인기 프로그래밍 글꼴도 설치할 수 있다: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, Iosevka가 모두 클릭 한 번으로 설치되며, 바와 터미널의 글리프가 계속 작동하도록 Nerd Font 버전으로 제공된다. 하나를 설치한 뒤에는 _Appearance > Font_에서 선택하면 된다.
+Ve OS 메뉴의 _Install > Style > Font_를 통해 다른 인기 프로그래밍 글꼴도 설치할 수 있다: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, Iosevka가 모두 클릭 한 번으로 설치되며, 바와 터미널의 글리프가 계속 작동하도록 Nerd Font 버전으로 제공된다. 하나를 설치한 뒤에는 _Appearance > Font_에서 선택하면 된다.
 
 ## 중국어, 일본어, 한국어
 

@@ -1,12 +1,12 @@
 # Dacă vii de pe Mac sau Windows
 
-Dacă ai petrecut ani pe macOS sau Windows, degetele tale știu o sută de lucruri pe care creierul tău a uitat că le-a învățat vreodată. Acest capitol este stratul de traducere: unde se duc acele instincte în Omarchy. Funcțiile în sine sunt tratate în profunzime în altă parte — aceasta este doar harta.
+Dacă ai petrecut ani pe macOS sau Windows, degetele tale știu o sută de lucruri pe care creierul tău a uitat că le-a învățat vreodată. Acest capitol este stratul de traducere: unde se duc acele instincte în Ve OS. Funcțiile în sine sunt tratate în profunzime în altă parte — aceasta este doar harta.
 
 ### Super este centrul a tot
 
-Toată memoria musculară pe care ai construit-o în jurul Cmd sau al tastei Windows se transferă pe o singură tastă: Super. Aceasta este tasta Windows pe o tastatură PC și este ancora pentru aproape fiecare scurtătură din Omarchy.
+Toată memoria musculară pe care ai construit-o în jurul Cmd sau al tastei Windows se transferă pe o singură tastă: Super. Aceasta este tasta Windows pe o tastatură PC și este ancora pentru aproape fiecare scurtătură din Ve OS.
 
-Reflexul tău de Spotlight sau Raycast sau meniu Start devine `Super + Space`. Acesta deschide meniul Omarchy, care lansează aplicații, schimbă setări, instalează software, capturează ecranul — aproape orice. Începe să tastezi pentru a filtra. `Super + Alt + Space` afișează toate aplicațiile pe un singur grid, la fel ca Launchpad. Vezi [navigare](04-navigation.md).
+Reflexul tău de Spotlight sau Raycast sau meniu Start devine `Super + Space`. Acesta deschide meniul Ve OS, care lansează aplicații, schimbă setări, instalează software, capturează ecranul — aproape orice. Începe să tastezi pentru a filtra. `Super + Alt + Space` afișează toate aplicațiile pe un singur grid, la fel ca Launchpad. Vezi [navigare](04-navigation.md).
 
 ### Nu există dock și nici pictograme pe desktop
 
@@ -22,15 +22,15 @@ Spațiile de lucru îți vor părea familiare: sunt Spaces din macOS sau desktop
 
 ### Copierea și lipirea pur și simplu funcționează
 
-Pe Mac aveai Cmd + C peste tot. Pe Windows aveai Ctrl + C peste tot — cu excepția terminalului, unde îți omoară programul. Omarchy îți dă `Super + C`, `Super + X` și `Super + V`, și funcționează peste tot, inclusiv în terminal. Niciun reflex separat de învățat pentru shell.
+Pe Mac aveai Cmd + C peste tot. Pe Windows aveai Ctrl + C peste tot — cu excepția terminalului, unde îți omoară programul. Ve OS îți dă `Super + C`, `Super + X` și `Super + V`, și funcționează peste tot, inclusiv în terminal. Niciun reflex separat de învățat pentru shell.
 
 Utilizatori Windows: istoricul clipboard-ului de pe Win + V trăiește pe `Super + Ctrl + V` și păstrează imagini, nu doar text. Vezi [clipboard unificat și istoric](08-unified-clipboard-history.md).
 
 ### Tabelul de traducere
 
-| Cauți instinctiv | În Omarchy |
+| Cauți instinctiv | În Ve OS |
 | ------------- | ---------- |
-| Spotlight / Raycast / Start menu | `Super + Space` — meniul Omarchy |
+| Spotlight / Raycast / Start menu | `Super + Space` — meniul Ve OS |
 | AirDrop | LocalSend, via `Super + Ctrl + S` — vezi [GUI-uri](22-guis.md) |
 | Cmd + Shift + 4 / Win + Shift + S | `Super + Ctrl + Alt + C` sau `Print Screen` — vezi [capturi de ecran și înregistrare](12-screenshots-recording.md) |
 | Notification Center | Istoricul notificărilor pe `Super + Shift + Alt + ,` |
@@ -42,7 +42,7 @@ Utilizatori Windows: istoricul clipboard-ului de pe Win + V trăiește pe `Super
 
 Multe setări trăiesc în fișiere text pe care le editezi, nu în panouri prin care dai clic. Sună primitiv până îți dai seama că înseamnă că fiecare ajustare poate fi văzută, copiată pe următoarea ta mașină și pusă sub control al versiunilor. Meniul _Setup_ te lasă direct în fișierul potrivit și repornește tot ce trebuie repornit când ai terminat.
 
-Actualizările vin printr-o singură comandă — _Update > Omarchy_ — care actualizează Omarchy însuși și fiecare pachet de pe sistem, făcând mai întâi un snapshot. Fără programe de actualizare pentru fiecare aplicație care să te bată la cap la întâmplare. Vezi [actualizări](30-updates.md).
+Actualizările vin printr-o singură comandă — _Update > Ve OS_ — care actualizează Ve OS însuși și fiecare pachet de pe sistem, făcând mai întâi un snapshot. Fără programe de actualizare pentru fiecare aplicație care să te bată la cap la întâmplare. Vezi [actualizări](30-updates.md).
 
 Software-ul vine dintr-un manager de pachete, nu din programe de instalare descărcate.
 
@@ -50,7 +50,7 @@ Software-ul vine dintr-un manager de pachete, nu din programe de instalare desc�
 
 ### Pe hardware Mac
 
-Omarchy rulează bine pe Mac-uri Intel — vezi [suport pentru Mac](44-mac-support.md). Și tastatura este prietenoasă cu tine: Omarchy nu remapează nimic, iar Linux tratează tasta Command ca Super, așa că Super stă exact unde a stat întotdeauna Cmd. Degetul mare nu va observa mutarea.
+Ve OS rulează bine pe Mac-uri Intel — vezi [suport pentru Mac](44-mac-support.md). Și tastatura este prietenoasă cu tine: Ve OS nu remapează nimic, iar Linux tratează tasta Command ca Super, așa că Super stă exact unde a stat întotdeauna Cmd. Degetul mare nu va observa mutarea.
 
 ### Dă-i două săptămâni
 

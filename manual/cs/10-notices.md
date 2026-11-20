@@ -10,7 +10,7 @@ Karty nabízejí to, co nesou: _Kopírovat kód_ pro ověřovací kódy (neuklá
 
 Chcete-li je používat bez myši, stiskněte `Super + Ctrl + ,`. Vybere se nejnovější oznámení a jeho tlačítka se očíslují: stisknutím čísla jedno použijete, `Enter` klikne na oznámení, `↑` a `↓` přepínáte mezi oznámeními, `Delete` jedno zavřete a `Esc` vrátíte klávesnici zpět. Po několika sekundách nečinnosti se ovládání také samo uvolní.
 
-Ztlumení oznámení je pozdrží, s výjimkou vlastních potvrzení Omarchy, nouzových upozornění a ověřovacích kódů, které jste si před chvílí sami vyžádali. Posledních několik jich vrátíte na obrazovku, ať už byla pozdržena, nebo ne, pomocí `Super + Shift + Alt + ,`. Historie se uchovává jeden den.
+Ztlumení oznámení je pozdrží, s výjimkou vlastních potvrzení Ve OS, nouzových upozornění a ověřovacích kódů, které jste si před chvílí sami vyžádali. Posledních několik jich vrátíte na obrazovku, ať už byla pozdržena, nebo ne, pomocí `Super + Shift + Alt + ,`. Historie se uchovává jeden den.
 
 ## Oznámení přes klávesové zkratky
 

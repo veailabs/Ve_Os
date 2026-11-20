@@ -1,8 +1,8 @@
 # Flakk
 
-Allt í Omarchy gerist með lyklaborðinu — _ALLT!_ Þegar kerfið ræsist í fyrsta sinn geturðu bókstaflega ekki gert neitt með músinni einni saman. En þú getur ýtt á `Super + Space` til að opna Omarchy-valmyndina og þaðan geturðu gert nánast allt.
+Allt í Ve OS gerist með lyklaborðinu — _ALLT!_ Þegar kerfið ræsist í fyrsta sinn geturðu bókstaflega ekki gert neitt með músinni einni saman. En þú getur ýtt á `Super + Space` til að opna Ve OS-valmyndina og þaðan geturðu gert nánast allt.
 
-En Omarchy-valmyndin á ekki einu sinni að vera helsta leiðin til að stjórna kerfinu mestan tímann. Við getum gert þetta hraðar en það! Öll mikilvægustu forritin eru bundin beint við einstaka flýtilykla. Þú ræsir flugstöðina með `Super + Return` og vafra með `Super + Shift + Return`. Prófaðu að gera annað á eftir hinu og þú munt sjá töfra flísalags Hyprland í verki:
+En Ve OS-valmyndin á ekki einu sinni að vera helsta leiðin til að stjórna kerfinu mestan tímann. Við getum gert þetta hraðar en það! Öll mikilvægustu forritin eru bundin beint við einstaka flýtilykla. Þú ræsir flugstöðina með `Super + Return` og vafra með `Super + Shift + Return`. Prófaðu að gera annað á eftir hinu og þú munt sjá töfra flísalags Hyprland í verki:
 
  ![navigation-browser-terminal](images/navigation-browser-terminal.webp)
 
@@ -30,7 +30,7 @@ Ef þú heldur `Super` inni og notar músina til að smella á glugga geturðu e
 
 ### Dwindle á móti skrunuppsetningu
 
-Sjálfgefna uppsetningin í Omarchy heitir dwindle. Hún heldur öllum gluggunum sem þú opnar á einu vinnusvæði sýnilegum á öllum tímum, jafnvel þótt hún þurfi að minnka þá.
+Sjálfgefna uppsetningin í Ve OS heitir dwindle. Hún heldur öllum gluggunum sem þú opnar á einu vinnusvæði sýnilegum á öllum tímum, jafnvel þótt hún þurfi að minnka þá.
 
  ![navigation-dwindle-layout](images/navigation-dwindle-layout.webp)
 
@@ -56,7 +56,7 @@ hl.config({
 
 Fljótandi vinnusvæði virkar eins og hefðbundið skjáborð: gluggar skarast og þú færir þá og breytir stærð þeirra sjálfur. Hver gluggi fær titilstiku í litum þemans þíns, með hnöppum til að lágmarka, hámarka og loka. `Super + M` lágmarkar líka gluggann sem er í fókus. Lágmarkaður gluggi bíður í dokkunni; smelltu á forrit hans til að fá hann til baka. Smelltu á glugga til að færa hann fram. Breyttu stærð hans frá hvaða jaðri eða horni sem er. Tvísmelltu á titilstiku til að hámarka gluggann á meðan efsta stikan er enn sýnileg og aftur til að fá gömlu stærðina hans til baka. Chrome og aðrir vafrar byggðir á Chromium, Disks og Document Viewer sleppa titilstikunni og nota sinn eigin haus í staðinn; `Super + Alt + F` hámarkar þá og `Super + M` lágmarkar þá.
 
-Fljótandi vinnusvæði sýnir líka dokku, með festu forritunum þínum, öllu sem er í gangi og rúðuneti með öllum forritum á bak við forritahnappinn, sem `Super + Alt + Space` og _Forrit_ í Omarchy-valmyndinni opna líka. Hægrismelltu á forrit á rúðunetinu, eða ýttu á `Delete`, til að fjarlægja það. Smelltu á forrit til að opna það, eða til að færa glugga þess fram; smelltu aftur til að fara í gegnum glugga þess. Files færir aðeins til baka glugga frá vinnusvæðinu sem þú ert á og opnar annars nýjan, og Terminal og Agent ræsa alltaf annan til viðbótar, þótt lágmarkaður gluggi komi fyrst til baka. Miðsmellur opnar nýjan glugga. Dragðu tákn eftir dokkunni til að færa það; að draga forrit sem er í gangi inn á meðal hinna heldur því þar. Hægrismelltu til að halda forriti í dokkunni, taka það út eða hætta í því. Dokkan víkur fyrir glugga í fullum skjá. Hægrismelltu á forritahnappinn til að færa dokkuna á annan jaðar eða láta hana fela sig þar til bendillinn nær að jaðri hennar. Staðsetningin er líka undir _Útlit > Dokka > Staðsetning dokku_ og `omarchy dock position left` og `omarchy dock autohide on` stilla hvort tveggja frá flugstöð. Forrit sem þú heldur í dokkunni eru dauf á meðan þau eru ekki í gangi.
+Fljótandi vinnusvæði sýnir líka dokku, með festu forritunum þínum, öllu sem er í gangi og rúðuneti með öllum forritum á bak við forritahnappinn, sem `Super + Alt + Space` og _Forrit_ í Ve OS-valmyndinni opna líka. Hægrismelltu á forrit á rúðunetinu, eða ýttu á `Delete`, til að fjarlægja það. Smelltu á forrit til að opna það, eða til að færa glugga þess fram; smelltu aftur til að fara í gegnum glugga þess. Files færir aðeins til baka glugga frá vinnusvæðinu sem þú ert á og opnar annars nýjan, og Terminal og Agent ræsa alltaf annan til viðbótar, þótt lágmarkaður gluggi komi fyrst til baka. Miðsmellur opnar nýjan glugga. Dragðu tákn eftir dokkunni til að færa það; að draga forrit sem er í gangi inn á meðal hinna heldur því þar. Hægrismelltu til að halda forriti í dokkunni, taka það út eða hætta í því. Dokkan víkur fyrir glugga í fullum skjá. Hægrismelltu á forritahnappinn til að færa dokkuna á annan jaðar eða láta hana fela sig þar til bendillinn nær að jaðri hennar. Staðsetningin er líka undir _Útlit > Dokka > Staðsetning dokku_ og `omarchy dock position left` og `omarchy dock autohide on` stilla hvort tveggja frá flugstöð. Forrit sem þú heldur í dokkunni eru dauf á meðan þau eru ekki í gangi.
 
 Ný vinnusvæði, og öll sem þú hefur ekki gefið sína eigin uppsetningu með `Super + L`, nota sjálfgefnu uppsetninguna. Að breyta sjálfgefnu uppsetningunni endurstillir hvert vinnusvæði án glugga yfir í hana, á meðan vinnusvæði með glugga á heldur uppsetningunni sem það hefur. Gluggi sem er lágmarkaður í dokkuna telst enn sem gluggi á vinnusvæðinu sem hann fór frá. Veldu hana undir _Útlit > Uppsetning vinnusvæðis_: Flísalag, Skrun eða Fljótandi. `omarchy-hyprland-workspace-layout-default scrolling` stillir hana frá flugstöð.
 

@@ -1,14 +1,14 @@
 # Bar Atas
 
-Jalur di sepanjang bagian atas layar Anda adalah bar Omarchy. Ini bukan status bar yang ditempel seadanya, melainkan bagian dari shell Omarchy, satu proses Quickshell yang berjalan lama dan juga menggambar menu, notifikasi, popup OSD, dan layar kunci. Itulah sebabnya temanya selaras sempurna dengan semua hal lain dan mengapa panel terbuka seketika alih-alih memunculkan aplikasi baru.
+Jalur di sepanjang bagian atas layar Anda adalah bar Ve OS. Ini bukan status bar yang ditempel seadanya, melainkan bagian dari shell Ve OS, satu proses Quickshell yang berjalan lama dan juga menggambar menu, notifikasi, popup OSD, dan layar kunci. Itulah sebabnya temanya selaras sempurna dengan semua hal lain dan mengapa panel terbuka seketika alih-alih memunculkan aplikasi baru.
 
 Ini juga satu-satunya bagian desktop yang selalu ada di layar, jadi ada baiknya Anda mengetahui fungsi semua glif kecil itu.
 
 ## Apa saja yang ada di dalamnya secara default
 
-Bar ini memiliki tiga bagian. Di sebelah kiri ada logo Omarchy (peluncur menu) dan indikator workspace. Di tengah Anda mendapatkan indikator status, jam, Elsewhen (jam dunia), cuaca, dan lencana pembaruan Omarchy. Di sebelah kanan: system tray, layout keyboard (ketika lebih dari satu yang dikonfigurasi), agents, bluetooth, network, audio, display, dan power.
+Bar ini memiliki tiga bagian. Di sebelah kiri ada logo Ve OS (peluncur menu) dan indikator workspace. Di tengah Anda mendapatkan indikator status, jam, Elsewhen (jam dunia), cuaca, dan lencana pembaruan Ve OS. Di sebelah kanan: system tray, layout keyboard (ketika lebih dari satu yang dikonfigurasi), agents, bluetooth, network, audio, display, dan power.
 
-Beberapa di antaranya hanya muncul ketika mereka memiliki sesuatu untuk disampaikan. Layout keyboard hanya muncul jika Anda telah mengonfigurasi lebih dari satu layout. Lencana pembaruan hanya muncul ketika ada pembaruan Omarchy yang menunggu. Dan ikon agents muncul saat pertama kali Omarchy menemukan penggunaan AI coding di mesin tersebut (lihat [AI](17-ai.md)).
+Beberapa di antaranya hanya muncul ketika mereka memiliki sesuatu untuk disampaikan. Layout keyboard hanya muncul jika Anda telah mengonfigurasi lebih dari satu layout. Lencana pembaruan hanya muncul ketika ada pembaruan Ve OS yang menunggu. Dan ikon agents muncul saat pertama kali Ve OS menemukan penggunaan AI coding di mesin tersebut (lihat [AI](17-ai.md)).
 
 ## Mengklik sana-sini
 
@@ -16,7 +16,7 @@ Hampir setiap widget melakukan sesuatu saat diklik kiri, kanan, dan tengah, dan 
 
 | Widget | Kiri | Kanan | Tengah / gulir |
 | --- | --- | --- | --- |
-| Menu | Menu Omarchy | Terminal baru | — |
+| Menu | Menu Ve OS | Terminal baru | — |
 | Workspaces | Fokuskan workspace itu di monitor ini | — | Gulir: workspace berikutnya/sebelumnya |
 | Clock | Popup kalender | Ganti format label secara bergilir | Tengah: pemilih zona waktu |
 | Weather | Popup prakiraan | Cuaca lengkap sebagai notifikasi | Tengah: segarkan |
@@ -29,7 +29,7 @@ Hampir setiap widget melakukan sesuatu saat diklik kiri, kanan, dan tengah, dan 
 | Media | Putar/jeda | Popup sampul | Tengah: berikutnya · gulir: sebelum/berikutnya |
 | Agents | Panel agents | Luncurkan agent Anda | Tengah: langganan berikutnya |
 | Tray | Arahkan kursor untuk menampilkan laci | Klik kanan pada chevron untuk mengelola | — |
-| Pembaruan Omarchy | Jalankan pembaruan | — | — |
+| Pembaruan Ve OS | Jalankan pembaruan | — | — |
 
 Tidak semua yang ada di tabel itu ada di bar Anda sejak awal. Widget media (MPRIS now-playing, dengan track dan artis yang bergulir) dan widget microphone keduanya sudah terpasang tetapi nonaktif secara default — tambahkan jika Anda menginginkannya, seperti yang dijelaskan di bawah.
 
@@ -137,6 +137,6 @@ Setiap widget adalah satu entri dalam salah satu dari lima array layout, dan pen
 
 `center` adalah kotak di tengah bar: semua yang ada di dalamnya berada di tengah layar sebagai satu grup. `centerBegin` dan `centerEnd` menggantung di kedua sisi kotak, dan begitulah cara clock tetap tepat di tengah bahkan saat cuaca dan lencana pembaruan datang dan pergi. Masukkan lebih dari satu widget ke dalam `center` dan mereka akan berada di tengah bersama-sama; kosongkan dan `centerBegin` dan `centerEnd` bertemu di tengah bar.
 
-Satu aturan yang layak dihafalkan: **setelah Anda memiliki `shell.json` Anda sendiri, file itu yang menjadi acuan resmi**. Sampai Anda menyesuaikan apa pun, shell membaca file default Omarchy. Begitu Anda menyeret sebuah widget, menjalankan `omarchy bar`, atau mengedit file itu sendiri, Anda yang memilikinya — tidak ada deep merge, jadi widget default baru dalam rilis Omarchy mendatang tidak akan muncul di bar Anda secara otomatis. `omarchy bar defaults` mengembalikan layout bawaan kapan pun Anda menginginkan lembaran bersih.
+Satu aturan yang layak dihafalkan: **setelah Anda memiliki `shell.json` Anda sendiri, file itu yang menjadi acuan resmi**. Sampai Anda menyesuaikan apa pun, shell membaca file default Ve OS. Begitu Anda menyeret sebuah widget, menjalankan `omarchy bar`, atau mengedit file itu sendiri, Anda yang memilikinya — tidak ada deep merge, jadi widget default baru dalam rilis Ve OS mendatang tidak akan muncul di bar Anda secara otomatis. `omarchy bar defaults` mengembalikan layout bawaan kapan pun Anda menginginkan lembaran bersih.
 
 File yang sama juga menyimpan pengaturan waktu idle Anda di tingkat atas, di luar kunci `bar`: `idle.screensaver` dan `idle.lock`, keduanya dalam detik sejak Anda menjadi idle. Jadi screensaver default aktif pada 150 detik dan kunci pada 300.

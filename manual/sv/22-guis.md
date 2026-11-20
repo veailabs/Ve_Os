@@ -20,7 +20,7 @@ Obsidian är gratis för alla ändamål, inklusive personligt, kommersiellt och 
 
 Obsidian erbjuder också ett [kommersiellt tillägg för synkronisering](https://obsidian.md/sync) med mobilappar på iOS och Android. (https://obsidian.md/pricing).
 
-Du startar Obsidian med `Super + Shift + O`. För att använda temasykronisering måste du välja temat `Omarchy` under inställningar.
+Du startar Obsidian med `Super + Shift + O`. För att använda temasykronisering måste du välja temat `Ve OS` under inställningar.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Du startar Aether via appstartaren (`Super + Space`).
 
 [LocalSend](https://localsend.org/) låter dig skicka filer till andra enheter på samma nätverk som kör appen, som Apples AirDrop. Den är dock plattformsoberoende, så du kan skicka filer till och från Windows, macOS, Android, iOS och såklart Linux.
 
-Du kan öppna menyn Share på `Super + Ctrl + S` eller under _Trigger > Share_ i Omarchy-menyn. Den ger dig fyra alternativ:
+Du kan öppna menyn Share på `Super + Ctrl + S` eller under _Trigger > Share_ i Ve OS-menyn. Den ger dig fyra alternativ:
 
 - **Clipboard** skickar det du har kopierat som en textfil. Utmärkt för att få över en länk eller ett kodstycke till telefonen utan att mejla dig själv.
 - **File** öppnar en filväljare där du kan välja flera samtidigt.
@@ -55,7 +55,7 @@ Samma sak fungerar från terminalen med `omarchy share clipboard`, `omarchy shar
 
 Du kan också skicka direkt från filhanteraren: högerklicka på ett urval i Nautilus och välj _Send via LocalSend_.
 
-Omarchys brandvägg är stängd som standard förutom för LocalSends port, så detta fungerar direkt på en ny installation. Se [säkerhet](48-security.md).
+Ve OSs brandvägg är stängd som standard förutom för LocalSends port, så detta fungerar direkt på en ny installation. Se [säkerhet](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Du startar Signed via appstartaren (`Super + Space`), eller öppnar en PDF med d
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) är Omarchys eget 3D-schackspel. Spela mot en vän på samma dator eller den inbyggda motståndaren på tre nivåer, på fyra skulpterade uppsättningar som var och en rör sig på sitt eget sätt: farkoster i omloppsbana, snidat trä och elfenben, skogsvarelser och godis. Spel har ingen klocka och sparas efter varje drag.
+[Checkmate](https://github.com/omacom/checkmate) är Ve OSs eget 3D-schackspel. Spela mot en vän på samma dator eller den inbyggda motståndaren på tre nivåer, på fyra skulpterade uppsättningar som var och en rör sig på sitt eget sätt: farkoster i omloppsbana, snidat trä och elfenben, skogsvarelser och godis. Spel har ingen klocka och sparas efter varje drag.
 
 Du startar Checkmate via appstartaren (`Super + Space`), där den listas som Chess. Tryck `?` inuti den för att se alla kortkommandon.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) är Omarchys egen Klondike-patiens. Dra tre, utan gräns för antalet genomgångar, i fyra kortserier: en ritad i ditt temas färger och tre med ett eget utseende. Klicka på ett kort och sedan där det ska, dra det eller dubbelklicka för att skicka det till bästa plats. Spel sparas efter varje drag.
+[Cards](https://github.com/omacom/cards) är Ve OSs egen Klondike-patiens. Dra tre, utan gräns för antalet genomgångar, i fyra kortserier: en ritad i ditt temas färger och tre med ett eget utseende. Klicka på ett kort och sedan där det ska, dra det eller dubbelklicka för att skicka det till bästa plats. Spel sparas efter varje drag.
 
 Du startar Cards via appstartaren (`Super + Space`). Klicka på dess namn, eller tryck `?`, för att se alla kortkommandon.
 
@@ -97,7 +97,7 @@ Du startar Omacalc med `Super + Shift + Q` (eller miniräknarknappen, om ditt ta
 
 [Signal](https://signal.org/) är pionjären inom E2E-krypterad meddelandehantering och ett utmärkt kommunikationsalternativ för alla som hellre slipper gå via någon av de stora teknikkoncernerna.
 
-Du startar Signal med `Super + Shift + G`. Den ingår inte i grundinstallationen, så första gången du använder den kombinationen kommer Omarchy att erbjuda sig att installera den åt dig (den finns också under _Install > Service_ i Omarchy-menyn).
+Du startar Signal med `Super + Shift + G`. Den ingår inte i grundinstallationen, så första gången du använder den kombinationen kommer Ve OS att erbjuda sig att installera den åt dig (den finns också under _Install > Service_ i Ve OS-menyn).
 
 ## Omaview
 

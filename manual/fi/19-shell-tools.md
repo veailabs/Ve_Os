@@ -1,6 +1,6 @@
 # Shell-työkalut
 
-Tavallisten Linux-työkalujen lisäksi Omarchyssa on mukana myös joukko paranneltuja shell-työkaluja. Tässä tärkeimmät.
+Tavallisten Linux-työkalujen lisäksi Ve OSssa on mukana myös joukko paranneltuja shell-työkaluja. Tässä tärkeimmät.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Koko ohjeen löydät komennolla `man yt-dlp`.
 
 [try](https://github.com/tobi/try) tekee ohjelmointikokeilujen hallinnasta helppoa päivämääräleimatuilla hakemistoilla. Kaikki kokeilut sijaitsevat hakemistossa `~/Work/tries`, ja pääset niihin käsiksi komennolla `try`.
 
-Omarchy ei lisää projektin hakemistoa `bin/` muuttujaan `PATH` automaattisesti. Aja luotettavia projektin paikallisia työkaluja eksplisiittisellä suhteellisella polulla, kuten `bin/rails` tai `./bin/dev`.
+Ve OS ei lisää projektin hakemistoa `bin/` muuttujaan `PATH` automaattisesti. Aja luotettavia projektin paikallisia työkaluja eksplisiittisellä suhteellisella polulla, kuten `bin/rails` tai `./bin/dev`.

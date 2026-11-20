@@ -1,4 +1,6 @@
-# 无人值守安装
+# Ve OS — 无人值守安装
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO 可以在键盘前无人操作的情况下完成自我安装。如果安装程序发现第二块标有 `cidata` 标签、带着其配置文件的驱动器，它就会把这些文件复制出来，完全跳过设置向导，并自动重启进入已完成的系统。无需专门的 ISO 构建版本，也无需额外的启动菜单项——如果没有连接这样的驱动器，一切都不会改变，你看到的仍是正常的向导。
 

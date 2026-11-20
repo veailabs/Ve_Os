@@ -1,12 +1,12 @@
 # Suspendarea sistemului
 
-Omarchy activează suspendarea și hibernarea în mod implicit, dar dacă ai probleme cu vreuna dintre ele pe mașina ta, le poți dezactiva.
+Ve OS activează suspendarea și hibernarea în mod implicit, dar dacă ai probleme cu vreuna dintre ele pe mașina ta, le poți dezactiva.
 
 Pe mașinile NVIDIA GB10, cum ar fi DGX Spark și ASUS Ascent GX10, suspendarea și hibernarea sunt dezactivate, la fel ca în DGX OS de la NVIDIA, deoarece încă nu s-a demonstrat că repausul funcționează pe acel hardware. Același lucru este valabil și pentru ASUS Zenbook A16 (UX3607OA), unde suspendarea încă nu pune cipul complet în repaus și poate rămâne blocat peste noapte. Comutatorul de suspendare și configurarea hibernării nu se aplică acolo. Pentru a reactiva repausul, șterge `/etc/systemd/sleep.conf.d/omarchy-sleep-disabled.conf` cu `sudo rm`; Suspend revine apoi în meniu, iar hibernarea poate fi configurată ca pe alte mașini. Rularea `sudo omarchy apply hardware --install-user "$USER"` pune fișierul la loc.
 
 ### Profiluri de alimentare
 
-Pe un laptop, Omarchy reține profilul tău de alimentare separat pentru alimentarea la priză și pentru funcționarea pe baterie și comută între cele două pe măsură ce conectezi și deconectezi alimentarea. Implicit, asta înseamnă performanță pe AC și echilibrat pe baterie.
+Pe un laptop, Ve OS reține profilul tău de alimentare separat pentru alimentarea la priză și pentru funcționarea pe baterie și comută între cele două pe măsură ce conectezi și deconectezi alimentarea. Implicit, asta înseamnă performanță pe AC și echilibrat pe baterie.
 
 Poți vedea ce oferă mașina ta cu `omarchy powerprofiles list` și poți seta profilul dorit pentru starea în care te afli în prezent cu `omarchy powerprofiles set autodetect power-saver`. Pentru a seta cealaltă stare fără să deconectezi nimic, numește-o direct: `omarchy powerprofiles set battery power-saver`. Orice ai alege, asta vei primi data viitoare când te vei afla în starea respectivă.
 

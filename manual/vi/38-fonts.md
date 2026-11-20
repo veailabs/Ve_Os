@@ -1,12 +1,12 @@
 # Phông chữ
 
-Omarchy sử dụng JetBrainsMono Nerd Font làm cả phông chữ terminal và phông chữ hệ thống theo mặc định.
+Ve OS sử dụng JetBrainsMono Nerd Font làm cả phông chữ terminal và phông chữ hệ thống theo mặc định.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Bạn có thể thay đổi điều này qua menu _Giao diện > Phông chữ_ trong menu Omarchy (`Super + Space`). Thao tác đó đặt phông chữ monospace ở mọi nơi: terminal, thanh bar, và bất cứ thứ gì khác yêu cầu nó.
+Bạn có thể thay đổi điều này qua menu _Giao diện > Phông chữ_ trong menu Ve OS (`Super + Space`). Thao tác đó đặt phông chữ monospace ở mọi nơi: terminal, thanh bar, và bất cứ thứ gì khác yêu cầu nó.
 
-Bạn có thể cài các phông chữ lập trình phổ biến khác qua _Cài đặt > Kiểu > Phông chữ_ trong menu Omarchy: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, và Iosevka đều chỉ cách một cú nhấp chuột, ở phiên bản Nerd Font của chúng để các glyph trên thanh bar và trong terminal tiếp tục hoạt động. Sau khi cài một phông, hãy chọn nó trong _Giao diện > Phông chữ_.
+Bạn có thể cài các phông chữ lập trình phổ biến khác qua _Cài đặt > Kiểu > Phông chữ_ trong menu Ve OS: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, và Iosevka đều chỉ cách một cú nhấp chuột, ở phiên bản Nerd Font của chúng để các glyph trên thanh bar và trong terminal tiếp tục hoạt động. Sau khi cài một phông, hãy chọn nó trong _Giao diện > Phông chữ_.
 
 ## Tiếng Trung, tiếng Nhật và tiếng Hàn
 

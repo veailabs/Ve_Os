@@ -28,7 +28,7 @@ Tādējādi tiks parādīts Svētdiena 10:55 AM.
 
 ### Kā nomainīt savu laika joslu?
 
-Omarchy izvēlnē palaid _Update > Timezone_ un izvēlies no saraksta. Ja laika josla ir pareiza, bet pats pulkstenis ir novirzījies, _Update > Time_ restartēs laika sinhronizāciju tavā vietā.
+Ve OS izvēlnē palaid _Update > Timezone_ un izvēlies no saraksta. Ja laika josla ir pareiza, bet pats pulkstenis ir novirzījies, _Update > Time_ restartēs laika sinhronizāciju tavā vietā.
 
 ### Kā nomainīt savu DNS, kopīgot savu Wi-Fi vai pārbaudīt sava savienojuma ātrumu?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 To pašu vari izdarīt ekrāna ierakstiem, izmantojot `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap automātiski izveido savu ekrānuzņēmumu direktoriju. Ekrāna ierakstu direktoriju izveido pats, pēc tam restartē Omarchy, lai jebkuras no vides izmaiņām stātos spēkā.
+Omasnap automātiski izveido savu ekrānuzņēmumu direktoriju. Ekrāna ierakstu direktoriju izveido pats, pēc tam restartē Ve OS, lai jebkuras no vides izmaiņām stātos spēkā.
 
 ### Kā panākt, lai manā Apple Studio Display darbotos skaļruņi un tīmekļa kamera?
 
 Domātu, ka visam vajadzētu darboties, vienkārši pievienojot USB C, bet diemžēl tā nav. Risinājums, ko esmu atradis, lai tas darbotos uzticami, ir izmantot [WJESOG DisplayPort + USB-A => USB-C kabeli](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Tad skaļruņi un tīmekļa kamera darbojas lieliski.
 
-Atceries, ka tev Omarchy ir iebūvēta spilgtuma regulēšana Apple displejiem (gan Studio, gan XDR), izmantojot parastās tastatūras spilgtuma pogas.
+Atceries, ka tev Ve OS ir iebūvēta spilgtuma regulēšana Apple displejiem (gan Studio, gan XDR), izmantojot parastās tastatūras spilgtuma pogas.
 
 ### Kā atbrīvoties no visas liekās programmatūras?
 
@@ -72,7 +72,7 @@ Ja negribi tādas programmas kā Obsidian vai LibreOffice vai jebkuru citu iepri
 
 Palaid _Remove > Package_, lai redzētu katru instalēto pakotni. Pēc tam ar tab vari atlasīt jebkuru pakotni, ko vēlies noņemt, un ar return sākt noņemt visu atlasīto.
 
-Un tu vari izmantot _Remove > Web App_ no Omarchy izvēlnes, lai noņemtu jebkuru iepriekš instalēto tīmekļa lietotni, ko negribi.
+Un tu vari izmantot _Remove > Web App_ no Ve OS izvēlnes, lai noņemtu jebkuru iepriekš instalēto tīmekļa lietotni, ko negribi.
 
 Vai palaid _Remove > Preinstalls_, lai vienā piegājienā iztīrītu visas iepriekš instalētās ekstras — tīmekļa lietotnes, TUIs un izvēles lietojumprogrammas. Karstie taustiņi, kas tās palaida, pazūd kopā ar tām, tāpēc tev paliek tīrs sākums ar saistījumiem, ko aizpildīt ar saviem failā `~/.config/hypr/bindings.lua`.
 

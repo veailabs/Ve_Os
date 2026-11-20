@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# omarchy:summary=Apply Ve OS display identity while preserving the base distribution
+# omarchy:group=apply
+# omarchy:requires-sudo=true
+# omarchy:hidden=true
+
+set -euo pipefail
+
+if (( $# )); then
+  echo "Usage: omarchy apply os-branding" >&2
+  exit 1
+fi
+
+exec python3 "$OMARCHY_PATH/install/helpers/os-branding.py"

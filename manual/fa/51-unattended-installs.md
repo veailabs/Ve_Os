@@ -1,4 +1,6 @@
-# نصب‌های بدون ناظر
+# Ve OS — نصب‌های بدون ناظر
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 ایزوی Omarchy می‌تواند بدون اینکه کسی پشت صفحه‌کلید باشد، خودش را نصب کند. اگر نصاب یک درایو دوم با برچسب `cidata` پیدا کند که فایل‌های پیکربندی‌اش را دارد، آن‌ها را از روی آن کپی می‌کند، جادوگر راه‌اندازی را کاملاً رد می‌کند و خودش به‌تنهایی به سیستم نهایی راه‌اندازی مجدد می‌شود. نه نسخه خاصی از ISO لازم است، نه یک گزینه اضافی در منوی بوت — اگر چنین درایوی وصل نباشد، هیچ چیز تغییر نمی‌کند و همان جادوگر معمولی را می‌بینید.
 

@@ -1,43 +1,29 @@
 # Updates
 
-Omarchy and your packages are kept up to date via _Update > Omarchy_ in the Omarchy menu (`Super + Space`).
+Open _Update > Ve OS_ in the Ve OS menu (`Super + Space`) to run the inherited update workflow. A circle-arrow badge beside the clock indicates an available update. The menu’s Ve name does not change the origin of system packages.
 
-Omarchy itself is installed as regular pacman packages from the [Omarchy Package Repository](https://github.com/omacom-io/omarchy-pkgs), so an update installs [the latest Omarchy release](https://github.com/omacom/omarchy/releases), runs any pending migrations to get your system in sync with the latest, and updates all system packages from the [Omarchy Arch Mirror](https://github.com/omacom-io/omarchy-mirror) and [AUR](https://aur.archlinux.org/) (if you have installed any AUR packages).
+## Where updates come from
 
-When new releases are made, a circle arrow icon will appear to the right of your clock. Click it and the update process will start.
+System packages continue to come from the configured Arch and upstream [Omarchy package repositories](https://github.com/omacom-io/omarchy-pkgs), with any additional repositories or AUR packages you installed. The upstream [Omarchy releases](https://github.com/omacom/omarchy/releases) and [Arch mirror](https://github.com/omacom-io/omarchy-mirror) are not Ve release services.
 
-![update-available](images/update-available.webp)
+On a developer-linked Ve installation, the active desktop source is your Ve checkout. Review its branch and local changes before updating it. The team integrates upstream code through reviewed changes in the Ve repository; switching to an upstream release channel or reinstalling upstream packages is not a Ve upgrade. See the repository’s [upstream update procedure](../README.md#development-and-upstream-updates).
 
-### Four channels
+Use `omarchy dev status` to inspect the active checkout. Commands, package names and paths retain the `omarchy` compatibility name.
 
-Omarchy is updated along four channels: stable, RC, edge, and dev. New installations start on the stable channel, which tracks the [official releases](https://github.com/omacom/omarchy/releases/), as well as the [stable Omarchy Arch mirror](https://github.com/omacom-io/omarchy-mirror) that's running one month behind the latest, so we can catch any new incompatibilities that require config changes before they cause problems for people.
+## Upstream channels
 
-But if you'd like to help spot those potential issues, you can run on the edge channel. That'll keep your Omarchy packages tracking the latest development builds, and lets you update to the latest Arch packages as soon as they're available. You should only do this if you're experienced with Linux, and know how to recover a system that has problems.
+The inherited channel selector offers stable, RC, edge and dev. These are upstream Omarchy package and development channels. Stable follows upstream releases; RC and edge are testing channels. The dev workflow selects a source checkout. For Ve OS, use `omarchy dev link` with the Ve checkout you reviewed; do not assume switching channels will select this fork.
 
-Before any new major release, we'll be doing final validation using the RC channel. If you're interested in helping with final polishing, come hang out in #omarchy-release-candidates on the Discord.
+## Kernels and firmware
 
-Finally, there's the dev channel, which links Omarchy directly to a git checkout of the source code in `~/omarchy`, combined with the edge packages. You should only use this channel if you're an experienced Linux user, working directly on Omarchy, and willing to tolerate breakage.
+_Update > Kernel_ lists supported installed kernels and allows you to choose the default. The upstream kernel package is named `linux-omarchy`; the Ve display name does not mean Ve built a new kernel. In a terminal, use `omarchy-kernel`, `omarchy-kernel list` or `omarchy-kernel set <kernel>`. Kernel selection and boot support depend on the platform.
 
-You can switch between channels using _Update > Channel_ from the Omarchy menu (or `omarchy-channel-set` in the terminal).
+_Update > Firmware_ uses `fwupd` and the Linux Vendor Firmware Service for supported hardware. Some firmware updates require a reboot. In the system menu (`Super + Escape`), hold `Alt` to reveal _Reboot to BIOS_ where supported; the terminal command is `omarchy system firmware`.
 
-### Switching kernels
+## System upgrades and recovery
 
-Omarchy boots its own `linux-omarchy` kernel, but you can keep others installed next to it, like the stock Arch `linux` kernel or an experimental build you're testing. When there's more than one, _Update > Kernel_ in the Omarchy menu lists them with a check next to the one that boots by default. Pick another, enter your password once, and it'll boot after the next restart. The other kernels stay in the boot menu, so you can still pick one by hand if the new default gives you trouble. In the terminal, it's `omarchy-kernel` to see the current default, `omarchy-kernel list` for what's installed, and `omarchy-kernel set <kernel>` to switch.
+Use `omarchy update` for a system upgrade so the workflow can coordinate snapshots, package installation, migrations and configuration updates. Direct `pacman -Syu` and `yay -Syu` upgrades bypass those steps and are guarded by the inherited update tooling.
 
-### Firmware updates
+If an update fails, read [system snapshots](47-system-snapshots.md) before restoring a supported snapshot. Home-directory contents, including a Ve source checkout stored there, are not rolled back with the root filesystem.
 
-Your packages aren't the only thing that goes stale. Many laptops and peripherals ship BIOS, SSD, and dock firmware through the Linux Vendor Firmware Service, and _Update > Firmware_ in the Omarchy menu will fetch and install whatever your hardware has waiting. It installs `fwupd` the first time you run it. Plenty of firmware can only be written during a reboot, so don't be surprised to be asked for one.
-
-When you need to change a setting in the BIOS itself, hold `Alt` in the system menu (`Super + Escape`) and _Reboot_ turns into _Reboot to BIOS_, which restarts straight into the firmware setup without having to catch the right key at boot. From the terminal, it's `omarchy system firmware`.
-
-### Warning about direct pacman/yay updates
-
-If you're already familiar with Arch, you might be tempted to just run `pacman -Syu` or `yay -Syu` yourself, but if you do that, you'll miss the snapshot, migrations, and configuration updates that Omarchy runs together with new packages. That's why Omarchy will actually stop a direct system upgrade and point you to `omarchy update` instead. (If you really know what you're doing, the guard will tell you how to bypass it for a single transaction.)
-
-### Rolling back bad updates
-
-If you ever have a problem after doing an update, you can rollback your system to the snapshot taken before the update. Just restart and pick the snapshot in the boot loading menu from before you started the update.
-
-![bootloader](images/bootloader.webp)
-
-If somehow your configuration files have been corrupted, you can also perform an Omarchy reinstall using `omarchy reinstall` in the terminal. This will reinstall all the default Omarchy packages, put you on stable and downgrade any packages that are too new, and reset all the configuration files. Note that all your user config changes to the Omarchy defaults will be overwritten doing this!
+`omarchy reinstall` restores upstream packages and defaults and can move the system back to the stable channel. It can overwrite configuration customizations and remove the active Ve setup. Treat it as an upstream recovery operation, then deliberately reactivate the reviewed Ve checkout if needed.

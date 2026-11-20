@@ -1,10 +1,10 @@
 # Shell-plugins
 
-Omarchy-skrivebordet kører som en enkelt langlivet Quickshell-proces ved navn `omarchy-shell`, og næsten alt, hvad du ser på skærmen, er et plugin inde i det. Linjen er et plugin. Det samme er panelerne, der falder ned fra den, fuldskærmsoverlays som emoji-vælgeren og udklipsholderhåndteringen, selve Omarchy-menuen, låseskærmen, polkit-dialogen og de hovedløse tjenester, der holder øje med dit batteri og varmer din skærm op om natten.
+Ve OS-skrivebordet kører som en enkelt langlivet Quickshell-proces ved navn `omarchy-shell`, og næsten alt, hvad du ser på skærmen, er et plugin inde i det. Linjen er et plugin. Det samme er panelerne, der falder ned fra den, fuldskærmsoverlays som emoji-vælgeren og udklipsholderhåndteringen, selve Ve OS-menuen, låseskærmen, polkit-dialogen og de hovedløse tjenester, der holder øje med dit batteri og varmer din skærm op om natten.
 
-Det er ikke bare en implementeringsdetalje. Det betyder, at du kan slukke for dele af skrivebordet, bytte dem ud eller skrive dine egne uden at røre en linje af Omarchys kildekode.
+Det er ikke bare en implementeringsdetalje. Det betyder, at du kan slukke for dele af skrivebordet, bytte dem ud eller skrive dine egne uden at røre en linje af Ve OSs kildekode.
 
-De førsteparts-plugins leveres med Omarchy og lever i `$OMARCHY_PATH/shell/plugins/`. Alt, hvad du selv tilføjer — dine egne eksperimenter eller noget, du fandt på GitHub — lever i `~/.config/omarchy/plugins/`. Begge opdages på samme måde ved opstart, men de indbyggede modtager betroede shell-grænseflader, mens tredjeparts-plugins modtager en begrænset grænseflade afgrænset til deres egen tjeneste og livscyklus. Kloner af indbyggede beholder kun den kilde-specifikke konfiguration og de UI-kald, der er nødvendige for den oprindelige adfærd.
+De førsteparts-plugins leveres med Ve OS og lever i `$OMARCHY_PATH/shell/plugins/`. Alt, hvad du selv tilføjer — dine egne eksperimenter eller noget, du fandt på GitHub — lever i `~/.config/omarchy/plugins/`. Begge opdages på samme måde ved opstart, men de indbyggede modtager betroede shell-grænseflader, mens tredjeparts-plugins modtager en begrænset grænseflade afgrænset til deres egen tjeneste og livscyklus. Kloner af indbyggede beholder kun den kilde-specifikke konfiguration og de UI-kald, der er nødvendige for den oprindelige adfærd.
 
 ## Se, hvad du har
 

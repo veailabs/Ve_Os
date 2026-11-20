@@ -8,7 +8,7 @@
 
 | 层面 | 包含什么 | 示例 |
 | --- | --- | --- |
-| `Super + key` | 系统：窗口、工作区、布局和核心菜单 | `Super + Space` Omarchy 菜单，`Super + W` 关闭窗口，`Super + F` 全屏 |
+| `Super + key` | 系统：窗口、工作区、布局和核心菜单 | `Super + Space` Ve OS 菜单，`Super + W` 关闭窗口，`Super + F` 全屏 |
 | `Super + Shift + key` | 应用 | `Super + Shift + B` 浏览器，`Super + Shift + E` 电子邮件，`Super + Shift + N` 编辑器 |
 | `Super + Ctrl + key` | 面板和系统菜单 | `Super + Ctrl + A` 音频，`Super + Ctrl + N` 网络，`Super + Ctrl + C` 捕获菜单 |
 | `Super + Ctrl + Alt + key` | 快速操作和通知 | `Super + Ctrl + Alt + T` 显示时间，`Super + Ctrl + Alt + B` 电池，`Super + Ctrl + Alt + C` 截图 |
@@ -34,7 +34,7 @@
 
 | 快捷键                  | 功能              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Omarchy 菜单（应用和其他一切）    |
+| `Super + Space`           | Ve OS 菜单（应用和其他一切）    |
 | `Super + Alt + Space` | 应用网格 |
 | `Super + Escape` | 系统菜单（挂起、重启等）  |
 | `Super + Ctrl + L` | 锁定计算机 |
@@ -172,7 +172,7 @@
 | `Super + V`           | 粘贴    |
 | `Super + Ctrl + V`           | 剪贴板管理器    |
 
-通常在 Linux 上，你需要在终端中使用 `Ctrl + Shift + C/V` 进行复制粘贴，而在其他所有地方使用 `Ctrl + C/V`。这些 Omarchy 统一剪贴板快捷键在任何地方都能用。
+通常在 Linux 上，你需要在终端中使用 `Ctrl + Shift + C/V` 进行复制粘贴，而在其他所有地方使用 `Ctrl + C/V`。这些 Ve OS 统一剪贴板快捷键在任何地方都能用。
 
 ## 捕获
 
@@ -194,7 +194,7 @@
 
 对于录屏，该快捷键会先询问你想要哪种音频，然后开始录制。再次按下即可停止。有关详细信息，请参阅[截图和录制](12-screenshots-recording.md)。
 
-所有捕获选项也都可在 Omarchy 菜单（`Super + Space`）的 _Trigger > Capture_ 下访问。
+所有捕获选项也都可在 Ve OS 菜单（`Super + Space`）的 _Trigger > Capture_ 下访问。
 
 ## 通知
 
@@ -216,9 +216,9 @@
 | `Super + Backspace` | 切换窗口透明度 |
 | `Super + Ctrl + Backspace` | 切换单窗口方形宽高比 |
 
-额外的背景图片位于 `~/.config/omarchy/backgrounds/<theme name>`。也可通过 Omarchy 菜单中的 _Install > Style > Background_ 获取。
+额外的背景图片位于 `~/.config/omarchy/backgrounds/<theme name>`。也可通过 Ve OS 菜单中的 _Install > Style > Background_ 获取。
 
-所有样式选项也都可在 Omarchy 菜单（`Super + Space`）的 _Style_ 下访问。
+所有样式选项也都可在 Ve OS 菜单（`Super + Space`）的 _Style_ 下访问。
 
 ## 开关
 
@@ -319,7 +319,7 @@
 
 ## Ghostty 终端
 
-Ghostty 终端可通过 Omarchy 菜单使用 _Install > Terminal_ 安装。
+Ghostty 终端可通过 Ve OS 菜单使用 _Install > Terminal_ 安装。
 
 | 快捷键                  | 功能              |
 | ----------------------- | --------------------- |

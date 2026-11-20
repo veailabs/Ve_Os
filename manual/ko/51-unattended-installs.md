@@ -1,4 +1,6 @@
-# 무인 설치
+# Ve OS — 무인 설치
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO는 키보드 앞에 아무도 없어도 스스로 설치할 수 있다. 설치 프로그램이 설정 파일을 담은 `cidata`라는 레이블의 두 번째 드라이브를 발견하면, 그 파일을 복사하고, 설정 마법사를 완전히 건너뛰고, 완성된 시스템으로 스스로 재부팅한다. 특별한 ISO 빌드도, 추가 부팅 메뉴 항목도 없다 — 그런 드라이브가 연결되어 있지 않으면 아무것도 달라지지 않고 평소처럼 마법사가 실행된다.
 

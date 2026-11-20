@@ -1,14 +1,14 @@
 # Topbjælken
 
-Striben langs toppen af din skærm er Omarchy-bjælken. Den er ikke en påskruet statuslinje, men en del af Omarchy-skallen, den ene langvarige Quickshell-proces, der også tegner menuen, notifikationerne, OSD-popup'erne og låseskærmen. Derfor matcher dens tema perfekt alt det andet, og derfor åbner et panel øjeblikkeligt i stedet for at starte en ny app.
+Striben langs toppen af din skærm er Ve OS-bjælken. Den er ikke en påskruet statuslinje, men en del af Ve OS-skallen, den ene langvarige Quickshell-proces, der også tegner menuen, notifikationerne, OSD-popup'erne og låseskærmen. Derfor matcher dens tema perfekt alt det andet, og derfor åbner et panel øjeblikkeligt i stedet for at starte en ny app.
 
 Det er også den eneste del af skrivebordet, der altid er på skærmen, så det er værd at vide, hvad alle de små glyffer gør.
 
 ## Hvad er der på den som standard
 
-Bjælken har tre sektioner. Til venstre sidder Omarchy-logoet (menustarteren) og arbejdsområdeindikatorerne. I midten får du statusindikatorerne, uret, Elsewhen (et verdensure), vejret og et Omarchy-opdateringsmærke. Til højre: systembakken, tastaturlayoutet (når mere end ét er konfigureret), agenter, bluetooth, netværk, lyd, skærm og strøm.
+Bjælken har tre sektioner. Til venstre sidder Ve OS-logoet (menustarteren) og arbejdsområdeindikatorerne. I midten får du statusindikatorerne, uret, Elsewhen (et verdensure), vejret og et Ve OS-opdateringsmærke. Til højre: systembakken, tastaturlayoutet (når mere end ét er konfigureret), agenter, bluetooth, netværk, lyd, skærm og strøm.
 
-Nogle af dem dukker kun op, når de har noget at sige. Tastaturlayoutet vises kun, hvis du har konfigureret mere end ét layout. Opdateringsmærket vises kun, når der venter en Omarchy-opdatering. Og agentikonet vises første gang Omarchy finder AI-kodeforbrug på maskinen (se [AI](17-ai.md)).
+Nogle af dem dukker kun op, når de har noget at sige. Tastaturlayoutet vises kun, hvis du har konfigureret mere end ét layout. Opdateringsmærket vises kun, når der venter en Ve OS-opdatering. Og agentikonet vises første gang Ve OS finder AI-kodeforbrug på maskinen (se [AI](17-ai.md)).
 
 ## At klikke rundt
 
@@ -16,7 +16,7 @@ Næsten alle widgets gør noget ved venstre-, højre- og midterklik, og flere re
 
 | Widget | Venstre | Højre | Midten / rul |
 | --- | --- | --- | --- |
-| Menu | Omarchy-menu | Ny terminal | — |
+| Menu | Ve OS-menu | Ny terminal | — |
 | Arbejdsområder | Fokuser det arbejdsområde på denne skærm | — | Rul: næste/forrige arbejdsområde |
 | Ur | Kalender-popup | Skift mellem etiketformater | Midten: tidszonevælger |
 | Vejr | Vejrudsigt-popup | Fuldt vejr som en notifikation | Midten: opdater |
@@ -29,7 +29,7 @@ Næsten alle widgets gør noget ved venstre-, højre- og midterklik, og flere re
 | Medier | Afspil/pause | Coverbillede-popup | Midten: næste · rul: forrige/næste |
 | Agenter | Agentpanel | Start din agent | Midten: næste abonnement |
 | Bakke | Hold markøren over for at vise skuffen | Højreklik på chevronen for at administrere | — |
-| Omarchy-opdatering | Kør opdateringen | — | — |
+| Ve OS-opdatering | Kør opdateringen | — | — |
 
 Ikke alt i den tabel er på din bjælke fra start. Mediewidgetten (MPRIS nu spiller, med et rullende spor og kunstner) og mikrofonwidgetten er begge indbyggede, men slået fra som standard — tilføj dem, hvis du vil have dem, som beskrevet nedenfor.
 
@@ -137,6 +137,6 @@ Hver widget er én post i et af de fem layoutarrays, og dens indstillinger sidde
 
 `center` er boksen i midten af bjælken: alt i den centreres på skærmen som én gruppe. `centerBegin` og `centerEnd` hænger på hver side af boksen, hvilket er sådan, uret bliver præcist i midten, selv mens vejret og opdateringsmærket kommer og går. Læg mere end én widget i `center`, og de centreres sammen; lad den være tom, og `centerBegin` og `centerEnd` mødes i midten af bjælken.
 
-En regel, der er værd at internalisere: **når du først har din egen `shell.json`, er den kanonisk**. Indtil du tilpasser noget, læser skallen Omarchys standardfil. I det øjeblik du trækker en widget, kører `omarchy bar` eller selv redigerer filen, ejer du den — der er ingen dyb fletning, så nye standardwidgets i fremtidige Omarchy-udgivelser vises ikke automatisk på din bjælke. `omarchy bar defaults` sætter det medfølgende layout tilbage, hver gang du vil have en ren tavle.
+En regel, der er værd at internalisere: **når du først har din egen `shell.json`, er den kanonisk**. Indtil du tilpasser noget, læser skallen Ve OSs standardfil. I det øjeblik du trækker en widget, kører `omarchy bar` eller selv redigerer filen, ejer du den — der er ingen dyb fletning, så nye standardwidgets i fremtidige Ve OS-udgivelser vises ikke automatisk på din bjælke. `omarchy bar defaults` sætter det medfølgende layout tilbage, hver gang du vil have en ren tavle.
 
 Den samme fil indeholder også dine inaktivitetstider på øverste niveau, uden for `bar`-nøglen: `idle.screensaver` og `idle.lock`, begge i sekunder, siden du blev inaktiv. Så standardpauseskærmen går i gang efter 150 sekunder og låsen efter 300.

@@ -28,7 +28,7 @@ Dòng này sẽ hiển thị Chủ Nhật 10:55 AM.
 
 ### Làm cách nào để thay đổi múi giờ của tôi?
 
-Chạy _Update > Timezone_ trong menu Omarchy và chọn từ danh sách. Nếu múi giờ đã đúng nhưng bản thân đồng hồ bị lệch, _Update > Time_ sẽ khởi động lại quá trình đồng bộ hóa thời gian cho bạn.
+Chạy _Update > Timezone_ trong menu Ve OS và chọn từ danh sách. Nếu múi giờ đã đúng nhưng bản thân đồng hồ bị lệch, _Update > Time_ sẽ khởi động lại quá trình đồng bộ hóa thời gian cho bạn.
 
 ### Làm cách nào để thay đổi DNS, chia sẻ Wi-Fi, hoặc kiểm tra tốc độ kết nối của tôi?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Bạn có thể làm tương tự cho bản ghi màn hình bằng cách dùng `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap tự động tạo thư mục ảnh chụp màn hình của nó. Hãy tự tạo thư mục ghi màn hình, sau đó khởi động lại Omarchy để một trong hai thay đổi môi trường có hiệu lực.
+Omasnap tự động tạo thư mục ảnh chụp màn hình của nó. Hãy tự tạo thư mục ghi màn hình, sau đó khởi động lại Ve OS để một trong hai thay đổi môi trường có hiệu lực.
 
 ### Làm cách nào để loa + webcam hoạt động trên Apple Studio Display của tôi?
 
 Bạn sẽ nghĩ rằng tất cả chỉ cần cắm USB C là hoạt động, nhưng tiếc là không phải vậy. Giải pháp tôi đã tìm ra để nó hoạt động đáng tin cậy là dùng [cáp WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Sau đó loa và webcam hoạt động ngon lành.
 
-Hãy nhớ rằng bạn có sẵn tính năng điều khiển độ sáng tích hợp trong Omarchy cho Apple Displays (cả Studio và XDR) bằng các phím độ sáng thông thường trên bàn phím.
+Hãy nhớ rằng bạn có sẵn tính năng điều khiển độ sáng tích hợp trong Ve OS cho Apple Displays (cả Studio và XDR) bằng các phím độ sáng thông thường trên bàn phím.
 
 ### Làm cách nào để loại bỏ tất cả phần mềm thừa?
 
@@ -72,7 +72,7 @@ Nếu bạn không muốn các chương trình như Obsidian hay LibreOffice hay
 
 Chạy _Remove > Package_ để xem mọi gói đã được cài đặt. Sau đó bạn có thể chọn bất kỳ gói nào bạn muốn loại bỏ bằng tab, và bắt đầu loại bỏ mọi thứ bạn đã chọn bằng return.
 
-Và bạn có thể dùng _Remove > Web App_ từ menu Omarchy để loại bỏ bất kỳ ứng dụng web được cài sẵn nào mà bạn không muốn.
+Và bạn có thể dùng _Remove > Web App_ từ menu Ve OS để loại bỏ bất kỳ ứng dụng web được cài sẵn nào mà bạn không muốn.
 
 Hoặc chạy _Remove > Preinstalls_ để quét sạch tất cả những thứ được cài sẵn thừa thãi — ứng dụng web, TUI, và các ứng dụng tùy chọn — trong một lần. Các phím tắt đã khởi chạy chúng cũng sẽ biến mất theo, vì vậy bạn sẽ còn lại một bảng bindings sạch sẽ để điền những bindings của riêng bạn vào trong `~/.config/hypr/bindings.lua`.
 

@@ -1,10 +1,10 @@
 # Plugin Shell
 
-Desktop Omarchy berjalan sebagai satu proses Quickshell yang berumur panjang yang disebut `omarchy-shell`, dan hampir semua yang kamu lihat di layar adalah plugin di dalamnya. Bilah adalah plugin. Begitu juga panel yang turun darinya, overlay layar penuh seperti pemilih emoji dan manajer papan klip, menu Omarchy itu sendiri, layar kunci, dialog polkit, dan layanan headless yang mengawasi bateraimu dan menghangatkan layarmu di malam hari.
+Desktop Ve OS berjalan sebagai satu proses Quickshell yang berumur panjang yang disebut `omarchy-shell`, dan hampir semua yang kamu lihat di layar adalah plugin di dalamnya. Bilah adalah plugin. Begitu juga panel yang turun darinya, overlay layar penuh seperti pemilih emoji dan manajer papan klip, menu Ve OS itu sendiri, layar kunci, dialog polkit, dan layanan headless yang mengawasi bateraimu dan menghangatkan layarmu di malam hari.
 
-Itu bukan hanya detail implementasi. Ini berarti kamu dapat mematikan bagian desktop, menukarnya, atau menulis milikmu sendiri tanpa menyentuh satu baris pun kode sumber Omarchy.
+Itu bukan hanya detail implementasi. Ini berarti kamu dapat mematikan bagian desktop, menukarnya, atau menulis milikmu sendiri tanpa menyentuh satu baris pun kode sumber Ve OS.
 
-Plugin pihak pertama disertakan dengan Omarchy dan berada di `$OMARCHY_PATH/shell/plugins/`. Apa pun yang kamu tambahkan sendiri — eksperimenmu sendiri, atau sesuatu yang kamu temukan di GitHub — berada di `~/.config/omarchy/plugins/`. Keduanya ditemukan dengan cara yang sama saat startup, tetapi built-in menerima antarmuka shell tepercaya sementara plugin pihak ketiga menerima antarmuka terbatas yang dicakup ke layanan dan siklus hidup mereka sendiri. Klon dari built-in hanya mempertahankan konfigurasi spesifik sumber dan panggilan UI yang dibutuhkan untuk perilaku asli.
+Plugin pihak pertama disertakan dengan Ve OS dan berada di `$OMARCHY_PATH/shell/plugins/`. Apa pun yang kamu tambahkan sendiri — eksperimenmu sendiri, atau sesuatu yang kamu temukan di GitHub — berada di `~/.config/omarchy/plugins/`. Keduanya ditemukan dengan cara yang sama saat startup, tetapi built-in menerima antarmuka shell tepercaya sementara plugin pihak ketiga menerima antarmuka terbatas yang dicakup ke layanan dan siklus hidup mereka sendiri. Klon dari built-in hanya mempertahankan konfigurasi spesifik sumber dan panggilan UI yang dibutuhkan untuk perilaku asli.
 
 ## Melihat apa yang kamu miliki
 

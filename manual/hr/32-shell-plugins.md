@@ -1,10 +1,10 @@
 # Dodaci ljuske
 
-Radna površina Omarchy radi kao jedan dugovječni Quickshell proces koji se zove `omarchy-shell`, a gotovo sve što vidiš na zaslonu dodatak je unutar njega. Traka je dodatak. Isto vrijedi i za panele koji se spuštaju s nje, preklapanja preko cijelog zaslona poput birača emojija i upravitelja međuspremnika, sam izbornik Omarchy, zaslon za zaključavanje, dijaloški okvir polkit i headless usluge koje prate tvoju bateriju i zagrijavaju ti zaslon noću.
+Radna površina Ve OS radi kao jedan dugovječni Quickshell proces koji se zove `omarchy-shell`, a gotovo sve što vidiš na zaslonu dodatak je unutar njega. Traka je dodatak. Isto vrijedi i za panele koji se spuštaju s nje, preklapanja preko cijelog zaslona poput birača emojija i upravitelja međuspremnika, sam izbornik Ve OS, zaslon za zaključavanje, dijaloški okvir polkit i headless usluge koje prate tvoju bateriju i zagrijavaju ti zaslon noću.
 
-To nije samo detalj implementacije. To znači da dijelove radne površine možeš isključiti, zamijeniti ili napisati vlastite bez diranja retka Omarchyjeva izvornog koda.
+To nije samo detalj implementacije. To znači da dijelove radne površine možeš isključiti, zamijeniti ili napisati vlastite bez diranja retka Ve OSjeva izvornog koda.
 
-Dodaci prve strane isporučuju se s Omarchyjem i nalaze se u `$OMARCHY_PATH/shell/plugins/`. Sve što sam dodaš — vlastite eksperimente ili nešto što si pronašao na GitHubu — nalazi se u `~/.config/omarchy/plugins/`. Oba se otkrivaju na isti način pri pokretanju, ali ugrađeni dobivaju pouzdana sučelja ljuske, dok dodaci treće strane dobivaju ograničeno sučelje ograničeno na vlastitu uslugu i životni ciklus. Klonovi ugrađenih zadržavaju samo konfiguraciju specifičnu za izvor i pozive korisničkog sučelja potrebne za izvorno ponašanje.
+Dodaci prve strane isporučuju se s Ve OSjem i nalaze se u `$OMARCHY_PATH/shell/plugins/`. Sve što sam dodaš — vlastite eksperimente ili nešto što si pronašao na GitHubu — nalazi se u `~/.config/omarchy/plugins/`. Oba se otkrivaju na isti način pri pokretanju, ali ugrađeni dobivaju pouzdana sučelja ljuske, dok dodaci treće strane dobivaju ograničeno sučelje ograničeno na vlastitu uslugu i životni ciklus. Klonovi ugrađenih zadržavaju samo konfiguraciju specifičnu za izvor i pozive korisničkog sučelja potrebne za izvorno ponašanje.
 
 ## Vidjeti što imaš
 

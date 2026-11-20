@@ -1,10 +1,10 @@
 # Kytkimet, käyttämättömyys ja näytönsäästäjä
 
-Paljon siitä, mitä muutat päivittäin, ei oikeastaan ole asetus. Se on tila, jonka kytket päälle tunniksi ja sitten taas pois: yövalo, kun työskentelet myöhään, älä häiritse, kun esität, pysy valveilla, kun katsot jotain. Omarchy kutsuu niitä kytkimiksi, ja ne kaikki toimivat samalla tavalla — pikanäppäin, valikkokohta ja komento osuvat kaikki samaan kytkimeen.
+Paljon siitä, mitä muutat päivittäin, ei oikeastaan ole asetus. Se on tila, jonka kytket päälle tunniksi ja sitten taas pois: yövalo, kun työskentelet myöhään, älä häiritse, kun esität, pysy valveilla, kun katsot jotain. Ve OS kutsuu niitä kytkimiksi, ja ne kaikki toimivat samalla tavalla — pikanäppäin, valikkokohta ja komento osuvat kaikki samaan kytkimeen.
 
 ### Kytkinvalikko
 
-`Super + Ctrl + O` avaa suoraan _Trigger > Toggle_ -kohdan, tai sinne voi kulkea Omarchy-valikosta (`Super + Space`). Kaikki siinä luettelossa on kytkimiä, jotka voit kääntää miettimättä, missä tila sijaitsee. Kytkimet sille, miltä työpöytä näyttää, ovat sen vieressä _Appearance_-kohdan alla.
+`Super + Ctrl + O` avaa suoraan _Trigger > Toggle_ -kohdan, tai sinne voi kulkea Ve OS-valikosta (`Super + Space`). Kaikki siinä luettelossa on kytkimiä, jotka voit kääntää miettimättä, missä tila sijaitsee. Kytkimet sille, miltä työpöytä näyttää, ovat sen vieressä _Appearance_-kohdan alla.
 
 Päätteestä samat kytkimet ovat `omarchy toggle <thing>`. Suorita pelkkä `omarchy toggle` nähdäksesi koko ryhmän.
 
@@ -26,7 +26,7 @@ Kosketuslevyn, kosketusnäytön ja hybridi-GPU:n kytkimet ovat _Trigger > Hardwa
 
 _Appearance_-kohdassa ovat valikkopalkki ja animaatiot sekä muutama asia, jotka eivät ole `omarchy toggle` -komentoja mutta käyttäytyvät samalla tavalla: akun prosenttiosuus palkissa, työtilojen oletusasettelu ja _Windows_-kohdan alla ikkunoiden välit (`Super + Shift + Backspace`) ja yhden ikkunan neliömäinen kuvasuhde (`Super + Ctrl + Backspace`).
 
-Kun Hyprlandilla ei ole GPU:ta, jolla piirtää, ja se renderöi sen sijaan suorittimella (llvmpipe), kuten Maceilla, joiden GPU:ta ei vielä tueta, useimmissa virtuaalikoneissa tai kun grafiikka-ajurin lataus epäonnistuu, Omarchy kytkee animaatiot, sumennuksen ja varjot pois päältä kyseiseksi istunnoksi ja kertoo siitä kerran ilmoituksella. _Appearance > Animations On_ tuo ne takaisin, ja Omarchy muistaa sen myös myöhempiä istuntoja varten.
+Kun Hyprlandilla ei ole GPU:ta, jolla piirtää, ja se renderöi sen sijaan suorittimella (llvmpipe), kuten Maceilla, joiden GPU:ta ei vielä tueta, useimmissa virtuaalikoneissa tai kun grafiikka-ajurin lataus epäonnistuu, Ve OS kytkee animaatiot, sumennuksen ja varjot pois päältä kyseiseksi istunnoksi ja kertoo siitä kerran ilmoituksella. _Appearance > Animations On_ tuo ne takaisin, ja Ve OS muistaa sen myös myöhempiä istuntoja varten.
 
 Useimmat näistä ovat vain lipp tiedosto hakemistossa `~/.local/state/omarchy/toggles/`. Jos haluat haarautua jonkin perusteella skriptissä, `omarchy-toggle-enabled` antaa sinulle poistumiskoodin sen sijaan, että sinun pitäisi mennä etsimään:
 
@@ -63,11 +63,11 @@ Käynnistä sitten hyprsunset kirjautumisen yhteydessä lisäämällä `o.launch
 
 Mitään ei kuitenkaan menetetä. Hiljennetyt ilmoitukset pidetään takana: laita viimeiset muutamat takaisin näytölle näppäimillä `Super + Shift + Alt + ,`. Katso loput kohdasta [ilmoitukset](10-notices.md).
 
-Kahdenlaiset viestit pääsevät silti läpi: Omarchyn omat vahvistusilmoitukset jostakin, jonka juuri teit ("Theme changed", "Screenshot saved"), ja komentoriviltä lähetetyt kriittiset hälytykset. Keskustelusovellukset, jotka merkitsevät kaiken kriittiseksi pakottaakseen itsensä eteesi, eivät kelpaa.
+Kahdenlaiset viestit pääsevät silti läpi: Ve OSn omat vahvistusilmoitukset jostakin, jonka juuri teit ("Theme changed", "Screenshot saved"), ja komentoriviltä lähetetyt kriittiset hälytykset. Keskustelusovellukset, jotka merkitsevät kaiken kriittiseksi pakottaakseen itsensä eteesi, eivät kelpaa.
 
 ### Käyttämättömyys
 
-Omarchy-kuori omistaa käyttämättömyyskäyttäytymisen, ja ajoitukset ovat ylätason `idle`-lohko tiedostossa `~/.config/omarchy/shell.json`:
+Ve OS-kuori omistaa käyttämättömyyskäyttäytymisen, ja ajoitukset ovat ylätason `idle`-lohko tiedostossa `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Tämä koskee lukitsemista ja näytönsäästäjää, ei virtaa. Valmius- ja lep
 
 ### Näytönsäästäjä
 
-Omarchyn näytönsäästäjä on ASCII-taidetta, joka kulkee satunnaisten tekstitehosteiden läpi, yksi esiintymä näyttöä kohden. Mikä tahansa näppäin tai hiiren liike poistuu siitä.
+Ve OSn näytönsäästäjä on ASCII-taidetta, joka kulkee satunnaisten tekstitehosteiden läpi, yksi esiintymä näyttöä kohden. Mikä tahansa näppäin tai hiiren liike poistuu siitä.
 
 Voit käynnistää sen pyynnöstä kohdasta _System > Screensaver_ (`Super + Esc`), mikä pakottaa sen esiin, vaikka olisit kytkenyt käyttämättömyyden näytönsäästäjän pois päältä. Sille ei ole oletuksena sidottu pikanäppäintä.
 
 `omarchy toggle screensaver` on se, mikä kytkee käyttämättömyyden näytönsäästäjän pois päältä, jos haluat mieluummin siirtyä suoraan työskentelystä lukittuun tilaan. Mikä tahansa näppäin, napsautus, vieritys tai hiiren liike sulkee sen.
 
-Sen piirtämä logo on sinun muutettavissasi kohdassa _Appearance > Branding > Screensaver_. Lataa png tai svg, niin Omarchy muuntaa sen ASCII-muotoon. Katso [brändäys](41-branding.md).
+Sen piirtämä logo on sinun muutettavissasi kohdassa _Appearance > Branding > Screensaver_. Lataa png tai svg, niin Ve OS muuntaa sen ASCII-muotoon. Katso [brändäys](41-branding.md).
 
 ### Lukitusnäyttö
 
-`Super + Ctrl + L` lukitsee koneen. Se käynnistää lukitusnäytön Omarchy-kuoresta, sammuttaa näytön, palauttaa näppäimistöasettelusi ensimmäiseen, jotta et kirjoita salasanaasi väärällä aakkostolla, ja — jos se on käynnissä — lukitsee 1Passwordin matkalla ulos.
+`Super + Ctrl + L` lukitsee koneen. Se käynnistää lukitusnäytön Ve OS-kuoresta, sammuttaa näytön, palauttaa näppäimistöasettelusi ensimmäiseen, jotta et kirjoita salasanaasi väärällä aakkostolla, ja — jos se on käynnissä — lukitsee 1Passwordin matkalla ulos.
 
 Lukitusnäyttö ottaa salasanan, ja se ottaa myös sormenjäljen, kun olet määrittänyt sellaisen. Se ja muut todentamistavat käsitellään kohdassa [laitteistotodennus](37-hardware-authentication.md).

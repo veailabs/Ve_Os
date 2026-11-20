@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy geralmente é controlado pelas teclas de atalho e pelo menu do Omarchy (`Super + Space`). Mas você também pode controlá-lo pela CLI `omarchy`. Isso é particularmente útil quando você tem um agente de IA trabalhando com você em personalização ou configuração.
+Ve OS geralmente é controlado pelas teclas de atalho e pelo menu do Ve OS (`Super + Space`). Mas você também pode controlá-lo pela CLI `omarchy`. Isso é particularmente útil quando você tem um agente de IA trabalhando com você em personalização ou configuração.
 
 A CLI tem acesso a todas as ferramentas internas que são usadas tanto pelo menu quanto de outras formas. Você pode ver tudo o que está disponível executando `omarchy` no terminal.
 
@@ -8,7 +8,7 @@ Ela se parece com algo assim:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Para diagnóstico, execute `omarchy-debug --no-sudo --print` diretamente. Ele imprime diagnósticos e grava `/tmp/omarchy-debug.log` sem solicitar sudo, inclusive em instalações de pacotes onde `omarchy debug` pode falhar com "Unknown Omarchy command".
+Para diagnóstico, execute `omarchy-debug --no-sudo --print` diretamente. Ele imprime diagnósticos e grava `/tmp/omarchy-debug.log` sem solicitar sudo, inclusive em instalações de pacotes onde `omarchy debug` pode falhar com "Unknown Ve OS command".
 
 E você pode se aprofundar em cada grupo:
 
@@ -60,4 +60,4 @@ Todo comando também aceita `--help`, seja consultando um grupo inteiro (`omarch
 
 ### Abrindo o menu pelo terminal
 
-O menu do Omarchy também pode ser controlado por script, o que é útil para seus próprios atalhos de teclado. `omarchy menu` o abre na raiz, e você pode pular direto para qualquer ponto da árvore nomeando-o: `omarchy menu summon appearance.theme` vai direto para o seletor de temas, `omarchy menu toggle system` abre o menu do sistema e o fecha novamente se ele já estiver aberto, e `omarchy menu close` o fecha.
+O menu do Ve OS também pode ser controlado por script, o que é útil para seus próprios atalhos de teclado. `omarchy menu` o abre na raiz, e você pode pular direto para qualquer ponto da árvore nomeando-o: `omarchy menu summon appearance.theme` vai direto para o seletor de temas, `omarchy menu toggle system` abre o menu do sistema e o fecha novamente se ele já estiver aberto, e `omarchy menu close` o fecha.

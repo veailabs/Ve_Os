@@ -1,6 +1,6 @@
 # Marca
 
-Omarchy et permet definir el logotip de la teva empresa o una imatge personal tant per al desbloqueig d'arrencada com per a l'estalvi de pantalla i la pantalla Quant a.
+Ve OS et permet definir el logotip de la teva empresa o una imatge personal tant per al desbloqueig d'arrencada com per a l'estalvi de pantalla i la pantalla Quant a.
 
 ### Desbloqueig d'arrencada
 
@@ -24,11 +24,11 @@ Hi ha tres entrades en aquest menú:
 
 - **Edit Text** obre `~/.config/omarchy/branding/screensaver.txt` al teu editor. Escriu o enganxa el que vulguis: art ASCII, el teu nom, una paraula grollera. Desa i surt, i l'estalvi de pantalla s'engega immediatament perquè el puguis veure.
 - **Set From Image** obre un selector de fitxers per a un png o svg, el converteix a ASCII i te'n mostra el resultat. Els logotips amb una silueta clara funcionen molt millor que les fotos.
-- **Restore Default** torna a posar el logotip d'Omarchy.
+- **Restore Default** torna a posar el logotip d'Ve OS.
 
 ### Pantalla Quant a
 
-Les mateixes tres opcions són a _Appearance > Branding > About_ per a la pantalla _About_ que obtens des del menú d'Omarchy, i funcionen de manera idèntica: el fitxer és `~/.config/omarchy/branding/about.txt`, i la finestra Quant a apareix després de cada canvi. L'art de Quant a es converteix a una mida més petita que el de l'estalvi de pantalla, ja que ha d'encaixar en una finestra en lloc d'omplir tota la pantalla.
+Les mateixes tres opcions són a _Appearance > Branding > About_ per a la pantalla _About_ que obtens des del menú d'Ve OS, i funcionen de manera idèntica: el fitxer és `~/.config/omarchy/branding/about.txt`, i la finestra Quant a apareix després de cada canvi. L'art de Quant a es converteix a una mida més petita que el de l'estalvi de pantalla, ja que ha d'encaixar en una finestra en lloc d'omplir tota la pantalla.
 
 Mentre la finestra és oberta, una llum verda travessa l'art cada pocs segons i després el torna a deixar quiet. El teu propi art també la rep, sempre que cada caràcter que conté ocupi una sola columna d'amplada: tot el que produeix _Set From Image_ ho compleix. L'art creat a partir d'emoji o de caràcters d'amplada doble es queda quiet, i el mateix passa amb la pantalla si conserves una configuració de fastfetch pròpia: un logotip quiet en aquests casos és l'animació que es fa a un costat en lloc de fallar, ja que fer lliscar una llum a través seu posaria la resta de la línia al lloc equivocat.
 

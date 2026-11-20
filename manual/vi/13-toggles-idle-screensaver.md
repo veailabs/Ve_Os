@@ -1,10 +1,10 @@
 # Các nút bật/tắt, Thời gian rảnh & Trình bảo vệ màn hình
 
-Rất nhiều thứ bạn thay đổi hằng ngày thực ra không phải là một cài đặt. Đó là một chế độ bạn bật lên trong một giờ rồi lại tắt đi: ánh sáng đêm khi bạn làm việc khuya, không làm phiền khi bạn đang thuyết trình, giữ máy luôn thức khi bạn đang xem gì đó. Omarchy gọi chúng là các công tắc bật/tắt, và tất cả đều hoạt động theo cùng một cách — một phím tắt, một mục trong menu, và một lệnh, tất cả đều tác động lên cùng một công tắc.
+Rất nhiều thứ bạn thay đổi hằng ngày thực ra không phải là một cài đặt. Đó là một chế độ bạn bật lên trong một giờ rồi lại tắt đi: ánh sáng đêm khi bạn làm việc khuya, không làm phiền khi bạn đang thuyết trình, giữ máy luôn thức khi bạn đang xem gì đó. Ve OS gọi chúng là các công tắc bật/tắt, và tất cả đều hoạt động theo cùng một cách — một phím tắt, một mục trong menu, và một lệnh, tất cả đều tác động lên cùng một công tắc.
 
 ### Menu bật/tắt
 
-`Super + Ctrl + O` mở trực tiếp _Trigger > Toggle_, hoặc bạn có thể đi đến đó từ menu Omarchy (`Super + Space`). Mọi thứ trong danh sách đó đều là một công tắc bạn có thể bật/tắt mà không cần nghĩ về nơi trạng thái được lưu. Các công tắc cho cách desktop trông như thế nào nằm ngay bên cạnh nó, trong _Appearance_.
+`Super + Ctrl + O` mở trực tiếp _Trigger > Toggle_, hoặc bạn có thể đi đến đó từ menu Ve OS (`Super + Space`). Mọi thứ trong danh sách đó đều là một công tắc bạn có thể bật/tắt mà không cần nghĩ về nơi trạng thái được lưu. Các công tắc cho cách desktop trông như thế nào nằm ngay bên cạnh nó, trong _Appearance_.
 
 Từ terminal, các công tắc tương tự là `omarchy toggle <thing>`. Chạy `omarchy toggle` riêng để xem toàn bộ nhóm.
 
@@ -26,7 +26,7 @@ Các công tắc bàn di chuột, màn hình cảm ứng và GPU lai nằm trong
 
 _Appearance_ chứa thanh menu và các hiệu ứng chuyển động, cùng với một vài thứ không phải là lệnh `omarchy toggle` nhưng hoạt động giống như vậy: phần trăm pin trên thanh, bố cục workspace mặc định, và trong _Windows_, khoảng cách giữa các cửa sổ (`Super + Shift + Backspace`) và tỷ lệ vuông cho 1 cửa sổ (`Super + Ctrl + Backspace`).
 
-Khi Hyprland không có GPU để vẽ và thay vào đó kết xuất bằng CPU (llvmpipe), như trên các máy Mac mà GPU chưa được hỗ trợ, trong hầu hết các máy ảo, hoặc khi trình điều khiển đồ họa không tải được, Omarchy sẽ tắt hiệu ứng chuyển động, hiệu ứng làm mờ và bóng đổ cho phiên đó và thông báo cho bạn một lần bằng một thông báo. _Appearance > Animations On_ sẽ bật lại chúng, và Omarchy cũng ghi nhớ điều đó cho các phiên sau.
+Khi Hyprland không có GPU để vẽ và thay vào đó kết xuất bằng CPU (llvmpipe), như trên các máy Mac mà GPU chưa được hỗ trợ, trong hầu hết các máy ảo, hoặc khi trình điều khiển đồ họa không tải được, Ve OS sẽ tắt hiệu ứng chuyển động, hiệu ứng làm mờ và bóng đổ cho phiên đó và thông báo cho bạn một lần bằng một thông báo. _Appearance > Animations On_ sẽ bật lại chúng, và Ve OS cũng ghi nhớ điều đó cho các phiên sau.
 
 Hầu hết các công tắc này chỉ là một tệp cờ nằm trong `~/.local/state/omarchy/toggles/`. Nếu bạn muốn rẽ nhánh dựa trên một công tắc trong một script, `omarchy-toggle-enabled` sẽ cho bạn một mã thoát thay vì bắt bạn phải tự đi tìm:
 
@@ -63,11 +63,11 @@ Sau đó khởi động hyprsunset khi đăng nhập bằng cách thêm `o.launc
 
 Tuy nhiên, không có gì bị mất. Các thông báo đã tắt tiếng sẽ bị giữ lại: đưa vài thông báo gần nhất trở lại màn hình bằng `Super + Shift + Alt + ,`. Xem [thông báo](10-notices.md) để biết phần còn lại.
 
-Hai loại tin nhắn vẫn lọt qua được: các thông báo xác nhận của chính Omarchy cho việc bạn vừa làm ("Theme changed", "Screenshot saved"), và các cảnh báo nghiêm trọng được gửi từ dòng lệnh. Các ứng dụng trò chuyện đánh dấu mọi thứ là nghiêm trọng để ép mình xuất hiện trước mặt bạn thì không được tính.
+Hai loại tin nhắn vẫn lọt qua được: các thông báo xác nhận của chính Ve OS cho việc bạn vừa làm ("Theme changed", "Screenshot saved"), và các cảnh báo nghiêm trọng được gửi từ dòng lệnh. Các ứng dụng trò chuyện đánh dấu mọi thứ là nghiêm trọng để ép mình xuất hiện trước mặt bạn thì không được tính.
 
 ### Thời gian rảnh
 
-Shell của Omarchy sở hữu hành vi khi rảnh, và các mốc thời gian là một khối `idle` ở cấp cao nhất trong `~/.config/omarchy/shell.json`:
+Shell của Ve OS sở hữu hành vi khi rảnh, và các mốc thời gian là một khối `idle` ở cấp cao nhất trong `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Phần này nói về việc khóa và trình bảo vệ màn hình, không ph�
 
 ### Trình bảo vệ màn hình
 
-Trình bảo vệ màn hình của Omarchy là nghệ thuật ASCII chạy qua các hiệu ứng văn bản ngẫu nhiên, mỗi màn hình một phiên bản. Bất kỳ phím nào hoặc chuyển động chuột nào cũng sẽ thoát khỏi nó.
+Trình bảo vệ màn hình của Ve OS là nghệ thuật ASCII chạy qua các hiệu ứng văn bản ngẫu nhiên, mỗi màn hình một phiên bản. Bất kỳ phím nào hoặc chuyển động chuột nào cũng sẽ thoát khỏi nó.
 
 Bạn có thể khởi động nó theo yêu cầu từ _System > Screensaver_ (`Super + Esc`), thao tác này buộc nó hiện lên ngay cả khi bạn đã tắt trình bảo vệ màn hình khi rảnh. Theo mặc định, không có phím tắt nào được gán cho nó.
 
 `omarchy toggle screensaver` là lệnh tắt trình bảo vệ màn hình khi rảnh, nếu bạn muốn đi thẳng từ đang làm việc sang bị khóa. Bất kỳ phím nào, cú nhấp, cuộn hoặc chuyển động chuột nào cũng sẽ đóng nó.
 
-Logo mà nó vẽ là do bạn thay đổi, trong _Appearance > Branding > Screensaver_. Tải lên một png hoặc svg và Omarchy sẽ chuyển nó thành ASCII. Xem [nhận diện thương hiệu](41-branding.md).
+Logo mà nó vẽ là do bạn thay đổi, trong _Appearance > Branding > Screensaver_. Tải lên một png hoặc svg và Ve OS sẽ chuyển nó thành ASCII. Xem [nhận diện thương hiệu](41-branding.md).
 
 ### Màn hình khóa
 
-`Super + Ctrl + L` khóa máy. Thao tác đó chạy màn hình khóa từ shell của Omarchy, làm trống màn hình, đặt lại bố cục bàn phím của bạn về bố cục đầu tiên để bạn không gõ mật khẩu bằng bảng chữ cái sai, và — nếu bạn đang chạy nó — khóa 1Password trên đường ra.
+`Super + Ctrl + L` khóa máy. Thao tác đó chạy màn hình khóa từ shell của Ve OS, làm trống màn hình, đặt lại bố cục bàn phím của bạn về bố cục đầu tiên để bạn không gõ mật khẩu bằng bảng chữ cái sai, và — nếu bạn đang chạy nó — khóa 1Password trên đường ra.
 
 Màn hình khóa nhận mật khẩu, và nó cũng sẽ nhận dấu vân tay sau khi bạn đã thiết lập một dấu vân tay. Điều đó, cùng các cách xác thực khác, được trình bày trong [xác thực phần cứng](37-hardware-authentication.md).

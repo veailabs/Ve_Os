@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Sync the generated Omarchy theme to T3 Code
+# omarchy:summary=Sync the generated Ve OS theme to T3 Code
 # omarchy:hidden=true
 
 set -euo pipefail
@@ -11,7 +11,7 @@ T3CODE_HOME="${T3CODE_HOME:-$HOME/.t3}"
 T3CODE_STATE_DIR="$T3CODE_HOME/userdata"
 # The filename is the theme id T3 Code shows and `t3 theme set` accepts, and
 # it stays stable while the colors change underneath on every theme switch.
-T3CODE_THEME_PATH="$T3CODE_STATE_DIR/themes/omarchy.json"
+T3CODE_THEME_PATH="$T3CODE_STATE_DIR/themes/ve.json"
 
 # Only follow an install that already exists. Creating the directory here would
 # leave a stray T3 Code state dir on machines that do not run it.
@@ -75,3 +75,9 @@ jq --arg css "$css" '
   end
 ' <<<"$palette" >"$tmp"
 mv "$tmp" "$T3CODE_THEME_PATH"
+
+if [[ -f $T3CODE_STATE_DIR/themes/omarchy.json ]]; then
+  legacy_tmp=$(mktemp "$T3CODE_STATE_DIR/themes/omarchy.json.XXXXXX")
+  cp "$T3CODE_THEME_PATH" "$legacy_tmp"
+  mv "$legacy_tmp" "$T3CODE_STATE_DIR/themes/omarchy.json"
+fi

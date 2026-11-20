@@ -1,14 +1,14 @@
 # A felső sáv
 
-A képernyőd tetején végigfutó csík az Omarchy sáv. Nem egy ráerőltetett állapotsáv, hanem az Omarchy shell része, annak az egyetlen, hosszú életű Quickshell folyamatnak a része, amely a menüt, az értesítéseket, az OSD felugró ablakokat és a zárolási képernyőt is rajzolja. Ezért illeszkedik tökéletesen minden máshoz témában, és ezért nyílik meg egy panel azonnal, új alkalmazás indítása helyett.
+A képernyőd tetején végigfutó csík az Ve OS sáv. Nem egy ráerőltetett állapotsáv, hanem az Ve OS shell része, annak az egyetlen, hosszú életű Quickshell folyamatnak a része, amely a menüt, az értesítéseket, az OSD felugró ablakokat és a zárolási képernyőt is rajzolja. Ezért illeszkedik tökéletesen minden máshoz témában, és ezért nyílik meg egy panel azonnal, új alkalmazás indítása helyett.
 
 Ez egyben az asztal egyetlen olyan darabja is, amely mindig a képernyőn van, úgyhogy érdemes tudni, mit csinálnak azok a kis jelek.
 
 ## Mi van rajta alapból
 
-A sávnak három szakasza van. Bal oldalt ül az Omarchy logó (a menüindító) és a munkaterület-jelzők. Középen kapod az állapotjelzőket, az órát, az Elsewhen-t (egy világórát), az időjárást és egy Omarchy-frissítési jelvényt. Jobb oldalt: a rendszertálca, a billentyűzetkiosztás (ha egynél több van beállítva), az ügynökök, a bluetooth, a hálózat, a hang, a kijelző és az energia.
+A sávnak három szakasza van. Bal oldalt ül az Ve OS logó (a menüindító) és a munkaterület-jelzők. Középen kapod az állapotjelzőket, az órát, az Elsewhen-t (egy világórát), az időjárást és egy Ve OS-frissítési jelvényt. Jobb oldalt: a rendszertálca, a billentyűzetkiosztás (ha egynél több van beállítva), az ügynökök, a bluetooth, a hálózat, a hang, a kijelző és az energia.
 
-Ezek közül néhány csak akkor jelenik meg, ha van mondanivalója. A billentyűzetkiosztás csak akkor jelenik meg, ha egynél több kiosztást állítottál be. A frissítési jelvény csak akkor jelenik meg, ha Omarchy-frissítés vár rád. Az ügynökök ikonja pedig akkor jelenik meg először, amikor az Omarchy AI kódolási használatot talál a gépen (lásd: [AI](17-ai.md)).
+Ezek közül néhány csak akkor jelenik meg, ha van mondanivalója. A billentyűzetkiosztás csak akkor jelenik meg, ha egynél több kiosztást állítottál be. A frissítési jelvény csak akkor jelenik meg, ha Ve OS-frissítés vár rád. Az ügynökök ikonja pedig akkor jelenik meg először, amikor az Ve OS AI kódolási használatot talál a gépen (lásd: [AI](17-ai.md)).
 
 ## Kattintgatás
 
@@ -16,7 +16,7 @@ Szinte minden widget csinál valamit bal, jobb és középső kattintásra, és 
 
 | Widget | Bal | Jobb | Középső / görgetés |
 | --- | --- | --- | --- |
-| Menü | Omarchy menü | Új terminál | — |
+| Menü | Ve OS menü | Új terminál | — |
 | Munkaterületek | Az adott munkaterület fókuszba helyezése ezen a monitoron | — | Görgetés: következő/előző munkaterület |
 | Óra | Naptár felugró ablak | A címkeformátum váltogatása | Középső: időzóna-választó |
 | Időjárás | Előrejelzés felugró ablak | A teljes időjárás értesítésként | Középső: frissítés |
@@ -29,7 +29,7 @@ Szinte minden widget csinál valamit bal, jobb és középső kattintásra, és 
 | Média | Lejátszás/szünet | Borítókép felugró ablak | Középső: következő · görgetés: előző/következő |
 | Ügynökök | Ügynökök panel | Az ügynököd elindítása | Középső: következő előfizetés |
 | Tálca | Fölévitel a fiók felfedéséhez | Jobb kattintás a chevronra a kezeléshez | — |
-| Omarchy frissítés | A frissítés futtatása | — | — |
+| Ve OS frissítés | A frissítés futtatása | — | — |
 
 A táblázatban szereplő dolgok közül nem minden van ott a sávodon gyárilag. A médiawidget (MPRIS éppen játszott, görgetődő számmal és előadóval) és a mikrofonwidget is be van építve, de alapból ki van kapcsolva — add hozzá őket, ha akarod, az alábbiakban leírt módon.
 
@@ -137,6 +137,6 @@ Minden widget egy bejegyzés az öt elrendezési tömb egyikében, és a beáll�
 
 A `center` a doboz a sáv közepén: minden, ami benne van, egy csoportként középre kerül a képernyőn. A `centerBegin` és a `centerEnd` a doboz két oldalához tapad, így marad az óra halálpontosan középen, miközben az időjárás és a frissítési jelvény jön-megy. Tegyél egynél több widgetet a `center` alá, és együtt kerülnek középre; hagyd üresen, és a `centerBegin` és a `centerEnd` a sáv közepén találkozik.
 
-Egy szabály, amelyet érdemes megjegyezni: **ha egyszer megvan a saját `shell.json` fájlod, az a mérvadó**. Amíg semmit sem szabtál testre, a shell az Omarchy alapértelmezett fájlját olvassa. Abban a pillanatban, amikor elhúzol egy widgetet, futtatod az `omarchy bar` parancsot, vagy magad szerkeszted a fájlt, a tiéd — nincs mély összefésülés, így a jövőbeli Omarchy-kiadások új alapértelmezett widgetjei nem jelennek meg automatikusan a sávodon. Az `omarchy bar defaults` visszaállítja a gyári elrendezést, amikor tiszta lapot akarsz.
+Egy szabály, amelyet érdemes megjegyezni: **ha egyszer megvan a saját `shell.json` fájlod, az a mérvadó**. Amíg semmit sem szabtál testre, a shell az Ve OS alapértelmezett fájlját olvassa. Abban a pillanatban, amikor elhúzol egy widgetet, futtatod az `omarchy bar` parancsot, vagy magad szerkeszted a fájlt, a tiéd — nincs mély összefésülés, így a jövőbeli Ve OS-kiadások új alapértelmezett widgetjei nem jelennek meg automatikusan a sávodon. Az `omarchy bar defaults` visszaállítja a gyári elrendezést, amikor tiszta lapot akarsz.
 
 Ugyanez a fájl tartja az üresjárati időzítéseidet is a legfelső szinten, a `bar` kulcson kívül: az `idle.screensaver` és az `idle.lock`, mindkettő másodpercben azóta, hogy tétlenné váltál. Így az alapértelmezett képernyővédő 150 másodpercnél lép be, a zárolás pedig 300-nál.

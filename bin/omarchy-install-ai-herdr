@@ -42,7 +42,7 @@ for (( attempt = 0; attempt < 60; attempt++ )); do
 done
 
 if (( themed == 0 )); then
-  echo "Herdr didn't answer in time. Pick Omarchy in its theme picker to match your theme."
+  echo "Herdr didn't answer in time. Pick ve in its theme picker to match your theme."
 fi
 
 echo ""

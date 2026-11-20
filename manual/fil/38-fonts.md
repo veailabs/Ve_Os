@@ -1,12 +1,12 @@
 # Mga Font
 
-Gumagamit ang Omarchy ng JetBrainsMono Nerd Font bilang font ng terminal at ng system bilang default.
+Gumagamit ang Ve OS ng JetBrainsMono Nerd Font bilang font ng terminal at ng system bilang default.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Maaari mo itong palitan sa pamamagitan ng menu na _Appearance > Font_ sa menu ng Omarchy (`Super + Space`). Itinatakda nito ang monospace na font sa lahat ng lugar: sa terminal, sa bar, at sa anumang iba pang humihingi nito.
+Maaari mo itong palitan sa pamamagitan ng menu na _Appearance > Font_ sa menu ng Ve OS (`Super + Space`). Itinatakda nito ang monospace na font sa lahat ng lugar: sa terminal, sa bar, at sa anumang iba pang humihingi nito.
 
-Maaari kang mag-install ng iba pang sikat na programming font sa pamamagitan ng _Install > Style > Font_ sa menu ng Omarchy: ang Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, at Iosevka ay isang click lang ang layo, sa kanilang mga bersyong Nerd Font kaya patuloy na gagana ang mga glyph sa bar at terminal. Pagkatapos mag-install ng isa, piliin ito sa ilalim ng _Appearance > Font_.
+Maaari kang mag-install ng iba pang sikat na programming font sa pamamagitan ng _Install > Style > Font_ sa menu ng Ve OS: ang Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, at Iosevka ay isang click lang ang layo, sa kanilang mga bersyong Nerd Font kaya patuloy na gagana ang mga glyph sa bar at terminal. Pagkatapos mag-install ng isa, piliin ito sa ilalim ng _Appearance > Font_.
 
 ## Intsik, Hapones, at Koreano
 

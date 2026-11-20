@@ -1,10 +1,10 @@
 # Shell-lisäosat
 
-Omarchy-työpöytä toimii yhtenä pitkään elävänä Quickshell-prosessina nimeltä `omarchy-shell`, ja melkein kaikki, mitä näet näytöllä, on lisäosa sen sisällä. Palkki on lisäosa. Niin ovat myös siitä putoavat paneelit, koko näytön peitteet, kuten emoji-valitsin ja leikepöydän hallinta, itse Omarchy-valikko, lukitusnäyttö, polkit-valintaikkuna ja päättömät palvelut, jotka tarkkailevat akkuasi ja lämmittävät näyttöäsi yöllä.
+Ve OS-työpöytä toimii yhtenä pitkään elävänä Quickshell-prosessina nimeltä `omarchy-shell`, ja melkein kaikki, mitä näet näytöllä, on lisäosa sen sisällä. Palkki on lisäosa. Niin ovat myös siitä putoavat paneelit, koko näytön peitteet, kuten emoji-valitsin ja leikepöydän hallinta, itse Ve OS-valikko, lukitusnäyttö, polkit-valintaikkuna ja päättömät palvelut, jotka tarkkailevat akkuasi ja lämmittävät näyttöäsi yöllä.
 
-Se ei ole vain toteutuksen yksityiskohta. Se tarkoittaa, että voit kytkeä työpöydän osia pois päältä, vaihtaa niitä tai kirjoittaa omia koskematta riviäkään Omarchyn lähdekoodia.
+Se ei ole vain toteutuksen yksityiskohta. Se tarkoittaa, että voit kytkeä työpöydän osia pois päältä, vaihtaa niitä tai kirjoittaa omia koskematta riviäkään Ve OSn lähdekoodia.
 
-Ensimmäisen osapuolen lisäosat toimitetaan Omarchyn mukana ja sijaitsevat hakemistossa `$OMARCHY_PATH/shell/plugins/`. Kaikki, mitä lisäät itse — omat kokeilusi tai jotain GitHubista löytämääsi — sijaitsee hakemistossa `~/.config/omarchy/plugins/`. Molemmat löydetään samalla tavalla käynnistyksen yhteydessä, mutta sisäänrakennetut saavat luotettuja shell-rajapintoja, kun taas kolmannen osapuolen lisäosat saavat rajoitetun rajapinnan, joka on rajattu niiden omaan palveluun ja elinkaareen. Sisäänrakennettujen kloonit säilyttävät vain lähdekohtaisen määrityksen ja käyttökutsut, joita alkuperäinen käyttäytyminen tarvitsee.
+Ensimmäisen osapuolen lisäosat toimitetaan Ve OSn mukana ja sijaitsevat hakemistossa `$OMARCHY_PATH/shell/plugins/`. Kaikki, mitä lisäät itse — omat kokeilusi tai jotain GitHubista löytämääsi — sijaitsee hakemistossa `~/.config/omarchy/plugins/`. Molemmat löydetään samalla tavalla käynnistyksen yhteydessä, mutta sisäänrakennetut saavat luotettuja shell-rajapintoja, kun taas kolmannen osapuolen lisäosat saavat rajoitetun rajapinnan, joka on rajattu niiden omaan palveluun ja elinkaareen. Sisäänrakennettujen kloonit säilyttävät vain lähdekohtaisen määrityksen ja käyttökutsut, joita alkuperäinen käyttäytyminen tarvitsee.
 
 ## Sen näkeminen, mitä sinulla on
 

@@ -1,10 +1,10 @@
 # Víxlar, aðgerðaleysi og skjávarinn
 
-Mikið af því sem þú breytir dag frá degi er í raun ekki stilling. Það er hamur sem þú kveikir á í klukkustund og slekkur svo aftur: náttljós á meðan þú vinnur seint, ekki trufla á meðan þú ert með kynningu, halda vakandi á meðan þú horfir á eitthvað. Omarchy kallar þetta víxla, og þeir virka allir eins — flýtilykill, valmyndaratriði og skipun, allt að ýta á sama rofann.
+Mikið af því sem þú breytir dag frá degi er í raun ekki stilling. Það er hamur sem þú kveikir á í klukkustund og slekkur svo aftur: náttljós á meðan þú vinnur seint, ekki trufla á meðan þú ert með kynningu, halda vakandi á meðan þú horfir á eitthvað. Ve OS kallar þetta víxla, og þeir virka allir eins — flýtilykill, valmyndaratriði og skipun, allt að ýta á sama rofann.
 
 ### Víxlavalmyndin
 
-`Super + Ctrl + O` opnar _Trigger > Toggle_ beint, eða þú getur gengið þangað úr Omarchy-valmyndinni (`Super + Space`). Allt á þeim lista er rofi sem þú getur víxlað án þess að hugsa um hvar ástandið býr. Rofar fyrir útlit skjáborðsins sitja við hliðina á honum, undir _Appearance_.
+`Super + Ctrl + O` opnar _Trigger > Toggle_ beint, eða þú getur gengið þangað úr Ve OS-valmyndinni (`Super + Space`). Allt á þeim lista er rofi sem þú getur víxlað án þess að hugsa um hvar ástandið býr. Rofar fyrir útlit skjáborðsins sitja við hliðina á honum, undir _Appearance_.
 
 Frá skipanalínunni eru sömu rofarnir `omarchy toggle <thing>`. Keyrðu `omarchy toggle` eitt og sér til að sjá allan hópinn.
 
@@ -26,7 +26,7 @@ Víxlarnir fyrir snertipúða, snertiskjá og blandaða GPU búa undir _Trigger 
 
 _Appearance_ geymir valmyndastikuna og hreyfimyndir, auk nokkurra hluta sem eru ekki `omarchy toggle` skipanir en hegða sér eins: prósentu rafhlöðu í stikunni, sjálfgefið skipulag vinnusvæða, og undir _Windows_, bil í gluggum (`Super + Shift + Backspace`) og ferningslaga hlutfall fyrir einn glugga (`Super + Ctrl + Backspace`).
 
-Þegar Hyprland hefur enga GPU til að teikna með og teiknar í staðinn á CPU (llvmpipe), eins og á Mac-tölvum þar sem GPU er ekki enn studd, í flestum sýndarvélum, eða þegar grafíkreklinn hleðst ekki inn, slekkur Omarchy á hreyfimyndum, þoku og skuggum í þeirri lotu og lætur þig vita einu sinni með tilkynningu. _Appearance > Animations On_ kveikir á þeim aftur, og Omarchy man það líka fyrir síðari lotur.
+Þegar Hyprland hefur enga GPU til að teikna með og teiknar í staðinn á CPU (llvmpipe), eins og á Mac-tölvum þar sem GPU er ekki enn studd, í flestum sýndarvélum, eða þegar grafíkreklinn hleðst ekki inn, slekkur Ve OS á hreyfimyndum, þoku og skuggum í þeirri lotu og lætur þig vita einu sinni með tilkynningu. _Appearance > Animations On_ kveikir á þeim aftur, og Ve OS man það líka fyrir síðari lotur.
 
 Flestir þeirra eru bara fánaskrá undir `~/.local/state/omarchy/toggles/`. Ef þú vilt greina á einn í forskrift gefur `omarchy-toggle-enabled` þér útgöngukóða í stað þess að láta þig fara að leita:
 
@@ -63,11 +63,11 @@ Ræstu síðan hyprsunset við innskráningu með því að bæta `o.launch_on_s
 
 Ekkert tapast þó. Þaggaðar tilkynningar eru haldnar til baka: settu síðustu nokkrar aftur á skjáinn með `Super + Shift + Alt + ,`. Sjá [tilkynningar](10-notices.md) fyrir restina.
 
-Tvær tegundir skilaboða komast samt í gegn: staðfestingartilkynningar Omarchy sjálfs fyrir eitthvað sem þú varst að gera ("Theme changed", "Screenshot saved"), og mikilvægar viðvaranir sendar frá skipanalínunni. Spjallforrit sem merkja allt mikilvægt til að þvinga sig fram fyrir þig eiga það ekki skilið.
+Tvær tegundir skilaboða komast samt í gegn: staðfestingartilkynningar Ve OS sjálfs fyrir eitthvað sem þú varst að gera ("Theme changed", "Screenshot saved"), og mikilvægar viðvaranir sendar frá skipanalínunni. Spjallforrit sem merkja allt mikilvægt til að þvinga sig fram fyrir þig eiga það ekki skilið.
 
 ### Aðgerðaleysi
 
-Omarchy-skelin á aðgerðaleysishegðunina, og tímarnir eru `idle` blokk á efsta stigi í `~/.config/omarchy/shell.json`:
+Ve OS-skelin á aðgerðaleysishegðunina, og tímarnir eru `idle` blokk á efsta stigi í `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Til að hætta alveg að læsa við aðgerðaleysi kveikir `Super + Ctrl + I` �
 
 ### Skjávarinn
 
-Skjávarí Omarchy er ASCII-list sem keyrir í gegnum handahófskennd textaáhrif, eitt tilvik á hvern skjá. Sérhver lykill eða hreyfing músar fer út úr honum.
+Skjávarí Ve OS er ASCII-list sem keyrir í gegnum handahófskennd textaáhrif, eitt tilvik á hvern skjá. Sérhver lykill eða hreyfing músar fer út úr honum.
 
 Þú getur ræst hann eftir þörfum úr _System > Screensaver_ (`Super + Esc`), sem þvingar hann upp jafnvel þó þú hafir slökkt á aðgerðaleysis-skjávaranum. Enginn flýtilykill er sjálfgefið bundinn við hann.
 
 `omarchy toggle screensaver` er það sem slekkur á aðgerðaleysis-skjávaranum, ef þú vilt frekar fara beint úr vinnu í læst ástand. Sérhver lykill, smellur, skrun eða hreyfing músar lokar honum.
 
-Merkið sem hann teiknar er þitt að breyta, undir _Appearance > Branding > Screensaver_. Hladdu upp png eða svg og Omarchy breytir því í ASCII. Sjá [vörumerki](41-branding.md).
+Merkið sem hann teiknar er þitt að breyta, undir _Appearance > Branding > Screensaver_. Hladdu upp png eða svg og Ve OS breytir því í ASCII. Sjá [vörumerki](41-branding.md).
 
 ### Læsingarskjárinn
 
-`Super + Ctrl + L` læsir vélinni. Það keyrir læsingarskjáinn úr Omarchy-skelinni, slekkur á skjánum, endurstillir lyklaborðsuppsetninguna þína á þá fyrstu svo þú sért ekki að slá inn lykilorðið þitt í röngu stafrófi, og — ef þú ert með það í gangi — læsir 1Password á leiðinni út.
+`Super + Ctrl + L` læsir vélinni. Það keyrir læsingarskjáinn úr Ve OS-skelinni, slekkur á skjánum, endurstillir lyklaborðsuppsetninguna þína á þá fyrstu svo þú sért ekki að slá inn lykilorðið þitt í röngu stafrófi, og — ef þú ert með það í gangi — læsir 1Password á leiðinni út.
 
 Læsingarskjárinn tekur lykilorð, og hann tekur líka fingrafar þegar þú hefur sett eitt upp. Það, og hinar leiðirnar til að auðkenna þig, er fjallað um í [auðkenningu með vélbúnaði](37-hardware-authentication.md).

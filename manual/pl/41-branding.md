@@ -1,6 +1,6 @@
 # Branding
 
-Omarchy pozwala ustawić logo firmy lub osobisty obraz zarówno dla odblokowania podczas rozruchu, wygaszacza ekranu, jak i ekranu About.
+Ve OS pozwala ustawić logo firmy lub osobisty obraz zarówno dla odblokowania podczas rozruchu, wygaszacza ekranu, jak i ekranu About.
 
 ### Odblokowanie podczas rozruchu
 
@@ -24,11 +24,11 @@ W tym menu są trzy pozycje:
 
 - **Edit Text** otwiera `~/.config/omarchy/branding/screensaver.txt` w Twoim edytorze. Wpisz lub wklej, co tylko chcesz — grafikę ASCII, swoje imię, nieprzyzwoite słowo. Zapisz i wyjdź, a wygaszacz ekranu od razu się uruchomi, żebyś mógł go zobaczyć.
 - **Set From Image** otwiera selektor plików dla png lub svg, konwertuje go do ASCII i pokazuje Ci wynik. Logo o wyraźnej sylwetce sprawdzają się znacznie lepiej niż zdjęcia.
-- **Restore Default** przywraca logo Omarchy.
+- **Restore Default** przywraca logo Ve OS.
 
 ### Ekran About
 
-Te same trzy opcje znajdują się w _Appearance > Branding > About_ dla ekranu _About_, który uzyskujesz z menu Omarchy, i działają identycznie — plik to `~/.config/omarchy/branding/about.txt`, a okno About wyskakuje po każdej zmianie. Grafika About jest konwertowana do mniejszego rozmiaru niż grafika wygaszacza ekranu, ponieważ musi zmieścić się w oknie, a nie wypełnić cały wyświetlacz.
+Te same trzy opcje znajdują się w _Appearance > Branding > About_ dla ekranu _About_, który uzyskujesz z menu Ve OS, i działają identycznie — plik to `~/.config/omarchy/branding/about.txt`, a okno About wyskakuje po każdej zmianie. Grafika About jest konwertowana do mniejszego rozmiaru niż grafika wygaszacza ekranu, ponieważ musi zmieścić się w oknie, a nie wypełnić cały wyświetlacz.
 
 Gdy okno jest otwarte, zielony błysk przesuwa się po grafice co kilka sekund, a potem znów pozostawia ją nieruchomą. Twoja własna grafika też go dostaje, o ile każdy znak w niej ma szerokość jednej kolumny — a wszystko, co tworzy _Set From Image_, taką ma. Grafika zbudowana z emoji lub znaków o podwójnej szerokości pozostaje natomiast nieruchoma, podobnie jak ekran, jeśli masz własną konfigurację fastfetch: nieruchome logo w tych przypadkach oznacza, że animacja ustępuje z drogi, a nie że coś się nie powiodło, ponieważ przesunięcie błysku po nich umieściłoby resztę wiersza w niewłaściwym miejscu.
 

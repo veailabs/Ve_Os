@@ -8,7 +8,7 @@ Svaki tipkovnički prečac nalazi se na jednoj razini, određenoj njegovim modif
 
 | Razina | Što se tamo nalazi | Primjeri |
 | --- | --- | --- |
-| `Super + key` | Sustav: prozori, radni prostori, rasporedi i glavni izbornici | `Super + Space` izbornik Omarchy, `Super + W` zatvori prozor, `Super + F` cijeli zaslon |
+| `Super + key` | Sustav: prozori, radni prostori, rasporedi i glavni izbornici | `Super + Space` izbornik Ve OS, `Super + W` zatvori prozor, `Super + F` cijeli zaslon |
 | `Super + Shift + key` | Aplikacije | `Super + Shift + B` preglednik, `Super + Shift + E` e-pošta, `Super + Shift + N` uređivač |
 | `Super + Ctrl + key` | Ploče i izbornici sustava | `Super + Ctrl + A` zvuk, `Super + Ctrl + N` mreža, `Super + Ctrl + C` izbornik snimanja |
 | `Super + Ctrl + Alt + key` | Brze radnje i obavijesti | `Super + Ctrl + Alt + T` prikaži vrijeme, `Super + Ctrl + Alt + B` baterija, `Super + Ctrl + Alt + C` snimka zaslona |
@@ -34,7 +34,7 @@ Ako ti zadani ne odgovara (recimo želiš `Super + Shift + S` za snimke zaslona 
 
 | Tipkovnički prečac                  | Funkcija              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Izbornik Omarchy (aplikacije i sve ostalo)    |
+| `Super + Space`           | Izbornik Ve OS (aplikacije i sve ostalo)    |
 | `Super + Alt + Space` | Mreža aplikacija |
 | `Super + Escape` | Izbornik sustava (obustavi, ponovno pokreni itd.)  |
 | `Super + Ctrl + L` | Zaključaj računalo |
@@ -172,7 +172,7 @@ Promijeni/dodaj povezivanja u `~/.config/hypr/bindings.lua`.
 | `Super + V`           | Zalijepi    |
 | `Super + Ctrl + V`           | Upravitelj međuspremnika    |
 
-Obično na Linuxu trebaš `Ctrl + Shift + C/V` za kopiranje i lijepljenje u terminalu i `Ctrl + C/V` za to svugdje drugdje. Ovi Omarchyjevi objedinjeni tipkovnički prečaci za međuspremnik rade svugdje.
+Obično na Linuxu trebaš `Ctrl + Shift + C/V` za kopiranje i lijepljenje u terminalu i `Ctrl + C/V` za to svugdje drugdje. Ovi Ve OSjevi objedinjeni tipkovnički prečaci za međuspremnik rade svugdje.
 
 ## Snimanje
 
@@ -194,7 +194,7 @@ Obično na Linuxu trebaš `Ctrl + Shift + C/V` za kopiranje i lijepljenje u term
 
 Kod snimanja zaslona tipkovnički prečac prvo pita koji zvuk želiš, a zatim počinje snimati. Pritisni ga ponovno za zaustavljanje. Pogledaj [snimke zaslona i snimanje](12-screenshots-recording.md) za detalje.
 
-Sve opcije snimanja dostupne su i pod _Okidač > Snimanje_ u izborniku Omarchy (`Super + Space`).
+Sve opcije snimanja dostupne su i pod _Okidač > Snimanje_ u izborniku Ve OS (`Super + Space`).
 
 ## Obavijesti
 
@@ -216,9 +216,9 @@ Sve opcije snimanja dostupne su i pod _Okidač > Snimanje_ u izborniku Omarchy (
 | `Super + Backspace` | Uključi/isključi prozirnost prozora |
 | `Super + Ctrl + Backspace` | Uključi/isključi kvadratni omjer jednog prozora |
 
-Dodatne pozadinske slike nalaze se u `~/.config/omarchy/backgrounds/<theme name>`. Također dostupno putem _Instaliraj > Stil > Pozadina_ u izborniku Omarchy.
+Dodatne pozadinske slike nalaze se u `~/.config/omarchy/backgrounds/<theme name>`. Također dostupno putem _Instaliraj > Stil > Pozadina_ u izborniku Ve OS.
 
-Sve opcije stila dostupne su i pod _Stil_ u izborniku Omarchy (`Super + Space`).
+Sve opcije stila dostupne su i pod _Stil_ u izborniku Ve OS (`Super + Space`).
 
 ## Prekidači
 
@@ -319,7 +319,7 @@ Te se funkcije moraju pokrenuti unutar sesije Tmuxa.
 
 ## Terminal Ghostty
 
-Terminal Ghostty instalira se pomoću _Instaliraj > Terminal_ putem izbornika Omarchy.
+Terminal Ghostty instalira se pomoću _Instaliraj > Terminal_ putem izbornika Ve OS.
 
 | Tipkovnički prečac                  | Funkcija              |
 | ----------------------- | --------------------- |

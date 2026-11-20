@@ -1,4 +1,6 @@
-# Omarchy'ye Hoş Geldiniz!
+# Ve OS — upstream Omarchy'ye Hoş Geldiniz!
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy, [Arch](https://archlinux.org/) tabanlı, döşemeli pencere yöneticisi [Hyprland](https://hypr.land/) ve masaüstü yapı kiti [Quickshell](https://quickshell.org/) üzerine kurulu, [omakase](https://manuals.omamix.org/3/omacom/76/omakase-computing) tarzı bir Linux dağıtımıdır. Modern ve işini bilen bir bilgisayar kullanıcısının hemen üretken olabilmesi için ihtiyacı olan her şeyle birlikte gelir. [Neovim](https://neovim.io/)'den (btw) Chromium'a, [Obsidian](https://obsidian.md/)'dan LibreOffice'e ve [Hype](https://github.com/omacom/hype)'dan [Monologue](https://github.com/omacom/monologue)'a kadar her şey var. Hatta retro Winamp tarzı bir müzik çalar bile orada!
 

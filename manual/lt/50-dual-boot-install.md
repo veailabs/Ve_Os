@@ -1,4 +1,6 @@
-# Diegimas su dviguba įkrova
+# Ve OS — Diegimas su dviguba įkrova
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy galite įdiegti į vieną skaidinį greta Windows ar kitų įdiegtų sistemų.
 

@@ -1,4 +1,6 @@
-# ஆள் கவனிப்பு இல்லாத நிறுவல்கள்
+# Ve OS — ஆள் கவனிப்பு இல்லாத நிறுவல்கள்
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO, விசைப்பலகையின் முன் யாரும் இல்லாமலேயே தன்னைத்தானே நிறுவிக்கொள்ள முடியும். நிறுவி, அதன் உள்ளமைவுக் கோப்புகளைக் கொண்ட `cidata` என்று பெயரிடப்பட்ட இரண்டாவது இயக்ககத்தைக் கண்டால், அவற்றை நகலெடுத்து, அமைவு வழிகாட்டியை முழுவதுமாகத் தவிர்த்து, தானாகவே முடிக்கப்பட்ட கணினியில் மறுதொடக்கம் செய்யும். சிறப்பு ISO உருவாக்கம் எதுவும் இல்லை, கூடுதல் துவக்க மெனு உள்ளீடும் இல்லை — அத்தகைய இயக்ககம் எதுவும் இணைக்கப்படவில்லை என்றால், எதுவும் மாறாது, உங்களுக்கு வழக்கமான வழிகாட்டி கிடைக்கும்.
 

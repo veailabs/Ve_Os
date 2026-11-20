@@ -41,7 +41,7 @@ Esses atalhos só existem enquanto o Omasnap estiver aberto, então não podem e
 
 ## Gravação de tela
 
-`Alt + Print Screen` abre _Trigger > Capture > Screenrecord_, que pergunta o que você quer na trilha sonora: sem áudio, áudio da área de trabalho, área de trabalho mais microfone, ou área de trabalho mais microfone mais webcam. Essa última opção só aparece se você realmente tiver uma câmera conectada. Escolha uma e o seletor de gravação do Omarchy permite arrastar para selecionar uma região ou clicar em uma janela ou monitor.
+`Alt + Print Screen` abre _Trigger > Capture > Screenrecord_, que pergunta o que você quer na trilha sonora: sem áudio, áudio da área de trabalho, área de trabalho mais microfone, ou área de trabalho mais microfone mais webcam. Essa última opção só aparece se você realmente tiver uma câmera conectada. Escolha uma e o seletor de gravação do Ve OS permite arrastar para selecionar uma região ou clicar em uma janela ou monitor.
 
 A gravação roda no gpu-screen-recorder, que codifica na GPU a 60fps e recorre à CPU se precisar. O resultado é um MP4 em `~/Videos`, com um nome como `screenrecording-2026-08-13_14-22-05.mp4`. Defina `OMARCHY_SCREENRECORD_DIR` para mudar isso — mas note que, ao contrário do diretório de capturas de tela, esse precisa já existir, ou a gravação se recusa a começar.
 

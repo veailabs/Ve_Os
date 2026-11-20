@@ -28,7 +28,7 @@ Replace `123-short-description` with your assigned task number and description. 
 
 ## Development and upstream updates
 
-Cloning source does not install Omarchy. Edit and inspect files on macOS if needed; test Linux desktop behaviour in a disposable supported Omarchy environment. Do not run the installer or migrations on the host just to inspect this fork.
+Cloning source does not install Ve OS. Edit and inspect files on macOS if needed; test Linux desktop behaviour in a disposable supported Linux VM with this fork activated. Do not run the installer or migrations on the host just to inspect this fork.
 
 Read [testing guidance](docs/testing.md) and [visual verification guidance](agents/skills/visual-verification.md). Run applicable focused tests for the changed area and attach visual evidence for UI changes. The upstream aggregate runner is `./test/all`; live desktop and graphical acceptance checks require their documented environment. A source checkout is not evidence that those checks passed.
 
@@ -36,21 +36,11 @@ The Tests workflow runs translation checks and the Linux VM suite for ready PRs 
 
 Fetch upstream changes with `git fetch upstream`. Integrate `upstream/quattro` on a dedicated feature branch, resolve conflicts, run applicable tests and open a PR against `veailabs/Ve_Os:master`. Do not reset or force-push the team's `master` to synchronize upstream.
 
-The remaining documentation below is the upstream project reference.
+## Ve OS manual
 
----
+The [manual](manual/README.md) covers the Ve desktop and its inherited Linux tools. Ve OS is based on Omarchy by DHH and its contributors. Installation media, package repositories, third-party apps and community resources keep their upstream names and ownership; this fork does not publish a separate ISO or package distribution.
 
-# Omarchy
-
-Omarchy is a beautiful, fun & agentic Linux distribution by DHH.
-
-Read more at [omarchy.org](https://omarchy.org).
-
-## The Omarchy Manual
-
-The manual lives in [`manual/`](manual/), which is its authoritative source.
-
-- [Welcome to Omarchy!](manual/01-welcome-to-omarchy.md)
+- [Welcome to Ve OS!](manual/01-welcome-to-omarchy.md)
 
 **The Basics**
 
@@ -66,7 +56,7 @@ The manual lives in [`manual/`](manual/), which is its authoritative source.
 - [Text Extraction & Dictation](manual/11-text-extraction-dictation.md)
 - [Screenshots & Recording](manual/12-screenshots-recording.md)
 - [Toggles, idle & screensaver](manual/13-toggles-idle-screensaver.md)
-- [Omarchy CLI](manual/14-omarchy-cli.md)
+- [Ve OS CLI](manual/14-omarchy-cli.md)
 
 **The Applications**
 
@@ -110,17 +100,17 @@ The manual lives in [`manual/`](manual/), which is its authoritative source.
 - [FAQ](manual/46-faq.md)
 - [System snapshots](manual/47-system-snapshots.md)
 - [Security](manual/48-security.md)
-- [Omarchy on...](manual/49-omarchy-on.md)
+- [Other platforms (upstream reference)](manual/49-omarchy-on.md)
 - [Dual Boot Install](manual/50-dual-boot-install.md)
 - [Unattended Installs](manual/51-unattended-installs.md)
 
 ## License
 
-Omarchy is released under the [MIT License](https://opensource.org/licenses/MIT).
+This fork retains Omarchy’s [MIT License](LICENSE) and original copyright notices. Bundled components and assets retain their respective licences.
 
 ## Ve appearance
 
-The desktop menu and dock app launcher use the Ve mail mark. Select the matching palette with `omarchy theme set Ve`. See [Ve branding](docs/ve-branding.md) for asset provenance and the dev preview scope.
+The desktop menu and dock app launcher use the Ve mail mark. Select the matching palette with `omarchy theme set Ve`. See [Ve branding](docs/ve-branding.md) for asset provenance, compatibility names and installation scope.
 
 On an Apple Silicon Mac with Try Omarchy installed, run `scripts/ve-os-macos-app` to create `~/Applications/Ve OS.app`. Close the existing VM before opening the Ve launcher; it uses the same VM disk.
 

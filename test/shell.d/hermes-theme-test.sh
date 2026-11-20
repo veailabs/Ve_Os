@@ -54,7 +54,7 @@ SH
 cat >"$mock_bin/omarchy-theme-refresh" <<'SH'
 #!/bin/bash
 echo "refresh" >>"$OMARCHY_TEST_HERMES_CALLS"
-printf 'name: omarchy\ndescription: Omarchy system theme\ncolors:\n  background: "#1a1b26"\n' \
+printf 'name: ve\ndescription: Ve OS system theme\ncolors:\n  background: "#1a1b26"\n' \
   >"$HOME/.local/state/omarchy/current/theme/hermes.yaml"
 SH
 
@@ -67,14 +67,14 @@ if [[ $1 == 60 && -n ${OMARCHY_TEST_SWAP_SOURCE:-} ]]; then
   printf '%s\n' "$OMARCHY_TEST_SWAP_SOURCE" >"$HOME/.local/state/omarchy/current/theme/hermes.yaml"
 fi
 if [[ $1 == 60 && ${OMARCHY_TEST_DROP_SKINS:-0} == 1 ]]; then
-  rm -f "$HOME/.hermes/skins/omarchy.yaml" "$HOME"/.hermes/profiles/*/skins/omarchy.yaml
+  rm -f "$HOME/.hermes/skins/ve.yaml" "$HOME"/.hermes/profiles/*/skins/ve.yaml
 fi
 SH
 
 chmod +x "$mock_bin"/*
 
-good_skin='name: omarchy
-description: Omarchy system theme
+good_skin='name: ve
+description: Ve OS system theme
 colors:
   background: "#1a1b26"
   ui_text: "#a9b1d6"
@@ -82,7 +82,7 @@ colors:
 
 test_home="$test_tmp/home"
 hermes_home="$test_home/.hermes"
-skin="$hermes_home/skins/omarchy.yaml"
+skin="$hermes_home/skins/ve.yaml"
 hermes_calls="$test_tmp/hermes-calls"
 
 # Each case gets a fresh HOME so no file survives from the one before. The
@@ -136,20 +136,20 @@ reset_home --set-up
 mkdir -p "$hermes_home/profiles/work"
 run_hook 2>"$test_tmp/stderr"
 diff -q "$test_home/.local/state/omarchy/current/theme/hermes.yaml" "$skin" >/dev/null ||
-  fail "the generated skin is published to ~/.hermes/skins/omarchy.yaml"
-diff -q "$skin" "$hermes_home/profiles/work/skins/omarchy.yaml" >/dev/null ||
+  fail "the generated skin is published to ~/.hermes/skins/ve.yaml"
+diff -q "$skin" "$hermes_home/profiles/work/skins/ve.yaml" >/dev/null ||
   fail "an existing Hermes profile gets the skin too"
-[[ $(ls "$hermes_home/skins") == "omarchy.yaml" ]] || fail "no temporary file is left beside the skin"
+[[ $(ls "$hermes_home/skins") == "ve.yaml" ]] || fail "no temporary file is left beside the skin"
 [[ $(cat "$hermes_calls") == "check" ]] || fail "a Hermes that is not ready is asked nothing more" "$(cat "$hermes_calls")"
 [[ ! -s $test_tmp/stderr ]] || fail "a theme switch says nothing about Hermes" "$(cat "$test_tmp/stderr")"
 pass "the skin is published to the Hermes home and every profile"
 
-reset_home --set-up 'name: omarchy
-description: Omarchy system theme
+reset_home --set-up 'name: ve
+description: Ve OS system theme
 colors:
   background: "{{ background }}"'
 mkdir -p "$hermes_home/skins"
-printf 'name: omarchy\ncolors:\n  background: "#000000"\n' >"$skin"
+printf 'name: ve\ncolors:\n  background: "#000000"\n' >"$skin"
 run_hook 2>"$test_tmp/stderr"
 grep -q '#000000' "$skin" || fail "an unresolved placeholder keeps the previous skin in place"
 grep -q 'not a plain color palette' "$test_tmp/stderr" || fail "an unresolved placeholder is reported"
@@ -162,23 +162,23 @@ mkdir -p "$skin"
 if run_hook 2>/dev/null; then
   fail "a directory at the skin's path is an error, not a place to put the skin"
 fi
-[[ -z $(ls -A "$skin") && $(ls "$hermes_home/skins") == "omarchy.yaml" ]] ||
+[[ -z $(ls -A "$skin") && $(ls "$hermes_home/skins") == "ve.yaml" ]] ||
   fail "nothing is left inside or beside a directory at the skin's path" "$(ls -R "$hermes_home/skins")"
 pass "a directory at the skin's path is refused cleanly"
 
 for bad in \
-  $'name: omarchy\ndescription: Omarchy system theme\ncolors:\n  background: "#1a1b26"\nbanner_logo: "[link=file:///etc/passwd]x[/link]"' \
-  $'name: omarchy\ndescription: Omarchy system theme\ncolors:\n  background: "#1a1b26\\"\\n  ui_text: \\"#ffffff"' \
+  $'name: ve\ndescription: Ve OS system theme\ncolors:\n  background: "#1a1b26"\nbanner_logo: "[link=file:///etc/passwd]x[/link]"' \
+  $'name: ve\ndescription: Ve OS system theme\ncolors:\n  background: "#1a1b26\\"\\n  ui_text: \\"#ffffff"' \
   $'name: nord\ndescription: Nord\ncolors:\n  background: "#2e3440"' \
-  $'description: Omarchy system theme\ncolors:\n  background: "#1a1b26"' \
-  $'name: omarchy\ndescription: Nord: arctic palette\ncolors:\n  background: "#2e3440"' \
-  $'name: omarchy\ncolors:\n  background: "#1a1b26"\n#\rbanner_logo: "[link=file:///etc/passwd]x[/link]"' \
-  $'name: omarchy\ncolors:\n  background: "#1a1b26"\n#\xe2\x80\xa8banner_logo: "evil"' \
-  $'name: omarchy\ncolors:\n  background: "#1a1b26"\n#\xc2\x85banner_logo: "evil"' \
-  $'name: omarchy\n  background: "#1a1b26"\ncolors:' \
-  $'name: omarchy\ncolors:\n  background: "#1a1b26"\ncolors:' \
-  $'colors:\n  background: "#1a1b26"\nname: omarchy' \
-  $'name: omarchy\ncolors:'; do
+  $'description: Ve OS system theme\ncolors:\n  background: "#1a1b26"' \
+  $'name: ve\ndescription: Nord: arctic palette\ncolors:\n  background: "#2e3440"' \
+  $'name: ve\ncolors:\n  background: "#1a1b26"\n#\rbanner_logo: "[link=file:///etc/passwd]x[/link]"' \
+  $'name: ve\ncolors:\n  background: "#1a1b26"\n#\xe2\x80\xa8banner_logo: "evil"' \
+  $'name: ve\ncolors:\n  background: "#1a1b26"\n#\xc2\x85banner_logo: "evil"' \
+  $'name: ve\n  background: "#1a1b26"\ncolors:' \
+  $'name: ve\ncolors:\n  background: "#1a1b26"\ncolors:' \
+  $'colors:\n  background: "#1a1b26"\nname: ve' \
+  $'name: ve\ncolors:'; do
   reset_home --set-up "$bad"
   run_hook 2>/dev/null
   [[ ! -e $skin ]] || fail "a skin that is not exactly a named palette of hex colors is not published" "$bad"
@@ -188,12 +188,12 @@ pass "a skin is held to the shape Hermes loads, on the lines Hermes' YAML reader
 # A NUL cannot travel through a shell string, so it is written straight to the
 # source; grep reads past one where YAML stops.
 reset_home --set-up
-printf 'name: omarchy\ncolors:\n  background: "#1a1b26"\0\n' >"$test_home/.local/state/omarchy/current/theme/hermes.yaml"
+printf 'name: ve\ncolors:\n  background: "#1a1b26"\0\n' >"$test_home/.local/state/omarchy/current/theme/hermes.yaml"
 run_hook 2>/dev/null
 [[ ! -e $skin ]] || fail "a NUL byte in the skin is rejected"
 pass "a skin carrying a NUL byte is not published"
 
-reset_home --set-up $'# rendered by Omarchy\nname: omarchy\n\ndescription: Omarchy system theme\ncolors:\n  background: "#1a1b26"\n'
+reset_home --set-up $'# rendered by Omarchy\nname: ve\n\ndescription: Ve OS system theme\ncolors:\n  background: "#1a1b26"\n'
 run_hook 2>/dev/null
 [[ -f $skin ]] || fail "comments and blank lines are allowed around the palette"
 pass "a well-formed skin with comments and blank lines is published"
@@ -202,12 +202,12 @@ pass "a well-formed skin with comments and blank lines is published"
 
 reset_home --set-up
 OMARCHY_TEST_HERMES_READY=1 run_hook 2>"$test_tmp/stderr"
-[[ $(cat "$hermes_calls") == $'check\nconfig get display.skin\nconfig set display.skin omarchy' ]] ||
+[[ $(cat "$hermes_calls") == $'check\nconfig get display.skin\nconfig set display.skin ve' ]] ||
   fail "a ready Hermes still on its default is switched by a theme switch" "$(cat "$hermes_calls")"
 [[ ! -s $test_tmp/stderr ]] || fail "a theme switch activates quietly" "$(cat "$test_tmp/stderr")"
 pass "a theme switch activates the skin on a Hermes still on its default"
 
-reset_home --on omarchy
+reset_home --on ve
 OMARCHY_TEST_HERMES_READY=1 run_hook
 [[ -f $skin ]] || fail "the skin is published when it is already active"
 [[ ! -s $hermes_calls ]] || fail "a Hermes already on the skin is not started" "$(cat "$hermes_calls")"
@@ -221,7 +221,7 @@ pass "a theme switch activates only for the desktop app Omarchy installed"
 
 reset_home --set-up
 OMARCHY_TEST_HERMES_READY=1 OMARCHY_TEST_DESKTOP_INSTALLED=0 run_hook --activate 2>/dev/null
-grep -Fxq 'config set display.skin omarchy' "$hermes_calls" ||
+grep -Fxq 'config set display.skin ve' "$hermes_calls" ||
   fail "--activate switches whichever Hermes it is asked about" "$(cat "$hermes_calls")"
 pass "--activate does not ask which Hermes it is"
 
@@ -234,12 +234,12 @@ pass "a theme switch leaves a skin the user chose in Hermes"
 
 # Hermes reads the config of the profile named in active_profile, so that is
 # the config that says whether there is anything left to do.
-reset_home --on omarchy
+reset_home --on ve
 mkdir -p "$hermes_home/profiles/work"
 printf 'display:\n  skin: default\n' >"$hermes_home/profiles/work/config.yaml"
 echo work >"$hermes_home/active_profile"
 OMARCHY_TEST_HERMES_READY=1 run_hook
-grep -Fxq 'config set display.skin omarchy' "$hermes_calls" ||
+grep -Fxq 'config set display.skin ve' "$hermes_calls" ||
   fail "an active profile still on its default is switched even when the root config names the skin" "$(cat "$hermes_calls")"
 pass "a theme switch follows the active Hermes profile"
 
@@ -253,11 +253,11 @@ pass "a theme switch leaves a skin chosen in the active Hermes profile"
 
 # Hermes selects a profile once its directory exists; without a config of its
 # own it is on the default skin whatever the root config says.
-reset_home --on omarchy
+reset_home --on ve
 mkdir -p "$hermes_home/profiles/work"
 echo Work >"$hermes_home/active_profile"
 OMARCHY_TEST_HERMES_READY=1 run_hook
-grep -Fxq 'config set display.skin omarchy' "$hermes_calls" ||
+grep -Fxq 'config set display.skin ve' "$hermes_calls" ||
   fail "an active profile without a config of its own is on the default and gets switched" "$(cat "$hermes_calls")"
 pass "a theme switch follows an active profile that has no config yet"
 
@@ -267,7 +267,7 @@ for line in 'skin: "default"' 'skin: default # chosen long ago' 'skin: null' 'sk
   reset_home --set-up
   printf 'display:\n  %s\n' "$line" >"$hermes_home/config.yaml"
   OMARCHY_TEST_HERMES_READY=1 run_hook
-  grep -Fxq 'config set display.skin omarchy' "$hermes_calls" ||
+  grep -Fxq 'config set display.skin ve' "$hermes_calls" ||
     fail "a config line Hermes reads as the default still gets the skin activated" "$line: $(cat "$hermes_calls")"
 done
 pass "a theme switch asks Hermes about any skin line that is not a plain name"
@@ -278,7 +278,7 @@ mkdir -p "$hermes_home/profiles/broken"
 OMARCHY_TEST_HERMES_READY=1 run_hook 2>"$test_tmp/stderr" || fail "a profile that cannot take the skin does not fail the hook"
 [[ ! -s $test_tmp/stderr ]] || fail "a theme switch stays quiet about a profile it could not reach" "$(cat "$test_tmp/stderr")"
 [[ -f $skin ]] || fail "the Hermes home still gets the skin beside a broken profile"
-grep -Fxq 'config set display.skin omarchy' "$hermes_calls" ||
+grep -Fxq 'config set display.skin ve' "$hermes_calls" ||
   fail "activation still happens beside a broken profile" "$(cat "$hermes_calls")"
 pass "a profile that cannot take the skin costs nobody else"
 
@@ -295,26 +295,26 @@ reset_home --set-up
 run_hook --activate 2>"$test_tmp/stderr"
 [[ -f $skin ]] || fail "--activate publishes the skin when Hermes is not ready"
 [[ $(cat "$hermes_calls") == "check" ]] || fail "a Hermes that is not ready is not run" "$(cat "$hermes_calls")"
-grep -q 'hermes config set display.skin omarchy' "$test_tmp/stderr" || fail "an unready Hermes gets the command that finishes the job"
+grep -q 'hermes config set display.skin ve' "$test_tmp/stderr" || fail "an unready Hermes gets the command that finishes the job"
 pass "--activate publishes but does not run a Hermes that is not ready"
 
 reset_home --set-up
 OMARCHY_TEST_HERMES_READY=1 run_hook --activate 2>"$test_tmp/stderr"
-[[ $(cat "$hermes_calls") == $'check\nconfig get display.skin\nconfig set display.skin omarchy' ]] ||
+[[ $(cat "$hermes_calls") == $'check\nconfig get display.skin\nconfig set display.skin ve' ]] ||
   fail "a ready Hermes is asked for its skin and then to switch" "$(cat "$hermes_calls")"
-grep -q 'on the Omarchy skin' "$test_tmp/stderr" || fail "--activate reports success"
+grep -q 'on the Ve OS skin' "$test_tmp/stderr" || fail "--activate reports success"
 pass "--activate goes through hermes config set when Hermes runs"
 
-reset_home --on omarchy
-OMARCHY_TEST_HERMES_READY=1 OMARCHY_TEST_HERMES_SKIN=omarchy run_hook --activate 2>/dev/null
-grep -Fxq 'config set display.skin omarchy' "$hermes_calls" ||
+reset_home --on ve
+OMARCHY_TEST_HERMES_READY=1 OMARCHY_TEST_HERMES_SKIN=ve run_hook --activate 2>/dev/null
+grep -Fxq 'config set display.skin ve' "$hermes_calls" ||
   fail "--activate goes through Hermes even when the config already names the skin" "$(cat "$hermes_calls")"
 pass "--activate always asks Hermes to switch"
 
-for chosen in omarchy ""; do
+for chosen in ve omarchy ""; do
   reset_home --set-up
   OMARCHY_TEST_HERMES_READY=1 OMARCHY_TEST_HERMES_SKIN="$chosen" run_hook --activate 2>/dev/null
-  grep -Fxq 'config set display.skin omarchy' "$hermes_calls" ||
+  grep -Fxq 'config set display.skin ve' "$hermes_calls" ||
     fail "the default and the omarchy skin are both replaced" "skin='$chosen': $(cat "$hermes_calls")"
 done
 pass "--activate replaces Hermes' default skin"
@@ -354,7 +354,7 @@ rm "$test_home/.local/state/omarchy/current/theme/hermes.yaml"
 if run_hook --activate 2>"$test_tmp/stderr"; then
   fail "--activate fails when no theme has been selected"
 fi
-grep -q 'Select an Omarchy theme' "$test_tmp/stderr" || fail "a missing theme is reported"
+grep -q 'Select a Ve OS theme' "$test_tmp/stderr" || fail "a missing theme is reported"
 pass "--activate fails without a current theme to render the skin from"
 
 reset_home --set-up
@@ -363,7 +363,7 @@ echo tokyo-night >"$test_home/.local/state/omarchy/current/theme.name"
 OMARCHY_TEST_HERMES_READY=1 run_hook --activate 2>/dev/null
 [[ $(head -1 "$hermes_calls") == "refresh" ]] || fail "a theme applied before the template existed is re-staged" "$(cat "$hermes_calls")"
 [[ -f $skin ]] || fail "the freshly rendered skin is published"
-grep -Fxq 'config set display.skin omarchy' "$hermes_calls" || fail "the freshly rendered skin is activated" "$(cat "$hermes_calls")"
+grep -Fxq 'config set display.skin ve' "$hermes_calls" || fail "the freshly rendered skin is activated" "$(cat "$hermes_calls")"
 pass "--activate renders the skin for a theme that predates it"
 
 # -- waiting for the desktop app's first launch ----------------------------------
@@ -372,7 +372,7 @@ reset_home --set-up
 mkdir -p "$hermes_home/hermes-agent"
 touch "$hermes_home/hermes-agent/.hermes-bootstrap-complete"
 OMARCHY_TEST_HERMES_READY=1 run_hook --wait 2>/dev/null
-[[ $(cat "$hermes_calls") == $'check\nconfig get display.skin\nconfig set display.skin omarchy\nsleep 60' ]] ||
+[[ $(cat "$hermes_calls") == $'check\nconfig get display.skin\nconfig set display.skin ve\nsleep 60' ]] ||
   fail "--wait activates as soon as the runtime marker is there, then republishes after the gateway is up" "$(cat "$hermes_calls")"
 [[ -f $skin ]] || fail "--wait publishes the skin"
 pass "--wait activates once the desktop app has built its runtime"
@@ -380,7 +380,7 @@ pass "--wait activates once the desktop app has built its runtime"
 reset_home --set-up
 mkdir -p "$hermes_home/hermes-agent" "$hermes_home/profiles/work"
 touch "$hermes_home/hermes-agent/.hermes-bootstrap-complete"
-OMARCHY_TEST_HERMES_READY=1 OMARCHY_TEST_SWAP_SOURCE=$'name: omarchy\ncolors:\n  background: "#1a1b26"\nbanner_logo: "evil"' run_hook --wait 2>/dev/null
+OMARCHY_TEST_HERMES_READY=1 OMARCHY_TEST_SWAP_SOURCE=$'name: ve\ncolors:\n  background: "#1a1b26"\nbanner_logo: "evil"' run_hook --wait 2>/dev/null
 ! grep -q 'banner_logo' "$skin" || fail "the republish after the gateway is up does not publish a theme that changed underneath into something rejected"
 pass "--wait checks the skin again before republishing it"
 
@@ -388,7 +388,7 @@ reset_home --set-up
 mkdir -p "$hermes_home/hermes-agent" "$hermes_home/profiles/work"
 touch "$hermes_home/hermes-agent/.hermes-bootstrap-complete"
 OMARCHY_TEST_HERMES_READY=1 OMARCHY_TEST_DROP_SKINS=1 run_hook --wait 2>/dev/null
-[[ -f $skin && -f $hermes_home/profiles/work/skins/omarchy.yaml ]] ||
+[[ -f $skin && -f $hermes_home/profiles/work/skins/ve.yaml ]] ||
   fail "the republish after the gateway is up writes the skin to the Hermes home and every profile again" "$(ls -R "$hermes_home")"
 pass "--wait republishes the skin everywhere once the gateway is up"
 
@@ -399,3 +399,10 @@ OMARCHY_TEST_HERMES_READY=1 run_hook --wait 2>"$test_tmp/stderr"
 [[ $(grep -c 'sleep 10' "$hermes_calls") == 180 ]] || fail "--wait gives up after 30 minutes" "$(grep -c 'sleep 10' "$hermes_calls")"
 grep -q 'did not finish setting up' "$test_tmp/stderr" || fail "giving up is reported"
 pass "--wait polls until the desktop app has built its runtime and gives up in time"
+
+reset_home --on omarchy
+printf 'name: omarchy\ndescription: Omarchy system theme\ncolors:\n  background: "#1a1b26"\n' >"$test_home/.local/state/omarchy/current/theme/hermes.yaml"
+OMARCHY_TEST_HERMES_READY=1 OMARCHY_TEST_HERMES_SKIN=omarchy run_hook
+grep -Fxq 'name: ve' "$skin" || fail "a legacy rendered palette publishes with the Ve skin name"
+grep -Fxq 'config set display.skin ve' "$hermes_calls" || fail "the legacy system skin migrates to Ve"
+pass "a legacy system skin migrates without changing a custom skin"

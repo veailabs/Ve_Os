@@ -28,7 +28,7 @@ Isso exibirá domingo 10:55 AM.
 
 ### Como mudo meu fuso horário?
 
-Execute _Update > Timezone_ no menu do Omarchy e escolha na lista. Se o fuso horário estiver certo, mas o próprio relógio tiver desviado, _Update > Time_ reinicia a sincronização de horário para você.
+Execute _Update > Timezone_ no menu do Ve OS e escolha na lista. Se o fuso horário estiver certo, mas o próprio relógio tiver desviado, _Update > Time_ reinicia a sincronização de horário para você.
 
 ### Como mudo meu DNS, compartilho meu Wi-Fi ou verifico a velocidade da minha conexão?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Você pode fazer o mesmo para gravações de tela usando `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap cria seu diretório de capturas de tela automaticamente. Crie você mesmo o diretório de gravações de tela e reinicie o Omarchy para que qualquer uma das alterações de ambiente entre em vigor.
+Omasnap cria seu diretório de capturas de tela automaticamente. Crie você mesmo o diretório de gravações de tela e reinicie o Ve OS para que qualquer uma das alterações de ambiente entre em vigor.
 
 ### Como faço os alto-falantes + webcam funcionarem no meu Apple Studio Display?
 
 Você pensaria que tudo deveria funcionar só conectando o USB C, mas infelizmente não é o caso. A solução que encontrei para fazer funcionar de forma confiável é usar [o cabo WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Aí os alto-falantes e a webcam funcionam perfeitamente.
 
-Lembre-se de que você tem controle de brilho integrado no Omarchy para os Apple Displays (tanto Studio quanto XDR) usando os botões normais de brilho do teclado.
+Lembre-se de que você tem controle de brilho integrado no Ve OS para os Apple Displays (tanto Studio quanto XDR) usando os botões normais de brilho do teclado.
 
 ### Como me livro de todo o software extra?
 
@@ -72,7 +72,7 @@ Se você não quer programas como Obsidian ou LibreOffice ou qualquer outra cois
 
 Execute _Remove > Package_ para ver todos os pacotes instalados. Depois, você pode selecionar qualquer pacote que queira remover com tab, e começar a remover tudo o que selecionou com return.
 
-E você pode usar _Remove > Web App_ no menu do Omarchy para remover qualquer um dos web apps pré-instalados que você não queira.
+E você pode usar _Remove > Web App_ no menu do Ve OS para remover qualquer um dos web apps pré-instalados que você não queira.
 
 Ou execute _Remove > Preinstalls_ para varrer todos os extras pré-instalados — web apps, TUIs e aplicativos opcionais — de uma só vez. As teclas de atalho que os abriam somem junto com eles, então você fica com um quadro limpo de atalhos para preencher com os seus em `~/.config/hypr/bindings.lua`.
 

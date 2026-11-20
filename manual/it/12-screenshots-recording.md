@@ -41,7 +41,7 @@ Queste combinazioni esistono solo mentre Omasnap è aperto, quindi non possono e
 
 ## Registrazione schermo
 
-`Alt + Print Screen` apre _Trigger > Capture > Screenrecord_, che ti chiede cosa vuoi nella colonna sonora: nessun audio, audio del desktop, desktop più microfono, o desktop più microfono più webcam. Quest'ultima opzione appare solo se hai davvero una fotocamera collegata. Scegline una e il selettore di registrazione di Omarchy ti permette di trascinare una regione o fare clic su una finestra o un monitor.
+`Alt + Print Screen` apre _Trigger > Capture > Screenrecord_, che ti chiede cosa vuoi nella colonna sonora: nessun audio, audio del desktop, desktop più microfono, o desktop più microfono più webcam. Quest'ultima opzione appare solo se hai davvero una fotocamera collegata. Scegline una e il selettore di registrazione di Ve OS ti permette di trascinare una regione o fare clic su una finestra o un monitor.
 
 La registrazione gira su gpu-screen-recorder, che codifica sulla GPU a 60fps e ripiega sulla CPU se deve. Il risultato è un MP4 in `~/Videos`, chiamato `screenrecording-2026-08-13_14-22-05.mp4`. Imposta `OMARCHY_SCREENRECORD_DIR` per cambiarla — ma nota che, a differenza della directory degli screenshot, questa deve esistere già, altrimenti la registrazione si rifiuta di partire.
 

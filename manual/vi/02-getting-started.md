@@ -1,4 +1,6 @@
-# Bắt đầu
+# Ve OS — Bắt đầu
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy được cài đặt bằng một ISO. Bạn có thể chọn giữa cài đặt toàn bộ ổ đĩa, chiếm trọn toàn bộ ổ đĩa, hoặc cài đặt vào vùng trống, đặt Omarchy vào vùng chưa được phân bổ trên một ổ đĩa — đó là cách bạn khởi động song song cùng Windows hoặc một hệ điều hành khác (xem [cài đặt khởi động song song](50-dual-boot-install.md) — lưu ý rằng trước tiên bạn sẽ cần tắt BitLocker trong Windows). Dù chọn cách nào, cài đặt cũng mặc định mã hóa toàn bộ, và tùy chọn toàn bộ ổ đĩa sẽ xóa sạch ổ đĩa đã chọn, vì vậy hãy nhớ sao lưu trước khi dùng một ổ đĩa hiện có!
 

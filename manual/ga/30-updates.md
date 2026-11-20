@@ -1,4 +1,6 @@
-# Nuashonruithe
+# Ve OS — Nuashonruithe
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Coinnítear Omarchy agus do phacáistí cothrom le dáta trí _Nuashonrú > Omarchy_ sa roghchlár Omarchy (`Super + Space`).
 

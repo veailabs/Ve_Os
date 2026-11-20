@@ -1,8 +1,8 @@
 # Teme
 
-Omarchy uključuje dvadeset i dvije prekrasne teme. Možete birati između njih putem _Izgled > Tema_ u izborniku Omarchy (`Super + Space`) ili izravno prijeći na alat za odabir teme pomoću `Super + Ctrl + T`.
+Ve OS uključuje dvadeset i dvije prekrasne teme. Možete birati između njih putem _Izgled > Tema_ u izborniku Ve OS (`Super + Space`) ili izravno prijeći na alat za odabir teme pomoću `Super + Ctrl + T`.
 
-Svaka tema oblikuje radnu površinu, terminal, neovim, zaslon aktivnosti (btop), Chromium i cijelu ljusku Omarchyja: gornju traku, izbornik, obavijesti, OSD i zaslon za zaključavanje. (Za Obsidian morate ručno odabrati temu Omarchy putem _Izgled > Teme_ unutar aplikacije).
+Svaka tema oblikuje radnu površinu, terminal, neovim, zaslon aktivnosti (btop), Chromium i cijelu ljusku Ve OSja: gornju traku, izbornik, obavijesti, OSD i zaslon za zaključavanje. (Za Obsidian morate ručno odabrati temu Ve OS putem _Izgled > Teme_ unutar aplikacije).
 
 Teme imaju skup pozadinskih slika između kojih možete birati pomoću `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Ikone u pokretaču aplikacija i na docku nacrtane su u bojama vaše teme, pa se 
 
 Skup ikona koji je izradio netko drugi možete instalirati putem _Instaliraj > Stil > Ikone_ (ili `omarchy icons install <git url>`), a ponovno ga ukloniti pod _Ukloni > Ikone_. _Ažuriraj > Dodatne ikone_ dohvaća najnoviju verziju skupova koje ste instalirali.
 
-Da biste izradili vlastiti, stavite svoje ikone u `~/.config/omarchy/icons/<name>/`, jednu datoteku po aplikaciji, nazvanu prema retku `Icon=` u `.desktop` datoteci aplikacije. Datoteka koja završava s `.svg` prikazuje se takva kakva jest. Datoteka koja završava s `.svg.tpl` crta se u bojama teme: napišite `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` ili `{{ icon_shadow }}` tamo gdje ide boja. Zadani skup u `/usr/share/omarchy/icons/papercraft/` dobro je mjesto za početak. Dodajte `preview.png` kako biste svoj skup prikazali u alatu za odabir; bez njega Omarchy crta pregled od vaših ikona. Da biste promijenili jednu ikonu zadanog skupa, stavite svoju verziju u `~/.config/omarchy/icons/papercraft/`.
+Da biste izradili vlastiti, stavite svoje ikone u `~/.config/omarchy/icons/<name>/`, jednu datoteku po aplikaciji, nazvanu prema retku `Icon=` u `.desktop` datoteci aplikacije. Datoteka koja završava s `.svg` prikazuje se takva kakva jest. Datoteka koja završava s `.svg.tpl` crta se u bojama teme: napišite `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` ili `{{ icon_shadow }}` tamo gdje ide boja. Zadani skup u `/usr/share/omarchy/icons/papercraft/` dobro je mjesto za početak. Dodajte `preview.png` kako biste svoj skup prikazali u alatu za odabir; bez njega Ve OS crta pregled od vaših ikona. Da biste promijenili jednu ikonu zadanog skupa, stavite svoju verziju u `~/.config/omarchy/icons/papercraft/`.
 
 ### Otključavanja
 

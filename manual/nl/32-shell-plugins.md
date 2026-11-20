@@ -1,10 +1,10 @@
 # Shell-plugins
 
-Het Omarchy-bureaublad draait als één langlevend Quickshell-proces genaamd `omarchy-shell`, en bijna alles wat je op het scherm ziet is een plugin erin. De balk is een plugin. Dat geldt ook voor de panelen die eruit naar beneden vallen, de fullscreen-overlays zoals de emoji-picker en de klembordbeheerder, het Omarchy-menu zelf, het vergrendelscherm, de polkit-dialoog, en de headless diensten die je batterij in de gaten houden en je scherm 's nachts opwarmen.
+Het Ve OS-bureaublad draait als één langlevend Quickshell-proces genaamd `omarchy-shell`, en bijna alles wat je op het scherm ziet is een plugin erin. De balk is een plugin. Dat geldt ook voor de panelen die eruit naar beneden vallen, de fullscreen-overlays zoals de emoji-picker en de klembordbeheerder, het Ve OS-menu zelf, het vergrendelscherm, de polkit-dialoog, en de headless diensten die je batterij in de gaten houden en je scherm 's nachts opwarmen.
 
-Dat is niet alleen een implementatiedetail. Het betekent dat je delen van het bureaublad kunt uitschakelen, ze kunt vervangen, of je eigen kunt schrijven zonder een regel van Omarchy's broncode aan te raken.
+Dat is niet alleen een implementatiedetail. Het betekent dat je delen van het bureaublad kunt uitschakelen, ze kunt vervangen, of je eigen kunt schrijven zonder een regel van Ve OS's broncode aan te raken.
 
-De first-party plugins worden met Omarchy geleverd en leven in `$OMARCHY_PATH/shell/plugins/`. Alles wat je zelf toevoegt — je eigen experimenten, of iets dat je op GitHub hebt gevonden — leeft in `~/.config/omarchy/plugins/`. Beide worden op dezelfde manier ontdekt bij het opstarten, maar built-ins ontvangen vertrouwde shell-interfaces, terwijl third-party plugins een beperkte interface ontvangen die is beperkt tot hun eigen dienst en levenscyclus. Kloons van built-ins behouden alleen de bronspecifieke configuratie- en UI-aanroepen die nodig zijn voor het originele gedrag.
+De first-party plugins worden met Ve OS geleverd en leven in `$OMARCHY_PATH/shell/plugins/`. Alles wat je zelf toevoegt — je eigen experimenten, of iets dat je op GitHub hebt gevonden — leeft in `~/.config/omarchy/plugins/`. Beide worden op dezelfde manier ontdekt bij het opstarten, maar built-ins ontvangen vertrouwde shell-interfaces, terwijl third-party plugins een beperkte interface ontvangen die is beperkt tot hun eigen dienst en levenscyclus. Kloons van built-ins behouden alleen de bronspecifieke configuratie- en UI-aanroepen die nodig zijn voor het originele gedrag.
 
 ## Zien wat je hebt
 

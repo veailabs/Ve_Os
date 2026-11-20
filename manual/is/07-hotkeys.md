@@ -8,7 +8,7 @@ Sérhver flýtilykill situr á plani, ákveðnu af breytilyklum hans, og hvert p
 
 | Plan | Hvað býr þar | Dæmi |
 | --- | --- | --- |
-| `Super + key` | Kerfið: gluggar, vinnusvæði, framsetningar og kjarnavalmyndir | `Super + Space` Omarchy-valmynd, `Super + W` loka glugga, `Super + F` heilskjár |
+| `Super + key` | Kerfið: gluggar, vinnusvæði, framsetningar og kjarnavalmyndir | `Super + Space` Ve OS-valmynd, `Super + W` loka glugga, `Super + F` heilskjár |
 | `Super + Shift + key` | Forrit | `Super + Shift + B` vafri, `Super + Shift + E` tölvupóstur, `Super + Shift + N` ritill |
 | `Super + Ctrl + key` | Spjöld og kerfisvalmyndir | `Super + Ctrl + A` hljóð, `Super + Ctrl + N` net, `Super + Ctrl + C` tökuvalmynd |
 | `Super + Ctrl + Alt + key` | Flýtisaðgerðir og tilkynningar | `Super + Ctrl + Alt + T` sýna klukkuna, `Super + Ctrl + Alt + B` rafhlaða, `Super + Ctrl + Alt + C` skjámynd |
@@ -34,7 +34,7 @@ Ef sjálfgefið val hentar þér ekki (segjum að þú viljir `Super + Shift + S
 
 | Flýtilykill | Virkni |
 | ----------------------- | --------------------- |
-| `Super + Space` | Omarchy-valmynd (forrit og allt annað) |
+| `Super + Space` | Ve OS-valmynd (forrit og allt annað) |
 | `Super + Alt + Space` | Forritarist |
 | `Super + Escape` | Kerfisvalmynd (setja í bið, endurræsa o.s.frv.) |
 | `Super + Ctrl + L` | Læsa tölvu |
@@ -172,7 +172,7 @@ Breyttu/bættu við bindingum í `~/.config/hypr/bindings.lua`.
 | `Super + V` | Líma |
 | `Super + Ctrl + V` | Klippiborðsstjóri |
 
-Venjulega á Linux þarftu `Ctrl + Shift + C/V` til að afrita og líma í útstöðinni og `Ctrl + C/V` til að gera það alls staðar annars staðar. Þessir sameinuðu flýtilyklar Omarchy fyrir klippiborð virka alls staðar.
+Venjulega á Linux þarftu `Ctrl + Shift + C/V` til að afrita og líma í útstöðinni og `Ctrl + C/V` til að gera það alls staðar annars staðar. Þessir sameinuðu flýtilyklar Ve OS fyrir klippiborð virka alls staðar.
 
 ## Taka
 
@@ -194,7 +194,7 @@ Venjulega á Linux þarftu `Ctrl + Shift + C/V` til að afrita og líma í útst
 
 Með skjáupptökum spyr flýtilykillinn fyrst hvaða hljóð þú vilt, byrjar svo upptökuna. Ýttu á hann aftur til að stöðva. Sjá [skjámyndir og upptaka](12-screenshots-recording.md) fyrir nánari upplýsingar.
 
-Allir tökuvalkostir eru líka aðgengilegir undir _Trigger > Capture_ í Omarchy-valmyndinni (`Super + Space`).
+Allir tökuvalkostir eru líka aðgengilegir undir _Trigger > Capture_ í Ve OS-valmyndinni (`Super + Space`).
 
 ## Tilkynningar
 
@@ -216,9 +216,9 @@ Allir tökuvalkostir eru líka aðgengilegir undir _Trigger > Capture_ í Omarch
 | `Super + Backspace` | Víxla gegnsæi á glugga |
 | `Super + Ctrl + Backspace` | Víxla ferköntuðu hlutfalli fyrir einn glugga |
 
-Auka bakgrunnsmyndir búa í `~/.config/omarchy/backgrounds/<theme name>`. Einnig fáanlegt í gegnum _Install > Style > Background_ í Omarchy-valmyndinni.
+Auka bakgrunnsmyndir búa í `~/.config/omarchy/backgrounds/<theme name>`. Einnig fáanlegt í gegnum _Install > Style > Background_ í Ve OS-valmyndinni.
 
-Allir stílvalkostir eru líka aðgengilegir undir _Style_ í Omarchy-valmyndinni (`Super + Space`).
+Allir stílvalkostir eru líka aðgengilegir undir _Style_ í Ve OS-valmyndinni (`Super + Space`).
 
 ## Víxlar
 
@@ -319,7 +319,7 @@ Forskeytislykillinn er `Ctrl + Space` (`Ctrl + B` virkar líka). Þú getur brey
 
 ## Ghostty útstöð
 
-Ghostty-útstöð er sett upp með _Install > Terminal_ í gegnum Omarchy-valmyndina.
+Ghostty-útstöð er sett upp með _Install > Terminal_ í gegnum Ve OS-valmyndina.
 
 | Flýtilykill | Virkni |
 | ----------------------- | --------------------- |

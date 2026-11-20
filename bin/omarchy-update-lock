@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Run a command while holding the Omarchy update lock
+# omarchy:summary=Run a command while holding the Ve OS update lock
 # omarchy:args=<held|run> [command] [args...]
 # omarchy:hidden=true
 
@@ -34,7 +34,7 @@ case "${1:-}" in
     # Opening a contender must not erase the holder's diagnostic PID.
     exec {OMARCHY_UPDATE_LOCK_FD}<>"$lock_path"
     if ! flock -n "$OMARCHY_UPDATE_LOCK_FD"; then
-      echo "An Omarchy update is already running."
+      echo "A Ve OS update is already running."
       owner_pid=""
       read -r owner_pid <"$lock_path" || true
       if [[ $owner_pid =~ ^[0-9]+$ ]]; then

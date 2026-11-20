@@ -29,15 +29,15 @@ mkdir -p "$HERDR_APP_HOME"
 for name in catppuccin-latte nord; do
   render_theme "$name"
   omarchy-theme-set-herdr-app
-  cmp -s "$current/herdr-app.json" "$HERDR_APP_HOME/themes/omarchy.json" || fail "Herdr must receive the $name palette"
+  cmp -s "$current/herdr-app.json" "$HERDR_APP_HOME/themes/ve.json" || fail "Herdr must receive the $name palette"
 done
 pass "each switch publishes the current palette"
 
-cp "$HERDR_APP_HOME/themes/omarchy.json" "$test_tmp/good-theme.json"
+cp "$HERDR_APP_HOME/themes/ve.json" "$test_tmp/good-theme.json"
 for filter in '.background = "{{ unresolved }}"' '.ansi = []' '.unknown = true'; do
   jq "$filter" "$test_tmp/good-theme.json" >"$current/herdr-app.json"
   omarchy-theme-set-herdr-app 2>/dev/null || fail "an invalid palette must not fail the theme switch"
-  cmp -s "$test_tmp/good-theme.json" "$HERDR_APP_HOME/themes/omarchy.json" || fail "an invalid palette must keep the last good theme"
+  cmp -s "$test_tmp/good-theme.json" "$HERDR_APP_HOME/themes/ve.json" || fail "an invalid palette must keep the last good theme"
 done
 pass "invalid palettes keep the last good theme"
 
@@ -46,5 +46,5 @@ unset HERDR_APP_HOME
 export XDG_CONFIG_HOME="$test_tmp/custom config"
 mkdir -p "$XDG_CONFIG_HOME/herdr-app"
 omarchy-theme-set-herdr-app
-[[ -f $XDG_CONFIG_HOME/herdr-app/themes/omarchy.json ]] || fail "a custom XDG_CONFIG_HOME must receive the palette"
+[[ -f $XDG_CONFIG_HOME/herdr-app/themes/ve.json ]] || fail "a custom XDG_CONFIG_HOME must receive the palette"
 pass "Herdr's home is found the way Herdr finds it"

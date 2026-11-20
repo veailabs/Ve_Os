@@ -1,14 +1,14 @@
 # Viršutinė juosta
 
-Juosta jūsų ekrano viršuje yra Omarchy juosta. Tai ne prisukta būsenos juosta, o Omarchy aplinkos dalis – vieno ilgai veikiančio Quickshell proceso, kuris taip pat piešia meniu, pranešimus, OSD iššokamuosius langus ir užrakinimo ekraną. Todėl ji puikiai dera su visa kita ir todėl skydelis atsidaro akimirksniu, užuot paleidus naują programą.
+Juosta jūsų ekrano viršuje yra Ve OS juosta. Tai ne prisukta būsenos juosta, o Ve OS aplinkos dalis – vieno ilgai veikiančio Quickshell proceso, kuris taip pat piešia meniu, pranešimus, OSD iššokamuosius langus ir užrakinimo ekraną. Todėl ji puikiai dera su visa kita ir todėl skydelis atsidaro akimirksniu, užuot paleidus naują programą.
 
 Tai taip pat vienintelė darbalaukio dalis, kuri visada matoma ekrane, todėl verta žinoti, ką daro visi tie maži ženklai.
 
 ## Kas joje yra pagal numatytuosius nustatymus
 
-Juostą sudaro trys dalys. Kairėje yra Omarchy logotipas (meniu paleidimo priemonė) ir darbo sričių indikatoriai. Centre rasite būsenos indikatorius, laikrodį, Elsewhen (pasaulio laikrodį), orą ir Omarchy naujinimo ženklelį. Dešinėje: sistemos dėklas, klaviatūros išdėstymas (kai sukonfigūruota daugiau nei vienas), agentai, bluetooth, tinklas, garsas, ekranas ir maitinimas.
+Juostą sudaro trys dalys. Kairėje yra Ve OS logotipas (meniu paleidimo priemonė) ir darbo sričių indikatoriai. Centre rasite būsenos indikatorius, laikrodį, Elsewhen (pasaulio laikrodį), orą ir Ve OS naujinimo ženklelį. Dešinėje: sistemos dėklas, klaviatūros išdėstymas (kai sukonfigūruota daugiau nei vienas), agentai, bluetooth, tinklas, garsas, ekranas ir maitinimas.
 
-Kai kurie iš jų pasirodo tik tada, kai turi ką pasakyti. Klaviatūros išdėstymas pasirodo tik tada, jei sukonfigūravote daugiau nei vieną išdėstymą. Naujinimo ženklelis pasirodo tik tada, kai laukia Omarchy naujinimas. O agentų piktograma pasirodo pirmą kartą, kai Omarchy randa AI kodavimo naudojimą kompiuteryje (žr. [AI](17-ai.md)).
+Kai kurie iš jų pasirodo tik tada, kai turi ką pasakyti. Klaviatūros išdėstymas pasirodo tik tada, jei sukonfigūravote daugiau nei vieną išdėstymą. Naujinimo ženklelis pasirodo tik tada, kai laukia Ve OS naujinimas. O agentų piktograma pasirodo pirmą kartą, kai Ve OS randa AI kodavimo naudojimą kompiuteryje (žr. [AI](17-ai.md)).
 
 ## Spustelėjimai
 
@@ -16,7 +16,7 @@ Beveik kiekvienas valdiklis ką nors daro spustelėjus kairįjį, dešinįjį ir
 
 | Valdiklis | Kairysis | Dešinysis | Vidurinis / slinktis |
 | --- | --- | --- | --- |
-| Meniu | Omarchy meniu | Naujas terminalas | — |
+| Meniu | Ve OS meniu | Naujas terminalas | — |
 | Darbo sritys | Sutelkti tą darbo sritį šiame monitoriuje | — | Slinktis: kita / ankstesnė darbo sritis |
 | Laikrodis | Kalendoriaus iššokantis langas | Perjungti etiketės formatą | Vidurinis: laiko juostos parinkiklis |
 | Oras | Prognozės iššokantis langas | Visas oras kaip pranešimas | Vidurinis: atnaujinti |
@@ -29,7 +29,7 @@ Beveik kiekvienas valdiklis ką nors daro spustelėjus kairįjį, dešinįjį ir
 | Medija | Leisti / pristabdyti | Viršelio iššokantis langas | Vidurinis: kitas · slinktis: ankstesnis / kitas |
 | Agentai | Agentų skydelis | Paleisti jūsų agentą | Vidurinis: kita prenumerata |
 | Dėklas | Užveskite, kad atsirastų stalčius | Dešinysis ant ševrono, kad valdytumėte | — |
-| Omarchy naujinimas | Vykdyti naujinimą | — | — |
+| Ve OS naujinimas | Vykdyti naujinimą | — | — |
 
 Ne viskas iš šios lentelės jūsų juostoje yra iš karto. Medijos valdiklis (MPRIS dabar grojamas, su slenkančiu takeliu ir atlikėju) ir mikrofono valdiklis yra integruoti, bet pagal numatytuosius nustatymus išjungti – pridėkite juos, jei norite, kaip aprašyta toliau.
 
@@ -137,6 +137,6 @@ Kiekvienas valdiklis yra vienas įrašas viename iš penkių išdėstymo masyvų
 
 `center` yra dėžė juostos viduryje: viskas joje centruojama ekrane kaip viena grupė. `centerBegin` ir `centerEnd` kabo iš abiejų dėžės pusių, todėl laikrodis lieka tiksliai centre, net kai oras ir naujinimo ženklelis atsiranda ir dingsta. Įdėkite daugiau nei vieną valdiklį į `center` ir jie bus centruojami kartu; palikite jį tuščią ir `centerBegin` bei `centerEnd` susitiks juostos viduryje.
 
-Viena taisyklė, kurią verta įsisavinti: **kai turite savo `shell.json`, jis yra kanoninis**. Kol nieko nepakeitėte, aplinka skaito Omarchy numatytąjį failą. Vos tik nuvelkate valdiklį, paleidžiate `omarchy bar` arba pats redaguojate failą, jis jūsų – nėra gilaus sujungimo, todėl nauji numatytieji valdikliai būsimuose Omarchy leidimuose jūsų juostoje automatiškai nepasirodys. `omarchy bar defaults` grąžina pateiktą išdėstymą, kai tik norite švaraus lapo.
+Viena taisyklė, kurią verta įsisavinti: **kai turite savo `shell.json`, jis yra kanoninis**. Kol nieko nepakeitėte, aplinka skaito Ve OS numatytąjį failą. Vos tik nuvelkate valdiklį, paleidžiate `omarchy bar` arba pats redaguojate failą, jis jūsų – nėra gilaus sujungimo, todėl nauji numatytieji valdikliai būsimuose Ve OS leidimuose jūsų juostoje automatiškai nepasirodys. `omarchy bar defaults` grąžina pateiktą išdėstymą, kai tik norite švaraus lapo.
 
 Tame pačiame faile aukščiausiu lygiu, už `bar` rakto ribų, taip pat yra jūsų neveiklumo laikai: `idle.screensaver` ir `idle.lock`, abu sekundėmis nuo tada, kai tapote neaktyvūs. Todėl numatytoji ekrano užsklanda įsijungia po 150 sekundžių, o užraktas – po 300.

@@ -8,7 +8,7 @@ Mindegyik gyorsbillentyű egy síkon helyezkedik el, amelyet a módosítói hat�
 
 | Sík | Mi lakik ott | Példák |
 | --- | --- | --- |
-| `Super + key` | A rendszer: ablakok, munkaterületek, elrendezések és alapmenük | `Super + Space` Omarchy menü, `Super + W` ablak bezárása, `Super + F` teljes képernyő |
+| `Super + key` | A rendszer: ablakok, munkaterületek, elrendezések és alapmenük | `Super + Space` Ve OS menü, `Super + W` ablak bezárása, `Super + F` teljes képernyő |
 | `Super + Shift + key` | Alkalmazások | `Super + Shift + B` böngésző, `Super + Shift + E` e-mail, `Super + Shift + N` szerkesztő |
 | `Super + Ctrl + key` | Panelek és rendszermenük | `Super + Ctrl + A` hang, `Super + Ctrl + N` hálózat, `Super + Ctrl + C` rögzítés menü |
 | `Super + Ctrl + Alt + key` | Gyorsműveletek és jelzések | `Super + Ctrl + Alt + T` idő megjelenítése, `Super + Ctrl + Alt + B` akkumulátor, `Super + Ctrl + Alt + C` képernyőkép |
@@ -34,7 +34,7 @@ Ha egy alapértelmezés nem felel meg neked (mondjuk a `Super + Shift + S` bille
 
 | Gyorsbillentyű                  | Funkció              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Omarchy menü (alkalmazások és minden más)    |
+| `Super + Space`           | Ve OS menü (alkalmazások és minden más)    |
 | `Super + Alt + Space` | Alkalmazásrács |
 | `Super + Escape` | Rendszermenü (felfüggesztés, újraindítás stb.)  |
 | `Super + Ctrl + L` | Számítógép zárolása |
@@ -172,7 +172,7 @@ Módosíts/adj hozzá kiosztásokat a `~/.config/hypr/bindings.lua` fájlban.
 | `Super + V`           | Beillesztés    |
 | `Super + Ctrl + V`           | Vágólapkezelő    |
 
-Linuxon általában `Ctrl + Shift + C/V` kell a másoláshoz és beillesztéshez a terminálban, és `Ctrl + C/V` mindenhol máshol. Ezek az Omarchy egységes vágólap-gyorsbillentyűi mindenhol működnek.
+Linuxon általában `Ctrl + Shift + C/V` kell a másoláshoz és beillesztéshez a terminálban, és `Ctrl + C/V` mindenhol máshol. Ezek az Ve OS egységes vágólap-gyorsbillentyűi mindenhol működnek.
 
 ## Rögzítés
 
@@ -194,7 +194,7 @@ Linuxon általában `Ctrl + Shift + C/V` kell a másoláshoz és beillesztéshez
 
 Képernyőfelvételeknél a gyorsbillentyű először megkérdezi, milyen hangot szeretnél, aztán elindítja a felvételt. Nyomd meg újra a leállításhoz. A részleteket lásd a [képernyőképek és felvétel](12-screenshots-recording.md) oldalon.
 
-Az összes rögzítési lehetőség elérhető az Omarchy menü (`Super + Space`) _Trigger > Capture_ pontja alatt is.
+Az összes rögzítési lehetőség elérhető az Ve OS menü (`Super + Space`) _Trigger > Capture_ pontja alatt is.
 
 ## Értesítések
 
@@ -216,9 +216,9 @@ Az összes rögzítési lehetőség elérhető az Omarchy menü (`Super + Space`
 | `Super + Backspace` | Ablak átlátszóságának ki-/bekapcsolása |
 | `Super + Ctrl + Backspace` | Egyablakos négyzetes képarány ki-/bekapcsolása |
 
-Az extra háttérképek a `~/.config/omarchy/backgrounds/<theme name>` helyen találhatók. Elérhető az Omarchy menü _Install > Style > Background_ pontja alatt is.
+Az extra háttérképek a `~/.config/omarchy/backgrounds/<theme name>` helyen találhatók. Elérhető az Ve OS menü _Install > Style > Background_ pontja alatt is.
 
-Az összes stíluslehetőség elérhető az Omarchy menü (`Super + Space`) _Style_ pontja alatt is.
+Az összes stíluslehetőség elérhető az Ve OS menü (`Super + Space`) _Style_ pontja alatt is.
 
 ## Kapcsolók
 
@@ -319,7 +319,7 @@ Ezeket a függvényeket Tmux munkameneten belül kell futtatni.
 
 ## Ghostty Terminal
 
-A Ghostty terminal az Omarchy menü _Install > Terminal_ pontjával telepíthető.
+A Ghostty terminal az Ve OS menü _Install > Terminal_ pontjával telepíthető.
 
 | Gyorsbillentyű                  | Funkció              |
 | ----------------------- | --------------------- |

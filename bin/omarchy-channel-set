@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Set the Omarchy package channel.
+# omarchy:summary=Set the Ve OS package channel.
 # omarchy:args=<stable|rc|edge|dev>
 # omarchy:requires-sudo=true
 
@@ -17,8 +17,8 @@ fail() { echo "Error: $*" >&2; exit 1; }
 confirm_dev() {
   cat <<'WARNING'
 
-The dev channel links Omarchy directly to a checkout of the source in ~/omarchy.
-It's exclusively intended for developers working on Omarchy itself.
+The dev channel links Ve OS directly to a checkout of the source in ~/omarchy.
+It's exclusively intended for developers working on Ve OS itself.
 
 WARNING
 
@@ -33,7 +33,7 @@ validate_dev_checkout() {
   fi
 
   if [[ -d $checkout/.git && ( ! -d $checkout/bin || ! -d $checkout/default || ! -d $checkout/shell ) ]]; then
-    fail "$checkout is a git checkout, but it does not look like Omarchy."
+    fail "$checkout is a git checkout, but it does not look like Ve OS."
   fi
 }
 
@@ -129,7 +129,7 @@ source "$OMARCHY_PATH/install/helpers/pacman.sh"
 platform=$(omarchy-hw-platform) || fail "Cannot tell this machine's platform; nothing changed."
 templates=$(omarchy_pacman_templates "$platform") || exit 1
 [[ -f $templates/pacman-$pacman_channel.conf && -f $templates/mirrorlist-$pacman_channel ]] ||
-  fail "Omarchy has no $pacman_channel channel for $platform; nothing changed."
+  fail "Ve OS has no $pacman_channel channel for $platform; nothing changed."
 
 if [[ $channel == "dev" ]]; then
   confirm_dev || { echo "Cancelled."; exit 0; }

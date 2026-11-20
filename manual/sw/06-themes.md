@@ -1,8 +1,8 @@
 # Mandhari
 
-Omarchy huja na mandhari ishirini na mbili nzuri. Unaweza kuchagua kati yake kupitia _Mwonekano > Mandhari_ kwenye Menyu ya Omarchy (`Super + Space`) au ruka moja kwa moja hadi kwenye kichagua mandhari kwa kutumia `Super + Ctrl + T`.
+Ve OS huja na mandhari ishirini na mbili nzuri. Unaweza kuchagua kati yake kupitia _Mwonekano > Mandhari_ kwenye Menyu ya Ve OS (`Super + Space`) au ruka moja kwa moja hadi kwenye kichagua mandhari kwa kutumia `Super + Ctrl + T`.
 
-Kila mandhari huweka mtindo kwenye eneo-kazi, terminali, neovim, skrini ya shughuli (btop), Chromium, na ganda lote la Omarchy: upau wa juu, menyu, arifa, OSD, na skrini ya kufunga. (Kwa Obsidian, lazima uchague mwenyewe mandhari ya Omarchy kupitia _Mwonekano > Mandhari_ ndani ya programu).
+Kila mandhari huweka mtindo kwenye eneo-kazi, terminali, neovim, skrini ya shughuli (btop), Chromium, na ganda lote la Ve OS: upau wa juu, menyu, arifa, OSD, na skrini ya kufunga. (Kwa Obsidian, lazima uchague mwenyewe mandhari ya Ve OS kupitia _Mwonekano > Mandhari_ ndani ya programu).
 
 Mandhari zina seti ya picha za usuli ambazo unaweza kuchagua kati yake kwa kutumia `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Aikoni katika kizindua programu na doki huchorwa kwa rangi za mandhari yako, hiv
 
 Unaweza kusakinisha seti ya aikoni ambayo mtu mwingine ametengeneza kwa _Sakinisha > Mtindo > Aikoni_ (au `omarchy icons install <git url>`), na kuiondoa tena chini ya _Ondoa > Aikoni_. _Sasisha > Aikoni za Ziada_ huleta toleo jipya zaidi la seti ulizosakinisha.
 
-Ili kutengeneza yako mwenyewe, weka aikoni zako katika `~/.config/omarchy/icons/<name>/`, faili moja kwa kila programu, iliyopewa jina kulingana na mstari wa `Icon=` wa faili ya `.desktop` ya programu. Faili inayoishia na `.svg` huonyeshwa kama ilivyo. Faili inayoishia na `.svg.tpl` huchorwa kwa rangi za mandhari: andika `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` au `{{ icon_shadow }}` pale rangi inapoenda. Seti chaguo-msingi katika `/usr/share/omarchy/icons/papercraft/` ni mahali pazuri pa kuanzia. Ongeza `preview.png` ili kuonyesha seti yako kwenye kichaguzi; bila moja, Omarchy huchora hakiki kutoka kwenye aikoni zako. Ili kubadilisha aikoni moja ya seti chaguo-msingi, weka toleo lako katika `~/.config/omarchy/icons/papercraft/`.
+Ili kutengeneza yako mwenyewe, weka aikoni zako katika `~/.config/omarchy/icons/<name>/`, faili moja kwa kila programu, iliyopewa jina kulingana na mstari wa `Icon=` wa faili ya `.desktop` ya programu. Faili inayoishia na `.svg` huonyeshwa kama ilivyo. Faili inayoishia na `.svg.tpl` huchorwa kwa rangi za mandhari: andika `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` au `{{ icon_shadow }}` pale rangi inapoenda. Seti chaguo-msingi katika `/usr/share/omarchy/icons/papercraft/` ni mahali pazuri pa kuanzia. Ongeza `preview.png` ili kuonyesha seti yako kwenye kichaguzi; bila moja, Ve OS huchora hakiki kutoka kwenye aikoni zako. Ili kubadilisha aikoni moja ya seti chaguo-msingi, weka toleo lako katika `~/.config/omarchy/icons/papercraft/`.
 
 ### Miundo ya kufungua
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Overwrite the package configuration for /etc/pacman with the Omarchy default of using its dedicated mirrors and repositories, then update all packages.
+# omarchy:summary=Overwrite the package configuration for /etc/pacman with the Ve OS defaults for the upstream package mirrors and repositories, then update all packages.
 # omarchy:requires-sudo=true
 
 set -e
@@ -31,7 +31,7 @@ if [[ -z $channel ]]; then
   esac
 fi
 if [[ ! -f $templates/pacman-$channel.conf || ! -f $templates/mirrorlist-$channel ]]; then
-  echo "Omarchy has no $channel channel for $platform. No repository configuration changed." >&2
+  echo "Ve OS has no $channel channel for $platform. No repository configuration changed." >&2
   exit 1
 fi
 

@@ -1,6 +1,6 @@
 # Narzędzia powłoki
 
-Oprócz standardowych narzędzi Linuksa, Omarchy dostarcza również zestaw ulepszonych narzędzi powłoki. Oto najważniejsze z nich.
+Oprócz standardowych narzędzi Linuksa, Ve OS dostarcza również zestaw ulepszonych narzędzi powłoki. Oto najważniejsze z nich.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Pełny podręcznik można znaleźć za pomocą `man yt-dlp`.
 
 [try](https://github.com/tobi/try) ułatwia zarządzanie eksperymentami programistycznymi w katalogach opatrzonych datą. Wszystkie eksperymenty żyją w `~/Work/tries` i możesz uzyskać do nich dostęp za pomocą `try`.
 
-Omarchy nie dodaje automatycznie katalogu `bin/` projektu do `PATH`. Uruchamiaj zaufane narzędzia lokalne dla projektu z jawną ścieżką względną, taką jak `bin/rails` lub `./bin/dev`.
+Ve OS nie dodaje automatycznie katalogu `bin/` projektu do `PATH`. Uruchamiaj zaufane narzędzia lokalne dla projektu z jawną ścieżką względną, taką jak `bin/rails` lub `./bin/dev`.

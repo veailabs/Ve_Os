@@ -1,12 +1,12 @@
 # Spanje sistema
 
-Omarchy privzeto omogoča mirovanje in hibernacijo, če pa imate na svojem računalniku težave s katero od njiju, ju lahko izklopite.
+Ve OS privzeto omogoča mirovanje in hibernacijo, če pa imate na svojem računalniku težave s katero od njiju, ju lahko izklopite.
 
 Na računalnikih NVIDIA GB10, kot sta DGX Spark in ASUS Ascent GX10, sta mirovanje in hibernacija izklopljena, tako kot sta v sistemu NVIDIA DGX OS, ker za spanje na tej strojni opremi še ni bilo dokazano, da deluje. Enako velja za ASUS Zenbook A16 (UX3607OA), pri katerem mirovanje čipa še ne uspava v celoti in lahko čez noč zamrzne. Preklop mirovanja in nastavitev hibernacije tam ne veljata. Če želite spanje znova vklopiti, odstranite `/etc/systemd/sleep.conf.d/omarchy-sleep-disabled.conf` z `sudo rm`; mirovanje se nato vrne v meni, hibernacijo pa lahko nastavite kot na drugih računalnikih. Zagon `sudo omarchy apply hardware --install-user "$USER"` datoteko vrne nazaj.
 
 ### Profili napajanja
 
-Na prenosniku si Omarchy zapomni vaš profil napajanja ločeno za delovanje ob priklopu na napajanje in delovanje na baterijo ter med njima preklaplja, ko napravo priklopite in odklopite. Takoj po namestitvi to pomeni performance na AC in balanced na bateriji.
+Na prenosniku si Ve OS zapomni vaš profil napajanja ločeno za delovanje ob priklopu na napajanje in delovanje na baterijo ter med njima preklaplja, ko napravo priklopite in odklopite. Takoj po namestitvi to pomeni performance na AC in balanced na bateriji.
 
 Kaj vaš računalnik ponuja, lahko vidite z `omarchy powerprofiles list`, profil, ki ga želite za stanje, v katerem ste trenutno, pa nastavite z `omarchy powerprofiles set autodetect power-saver`. Če želite nastaviti drugo stanje, ne da bi karkoli odklopili, ga neposredno poimenujte: `omarchy powerprofiles set battery power-saver`. Kar koli izberete, boste dobili nazaj ob naslednjem prehodu v to stanje.
 

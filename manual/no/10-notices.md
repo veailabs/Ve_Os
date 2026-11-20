@@ -10,7 +10,7 @@ Kortene tilbyr det de bærer: _Kopier kode_ for verifiseringskoder (holdes ute a
 
 For å bruke dem uten musen trykker du på `Super + Ctrl + ,`. Det nyeste varselet er valgt og knappene til det er nummerert: trykk på et tall for å bruke en, `Enter` for å klikke på varselet, `↑` og `↓` for å flytte mellom varsler, `Delete` for å avvise ett, og `Esc` for å gi tastaturet tilbake. Det slipper også taket på egen hånd etter noen sekunders inaktivitet.
 
-Å dempe varsler holder dem tilbake, unntatt Omarchys egne bekreftelser, nødvarsler og verifiseringskoder, som du ba om for et øyeblikk siden. Sett de siste få tilbake på skjermen, holdt tilbake eller ikke, med `Super + Shift + Alt + ,`. Historikken oppbevares i én dag.
+Å dempe varsler holder dem tilbake, unntatt Ve OSs egne bekreftelser, nødvarsler og verifiseringskoder, som du ba om for et øyeblikk siden. Sett de siste få tilbake på skjermen, holdt tilbake eller ikke, med `Super + Shift + Alt + ,`. Historikken oppbevares i én dag.
 
 ## Hurtigtastvarsler
 

@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy genellikle kısayol tuşları ve Omarchy menüsü (`Super + Space`) üzerinden kontrol edilir. Ancak `omarchy` CLI üzerinden de kontrol edebilirsiniz. Bu, özellikle bir AI agent ile birlikte özelleştirme veya yapılandırma üzerinde çalışırken faydalıdır.
+Ve OS genellikle kısayol tuşları ve Ve OS menüsü (`Super + Space`) üzerinden kontrol edilir. Ancak `omarchy` CLI üzerinden de kontrol edebilirsiniz. Bu, özellikle bir AI agent ile birlikte özelleştirme veya yapılandırma üzerinde çalışırken faydalıdır.
 
 CLI, hem menü üzerinden hem de başka yollarla kullanılan tüm dahili araçlara erişime sahiptir. Terminalde `omarchy` çalıştırarak mevcut olan her şeyi görebilirsiniz.
 
@@ -8,7 +8,7 @@ Görünümü şuna benzer:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Tanılama için doğrudan `omarchy-debug --no-sudo --print` çalıştırın. Sudo istemeden tanılama çıktısını yazdırır ve `/tmp/omarchy-debug.log` dosyasına yazar; bu, `omarchy debug` komutunun "Unknown Omarchy command" hatasıyla başarısız olabildiği paket kurulumlarında da geçerlidir.
+Tanılama için doğrudan `omarchy-debug --no-sudo --print` çalıştırın. Sudo istemeden tanılama çıktısını yazdırır ve `/tmp/omarchy-debug.log` dosyasına yazar; bu, `omarchy debug` komutunun "Unknown Ve OS command" hatasıyla başarısız olabildiği paket kurulumlarında da geçerlidir.
 
 Ve her grupta daha derine inebilirsiniz:
 
@@ -60,4 +60,4 @@ Her komut `--help` de kabul eder; ister tüm bir grubu (`omarchy capture --help`
 
 ### Menüyü terminalden açma
 
-Omarchy menüsü de scriptlenebilir, bu da kendi tuş atamalarınız için kullanışlıdır. `omarchy menu` menüyü kök düzeyde açar ve adını belirterek ağaçtaki herhangi bir noktaya doğrudan atlayabilirsiniz: `omarchy menu summon appearance.theme` doğrudan tema seçiciye gider, `omarchy menu toggle system` sistem menüsünü açar ve zaten açıksa tekrar kapatır, `omarchy menu close` ise menüyü kaldırır.
+Ve OS menüsü de scriptlenebilir, bu da kendi tuş atamalarınız için kullanışlıdır. `omarchy menu` menüyü kök düzeyde açar ve adını belirterek ağaçtaki herhangi bir noktaya doğrudan atlayabilirsiniz: `omarchy menu summon appearance.theme` doğrudan tema seçiciye gider, `omarchy menu toggle system` sistem menüsünü açar ve zaten açıksa tekrar kapatır, `omarchy menu close` ise menüyü kaldırır.

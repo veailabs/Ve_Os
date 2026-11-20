@@ -1,10 +1,10 @@
 # Web aplikacije
 
-Vlastite web aplikacije možete dodati pomoću _Install > Web App_ u izborniku Omarchy (`Super + Space`). Pitat će vas za naziv aplikacije, URL aplikacije i URL ikone, ako je ne može dohvatiti putem favicona. Odlične PNG ikone za mnoge popularne web aplikacije možete pronaći na [Dashboard Icons](https://dashboardicons.com).
+Vlastite web aplikacije možete dodati pomoću _Install > Web App_ u izborniku Ve OS (`Super + Space`). Pitat će vas za naziv aplikacije, URL aplikacije i URL ikone, ako je ne može dohvatiti putem favicona. Odlične PNG ikone za mnoge popularne web aplikacije možete pronaći na [Dashboard Icons](https://dashboardicons.com).
 
 Ondje će zatim biti dostupne putem pokretača aplikacija (`Super + Space`) i koristit će prekrasan prozor web aplikacije bez okvira.
 
-Ako želite ukloniti web aplikaciju, jednostavno idite na _Remove > Web App_ u izborniku Omarchy.
+Ako želite ukloniti web aplikaciju, jednostavno idite na _Remove > Web App_ u izborniku Ve OS.
 
 Najbolje je da se u sve svoje račune prijavite pomoću običnog preglednika prije korištenja prečaca za web aplikacije. Tanki okvir omotača ne radi dobro s 1passwordom, pa je jednostavno lakše prvo se izravno prijaviti.
 
@@ -12,7 +12,7 @@ Sve tipkovničke prečace za ove web aplikacije možete promijeniti u `~/.config
 
 Kada ste u web aplikaciji, trenutni URL možete kopirati u međuspremnik pomoću `Shift + Alt + L`.
 
-Omarchy prema zadanim postavkama već dolazi s izborom zadanih aplikacija:
+Ve OS prema zadanim postavkama već dolazi s izborom zadanih aplikacija:
 
 ## HEY
 
@@ -64,7 +64,7 @@ YouTube možete pokrenuti pomoću `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) je najpopularniji sustav za videorazgovore koji se koristi u SAD-u. Odlične veze diljem svijeta. A sastanci od 40 minuta mogu se održavati i bez plaćenog računa. Omarchy omata Zoomov web klijent, a poveznice na Zoom sastanke otvarat će se izravno u njemu.
+[Zoom](https://zoom.us/) je najpopularniji sustav za videorazgovore koji se koristi u SAD-u. Odlične veze diljem svijeta. A sastanci od 40 minuta mogu se održavati i bez plaćenog računa. Ve OS omata Zoomov web klijent, a poveznice na Zoom sastanke otvarat će se izravno u njemu.
 
 Zoom pokrećete pomoću pokretača aplikacija (`Super + Space`).
 
@@ -76,7 +76,7 @@ Discord pokrećete pomoću pokretača aplikacija (`Super + Space`).
 
 ## Microsoft aplikacije
 
-Odaberite _Install > Service > Microsoft_ kako biste Outlook, Word, Excel, PowerPoint, Teams i OneDrive dodali kao web aplikacije. Svaka aplikacija ima vlastiti pokretač i otvara se izravno, koristeći komercijalne URL-ove za Microsoft 365 i vaš postojeći profil preglednika. Otvaraju se u istim prozorima aplikacija preglednika kao i ostale web aplikacije Omarchyja; ne instaliraju zaseban klijent Teams for Linux.
+Odaberite _Install > Service > Microsoft_ kako biste Outlook, Word, Excel, PowerPoint, Teams i OneDrive dodali kao web aplikacije. Svaka aplikacija ima vlastiti pokretač i otvara se izravno, koristeći komercijalne URL-ove za Microsoft 365 i vaš postojeći profil preglednika. Otvaraju se u istim prozorima aplikacija preglednika kao i ostale web aplikacije Ve OSja; ne instaliraju zaseban klijent Teams for Linux.
 
 Paket uklonite pomoću _Remove > Service > Microsoft_, a pojedinačne aplikacije uklonite pomoću _Remove > Web App_. Putem _Install > Web App_ možete instalirati i samo aplikacije koje želite.
 
@@ -88,4 +88,4 @@ Kako biste poslovne prijave držali odvojenima, dodajte direktorij s podacima pr
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Direktorij iz primjera zamijenite apsolutnom putanjom po vlastitom izboru i koristite istu putanju za svih šest pokretača kako bi međusobno dijelili poslovne prijave. Web aplikacije koriste podržani preglednik odabran u Omarchyju, a ako zadani preglednik nije podržan, pribjegavaju Chromeu.
+Direktorij iz primjera zamijenite apsolutnom putanjom po vlastitom izboru i koristite istu putanju za svih šest pokretača kako bi međusobno dijelili poslovne prijave. Web aplikacije koriste podržani preglednik odabran u Ve OSju, a ako zadani preglednik nije podržan, pribjegavaju Chromeu.

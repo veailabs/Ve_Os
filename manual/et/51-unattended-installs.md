@@ -1,4 +1,6 @@
-# Järelevalveta paigaldused
+# Ve OS — Järelevalveta paigaldused
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO suudab end ise paigaldada ilma, et keegi klaviatuuri taga oleks. Kui paigaldaja leiab teise draivi sildiga `cidata`, millel on selle konfiguratsioonifailid, kopeerib ta need sealt ära, jätab seadistusviisardi täielikult vahele ja taaskäivitub omal käel valmis süsteemi. Ei mingit spetsiaalset ISO koosteversiooni, ei mingit lisakirjet alglaadimismenüüs — kui sellist draivi küljes pole, ei muutu midagi ja saad tavalise viisardi.
 

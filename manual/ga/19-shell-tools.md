@@ -1,6 +1,6 @@
 # Uirlisí Blaoisce
 
-Chomh maith leis na huirlisí caighdeánacha Linux, tagann Omarchy le go leor uirlisí blaoisce feabhsaithe freisin. Seo na príomhcinn.
+Chomh maith leis na huirlisí caighdeánacha Linux, tagann Ve OS le go leor uirlisí blaoisce feabhsaithe freisin. Seo na príomhcinn.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Is féidir an lámhleabhar iomlán a fháil trí `man yt-dlp`.
 
 Éascaíonn [try](https://github.com/tobi/try) turgnaimh ríomhchlárúcháin a bhainistiú le heolairí le stampa dáta. Cónaíonn na turgnaimh go léir in `~/Work/tries` agus is féidir leat rochtain a fháil orthu trí `try`.
 
-Ní chuireann Omarchy eolaire `bin/` tionscadail le `PATH` go huathoibríoch. Rith uirlisí áitiúla iontaofa tionscadail le conair choibhneasta shonrach, ar nós `bin/rails` nó `./bin/dev`.
+Ní chuireann Ve OS eolaire `bin/` tionscadail le `PATH` go huathoibríoch. Rith uirlisí áitiúla iontaofa tionscadail le conair choibhneasta shonrach, ar nós `bin/rails` nó `./bin/dev`.

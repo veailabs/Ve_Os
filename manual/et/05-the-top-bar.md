@@ -1,14 +1,14 @@
 # Ülemine riba
 
-Riba ekraani ülaosas on Omarchy riba. See ei ole külge poltitud olekuriba, vaid osa Omarchy kestast, ühest pikaajalisest Quickshell protsessist, mis joonistab ka menüü, teavitused, OSD hüpikaknad ja lukustuskuva. Seepärast sobib see temaatiliselt täiuslikult kõigega muuga ja paneel avaneb kohe, selle asemel et käivitada uus rakendus.
+Riba ekraani ülaosas on Ve OS riba. See ei ole külge poltitud olekuriba, vaid osa Ve OS kestast, ühest pikaajalisest Quickshell protsessist, mis joonistab ka menüü, teavitused, OSD hüpikaknad ja lukustuskuva. Seepärast sobib see temaatiliselt täiuslikult kõigega muuga ja paneel avaneb kohe, selle asemel et käivitada uus rakendus.
 
 See on ka ainus töölaua osa, mis on alati ekraanil, nii et tasub teada, mida kõik need väikesed glüüfid teevad.
 
 ## Mis sellel vaikimisi on
 
-Ribal on kolm jaotist. Vasakul asuvad Omarchy logo (menüükäivitaja) ja tööalade indikaatorid. Keskel on olekuindikaatorid, kell, Elsewhen (maailmakell), ilm ja Omarchy värskenduse märk. Paremal: süsteemisalv, klaviatuuripaigutus (kui konfigureeritud on rohkem kui üks), agendid, bluetooth, võrk, heli, ekraan ja toide.
+Ribal on kolm jaotist. Vasakul asuvad Ve OS logo (menüükäivitaja) ja tööalade indikaatorid. Keskel on olekuindikaatorid, kell, Elsewhen (maailmakell), ilm ja Ve OS värskenduse märk. Paremal: süsteemisalv, klaviatuuripaigutus (kui konfigureeritud on rohkem kui üks), agendid, bluetooth, võrk, heli, ekraan ja toide.
 
-Mõned neist ilmuvad ainult siis, kui neil on midagi öelda. Klaviatuuripaigutus ilmub ainult siis, kui oled konfigureerinud rohkem kui ühe paigutuse. Värskendusmärk ilmub ainult siis, kui Omarchy värskendus ootab. Ja agentide ikoon ilmub esimest korda, kui Omarchy leiab masinast AI kodeerimise kasutust (vt [AI](17-ai.md)).
+Mõned neist ilmuvad ainult siis, kui neil on midagi öelda. Klaviatuuripaigutus ilmub ainult siis, kui oled konfigureerinud rohkem kui ühe paigutuse. Värskendusmärk ilmub ainult siis, kui Ve OS värskendus ootab. Ja agentide ikoon ilmub esimest korda, kui Ve OS leiab masinast AI kodeerimise kasutust (vt [AI](17-ai.md)).
 
 ## Klõpsamine
 
@@ -16,7 +16,7 @@ Peaaegu iga vidin teeb vasaku, parema ja keskmise klõpsu korral midagi ning mit
 
 | Vidin | Vasak | Parem | Keskmine / kerimine |
 | --- | --- | --- | --- |
-| Menüü | Omarchy menüü | Uus terminal | — |
+| Menüü | Ve OS menüü | Uus terminal | — |
 | Tööalad | Fokuseeri see tööala sellel kuvaril | — | Kerimine: järgmine/eelmine tööala |
 | Kell | Kalendri hüpikaken | Vaheta sildi vormingut järjest | Keskmine: ajavööndi valija |
 | Ilm | Ilmaprognoosi hüpikaken | Täielik ilm teavitusena | Keskmine: värskenda |
@@ -29,7 +29,7 @@ Peaaegu iga vidin teeb vasaku, parema ja keskmise klõpsu korral midagi ning mit
 | Meedia | Esita/peata | Kaanepildi hüpikaken | Keskmine: järgmine · kerimine: eelmine/järgmine |
 | Agendid | Agentide paneel | Käivita oma agent | Keskmine: järgmine tellimus |
 | Salv | Hõlju sahtli näitamiseks | Paremklõps noolel haldamiseks | — |
-| Omarchy värskendus | Käivita värskendus | — | — |
+| Ve OS värskendus | Käivita värskendus | — | — |
 
 Kõik selles tabelis ei ole sinu ribal karbist võttes. Meediavidin (MPRIS praegu esitatav, keriva loo ja esitajaga) ja mikrofonividin on mõlemad sisse ehitatud, kuid vaikimisi välja lülitatud — lisa need, kui soovid, nagu allpool kirjeldatud.
 
@@ -137,6 +137,6 @@ Iga vidin on üks kirje ühes viiest paigutuse massiivist ja selle seaded asuvad
 
 `center` on riba keskel olev kast: kõik selle sees on ekraanil ühe rühmana keskel. `centerBegin` ja `centerEnd` ripuvad kasti mõlemal küljel, nii püsib kell täpselt keskel isegi siis, kui ilm ja värskendusmärk tulevad ja lähevad. Pane `center` alla rohkem kui üks vidin ja need on koos keskel; jäta see tühjaks ja `centerBegin` ning `centerEnd` kohtuvad riba keskel.
 
-Üks reegel, mis tasub endale selgeks teha: **kui sul on oma `shell.json`, on see kanooniline**. Kuni sa midagi ei kohanda, loeb kest Omarchy vaikefaili. Hetkel, kui lohistad vidinat, käivitad `omarchy bar` või muudad faili ise, kuulub see sulle — sügavat liitmist ei toimu, nii et uued vaikimisi vidinad tulevastes Omarchy väljaannetes ei ilmu sinu ribale automaatselt. `omarchy bar defaults` paneb tarnitud paigutuse tagasi alati, kui soovid puhtalt lehelt alustada.
+Üks reegel, mis tasub endale selgeks teha: **kui sul on oma `shell.json`, on see kanooniline**. Kuni sa midagi ei kohanda, loeb kest Ve OS vaikefaili. Hetkel, kui lohistad vidinat, käivitad `omarchy bar` või muudad faili ise, kuulub see sulle — sügavat liitmist ei toimu, nii et uued vaikimisi vidinad tulevastes Ve OS väljaannetes ei ilmu sinu ribale automaatselt. `omarchy bar defaults` paneb tarnitud paigutuse tagasi alati, kui soovid puhtalt lehelt alustada.
 
 Sama fail hoiab ka sinu jõudeaja ajastusi ülemisel tasemel, väljaspool `bar` võtit: `idle.screensaver` ja `idle.lock`, mõlemad sekundites alates jõudeolekusse minekust. Nii käivitub vaikimisi ekraanisäästja 150 sekundi ja lukk 300 sekundi pärast.

@@ -1,4 +1,6 @@
-# Valvomattomat asennukset
+# Ve OS — Valvomattomat asennukset
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO osaa asentaa itsensä ilman ketään näppäimistön ääressä. Jos asennusohjelma löytää toisen aseman, jonka nimi on `cidata` ja jolla on sen määritystiedostot, se kopioi ne talteen, ohittaa ohjatun asennuksen kokonaan ja käynnistyy itsestään uudelleen valmiiseen järjestelmään. Ei tarvita erikoista ISO-koontia eikä ylimääräistä käynnistysvalikon kohtaa — jos sellaista asemaa ei ole liitetty, mikään ei muutu ja saat normaalin ohjatun asennuksen.
 

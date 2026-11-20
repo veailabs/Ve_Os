@@ -10,7 +10,7 @@ Kad menawarkan apa yang dibawanya: _Salin kod_ untuk kod pengesahan (tidak disim
 
 Untuk menggunakannya tanpa tetikus, tekan `Super + Ctrl + ,`. Pemberitahuan terbaharu dipilih dan butang-butangnya dinomborkan: tekan nombor untuk menggunakan salah satu, `Enter` untuk mengklik pemberitahuan, `↑` dan `↓` untuk bergerak antara pemberitahuan, `Delete` untuk menyingkirkan satu, dan `Esc` untuk memulangkan papan kekunci. Ia juga akan melepaskannya sendiri selepas beberapa saat terbiar.
 
-Menyenyapkan pemberitahuan akan menahannya, kecuali pengesahan Omarchy sendiri, amaran kecemasan, dan kod pengesahan, yang anda minta sebentar tadi. Paparkan semula beberapa yang terakhir pada skrin, sama ada ditahan atau tidak, dengan `Super + Shift + Alt + ,`. Sejarah disimpan selama sehari.
+Menyenyapkan pemberitahuan akan menahannya, kecuali pengesahan Ve OS sendiri, amaran kecemasan, dan kod pengesahan, yang anda minta sebentar tadi. Paparkan semula beberapa yang terakhir pada skrin, sama ada ditahan atau tidak, dengan `Super + Shift + Alt + ,`. Sejarah disimpan selama sehari.
 
 ## Notis kekunci pintas
 

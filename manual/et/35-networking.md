@@ -1,6 +1,6 @@
 # Võrk
 
-Omarchy võrku haldab NetworkManager ja sa juhid seda [ülemise riba](05-the-top-bar.md) võrguikoonilt või klahvidega `Super + Ctrl + N`.
+Ve OS võrku haldab NetworkManager ja sa juhid seda [ülemise riba](05-the-top-bar.md) võrguikoonilt või klahvidega `Super + Ctrl + N`.
 
 See paneel otsib Wi-Fi võrke, näitab signaali tugevust ja loob ühenduse. Ethernet ei vaja üldse midagi — ühenda see ja kõik töötab. Kui eelistad jääda terminali, annab `nmtui` sulle samad juhtimisvõimalused ja olemas on ka käsurühm `omarchy network`.
 
@@ -12,7 +12,7 @@ Kui vajad siiski parooli ennast, prindib selle `omarchy network password <interf
 
 ## DNS
 
-Omarchy kasutab seda DNS-i, mille sinu võrk DHCP kaudu väljastab. Saad selle kogu masina jaoks alistada jaotises _Setup > Network > DNS_, kus Cloudflare ja Google on ühe klõpsu kaugusel. Vali oma serverite sisestamiseks _Custom_.
+Ve OS kasutab seda DNS-i, mille sinu võrk DHCP kaudu väljastab. Saad selle kogu masina jaoks alistada jaotises _Setup > Network > DNS_, kus Cloudflare ja Google on ühe klõpsu kaugusel. Vali oma serverite sisestamiseks _Custom_.
 
 Terminalist prindib `omarchy dns` praeguse teenusepakkuja ja `omarchy dns Cloudflare` määrab selle.
 

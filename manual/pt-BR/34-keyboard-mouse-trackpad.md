@@ -1,6 +1,6 @@
 # Teclado, Mouse, Trackpad
 
-O Hyprland permite configurar todas as suas entradas em grande detalhe. Você pode deixar a repetição do teclado supersonicamente rápida ou fazer o trackpad usar rolagem natural. Você altera tudo isso em `~/.config/hypr/input.lua`, que também pode ser acessado via _Setup > Input_ no menu do Omarchy (`Super + Space`). Qualquer coisa que você definir ali substitui os padrões do Omarchy.
+O Hyprland permite configurar todas as suas entradas em grande detalhe. Você pode deixar a repetição do teclado supersonicamente rápida ou fazer o trackpad usar rolagem natural. Você altera tudo isso em `~/.config/hypr/input.lua`, que também pode ser acessado via _Setup > Input_ no menu do Ve OS (`Super + Space`). Qualquer coisa que você definir ali substitui os padrões do Ve OS.
 
 Veja um exemplo:
 
@@ -59,7 +59,7 @@ Deslize no trackpad para se mover pela área de trabalho:
 | --- | --- |
 | Três dedos para a esquerda / direita | Workspace anterior / próximo, incluindo os vazios |
 | Três dedos para cima | Alternar o console de IA |
-| Três dedos para baixo | Abrir o menu do Omarchy |
+| Três dedos para baixo | Abrir o menu do Ve OS |
 | Quatro dedos para a esquerda / direita | Mover a janela ativa para o workspace anterior / próximo |
 | Quatro dedos para baixo | Alternar tela cheia |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Para desativar todos os gestos do Omarchy, defina `omarchy_default_gestures = false` perto do topo de `~/.config/hypr/hyprland.lua`, antes que os padrões do Omarchy sejam carregados.
+Para desativar todos os gestos do Ve OS, defina `omarchy_default_gestures = false` perto do topo de `~/.config/hypr/hyprland.lua`, antes que os padrões do Ve OS sejam carregados.
 
 Em laptops Dell XPS com touchpad háptico, você também pode definir a intensidade do clique como baixa, média ou alta em _Trigger > Hardware > Touchpad Haptics_.
 
 ### Digitando em chinês, japonês e outros idiomas
 
-Selecione japonês, coreano, chinês (simplificado, Pinyin), Taiwan (Zhuyin) ou Hong Kong (Cangjie) quando o instalador perguntar sobre o seu teclado. O Omarchy configura o teclado e o mecanismo de entrada correspondente automaticamente, inclusive durante a configuração offline da primeira inicialização. O japonês usa Mozc, o coreano usa o Hangul padrão de dois conjuntos, o chinês simplificado usa Pinyin, Taiwan usa o arranjo Zhuyin padrão do Chewing e Hong Kong usa Cangjie com formas de caracteres de Hong Kong. Japonês (teclado US) oferece Mozc com um layout de teclado US. As teclas Hangul, Zhuyin e Cangjie permanecem em suas posições padrão mesmo quando você digita letras latinas com Dvorak, Colemak ou AZERTY. Se você adicionou Hangul ou Chewing antes disso, desmarque e selecione novamente em _Setup > Keyboard > Input Methods_ para mover suas teclas para lá; o Omarchy não mexe em um mecanismo que você já usa para digitar.
+Selecione japonês, coreano, chinês (simplificado, Pinyin), Taiwan (Zhuyin) ou Hong Kong (Cangjie) quando o instalador perguntar sobre o seu teclado. O Ve OS configura o teclado e o mecanismo de entrada correspondente automaticamente, inclusive durante a configuração offline da primeira inicialização. O japonês usa Mozc, o coreano usa o Hangul padrão de dois conjuntos, o chinês simplificado usa Pinyin, Taiwan usa o arranjo Zhuyin padrão do Chewing e Hong Kong usa Cangjie com formas de caracteres de Hong Kong. Japonês (teclado US) oferece Mozc com um layout de teclado US. As teclas Hangul, Zhuyin e Cangjie permanecem em suas posições padrão mesmo quando você digita letras latinas com Dvorak, Colemak ou AZERTY. Se você adicionou Hangul ou Chewing antes disso, desmarque e selecione novamente em _Setup > Keyboard > Input Methods_ para mover suas teclas para lá; o Ve OS não mexe em um mecanismo que você já usa para digitar.
 
 A digitação começa no modo latino. Pressione `Super + I` para percorrer os métodos de entrada configurados, e `Super + Shift + I` para percorrer no sentido contrário. Toque em `Shift` sozinho para sair de um método de entrada como o Pinyin para letras latinas, e toque nele novamente para voltar, do jeito que Sogou, Microsoft Pinyin e macOS funcionam; `Shift` mais uma letra continua digitando uma maiúscula. Em teclados japoneses, 全角/半角 alterna a entrada, 変換 a ativa, e 無変換 a desativa. Com o coreano, 한/영 alterna o Hangul e 한자 converte para Hanja, independentemente de o seu teclado ter teclas dedicadas ou enviar Right Alt e Right Ctrl para isso, como muitos laptops fazem, portanto Right Alt e Right Ctrl não são modificadores simples ali; o ditado alterna com Alt + Space. `Ctrl + Space` continua disponível para Tmux e Herdr; `Shift + CapsLock` continua sendo a tecla compose.
 
 O indicador de teclado aparece à direita da barra quando você tem vários layouts de teclado ou métodos de entrada. Clique nele para alternar os idiomas de entrada; o japonês exibe あ para hiragana. Para escolhas de caracteres japoneses, mude para japonês, digite uma palavra como `nihongo` e pressione Space duas vezes. Pressione Enter para aceitar sua escolha. Se você também tiver vários layouts de teclado, clique com o botão direito no indicador para alternar entre eles.
 
-Use _Setup > Keyboard > Keyboard Inputs_ para selecionar layouts como inglês e francês, a partir das mesmas escolhas oferecidas durante a instalação. Use _Setup > Keyboard > Input Methods_ para selecionar quais mecanismos de composição estão ativos. Ambos os seletores abrem dentro do menu do Omarchy com suas seleções atuais marcadas. Clique ou pressione Enter para alternar uma escolha; cada alteração é aplicada imediatamente. Desmarcar um método de entrada o remove do ciclo sem desinstalá-lo; o teclado permanece disponível.
+Use _Setup > Keyboard > Keyboard Inputs_ para selecionar layouts como inglês e francês, a partir das mesmas escolhas oferecidas durante a instalação. Use _Setup > Keyboard > Input Methods_ para selecionar quais mecanismos de composição estão ativos. Ambos os seletores abrem dentro do menu do Ve OS com suas seleções atuais marcadas. Clique ou pressione Enter para alternar uma escolha; cada alteração é aplicada imediatamente. Desmarcar um método de entrada o remove do ciclo sem desinstalá-lo; o teclado permanece disponível.
 
 Execute `omarchy setup keyboard` ou `omarchy setup input` para abrir os mesmos seletores. Para acrescentar um idioma a partir da linha de comando, use `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` ou `cangjie5`. Quick, Boshiamy e Array vêm no mesmo pacote que Cangjie e aparecem no seletor Input Methods. Suas teclas personalizadas de alternância são preservadas. Para layouts ou teclas alternativos de mecanismo, instale `fcitx5-configtool` com `omarchy pkg add fcitx5-configtool` e inicie-o a partir de um terminal. Selecionar um idioma de entrada não altera o idioma da área de trabalho. Escolher japonês, coreano ou chinês em _Setup > Language_ adiciona seu método de entrada quando você ainda não tem nenhum.
 

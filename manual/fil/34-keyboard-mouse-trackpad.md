@@ -1,6 +1,6 @@
 # Keyboard, Mouse, Trackpad
 
-Pinahihintulutan ka ng Hyprland na i-configure ang lahat ng input mo nang napakadetalyado. Maaari mong gawing napakabilis ng keyboard repeat o ipagamit ang natural scrolling sa trackpad. Binabago mo ang lahat ng ito sa `~/.config/hypr/input.lua`, na maaari mo ring maabot sa pamamagitan ng _Setup > Input_ sa Omarchy menu (`Super + Space`). Anumang itakda mo roon ay papalitan ang mga default ng Omarchy.
+Pinahihintulutan ka ng Hyprland na i-configure ang lahat ng input mo nang napakadetalyado. Maaari mong gawing napakabilis ng keyboard repeat o ipagamit ang natural scrolling sa trackpad. Binabago mo ang lahat ng ito sa `~/.config/hypr/input.lua`, na maaari mo ring maabot sa pamamagitan ng _Setup > Input_ sa Ve OS menu (`Super + Space`). Anumang itakda mo roon ay papalitan ang mga default ng Ve OS.
 
 Narito ang isang halimbawa:
 
@@ -59,7 +59,7 @@ I-swipe ang trackpad para gumalaw sa desktop:
 | --- | --- |
 | Tatlong daliri pakaliwa / pakanan | Nakaraan / susunod na workspace, kasama ang mga walang laman |
 | Tatlong daliri pataas | I-toggle ang AI console |
-| Tatlong daliri pababa | Buksan ang Omarchy menu |
+| Tatlong daliri pababa | Buksan ang Ve OS menu |
 | Apat na daliri pakaliwa / pakanan | Ilipat ang aktibong window sa nakaraan / susunod na workspace |
 | Apat na daliri pababa | I-toggle ang fullscreen |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Para i-off ang lahat ng gesture ng Omarchy, itakda ang `omarchy_default_gestures = false` malapit sa itaas ng `~/.config/hypr/hyprland.lua`, bago mag-load ang mga default ng Omarchy.
+Para i-off ang lahat ng gesture ng Ve OS, itakda ang `omarchy_default_gestures = false` malapit sa itaas ng `~/.config/hypr/hyprland.lua`, bago mag-load ang mga default ng Ve OS.
 
 Sa mga Dell XPS laptop na may haptic touchpad, maaari mo ring itakda ang lakas ng click sa low, mid, o high sa ilalim ng _Trigger > Hardware > Touchpad Haptics_.
 
 ### Pagta-type sa Chinese, Japanese, at iba pang wika
 
-Piliin ang Japanese, Korean, Chinese (Simplified, Pinyin), Taiwan (Zhuyin), o Hong Kong (Cangjie) kapag nagtanong ang installer tungkol sa keyboard mo. Awtomatikong kino-configure ng Omarchy ang keyboard at ang tumutugmang input engine, kasama na sa offline na first-boot setup. Gumagamit ang Japanese ng Mozc, gumagamit ang Korean ng standard na two-set Hangul, gumagamit ang Simplified Chinese ng Pinyin, gumagamit ang Taiwan ng standard na Zhuyin arrangement ng Chewing, at gumagamit ang Hong Kong ng Cangjie na may mga Hong Kong character form. Nagbibigay ang Japanese (US keyboard) ng Mozc na may US keyboard layout. Nananatili ang mga Hangul, Zhuyin, at Cangjie key sa kanilang standard na posisyon kahit nagta-type ka ng mga Latin letter gamit ang Dvorak, Colemak, o AZERTY. Kung idinagdag mo ang Hangul o Chewing bago ito, alisin ito sa pagkakapili at piliin itong muli sa ilalim ng _Setup > Keyboard > Input Methods_ para ilipat ang mga key nito roon; hindi gagalawin ng Omarchy ang isang engine na ginagamit mo na sa pagta-type.
+Piliin ang Japanese, Korean, Chinese (Simplified, Pinyin), Taiwan (Zhuyin), o Hong Kong (Cangjie) kapag nagtanong ang installer tungkol sa keyboard mo. Awtomatikong kino-configure ng Ve OS ang keyboard at ang tumutugmang input engine, kasama na sa offline na first-boot setup. Gumagamit ang Japanese ng Mozc, gumagamit ang Korean ng standard na two-set Hangul, gumagamit ang Simplified Chinese ng Pinyin, gumagamit ang Taiwan ng standard na Zhuyin arrangement ng Chewing, at gumagamit ang Hong Kong ng Cangjie na may mga Hong Kong character form. Nagbibigay ang Japanese (US keyboard) ng Mozc na may US keyboard layout. Nananatili ang mga Hangul, Zhuyin, at Cangjie key sa kanilang standard na posisyon kahit nagta-type ka ng mga Latin letter gamit ang Dvorak, Colemak, o AZERTY. Kung idinagdag mo ang Hangul o Chewing bago ito, alisin ito sa pagkakapili at piliin itong muli sa ilalim ng _Setup > Keyboard > Input Methods_ para ilipat ang mga key nito roon; hindi gagalawin ng Ve OS ang isang engine na ginagamit mo na sa pagta-type.
 
 Nagsisimula ang pagta-type sa Latin mode. Pindutin ang `Super + I` para umikot sa mga na-configure na input method, at ang `Super + Shift + I` para umikot pabalik. I-tap ang `Shift` nang mag-isa para lumabas mula sa isang input method tulad ng Pinyin papunta sa mga Latin letter, at i-tap itong muli para bumalik, gaya ng paggana ng Sogou, Microsoft Pinyin, at macOS; nagta-type pa rin ng malaking titik ang `Shift` kasama ng isang titik. Sa mga Japanese keyboard, ino-toggle ng 全角/半角 ang input, ino-on ito ng 変換, at ino-off ito ng 無変換. Sa Korean, pinapalitan ng 한/영 ang Hangul at kino-convert ng 한자 papunta sa Hanja, may dedicated na key man ang keyboard mo o nagpapadala ito ng Right Alt at Right Ctrl para sa mga ito, gaya ng ginagawa ng maraming laptop, kaya hindi simpleng modifier ang Right Alt at Right Ctrl roon; ino-toggle naman ang dictation gamit ang Alt + Space sa halip. Nananatiling available ang `Ctrl + Space` para sa Tmux at Herdr; nananatili ang `Shift + CapsLock` bilang compose key.
 
 Lumilitaw ang keyboard indicator sa kanan ng bar kapag marami kang keyboard layout o input method. I-click ito para magpalit ng input language; ipinapakita ng Japanese ang あ para sa hiragana. Para sa mga pagpipiliang character sa Japanese, lumipat sa Japanese, mag-type ng salitang gaya ng `nihongo`, pagkatapos ay pindutin ang Space nang dalawang beses. Pindutin ang Enter para tanggapin ang pinili mo. Kung marami ka ring keyboard layout, i-right-click ang indicator para umikot sa mga iyon.
 
-Gamitin ang _Setup > Keyboard > Keyboard Inputs_ para pumili ng mga layout gaya ng English at French, mula sa parehong mga pagpipiliang inaalok habang nag-i-install. Gamitin ang _Setup > Keyboard > Input Methods_ para piliin kung aling mga composition engine ang aktibo. Bumubukas ang dalawang picker sa loob ng Omarchy menu na naka-check ang kasalukuyan mong mga pinili. I-click o pindutin ang Enter para i-toggle ang isang pagpipilian; agad na magkakabisa ang bawat pagbabago. Ang pag-alis sa pagkakapili ng isang input method ay nag-aalis nito sa cycle nang hindi ito ina-uninstall; mananatiling available ang keyboard.
+Gamitin ang _Setup > Keyboard > Keyboard Inputs_ para pumili ng mga layout gaya ng English at French, mula sa parehong mga pagpipiliang inaalok habang nag-i-install. Gamitin ang _Setup > Keyboard > Input Methods_ para piliin kung aling mga composition engine ang aktibo. Bumubukas ang dalawang picker sa loob ng Ve OS menu na naka-check ang kasalukuyan mong mga pinili. I-click o pindutin ang Enter para i-toggle ang isang pagpipilian; agad na magkakabisa ang bawat pagbabago. Ang pag-alis sa pagkakapili ng isang input method ay nag-aalis nito sa cycle nang hindi ito ina-uninstall; mananatiling available ang keyboard.
 
 Patakbuhin ang `omarchy setup keyboard` o `omarchy setup input` para buksan ang parehong mga picker. Para magdagdag ng isang wika mula sa command line, gamitin ang `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing`, o `cangjie5`. Kasama ang Quick, Boshiamy, at Array sa parehong package ng Cangjie at lumilitaw ang mga ito sa Input Methods picker. Mananatili ang custom mong mga switching key. Para sa mga alternatibong layout o key ng engine, i-install ang `fcitx5-configtool` gamit ang `omarchy pkg add fcitx5-configtool` at ilunsad ito mula sa isang terminal. Hindi binabago ng pagpili ng input language ang wika ng desktop. Ang pagpili ng Japanese, Korean, o Chinese sa ilalim ng _Setup > Language_ ay nagdaragdag ng input method nito kapag wala ka pa nito.
 

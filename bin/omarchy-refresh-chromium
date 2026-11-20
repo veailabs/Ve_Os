@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Refresh the ~/.config/chromium-flags.conf file from the Omarchy defaults.
+# omarchy:summary=Refresh the ~/.config/chromium-flags.conf file from the Ve OS defaults.
 
 # Refresh the Chromium configuration
 omarchy-refresh-config chromium-flags.conf

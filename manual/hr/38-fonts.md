@@ -1,12 +1,12 @@
 # Fontovi
 
-Omarchy prema zadanim postavkama koristi JetBrainsMono Nerd Font i kao font terminala i kao font sustava.
+Ve OS prema zadanim postavkama koristi JetBrainsMono Nerd Font i kao font terminala i kao font sustava.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-To možete promijeniti putem izbornika _Izgled > Font_ u izborniku Omarchy (`Super + Space`). Time se monospace font postavlja posvuda: u terminalu, na traci i u svemu ostalome što ga zatraži.
+To možete promijeniti putem izbornika _Izgled > Font_ u izborniku Ve OS (`Super + Space`). Time se monospace font postavlja posvuda: u terminalu, na traci i u svemu ostalome što ga zatraži.
 
-Ostale popularne programerske fontove možete instalirati putem _Instaliraj > Stil > Font_ u izborniku Omarchy: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono i Iosevka udaljeni su samo jedan klik, u svojim verzijama Nerd Font, tako da glifovi na traci i u terminalu i dalje rade. Nakon što instalirate jedan, odaberite ga pod _Izgled > Font_.
+Ostale popularne programerske fontove možete instalirati putem _Instaliraj > Stil > Font_ u izborniku Ve OS: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono i Iosevka udaljeni su samo jedan klik, u svojim verzijama Nerd Font, tako da glifovi na traci i u terminalu i dalje rade. Nakon što instalirate jedan, odaberite ga pod _Izgled > Font_.
 
 ## Kineski, japanski i korejski
 

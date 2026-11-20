@@ -1,12 +1,12 @@
 # Schlafmodus des Systems
 
-Omarchy aktiviert Bereitschaft und Ruhezustand standardmäßig, aber wenn du mit einem von beiden Probleme auf deiner Maschine hast, kannst du sie ausschalten.
+Ve OS aktiviert Bereitschaft und Ruhezustand standardmäßig, aber wenn du mit einem von beiden Probleme auf deiner Maschine hast, kannst du sie ausschalten.
 
 Auf NVIDIA GB10-Maschinen wie dem DGX Spark und dem ASUS Ascent GX10 sind Bereitschaft und Ruhezustand ausgeschaltet, wie auch in NVIDIAs DGX OS, weil noch nicht gezeigt wurde, dass Schlaf auf dieser Hardware funktioniert. Dasselbe gilt für das ASUS Zenbook A16 (UX3607OA), wo die Bereitschaft den Chip noch nicht vollständig in den Schlaf versetzt und über Nacht hängen bleiben kann. Der Bereitschafts-Schalter und die Ruhezustands-Einrichtung gelten dort nicht. Um den Schlaf wieder einzuschalten, entferne `/etc/systemd/sleep.conf.d/omarchy-sleep-disabled.conf` mit `sudo rm`; Bereitschaft kehrt dann ins Menü zurück, und der Ruhezustand kann wie auf anderen Maschinen eingerichtet werden. Das Ausführen von `sudo omarchy apply hardware --install-user "$USER"` stellt die Datei wieder her.
 
 ### Leistungsprofile
 
-Auf einem Laptop merkt sich Omarchy dein Leistungsprofil getrennt für Netzbetrieb und Akkubetrieb und wechselt zwischen beiden, wenn du das Netzteil ein- oder aussteckst. Standardmäßig bedeutet das Leistung am Netz und ausgewogen im Akkubetrieb.
+Auf einem Laptop merkt sich Ve OS dein Leistungsprofil getrennt für Netzbetrieb und Akkubetrieb und wechselt zwischen beiden, wenn du das Netzteil ein- oder aussteckst. Standardmäßig bedeutet das Leistung am Netz und ausgewogen im Akkubetrieb.
 
 Was deine Maschine anbietet, siehst du mit `omarchy powerprofiles list`, und das gewünschte Profil für den Zustand, in dem du dich gerade befindest, stellst du mit `omarchy powerprofiles set autodetect power-saver` ein. Um den anderen Zustand einzustellen, ohne irgendetwas auszustecken, nenne ihn direkt: `omarchy powerprofiles set battery power-saver`. Was auch immer du auswählst, bekommst du beim nächsten Mal in diesem Zustand wieder.
 

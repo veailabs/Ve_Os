@@ -10,7 +10,7 @@ Kortit tarjoavat sen, mitä ne kantavat: _Kopioi koodi_ vahvistuskoodeille (pide
 
 Kun haluat käyttää niitä ilman hiirtä, paina `Super + Ctrl + ,`. Uusin ilmoitus on valittuna ja sen painikkeet numeroituna: käytä painiketta painamalla sen numeroa, napsauta ilmoitusta painamalla `Enter`, siirry ilmoitusten välillä painikkeilla `↑` ja `↓`, hylkää ilmoitus painamalla `Delete` ja palauta näppäimistö painamalla `Esc`. Se päästää myös itse irti muutaman käyttämättömän sekunnin jälkeen.
 
-Ilmoitusten hiljentäminen pitää ne poissa näkyvistä, lukuun ottamatta Omarchyn omia vahvistuksia, hätävaroituksia ja vahvistuskoodeja, joita pyysit hetki sitten. Tuo viimeisimmät takaisin näytölle, olivatpa ne pidätettyinä tai eivät, painamalla `Super + Shift + Alt + ,`. Historiaa säilytetään vuorokauden ajan.
+Ilmoitusten hiljentäminen pitää ne poissa näkyvistä, lukuun ottamatta Ve OSn omia vahvistuksia, hätävaroituksia ja vahvistuskoodeja, joita pyysit hetki sitten. Tuo viimeisimmät takaisin näytölle, olivatpa ne pidätettyinä tai eivät, painamalla `Super + Shift + Alt + ,`. Historiaa säilytetään vuorokauden ajan.
 
 ## Pikanäppäinilmoitukset
 

@@ -1,6 +1,6 @@
 # Networking
 
-Networking in Omarchy is handled by NetworkManager, and you drive it from the network icon in the [top bar](05-the-top-bar.md) or with `Super + Ctrl + N`.
+Networking in Ve OS is handled by NetworkManager, and you drive it from the network icon in the [top bar](05-the-top-bar.md) or with `Super + Ctrl + N`.
 
 That panel scans for Wi-Fi networks, shows signal strength, and connects. Ethernet needs nothing at all — plug it in and it works. If you'd rather stay in the terminal, `nmtui` gives you the same controls, and there's an `omarchy network` command group too.
 
@@ -12,7 +12,7 @@ If you actually need the password itself, `omarchy network password <interface>`
 
 ## DNS
 
-Omarchy uses whatever DNS your network hands out over DHCP. You can override that for the whole machine under _Setup > Network > DNS_, where Cloudflare and Google are one click away. Pick _Custom_ to type in your own servers.
+Ve OS uses whatever DNS your network hands out over DHCP. You can override that for the whole machine under _Setup > Network > DNS_, where Cloudflare and Google are one click away. Pick _Custom_ to type in your own servers.
 
 From the terminal, `omarchy dns` prints the current provider and `omarchy dns Cloudflare` sets one.
 
@@ -24,7 +24,7 @@ This pins the band rather than a specific access point, so you keep roaming betw
 
 ## How fast is it?
 
-_Trigger > Speed Test > Network Speed Test_ measures your actual up and down speed with a pair of dials. From the terminal it's `omarchy network speedtest down` or `up`. It measures against Omarchy's own service and counts only its test transfers. Other downloads can compete for bandwidth, but they aren't added to the speed-test result. (There's a disk speed test sitting next to it in that menu, if you're benchmarking the other bottleneck.)
+_Trigger > Speed Test > Network Speed Test_ measures your actual up and down speed with a pair of dials. From the terminal it's `omarchy network speedtest down` or `up`. It measures against the upstream Omarchy service and counts only its test transfers. Other downloads can compete for bandwidth, but they aren't added to the speed-test result. (There's a disk speed test sitting next to it in that menu, if you're benchmarking the other bottleneck.)
 
 ## The firewall
 

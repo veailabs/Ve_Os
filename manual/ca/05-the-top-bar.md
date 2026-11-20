@@ -1,14 +1,14 @@
 # La barra superior
 
-La franja que recorre la part superior de la pantalla és la barra d'Omarchy. No és una barra d'estat afegida com un pegat, sinó part de la shell d'Omarchy, l'únic procés de Quickshell de llarga durada que també dibuixa el menú, les notificacions, les finestres emergents OSD i la pantalla de bloqueig. Per això el seu tema combina perfectament amb tota la resta i per això un panell s'obre a l'instant en lloc d'iniciar una aplicació nova.
+La franja que recorre la part superior de la pantalla és la barra d'Ve OS. No és una barra d'estat afegida com un pegat, sinó part de la shell d'Ve OS, l'únic procés de Quickshell de llarga durada que també dibuixa el menú, les notificacions, les finestres emergents OSD i la pantalla de bloqueig. Per això el seu tema combina perfectament amb tota la resta i per això un panell s'obre a l'instant en lloc d'iniciar una aplicació nova.
 
 És també l'única peça de l'escriptori que sempre és a la pantalla, així que val la pena saber què fan tots aquells petits glifs.
 
 ## Què hi ha per defecte
 
-La barra té tres seccions. A l'esquerra hi ha el logotip d'Omarchy (el llançador del menú) i els indicadors d'espais de treball. Al centre hi tens els indicadors d'estat, el rellotge, Elsewhen (un rellotge mundial), el temps i una insígnia d'actualització d'Omarchy. A la dreta: la safata del sistema, la disposició del teclat (quan n'hi ha més d'una de configurada), els agents, el bluetooth, la xarxa, l'àudio, la pantalla i l'energia.
+La barra té tres seccions. A l'esquerra hi ha el logotip d'Ve OS (el llançador del menú) i els indicadors d'espais de treball. Al centre hi tens els indicadors d'estat, el rellotge, Elsewhen (un rellotge mundial), el temps i una insígnia d'actualització d'Ve OS. A la dreta: la safata del sistema, la disposició del teclat (quan n'hi ha més d'una de configurada), els agents, el bluetooth, la xarxa, l'àudio, la pantalla i l'energia.
 
-Alguns d'aquests només apareixen quan tenen alguna cosa a dir. La disposició del teclat només apareix si n'has configurat més d'una. La insígnia d'actualització només apareix quan hi ha una actualització d'Omarchy esperant. I la icona dels agents apareix la primera vegada que Omarchy troba ús de codificació amb IA a la màquina (vegeu [IA](17-ai.md)).
+Alguns d'aquests només apareixen quan tenen alguna cosa a dir. La disposició del teclat només apareix si n'has configurat més d'una. La insígnia d'actualització només apareix quan hi ha una actualització d'Ve OS esperant. I la icona dels agents apareix la primera vegada que Ve OS troba ús de codificació amb IA a la màquina (vegeu [IA](17-ai.md)).
 
 ## Fer clic arreu
 
@@ -16,7 +16,7 @@ Gairebé tots els widgets fan alguna cosa amb el clic esquerre, dret i central, 
 
 | Widget | Esquerre | Dret | Central / desplaçament |
 | --- | --- | --- | --- |
-| Menú | Menú d'Omarchy | Terminal nou | — |
+| Menú | Menú d'Ve OS | Terminal nou | — |
 | Espais de treball | Centra aquell espai de treball en aquest monitor | — | Desplaçament: espai de treball següent/anterior |
 | Rellotge | Finestra emergent del calendari | Canvia el format de l'etiqueta | Central: selector de fus horari |
 | Temps | Finestra emergent de la previsió | Temps complet com a notificació | Central: actualitza |
@@ -29,7 +29,7 @@ Gairebé tots els widgets fan alguna cosa amb el clic esquerre, dret i central, 
 | Multimèdia | Reprodueix/posa en pausa | Finestra emergent de la portada | Central: següent · desplaçament: anterior/següent |
 | Agents | Panell d'agents | Inicia el teu agent | Central: subscripció següent |
 | Safata | Passa el cursor per sobre per mostrar el calaix | Clic dret al xebró per gestionar-lo | — |
-| Actualització d'Omarchy | Executa l'actualització | — | — |
+| Actualització d'Ve OS | Executa l'actualització | — | — |
 
 No tot el que hi ha en aquella taula és a la teva barra d'entrada. El widget multimèdia (MPRIS en reproducció ara, amb una pista i un artista que es desplacen) i el widget del micròfon estan integrats, però desactivats per defecte — afegeix-los si els vols, tal com es descriu més avall.
 
@@ -137,6 +137,6 @@ Cada widget és una entrada en una de les cinc matrius de disposició, i la seva
 
 `center` és la caixa del mig de la barra: tot el que conté se centra a la pantalla com un sol grup. `centerBegin` i `centerEnd` pengen de cada costat de la caixa, i així és com el rellotge es manté ben bé al centre encara que el temps i la insígnia d'actualització vinguin i vagin. Posa més d'un widget a `center` i se centraran junts; deixa'l buit i `centerBegin` i `centerEnd` es trobaran al mig de la barra.
 
-Una regla que val la pena interioritzar: **un cop tens el teu propi `shell.json`, és canònic**. Fins que no personalitzis res, la shell llegeix el fitxer per defecte d'Omarchy. En el moment en què arrossegues un widget, executes `omarchy bar` o edites el fitxer tu mateix, és teu — no hi ha cap fusió profunda, de manera que els widgets nous per defecte de les futures versions d'Omarchy no apareixeran automàticament a la teva barra. `omarchy bar defaults` torna a posar la disposició subministrada sempre que vulguis començar de zero.
+Una regla que val la pena interioritzar: **un cop tens el teu propi `shell.json`, és canònic**. Fins que no personalitzis res, la shell llegeix el fitxer per defecte d'Ve OS. En el moment en què arrossegues un widget, executes `omarchy bar` o edites el fitxer tu mateix, és teu — no hi ha cap fusió profunda, de manera que els widgets nous per defecte de les futures versions d'Ve OS no apareixeran automàticament a la teva barra. `omarchy bar defaults` torna a posar la disposició subministrada sempre que vulguis començar de zero.
 
 El mateix fitxer també conté els teus temps d'inactivitat al nivell superior, fora de la clau `bar`: `idle.screensaver` i `idle.lock`, tots dos en segons des que vas passar a estar inactiu. Així, l'estalvi de pantalla per defecte s'activa als 150 segons i el bloqueig als 300.

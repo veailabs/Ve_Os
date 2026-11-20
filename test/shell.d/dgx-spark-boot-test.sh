@@ -90,7 +90,7 @@ uki_path='HD(3,GPT,1-2,0x800,0x400000)/\\EFI\\Linux\\omarchy_linux-aarch64.efi'
 apply_hardware() {
   run spark "$1" bash -eE -c 'source "$1"' bash "$setup"
 }
-for entry in "Boot0002* Omarchy\t$uki_path" 'Boot0002* Omarchy'; do
+for entry in "Boot0002* Omarchy\t$uki_path" 'Boot0002* Omarchy' "Boot0002* Ve OS\t$uki_path" 'Boot0002* Ve OS'; do
   TEST_EFI_ENTRIES="$entry" apply_hardware "$scratch/apply-direct" >/dev/null
   [[ ! -e $scratch/apply-direct/limine-entry-tool.d/$config_name ]] ||
     fail "omarchy apply hardware keeps a Direct Boot Spark on its UKI"
@@ -147,7 +147,9 @@ pass "the menu hides Direct Boot on a Spark that boots without a UKI"
 numbers() { TEST_EFI_ENTRIES="$1" PATH="$scratch/bin:$PATH" bash "$direct_boot" --number; }
 [[ $(numbers "Boot0002* Omarchy\t$uki_path") == 0002 ]] || fail "--number names an active Omarchy entry"
 [[ $(numbers "Boot0003  Omarchy\t$uki_path") == 0003 ]] || fail "--number names an inactive Omarchy entry"
-for entry in 'Boot0002* Omarchy Rescue' 'Boot0001* Omarchy - Samsung 422087P\tHD(1,GPT,1-2,0x800,0x400000)/\\EFI\\LIMINE\\LIMINE_AA64.EFI'; do
+[[ $(numbers "Boot0002* Ve OS\t$uki_path") == 0002 ]] || fail "--number names an active Ve OS entry"
+[[ $(numbers "Boot0003  Ve OS\t$uki_path") == 0003 ]] || fail "--number names an inactive Ve OS entry"
+for entry in 'Boot0002* Ve OS Rescue' 'Boot0002* Omarchy Rescue' 'Boot0001* Omarchy - Samsung 422087P\tHD(1,GPT,1-2,0x800,0x400000)/\\EFI\\LIMINE\\LIMINE_AA64.EFI'; do
   status=0
   numbers "$entry" >/dev/null || status=$?
   (( status == 1 )) || fail "--number finds no Omarchy entry in: $entry"

@@ -1,4 +1,6 @@
-# Tacaíocht do Mac
+# Ve OS — Tacaíocht do Mac
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Tá tacaíocht ionsuite in Omarchy do **Macanna Intel**. Tá cúpla teorainn aitheanta ann faoi láthair, ach fad is atá tú ar an eolas fúthu agus sásta leo; is féidir leat beatha nua a thabhairt do do shean-Mhacanna trí Omarchy a lódáil.
 

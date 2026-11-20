@@ -1,10 +1,10 @@
 # Shell-plugins
 
-Omarchy-skrivbordet körs som en enda långlivad Quickshell-process kallad `omarchy-shell`, och nästan allt du ser på skärmen är en plugin i den. Fältet är en plugin. Det är också panelerna som faller ner från det, helskärmsöverläggen som emoji-väljaren och urklippshanteraren, själva Omarchy-menyn, låsskärmen, polkit-dialogen och de huvudlösa tjänsterna som bevakar ditt batteri och värmer din skärm på natten.
+Ve OS-skrivbordet körs som en enda långlivad Quickshell-process kallad `omarchy-shell`, och nästan allt du ser på skärmen är en plugin i den. Fältet är en plugin. Det är också panelerna som faller ner från det, helskärmsöverläggen som emoji-väljaren och urklippshanteraren, själva Ve OS-menyn, låsskärmen, polkit-dialogen och de huvudlösa tjänsterna som bevakar ditt batteri och värmer din skärm på natten.
 
-Det är inte bara en implementationsdetalj. Det betyder att du kan stänga av delar av skrivbordet, byta ut dem, eller skriva dina egna utan att röra en enda rad av Omarchys källkod.
+Det är inte bara en implementationsdetalj. Det betyder att du kan stänga av delar av skrivbordet, byta ut dem, eller skriva dina egna utan att röra en enda rad av Ve OSs källkod.
 
-Förstaparts-pluginsen levereras med Omarchy och bor i `$OMARCHY_PATH/shell/plugins/`. Allt du lägger till själv — dina egna experiment, eller något du hittade på GitHub — bor i `~/.config/omarchy/plugins/`. Båda upptäcks på samma sätt vid uppstart, men inbyggda får betrodda shell-gränssnitt medan tredjeparts-plugins får ett begränsat gränssnitt avgränsat till sin egen tjänst och livscykel. Kloner av inbyggda behåller endast den källspecifika konfiguration och de UI-anrop som behövs för det ursprungliga beteendet.
+Förstaparts-pluginsen levereras med Ve OS och bor i `$OMARCHY_PATH/shell/plugins/`. Allt du lägger till själv — dina egna experiment, eller något du hittade på GitHub — bor i `~/.config/omarchy/plugins/`. Båda upptäcks på samma sätt vid uppstart, men inbyggda får betrodda shell-gränssnitt medan tredjeparts-plugins får ett begränsat gränssnitt avgränsat till sin egen tjänst och livscykel. Kloner av inbyggda behåller endast den källspecifika konfiguration och de UI-anrop som behövs för det ursprungliga beteendet.
 
 ## Se vad du har
 

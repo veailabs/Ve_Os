@@ -1,6 +1,6 @@
 # Alati ljuske
 
-Osim standardnih Linux alata, Omarchy dolazi i s hrpom poboljšanih alata ljuske. Evo ključnih.
+Osim standardnih Linux alata, Ve OS dolazi i s hrpom poboljšanih alata ljuske. Evo ključnih.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Potpuni priručnik može se pronaći putem `man yt-dlp`.
 
 [try](https://github.com/tobi/try) olakšava upravljanje programerskim eksperimentima s direktorijima označenima datumom. Svi eksperimenti nalaze se u `~/Work/tries` i možeš im pristupiti putem `try`.
 
-Omarchy ne dodaje direktorij `bin/` projekta u `PATH` automatski. Pokreni pouzdane alate lokalne za projekt s eksplicitnom relativnom putanjom, poput `bin/rails` ili `./bin/dev`.
+Ve OS ne dodaje direktorij `bin/` projekta u `PATH` automatski. Pokreni pouzdane alate lokalne za projekt s eksplicitnom relativnom putanjom, poput `bin/rails` ili `./bin/dev`.

@@ -10,7 +10,7 @@ Kartītes piedāvā to, ko tās nes: _Kopēt kodu_ verifikācijas kodiem (tie ne
 
 Lai tos lietotu bez peles, nospied `Super + Ctrl + ,`. Tiek atlasīts jaunākais paziņojums un tā pogas tiek sanumurētas: nospied ciparu, lai izmantotu kādu no tām, `Enter`, lai noklikšķinātu uz paziņojuma, `↑` un `↓`, lai pārvietotos starp paziņojumiem, `Delete`, lai kādu noraidītu, un `Esc`, lai atdotu tastatūru atpakaļ. Pēc dažām dīkstāves sekundēm tā arī pati atlaižas.
 
-Paziņojumu apklusināšana tos aiztur, izņemot pašas Omarchy apstiprinājumus, ārkārtas brīdinājumus un verifikācijas kodus, kurus tu pirms brīža pats pieprasīji. Parādi pēdējos dažus atkal uz ekrāna, aizturētus vai ne, ar `Super + Shift + Alt + ,`. Vēsture tiek glabāta vienu dienu.
+Paziņojumu apklusināšana tos aiztur, izņemot pašas Ve OS apstiprinājumus, ārkārtas brīdinājumus un verifikācijas kodus, kurus tu pirms brīža pats pieprasīji. Parādi pēdējos dažus atkal uz ekrāna, aizturētus vai ne, ar `Super + Shift + Alt + ,`. Vēsture tiek glabāta vienu dienu.
 
 ## Karsto taustiņu paziņojumi
 

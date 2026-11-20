@@ -41,7 +41,7 @@ Te vezave obstajajo samo, dokler je Omasnap odprt, zato ne morejo priti v navzkr
 
 ## Snemanje zaslona
 
-`Alt + Print Screen` odpre _Sprožilec > Zajem > Snemanje zaslona_, kjer vas vpraša, kaj želite na zvočnem posnetku: brez zvoka, zvok namizja, namizje in mikrofon ali namizje, mikrofon in spletno kamero. Zadnja možnost se prikaže samo, če imate dejansko priključeno kamero. Izberite eno in Omarchyjev izbirnik za snemanje vam omogoči, da povlečete območje ali kliknete okno ali monitor.
+`Alt + Print Screen` odpre _Sprožilec > Zajem > Snemanje zaslona_, kjer vas vpraša, kaj želite na zvočnem posnetku: brez zvoka, zvok namizja, namizje in mikrofon ali namizje, mikrofon in spletno kamero. Zadnja možnost se prikaže samo, če imate dejansko priključeno kamero. Izberite eno in Ve OSjev izbirnik za snemanje vam omogoči, da povlečete območje ali kliknete okno ali monitor.
 
 Snemanje poganja gpu-screen-recorder, ki kodira na GPU pri 60fps in se po potrebi vrne na CPU. Rezultat je MP4 v `~/Videos` z imenom `screenrecording-2026-08-13_14-22-05.mp4`. To spremenite z `OMARCHY_SCREENRECORD_DIR` — a upoštevajte, da mora ta imenik za razliko od imenika za posnetke zaslona že obstajati, sicer se snemanje noče začeti.
 

@@ -1,10 +1,10 @@
 # Čaulas spraudņi
 
-Omarchy darbvirsma darbojas kā viens ilgi dzīvojošs Quickshell process ar nosaukumu `omarchy-shell`, un gandrīz viss, ko redzat ekrānā, tās iekšienē ir spraudnis. Josla ir spraudnis. Tāpat arī paneļi, kas no tās nolaižas, pilnekrāna pārklājumi, piemēram, emocijzīmju atlasītājs un starpliktuves pārvaldnieks, pati Omarchy izvēlne, bloķēšanas ekrāns, polkit dialogs un bezgalvu pakalpojumi, kas vēro jūsu akumulatoru un naktī sasilda ekrānu.
+Ve OS darbvirsma darbojas kā viens ilgi dzīvojošs Quickshell process ar nosaukumu `omarchy-shell`, un gandrīz viss, ko redzat ekrānā, tās iekšienē ir spraudnis. Josla ir spraudnis. Tāpat arī paneļi, kas no tās nolaižas, pilnekrāna pārklājumi, piemēram, emocijzīmju atlasītājs un starpliktuves pārvaldnieks, pati Ve OS izvēlne, bloķēšanas ekrāns, polkit dialogs un bezgalvu pakalpojumi, kas vēro jūsu akumulatoru un naktī sasilda ekrānu.
 
-Tas nav tikai īstenošanas sīkums. Tas nozīmē, ka jūs varat darbvirsmas daļas izslēgt, tās izmainīt vietām vai rakstīt savējās, nepieskaroties nevienai Omarchy avota rindai.
+Tas nav tikai īstenošanas sīkums. Tas nozīmē, ka jūs varat darbvirsmas daļas izslēgt, tās izmainīt vietām vai rakstīt savējās, nepieskaroties nevienai Ve OS avota rindai.
 
-Pirmās puses spraudņi tiek piegādāti kopā ar Omarchy un dzīvo mapē `$OMARCHY_PATH/shell/plugins/`. Viss, ko pievienojat pats — savi eksperimenti vai kaut kas GitHub vietnē atrasts —, dzīvo mapē `~/.config/omarchy/plugins/`. Abi startēšanās laikā tiek atklāti vienādi, taču iebūvētie saņem uzticamas čaulas saskarnes, kamēr trešo pušu spraudņi saņem ierobežotu saskarni, kas norobežota līdz viņu pašu pakalpojumam un dzīves ciklam. Iebūvēto kloniem saglabājas tikai avotam raksturīgās konfigurācijas un lietotāja saskarnes izsaukumi, kas nepieciešami sākotnējai uzvedībai.
+Pirmās puses spraudņi tiek piegādāti kopā ar Ve OS un dzīvo mapē `$OMARCHY_PATH/shell/plugins/`. Viss, ko pievienojat pats — savi eksperimenti vai kaut kas GitHub vietnē atrasts —, dzīvo mapē `~/.config/omarchy/plugins/`. Abi startēšanās laikā tiek atklāti vienādi, taču iebūvētie saņem uzticamas čaulas saskarnes, kamēr trešo pušu spraudņi saņem ierobežotu saskarni, kas norobežota līdz viņu pašu pakalpojumam un dzīves ciklam. Iebūvēto kloniem saglabājas tikai avotam raksturīgās konfigurācijas un lietotāja saskarnes izsaukumi, kas nepieciešami sākotnējai uzvedībai.
 
 ## Skatoties, kas jums ir
 

@@ -1,4 +1,6 @@
-# نصب دوگانه
+# Ve OS — نصب دوگانه
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 می‌توانید Omarchy را روی یک پارتیشن واحد در کنار Windows یا نصب‌های دیگر نصب کنید.
 

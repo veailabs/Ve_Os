@@ -28,7 +28,7 @@ omarchy bar set omarchy.clock format "dddd h:mm AP"
 
 ### タイムゾーンを変更するには？
 
-Omarchy メニューで _Update > Timezone_ を実行し、一覧から選びます。タイムゾーンは合っているのに時計自体がずれている場合は、_Update > Time_ で時刻同期を再起動できます。
+Ve OS メニューで _Update > Timezone_ を実行し、一覧から選びます。タイムゾーンは合っているのに時計自体がずれている場合は、_Update > Time_ で時刻同期を再起動できます。
 
 ### DNS を変更したり、Wi-Fi を共有したり、接続速度を確認したりするには？
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 画面録画についても `OMARCHY_SCREENRECORD_DIR` を使って同じことができます。
 
-Omasnap はスクリーンショット用ディレクトリを自動で作成します。画面録画用ディレクトリは自分で作成し、どちらの環境変更も反映させるために Omarchy を再起動してください。
+Omasnap はスクリーンショット用ディレクトリを自動で作成します。画面録画用ディレクトリは自分で作成し、どちらの環境変更も反映させるために Ve OS を再起動してください。
 
 ### Apple Studio Display のスピーカーと Web カメラを使えるようにするには？
 
 USB C を差すだけで全部動くと思いがちですが、残念ながらそうはいきません。確実に動かすために私が見つけた解決策は、[WJESOG DisplayPort + USB-A => USB-C ケーブル](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/) を使うことです。そうすればスピーカーも Web カメラも見事に動作します。
 
-Apple Displays（Studio と XDR の両方）については、Omarchy に輝度コントロールが組み込まれていて、通常のキーボードの輝度ボタンで操作できることも覚えておいてください。
+Apple Displays（Studio と XDR の両方）については、Ve OS に輝度コントロールが組み込まれていて、通常のキーボードの輝度ボタンで操作できることも覚えておいてください。
 
 ### 余分なソフトウェアを全部取り除くには？
 
@@ -72,7 +72,7 @@ Obsidian や LibreOffice のようなプログラム、その他のプリイン�
 
 _Remove > Package_ を実行すると、インストールされているすべてのパッケージが表示されます。削除したいパッケージは tab で選択し、return で選択したものをすべて削除し始められます。
 
-不要なプリインストール済み Web アプリは、Omarchy メニューの _Remove > Web App_ から削除できます。
+不要なプリインストール済み Web アプリは、Ve OS メニューの _Remove > Web App_ から削除できます。
 
 あるいは _Remove > Preinstalls_ を実行すれば、プリインストールされた余分なもの — Web アプリ、TUIs、オプションのアプリケーション — を一度に一掃できます。それらを起動していたホットキーも一緒に消えるので、`~/.config/hypr/bindings.lua` には自分のものを入れるためのまっさらなバインディングが残ります。
 

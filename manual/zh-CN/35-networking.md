@@ -1,6 +1,6 @@
 # 网络
 
-Omarchy 中的网络由 NetworkManager 处理，你可以从[顶栏](05-the-top-bar.md)中的网络图标来操作它，也可以使用 `Super + Ctrl + N`。
+Ve OS 中的网络由 NetworkManager 处理，你可以从[顶栏](05-the-top-bar.md)中的网络图标来操作它，也可以使用 `Super + Ctrl + N`。
 
 该面板会扫描 Wi-Fi 网络，显示信号强度，并进行连接。以太网什么都不用管——插上就能用。如果你更愿意待在终端里，`nmtui` 提供了相同的控制功能，另外还有一个 `omarchy network` 命令组。
 
@@ -12,7 +12,7 @@ Omarchy 中的网络由 NetworkManager 处理，你可以从[顶栏](05-the-top-
 
 ## DNS
 
-Omarchy 使用你的网络通过 DHCP 分发的任何 DNS。你可以在 _设置 > 网络 > DNS_ 下为整台机器覆盖这一设置，在那里 Cloudflare 和 Google 都只需要点一下。选择 _Custom_ 即可输入你自己的服务器。
+Ve OS 使用你的网络通过 DHCP 分发的任何 DNS。你可以在 _设置 > 网络 > DNS_ 下为整台机器覆盖这一设置，在那里 Cloudflare 和 Google 都只需要点一下。选择 _Custom_ 即可输入你自己的服务器。
 
 在终端里，`omarchy dns` 会打印当前的提供商，而 `omarchy dns Cloudflare` 则会设置一个提供商。
 

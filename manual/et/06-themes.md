@@ -1,8 +1,8 @@
 # Teemad
 
-Omarchyga on kaasas kakskümmend kaks kaunist teemat. Saad nende vahel valida Omarchy menüüs jaotise _Appearance > Theme_ kaudu (`Super + Space`) või hüpata otse teemavalijasse klahvikombinatsiooniga `Super + Ctrl + T`.
+Ve OSga on kaasas kakskümmend kaks kaunist teemat. Saad nende vahel valida Ve OS menüüs jaotise _Appearance > Theme_ kaudu (`Super + Space`) või hüpata otse teemavalijasse klahvikombinatsiooniga `Super + Ctrl + T`.
 
-Iga teema kujundab töölaua, terminali, neovimi, tegevusekraani (btop), Chromiumi ja kogu Omarchy kesta: ülemise riba, menüü, teavitused, OSD ja lukustuskuva. (Obsidiani puhul pead Omarchy teema rakenduse seest käsitsi valima jaotise _Appearance > Themes_ kaudu).
+Iga teema kujundab töölaua, terminali, neovimi, tegevusekraani (btop), Chromiumi ja kogu Ve OS kesta: ülemise riba, menüü, teavitused, OSD ja lukustuskuva. (Obsidiani puhul pead Ve OS teema rakenduse seest käsitsi valima jaotise _Appearance > Themes_ kaudu).
 
 Teemadel on hulk taustapilte, mille vahel saad valida klahvikombinatsiooniga `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Rakenduste käivitaja ja doki ikoonid on joonistatud sinu teema värvides, nii e
 
 Kellegi teise tehtud ikoonikomplekti saad paigaldada valikuga _Install > Style > Icons_ (või käsuga `omarchy icons install <git url>`) ja selle uuesti eemaldada jaotise _Remove > Icons_ alt. _Update > Extra Icons_ toob sinu paigaldatud komplektide uusima versiooni.
 
-Oma komplekti tegemiseks pane ikoonid kausta `~/.config/omarchy/icons/<name>/`, üks fail iga rakenduse kohta, nimega rakenduse `.desktop` faili rea `Icon=` järgi. `.svg` lõpuga faili näidatakse nii, nagu see on. `.svg.tpl` lõpuga fail joonistatakse teema värvides: kirjuta värvi kohale `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` või `{{ icon_shadow }}`. Vaikekomplekt asukohas `/usr/share/omarchy/icons/papercraft/` on hea koht alustamiseks. Lisa `preview.png`, et oma komplekti valijas näidata; ilma selleta joonistab Omarchy eelvaate sinu ikoonidest. Vaikekomplekti ühe ikooni muutmiseks pane oma versioon kausta `~/.config/omarchy/icons/papercraft/`.
+Oma komplekti tegemiseks pane ikoonid kausta `~/.config/omarchy/icons/<name>/`, üks fail iga rakenduse kohta, nimega rakenduse `.desktop` faili rea `Icon=` järgi. `.svg` lõpuga faili näidatakse nii, nagu see on. `.svg.tpl` lõpuga fail joonistatakse teema värvides: kirjuta värvi kohale `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` või `{{ icon_shadow }}`. Vaikekomplekt asukohas `/usr/share/omarchy/icons/papercraft/` on hea koht alustamiseks. Lisa `preview.png`, et oma komplekti valijas näidata; ilma selleta joonistab Ve OS eelvaate sinu ikoonidest. Vaikekomplekti ühe ikooni muutmiseks pane oma versioon kausta `~/.config/omarchy/icons/papercraft/`.
 
 ### Avamiskujundused
 

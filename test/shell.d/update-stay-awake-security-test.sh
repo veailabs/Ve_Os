@@ -573,7 +573,7 @@ if run_fallback 1000 /tmp/victim-home stop 2>/tmp/refusal; then
   echo "foreign fallback state was accepted" >&2
   exit 1
 fi
-grep -q 'unsafe Omarchy update inhibitor state path' /tmp/refusal
+grep -q 'unsafe Ve OS update inhibitor state path' /tmp/refusal
 kill -0 "$victim_pid"
 
 rm -rf /tmp/omarchy-1000
@@ -594,7 +594,7 @@ if run_fallback 1000 /tmp/victim-home stop 2>/tmp/refusal; then
   echo "foreign state file was accepted" >&2
   exit 1
 fi
-grep -q 'unsafe Omarchy update sleep inhibitor state' /tmp/refusal
+grep -q 'unsafe Ve OS update sleep inhibitor state' /tmp/refusal
 kill -0 "$victim_pid"
 
 # A legacy-looking record owned by another account is still untrusted.

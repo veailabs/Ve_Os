@@ -1,14 +1,14 @@
 # An Barra ag an mBarr
 
-Is é barra Omarchy an stiall feadh bharr do scáileáin. Ní barra stádais breise boltáilte leis é ach cuid de bhlaosc Omarchy, an próiseas fadrith Quickshell aonair a tharraingíonn an roghchlár, na fógraí, na preabfhuinneoga OSD, agus an scáileán glais freisin. Sin an fáth a dtéann sé go foirfe i dtiúin le gach rud eile agus an fáth a n-osclaíonn painéal láithreach in ionad feidhmchlár nua a sceitheadh.
+Is é barra Ve OS an stiall feadh bharr do scáileáin. Ní barra stádais breise boltáilte leis é ach cuid de bhlaosc Ve OS, an próiseas fadrith Quickshell aonair a tharraingíonn an roghchlár, na fógraí, na preabfhuinneoga OSD, agus an scáileán glais freisin. Sin an fáth a dtéann sé go foirfe i dtiúin le gach rud eile agus an fáth a n-osclaíonn painéal láithreach in ionad feidhmchlár nua a sceitheadh.
 
 Is é an píosa amháin den deasc atá ar an scáileán i gcónaí é freisin, mar sin is fiú a fhios a bheith agat cad a dhéanann na glifí beaga sin go léir.
 
 ## Cad atá air de réir réamhshocraithe
 
-Tá trí rannán ag an mbarra. Ar chlé suíonn lógó Omarchy (an tosaitheoir roghchláir) agus na táscairí spáis oibre. Sa lár faigheann tú na táscairí stádais, an clog, Elsewhen (clog domhanda), an aimsir, agus suaitheantas nuashonraithe Omarchy. Ar dheis: an tráidire córais, leagan amach an mhéarchláir (nuair atá níos mó ná ceann amháin cumraithe), gníomhairí, Bluetooth, líonra, fuaim, taispeáint, agus cumhacht.
+Tá trí rannán ag an mbarra. Ar chlé suíonn lógó Ve OS (an tosaitheoir roghchláir) agus na táscairí spáis oibre. Sa lár faigheann tú na táscairí stádais, an clog, Elsewhen (clog domhanda), an aimsir, agus suaitheantas nuashonraithe Ve OS. Ar dheis: an tráidire córais, leagan amach an mhéarchláir (nuair atá níos mó ná ceann amháin cumraithe), gníomhairí, Bluetooth, líonra, fuaim, taispeáint, agus cumhacht.
 
-Ní thaispeántar cuid acu ach amháin nuair atá rud éigin le rá acu. Ní thaispeántar leagan amach an mhéarchláir ach amháin má tá níos mó ná leagan amach amháin cumraithe agat. Ní thaispeántar an suaitheantas nuashonraithe ach amháin nuair atá nuashonrú Omarchy ag fanacht. Agus taispeántar deilbhín na ngníomhairí an chéad uair a aimsíonn Omarchy úsáid códaithe AI ar an meaisín (féach [AI](17-ai.md)).
+Ní thaispeántar cuid acu ach amháin nuair atá rud éigin le rá acu. Ní thaispeántar leagan amach an mhéarchláir ach amháin má tá níos mó ná leagan amach amháin cumraithe agat. Ní thaispeántar an suaitheantas nuashonraithe ach amháin nuair atá nuashonrú Ve OS ag fanacht. Agus taispeántar deilbhín na ngníomhairí an chéad uair a aimsíonn Ve OS úsáid códaithe AI ar an meaisín (féach [AI](17-ai.md)).
 
 ## Ag cliceáil thart
 
@@ -16,7 +16,7 @@ Déanann beagnach gach giuirléid rud éigin ar chliceáil chlé, dheis agus lá
 
 | Giuirléid | Clé | Deas | Lár / scrollú |
 | --- | --- | --- | --- |
-| Roghchlár | Roghchlár Omarchy | Teirminéal nua | — |
+| Roghchlár | Roghchlár Ve OS | Teirminéal nua | — |
 | Spásanna oibre | Dírigh ar an spás oibre sin ar an monatóir seo | — | Scrollú: an chéad spás oibre eile/roimhe |
 | Clog | Preabfhuinneog fhéilire | Rothlaigh formáid an lipéid | Lár: roghnóir crios ama |
 | Aimsir | Preabfhuinneog réamhaisnéise | An aimsir iomlán mar fhógra | Lár: athnuaigh |
@@ -29,7 +29,7 @@ Déanann beagnach gach giuirléid rud éigin ar chliceáil chlé, dheis agus lá
 | Meáin | Seinn/sos | Preabfhuinneog ealaíne clúdaigh | Lár: an chéad cheann eile · scrollú: roimhe seo/an chéad cheann eile |
 | Gníomhairí | Painéal gníomhairí | Seol do ghníomhaire | Lár: an chéad síntiús eile |
 | Tráidire | Cuir an luch thairis chun an tarraiceán a nochtadh | Deas ar an seabhán chun é a bhainistiú | — |
-| Nuashonrú Omarchy | Rith an nuashonrú | — | — |
+| Nuashonrú Ve OS | Rith an nuashonrú | — | — |
 
 Níl gach rud sa tábla sin ar do bharra as an mbosca. Tá an giuirléid meán (MPRIS atá ag seinm anois, le rian agus ealaíontóir ag scrollú) agus an giuirléid micreafóin araon ionsuite ach múchta de réir réamhshocraithe — cuir leo iad más mian leat iad, mar a thuairiscítear thíos.
 
@@ -137,6 +137,6 @@ Is iontráil amháin i gceann de na cúig eagar leagan amach gach giuirléid, ag
 
 Is é `center` an bosca i lár an bharra: tá gach rud ann láraithe ar an scáileán mar ghrúpa amháin. Crochann `centerBegin` agus `centerEnd` ar gach taobh den bhosca, agus sin mar a fhanann an clog díreach sa lár fiú agus an aimsir agus an suaitheantas nuashonraithe ag teacht agus ag imeacht. Cuir níos mó ná giuirléid amháin in `center` agus tá siad láraithe le chéile; fág folamh é agus buaileann `centerBegin` agus `centerEnd` le chéile i lár an bharra.
 
-Riail amháin ar fiú í a inmheánú: **nuair atá do `shell.json` féin agat, is é an leagan údarásach é**. Go dtí go saincheapann tú rud ar bith, léann an blaosc comhad réamhshocraithe Omarchy. An nóiméad a tharraingíonn tú giuirléid, a ritheann tú `omarchy bar`, nó a chuireann tú an comhad in eagar tú féin, is leatsa é — níl cumasc domhain ann, mar sin ní thaispeánfar giuirléidí réamhshocraithe nua i leaganacha Omarchy amach anseo ar do bharra go huathoibríoch. Cuireann `omarchy bar defaults` an leagan amach seolta ar ais aon uair is mian leat leathanach glan.
+Riail amháin ar fiú í a inmheánú: **nuair atá do `shell.json` féin agat, is é an leagan údarásach é**. Go dtí go saincheapann tú rud ar bith, léann an blaosc comhad réamhshocraithe Ve OS. An nóiméad a tharraingíonn tú giuirléid, a ritheann tú `omarchy bar`, nó a chuireann tú an comhad in eagar tú féin, is leatsa é — níl cumasc domhain ann, mar sin ní thaispeánfar giuirléidí réamhshocraithe nua i leaganacha Ve OS amach anseo ar do bharra go huathoibríoch. Cuireann `omarchy bar defaults` an leagan amach seolta ar ais aon uair is mian leat leathanach glan.
 
 Coinníonn an comhad céanna do chuid uainithe díomhaoin ag an leibhéal barr, taobh amuigh den eochair `bar`: `idle.screensaver` agus `idle.lock`, an dá cheann i soicindí ó chuaigh tú díomhaoin. Mar sin tosaíonn an spárálaí scáileáin réamhshocraithe ag 150 soicind agus an glas ag 300.

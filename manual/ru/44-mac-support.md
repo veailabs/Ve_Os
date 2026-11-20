@@ -1,4 +1,6 @@
-# Поддержка Mac
+# Ve OS — Поддержка Mac
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 В Omarchy есть встроенная поддержка **Intel Macs**. На данный момент есть несколько известных ограничений, но если вы о них знаете и вас это устраивает; вы можете вдохнуть новую жизнь в свои старые Mac, установив Omarchy.
 

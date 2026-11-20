@@ -44,7 +44,7 @@ for dir in bin root-bin; do
   cat > "$scratch/$dir/efibootmgr" <<'SH'
 #!/bin/bash
 printf 'BootCurrent: 0000\nBoot0000* Limine\tHD(1,GPT)/\\EFI\\limine\\limine_x64.efi\n'
-[[ ${DIRECT_BOOT:-0} == "0" ]] || printf 'Boot0001* Omarchy\tHD(1,GPT)/\\EFI\\Linux\\omarchy_linux-omarchy.efi\n'
+[[ ${DIRECT_BOOT:-0} == "0" ]] || printf 'Boot0001* %s\tHD(1,GPT)/\\EFI\\Linux\\omarchy_linux-omarchy.efi\n' "${DIRECT_BOOT_LABEL:-Omarchy}"
 SH
 done
 
@@ -230,7 +230,7 @@ cmp -s "$OMARCHY_KERNEL_LIMINE_CONF" "$scratch/original-limine" || fail "a faile
 pass "a failed write keeps the previous boot order instead of deleting it"
 
 reset_fixture
-if DIRECT_BOOT=1 as_root "$command" set linux 2> /dev/null; then
+if DIRECT_BOOT=1 DIRECT_BOOT_LABEL="Ve OS" as_root "$command" set linux 2> /dev/null; then
   fail "root is refused under Direct Boot too"
 fi
 cmp -s "$OMARCHY_KERNEL_LIMINE_CONF" "$scratch/original-limine" || fail "a refused root switch leaves the boot order alone"

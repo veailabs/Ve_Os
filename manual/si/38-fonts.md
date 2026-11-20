@@ -1,12 +1,12 @@
 # අකුරු
 
-Omarchy පෙරනිමියෙන් terminal එකටත් පද්ධතියේ අකුරු ලෙසත් JetBrainsMono Nerd Font භාවිත කරයි.
+Ve OS පෙරනිමියෙන් terminal එකටත් පද්ධතියේ අකුරු ලෙසත් JetBrainsMono Nerd Font භාවිත කරයි.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Omarchy menu එකේ (`Super + Space`) _පෙනුම > අකුරු_ menu එක හරහා ඔබට මෙය වෙනස් කළ හැක. එය සෑම තැනකම monospace අකුරු සකසයි: terminal එක, bar එක, සහ එය ඉල්ලන වෙනත් ඕනෑම දෙයක්.
+Ve OS menu එකේ (`Super + Space`) _පෙනුම > අකුරු_ menu එක හරහා ඔබට මෙය වෙනස් කළ හැක. එය සෑම තැනකම monospace අකුරු සකසයි: terminal එක, bar එක, සහ එය ඉල්ලන වෙනත් ඕනෑම දෙයක්.
 
-Omarchy menu එකේ _ස්ථාපනය > විලාසය > අකුරු_ හරහා ඔබට වෙනත් ජනප්‍රිය ක්‍රමලේඛන අකුරු ස්ථාපනය කළ හැක: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, සහ Iosevka යන සියල්ලම, bar එකේ සහ terminal එකේ glyph දිගටම ක්‍රියාත්මක වන පරිදි ඒවායේ Nerd Font අනුවාද වශයෙන්, එක ක්ලික් කිරීමකින් ලබා ගත හැක. එකක් ස්ථාපනය කළ පසු, _පෙනුම > අකුරු_ යටතේ එය තෝරන්න.
+Ve OS menu එකේ _ස්ථාපනය > විලාසය > අකුරු_ හරහා ඔබට වෙනත් ජනප්‍රිය ක්‍රමලේඛන අකුරු ස්ථාපනය කළ හැක: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono, සහ Iosevka යන සියල්ලම, bar එකේ සහ terminal එකේ glyph දිගටම ක්‍රියාත්මක වන පරිදි ඒවායේ Nerd Font අනුවාද වශයෙන්, එක ක්ලික් කිරීමකින් ලබා ගත හැක. එකක් ස්ථාපනය කළ පසු, _පෙනුම > අකුරු_ යටතේ එය තෝරන්න.
 
 ## චීන, ජපන්, සහ කොරියානු
 

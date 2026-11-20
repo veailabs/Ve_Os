@@ -1,10 +1,10 @@
 # Alternâncias, Ociosidade e o Protetor de Tela
 
-Muito do que você muda no dia a dia não é bem uma configuração. É um modo que você ativa por uma hora e desativa de novo: luz noturna enquanto você trabalha até tarde, não perturbe enquanto você está apresentando, manter acordado enquanto você assiste a alguma coisa. O Omarchy chama isso de alternâncias, e todas funcionam do mesmo jeito — uma tecla de atalho, um item de menu e um comando, tudo acionando o mesmo interruptor.
+Muito do que você muda no dia a dia não é bem uma configuração. É um modo que você ativa por uma hora e desativa de novo: luz noturna enquanto você trabalha até tarde, não perturbe enquanto você está apresentando, manter acordado enquanto você assiste a alguma coisa. O Ve OS chama isso de alternâncias, e todas funcionam do mesmo jeito — uma tecla de atalho, um item de menu e um comando, tudo acionando o mesmo interruptor.
 
 ### O menu de alternâncias
 
-`Super + Ctrl + O` abre _Acionar > Alternar_ diretamente, ou você pode chegar lá pelo menu do Omarchy (`Super + Space`). Tudo nessa lista é um interruptor que você pode alternar sem pensar onde o estado fica guardado. Os interruptores de como a área de trabalho se parece ficam logo ao lado, em _Aparência_.
+`Super + Ctrl + O` abre _Acionar > Alternar_ diretamente, ou você pode chegar lá pelo menu do Ve OS (`Super + Space`). Tudo nessa lista é um interruptor que você pode alternar sem pensar onde o estado fica guardado. Os interruptores de como a área de trabalho se parece ficam logo ao lado, em _Aparência_.
 
 Pelo terminal, os mesmos interruptores são `omarchy toggle <thing>`. Execute `omarchy toggle` sozinho para ver o grupo inteiro.
 
@@ -26,7 +26,7 @@ Os interruptores de touchpad, tela sensível ao toque e GPU híbrida ficam em _A
 
 _Aparência_ guarda a barra de menu e as animações, além de algumas coisas que não são comandos `omarchy toggle`, mas se comportam do mesmo jeito: a porcentagem da bateria na barra, o layout padrão do workspace e, em _Janelas_, os espaçamentos entre janelas (`Super + Shift + Backspace`) e o aspecto quadrado de 1 janela (`Super + Ctrl + Backspace`).
 
-Quando o Hyprland não tem GPU para desenhar e renderiza na CPU (llvmpipe), como em Macs cuja GPU ainda não é suportada, na maioria das máquinas virtuais ou quando um driver gráfico falha ao carregar, o Omarchy desativa animações, desfoque e sombras naquela sessão e avisa você uma vez com uma notificação. _Aparência > Animações Ativadas_ traz tudo de volta, e o Omarchy lembra disso também para sessões posteriores.
+Quando o Hyprland não tem GPU para desenhar e renderiza na CPU (llvmpipe), como em Macs cuja GPU ainda não é suportada, na maioria das máquinas virtuais ou quando um driver gráfico falha ao carregar, o Ve OS desativa animações, desfoque e sombras naquela sessão e avisa você uma vez com uma notificação. _Aparência > Animações Ativadas_ traz tudo de volta, e o Ve OS lembra disso também para sessões posteriores.
 
 A maioria deles é só um arquivo de flag em `~/.local/state/omarchy/toggles/`. Se você quiser fazer um desvio condicional com base em um deles em um script, `omarchy-toggle-enabled` fornece um código de saída em vez de obrigar você a ir procurar:
 
@@ -63,11 +63,11 @@ Depois inicie o hyprsunset no login adicionando `o.launch_on_start("hyprsunset")
 
 Mas nada se perde. As notificações silenciadas ficam retidas: coloque as últimas de volta na tela com `Super + Shift + Alt + ,`. Veja [avisos](10-notices.md) para o restante.
 
-Dois tipos de mensagem ainda passam: os toasts de confirmação do próprio Omarchy para algo que você acabou de fazer ("Theme changed", "Screenshot saved"), e alertas críticos enviados da linha de comando. Aplicativos de chat que marcam tudo como crítico para forçar a entrada na sua frente não se qualificam.
+Dois tipos de mensagem ainda passam: os toasts de confirmação do próprio Ve OS para algo que você acabou de fazer ("Theme changed", "Screenshot saved"), e alertas críticos enviados da linha de comando. Aplicativos de chat que marcam tudo como crítico para forçar a entrada na sua frente não se qualificam.
 
 ### Ociosidade
 
-O shell do Omarchy é dono do comportamento de ociosidade, e os tempos são um bloco `idle` de nível superior em `~/.config/omarchy/shell.json`:
+O shell do Ve OS é dono do comportamento de ociosidade, e os tempos são um bloco `idle` de nível superior em `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Isso é sobre bloqueio e protetor de tela, não sobre energia. Suspensão e hibe
 
 ### O protetor de tela
 
-O protetor de tela do Omarchy é arte ASCII passando por efeitos de texto aleatórios, uma instância por monitor. Qualquer tecla ou movimento do mouse sai dele.
+O protetor de tela do Ve OS é arte ASCII passando por efeitos de texto aleatórios, uma instância por monitor. Qualquer tecla ou movimento do mouse sai dele.
 
 Você pode iniciá-lo sob demanda em _Sistema > Protetor de Tela_ (`Super + Esc`), o que o força a aparecer mesmo se você tiver desativado o protetor de tela por ociosidade. Não há atalho vinculado a ele por padrão.
 
 `omarchy toggle screensaver` é o que desativa o de ociosidade, se você preferir ir direto do trabalho para bloqueado. Qualquer tecla, clique, rolagem ou movimento do mouse o fecha.
 
-O logo que ele desenha é seu para mudar, em _Aparência > Identidade Visual > Protetor de Tela_. Envie um png ou svg e o Omarchy converte para ASCII. Veja [identidade visual](41-branding.md).
+O logo que ele desenha é seu para mudar, em _Aparência > Identidade Visual > Protetor de Tela_. Envie um png ou svg e o Ve OS converte para ASCII. Veja [identidade visual](41-branding.md).
 
 ### A tela de bloqueio
 
-`Super + Ctrl + L` bloqueia a máquina. Isso executa a tela de bloqueio do shell do Omarchy, apaga a tela, redefine seu layout de teclado para o primeiro para você não digitar sua senha no alfabeto errado e — se você o tiver em execução — bloqueia o 1Password na saída.
+`Super + Ctrl + L` bloqueia a máquina. Isso executa a tela de bloqueio do shell do Ve OS, apaga a tela, redefine seu layout de teclado para o primeiro para você não digitar sua senha no alfabeto errado e — se você o tiver em execução — bloqueia o 1Password na saída.
 
 A tela de bloqueio aceita uma senha, e também aceita uma impressão digital depois que você configurar uma. Isso, e as outras formas de autenticação, estão cobertos em [autenticação de hardware](37-hardware-authentication.md).

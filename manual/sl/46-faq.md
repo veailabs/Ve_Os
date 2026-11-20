@@ -28,7 +28,7 @@ To bo prikazalo nedelja 10:55 AM.
 
 ### Kako spremenim svoj časovni pas?
 
-Zaženite _Posodobi > Časovni pas_ v meniju Omarchy in izberite s seznama. Če je časovni pas pravilen, a je ura sama zdriftirala, bo _Posodobi > Čas_ namesto vas znova zagnal sinhronizacijo časa.
+Zaženite _Posodobi > Časovni pas_ v meniju Ve OS in izberite s seznama. Če je časovni pas pravilen, a je ura sama zdriftirala, bo _Posodobi > Čas_ namesto vas znova zagnal sinhronizacijo časa.
 
 ### Kako spremenim svoj DNS, delim svoj Wi-Fi ali preverim hitrost svoje povezave?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Enako lahko naredite za snemanja zaslona z uporabo `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap samodejno ustvari svojo mapo za posnetke zaslona. Mapo za snemanja zaslona ustvarite sami, nato znova zaženite Omarchy, da bo katera koli od sprememb okolja začela veljati.
+Omasnap samodejno ustvari svojo mapo za posnetke zaslona. Mapo za snemanja zaslona ustvarite sami, nato znova zaženite Ve OS, da bo katera koli od sprememb okolja začela veljati.
 
 ### Kako usposobim zvočnike + spletno kamero na mojem Apple Studio Display?
 
 Mislili bi si, da bi moralo vse delovati že samo s priklopom USB C, a žal ni tako. Rešitev, za katero sem ugotovil, da zanesljivo deluje, je uporaba [kabla WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Potem zvočniki in spletna kamera delujejo kot po maslu.
 
-Ne pozabite, da imate v Omarchy vgrajeno upravljanje svetlosti za zaslone Apple Display (tako Studio kot XDR) z običajnima tipkama za svetlost na tipkovnici.
+Ne pozabite, da imate v Ve OS vgrajeno upravljanje svetlosti za zaslone Apple Display (tako Studio kot XDR) z običajnima tipkama za svetlost na tipkovnici.
 
 ### Kako se znebim vse dodatne programske opreme?
 
@@ -72,7 +72,7 @@ Ne pozabite, da imate v Omarchy vgrajeno upravljanje svetlosti za zaslone Apple 
 
 Zaženite _Odstrani > Paket_, da si ogledate vsak nameščeni paket. Nato lahko s tab izberete kateri koli paket, ki ga želite odstraniti, in z return začnete odstranjevati vse, kar ste izbrali.
 
-Iz menija Omarchy lahko uporabite tudi _Odstrani > Spletna aplikacija_, da odstranite katero koli vnaprej nameščeno spletno aplikacijo, ki je ne želite.
+Iz menija Ve OS lahko uporabite tudi _Odstrani > Spletna aplikacija_, da odstranite katero koli vnaprej nameščeno spletno aplikacijo, ki je ne želite.
 
 Ali pa zaženite _Odstrani > Vnaprej nameščene dodatke_, da z enim zamahom počistite vse vnaprej nameščene dodatke — spletne aplikacije, TUIs in izbirne aplikacije. Bližnjice, ki so jih zagnale, izginejo z njimi, tako da vam ostane čist list vezav, ki jih lahko zapolnite s svojimi v `~/.config/hypr/bindings.lua`.
 

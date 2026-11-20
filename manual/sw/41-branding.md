@@ -1,6 +1,6 @@
 # Chapa
 
-Omarchy inakuruhusu kuweka nembo ya kampuni yako au picha yako binafsi kwa ajili ya kufungua wakati wa kuwasha, kiokoa skrini, na skrini ya kuhusu.
+Ve OS inakuruhusu kuweka nembo ya kampuni yako au picha yako binafsi kwa ajili ya kufungua wakati wa kuwasha, kiokoa skrini, na skrini ya kuhusu.
 
 ### Kufungua wakati wa kuwasha
 
@@ -24,11 +24,11 @@ Kuna vipengee vitatu katika menyu hiyo:
 
 - **Hariri Maandishi** hufungua `~/.config/omarchy/branding/screensaver.txt` katika kihariri chako. Andika au bandika chochote unachotaka — sanaa ya ASCII, jina lako, neno chafu. Hifadhi na uondoke, na kiokoa skrini kitawaka mara moja ili uweze kukiona.
 - **Weka Kutoka kwenye Picha** hufungua kiteua faili kwa ajili ya png au svg, huibadilisha kuwa ASCII, na kukuonyesha matokeo. Nembo zenye umbo lililo wazi hufanya kazi vizuri zaidi kuliko picha.
-- **Rejesha Chaguo-msingi** hurudisha nembo ya Omarchy.
+- **Rejesha Chaguo-msingi** hurudisha nembo ya Ve OS.
 
 ### Skrini ya kuhusu
 
-Chaguo hizo hizo tatu ziko chini ya _Muonekano > Chapa > Kuhusu_ kwa ajili ya skrini ya _Kuhusu_ unayoipata kutoka kwenye menyu ya Omarchy, na zinafanya kazi kwa njia ile ile kabisa — faili ni `~/.config/omarchy/branding/about.txt`, na dirisha la Kuhusu hujitokeza baada ya kila mabadiliko. Sanaa ya Kuhusu hubadilishwa kuwa ukubwa mdogo zaidi kuliko wa kiokoa skrini, kwa kuwa inapaswa kutoshea ndani ya dirisha badala ya kujaza onyesho lako.
+Chaguo hizo hizo tatu ziko chini ya _Muonekano > Chapa > Kuhusu_ kwa ajili ya skrini ya _Kuhusu_ unayoipata kutoka kwenye menyu ya Ve OS, na zinafanya kazi kwa njia ile ile kabisa — faili ni `~/.config/omarchy/branding/about.txt`, na dirisha la Kuhusu hujitokeza baada ya kila mabadiliko. Sanaa ya Kuhusu hubadilishwa kuwa ukubwa mdogo zaidi kuliko wa kiokoa skrini, kwa kuwa inapaswa kutoshea ndani ya dirisha badala ya kujaza onyesho lako.
 
 Dirisha likiwa wazi, mwangaza wa kijani hupita juu ya sanaa kila baada ya sekunde chache kisha huiacha tuli tena. Sanaa yako mwenyewe pia huupata, ilmradi kila herufi ndani yake ina upana wa safu wima moja — kila kitu kinachotolewa na _Weka Kutoka kwenye Picha_ kina sifa hiyo. Sanaa iliyotengenezwa kwa emoji au herufi za upana maradufu hubaki tuli badala yake, na ndivyo pia ilivyo kwa skrini ukiwa na usanidi wako mwenyewe wa fastfetch: nembo tuli katika hali hizo ni uhuishaji ukijiepusha usiingilie njia badala ya kushindwa, kwa kuwa kusogeza mwangaza juu yake kungeiweka sehemu iliyobaki ya mstari mahali pasipofaa.
 

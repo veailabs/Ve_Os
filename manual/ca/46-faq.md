@@ -28,7 +28,7 @@ Això mostrarà Diumenge 10:55 AM.
 
 ### Com puc canviar la meva zona horària?
 
-Executa _Actualitza > Zona horària_ al menú d'Omarchy i tria'n una de la llista. Si la zona horària és correcta però el rellotge s'ha desviat, _Actualitza > Hora_ reinicia la sincronització de l'hora per tu.
+Executa _Actualitza > Zona horària_ al menú d'Ve OS i tria'n una de la llista. Si la zona horària és correcta però el rellotge s'ha desviat, _Actualitza > Hora_ reinicia la sincronització de l'hora per tu.
 
 ### Com puc canviar el meu DNS, compartir el meu Wi-Fi o comprovar la velocitat de la meva connexió?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Pots fer el mateix amb els enregistraments de pantalla fent servir `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap crea el seu directori de captures de pantalla automàticament. Crea tu mateix el directori d'enregistraments de pantalla i després reinicia Omarchy perquè qualsevol dels dos canvis d'entorn tingui efecte.
+Omasnap crea el seu directori de captures de pantalla automàticament. Crea tu mateix el directori d'enregistraments de pantalla i després reinicia Ve OS perquè qualsevol dels dos canvis d'entorn tingui efecte.
 
 ### Com faig que funcionin els altaveus + la càmera web al meu Apple Studio Display?
 
 Pensaries que tot hauria de funcionar només connectant l'USB C, però malauradament no és així. La solució que he trobat perquè funcioni de manera fiable és fer servir [the WJESOG DisplayPort + USB-A => USB-C cable](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Llavors els altaveus i la càmera web funcionen de meravella.
 
-Recorda que tens control de brillantor integrat a Omarchy per als Apple Displays (tant l'Studio com l'XDR) amb els botons normals de brillantor del teclat.
+Recorda que tens control de brillantor integrat a Ve OS per als Apple Displays (tant l'Studio com l'XDR) amb els botons normals de brillantor del teclat.
 
 ### Com em desfaig de tot el programari extra?
 
@@ -72,7 +72,7 @@ Si no vols programes com Obsidian o LibreOffice ni cap de la resta de coses prei
 
 Executa _Elimina > Paquet_ per veure tots els paquets instal·lats. Llavors pots seleccionar qualsevol paquet que vulguis eliminar amb tab, i començar a eliminar tot el que hagis seleccionat amb return.
 
-I pots fer servir _Elimina > Aplicació web_ des del menú d'Omarchy per eliminar qualsevol de les aplicacions web preinstal·lades que no vulguis.
+I pots fer servir _Elimina > Aplicació web_ des del menú d'Ve OS per eliminar qualsevol de les aplicacions web preinstal·lades que no vulguis.
 
 O executa _Elimina > Preinstal·lats_ per escombrar tots els extres preinstal·lats — aplicacions web, TUIs i aplicacions opcionals — d'una sola vegada. Les tecles d'accés ràpid que les obrien desapareixen amb elles, així que et queda una pissarra neta de dreceres per omplir amb les teves a `~/.config/hypr/bindings.lua`.
 

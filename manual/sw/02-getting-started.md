@@ -1,4 +1,6 @@
-# Kuanza
+# Ve OS — Kuanza
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy husakinishwa kwa kutumia ISO. Unaweza kuchagua kati ya usakinishaji wa diski nzima, ambao huchukua hifadhi nzima, au usakinishaji wa nafasi tupu, ambao huweka Omarchy kwenye nafasi ambayo haijatengwa kwenye hifadhi — hivyo ndivyo unavyowasha pamoja na Windows au mfumo mwingine wa uendeshaji (angalia [usakinishaji wa kuwasha pamoja](50-dual-boot-install.md) — kumbuka kwamba utahitaji kuzima BitLocker kwenye Windows kwanza). Vyovyote vile, usakinishaji huweka usimbaji fiche kamili kwa chaguo-msingi, na chaguo la diski nzima litafuta hifadhi iliyochaguliwa, kwa hivyo hakikisha umehifadhi nakala kabla ya kutumia hifadhi iliyopo!
 

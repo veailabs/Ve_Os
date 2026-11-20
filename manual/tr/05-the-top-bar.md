@@ -1,14 +1,14 @@
 # Üst Çubuk
 
-Ekranınızın üst kısmındaki şerit Omarchy çubuğudur. Bu, sonradan eklenmiş bir durum çubuğu değil, Omarchy shell'inin bir parçasıdır; menüyü, bildirimleri, OSD açılır pencerelerini ve kilit ekranını da çizen tek, uzun ömürlü Quickshell sürecidir. Bu yüzden her şeyle kusursuz bir tema uyumu gösterir ve bir panel, yeni bir uygulama başlatmak yerine anında açılır.
+Ekranınızın üst kısmındaki şerit Ve OS çubuğudur. Bu, sonradan eklenmiş bir durum çubuğu değil, Ve OS shell'inin bir parçasıdır; menüyü, bildirimleri, OSD açılır pencerelerini ve kilit ekranını da çizen tek, uzun ömürlü Quickshell sürecidir. Bu yüzden her şeyle kusursuz bir tema uyumu gösterir ve bir panel, yeni bir uygulama başlatmak yerine anında açılır.
 
 Aynı zamanda masaüstünün her zaman ekranda olan tek parçasıdır, bu yüzden o küçük simgelerin hepsinin ne işe yaradığını bilmeye değer.
 
 ## Varsayılan olarak üzerinde neler var
 
-Çubuğun üç bölümü vardır. Solda Omarchy logosu (menü başlatıcı) ve çalışma alanı göstergeleri yer alır. Ortada durum göstergelerini, saati, Elsewhen'i (bir dünya saati), hava durumunu ve bir Omarchy güncelleme rozetini görürsünüz. Sağda ise: sistem tepsisi, klavye düzeni (birden fazla yapılandırıldığında), agent'lar, bluetooth, ağ, ses, ekran ve güç.
+Çubuğun üç bölümü vardır. Solda Ve OS logosu (menü başlatıcı) ve çalışma alanı göstergeleri yer alır. Ortada durum göstergelerini, saati, Elsewhen'i (bir dünya saati), hava durumunu ve bir Ve OS güncelleme rozetini görürsünüz. Sağda ise: sistem tepsisi, klavye düzeni (birden fazla yapılandırıldığında), agent'lar, bluetooth, ağ, ses, ekran ve güç.
 
-Bunlardan birkaçı yalnızca söyleyecek bir şeyleri olduğunda görünür. Klavye düzeni yalnızca birden fazla düzen yapılandırdıysanız görünür. Güncelleme rozeti yalnızca bekleyen bir Omarchy güncellemesi olduğunda görünür. Agent'lar simgesi ise Omarchy makinede AI kodlama kullanımı ilk kez bulduğunda görünür (bkz. [AI](17-ai.md)).
+Bunlardan birkaçı yalnızca söyleyecek bir şeyleri olduğunda görünür. Klavye düzeni yalnızca birden fazla düzen yapılandırdıysanız görünür. Güncelleme rozeti yalnızca bekleyen bir Ve OS güncellemesi olduğunda görünür. Agent'lar simgesi ise Ve OS makinede AI kodlama kullanımı ilk kez bulduğunda görünür (bkz. [AI](17-ai.md)).
 
 ## Tıklayıp gezinmek
 
@@ -16,7 +16,7 @@ Neredeyse her widget sol, sağ ve orta tıklamada bir şey yapar ve birçoğu ka
 
 | Widget | Sol | Sağ | Orta / kaydırma |
 | --- | --- | --- | --- |
-| Menü | Omarchy menüsü | Yeni terminal | — |
+| Menü | Ve OS menüsü | Yeni terminal | — |
 | Çalışma Alanları | O çalışma alanına bu monitörde odaklan | — | Kaydırma: sonraki/önceki çalışma alanı |
 | Saat | Takvim açılır penceresi | Etiket biçimini döngüsel olarak değiştir | Orta: saat dilimi seçici |
 | Hava Durumu | Tahmin açılır penceresi | Tam hava durumunu bildirim olarak göster | Orta: yenile |
@@ -29,7 +29,7 @@ Neredeyse her widget sol, sağ ve orta tıklamada bir şey yapar ve birçoğu ka
 | Medya | Oynat/duraklat | Kapak resmi açılır penceresi | Orta: sonraki · kaydırma: önceki/sonraki |
 | Agent'lar | Agent'lar paneli | Agent'ınızı başlat | Orta: sonraki abonelik |
 | Tepsi | Çekmeceyi göstermek için üzerine gel | Yönetmek için şevron üzerinde sağ tık | — |
-| Omarchy güncellemesi | Güncellemeyi çalıştır | — | — |
+| Ve OS güncellemesi | Güncellemeyi çalıştır | — | — |
 
 O tablodaki her şey kutudan çıktığı haliyle çubuğunuzda değildir. Medya widget'ı (kayan parça ve sanatçı bilgisiyle MPRIS şu an çalınan) ve mikrofon widget'ı, ikisi de yerleşik olmalarına rağmen varsayılan olarak kapalıdır — isterseniz aşağıda anlatıldığı gibi ekleyin.
 
@@ -137,6 +137,6 @@ Her widget beş düzen dizisinden birindeki tek bir girdidir ve ayarları o gird
 
 `center`, çubuğun ortasındaki kutudur: içindeki her şey ekranda tek bir grup olarak ortalanır. `centerBegin` ve `centerEnd` kutunun iki yanından sarkar, bu da hava durumu ve güncelleme rozeti gelip gitse bile saatin tam ortada kalmasını sağlar. `center` içine birden fazla widget koyarsanız birlikte ortalanırlar; boş bırakırsanız `centerBegin` ve `centerEnd` çubuğun ortasında buluşur.
 
-İçselleştirmeye değer bir kural: **kendi `shell.json` dosyanız olduktan sonra o, esas olandır**. Herhangi bir şeyi özelleştirinceye kadar shell, Omarchy'nin varsayılan dosyasını okur. Bir widget'ı sürüklediğiniz, `omarchy bar` çalıştırdığınız ya da dosyayı kendiniz düzenlediğiniz anda o artık sizindir — derin birleştirme yoktur, bu yüzden gelecekteki Omarchy sürümlerindeki yeni varsayılan widget'lar çubuğunuzda otomatik olarak görünmez. `omarchy bar defaults`, temiz bir sayfa istediğinizde birlikte gelen düzeni geri koyar.
+İçselleştirmeye değer bir kural: **kendi `shell.json` dosyanız olduktan sonra o, esas olandır**. Herhangi bir şeyi özelleştirinceye kadar shell, Ve OS'nin varsayılan dosyasını okur. Bir widget'ı sürüklediğiniz, `omarchy bar` çalıştırdığınız ya da dosyayı kendiniz düzenlediğiniz anda o artık sizindir — derin birleştirme yoktur, bu yüzden gelecekteki Ve OS sürümlerindeki yeni varsayılan widget'lar çubuğunuzda otomatik olarak görünmez. `omarchy bar defaults`, temiz bir sayfa istediğinizde birlikte gelen düzeni geri koyar.
 
 Aynı dosya, boşta bekleme zamanlamalarınızı da `bar` anahtarının dışında, üst seviyede tutar: `idle.screensaver` ve `idle.lock`, ikisi de boşta kaldığınızdan bu yana geçen saniyeler cinsindendir. Böylece varsayılan ekran koruyucu 150 saniyede ve kilit 300 saniyede devreye girer.

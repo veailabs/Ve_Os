@@ -20,7 +20,7 @@ Obsidian barcha maqsadlar uchun bepul, jumladan shaxsiy, tijorat va notijorat fo
 
 Obsidian iOS va Androiddagi mobil ilovalar bilan sinxronlash uchun [tijorat qo'shimchasini](https://obsidian.md/sync) ham taklif qiladi. (https://obsidian.md/pricing).
 
-Obsidian'ni `Super + Shift + O` bilan ishga tushirasiz. Mavzularni sinxronlashdan foydalanish uchun sozlamalarda `Omarchy` mavzusini tanlashingiz kerak.
+Obsidian'ni `Super + Shift + O` bilan ishga tushirasiz. Mavzularni sinxronlashdan foydalanish uchun sozlamalarda `Ve OS` mavzusini tanlashingiz kerak.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Aether'ni ilovalarni ishga tushirgich orqali ishga tushirasiz (`Super + Space`).
 
 [LocalSend](https://localsend.org/) sizga Apple'ning AirDrop'i kabi ilovani ishlatayotgan bir xil tarmoqdagi boshqa qurilmalarga fayl yuborish imkonini beradi. Biroq u kross-platformadir, shuning uchun Windows, macOS, Android, iOS va albatta Linuxga va ulardan fayl yuborishingiz mumkin.
 
-Share menyusini `Super + Ctrl + S`da yoki Omarchy menyusida _Trigger > Share_ ostida ochishingiz mumkin. U sizga to'rtta variant beradi:
+Share menyusini `Super + Ctrl + S`da yoki Ve OS menyusida _Trigger > Share_ ostida ochishingiz mumkin. U sizga to'rtta variant beradi:
 
 - **Clipboard** nusxa olgan narsangizni matn fayli sifatida yuboradi. Havola yoki parchaning o'zingizga elektron pochta yubormasdan telefoningizga o'tkazish uchun ajoyib.
 - **File** bir vaqtning o'zida bir nechtasini tanlashingiz mumkin bo'lgan fayl tanlagichni ochadi.
@@ -55,7 +55,7 @@ Xuddi shu narsa terminaldan `omarchy share clipboard`, `omarchy share file [path
 
 Fayl menejeridan ham to'g'ridan-to'g'ri yuborishingiz mumkin: Nautilus'da biror tanlovni o'ng tugma bilan bosing va _Send via LocalSend_ni tanlang.
 
-Omarchy'ning firewall'i standart bo'yicha LocalSend portidan tashqari yopiq, shuning uchun bu yangi o'rnatishda qutidan chiqqan holda ishlaydi. Qarang [xavfsizlik](48-security.md).
+Ve OS'ning firewall'i standart bo'yicha LocalSend portidan tashqari yopiq, shuning uchun bu yangi o'rnatishda qutidan chiqqan holda ishlaydi. Qarang [xavfsizlik](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Signed'ni ilovalarni ishga tushirgich orqali ishga tushirasiz (`Super + Space`) 
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) — Omarchy'ning o'zining 3D shaxmat o'yini. Bir xil kompyuterda do'stingiz bilan yoki uch darajada o'rnatilgan raqib bilan o'ynang, har biri o'ziga xos tarzda harakatlanadigan to'rtta haykalcha to'plamida: orbital kemalar, o'yilgan yog'och va fil suyagi, o'rmon jonzotlari va konfet. O'yinlarda soat yo'q va har bir yurishdan keyin saqlanadi.
+[Checkmate](https://github.com/omacom/checkmate) — Ve OS'ning o'zining 3D shaxmat o'yini. Bir xil kompyuterda do'stingiz bilan yoki uch darajada o'rnatilgan raqib bilan o'ynang, har biri o'ziga xos tarzda harakatlanadigan to'rtta haykalcha to'plamida: orbital kemalar, o'yilgan yog'och va fil suyagi, o'rmon jonzotlari va konfet. O'yinlarda soat yo'q va har bir yurishdan keyin saqlanadi.
 
 Checkmate'ni ilovalarni ishga tushirgich orqali ishga tushirasiz (`Super + Space`), u yerda u Chess sifatida ko'rsatilgan. Undagi har bir yorliqni ko'rish uchun ichida `?`ni bosing.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) — Omarchy'ning o'zining Klondike solitaire'i. Uchtadan torting, o'tishlar sonida cheklov yo'q, to'rtta karta seriyasida: biri mavzungiz ranglarida chizilgan, uchtasi esa o'z ko'rinishiga ega. Kartani bosing va keyin u boradigan joyni bosing, uni torting yoki uni eng yaxshi joyga yuborish uchun ikki marta bosing. O'yinlar har bir yurishdan keyin saqlanadi.
+[Cards](https://github.com/omacom/cards) — Ve OS'ning o'zining Klondike solitaire'i. Uchtadan torting, o'tishlar sonida cheklov yo'q, to'rtta karta seriyasida: biri mavzungiz ranglarida chizilgan, uchtasi esa o'z ko'rinishiga ega. Kartani bosing va keyin u boradigan joyni bosing, uni torting yoki uni eng yaxshi joyga yuborish uchun ikki marta bosing. O'yinlar har bir yurishdan keyin saqlanadi.
 
 Cards'ni ilovalarni ishga tushirgich orqali ishga tushirasiz (`Super + Space`). Har bir yorliqni ko'rish uchun uning nomini bosing yoki `?`ni bosing.
 
@@ -97,7 +97,7 @@ Omacalc'ni `Super + Shift + Q` bilan ishga tushirasiz (yoki klaviaturangizda bo'
 
 [Signal](https://signal.org/) — E2E shifrlangan xabar almashishning kashshofi va yirik texnologiya konglomeratlaridan biri orqali o'tishni istamaydigan har kim uchun ajoyib aloqa varianti.
 
-Signal'ni `Super + Shift + G` bilan ishga tushirasiz. U asosiy o'rnatishning bir qismi emas, shuning uchun uni birinchi marta bossangiz, Omarchy uni siz uchun o'rnatishni taklif qiladi (u Omarchy menyusida _Install > Service_ ostida ham bor).
+Signal'ni `Super + Shift + G` bilan ishga tushirasiz. U asosiy o'rnatishning bir qismi emas, shuning uchun uni birinchi marta bossangiz, Ve OS uni siz uchun o'rnatishni taklif qiladi (u Ve OS menyusida _Install > Service_ ostida ham bor).
 
 ## Omaview
 

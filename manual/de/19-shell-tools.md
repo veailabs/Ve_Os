@@ -1,6 +1,6 @@
 # Shell-Werkzeuge
 
-Zusätzlich zu den standardmäßigen Linux-Werkzeugen liefert Omarchy auch eine Reihe verbesserter Shell-Werkzeuge mit. Hier sind die wichtigsten.
+Zusätzlich zu den standardmäßigen Linux-Werkzeugen liefert Ve OS auch eine Reihe verbesserter Shell-Werkzeuge mit. Hier sind die wichtigsten.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Das vollständige Handbuch findest du über `man yt-dlp`.
 
 [try](https://github.com/tobi/try) macht es einfach, Programmierexperimente mit datumsmarkierten Verzeichnissen zu verwalten. Alle Experimente leben in `~/Work/tries`, und du erreichst sie über `try`.
 
-Omarchy fügt das Verzeichnis `bin/` eines Projekts nicht automatisch zu `PATH` hinzu. Führe vertrauenswürdige projektlokale Werkzeuge mit einem expliziten relativen Pfad aus, zum Beispiel `bin/rails` oder `./bin/dev`.
+Ve OS fügt das Verzeichnis `bin/` eines Projekts nicht automatisch zu `PATH` hinzu. Führe vertrauenswürdige projektlokale Werkzeuge mit einem expliziten relativen Pfad aus, zum Beispiel `bin/rails` oder `./bin/dev`.

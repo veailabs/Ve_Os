@@ -1,14 +1,14 @@
 # Ang Bar sa Itaas
 
-Ang strip sa kahabaan ng itaas ng screen mo ay ang Omarchy bar. Hindi ito isang basta ikinabit na status bar kundi bahagi ng Omarchy shell, ang iisang matagal na tumatakbong proseso ng Quickshell na siyang gumuguhit din ng menu, ng mga notification, ng mga OSD popup, at ng lock screen. Kaya perpekto ang tema nito kasama ng lahat ng iba pa at kaya agad-agad bumubukas ang isang panel imbes na magbukas ng bagong app.
+Ang strip sa kahabaan ng itaas ng screen mo ay ang Ve OS bar. Hindi ito isang basta ikinabit na status bar kundi bahagi ng Ve OS shell, ang iisang matagal na tumatakbong proseso ng Quickshell na siyang gumuguhit din ng menu, ng mga notification, ng mga OSD popup, at ng lock screen. Kaya perpekto ang tema nito kasama ng lahat ng iba pa at kaya agad-agad bumubukas ang isang panel imbes na magbukas ng bagong app.
 
 Ito rin ang nag-iisang bahagi ng desktop na palaging nasa screen, kaya sulit na malaman kung ano ang ginagawa ng lahat ng maliliit na glyph na iyon.
 
 ## Ano ang nandito bilang default
 
-May tatlong seksyon ang bar. Sa kaliwa nakaupo ang logo ng Omarchy (ang launcher ng menu) at ang mga indicator ng workspace. Sa gitna, makukuha mo ang mga indicator ng status, ang orasan, ang Elsewhen (isang world clock), ang panahon, at isang badge ng update ng Omarchy. Sa kanan: ang system tray, ang layout ng keyboard (kapag higit sa isa ang naka-configure), mga agent, bluetooth, network, audio, display, at power.
+May tatlong seksyon ang bar. Sa kaliwa nakaupo ang logo ng Ve OS (ang launcher ng menu) at ang mga indicator ng workspace. Sa gitna, makukuha mo ang mga indicator ng status, ang orasan, ang Elsewhen (isang world clock), ang panahon, at isang badge ng update ng Ve OS. Sa kanan: ang system tray, ang layout ng keyboard (kapag higit sa isa ang naka-configure), mga agent, bluetooth, network, audio, display, at power.
 
-Ilan sa mga iyon ay lumalabas lang kapag may sasabihin sila. Lumalabas lang ang layout ng keyboard kung higit sa isang layout ang na-configure mo. Lumalabas lang ang badge ng update kapag may naghihintay na update ng Omarchy. At lumalabas ang icon ng mga agent sa unang pagkakataong makahanap ang Omarchy ng paggamit ng AI coding sa machine (tingnan ang [AI](17-ai.md)).
+Ilan sa mga iyon ay lumalabas lang kapag may sasabihin sila. Lumalabas lang ang layout ng keyboard kung higit sa isang layout ang na-configure mo. Lumalabas lang ang badge ng update kapag may naghihintay na update ng Ve OS. At lumalabas ang icon ng mga agent sa unang pagkakataong makahanap ang Ve OS ng paggamit ng AI coding sa machine (tingnan ang [AI](17-ai.md)).
 
 ## Pag-click kung saan-saan
 
@@ -16,7 +16,7 @@ Halos bawat widget ay may ginagawa sa left, right, at middle click, at marami an
 
 | Widget | Kaliwa | Kanan | Gitna / scroll |
 | --- | --- | --- | --- |
-| Menu | Menu ng Omarchy | Bagong terminal | — |
+| Menu | Menu ng Ve OS | Bagong terminal | — |
 | Workspaces | I-focus ang workspace na iyon sa monitor na ito | — | Scroll: susunod/nakaraang workspace |
 | Clock | Popup ng kalendaryo | Palitan nang paikot ang format ng label | Gitna: tagapili ng timezone |
 | Weather | Popup ng forecast | Buong panahon bilang isang notification | Gitna: i-refresh |
@@ -29,7 +29,7 @@ Halos bawat widget ay may ginagawa sa left, right, at middle click, at marami an
 | Media | I-play/i-pause | Popup ng cover-art | Gitna: susunod · scroll: nakaraan/susunod |
 | Agents | Panel ng mga agent | Ilunsad ang agent mo | Gitna: susunod na subscription |
 | Tray | I-hover para ipakita ang drawer | I-right-click ang chevron para pamahalaan | — |
-| Omarchy update | Patakbuhin ang update | — | — |
+| Ve OS update | Patakbuhin ang update | — | — |
 
 Hindi lahat ng nasa talahanayang iyan ay nasa bar mo agad. Ang media widget (MPRIS na now-playing, na may nag-i-scroll na track at artist) at ang microphone widget ay parehong built-in pero naka-off bilang default — idagdag mo sila kung gusto mo, gaya ng inilalarawan sa ibaba.
 
@@ -137,6 +137,6 @@ Bawat widget ay isang entry sa isa sa limang array ng layout, at ang mga setting
 
 `center` ang box sa gitna ng bar: lahat ng nasa loob nito ay nakasentro sa screen bilang isang grupo. Nakasabit ang `centerBegin` at `centerEnd` sa alinmang panig ng box, na siyang paraan kung paano nananatiling nasa pinakagitna ang orasan kahit pa dumarating at umaalis ang panahon at ang badge ng update. Maglagay ng higit sa isang widget sa `center` at magkakasama silang isesentro; iwan itong walang laman at magkikita ang `centerBegin` at `centerEnd` sa gitna ng bar.
 
-Isang panuntunang sulit na isaisip: **kapag mayroon ka nang sarili mong `shell.json`, ito na ang canonical**. Hanggang wala ka pang kino-customize, binabasa ng shell ang default file ng Omarchy. Sa sandaling mag-drag ka ng widget, magpatakbo ng `omarchy bar`, o ikaw mismo ang mag-edit ng file, sa iyo na ito — walang deep merge, kaya hindi awtomatikong lalabas sa bar mo ang mga bagong default widget sa mga darating na release ng Omarchy. Ibinabalik ng `omarchy bar defaults` ang inilabas na layout tuwing gusto mo ng malinis na panimula.
+Isang panuntunang sulit na isaisip: **kapag mayroon ka nang sarili mong `shell.json`, ito na ang canonical**. Hanggang wala ka pang kino-customize, binabasa ng shell ang default file ng Ve OS. Sa sandaling mag-drag ka ng widget, magpatakbo ng `omarchy bar`, o ikaw mismo ang mag-edit ng file, sa iyo na ito — walang deep merge, kaya hindi awtomatikong lalabas sa bar mo ang mga bagong default widget sa mga darating na release ng Ve OS. Ibinabalik ng `omarchy bar defaults` ang inilabas na layout tuwing gusto mo ng malinis na panimula.
 
 Ang parehong file ay naglalaman din ng mga timing mo sa idle sa top level, sa labas ng `bar` key: `idle.screensaver` at `idle.lock`, parehong sa segundo mula nang maging idle ka. Kaya sumasipa ang default screensaver sa 150 segundo at ang lock sa 300.

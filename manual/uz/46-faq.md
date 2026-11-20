@@ -28,7 +28,7 @@ Bu yakshanba 10:55 AM ko'rinishida ko'rsatadi.
 
 ### Vaqt mintaqamni qanday o'zgartiraman?
 
-Omarchy menyusida _Update > Timezone_ ni ishga tushiring va ro'yxatdan tanlang. Agar vaqt mintaqasi to'g'ri bo'lsa-yu, lekin soatning o'zi adashib ketgan bo'lsa, _Update > Time_ vaqt sinxronizatsiyasini siz uchun qayta ishga tushiradi.
+Ve OS menyusida _Update > Timezone_ ni ishga tushiring va ro'yxatdan tanlang. Agar vaqt mintaqasi to'g'ri bo'lsa-yu, lekin soatning o'zi adashib ketgan bo'lsa, _Update > Time_ vaqt sinxronizatsiyasini siz uchun qayta ishga tushiradi.
 
 ### DNS imni qanday o'zgartiraman, Wi-Fi imni qanday tarqataman yoki ulanish tezligimni qanday tekshiraman?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Ekran yozuvlari uchun ham `OMARCHY_SCREENRECORD_DIR` yordamida xuddi shunday qilishingiz mumkin.
 
-Omasnap o'zining skrinshot katalogini avtomatik yaratadi. Ekran yozuvi katalogini o'zingiz yarating, so'ng muhitdagi har ikkala o'zgarish ham kuchga kirishi uchun Omarchy ni qayta ishga tushiring.
+Omasnap o'zining skrinshot katalogini avtomatik yaratadi. Ekran yozuvi katalogini o'zingiz yarating, so'ng muhitdagi har ikkala o'zgarish ham kuchga kirishi uchun Ve OS ni qayta ishga tushiring.
 
 ### Apple Studio Display imda karnaylar + veb-kamerani qanday ishlataman?
 
 USB C ni ulash bilan hammasi ishlaydi deb o'ylashingiz mumkin, ammo afsuski unday emas. Uni ishonchli ishlatish uchun men topgan yechim — [WJESOG DisplayPort + USB-A => USB-C kabeli](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/) dan foydalanish. Shunda karnaylar va veb-kamera ajoyib ishlaydi.
 
-Omarchy da Apple displeylari (Studio ham, XDR ham) uchun oddiy klaviatura yorqinlik tugmalari yordamida o'rnatilgan yorqinlik boshqaruvi borligini unutmang.
+Ve OS da Apple displeylari (Studio ham, XDR ham) uchun oddiy klaviatura yorqinlik tugmalari yordamida o'rnatilgan yorqinlik boshqaruvi borligini unutmang.
 
 ### Barcha ortiqcha dasturiy ta'minotdan qanday qutulsam bo'ladi?
 
@@ -72,7 +72,7 @@ Agar Obsidian yoki LibreOffice kabi dasturlarni yoki oldindan o'rnatilgan boshqa
 
 O'rnatilgan har bir paketni ko'rish uchun _Remove > Package_ ni ishga tushiring. Keyin olib tashlamoqchi bo'lgan har qanday paketni tab bilan tanlashingiz va tanlagan hamma narsangizni olib tashlashni return bilan boshlashingiz mumkin.
 
-Kerak bo'lmagan oldindan o'rnatilgan veb-ilovalardan istalganini olib tashlash uchun Omarchy menyusidan _Remove > Web App_ dan ham foydalanishingiz mumkin.
+Kerak bo'lmagan oldindan o'rnatilgan veb-ilovalardan istalganini olib tashlash uchun Ve OS menyusidan _Remove > Web App_ dan ham foydalanishingiz mumkin.
 
 Yoki barcha oldindan o'rnatilgan qo'shimchalar — veb-ilovalar, TUI lar va ixtiyoriy ilovalar — ni bir yo'la supurib tashlash uchun _Remove > Preinstalls_ ni ishga tushiring. Ularni ishga tushirgan tezkor tugmalar ham ular bilan birga yo'qoladi, shuning uchun sizga `~/.config/hypr/bindings.lua` da o'zingiznikilar bilan to'ldirish uchun toza bog'lamalar varag'i qoladi.
 

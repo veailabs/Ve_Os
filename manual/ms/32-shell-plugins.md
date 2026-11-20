@@ -1,10 +1,10 @@
 # Plugin Shell
 
-Desktop Omarchy berjalan sebagai satu proses Quickshell jangka panjang yang dipanggil `omarchy-shell`, dan hampir semua yang anda lihat pada skrin ialah plugin di dalamnya. Bar ialah plugin. Begitu juga panel yang jatuh daripadanya, tindihan skrin penuh seperti pemilih emoji dan pengurus papan keratan, menu Omarchy itu sendiri, skrin kunci, dialog polkit, dan perkhidmatan tanpa kepala yang memerhatikan bateri anda dan memanaskan skrin anda pada waktu malam.
+Desktop Ve OS berjalan sebagai satu proses Quickshell jangka panjang yang dipanggil `omarchy-shell`, dan hampir semua yang anda lihat pada skrin ialah plugin di dalamnya. Bar ialah plugin. Begitu juga panel yang jatuh daripadanya, tindihan skrin penuh seperti pemilih emoji dan pengurus papan keratan, menu Ve OS itu sendiri, skrin kunci, dialog polkit, dan perkhidmatan tanpa kepala yang memerhatikan bateri anda dan memanaskan skrin anda pada waktu malam.
 
-Itu bukan hanya perincian pelaksanaan. Ia bermakna anda boleh mematikan bahagian desktop, menukarnya, atau menulis sendiri tanpa menyentuh sebaris pun kod sumber Omarchy.
+Itu bukan hanya perincian pelaksanaan. Ia bermakna anda boleh mematikan bahagian desktop, menukarnya, atau menulis sendiri tanpa menyentuh sebaris pun kod sumber Ve OS.
 
-Plugin pihak pertama dihantar bersama Omarchy dan berada dalam `$OMARCHY_PATH/shell/plugins/`. Apa-apa yang anda tambah sendiri — eksperimen anda sendiri, atau sesuatu yang anda jumpa di GitHub — berada dalam `~/.config/omarchy/plugins/`. Kedua-dua ditemui dengan cara yang sama semasa permulaan, tetapi terbina dalam menerima antara muka shell yang dipercayai manakala plugin pihak ketiga menerima antara muka terhad yang discopkan kepada perkhidmatan dan kitaran hayatnya sendiri. Klon terbina dalam hanya menyimpan konfigurasi khusus sumber dan panggilan UI yang diperlukan untuk tingkah laku asal.
+Plugin pihak pertama dihantar bersama Ve OS dan berada dalam `$OMARCHY_PATH/shell/plugins/`. Apa-apa yang anda tambah sendiri — eksperimen anda sendiri, atau sesuatu yang anda jumpa di GitHub — berada dalam `~/.config/omarchy/plugins/`. Kedua-dua ditemui dengan cara yang sama semasa permulaan, tetapi terbina dalam menerima antara muka shell yang dipercayai manakala plugin pihak ketiga menerima antara muka terhad yang discopkan kepada perkhidmatan dan kitaran hayatnya sendiri. Klon terbina dalam hanya menyimpan konfigurasi khusus sumber dan panggilan UI yang diperlukan untuk tingkah laku asal.
 
 ## Melihat apa yang anda ada
 

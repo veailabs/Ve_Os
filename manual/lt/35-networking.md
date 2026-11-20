@@ -1,6 +1,6 @@
 # Tinklas
 
-Omarchy tinklą tvarko NetworkManager, o jūs jį valdote iš tinklo piktogramos [viršutinėje juostoje](05-the-top-bar.md) arba su `Super + Ctrl + N`.
+Ve OS tinklą tvarko NetworkManager, o jūs jį valdote iš tinklo piktogramos [viršutinėje juostoje](05-the-top-bar.md) arba su `Super + Ctrl + N`.
 
 Tas skydelis ieško Wi-Fi tinklų, rodo signalo stiprumą ir prisijungia. Ethernetui visai nieko nereikia — prijunkite ir veikia. Jei labiau norite likti terminale, `nmtui` suteikia tokius pačius valdiklius, be to, yra komandų grupė `omarchy network`.
 
@@ -12,7 +12,7 @@ Jei iš tikrųjų reikia paties slaptažodžio, jį išspausdina `omarchy networ
 
 ## DNS
 
-Omarchy naudoja tokį DNS, kokį jūsų tinklas pateikia per DHCP. Galite tai pakeisti visam kompiuteriui skiltyje _Setup > Network > DNS_, kur Cloudflare ir Google pasiekiami vienu spustelėjimu. Pasirinkite _Custom_, kad įvestumėte savo serverius.
+Ve OS naudoja tokį DNS, kokį jūsų tinklas pateikia per DHCP. Galite tai pakeisti visam kompiuteriui skiltyje _Setup > Network > DNS_, kur Cloudflare ir Google pasiekiami vienu spustelėjimu. Pasirinkite _Custom_, kad įvestumėte savo serverius.
 
 Iš terminalo `omarchy dns` išspausdina dabartinį teikėją, o `omarchy dns Cloudflare` jį nustato.
 

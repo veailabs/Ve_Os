@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy styrs vanligtvis via snabbtangenterna och Omarchy-menyn (`Super + Space`). Men du kan också styra det via `omarchy` CLI:t. Det är särskilt användbart när du låter en AI-agent arbeta tillsammans med dig med anpassning eller konfiguration.
+Ve OS styrs vanligtvis via snabbtangenterna och Ve OS-menyn (`Super + Space`). Men du kan också styra det via `omarchy` CLI:t. Det är särskilt användbart när du låter en AI-agent arbeta tillsammans med dig med anpassning eller konfiguration.
 
 CLI:t har tillgång till alla interna verktyg som används både via menyn och på andra sätt. Du kan se allt som finns tillgängligt genom att köra `omarchy` i terminalen.
 
@@ -8,7 +8,7 @@ Det ser ut ungefär så här:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-För diagnostik kör du `omarchy-debug --no-sudo --print` direkt. Det skriver ut diagnostik och skriver `/tmp/omarchy-debug.log` utan att be om sudo, även vid paketinstallationer där `omarchy debug` kan misslyckas med "Unknown Omarchy command".
+För diagnostik kör du `omarchy-debug --no-sudo --print` direkt. Det skriver ut diagnostik och skriver `/tmp/omarchy-debug.log` utan att be om sudo, även vid paketinstallationer där `omarchy debug` kan misslyckas med "Unknown Ve OS command".
 
 Och du kan gräva djupare i varje grupp:
 
@@ -60,4 +60,4 @@ Varje kommando accepterar också `--help`, oavsett om du frågar om en hel grupp
 
 ### Öppna menyn från terminalen
 
-Omarchy-menyn går också att skripta, vilket är praktiskt för dina egna tangentbindningar. `omarchy menu` öppnar den vid roten, och du kan hoppa direkt till vilken punkt som helst i trädet genom att ange dess namn: `omarchy menu summon appearance.theme` går rakt till temaväljaren, `omarchy menu toggle system` öppnar systemmenyn och stänger den igen om den redan är uppe, och `omarchy menu close` stänger undan den.
+Ve OS-menyn går också att skripta, vilket är praktiskt för dina egna tangentbindningar. `omarchy menu` öppnar den vid roten, och du kan hoppa direkt till vilken punkt som helst i trädet genom att ange dess namn: `omarchy menu summon appearance.theme` går rakt till temaväljaren, `omarchy menu toggle system` öppnar systemmenyn och stänger den igen om den redan är uppe, och `omarchy menu close` stänger undan den.

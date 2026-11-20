@@ -1,6 +1,6 @@
 # Bränding
 
-Omarchy võimaldab sul määrata oma ettevõtte logo või isikliku pildi nii alglaadimisel avamise ekraanile, ekraanisäästjale kui ka teabeekraanile.
+Ve OS võimaldab sul määrata oma ettevõtte logo või isikliku pildi nii alglaadimisel avamise ekraanile, ekraanisäästjale kui ka teabeekraanile.
 
 ### Alglaadimisel avamine
 
@@ -24,11 +24,11 @@ Selles menüüs on kolm kirjet:
 
 - **Edit Text** avab faili `~/.config/omarchy/branding/screensaver.txt` sinu redaktoris. Kirjuta või kleebi mida iganes soovid — ASCII-kunsti, oma nime, roppu sõna. Salvesta ja välju ning ekraanisäästja käivitub kohe, et saaksid seda näha.
 - **Set From Image** avab failivalija png või svg jaoks, teisendab selle ASCII-ks ja näitab sulle tulemust. Selge siluetiga logod toimivad palju paremini kui fotod.
-- **Restore Default** paneb Omarchy logo tagasi.
+- **Restore Default** paneb Ve OS logo tagasi.
 
 ### Teabeekraan
 
-Samad kolm valikut on jaotises _Appearance > Branding > About_ selle _About_ ekraani jaoks, mille saad Omarchy menüüst, ja need töötavad identselt — fail on `~/.config/omarchy/branding/about.txt` ja About aken ilmub pärast iga muudatust esile. About'i kunst teisendatakse väiksemasse mõõtu kui ekraanisäästja oma, kuna see peab mahtuma aknasse, mitte täitma kogu sinu ekraani.
+Samad kolm valikut on jaotises _Appearance > Branding > About_ selle _About_ ekraani jaoks, mille saad Ve OS menüüst, ja need töötavad identselt — fail on `~/.config/omarchy/branding/about.txt` ja About aken ilmub pärast iga muudatust esile. About'i kunst teisendatakse väiksemasse mõõtu kui ekraanisäästja oma, kuna see peab mahtuma aknasse, mitte täitma kogu sinu ekraani.
 
 Kuni aken on avatud, libiseb iga mõne sekundi tagant üle kunsti roheline helk ja jätab selle seejärel jälle paigale. Ka sinu oma kunst saab selle, seni kui iga märk selles on ühe veeru laiune — kõik, mida _Set From Image_ toodab, ongi. Emoji'dest või kahe veeru laiustest märkidest koostatud kunst jääb selle asemel paigale, ja samuti ekraan, kui hoiad omaenda fastfetch konfigi: neil juhtudel tähendab paigal püsiv logo seda, et animatsioon hoiab viisakalt eemale, mitte ei ebaõnnestu, sest helgi libistamine üle nende paneks ülejäänud rea valesse kohta.
 

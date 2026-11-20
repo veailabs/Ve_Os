@@ -1,4 +1,6 @@
-# කිසිවෙකු සහභාගී නොවන ස්ථාපනයන්
+# Ve OS — කිසිවෙකු සහභාගී නොවන ස්ථාපනයන්
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO එකට යතුරුපුවරුව අසල කිසිවෙකු නොමැතිවම එයම ස්ථාපනය කර ගත හැකිය. ස්ථාපකයට එහි වින්‍යාස ගොනු රැගත් `cidata` ලෙස ලේබල් කළ දෙවන ධාවකයක් හමු වුවහොත්, එය ඒවා පිටපත් කර, පිහිටුවීමේ විශාරදය සම්පූර්ණයෙන්ම මඟ හැර, තනිවම නිම කළ පද්ධතියට නැවත පණ ගන්වයි. විශේෂ ISO තැනීමක් නැත, අමතර boot මෙනු ඇතුළත් කිරීමක් නැත — එවැනි ධාවකයක් අමුණා නැත්නම්, කිසිවක් වෙනස් නොවන අතර ඔබට සාමාන්‍ය විශාරදය ලැබේ.
 

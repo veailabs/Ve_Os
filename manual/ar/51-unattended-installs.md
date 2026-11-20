@@ -1,4 +1,6 @@
-# عمليات التثبيت غير المراقبة
+# Ve OS — عمليات التثبيت غير المراقبة
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 يمكن لملف Omarchy ISO تثبيت نفسه من دون أن يجلس أحد أمام لوحة المفاتيح. إذا عثر المثبّت على محرك أقراص ثانٍ يحمل الوسم `cidata` ويحتوي على ملفات الإعدادات الخاصة به، فإنه ينسخها منه، ويتخطى معالج الإعداد بالكامل، ويعيد التشغيل إلى داخل النظام المكتمل من تلقاء نفسه. لا حاجة إلى بناء خاص لملف ISO، ولا إلى إدخال إضافي في قائمة الإقلاع — ففي غياب مثل هذا المحرك، لا يتغير شيء وتحصل على المعالج العادي.
 

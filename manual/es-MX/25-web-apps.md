@@ -1,10 +1,10 @@
 # Aplicaciones web
 
-Puedes agregar tus propias aplicaciones web usando _Install > Web App_ en el menú de Omarchy (`Super + Space`). Te pedirá el nombre de la aplicación, la URL de la aplicación y la URL del icono, si no puede obtenerlo mediante el favicon. Puedes conseguir excelentes iconos PNG para muchas aplicaciones web populares en [Dashboard Icons](https://dashboardicons.com).
+Puedes agregar tus propias aplicaciones web usando _Install > Web App_ en el menú de Ve OS (`Super + Space`). Te pedirá el nombre de la aplicación, la URL de la aplicación y la URL del icono, si no puede obtenerlo mediante el favicon. Puedes conseguir excelentes iconos PNG para muchas aplicaciones web populares en [Dashboard Icons](https://dashboardicons.com).
 
 Después podrás acceder a ellas desde el lanzador de aplicaciones (`Super + Space`), y usarán la preciosa ventana de aplicación web sin marco.
 
-Si quieres eliminar una aplicación web, solo ve a _Remove > Web App_ en el menú de Omarchy.
+Si quieres eliminar una aplicación web, solo ve a _Remove > Web App_ en el menú de Ve OS.
 
 Es mejor que inicies sesión en todas tus cuentas usando un navegador normal antes de usar los accesos directos de las aplicaciones web. El delgado marco envolvente no funciona bien con 1password, así que simplemente es más fácil haber iniciado sesión directamente antes.
 
@@ -12,7 +12,7 @@ Todos los atajos de teclado para estas aplicaciones web se pueden cambiar en `~/
 
 Cuando estés en una aplicación web, puedes copiar la URL actual al portapapeles usando `Shift + Alt + L`.
 
-Por defecto, Omarchy ya incluye un surtido de aplicaciones predeterminadas:
+Por defecto, Ve OS ya incluye un surtido de aplicaciones predeterminadas:
 
 ## HEY
 
@@ -64,7 +64,7 @@ Puedes iniciar YouTube usando `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) es el sistema de videochat más popular en Estados Unidos. Excelentes conexiones en todo el mundo. Y puedes tener reuniones de 40 minutos sin una cuenta de pago. Omarchy envuelve el cliente web de Zoom, y los enlaces de reuniones de Zoom se abrirán directo en él.
+[Zoom](https://zoom.us/) es el sistema de videochat más popular en Estados Unidos. Excelentes conexiones en todo el mundo. Y puedes tener reuniones de 40 minutos sin una cuenta de pago. Ve OS envuelve el cliente web de Zoom, y los enlaces de reuniones de Zoom se abrirán directo en él.
 
 Inicias Zoom usando el lanzador de aplicaciones (`Super + Space`).
 
@@ -76,7 +76,7 @@ Inicias Discord usando el lanzador de aplicaciones (`Super + Space`).
 
 ## Aplicaciones de Microsoft
 
-Selecciona _Install > Service > Microsoft_ para agregar Outlook, Word, Excel, PowerPoint, Teams y OneDrive como aplicaciones web. Cada aplicación tiene su propio lanzador y se abre directamente, usando las URL comerciales de Microsoft 365 y tu perfil de navegador existente. Se abren en las mismas ventanas de aplicación de navegador que las demás aplicaciones web de Omarchy; no instalan el cliente separado de Teams for Linux.
+Selecciona _Install > Service > Microsoft_ para agregar Outlook, Word, Excel, PowerPoint, Teams y OneDrive como aplicaciones web. Cada aplicación tiene su propio lanzador y se abre directamente, usando las URL comerciales de Microsoft 365 y tu perfil de navegador existente. Se abren en las mismas ventanas de aplicación de navegador que las demás aplicaciones web de Ve OS; no instalan el cliente separado de Teams for Linux.
 
 Elimina el paquete con _Remove > Service > Microsoft_, o elimina aplicaciones individuales con _Remove > Web App_. También puedes instalar solo las aplicaciones que quieras mediante _Install > Web App_.
 
@@ -88,4 +88,4 @@ Para mantener separados los inicios de sesión del trabajo, agrega un directorio
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Reemplaza el directorio de ejemplo con una ruta absoluta de tu elección y usa la misma ruta en los seis lanzadores para compartir los inicios de sesión del trabajo entre ellos. Las aplicaciones web usan el navegador compatible seleccionado de Omarchy, y recurren a Chrome cuando el navegador predeterminado no es compatible.
+Reemplaza el directorio de ejemplo con una ruta absoluta de tu elección y usa la misma ruta en los seis lanzadores para compartir los inicios de sesión del trabajo entre ellos. Las aplicaciones web usan el navegador compatible seleccionado de Ve OS, y recurren a Chrome cuando el navegador predeterminado no es compatible.

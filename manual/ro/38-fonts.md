@@ -1,12 +1,12 @@
 # Fonturi
 
-Omarchy folosește JetBrainsMono Nerd Font ca font atât pentru terminal, cât și pentru sistem, în mod implicit.
+Ve OS folosește JetBrainsMono Nerd Font ca font atât pentru terminal, cât și pentru sistem, în mod implicit.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Poți schimba acest lucru prin meniul _Aspect > Font_ din meniul Omarchy (`Super + Space`). Acesta setează fontul monospațiat peste tot: în terminal, în bară și în orice altceva care îl cere.
+Poți schimba acest lucru prin meniul _Aspect > Font_ din meniul Ve OS (`Super + Space`). Acesta setează fontul monospațiat peste tot: în terminal, în bară și în orice altceva care îl cere.
 
-Poți instala alte fonturi populare de programare prin _Instalare > Stil > Font_ în meniul Omarchy: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono și Iosevka sunt toate la un clic distanță, în versiunile lor Nerd Font, astfel încât glifele din bară și din terminal să funcționeze în continuare. După ce instalezi unul, alege-l din _Aspect > Font_.
+Poți instala alte fonturi populare de programare prin _Instalare > Stil > Font_ în meniul Ve OS: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono și Iosevka sunt toate la un clic distanță, în versiunile lor Nerd Font, astfel încât glifele din bară și din terminal să funcționeze în continuare. După ce instalezi unul, alege-l din _Aspect > Font_.
 
 ## Chineză, japoneză și coreeană
 

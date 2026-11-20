@@ -1,6 +1,6 @@
 # Seguretat
 
-Omarchy es pren la seguretat extremadament seriosament. Això vol ser un sistema operatiu que puguis fer servir per fer _Treball Real_ al _Món Real_. On perdre un portàtil no pot derivar en una emergència de seguretat. Així que això és el que fem:
+Ve OS es pren la seguretat extremadament seriosament. Això vol ser un sistema operatiu que puguis fer servir per fer _Treball Real_ al _Món Real_. On perdre un portàtil no pot derivar en una emergència de seguretat. Així que això és el que fem:
 
 1. *El xifratge complet del disc està activat per defecte*: Aquest és el pas més important per assegurar la protecció física de les teves dades. Si perds l'ordinador o te'l roben, les dades estan completament xifrades amb LUKS (Linux Unified Key Setup) estàndard. L'instal·lador et permet desactivar-ho per a màquines d'un sol ús (vegeu [Primers passos](02-getting-started.md)); una instal·lació sense xifratge no té gens d'aquesta protecció, i qualsevol que tingui el disc a les mans el pot llegir.
 2. *El tallafoc està activat per defecte*: Tot el trànsit entrant està bloquejat per defecte, amb unes quantes excepcions: el port 53317 per a [LocalSend](https://localsend.org/); les consultes DNS al resolver propi de l'ordinador a l'adreça del pont de Docker (172.17.0.1), acceptades des dels intervals d'adreces privades que Docker dona als seus contenidors; i el DNS multicast (port 5353), que permet que les impressores i altres dispositius de la teva xarxa es trobin entre ells i també anuncia el nom del teu ordinador allà. A més d'aquestes, el tallafoc manté les concessions estàndard d'UFW per al ping, per obtenir una adreça del teu router (DHCP) i per al descobriment UPnP. Fins i tot ssh està desactivat fins que l'actives mitjançant _Setup > Security > SSHD_, que obre el port 22 (amb limitació de velocitat contra la força bruta) com a part de la configuració. Fins i tot tanquem l'accés a Docker amb la configuració [ufw-docker](https://github.com/chaifeng/ufw-docker) per evitar que els teus contenidors quedin exposats accidentalment al món.
@@ -10,11 +10,11 @@ Omarchy es pren la seguretat extremadament seriosament. Això vol ser un sistema
 
 ## Canviar les contrasenyes
 
-En una instal·lació xifrada tens dues contrasenyes: la que desbloqueja el disc a l'arrencada i la que fas servir per iniciar sessió i amb `sudo`. La configuració fa que siguin la mateixa. Totes dues es poden canviar a _Update > Password_ al menú d'Omarchy — _Drive Encryption_ per a la primera, _User_ per a la segona. Canviar la contrasenya del disc et demana primer l'actual, així que tingues-la a mà. Si un canvi s'interromp, executa _Drive Encryption_ de nou: et demana la contrasenya que desbloqueja el disc ara i acaba el canvi.
+En una instal·lació xifrada tens dues contrasenyes: la que desbloqueja el disc a l'arrencada i la que fas servir per iniciar sessió i amb `sudo`. La configuració fa que siguin la mateixa. Totes dues es poden canviar a _Update > Password_ al menú d'Ve OS — _Drive Encryption_ per a la primera, _User_ per a la segona. Canviar la contrasenya del disc et demana primer l'actual, així que tingues-la a mà. Si un canvi s'interromp, executa _Drive Encryption_ de nou: et demana la contrasenya que desbloqueja el disc ara i acaba el canvi.
 
 ## Passar a algú altre una màquina que ja has fet servir
 
-Si passes la teva màquina a algú altre, no cal que la reinstal·lis. Executa _Setup > Reset Computer_ al menú d'Omarchy, escriu `reset` per confirmar i reinicia. Això esborra tots els comptes d'usuari i tot el que hi ha a `/home`, descarta tots els paquets i canvis del sistema que hagis fet des de la instal·lació i neteja la identitat de la màquina — connexions de xarxa, claus de host i tot. El que torna a arrencar és l'assistent de configuració de la primera arrencada, preparat perquè el seu nou propietari introdueixi el seu propi nom, contrasenya i contrasenya de xifratge.
+Si passes la teva màquina a algú altre, no cal que la reinstal·lis. Executa _Setup > Reset Computer_ al menú d'Ve OS, escriu `reset` per confirmar i reinicia. Això esborra tots els comptes d'usuari i tot el que hi ha a `/home`, descarta tots els paquets i canvis del sistema que hagis fet des de la instal·lació i neteja la identitat de la màquina — connexions de xarxa, claus de host i tot. El que torna a arrencar és l'assistent de configuració de la primera arrencada, preparat perquè el seu nou propietari introdueixi el seu propi nom, contrasenya i contrasenya de xifratge.
 
 Funciona restaurant la instantània base que fa l'instal·lador, de manera que només està disponible en màquines instal·lades des de la ISO d'Omarchy. I en un disc sense xifratge, un restabliment és una supressió més que no pas un esborrat segur, així que si les dades eren sensibles, fes una instal·lació nova.
 
@@ -24,7 +24,7 @@ De vegades vols que `sudo` deixi de demanar-la, molt sovint quan un agent d'IA e
 
 L'accés temporitzat caduca automàticament, inclòs immediatament després de reprendre d'una suspensió que hagi creuat el termini. Reiniciar l'ordinador l'acaba abans d'hora. L'accés permanent sobreviu als reinicis i es manté activat fins que el desactivis.
 
-Actualitzar o eliminar el paquet de configuració d'Omarchy acaba qualsevol concessió temporal abans que en canviï el suport de caducitat. Si l'ordre informa d'un error d'autorització o de neteja, resol-lo abans de provar d'activar una altra concessió; un error no significa que l'accés sense contrasenya estigui inactiu.
+Actualitzar o eliminar el paquet de configuració d'Ve OS acaba qualsevol concessió temporal abans que en canviï el suport de caducitat. Si l'ordre informa d'un error d'autorització o de neteja, resol-lo abans de provar d'activar una altra concessió; un error no significa que l'accés sense contrasenya estigui inactiu.
 
 Tingues-ho clar: mentre està activat, qualsevol cosa que s'executi com el teu usuari pot fer qualsevol cosa com a root sense que se li demani. Aquesta és tota la gràcia, i també tot el risc.
 

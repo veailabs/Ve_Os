@@ -1,10 +1,10 @@
 # Webapps
 
-Du kan tilføje dine egne webapps ved hjælp af _Install > Web App_ i Omarchy-menuen (`Super + Space`). Den vil bede dig om appnavnet, app-URL'en og ikon-URL'en, hvis den ikke kan hente den via favicon. Du kan få gode PNG-ikoner til mange populære webapps på [Dashboard Icons](https://dashboardicons.com).
+Du kan tilføje dine egne webapps ved hjælp af _Install > Web App_ i Ve OS-menuen (`Super + Space`). Den vil bede dig om appnavnet, app-URL'en og ikon-URL'en, hvis den ikke kan hente den via favicon. Du kan få gode PNG-ikoner til mange populære webapps på [Dashboard Icons](https://dashboardicons.com).
 
 De vil derefter være tilgængelige via app-starteren (`Super + Space`) og bruge det smukke rammeløse webapp-vindue.
 
-Hvis du vil fjerne en webapp, skal du blot gå til _Remove > Web App_ i Omarchy-menuen.
+Hvis du vil fjerne en webapp, skal du blot gå til _Remove > Web App_ i Ve OS-menuen.
 
 Det er bedst, hvis du logger ind på alle dine konti med en almindelig browser, før du bruger genvejene til webapps. Den tynde wrapper-ramme fungerer ikke godt med 1password, så det er bare nemmere at være logget direkte ind først.
 
@@ -12,7 +12,7 @@ Alle tastaturgenvejene til disse webapps kan ændres i `~/.config/hypr/bindings.
 
 Når du er i en webapp, kan du kopiere den aktuelle URL til udklipsholderen med `Shift + Alt + L`.
 
-Som standard leveres Omarchy allerede med et udvalg af standardapps:
+Som standard leveres Ve OS allerede med et udvalg af standardapps:
 
 ## HEY
 
@@ -64,7 +64,7 @@ Du kan starte YouTube med `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) er det mest populære videochatsystem i USA. Gode forbindelser på tværs af hele verden. Og møder på 40 minutter kan afholdes uden en betalende konto. Omarchy wrapper Zooms webklient, og Zoom-mødelinks åbner direkte i den.
+[Zoom](https://zoom.us/) er det mest populære videochatsystem i USA. Gode forbindelser på tværs af hele verden. Og møder på 40 minutter kan afholdes uden en betalende konto. Ve OS wrapper Zooms webklient, og Zoom-mødelinks åbner direkte i den.
 
 Du starter Zoom ved hjælp af app-starteren (`Super + Space`).
 
@@ -76,7 +76,7 @@ Du starter Discord ved hjælp af app-starteren (`Super + Space`).
 
 ## Microsoft-apps
 
-Vælg _Install > Service > Microsoft_ for at tilføje Outlook, Word, Excel, PowerPoint, Teams og OneDrive som webapps. Hver app har sin egen starter og åbner direkte ved hjælp af de kommercielle Microsoft 365-URL'er og din eksisterende browserprofil. De åbner i de samme browserappvinduer som Omarchys andre webapps; de installerer ikke den separate Teams for Linux-klient.
+Vælg _Install > Service > Microsoft_ for at tilføje Outlook, Word, Excel, PowerPoint, Teams og OneDrive som webapps. Hver app har sin egen starter og åbner direkte ved hjælp af de kommercielle Microsoft 365-URL'er og din eksisterende browserprofil. De åbner i de samme browserappvinduer som Ve OSs andre webapps; de installerer ikke den separate Teams for Linux-klient.
 
 Fjern pakken med _Remove > Service > Microsoft_, eller fjern individuelle apps med _Remove > Web App_. Du kan også installere kun de apps, du ønsker, via _Install > Web App_.
 
@@ -88,4 +88,4 @@ For at holde arbejdslogins adskilt skal du tilføje en browserdatamappe til hver
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Erstat eksempelmappen med en absolut sti efter eget valg, og brug den samme sti til alle seks startere for at dele arbejdslogins mellem dem. Webappene bruger Omarchys valgte understøttede browser og falder tilbage til Chrome, når standardbrowseren ikke er understøttet.
+Erstat eksempelmappen med en absolut sti efter eget valg, og brug den samme sti til alle seks startere for at dele arbejdslogins mellem dem. Webappene bruger Ve OSs valgte understøttede browser og falder tilbage til Chrome, når standardbrowseren ikke er understøttet.

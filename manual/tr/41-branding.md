@@ -1,6 +1,6 @@
 # Markalaşma
 
-Omarchy, şirket logonuzu veya kişisel görselinizi hem önyükleme kilidini açma ekranı, hem ekran koruyucu, hem de hakkında ekranı için ayarlamanıza olanak tanır.
+Ve OS, şirket logonuzu veya kişisel görselinizi hem önyükleme kilidini açma ekranı, hem ekran koruyucu, hem de hakkında ekranı için ayarlamanıza olanak tanır.
 
 ### Önyükleme kilidini açma
 
@@ -24,11 +24,11 @@ O menüde üç giriş var:
 
 - **Edit Text**, `~/.config/omarchy/branding/screensaver.txt` dosyasını düzenleyicinizde açar. Ne isterseniz yazın veya yapıştırın — ASCII sanatı, adınız, kaba bir kelime. Kaydedip çıkın; ekran koruyucu hemen devreye girer, böylece görebilirsiniz.
 - **Set From Image**, bir png veya svg için bir dosya seçici açar, onu ASCII'ye dönüştürür ve sonucu size gösterir. Net bir siluete sahip logolar, fotoğraflardan çok daha iyi çalışır.
-- **Restore Default**, Omarchy logosunu geri getirir.
+- **Restore Default**, Ve OS logosunu geri getirir.
 
 ### Hakkında ekranı
 
-Aynı üç seçenek, Omarchy menüsünden ulaştığınız _About_ ekranı için _Appearance > Branding > About_ altında da bulunur ve tamamen aynı şekilde çalışır — dosya `~/.config/omarchy/branding/about.txt` dosyasıdır ve About penceresi her değişiklikten sonra açılır. About görseli, ekran koruyucununkinden daha küçük bir boyuta dönüştürülür, çünkü ekranınızı doldurmak yerine bir pencereye sığması gerekir.
+Aynı üç seçenek, Ve OS menüsünden ulaştığınız _About_ ekranı için _Appearance > Branding > About_ altında da bulunur ve tamamen aynı şekilde çalışır — dosya `~/.config/omarchy/branding/about.txt` dosyasıdır ve About penceresi her değişiklikten sonra açılır. About görseli, ekran koruyucununkinden daha küçük bir boyuta dönüştürülür, çünkü ekranınızı doldurmak yerine bir pencereye sığması gerekir.
 
 Pencere açıkken, birkaç saniyede bir yeşil bir parıltı görselin üzerinden eğilerek geçer ve sonra onu yeniden hareketsiz bırakır. Her karakteri tek sütun genişliğinde olduğu sürece kendi görseliniz de bunu alır — _Set From Image_ ile üretilen her şey öyledir. Emoji veya çift genişlikli karakterlerden oluşturulan görseller bunun yerine hareketsiz kalır; kendi fastfetch yapılandırmanızı korursanız ekran da öyle kalır: bu durumlarda hareketsiz bir logo, animasyonun başarısız olmasından değil, yoldan çekilmesindendir, çünkü bir parıltıyı bunların üzerinden kaydırmak satırın geri kalanını yanlış yere düşürür.
 

@@ -1,14 +1,14 @@
 # Upau wa Juu
 
-Ukanda ulio juu ya skrini yako ni upau wa Omarchy. Si upau wa hali uliobandikwa tu, bali ni sehemu ya shell ya Omarchy, mchakato mmoja wa Quickshell unaoendelea kwa muda mrefu ambao pia huchora menyu, arifa, madirisha ibukizi ya OSD, na skrini ya kufunga. Ndiyo maana unapata mandhari yanayolingana kikamilifu na kila kitu kingine na ndiyo maana paneli hufunguka mara moja badala ya kuanzisha programu mpya.
+Ukanda ulio juu ya skrini yako ni upau wa Ve OS. Si upau wa hali uliobandikwa tu, bali ni sehemu ya shell ya Ve OS, mchakato mmoja wa Quickshell unaoendelea kwa muda mrefu ambao pia huchora menyu, arifa, madirisha ibukizi ya OSD, na skrini ya kufunga. Ndiyo maana unapata mandhari yanayolingana kikamilifu na kila kitu kingine na ndiyo maana paneli hufunguka mara moja badala ya kuanzisha programu mpya.
 
 Pia ni kipande pekee cha eneo-kazi kinachokuwa kwenye skrini kila wakati, kwa hiyo inafaa kujua glyphs hizo ndogo zote zinafanya nini.
 
 ## Kilichopo juu yake kwa chaguo-msingi
 
-Upau una sehemu tatu. Upande wa kushoto kuna nembo ya Omarchy (kizindua menyu) na viashiria vya nafasi za kazi. Katikati unapata viashiria vya hali, saa, Elsewhen (saa ya dunia), hali ya hewa, na beji ya sasisho la Omarchy. Upande wa kulia: trei ya mfumo, mpangilio wa kibodi (wakati zaidi ya mmoja umesanidiwa), wakala, bluetooth, mtandao, sauti, skrini, na nishati.
+Upau una sehemu tatu. Upande wa kushoto kuna nembo ya Ve OS (kizindua menyu) na viashiria vya nafasi za kazi. Katikati unapata viashiria vya hali, saa, Elsewhen (saa ya dunia), hali ya hewa, na beji ya sasisho la Ve OS. Upande wa kulia: trei ya mfumo, mpangilio wa kibodi (wakati zaidi ya mmoja umesanidiwa), wakala, bluetooth, mtandao, sauti, skrini, na nishati.
 
-Baadhi ya hivyo huonekana tu vinapokuwa na jambo la kusema. Mpangilio wa kibodi huonekana tu ikiwa umesanidi mipangilio zaidi ya mmoja. Beji ya sasisho huonekana tu wakati kuna sasisho la Omarchy linalosubiri. Na aikoni ya wakala huonekana mara ya kwanza Omarchy inapopata matumizi ya uandikaji wa msimbo wa AI kwenye mashine (tazama [AI](17-ai.md)).
+Baadhi ya hivyo huonekana tu vinapokuwa na jambo la kusema. Mpangilio wa kibodi huonekana tu ikiwa umesanidi mipangilio zaidi ya mmoja. Beji ya sasisho huonekana tu wakati kuna sasisho la Ve OS linalosubiri. Na aikoni ya wakala huonekana mara ya kwanza Ve OS inapopata matumizi ya uandikaji wa msimbo wa AI kwenye mashine (tazama [AI](17-ai.md)).
 
 ## Kubofya huku na huko
 
@@ -16,7 +16,7 @@ Karibu kila wijeti hufanya jambo fulani kwa kubofya kushoto, kulia, na katikati,
 
 | Wijeti | Kushoto | Kulia | Katikati / kusogeza |
 | --- | --- | --- | --- |
-| Menyu | Menyu ya Omarchy | Terminal mpya | — |
+| Menyu | Menyu ya Ve OS | Terminal mpya | — |
 | Nafasi za kazi | Lenga nafasi hiyo ya kazi kwenye kichunguzi hiki | — | Sogeza: nafasi ya kazi inayofuata/ilyotangulia |
 | Saa | Dirisha ibukizi la kalenda | Zungusha umbizo la lebo | Katikati: kichagua saa za eneo |
 | Hali ya hewa | Dirisha ibukizi la utabiri | Hali ya hewa kamili kama arifa | Katikati: onyesha upya |
@@ -29,7 +29,7 @@ Karibu kila wijeti hufanya jambo fulani kwa kubofya kushoto, kulia, na katikati,
 | Media | Cheza/sitisha | Dirisha ibukizi la picha ya jalada | Katikati: inayofuata · sogeza: iliyotangulia/inayofuata |
 | Wakala | Paneli ya Wakala | Zindua wakala wako | Katikati: usajili unaofuata |
 | Trei | Elea ili kufunua droo | Bofya kulia kwenye chevron ili kudhibiti | — |
-| Sasisho la Omarchy | Endesha sasisho | — | — |
+| Sasisho la Ve OS | Endesha sasisho | — | — |
 
 Si kila kitu kilicho kwenye jedwali hilo kiko kwenye upau wako moja kwa moja. Wijeti ya media (MPRIS inayocheza sasa, yenye wimbo na msanii wanaosogeza) na wijeti ya mikrofon zote zimejengwa ndani lakini zimezimwa kwa chaguo-msingi — ziongeze ukizitaka, kama ilivyoelezwa hapa chini.
 
@@ -137,6 +137,6 @@ Kila wijeti ni ingizo moja katika mojawapo ya safu tano za mpangilio, na mipangi
 
 `center` ni kisanduku kilicho katikati ya upau: kila kitu kilicho ndani yake huwekwa katikati ya skrini kama kundi moja. `centerBegin` na `centerEnd` hutegemea pande zote mbili za kisanduku, ambayo ndiyo jinsi saa inavyobaki katikati hasa hata wakati hali ya hewa na beji ya sasisho vinapokuja na kwenda. Weka wijeti zaidi ya moja katika `center` na zitawekwa katikati pamoja; iache tupu na `centerBegin` na `centerEnd` hukutana katikati ya upau.
 
-Kanuni moja inayofaa kuizingatia ndani yako: **mara unapokuwa na `shell.json` yako mwenyewe, ndiyo yenye mamlaka ya mwisho**. Hadi unapobinafsisha chochote, shell husoma faili chaguo-msingi ya Omarchy. Wakati unapoburuta wijeti, kuendesha `omarchy bar`, au kuhariri faili mwenyewe, unakuwa mmiliki wake — hakuna muunganiko wa kina, kwa hiyo wijeti mpya chaguo-msingi katika matoleo yajayo ya Omarchy hazitaonekana kwenye upau wako kiotomatiki. `omarchy bar defaults` huweka mpangilio uliotolewa tena wakati wowote unapotaka kuanza safi.
+Kanuni moja inayofaa kuizingatia ndani yako: **mara unapokuwa na `shell.json` yako mwenyewe, ndiyo yenye mamlaka ya mwisho**. Hadi unapobinafsisha chochote, shell husoma faili chaguo-msingi ya Ve OS. Wakati unapoburuta wijeti, kuendesha `omarchy bar`, au kuhariri faili mwenyewe, unakuwa mmiliki wake — hakuna muunganiko wa kina, kwa hiyo wijeti mpya chaguo-msingi katika matoleo yajayo ya Ve OS hazitaonekana kwenye upau wako kiotomatiki. `omarchy bar defaults` huweka mpangilio uliotolewa tena wakati wowote unapotaka kuanza safi.
 
 Faili hiyo hiyo pia huweka muda wako wa kutotumika katika kiwango cha juu, nje ya ufunguo wa `bar`: `idle.screensaver` na `idle.lock`, zote kwa sekunde tangu ulipoacha kutumia. Kwa hiyo kinga-skrini ya chaguo-msingi huanza baada ya sekunde 150 na kufuli baada ya 300.

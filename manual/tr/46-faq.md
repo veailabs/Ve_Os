@@ -28,7 +28,7 @@ Bu, Pazar 10:55 AM olarak görüntüleyecektir.
 
 ### Saat dilimimi nasıl değiştiririm?
 
-Omarchy menüsünde _Güncelle > Saat Dilimi_ çalıştırın ve listeden seçin. Saat dilimi doğruysa ancak saatin kendisi kaymışsa, _Güncelle > Saat_ sizin için saat senkronizasyonunu yeniden başlatır.
+Ve OS menüsünde _Güncelle > Saat Dilimi_ çalıştırın ve listeden seçin. Saat dilimi doğruysa ancak saatin kendisi kaymışsa, _Güncelle > Saat_ sizin için saat senkronizasyonunu yeniden başlatır.
 
 ### DNS'imi nasıl değiştiririm, Wi-Fi'ımı nasıl paylaşırım veya bağlantı hızımı nasıl kontrol ederim?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Aynı şeyi ekran kayıtları için `OMARCHY_SCREENRECORD_DIR` kullanarak da yapabilirsiniz.
 
-Omasnap, ekran görüntüsü dizinini otomatik olarak oluşturur. Ekran kaydı dizinini kendiniz oluşturun, ardından herhangi bir ortam değişikliğinin geçerli olması için Omarchy'yi yeniden başlatın.
+Omasnap, ekran görüntüsü dizinini otomatik olarak oluşturur. Ekran kaydı dizinini kendiniz oluşturun, ardından herhangi bir ortam değişikliğinin geçerli olması için Ve OS'yi yeniden başlatın.
 
 ### Apple Studio Display'imde hoparlörleri + webcam'i nasıl çalıştırırım?
 
 USB C'yi takınca her şeyin çalışması gerektiğini düşünürsünüz, ama maalesef durum böyle değil. Güvenilir şekilde çalışmasını sağlamak için bulduğum çözüm, [WJESOG DisplayPort + USB-A => USB-C kablosunu](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/) kullanmaktır. O zaman hoparlörler ve webcam bir harika çalışıyor.
 
-Omarchy'de Apple ekranlar (hem Studio hem de XDR) için normal klavye parlaklık tuşlarını kullanarak yerleşik parlaklık kontrolüne sahip olduğunuzu unutmayın.
+Ve OS'de Apple ekranlar (hem Studio hem de XDR) için normal klavye parlaklık tuşlarını kullanarak yerleşik parlaklık kontrolüne sahip olduğunuzu unutmayın.
 
 ### Tüm fazladan yazılımlardan nasıl kurtulurum?
 
@@ -72,7 +72,7 @@ Obsidian veya LibreOffice gibi programları veya önceden kurulmuş diğer şeyl
 
 Kurulu olan her paketi görmek için _Kaldır > Paket_ çalıştırın. Ardından tab ile kaldırmak istediğiniz herhangi bir paketi seçebilir ve return ile seçtiğiniz her şeyi kaldırmaya başlayabilirsiniz.
 
-Ve istemediğiniz önceden kurulmuş web uygulamalarından herhangi birini kaldırmak için Omarchy menüsünden _Kaldır > Web Uygulaması_'nı kullanabilirsiniz.
+Ve istemediğiniz önceden kurulmuş web uygulamalarından herhangi birini kaldırmak için Ve OS menüsünden _Kaldır > Web Uygulaması_'nı kullanabilirsiniz.
 
 Veya önceden kurulmuş tüm ekstraları — web uygulamaları, TUI'lar ve isteğe bağlı uygulamalar — tek seferde süpürüp atmak için _Kaldır > Önceden Kurulanlar_ çalıştırın. Onları başlatan kısayol tuşları da onlarla birlikte gider, böylece `~/.config/hypr/bindings.lua` içinde kendinizinkilerle dolduracağınız temiz bir bağlama sayfasıyla kalırsınız.
 

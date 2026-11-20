@@ -1,4 +1,6 @@
-# Bezobslužné inštalácie
+# Ve OS — Bezobslužné inštalácie
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 ISO Omarchy sa dokáže nainštalovať samo, bez nikoho pri klávesnici. Ak inštalátor nájde druhú jednotku s menovkou `cidata`, ktorá nesie jeho konfiguračné súbory, skopíruje ich z nej, úplne preskočí sprievodcu nastavením a sám sa reštartuje do hotového systému. Žiadny špeciálny build ISO, žiadna extra položka v boot menu — bez pripojenej takejto jednotky sa nič nemení a dostanete bežného sprievodcu.
 

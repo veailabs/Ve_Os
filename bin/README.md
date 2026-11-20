@@ -1,6 +1,6 @@
 # Commands
 
-Executable Omarchy commands live here. `omarchy` routes their names and metadata into the user-facing CLI; task guidance lives in `agents/skills/command-metadata.md`.
+Executable Ve OS commands live here. `omarchy` routes their names and metadata into the user-facing CLI; The inherited `omarchy` command names, package IDs and protocol keys remain compatible with the upstream base. CLI help, notifications and generated editor themes use Ve OS branding. Task guidance lives in `agents/skills/command-metadata.md`.
 
 Ve's Grok integration uses `omarchy-agent-grok-bot` for native desktop focus/open/close and an unsent primary-Bot draft. It invokes the packaged desktop executable directly so a Node helper on PATH cannot shadow it. Closing local windows does not stop cloud Bot work.
 

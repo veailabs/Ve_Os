@@ -41,7 +41,7 @@ Umiiral lang ang mga binding na ito habang bukas ang Omasnap, kaya hindi sila ma
 
 ## Pagre-record ng screen
 
-Bubuksan ng `Alt + Print Screen` ang _Trigger > Capture > Screenrecord_, na magtatanong kung ano ang gusto mo sa soundtrack: walang audio, desktop audio, desktop plus microphone, o desktop plus microphone plus webcam. Lumalabas lang ang huling iyon kung may camera ka talagang nakasaksak. Pumili ng isa at hahayaan ka ng recording picker ng Omarchy na mag-drag ng rehiyon o mag-click ng window o monitor.
+Bubuksan ng `Alt + Print Screen` ang _Trigger > Capture > Screenrecord_, na magtatanong kung ano ang gusto mo sa soundtrack: walang audio, desktop audio, desktop plus microphone, o desktop plus microphone plus webcam. Lumalabas lang ang huling iyon kung may camera ka talagang nakasaksak. Pumili ng isa at hahayaan ka ng recording picker ng Ve OS na mag-drag ng rehiyon o mag-click ng window o monitor.
 
 Tumatakbo ang pagre-record sa gpu-screen-recorder, na nag-e-encode sa GPU sa 60fps at bumabalik sa CPU kung kailangan. Ang resulta ay isang MP4 sa `~/Videos`, na pinangalanang `screenrecording-2026-08-13_14-22-05.mp4`. Itakda ang `OMARCHY_SCREENRECORD_DIR` para baguhin iyon — pero tandaan na hindi tulad ng screenshot directory, kailangan nang umiral ito, kung hindi ay tatangging magsimula ang recording.
 

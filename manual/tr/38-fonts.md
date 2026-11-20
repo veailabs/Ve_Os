@@ -1,12 +1,12 @@
 # Yazı Tipleri
 
-Omarchy, varsayılan olarak hem terminal hem de sistem yazı tipi olarak JetBrainsMono Nerd Font kullanır.
+Ve OS, varsayılan olarak hem terminal hem de sistem yazı tipi olarak JetBrainsMono Nerd Font kullanır.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Bunu Omarchy menüsündeki (`Super + Space`) _Görünüm > Yazı Tipi_ menüsünden değiştirebilirsiniz. Bu, monospace yazı tipini her yerde ayarlar: terminalde, çubukta ve onu isteyen her şeyde.
+Bunu Ve OS menüsündeki (`Super + Space`) _Görünüm > Yazı Tipi_ menüsünden değiştirebilirsiniz. Bu, monospace yazı tipini her yerde ayarlar: terminalde, çubukta ve onu isteyen her şeyde.
 
-Diğer popüler programlama yazı tiplerini Omarchy menüsündeki _Yükle > Stil > Yazı Tipi_ üzerinden kurabilirsiniz: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono ve Iosevka, çubuktaki ve terminaldeki gliflerin çalışmaya devam etmesi için Nerd Font sürümleriyle tek tık uzağınızda. Birini kurduktan sonra _Görünüm > Yazı Tipi_ altından seçin.
+Diğer popüler programlama yazı tiplerini Ve OS menüsündeki _Yükle > Stil > Yazı Tipi_ üzerinden kurabilirsiniz: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono ve Iosevka, çubuktaki ve terminaldeki gliflerin çalışmaya devam etmesi için Nerd Font sürümleriyle tek tık uzağınızda. Birini kurduktan sonra _Görünüm > Yazı Tipi_ altından seçin.
 
 ## Çince, Japonca ve Korece
 

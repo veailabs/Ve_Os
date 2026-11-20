@@ -1,4 +1,6 @@
-# Bem-vindo ao Omarchy!
+# Ve OS — Bem-vindo ao upstream Omarchy!
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 O Omarchy é uma distribuição Linux [omakase](https://manuals.omamix.org/3/omacom/76/omakase-computing) baseada no [Arch](https://archlinux.org/), no gerenciador de janelas em mosaico [Hyprland](https://hypr.land/) e no kit de construção de desktop [Quickshell](https://quickshell.org/). Ele vem com tudo o que um usuário de computador moderno e esperto precisa para ser produtivo imediatamente. Do [Neovim](https://neovim.io/) (btw) ao Chromium, do [Obsidian](https://obsidian.md/) ao LibreOffice, e do [Hype](https://github.com/omacom/hype) ao [Monologue](https://github.com/omacom/monologue). Diabos, até um player de música retrô estilo Winamp está lá!
 

@@ -1,10 +1,10 @@
 # Shell-Plugins
 
-Der Omarchy-Desktop läuft als ein einziger langlebiger Quickshell-Prozess namens `omarchy-shell`, und fast alles, was du auf dem Bildschirm siehst, ist ein Plugin darin. Die Leiste ist ein Plugin. Ebenso die Panels, die aus ihr herunterklappen, die Vollbild-Overlays wie Emoji-Auswahl und Zwischenablagen-Manager, das Omarchy-Menü selbst, der Sperrbildschirm, der polkit-Dialog und die kopflosen Dienste, die deinen Akku beobachten und deinen Bildschirm nachts aufwärmen.
+Der Ve OS-Desktop läuft als ein einziger langlebiger Quickshell-Prozess namens `omarchy-shell`, und fast alles, was du auf dem Bildschirm siehst, ist ein Plugin darin. Die Leiste ist ein Plugin. Ebenso die Panels, die aus ihr herunterklappen, die Vollbild-Overlays wie Emoji-Auswahl und Zwischenablagen-Manager, das Ve OS-Menü selbst, der Sperrbildschirm, der polkit-Dialog und die kopflosen Dienste, die deinen Akku beobachten und deinen Bildschirm nachts aufwärmen.
 
-Das ist nicht nur ein Implementierungsdetail. Es bedeutet, dass du Teile des Desktops ausschalten, austauschen oder eigene schreiben kannst, ohne eine Zeile von Omarchys Quellcode zu berühren.
+Das ist nicht nur ein Implementierungsdetail. Es bedeutet, dass du Teile des Desktops ausschalten, austauschen oder eigene schreiben kannst, ohne eine Zeile von Ve OSs Quellcode zu berühren.
 
-Die eigenen Plugins werden mit Omarchy ausgeliefert und leben in `$OMARCHY_PATH/shell/plugins/`. Alles, was du selbst hinzufügst — deine eigenen Experimente oder etwas, das du auf GitHub gefunden hast — lebt in `~/.config/omarchy/plugins/`. Beide werden beim Start auf dieselbe Weise erkannt, aber Eingebaute erhalten vertrauenswürdige Shell-Schnittstellen, während Drittanbieter-Plugins eine begrenzte Schnittstelle erhalten, die auf ihren eigenen Dienst und Lebenszyklus beschränkt ist. Klone von Eingebauten behalten nur die quellenspezifischen Konfigurations- und UI-Aufrufe, die für das ursprüngliche Verhalten nötig sind.
+Die eigenen Plugins werden mit Ve OS ausgeliefert und leben in `$OMARCHY_PATH/shell/plugins/`. Alles, was du selbst hinzufügst — deine eigenen Experimente oder etwas, das du auf GitHub gefunden hast — lebt in `~/.config/omarchy/plugins/`. Beide werden beim Start auf dieselbe Weise erkannt, aber Eingebaute erhalten vertrauenswürdige Shell-Schnittstellen, während Drittanbieter-Plugins eine begrenzte Schnittstelle erhalten, die auf ihren eigenen Dienst und Lebenszyklus beschränkt ist. Klone von Eingebauten behalten nur die quellenspezifischen Konfigurations- und UI-Aufrufe, die für das ursprüngliche Verhalten nötig sind.
 
 ## Sehen, was du hast
 

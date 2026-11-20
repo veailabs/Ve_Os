@@ -1,6 +1,6 @@
 # Networking
 
-Ang networking sa Omarchy ay pinamamahalaan ng NetworkManager, at kinokontrol mo ito mula sa icon ng network sa [bar sa itaas](05-the-top-bar.md) o gamit ang `Super + Ctrl + N`.
+Ang networking sa Ve OS ay pinamamahalaan ng NetworkManager, at kinokontrol mo ito mula sa icon ng network sa [bar sa itaas](05-the-top-bar.md) o gamit ang `Super + Ctrl + N`.
 
 Ini-scan ng panel na iyon ang mga Wi-Fi network, ipinapakita ang lakas ng signal, at kumokonekta. Wala ka nang kailangang gawin para sa Ethernet — ikabit mo lang at gagana na. Kung mas gusto mong manatili sa terminal, ibinibigay ng `nmtui` sa iyo ang parehong mga kontrol, at mayroon ding grupo ng utos na `omarchy network`.
 
@@ -12,7 +12,7 @@ Kung talagang kailangan mo mismo ang password, ipi-print ito ng `omarchy network
 
 ## DNS
 
-Ginagamit ng Omarchy ang anumang DNS na ibinibigay ng iyong network sa pamamagitan ng DHCP. Maaari mo itong palitan para sa buong makina sa ilalim ng _Setup > Network > DNS_, kung saan isang click lang ang layo ng Cloudflare at Google. Piliin ang _Custom_ para i-type ang sarili mong mga server.
+Ginagamit ng Ve OS ang anumang DNS na ibinibigay ng iyong network sa pamamagitan ng DHCP. Maaari mo itong palitan para sa buong makina sa ilalim ng _Setup > Network > DNS_, kung saan isang click lang ang layo ng Cloudflare at Google. Piliin ang _Custom_ para i-type ang sarili mong mga server.
 
 Mula sa terminal, ipi-print ng `omarchy dns` ang kasalukuyang provider at itinatakda ng `omarchy dns Cloudflare` ang isa.
 

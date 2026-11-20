@@ -20,7 +20,7 @@ Obsidian ir bez maksas visiem mērķiem, tostarp personīgai, komerciālai un be
 
 Obsidian piedāvā arī [komerciālu sinhronizācijas papildinājumu](https://obsidian.md/sync) ar mobilajām lietotnēm iOS un Android ierīcēs. (https://obsidian.md/pricing).
 
-Obsidian palaižat ar `Super + Shift + O`. Lai izmantotu tēmu sinhronizāciju, iestatījumos jāizvēlas `Omarchy` tēma.
+Obsidian palaižat ar `Super + Shift + O`. Lai izmantotu tēmu sinhronizāciju, iestatījumos jāizvēlas `Ve OS` tēma.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Aether palaižat, izmantojot lietotņu palaidēju (`Super + Space`).
 
 [LocalSend](https://localsend.org/) ļauj sūtīt failus uz citām ierīcēm tajā pašā tīklā, kurās darbojas šī lietotne, līdzīgi kā Apple AirDrop. Tomēr tā ir starpplatformu, tāpēc varat sūtīt failus uz un no Windows, macOS, Android, iOS un, protams, Linux.
 
-Share izvēlni varat atvērt ar `Super + Ctrl + S` vai sadaļā _Trigger > Share_ Omarchy izvēlnē. Tā piedāvā četras iespējas:
+Share izvēlni varat atvērt ar `Super + Ctrl + S` vai sadaļā _Trigger > Share_ Ve OS izvēlnē. Tā piedāvā četras iespējas:
 
 - **Clipboard** nosūta visu, ko esat nokopējis, kā teksta failu. Lieliski, lai saiti vai fragmentu nogādātu tālrunī, nesūtot sev e-pastu.
 - **File** atver failu izvēlni, kurā varat izvēlēties vairākus uzreiz.
@@ -55,7 +55,7 @@ Tas pats darbojas arī no termināļa ar `omarchy share clipboard`, `omarchy sha
 
 Varat sūtīt arī tieši no failu pārvaldnieka: ar labo pogu noklikšķiniet uz jebkuras izvēles Nautilus un izvēlieties _Send via LocalSend_.
 
-Omarchy ugunsmūris pēc noklusējuma ir slēgts, izņemot LocalSend portu, tāpēc tas darbojas uzreiz pēc svaigas instalēšanas. Skatiet [drošība](48-security.md).
+Ve OS ugunsmūris pēc noklusējuma ir slēgts, izņemot LocalSend portu, tāpēc tas darbojas uzreiz pēc svaigas instalēšanas. Skatiet [drošība](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Signed palaižat, izmantojot lietotņu palaidēju (`Super + Space`), vai atverie
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) ir Omarchy paša 3D šaha spēle. Spēlējiet ar draugu uz tā paša datora vai pret iebūvēto pretinieku trīs līmeņos, ar četriem veidotu figūru komplektiem, kas katrs pārvietojas savā veidā: orbitālie kosmosa kuģi, grebts koks un ziloņkauls, meža radības un konfektes. Spēlēm nav pulksteņa, un tās saglabājas pēc katra gājiena.
+[Checkmate](https://github.com/omacom/checkmate) ir Ve OS paša 3D šaha spēle. Spēlējiet ar draugu uz tā paša datora vai pret iebūvēto pretinieku trīs līmeņos, ar četriem veidotu figūru komplektiem, kas katrs pārvietojas savā veidā: orbitālie kosmosa kuģi, grebts koks un ziloņkauls, meža radības un konfektes. Spēlēm nav pulksteņa, un tās saglabājas pēc katra gājiena.
 
 Checkmate palaižat, izmantojot lietotņu palaidēju (`Super + Space`), kur tas ir norādīts kā Chess. Nospiediet `?` tajā, lai redzētu visus īsinājumtaustiņus.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) ir Omarchy paša Klondike pasjanss. Ņemiet pa trim, bez ierobežojuma tam, cik reižu varat iet cauri kavai, četrās kāršu sērijās: viena uzzīmēta jūsu tēmas krāsās un trīs ar savu izskatu. Noklikšķiniet uz kārts un pēc tam uz vietu, kur tai jādodas, velciet to vai veiciet dubultklikšķi, lai nosūtītu to uz labāko vietu. Spēles saglabājas pēc katra gājiena.
+[Cards](https://github.com/omacom/cards) ir Ve OS paša Klondike pasjanss. Ņemiet pa trim, bez ierobežojuma tam, cik reižu varat iet cauri kavai, četrās kāršu sērijās: viena uzzīmēta jūsu tēmas krāsās un trīs ar savu izskatu. Noklikšķiniet uz kārts un pēc tam uz vietu, kur tai jādodas, velciet to vai veiciet dubultklikšķi, lai nosūtītu to uz labāko vietu. Spēles saglabājas pēc katra gājiena.
 
 Cards palaižat, izmantojot lietotņu palaidēju (`Super + Space`). Noklikšķiniet uz tā nosaukuma vai nospiediet `?`, lai redzētu visus īsinājumtaustiņus.
 
@@ -97,7 +97,7 @@ Omacalc palaižat ar `Super + Shift + Q` (vai kalkulatora taustiņu, ja jūsu ta
 
 [Signal](https://signal.org/) ir E2E šifrētas ziņapmaiņas pionieris un lieliska saziņas iespēja ikvienam, kurš nevēlas iet caur kādu no lielajiem tehnoloģiju konglomerātiem.
 
-Signal palaižat ar `Super + Shift + G`. Tas nav daļa no pamata instalācijas, tāpēc pirmajā reizē, kad to nospiedīsit, Omarchy piedāvās to instalēt jūsu vietā (tas ir arī sadaļā _Install > Service_ Omarchy izvēlnē).
+Signal palaižat ar `Super + Shift + G`. Tas nav daļa no pamata instalācijas, tāpēc pirmajā reizē, kad to nospiedīsit, Ve OS piedāvās to instalēt jūsu vietā (tas ir arī sadaļā _Install > Service_ Ve OS izvēlnē).
 
 ## Omaview
 

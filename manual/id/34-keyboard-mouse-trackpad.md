@@ -1,6 +1,6 @@
 # Keyboard, Mouse, Trackpad
 
-Hyprland memungkinkan Anda mengonfigurasi semua input Anda secara sangat detail. Anda dapat mengubah pengulangan keyboard menjadi sangat cepat atau membuat trackpad menggunakan pengguliran alami (natural scrolling). Anda mengubah semuanya di `~/.config/hypr/input.lua`, yang juga dapat Anda jangkau melalui _Setup > Input_ di menu Omarchy (`Super + Space`). Apa pun yang Anda atur di sana akan menggantikan default Omarchy.
+Hyprland memungkinkan Anda mengonfigurasi semua input Anda secara sangat detail. Anda dapat mengubah pengulangan keyboard menjadi sangat cepat atau membuat trackpad menggunakan pengguliran alami (natural scrolling). Anda mengubah semuanya di `~/.config/hypr/input.lua`, yang juga dapat Anda jangkau melalui _Setup > Input_ di menu Ve OS (`Super + Space`). Apa pun yang Anda atur di sana akan menggantikan default Ve OS.
 
 Berikut contohnya:
 
@@ -59,7 +59,7 @@ Gesek pada trackpad untuk bergerak di desktop:
 | --- | --- |
 | Tiga jari ke kiri / kanan | Workspace sebelumnya / berikutnya, termasuk yang kosong |
 | Tiga jari ke atas | Alihkan konsol AI |
-| Tiga jari ke bawah | Buka menu Omarchy |
+| Tiga jari ke bawah | Buka menu Ve OS |
 | Empat jari ke kiri / kanan | Pindahkan jendela aktif ke workspace sebelumnya / berikutnya |
 | Empat jari ke bawah | Alihkan layar penuh |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Untuk mematikan semua gestur Omarchy, atur `omarchy_default_gestures = false` di dekat bagian atas `~/.config/hypr/hyprland.lua`, sebelum default Omarchy dimuat.
+Untuk mematikan semua gestur Ve OS, atur `omarchy_default_gestures = false` di dekat bagian atas `~/.config/hypr/hyprland.lua`, sebelum default Ve OS dimuat.
 
 Pada laptop Dell XPS dengan touchpad haptik, Anda juga dapat mengatur kekuatan klik ke rendah, sedang, atau tinggi di bawah _Trigger > Hardware > Touchpad Haptics_.
 
 ### Mengetik dalam bahasa Tionghoa, Jepang, dan bahasa lainnya
 
-Pilih Jepang, Korea, Tionghoa (Sederhana, Pinyin), Taiwan (Zhuyin), atau Hong Kong (Cangjie) ketika installer menanyakan keyboard Anda. Omarchy mengonfigurasi keyboard dan mesin input yang cocok secara otomatis, termasuk selama penyiapan offline saat boot pertama. Jepang menggunakan Mozc, Korea menggunakan Hangul dua-set standar, Tionghoa Sederhana menggunakan Pinyin, Taiwan menggunakan susunan Zhuyin standar Chewing, dan Hong Kong menggunakan Cangjie dengan bentuk karakter Hong Kong. Jepang (keyboard US) menyediakan Mozc dengan tata letak keyboard US. Tombol Hangul, Zhuyin, dan Cangjie tetap berada di posisi standarnya bahkan ketika Anda mengetik huruf Latin dengan Dvorak, Colemak, atau AZERTY. Jika Anda menambahkan Hangul atau Chewing sebelum ini, batalkan pilihan dan pilih kembali di bawah _Setup > Keyboard > Input Methods_ untuk memindahkan tombolnya ke sana; Omarchy membiarkan mesin yang sudah Anda gunakan untuk mengetik.
+Pilih Jepang, Korea, Tionghoa (Sederhana, Pinyin), Taiwan (Zhuyin), atau Hong Kong (Cangjie) ketika installer menanyakan keyboard Anda. Ve OS mengonfigurasi keyboard dan mesin input yang cocok secara otomatis, termasuk selama penyiapan offline saat boot pertama. Jepang menggunakan Mozc, Korea menggunakan Hangul dua-set standar, Tionghoa Sederhana menggunakan Pinyin, Taiwan menggunakan susunan Zhuyin standar Chewing, dan Hong Kong menggunakan Cangjie dengan bentuk karakter Hong Kong. Jepang (keyboard US) menyediakan Mozc dengan tata letak keyboard US. Tombol Hangul, Zhuyin, dan Cangjie tetap berada di posisi standarnya bahkan ketika Anda mengetik huruf Latin dengan Dvorak, Colemak, atau AZERTY. Jika Anda menambahkan Hangul atau Chewing sebelum ini, batalkan pilihan dan pilih kembali di bawah _Setup > Keyboard > Input Methods_ untuk memindahkan tombolnya ke sana; Ve OS membiarkan mesin yang sudah Anda gunakan untuk mengetik.
 
 Pengetikan dimulai dalam mode Latin. Tekan `Super + I` untuk beralih melalui metode input yang dikonfigurasi, dan `Super + Shift + I` untuk kembali. Ketuk `Shift` sendiri untuk keluar dari metode input seperti Pinyin ke huruf Latin, dan ketuk lagi untuk kembali, seperti cara Sogou, Microsoft Pinyin, dan macOS bekerja; `Shift` ditambah huruf tetap mengetik huruf kapital. Pada keyboard Jepang, 全角/半角 mengaktifkan/menonaktifkan input, 変換 menyalakannya, dan 無変換 mematikannya. Dengan Korea, 한/영 beralih Hangul dan 한자 mengonversi ke Hanja, baik keyboard Anda memiliki tombol khusus maupun mengirim Alt Kanan dan Ctrl Kanan untuk tombol tersebut, seperti yang dilakukan banyak laptop, jadi Alt Kanan dan Ctrl Kanan bukan pengubah biasa di sana; dikte beralih dengan Alt + Space sebagai gantinya. `Ctrl + Space` tetap tersedia untuk Tmux dan Herdr; `Shift + CapsLock` tetap menjadi tombol compose.
 
 Indikator keyboard muncul di sebelah kanan bilah ketika Anda memiliki beberapa tata letak keyboard atau metode input. Klik untuk beralih bahasa input; Jepang menampilkan あ untuk hiragana. Untuk pilihan karakter Jepang, beralihlah ke Jepang, ketik kata seperti `nihongo`, lalu tekan Space dua kali. Tekan Enter untuk menerima pilihan Anda. Jika Anda juga memiliki beberapa tata letak keyboard, klik kanan indikator untuk beralih di antara tata letak tersebut.
 
-Gunakan _Setup > Keyboard > Keyboard Inputs_ untuk memilih tata letak seperti Inggris dan Prancis, dari pilihan yang sama yang ditawarkan selama instalasi. Gunakan _Setup > Keyboard > Input Methods_ untuk memilih mesin komposisi mana yang aktif. Kedua pemilih terbuka di dalam menu Omarchy dengan pilihan Anda saat ini dicentang. Klik atau tekan Enter untuk mengaktifkan/menonaktifkan pilihan; setiap perubahan langsung diterapkan. Membatalkan pilihan metode input menghapusnya dari siklus tanpa meng-uninstall-nya; keyboard tetap tersedia.
+Gunakan _Setup > Keyboard > Keyboard Inputs_ untuk memilih tata letak seperti Inggris dan Prancis, dari pilihan yang sama yang ditawarkan selama instalasi. Gunakan _Setup > Keyboard > Input Methods_ untuk memilih mesin komposisi mana yang aktif. Kedua pemilih terbuka di dalam menu Ve OS dengan pilihan Anda saat ini dicentang. Klik atau tekan Enter untuk mengaktifkan/menonaktifkan pilihan; setiap perubahan langsung diterapkan. Membatalkan pilihan metode input menghapusnya dari siklus tanpa meng-uninstall-nya; keyboard tetap tersedia.
 
 Jalankan `omarchy setup keyboard` atau `omarchy setup input` untuk membuka pemilih yang sama. Untuk menambahkan satu bahasa dari baris perintah, gunakan `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing`, atau `cangjie5`. Quick, Boshiamy, dan Array disertakan dalam paket yang sama dengan Cangjie dan muncul di pemilih Input Methods. Tombol peralihan khusus Anda tetap dipertahankan. Untuk tata letak atau tombol mesin alternatif, instal `fcitx5-configtool` dengan `omarchy pkg add fcitx5-configtool` dan jalankan dari terminal. Memilih bahasa input tidak mengubah bahasa desktop. Memilih Jepang, Korea, atau Tionghoa di bawah _Setup > Language_ menambahkan metode inputnya ketika Anda belum memilikinya.
 

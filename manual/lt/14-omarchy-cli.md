@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy paprastai valdoma sparčiaisiais klavišais ir Omarchy meniu (`Super + Space`). Bet ją galite valdyti ir per `omarchy` CLI. Tai ypač naudinga, kai kartu su jumis prie tinkinimo ar konfigūravimo dirba dirbtinio intelekto agentas.
+Ve OS paprastai valdoma sparčiaisiais klavišais ir Ve OS meniu (`Super + Space`). Bet ją galite valdyti ir per `omarchy` CLI. Tai ypač naudinga, kai kartu su jumis prie tinkinimo ar konfigūravimo dirba dirbtinio intelekto agentas.
 
 CLI suteikia prieigą prie visų vidinių įrankių, naudojamų ir per meniu, ir kitais būdais. Viską, kas prieinama, galite pamatyti terminale paleidę `omarchy`.
 
@@ -8,7 +8,7 @@ Tai atrodo maždaug taip:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Diagnostikai paleiskite tiesiogiai `omarchy-debug --no-sudo --print`. Komanda išveda diagnostiką ir įrašo `/tmp/omarchy-debug.log` neprašydama sudo, taip pat ir diegiant paketus, kai `omarchy debug` gali nepavykti su pranešimu "Unknown Omarchy command".
+Diagnostikai paleiskite tiesiogiai `omarchy-debug --no-sudo --print`. Komanda išveda diagnostiką ir įrašo `/tmp/omarchy-debug.log` neprašydama sudo, taip pat ir diegiant paketus, kai `omarchy debug` gali nepavykti su pranešimu "Unknown Ve OS command".
 
 O kiekvieną grupę galite nagrinėti išsamiau:
 
@@ -60,4 +60,4 @@ Kiekviena komanda taip pat priima `--help` – nesvarbu, ar klausiate visos grup
 
 ### Meniu atidarymas iš terminalo
 
-Omarchy meniu taip pat galima valdyti scenarijais, o tai patogu kuriant savo klavišų susiejimus. `omarchy menu` atidaro jį nuo šaknies, o jūs galite iš karto pereiti į bet kurią medžio vietą ją pavadindami: `omarchy menu summon appearance.theme` nukelia tiesiai į temos pasirinkimą, `omarchy menu toggle system` atidaro sistemos meniu ir vėl jį uždaro, jei jis jau atidarytas, o `omarchy menu close` jį paslepia.
+Ve OS meniu taip pat galima valdyti scenarijais, o tai patogu kuriant savo klavišų susiejimus. `omarchy menu` atidaro jį nuo šaknies, o jūs galite iš karto pereiti į bet kurią medžio vietą ją pavadindami: `omarchy menu summon appearance.theme` nukelia tiesiai į temos pasirinkimą, `omarchy menu toggle system` atidaro sistemos meniu ir vėl jį uždaro, jei jis jau atidarytas, o `omarchy menu close` jį paslepia.

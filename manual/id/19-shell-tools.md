@@ -1,6 +1,6 @@
 # Alat Shell
 
-Selain alat Linux standar, Omarchy juga dilengkapi dengan berbagai alat shell yang ditingkatkan. Berikut yang utama.
+Selain alat Linux standar, Ve OS juga dilengkapi dengan berbagai alat shell yang ditingkatkan. Berikut yang utama.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Manual lengkap dapat ditemukan melalui `man yt-dlp`.
 
 [try](https://github.com/tobi/try) memudahkan pengelolaan eksperimen pemrograman dengan direktori berstempel tanggal. Semua eksperimen berada di `~/Work/tries` dan kamu dapat mengaksesnya melalui `try`.
 
-Omarchy tidak menambahkan direktori `bin/` proyek ke `PATH` secara otomatis. Jalankan alat lokal proyek yang tepercaya dengan jalur relatif eksplisit, seperti `bin/rails` atau `./bin/dev`.
+Ve OS tidak menambahkan direktori `bin/` proyek ke `PATH` secara otomatis. Jalankan alat lokal proyek yang tepercaya dengan jalur relatif eksplisit, seperti `bin/rails` atau `./bin/dev`.

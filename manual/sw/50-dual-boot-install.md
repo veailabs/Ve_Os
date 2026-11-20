@@ -1,4 +1,6 @@
-# Usakinishaji wa Dual Boot
+# Ve OS — Usakinishaji wa Dual Boot
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Unaweza kusakinisha Omarchy kwenye kizigeu kimoja pamoja na Windows au usakinishaji mwingine.
 

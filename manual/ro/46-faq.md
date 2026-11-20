@@ -28,7 +28,7 @@ Aceasta va afișa Duminică 10:55 AM.
 
 ### Cum îmi schimb fusul orar?
 
-Rulează _Update > Timezone_ în meniul Omarchy și alege din listă. Dacă fusul orar este corect, dar ceasul în sine s-a decalat, _Update > Time_ repornește sincronizarea orei pentru tine.
+Rulează _Update > Timezone_ în meniul Ve OS și alege din listă. Dacă fusul orar este corect, dar ceasul în sine s-a decalat, _Update > Time_ repornește sincronizarea orei pentru tine.
 
 ### Cum îmi schimb DNS-ul, cum îmi partajez Wi-Fi-ul sau cum îmi verific viteza conexiunii?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Poți face același lucru pentru înregistrările de ecran folosind `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap își creează automat directorul pentru capturi de ecran. Creează-ți singur directorul pentru înregistrări de ecran, apoi repornește Omarchy pentru ca oricare dintre modificările de mediu să intre în vigoare.
+Omasnap își creează automat directorul pentru capturi de ecran. Creează-ți singur directorul pentru înregistrări de ecran, apoi repornește Ve OS pentru ca oricare dintre modificările de mediu să intre în vigoare.
 
 ### Cum fac să funcționeze difuzoarele + camera web pe Apple Studio Display-ul meu?
 
 Ai crede că totul ar trebui să funcționeze pur și simplu conectând USB C, dar din păcate nu este cazul. Soluția pe care am găsit-o pentru ca totul să funcționeze fiabil este folosirea [cablului WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Apoi difuzoarele și camera web funcționează ca unse.
 
-Ține minte că ai control integrat al luminozității în Omarchy pentru ecranele Apple (atât Studio, cât și XDR) folosind butoanele obișnuite de luminozitate de pe tastatură.
+Ține minte că ai control integrat al luminozității în Ve OS pentru ecranele Apple (atât Studio, cât și XDR) folosind butoanele obișnuite de luminozitate de pe tastatură.
 
 ### Cum scap de tot software-ul suplimentar?
 
@@ -72,7 +72,7 @@ Dacă nu vrei programe ca Obsidian sau LibreOffice sau oricare altceva preinstal
 
 Rulează _Remove > Package_ pentru a vedea fiecare pachet instalat. Apoi poți selecta orice pachet vrei să-l elimini cu tab și poți începe eliminarea a tot ce ai selectat cu return.
 
-Și poți folosi _Remove > Web App_ din meniul Omarchy pentru a elimina orice aplicație web preinstalată pe care nu o vrei.
+Și poți folosi _Remove > Web App_ din meniul Ve OS pentru a elimina orice aplicație web preinstalată pe care nu o vrei.
 
 Sau rulează _Remove > Preinstalls_ pentru a mătura toate extraurile preinstalate — aplicații web, TUIs și aplicații opționale — dintr-o singură mișcare. Scurtăturile de tastatură care le lansau dispar odată cu ele, așa că rămâi cu o tablă curată de combinații pe care să le umpli cu ale tale în `~/.config/hypr/bindings.lua`.
 

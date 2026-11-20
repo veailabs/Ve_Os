@@ -1,12 +1,12 @@
 # Leturgerðir
 
-Omarchy notar JetBrainsMono Nerd Font bæði sem leturgerð útstöðvarinnar og kerfisins sjálfgefið.
+Ve OS notar JetBrainsMono Nerd Font bæði sem leturgerð útstöðvarinnar og kerfisins sjálfgefið.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Þú getur breytt þessu í valmyndinni _Útlit > Leturgerð_ í Omarchy-valmyndinni (`Super + Space`). Það stillir einbreiðaletrið alls staðar: í útstöðinni, á stikunni og í öllu öðru sem biður um það.
+Þú getur breytt þessu í valmyndinni _Útlit > Leturgerð_ í Ve OS-valmyndinni (`Super + Space`). Það stillir einbreiðaletrið alls staðar: í útstöðinni, á stikunni og í öllu öðru sem biður um það.
 
-Þú getur sett upp önnur vinsæl forritunarletur í _Setja upp > Stíll > Leturgerð_ í Omarchy-valmyndinni: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono og Iosevka eru öll aðeins einn smell í burtu, í Nerd Font-útgáfum sínum svo táknin á stikunni og í útstöðinni haldi áfram að virka. Eftir að þú hefur sett eitt þeirra upp skaltu velja það í _Útlit > Leturgerð_.
+Þú getur sett upp önnur vinsæl forritunarletur í _Setja upp > Stíll > Leturgerð_ í Ve OS-valmyndinni: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono og Iosevka eru öll aðeins einn smell í burtu, í Nerd Font-útgáfum sínum svo táknin á stikunni og í útstöðinni haldi áfram að virka. Eftir að þú hefur sett eitt þeirra upp skaltu velja það í _Útlit > Leturgerð_.
 
 ## Kínverska, japanska og kóreska
 

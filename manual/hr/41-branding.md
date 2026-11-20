@@ -1,6 +1,6 @@
 # Brendiranje
 
-Omarchy vam omogućuje da postavite logotip svoje tvrtke ili osobnu sliku za otključavanje pri pokretanju, čuvar zaslona i zaslon O programu.
+Ve OS vam omogućuje da postavite logotip svoje tvrtke ili osobnu sliku za otključavanje pri pokretanju, čuvar zaslona i zaslon O programu.
 
 ### Otključavanje pri pokretanju
 
@@ -24,11 +24,11 @@ U tom izborniku postoje tri stavke:
 
 - **Uredi tekst** otvara `~/.config/omarchy/branding/screensaver.txt` u vašem uređivaču. Upišite ili zalijepite što god želite — ASCII umjetnost, svoje ime, nepristojnu riječ. Spremite i izađite, i čuvar zaslona odmah se pokreće da ga možete vidjeti.
 - **Postavi iz slike** otvara birač datoteka za png ili svg, pretvara je u ASCII i pokazuje vam rezultat. Logotipi s jasnom siluetom rade daleko bolje od fotografija.
-- **Vrati zadano** vraća Omarchy logotip.
+- **Vrati zadano** vraća Ve OS logotip.
 
 ### Zaslon O programu
 
-Iste tri opcije nalaze se pod _Izgled > Brendiranje > O programu_ za zaslon _O programu_ koji dobivate iz Omarchy izbornika i rade identično — datoteka je `~/.config/omarchy/branding/about.txt`, a prozor O programu pojavljuje se nakon svake promjene. Grafika za O programu pretvara se u manju veličinu od one za čuvar zaslona, jer mora stati u prozor umjesto da ispuni cijeli vaš zaslon.
+Iste tri opcije nalaze se pod _Izgled > Brendiranje > O programu_ za zaslon _O programu_ koji dobivate iz Ve OS izbornika i rade identično — datoteka je `~/.config/omarchy/branding/about.txt`, a prozor O programu pojavljuje se nakon svake promjene. Grafika za O programu pretvara se u manju veličinu od one za čuvar zaslona, jer mora stati u prozor umjesto da ispuni cijeli vaš zaslon.
 
 Dok je prozor otvoren, odsjaj zelene boje svakih nekoliko sekundi nagne se preko grafike i zatim je ponovno ostavi mirnu. I vaša vlastita grafika dobiva ga, sve dok je svaki znak u njoj širok jedan stupac — sve što proizvede _Postavi iz slike_ jest. Grafika sastavljena od emojija ili znakova dvostruke širine umjesto toga ostaje mirna, a isto vrijedi i za zaslon ako zadržite vlastitu fastfetch konfiguraciju: nepomičan logotip u tim slučajevima znači da se animacija drži po strani, a ne da je zakazala, jer bi klizanje odsjaja preko njih ostatak retka odvelo na pogrešno mjesto.
 

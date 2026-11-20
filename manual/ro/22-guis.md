@@ -20,7 +20,7 @@ Obsidian este gratuit în orice scop, inclusiv pentru uz personal, comercial și
 
 Obsidian oferă și un [supliment comercial pentru sincronizare](https://obsidian.md/sync) cu aplicațiile mobile pe iOS și Android. (https://obsidian.md/pricing).
 
-Pornești Obsidian cu `Super + Shift + O`. Ca să folosești sincronizarea temei, trebuie să selectezi tema `Omarchy` în setări.
+Pornești Obsidian cu `Super + Shift + O`. Ca să folosești sincronizarea temei, trebuie să selectezi tema `Ve OS` în setări.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Pornești Aether din lansatorul de aplicații (`Super + Space`).
 
 [LocalSend](https://localsend.org/) îți permite să trimiți fișiere către alte dispozitive din aceeași rețea care rulează aplicația, ca AirDrop de la Apple. Totuși, este multiplatformă, așa că poți trimite fișiere către și de la Windows, macOS, Android, iOS și, bineînțeles, Linux.
 
-Poți deschide meniul Share cu `Super + Ctrl + S` sau la _Trigger > Share_ în meniul Omarchy. Îți oferă patru opțiuni:
+Poți deschide meniul Share cu `Super + Ctrl + S` sau la _Trigger > Share_ în meniul Ve OS. Îți oferă patru opțiuni:
 
 - **Clipboard** trimite tot ce ai copiat ca fișier text. Excelent ca să trimiți un link sau un fragment de cod pe telefon fără să-ți trimiți un e-mail.
 - **File** deschide un selector de fișiere în care poți selecta mai multe deodată.
@@ -55,7 +55,7 @@ Același lucru funcționează și din terminal cu `omarchy share clipboard`, `om
 
 Poți trimite și direct din managerul de fișiere: dă clic dreapta pe orice selecție în Nautilus și alege _Send via LocalSend_.
 
-Firewall-ul Omarchy este închis implicit, cu excepția portului LocalSend, așa că asta funcționează din prima pe o instalare proaspătă. Vezi [securitatea](48-security.md).
+Firewall-ul Ve OS este închis implicit, cu excepția portului LocalSend, așa că asta funcționează din prima pe o instalare proaspătă. Vezi [securitatea](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Pornești Signed din lansatorul de aplicații (`Super + Space`) sau deschizi un 
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) este jocul de șah 3D propriu al Omarchy. Joacă cu un prieten pe același computer sau împotriva adversarului integrat, la trei niveluri, pe patru seturi sculptate care se mișcă fiecare în felul lui: nave orbitale, lemn și fildeș sculptate, creaturi din pădure și bomboane. Partidele nu au ceas și se salvează după fiecare mutare.
+[Checkmate](https://github.com/omacom/checkmate) este jocul de șah 3D propriu al Ve OS. Joacă cu un prieten pe același computer sau împotriva adversarului integrat, la trei niveluri, pe patru seturi sculptate care se mișcă fiecare în felul lui: nave orbitale, lemn și fildeș sculptate, creaturi din pădure și bomboane. Partidele nu au ceas și se salvează după fiecare mutare.
 
 Pornești Checkmate din lansatorul de aplicații (`Super + Space`), unde este listat ca Chess. Apasă `?` în interior ca să vezi fiecare scurtătură.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) este jocul Klondike solitaire propriu al Omarchy. Trage trei cărți, fără limită la numărul de treceri, în patru serii de cărți: una desenată în culorile temei tale și trei cu un aspect propriu. Dă clic pe o carte și apoi pe locul unde merge, trage-o sau dă dublu clic ca să o trimiți în cel mai bun loc. Partidele se salvează după fiecare mutare.
+[Cards](https://github.com/omacom/cards) este jocul Klondike solitaire propriu al Ve OS. Trage trei cărți, fără limită la numărul de treceri, în patru serii de cărți: una desenată în culorile temei tale și trei cu un aspect propriu. Dă clic pe o carte și apoi pe locul unde merge, trage-o sau dă dublu clic ca să o trimiți în cel mai bun loc. Partidele se salvează după fiecare mutare.
 
 Pornești Cards din lansatorul de aplicații (`Super + Space`). Dă clic pe numele lui sau apasă `?` ca să vezi fiecare scurtătură.
 
@@ -97,7 +97,7 @@ Pornești Omacalc cu `Super + Shift + Q` (sau cu tasta de calculator, dacă tast
 
 [Signal](https://signal.org/) este pionierul mesageriei criptate E2E și o opțiune de comunicare excelentă pentru oricine preferă să nu treacă printr-unul dintre marile conglomerate tech.
 
-Pornești Signal cu `Super + Shift + G`. Nu face parte din instalarea de bază, așa că prima dată când apeși asta, Omarchy îți va oferi să îl instaleze pentru tine (este și la _Install > Service_ în meniul Omarchy).
+Pornești Signal cu `Super + Shift + G`. Nu face parte din instalarea de bază, așa că prima dată când apeși asta, Ve OS îți va oferi să îl instaleze pentru tine (este și la _Install > Service_ în meniul Ve OS).
 
 ## Omaview
 

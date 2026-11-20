@@ -1,6 +1,6 @@
 # Skallverktøy
 
-I tillegg til standard Linux-verktøyene leveres Omarchy også med en gjeng forbedrede skallverktøy. Her er de viktigste.
+I tillegg til standard Linux-verktøyene leveres Ve OS også med en gjeng forbedrede skallverktøy. Her er de viktigste.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Hele manualen finner du via `man yt-dlp`.
 
 [try](https://github.com/tobi/try) gjør det enkelt å håndtere programmeringseksperimenter med datostemplede mapper. Alle eksperimenter bor i `~/Work/tries`, og du får tilgang til dem via `try`.
 
-Omarchy legger ikke til et prosjekts `bin/`-mappe i `PATH` automatisk. Kjør klarerte prosjektlokale verktøy med en eksplisitt relativ sti, som `bin/rails` eller `./bin/dev`.
+Ve OS legger ikke til et prosjekts `bin/`-mappe i `PATH` automatisk. Kjør klarerte prosjektlokale verktøy med en eksplisitt relativ sti, som `bin/rails` eller `./bin/dev`.

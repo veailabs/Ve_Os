@@ -1,6 +1,6 @@
 # ネットワーキング
 
-Omarchy のネットワーキングは NetworkManager が担当し、[トップバー](05-the-top-bar.md) のネットワークアイコンから、または `Super + Ctrl + N` で操作します。
+Ve OS のネットワーキングは NetworkManager が担当し、[トップバー](05-the-top-bar.md) のネットワークアイコンから、または `Super + Ctrl + N` で操作します。
 
 そのパネルは Wi-Fi ネットワークをスキャンし、信号強度を表示して、接続します。Ethernet は何もする必要がありません。差し込むだけで動作します。ターミナルで済ませたいなら、`nmtui` で同じ操作ができ、`omarchy network` コマンドグループもあります。
 
@@ -12,7 +12,7 @@ Omarchy のネットワーキングは NetworkManager が担当し、[トップ�
 
 ## DNS
 
-Omarchy は、ネットワークが DHCP 経由で配布する DNS をそのまま使います。マシン全体に対してこれを上書きするには _Setup > Network > DNS_ を開きます。Cloudflare と Google はワンクリックで選べます。自分でサーバーを入力するには _Custom_ を選んでください。
+Ve OS は、ネットワークが DHCP 経由で配布する DNS をそのまま使います。マシン全体に対してこれを上書きするには _Setup > Network > DNS_ を開きます。Cloudflare と Google はワンクリックで選べます。自分でサーバーを入力するには _Custom_ を選んでください。
 
 ターミナルからは、`omarchy dns` で現在のプロバイダーを表示し、`omarchy dns Cloudflare` で設定できます。
 

@@ -1,10 +1,10 @@
 # Umschalter, Leerlauf & der Bildschirmschoner
 
-Vieles von dem, was du im Alltag änderst, ist eigentlich keine Einstellung. Es ist ein Modus, den du für eine Stunde einschaltest und dann wieder ausschaltest: Nachtlicht, während du lange arbeitest, Nicht stören, während du präsentierst, wach bleiben, während du etwas anschaust. Omarchy nennt diese Dinge Umschalter, und sie funktionieren alle auf die gleiche Weise — ein Tastenkürzel, ein Menüeintrag und ein Befehl, die alle denselben Schalter betätigen.
+Vieles von dem, was du im Alltag änderst, ist eigentlich keine Einstellung. Es ist ein Modus, den du für eine Stunde einschaltest und dann wieder ausschaltest: Nachtlicht, während du lange arbeitest, Nicht stören, während du präsentierst, wach bleiben, während du etwas anschaust. Ve OS nennt diese Dinge Umschalter, und sie funktionieren alle auf die gleiche Weise — ein Tastenkürzel, ein Menüeintrag und ein Befehl, die alle denselben Schalter betätigen.
 
 ### Das Umschalter-Menü
 
-`Super + Ctrl + O` öffnet _Trigger > Toggle_ direkt, oder du gelangst über das Omarchy-Menü (`Super + Space`) dorthin. Alles in dieser Liste ist ein Schalter, den du umlegen kannst, ohne darüber nachzudenken, wo der Zustand gespeichert ist. Schalter für das Aussehen des Desktops befinden sich daneben, unter _Appearance_.
+`Super + Ctrl + O` öffnet _Trigger > Toggle_ direkt, oder du gelangst über das Ve OS-Menü (`Super + Space`) dorthin. Alles in dieser Liste ist ein Schalter, den du umlegen kannst, ohne darüber nachzudenken, wo der Zustand gespeichert ist. Schalter für das Aussehen des Desktops befinden sich daneben, unter _Appearance_.
 
 Vom Terminal aus sind dieselben Schalter `omarchy toggle <thing>`. Führe `omarchy toggle` allein aus, um die ganze Gruppe zu sehen.
 
@@ -26,7 +26,7 @@ Die Touchpad-, Touchscreen- und Hybrid GPU-Schalter befinden sich unter _Trigger
 
 _Appearance_ enthält die Menüleiste und Animationen, plus ein paar Dinge, die keine `omarchy toggle`-Befehle sind, sich aber genauso verhalten: den Batterieprozentsatz in der Leiste, das Standard-Workspace-Layout und unter _Windows_ die Fensterabstände (`Super + Shift + Backspace`) und das quadratische 1-Fenster-Seitenverhältnis (`Super + Ctrl + Backspace`).
 
-Wenn Hyprland keine GPU zum Zeichnen hat und stattdessen auf der CPU rendert (llvmpipe), wie auf Macs, deren GPU noch nicht unterstützt wird, in den meisten virtuellen Maschinen oder wenn ein Grafiktreiber nicht lädt, schaltet Omarchy Animationen, Blur und Schatten für diese Sitzung aus und sagt dir das einmal mit einer Benachrichtigung. _Appearance > Animations On_ bringt sie zurück, und Omarchy merkt sich das auch für spätere Sitzungen.
+Wenn Hyprland keine GPU zum Zeichnen hat und stattdessen auf der CPU rendert (llvmpipe), wie auf Macs, deren GPU noch nicht unterstützt wird, in den meisten virtuellen Maschinen oder wenn ein Grafiktreiber nicht lädt, schaltet Ve OS Animationen, Blur und Schatten für diese Sitzung aus und sagt dir das einmal mit einer Benachrichtigung. _Appearance > Animations On_ bringt sie zurück, und Ve OS merkt sich das auch für spätere Sitzungen.
 
 Die meisten davon sind einfach eine Flag-Datei unter `~/.local/state/omarchy/toggles/`. Wenn du in einem Skript danach verzweigen willst, gibt dir `omarchy-toggle-enabled` einen Exit-Code, statt dass du selbst danach suchen musst:
 
@@ -63,11 +63,11 @@ Starte hyprsunset dann beim Anmelden, indem du `o.launch_on_start("hyprsunset")`
 
 Nichts geht jedoch verloren. Stummgeschaltete Benachrichtigungen werden zurückgehalten: Bringe die letzten paar mit `Super + Shift + Alt + ,` wieder auf den Bildschirm. Siehe [Hinweise](10-notices.md) für den Rest.
 
-Zwei Arten von Nachrichten kommen trotzdem durch: Omarchys eigene Bestätigungs-Toasts für etwas, das du gerade getan hast („Theme geändert“, „Screenshot gespeichert“), und kritische Warnungen, die von der Kommandozeile gesendet werden. Chat-Apps, die alles als kritisch markieren, um sich vor dich zu drängen, zählen nicht dazu.
+Zwei Arten von Nachrichten kommen trotzdem durch: Ve OSs eigene Bestätigungs-Toasts für etwas, das du gerade getan hast („Theme geändert“, „Screenshot gespeichert“), und kritische Warnungen, die von der Kommandozeile gesendet werden. Chat-Apps, die alles als kritisch markieren, um sich vor dich zu drängen, zählen nicht dazu.
 
 ### Leerlauf
 
-Die Omarchy-Shell besitzt das Leerlaufverhalten, und die Zeitvorgaben sind ein `idle`-Block auf oberster Ebene in `~/.config/omarchy/shell.json`:
+Die Ve OS-Shell besitzt das Leerlaufverhalten, und die Zeitvorgaben sind ein `idle`-Block auf oberster Ebene in `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Hier geht es um Sperren und den Bildschirmschoner, nicht um Energie. Suspend und
 
 ### Der Bildschirmschoner
 
-Omarchys Bildschirmschoner ist ASCII-Art, die durch zufällige Texteffekte läuft, eine Instanz pro Monitor. Jede Taste oder Mausbewegung beendet ihn.
+Ve OSs Bildschirmschoner ist ASCII-Art, die durch zufällige Texteffekte läuft, eine Instanz pro Monitor. Jede Taste oder Mausbewegung beendet ihn.
 
 Du kannst ihn bei Bedarf aus _System > Screensaver_ (`Super + Esc`) starten, was ihn erzwingt, selbst wenn du den Leerlauf-Bildschirmschoner ausgeschaltet hast. Standardmäßig ist kein Tastenkürzel dafür gebunden.
 
 Mit `omarchy toggle screensaver` schaltest du den Leerlauf-Bildschirmschoner aus, wenn du lieber direkt von der Arbeit zur Sperrung gehen willst. Jede Taste, jeder Klick, jedes Scrollen oder jede Mausbewegung schließt ihn.
 
-Das Logo, das er zeichnet, kannst du ändern, unter _Appearance > Branding > Screensaver_. Lade ein png oder svg hoch, und Omarchy wandelt es in ASCII um. Siehe [Branding](41-branding.md).
+Das Logo, das er zeichnet, kannst du ändern, unter _Appearance > Branding > Screensaver_. Lade ein png oder svg hoch, und Ve OS wandelt es in ASCII um. Siehe [Branding](41-branding.md).
 
 ### Der Sperrbildschirm
 
-`Super + Ctrl + L` sperrt den Rechner. Das führt den Sperrbildschirm aus der Omarchy-Shell aus, schaltet die Anzeige schwarz, setzt dein Tastaturlayout auf das erste zurück, damit du dein Passwort nicht im falschen Alphabet tippst, und — falls du es laufen hast — sperrt 1Password auf dem Weg nach draußen.
+`Super + Ctrl + L` sperrt den Rechner. Das führt den Sperrbildschirm aus der Ve OS-Shell aus, schaltet die Anzeige schwarz, setzt dein Tastaturlayout auf das erste zurück, damit du dein Passwort nicht im falschen Alphabet tippst, und — falls du es laufen hast — sperrt 1Password auf dem Weg nach draußen.
 
 Der Sperrbildschirm nimmt ein Passwort, und er nimmt auch einen Fingerabdruck, sobald du einen eingerichtet hast. Das und die anderen Wege zur Authentifizierung werden in [Hardware-Authentifizierung](37-hardware-authentication.md) behandelt.

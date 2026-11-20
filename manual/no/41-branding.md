@@ -1,6 +1,6 @@
 # Branding
 
-Omarchy lar deg angi firmaets logo eller et personlig bilde for både oppstartsopplåsingen, skjermspareren og om-skjermen.
+Ve OS lar deg angi firmaets logo eller et personlig bilde for både oppstartsopplåsingen, skjermspareren og om-skjermen.
 
 ### Oppstartsopplåsing
 
@@ -24,11 +24,11 @@ Det er tre oppføringer i den menyen:
 
 - **Rediger tekst** åpner `~/.config/omarchy/branding/screensaver.txt` i redigeringsprogrammet ditt. Skriv eller lim inn hva du vil — ASCII-kunst, navnet ditt, et stygt ord. Lagre og avslutt, så starter skjermspareren umiddelbart slik at du kan se den.
 - **Angi fra bilde** åpner en filvelger for en png eller svg, konverterer den til ASCII og viser deg resultatet. Logoer med en tydelig silhuett fungerer langt bedre enn fotografier.
-- **Gjenopprett standard** setter Omarchy-logoen tilbake.
+- **Gjenopprett standard** setter Ve OS-logoen tilbake.
 
 ### Om-skjermen
 
-De samme tre alternativene ligger under _Utseende > Branding > Om_ for _Om_-skjermen du får fra Omarchy-menyen, og de fungerer på nøyaktig samme måte — filen er `~/.config/omarchy/branding/about.txt`, og Om-vinduet dukker opp etter hver endring. Om-grafikken konverteres til en mindre størrelse enn skjermsparerens, siden den må få plass i et vindu i stedet for å fylle hele skjermen.
+De samme tre alternativene ligger under _Utseende > Branding > Om_ for _Om_-skjermen du får fra Ve OS-menyen, og de fungerer på nøyaktig samme måte — filen er `~/.config/omarchy/branding/about.txt`, og Om-vinduet dukker opp etter hver endring. Om-grafikken konverteres til en mindre størrelse enn skjermsparerens, siden den må få plass i et vindu i stedet for å fylle hele skjermen.
 
 Mens vinduet er åpent, glir et grønt glimt over grafikken med noen sekunders mellomrom og lar den deretter ligge stille igjen. Din egen grafikk får det også, så lenge hvert tegn i den er én kolonne bredt — alt _Angi fra bilde_ lager, er det. Grafikk bygd opp av emoji eller tegn med dobbel bredde holder seg i stedet stille, og det gjør skjermen også hvis du beholder en egen fastfetch-konfigurasjon: en stille logo i de tilfellene er animasjonen som holder seg unna i stedet for å feile, siden det å skyve et glimt over dem ville fått resten av linjen til å havne på feil sted.
 

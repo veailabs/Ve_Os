@@ -10,7 +10,7 @@ Kartice nude ono što nose: _Kopiraj kod_ za verifikacijske kodove (koji se ne s
 
 Da biste ih koristili bez miša, pritisnite `Super + Ctrl + ,`. Odabire se najnovija obavijest, a njezini su gumbi numerirani: pritisnite broj da biste upotrijebili jedan od njih, `Enter` da biste kliknuli obavijest, `↑` i `↓` za kretanje između obavijesti, `Delete` da biste jednu odbacili i `Esc` da biste vratili tipkovnicu. Nakon nekoliko sekundi neaktivnosti i sama se otpušta.
 
-Utišavanjem obavijesti zadržavate ih, osim Omarchyjevih vlastitih potvrda, hitnih upozorenja i verifikacijskih kodova, koje ste zatražili prije trenutak. Posljednjih nekoliko vratite na ekran, zadržane ili ne, pomoću `Super + Shift + Alt + ,`. Povijest se čuva jedan dan.
+Utišavanjem obavijesti zadržavate ih, osim Ve OSjevih vlastitih potvrda, hitnih upozorenja i verifikacijskih kodova, koje ste zatražili prije trenutak. Posljednjih nekoliko vratite na ekran, zadržane ili ne, pomoću `Super + Shift + Alt + ,`. Povijest se čuva jedan dan.
 
 ## Obavijesti putem tipkovničkih prečaca
 

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Editor
-Comment=Open files in the Omarchy default editor
+Comment=Open files in the Ve OS default editor
 Exec=omarchy-launch-editor %f
 Icon=text-editor
 Type=Application

@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy সাধারণত hotkey এবং Omarchy মেনু (`Super + Space`) দিয়ে নিয়ন্ত্রণ করা হয়। তবে তুমি এটাকে `omarchy` CLI দিয়েও নিয়ন্ত্রণ করতে পারো। এটা বিশেষভাবে কাজে লাগে যখন তুমি কোনো AI agent-কে দিয়ে নিজের পছন্দমতো সাজানো বা configuration-এর কাজ করাচ্ছ।
+Ve OS সাধারণত hotkey এবং Ve OS মেনু (`Super + Space`) দিয়ে নিয়ন্ত্রণ করা হয়। তবে তুমি এটাকে `omarchy` CLI দিয়েও নিয়ন্ত্রণ করতে পারো। এটা বিশেষভাবে কাজে লাগে যখন তুমি কোনো AI agent-কে দিয়ে নিজের পছন্দমতো সাজানো বা configuration-এর কাজ করাচ্ছ।
 
 এই CLI-তে সেই সব internal tooling-এর access আছে, যেগুলো মেনু এবং অন্য সব জায়গায় ব্যবহার করা হয়। টার্মিনালে `omarchy` চালালেই তুমি দেখতে পাবে কী কী পাওয়া যায়।
 
@@ -8,7 +8,7 @@ Omarchy সাধারণত hotkey এবং Omarchy মেনু (`Super + Sp
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Diagnostics-এর জন্য, সরাসরি `omarchy-debug --no-sudo --print` চালাও। এটা diagnostics print করে এবং sudo-র জন্য prompt না করেই `/tmp/omarchy-debug.log`-এ লিখে রাখে, এমনকি package install-এর ক্ষেত্রেও, যেখানে `omarchy debug` "Unknown Omarchy command" দিয়ে ব্যর্থ হতে পারে।
+Diagnostics-এর জন্য, সরাসরি `omarchy-debug --no-sudo --print` চালাও। এটা diagnostics print করে এবং sudo-র জন্য prompt না করেই `/tmp/omarchy-debug.log`-এ লিখে রাখে, এমনকি package install-এর ক্ষেত্রেও, যেখানে `omarchy debug` "Unknown Ve OS command" দিয়ে ব্যর্থ হতে পারে।
 
 আর তুমি প্রতিটা group-এর ভেতরে আরও গভীরে যেতে পারো:
 
@@ -60,4 +60,4 @@ Capture commands — Screenshots and screen recording:
 
 ### টার্মিনাল থেকে মেনু খোলা
 
-Omarchy মেনুটাও scriptable, যা তোমার নিজস্ব keybinding-এর জন্য বেশ কাজের। `omarchy menu` এটাকে root-এ খোলে, আর তুমি নাম ধরে tree-র যেকোনো জায়গায় সরাসরি চলে যেতে পারো: `omarchy menu summon appearance.theme` সোজা theme picker-এ নিয়ে যায়, `omarchy menu toggle system` system মেনু খোলে এবং ইতিমধ্যে খোলা থাকলে আবার বন্ধ করে দেয়, আর `omarchy menu close` এটাকে সরিয়ে ফেলে।
+Ve OS মেনুটাও scriptable, যা তোমার নিজস্ব keybinding-এর জন্য বেশ কাজের। `omarchy menu` এটাকে root-এ খোলে, আর তুমি নাম ধরে tree-র যেকোনো জায়গায় সরাসরি চলে যেতে পারো: `omarchy menu summon appearance.theme` সোজা theme picker-এ নিয়ে যায়, `omarchy menu toggle system` system মেনু খোলে এবং ইতিমধ্যে খোলা থাকলে আবার বন্ধ করে দেয়, আর `omarchy menu close` এটাকে সরিয়ে ফেলে।

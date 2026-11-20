@@ -1,6 +1,6 @@
 # Shellværktøjer
 
-Ud over de standardmæssige Linux-værktøjer leveres Omarchy også med en række forbedrede shellværktøjer. Her er de vigtigste.
+Ud over de standardmæssige Linux-værktøjer leveres Ve OS også med en række forbedrede shellværktøjer. Her er de vigtigste.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Den fulde manual findes via `man yt-dlp`.
 
 [try](https://github.com/tobi/try) gør det nemt at administrere programmeringseksperimenter med datostemplede mapper. Alle eksperimenter lever i `~/Work/tries`, og du kan få adgang til dem via `try`.
 
-Omarchy tilføjer ikke automatisk et projekts `bin/`-mappe til `PATH`. Kør betroede projektlokale værktøjer med en eksplicit relativ sti, såsom `bin/rails` eller `./bin/dev`.
+Ve OS tilføjer ikke automatisk et projekts `bin/`-mappe til `PATH`. Kør betroede projektlokale værktøjer med en eksplicit relativ sti, såsom `bin/rails` eller `./bin/dev`.

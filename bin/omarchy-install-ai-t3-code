@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Install T3 Code and point it at the Omarchy palette
+# omarchy:summary=Install T3 Code and point it at the Ve OS palette
 # omarchy:args=[stable|nightly] [--no-launch]
 # omarchy:requires-sudo=true
 
@@ -79,7 +79,7 @@ fi
 omarchy-theme-set-t3code
 
 # Selects the published palette before the app's first launch.
-t3_cli theme set omarchy --base-dir "$T3CODE_HOME"
+t3_cli theme set ve --base-dir "$T3CODE_HOME"
 
 # Only once the app is in place and themed. Until then a package is still
 # there, so the migration that replaces it stays pending and retries the lot.

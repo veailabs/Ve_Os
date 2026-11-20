@@ -28,7 +28,7 @@ Ini akan memaparkan Ahad 10:55 AM.
 
 ### Bagaimana cara saya menukar zon masa saya?
 
-Jalankan _Kemas Kini > Zon Masa_ dalam menu Omarchy dan pilih daripada senarai. Jika zon masa sudah betul tetapi jam itu sendiri telah tersasar, _Kemas Kini > Masa_ memulakan semula penyegerakan masa untuk anda.
+Jalankan _Kemas Kini > Zon Masa_ dalam menu Ve OS dan pilih daripada senarai. Jika zon masa sudah betul tetapi jam itu sendiri telah tersasar, _Kemas Kini > Masa_ memulakan semula penyegerakan masa untuk anda.
 
 ### Bagaimana cara saya menukar DNS saya, berkongsi Wi-Fi saya, atau menyemak kelajuan sambungan saya?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Anda boleh melakukan perkara yang sama untuk rakaman skrin menggunakan `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap mencipta direktori tangkapan skrinnya secara automatik. Cipta direktori rakaman skrin sendiri, kemudian mulakan semula Omarchy supaya mana-mana perubahan persekitaran berkuat kuasa.
+Omasnap mencipta direktori tangkapan skrinnya secara automatik. Cipta direktori rakaman skrin sendiri, kemudian mulakan semula Ve OS supaya mana-mana perubahan persekitaran berkuat kuasa.
 
 ### Bagaimana cara saya memastikan pembesar suara + kamera web berfungsi pada Apple Studio Display saya?
 
 Anda mungkin menyangka semuanya sepatutnya berfungsi hanya dengan memasang USB C, tetapi malangnya bukan begitu. Penyelesaian yang saya temui untuk memastikannya berfungsi dengan boleh dipercayai ialah menggunakan [kabel WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Kemudian pembesar suara dan kamera web berfungsi dengan sempurna.
 
-Ingat bahawa anda mempunyai kawalan kecerahan terbina dalam dalam Omarchy untuk Apple Displays (kedua-dua Studio dan XDR) menggunakan butang kecerahan papan kekunci biasa.
+Ingat bahawa anda mempunyai kawalan kecerahan terbina dalam dalam Ve OS untuk Apple Displays (kedua-dua Studio dan XDR) menggunakan butang kecerahan papan kekunci biasa.
 
 ### Bagaimana cara saya menyingkirkan semua perisian tambahan?
 
@@ -72,7 +72,7 @@ Jika anda tidak mahu program seperti Obsidian atau LibreOffice atau mana-mana ba
 
 Jalankan _Buang > Pakej_ untuk melihat setiap pakej yang dipasang. Kemudian anda boleh memilih mana-mana pakej yang ingin anda buang dengan tab, dan mulakan pembuangan semua yang telah anda pilih dengan return.
 
-Dan anda boleh menggunakan _Buang > Aplikasi Web_ daripada menu Omarchy untuk membuang mana-mana aplikasi web prapasang yang anda tidak mahu.
+Dan anda boleh menggunakan _Buang > Aplikasi Web_ daripada menu Ve OS untuk membuang mana-mana aplikasi web prapasang yang anda tidak mahu.
 
 Atau jalankan _Buang > Prapasang_ untuk menyapu keluar semua tambahan prapasang — aplikasi web, TUI, dan aplikasi pilihan — sekali gus. Kekunci pintas yang melancarkannya hilang bersamanya, jadi anda ditinggalkan dengan himpunan pengikatan yang bersih untuk diisi dengan milik anda sendiri dalam `~/.config/hypr/bindings.lua`.
 

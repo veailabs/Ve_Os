@@ -1,4 +1,6 @@
-# 入门
+# Ve OS — 入门
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy 使用 ISO 安装。你可以选择全盘安装，它会接管整个驱动器；也可以选择空闲空间安装，它会把 Omarchy 放到驱动器上的未分配空间中——这就是与 Windows 或其他操作系统并存双系统启动的方式（见[双系统启动安装](50-dual-boot-install.md)——注意，你需要先在 Windows 中关闭 BitLocker）。无论哪种方式，安装默认都会启用全盘加密，而且全盘选项会擦除所选驱动器，所以在使用现有驱动器之前，务必做好备份！
 

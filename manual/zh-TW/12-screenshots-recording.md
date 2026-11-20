@@ -41,7 +41,7 @@
 
 ## 螢幕錄影
 
-`Alt + Print Screen` 會開啟 _Trigger > Capture > Screenrecord_，它會問你要什麼樣的音軌：無音訊、桌面音訊、桌面加麥克風，或桌面加麥克風加網路攝影機。最後一個選項只有在你真的接了攝影機時才會出現。選好後，Omarchy 的錄影選取器讓你拖出一個區域，或點選某個視窗或螢幕。
+`Alt + Print Screen` 會開啟 _Trigger > Capture > Screenrecord_，它會問你要什麼樣的音軌：無音訊、桌面音訊、桌面加麥克風，或桌面加麥克風加網路攝影機。最後一個選項只有在你真的接了攝影機時才會出現。選好後，Ve OS 的錄影選取器讓你拖出一個區域，或點選某個視窗或螢幕。
 
 錄影是靠 gpu-screen-recorder 運作，它以 60fps 在 GPU 上編碼，必要時會退回 CPU。產生的成品是放在 `~/Videos` 裡的 MP4，名稱像 `screenrecording-2026-08-13_14-22-05.mp4`。設定 `OMARCHY_SCREENRECORD_DIR` 可以更換 — 但要注意，和截圖目錄不同，這個目錄必須預先存在，否則錄影會拒絕開始。
 

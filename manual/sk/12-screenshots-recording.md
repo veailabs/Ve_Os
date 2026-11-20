@@ -41,7 +41,7 @@ Tieto väzby existujú len vtedy, keď je Omasnap otvorený, takže nemôžu kol
 
 ## Nahrávanie obrazovky
 
-`Alt + Print Screen` otvorí _Trigger > Capture > Screenrecord_, ktoré sa spýta, čo chcete mať na zvukovej stope: žiadny zvuk, zvuk plochy, plochu plus mikrofón alebo plochu plus mikrofón plus webkameru. Tá posledná možnosť sa zobrazí len vtedy, ak máte skutočne pripojenú kameru. Vyberte si jednu a výber nahrávania v Omarchy vám umožní potiahnuť oblasť alebo kliknúť na okno či monitor.
+`Alt + Print Screen` otvorí _Trigger > Capture > Screenrecord_, ktoré sa spýta, čo chcete mať na zvukovej stope: žiadny zvuk, zvuk plochy, plochu plus mikrofón alebo plochu plus mikrofón plus webkameru. Tá posledná možnosť sa zobrazí len vtedy, ak máte skutočne pripojenú kameru. Vyberte si jednu a výber nahrávania v Ve OS vám umožní potiahnuť oblasť alebo kliknúť na okno či monitor.
 
 Nahrávanie beží na gpu-screen-recorder, ktorý kóduje na GPU pri 60fps a v prípade potreby prepadne na CPU. Výsledkom je MP4 v `~/Videos` s názvom `screenrecording-2026-08-13_14-22-05.mp4`. Nastavte `OMARCHY_SCREENRECORD_DIR`, ak to chcete zmeniť — ale všimnite si, že na rozdiel od adresára snímok obrazovky tento už musí existovať, inak nahrávanie odmietne začať.
 

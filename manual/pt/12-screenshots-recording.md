@@ -41,7 +41,7 @@ Estes atalhos só existem enquanto o Omasnap está aberto, por isso não podem e
 
 ## Gravação de ecrã
 
-`Alt + Print Screen` abre _Trigger > Captura > Gravação de ecrã_, onde lhe é perguntado o que quer na banda sonora: sem áudio, áudio do ambiente de trabalho, ambiente de trabalho mais microfone ou ambiente de trabalho mais microfone mais webcam. Esta última opção só aparece se tiver mesmo uma câmara ligada. Escolha uma e o seletor de gravação do Omarchy permite-lhe arrastar uma região ou clicar numa janela ou num monitor.
+`Alt + Print Screen` abre _Trigger > Captura > Gravação de ecrã_, onde lhe é perguntado o que quer na banda sonora: sem áudio, áudio do ambiente de trabalho, ambiente de trabalho mais microfone ou ambiente de trabalho mais microfone mais webcam. Esta última opção só aparece se tiver mesmo uma câmara ligada. Escolha uma e o seletor de gravação do Ve OS permite-lhe arrastar uma região ou clicar numa janela ou num monitor.
 
 A gravação funciona com o gpu-screen-recorder, que codifica na GPU a 60fps e recorre à CPU se tiver de ser. O resultado é um MP4 em `~/Videos`, com o nome `screenrecording-2026-08-13_14-22-05.mp4`. Defina `OMARCHY_SCREENRECORD_DIR` para mudar isso — mas note que, ao contrário do diretório das capturas de ecrã, este tem de já existir, caso contrário a gravação recusa-se a arrancar.
 

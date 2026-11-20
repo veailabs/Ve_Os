@@ -10,7 +10,7 @@ Karten bieten an, was sie mitbringen: _Code kopieren_ für Verifizierungscodes (
 
 Um sie ohne Maus zu nutzen, drücke `Super + Ctrl + ,`. Die neueste Benachrichtigung ist ausgewählt und ihre Schaltflächen sind nummeriert: Drücke eine Zahl, um eine zu nutzen, `Enter`, um die Benachrichtigung anzuklicken, `↑` und `↓`, um zwischen Benachrichtigungen zu wechseln, `Delete`, um eine zu schließen, und `Esc`, um die Tastatur wieder freizugeben. Nach ein paar Sekunden ohne Eingabe gibt sie auch von selbst wieder frei.
 
-Das Stummschalten von Benachrichtigungen hält sie zurück, mit Ausnahme von Omarchys eigenen Bestätigungen, Notfallwarnungen und Verifizierungscodes, um die du gerade eben gebeten hast. Bringe die letzten paar wieder auf den Bildschirm, zurückgehalten oder nicht, mit `Super + Shift + Alt + ,`. Der Verlauf wird einen Tag lang aufbewahrt.
+Das Stummschalten von Benachrichtigungen hält sie zurück, mit Ausnahme von Ve OSs eigenen Bestätigungen, Notfallwarnungen und Verifizierungscodes, um die du gerade eben gebeten hast. Bringe die letzten paar wieder auf den Bildschirm, zurückgehalten oder nicht, mit `Super + Shift + Alt + ,`. Der Verlauf wird einen Tag lang aufbewahrt.
 
 ## Tastenkürzel-Hinweise
 

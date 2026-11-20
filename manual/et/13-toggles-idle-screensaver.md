@@ -1,10 +1,10 @@
 # Lülitid, jõudeolek ja ekraanisäästja
 
-Paljud asjad, mida sa iga päev muudad, ei ole õigupoolest sätted. See on režiim, mille lülitad tunniks sisse ja siis jälle välja: öövalgus, kui töötad hilja, mitte segada, kui esitled, püsi ärkvel, kui midagi vaatad. Omarchy kutsub neid lülititeks ja need kõik töötavad ühtemoodi — kiirklahv, menüükirje ja käsk tabavad kõik sama lülitit.
+Paljud asjad, mida sa iga päev muudad, ei ole õigupoolest sätted. See on režiim, mille lülitad tunniks sisse ja siis jälle välja: öövalgus, kui töötad hilja, mitte segada, kui esitled, püsi ärkvel, kui midagi vaatad. Ve OS kutsub neid lülititeks ja need kõik töötavad ühtemoodi — kiirklahv, menüükirje ja käsk tabavad kõik sama lülitit.
 
 ### Lülitimenüü
 
-`Super + Ctrl + O` avab otse _Trigger > Toggle_ või saad sinna kõndida Omarchy menüüst (`Super + Space`). Kõik selles loendis on lülitid, mida saad ümber lülitada, mõtlemata sellele, kus olek elab. Lülitid selle kohta, kuidas töölaud välja näeb, asuvad selle kõrval jaotises _Appearance_.
+`Super + Ctrl + O` avab otse _Trigger > Toggle_ või saad sinna kõndida Ve OS menüüst (`Super + Space`). Kõik selles loendis on lülitid, mida saad ümber lülitada, mõtlemata sellele, kus olek elab. Lülitid selle kohta, kuidas töölaud välja näeb, asuvad selle kõrval jaotises _Appearance_.
 
 Terminalist on samad lülitid `omarchy toggle <thing>`. Käivita `omarchy toggle` üksinda, et näha kogu rühma.
 
@@ -26,7 +26,7 @@ Puuteplaadi, puuteekraani ja hübriid-GPU lülitid elavad jaotises _Trigger > Ha
 
 _Appearance_ sisaldab menüüriba ja animatsioone ning mõnda asja, mis ei ole käsud `omarchy toggle`, kuid käituvad samamoodi: aku protsent ribal, tööruumide vaikepaigutus ja jaotises _Windows_ akende vahed (`Super + Shift + Backspace`) ning 1 akna ruudukujuline kuvasuhe (`Super + Ctrl + Backspace`).
 
-Kui Hyprlandil ei ole joonistamiseks GPU-d ja see renderdab selle asemel CPU-l (llvmpipe), nagu Macidel, mille GPU-d veel ei toetata, enamikus virtuaalmasinates või kui graafikadraiver ei laadi, lülitab Omarchy selleks seansiks animatsioonid, hägususe ja varjud välja ning annab sulle sellest ühe korra märguandega teada. _Appearance > Animations On_ toob need tagasi ja Omarchy jätab selle meelde ka hilisemate seansside jaoks.
+Kui Hyprlandil ei ole joonistamiseks GPU-d ja see renderdab selle asemel CPU-l (llvmpipe), nagu Macidel, mille GPU-d veel ei toetata, enamikus virtuaalmasinates või kui graafikadraiver ei laadi, lülitab Ve OS selleks seansiks animatsioonid, hägususe ja varjud välja ning annab sulle sellest ühe korra märguandega teada. _Appearance > Animations On_ toob need tagasi ja Ve OS jätab selle meelde ka hilisemate seansside jaoks.
 
 Enamik neist on lihtsalt lipufail kaustas `~/.local/state/omarchy/toggles/`. Kui tahad skriptis ühe põhjal hargneda, annab `omarchy-toggle-enabled` sulle väljundkoodi, selle asemel et sind otsima saata:
 
@@ -63,11 +63,11 @@ Seejärel käivita hyprsunset sisselogimisel, lisades `o.launch_on_start("hyprsu
 
 Midagi ei lähe siiski kaotsi. Vaigistatud märguanded hoitakse tagasi: too viimased paarid `Super + Shift + Alt + ,` abil ekraanile tagasi. Vaata ülejäänu kohta [teated](10-notices.md).
 
-Kaks liiki sõnumeid pääsevad siiski läbi: Omarchy enda kinnitushüpikud millegi kohta, mida sa just tegid ("Teema vahetatud", "Ekraanipilt salvestatud"), ja käsurealt saadetud kriitilised hoiatused. Vestlusrakendused, mis märgivad kõik kriitiliseks, et end sinu ette sundida, ei kvalifitseeru.
+Kaks liiki sõnumeid pääsevad siiski läbi: Ve OS enda kinnitushüpikud millegi kohta, mida sa just tegid ("Teema vahetatud", "Ekraanipilt salvestatud"), ja käsurealt saadetud kriitilised hoiatused. Vestlusrakendused, mis märgivad kõik kriitiliseks, et end sinu ette sundida, ei kvalifitseeru.
 
 ### Jõudeolek
 
-Jõudeoleku käitumine kuulub Omarchy kestale ja ajastused on ülemise taseme `idle` plokk failis `~/.config/omarchy/shell.json`:
+Jõudeoleku käitumine kuulub Ve OS kestale ja ajastused on ülemise taseme `idle` plokk failis `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ See puudutab lukustamist ja ekraanisäästjat, mitte toidet. Peatamisel ja talve
 
 ### Ekraanisäästja
 
-Omarchy ekraanisäästja on ASCII kunst, mis jookseb läbi juhuslike tekstiefektide, üks eksemplar iga monitori kohta. Mis tahes klahv või hiire liigutus väljub sellest.
+Ve OS ekraanisäästja on ASCII kunst, mis jookseb läbi juhuslike tekstiefektide, üks eksemplar iga monitori kohta. Mis tahes klahv või hiire liigutus väljub sellest.
 
 Sa saad selle nõudmisel käivitada jaotisest _System > Screensaver_ (`Super + Esc`), mis sunnib selle esile isegi siis, kui oled jõudeoleku ekraanisäästja välja lülitanud. Vaikimisi ei ole sellega seotud ühtegi kiirklahvi.
 
 `omarchy toggle screensaver` lülitab jõudeoleku oma välja, kui eelistad minna otse töötamiselt lukustatuks. Mis tahes klahv, klõps, kerimine või hiire liigutus sulgeb selle.
 
-Logo, mille see joonistab, saad ise muuta jaotises _Appearance > Branding > Screensaver_. Laadi üles png või svg ja Omarchy teisendab selle ASCII-ks. Vaata [bränding](41-branding.md).
+Logo, mille see joonistab, saad ise muuta jaotises _Appearance > Branding > Screensaver_. Laadi üles png või svg ja Ve OS teisendab selle ASCII-ks. Vaata [bränding](41-branding.md).
 
 ### Lukustuskuva
 
-`Super + Ctrl + L` lukustab masina. See käivitab Omarchy kesta lukustuskuva, muudab ekraani tühjaks, lähtestab klaviatuuripaigutuse esimesele, et sa ei kirjutaks oma parooli vales tähestikus, ja — kui sul see töötab — lukustab lahkumisel 1Passwordi.
+`Super + Ctrl + L` lukustab masina. See käivitab Ve OS kesta lukustuskuva, muudab ekraani tühjaks, lähtestab klaviatuuripaigutuse esimesele, et sa ei kirjutaks oma parooli vales tähestikus, ja — kui sul see töötab — lukustab lahkumisel 1Passwordi.
 
 Lukustuskuva võtab vastu parooli ja see võtab vastu ka sõrmejälje, kui oled selle seadistanud. Seda ja teisi autentimisviise käsitletakse jaotises [riistvaraline autentimine](37-hardware-authentication.md).

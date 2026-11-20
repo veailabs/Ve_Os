@@ -1,8 +1,8 @@
 # 테마
 
-Omarchy에는 아름다운 테마 스물두 가지가 함께 제공됩니다. Omarchy 메뉴(`Super + Space`)의 _모양 > 테마_에서 선택하거나, `Super + Ctrl + T`를 눌러 테마 선택 화면으로 바로 이동할 수 있습니다.
+Ve OS에는 아름다운 테마 스물두 가지가 함께 제공됩니다. Ve OS 메뉴(`Super + Space`)의 _모양 > 테마_에서 선택하거나, `Super + Ctrl + T`를 눌러 테마 선택 화면으로 바로 이동할 수 있습니다.
 
-각 테마는 데스크톱, 터미널, neovim, 활동 화면(btop), Chromium과 상단 바, 메뉴, 알림, OSD, 잠금 화면을 아우르는 전체 Omarchy 셸의 스타일을 결정합니다. (Obsidian에서는 앱 안에서 _Appearance > Themes_를 통해 Omarchy 테마를 직접 선택해야 합니다).
+각 테마는 데스크톱, 터미널, neovim, 활동 화면(btop), Chromium과 상단 바, 메뉴, 알림, OSD, 잠금 화면을 아우르는 전체 Ve OS 셸의 스타일을 결정합니다. (Obsidian에서는 앱 안에서 _Appearance > Themes_를 통해 Ve OS 테마를 직접 선택해야 합니다).
 
 테마마다 배경 이미지 세트가 있어 `Super + Ctrl + W`로 그중에서 고를 수 있습니다.
 
@@ -75,7 +75,7 @@ _White_
 
 다른 사람이 만든 아이콘 세트는 _설치 > 스타일 > 아이콘_에서(또는 `omarchy icons install <git url>`로) 설치할 수 있고, _제거 > 아이콘_에서 다시 제거할 수 있습니다. _업데이트 > 추가 아이콘_은 설치한 세트의 최신 버전을 가져옵니다.
 
-직접 만들려면 아이콘을 `~/.config/omarchy/icons/<name>/`에 넣으세요. 앱당 파일 하나씩, 앱의 `.desktop` 파일에 있는 `Icon=` 줄을 따서 이름을 붙입니다. `.svg`로 끝나는 파일은 있는 그대로 표시됩니다. `.svg.tpl`로 끝나는 파일은 테마의 색상으로 그려집니다: 색상이 들어갈 자리에 `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` 또는 `{{ icon_shadow }}`를 쓰세요. `/usr/share/omarchy/icons/papercraft/`에 있는 기본 세트에서 시작하는 것이 좋습니다. 선택 화면에 내 세트를 표시하려면 `preview.png`를 추가하세요. 없으면 Omarchy가 아이콘들로 미리보기를 그립니다. 기본 세트의 아이콘 하나만 바꾸려면 내 버전을 `~/.config/omarchy/icons/papercraft/`에 넣으세요.
+직접 만들려면 아이콘을 `~/.config/omarchy/icons/<name>/`에 넣으세요. 앱당 파일 하나씩, 앱의 `.desktop` 파일에 있는 `Icon=` 줄을 따서 이름을 붙입니다. `.svg`로 끝나는 파일은 있는 그대로 표시됩니다. `.svg.tpl`로 끝나는 파일은 테마의 색상으로 그려집니다: 색상이 들어갈 자리에 `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` 또는 `{{ icon_shadow }}`를 쓰세요. `/usr/share/omarchy/icons/papercraft/`에 있는 기본 세트에서 시작하는 것이 좋습니다. 선택 화면에 내 세트를 표시하려면 `preview.png`를 추가하세요. 없으면 Ve OS가 아이콘들로 미리보기를 그립니다. 기본 세트의 아이콘 하나만 바꾸려면 내 버전을 `~/.config/omarchy/icons/papercraft/`에 넣으세요.
 
 ### 잠금 해제 화면
 

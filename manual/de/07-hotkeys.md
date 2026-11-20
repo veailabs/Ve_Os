@@ -8,7 +8,7 @@ Jedes Tastaturkürzel liegt auf einer Ebene, die durch seine Modifikatoren besti
 
 | Ebene | Was dort zu finden ist | Beispiele |
 | --- | --- | --- |
-| `Super + key` | Das System: Fenster, Workspaces, Layouts und Kernmenüs | `Super + Space` Omarchy-Menü, `Super + W` Fenster schließen, `Super + F` Vollbild |
+| `Super + key` | Das System: Fenster, Workspaces, Layouts und Kernmenüs | `Super + Space` Ve OS-Menü, `Super + W` Fenster schließen, `Super + F` Vollbild |
 | `Super + Shift + key` | Apps | `Super + Shift + B` Browser, `Super + Shift + E` E-Mail, `Super + Shift + N` Editor |
 | `Super + Ctrl + key` | Panels und Systemmenüs | `Super + Ctrl + A` Audio, `Super + Ctrl + N` Netzwerk, `Super + Ctrl + C` Aufnahme-Menü |
 | `Super + Ctrl + Alt + key` | Schnellaktionen und Hinweise | `Super + Ctrl + Alt + T` Uhrzeit anzeigen, `Super + Ctrl + Alt + B` Akku, `Super + Ctrl + Alt + C` Screenshot |
@@ -34,7 +34,7 @@ Wenn dir ein Standard nicht zusagt (etwa wenn du wie unter Windows `Super + Shif
 
 | Tastaturkürzel                  | Funktion              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Omarchy-Menü (Apps und alles andere)    |
+| `Super + Space`           | Ve OS-Menü (Apps und alles andere)    |
 | `Super + Alt + Space` | App-Übersicht |
 | `Super + Escape` | Systemmenü (Ruhezustand, Neustart usw.)  |
 | `Super + Ctrl + L` | Computer sperren |
@@ -172,7 +172,7 @@ Belegungen in `~/.config/hypr/bindings.lua` ändern/hinzufügen.
 | `Super + V`           | Einfügen    |
 | `Super + Ctrl + V`           | Zwischenablage-Manager    |
 
-Normalerweise brauchst du unter Linux `Ctrl + Shift + C/V`, um im Terminal zu kopieren und einzufügen, und `Ctrl + C/V`, um es überall sonst zu tun. Diese vereinheitlichten Omarchy-Zwischenablage-Tastaturkürzel funktionieren überall.
+Normalerweise brauchst du unter Linux `Ctrl + Shift + C/V`, um im Terminal zu kopieren und einzufügen, und `Ctrl + C/V`, um es überall sonst zu tun. Diese vereinheitlichten Ve OS-Zwischenablage-Tastaturkürzel funktionieren überall.
 
 ## Aufnahme
 
@@ -194,7 +194,7 @@ Normalerweise brauchst du unter Linux `Ctrl + Shift + C/V`, um im Terminal zu ko
 
 Bei Bildschirmaufzeichnungen fragt das Tastaturkürzel zuerst, welches Audio du willst, dann startet die Aufnahme. Drücke es erneut, um zu stoppen. Siehe [Screenshots und Aufzeichnung](12-screenshots-recording.md) für die Details.
 
-Alle Aufnahmeoptionen sind auch unter _Trigger > Capture_ im Omarchy-Menü (`Super + Space`) zugänglich.
+Alle Aufnahmeoptionen sind auch unter _Trigger > Capture_ im Ve OS-Menü (`Super + Space`) zugänglich.
 
 ## Benachrichtigungen
 
@@ -216,9 +216,9 @@ Alle Aufnahmeoptionen sind auch unter _Trigger > Capture_ im Omarchy-Menü (`Sup
 | `Super + Backspace` | Transparenz bei einem Fenster umschalten |
 | `Super + Ctrl + Backspace` | Quadratisches Seitenverhältnis für einzelnes Fenster umschalten |
 
-Zusätzliche Hintergrundbilder liegen in `~/.config/omarchy/backgrounds/<theme name>`. Auch verfügbar über _Install > Style > Background_ im Omarchy-Menü.
+Zusätzliche Hintergrundbilder liegen in `~/.config/omarchy/backgrounds/<theme name>`. Auch verfügbar über _Install > Style > Background_ im Ve OS-Menü.
 
-Alle Stiloptionen sind auch unter _Style_ im Omarchy-Menü (`Super + Space`) zugänglich.
+Alle Stiloptionen sind auch unter _Style_ im Ve OS-Menü (`Super + Space`) zugänglich.
 
 ## Umschalten
 
@@ -319,7 +319,7 @@ Diese Funktionen müssen innerhalb einer Tmux-Sitzung ausgeführt werden.
 
 ## Ghostty Terminal
 
-Das Ghostty-Terminal wird mit _Install > Terminal_ über das Omarchy-Menü installiert.
+Das Ghostty-Terminal wird mit _Install > Terminal_ über das Ve OS-Menü installiert.
 
 | Tastaturkürzel                  | Funktion              |
 | ----------------------- | --------------------- |

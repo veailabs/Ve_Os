@@ -1,6 +1,6 @@
 # Branding
 
-O Omarchy permite-lhe definir o logótipo da sua empresa ou uma imagem pessoal para o desbloqueio no arranque, para a proteção de ecrã e para o ecrã Acerca de.
+O Ve OS permite-lhe definir o logótipo da sua empresa ou uma imagem pessoal para o desbloqueio no arranque, para a proteção de ecrã e para o ecrã Acerca de.
 
 ### Desbloqueio no arranque
 
@@ -24,11 +24,11 @@ Há três entradas nesse menu:
 
 - **Edit Text** abre `~/.config/omarchy/branding/screensaver.txt` no seu editor. Escreva ou cole o que quiser — arte ASCII, o seu nome, um palavrão. Guarde e saia, e a proteção de ecrã arranca imediatamente para a poder ver.
 - **Set From Image** abre um seletor de ficheiros para um png ou svg, converte-o para ASCII e mostra-lhe o resultado. Logótipos com uma silhueta nítida funcionam muito melhor do que fotografias.
-- **Restore Default** repõe o logótipo do Omarchy.
+- **Restore Default** repõe o logótipo do Ve OS.
 
 ### Ecrã Acerca de
 
-As mesmas três opções estão em _Appearance > Branding > About_ para o ecrã _About_ que obtém a partir do menu do Omarchy, e funcionam de forma idêntica — o ficheiro é `~/.config/omarchy/branding/about.txt`, e a janela About surge após cada alteração. A arte do About é convertida para um tamanho menor do que o da proteção de ecrã, uma vez que tem de caber numa janela em vez de encher o seu ecrã.
+As mesmas três opções estão em _Appearance > Branding > About_ para o ecrã _About_ que obtém a partir do menu do Ve OS, e funcionam de forma idêntica — o ficheiro é `~/.config/omarchy/branding/about.txt`, e a janela About surge após cada alteração. A arte do About é convertida para um tamanho menor do que o da proteção de ecrã, uma vez que tem de caber numa janela em vez de encher o seu ecrã.
 
 Enquanto a janela está aberta, um brilho verde inclina-se sobre a arte a cada poucos segundos e depois deixa-a novamente imóvel. A sua própria arte também o recebe, desde que cada carácter nela tenha a largura de uma coluna — tudo o que o _Set From Image_ produz tem. A arte construída a partir de emoji ou de caracteres de largura dupla fica imóvel, em vez disso, e o mesmo acontece ao ecrã se mantiver uma configuração fastfetch sua: um logótipo imóvel nesses casos é a animação a manter-se fora do caminho, e não uma falha, uma vez que deslizar um brilho sobre eles colocaria o resto da linha no sítio errado.
 

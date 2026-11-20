@@ -1,10 +1,10 @@
 # Shell-viðbætur
 
-Omarchy-skjáborðið keyrir sem eitt langlíft Quickshell-ferli sem kallast `omarchy-shell`, og næstum allt sem þú sérð á skjánum er viðbót inni í því. Stikan er viðbót. Það eru líka spjöldin sem falla niður úr henni, heilskjáa-yfirborðin eins og emoji-valið og klippiborðsstjórinn, Omarchy-valmyndin sjálf, læsingarskjárinn, polkit-glugginn og höfuðlausu þjónusturnar sem fylgjast með rafhlöðunni þinni og hlýja skjáinn þinn á nóttunni.
+Ve OS-skjáborðið keyrir sem eitt langlíft Quickshell-ferli sem kallast `omarchy-shell`, og næstum allt sem þú sérð á skjánum er viðbót inni í því. Stikan er viðbót. Það eru líka spjöldin sem falla niður úr henni, heilskjáa-yfirborðin eins og emoji-valið og klippiborðsstjórinn, Ve OS-valmyndin sjálf, læsingarskjárinn, polkit-glugginn og höfuðlausu þjónusturnar sem fylgjast með rafhlöðunni þinni og hlýja skjáinn þinn á nóttunni.
 
-Það er ekki bara útfærsluupplýsing. Það þýðir að þú getur slökkt á hlutum af skjáborðinu, skipt þeim út eða skrifað þína eigin án þess að snerta línu af frumkóða Omarchy.
+Það er ekki bara útfærsluupplýsing. Það þýðir að þú getur slökkt á hlutum af skjáborðinu, skipt þeim út eða skrifað þína eigin án þess að snerta línu af frumkóða Ve OS.
 
-Fyrstu-flokks viðbæturnar koma með Omarchy og búa í `$OMARCHY_PATH/shell/plugins/`. Allt sem þú bætir við sjálfur — þínar eigin tilraunir, eða eitthvað sem þú fannst á GitHub — býr í `~/.config/omarchy/plugins/`. Bæði eru uppgötvuð á sama hátt við ræsingu, en innbyggðar fá traust shell-viðmót á meðan viðbætur frá þriðja aðila fá takmarkað viðmót sem afmarkast við þeirra eigin þjónustu og lífsferil. Klónar af innbyggðum halda aðeins stillingum og UI-köllum sem eru sértæk fyrir upprunann og þarf fyrir upprunalega hegðun.
+Fyrstu-flokks viðbæturnar koma með Ve OS og búa í `$OMARCHY_PATH/shell/plugins/`. Allt sem þú bætir við sjálfur — þínar eigin tilraunir, eða eitthvað sem þú fannst á GitHub — býr í `~/.config/omarchy/plugins/`. Bæði eru uppgötvuð á sama hátt við ræsingu, en innbyggðar fá traust shell-viðmót á meðan viðbætur frá þriðja aðila fá takmarkað viðmót sem afmarkast við þeirra eigin þjónustu og lífsferil. Klónar af innbyggðum halda aðeins stillingum og UI-köllum sem eru sértæk fyrir upprunann og þarf fyrir upprunalega hegðun.
 
 ## Að sjá hvað þú hefur
 

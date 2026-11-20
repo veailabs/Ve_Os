@@ -1,10 +1,10 @@
 # Pluginuri de shell
 
-Desktopul Omarchy rulează ca un singur proces Quickshell cu viață lungă, numit `omarchy-shell`, și aproape tot ce vezi pe ecran este un plugin în interiorul lui. Bara este un plugin. La fel sunt panourile care coboară din ea, suprapunerile pe tot ecranul precum selectorul de emoji și managerul de clipboard, meniul Omarchy însuși, ecranul de blocare, dialogul polkit și serviciile fără cap care îți urmăresc bateria și îți încălzesc ecranul noaptea.
+Desktopul Ve OS rulează ca un singur proces Quickshell cu viață lungă, numit `omarchy-shell`, și aproape tot ce vezi pe ecran este un plugin în interiorul lui. Bara este un plugin. La fel sunt panourile care coboară din ea, suprapunerile pe tot ecranul precum selectorul de emoji și managerul de clipboard, meniul Ve OS însuși, ecranul de blocare, dialogul polkit și serviciile fără cap care îți urmăresc bateria și îți încălzesc ecranul noaptea.
 
-Acesta nu este doar un detaliu de implementare. Înseamnă că poți opri părți ale desktopului, le poți înlocui sau îți poți scrie propriile tale fără să atingi o linie din sursa Omarchy.
+Acesta nu este doar un detaliu de implementare. Înseamnă că poți opri părți ale desktopului, le poți înlocui sau îți poți scrie propriile tale fără să atingi o linie din sursa Ve OS.
 
-Pluginurile primare vin cu Omarchy și trăiesc în `$OMARCHY_PATH/shell/plugins/`. Orice adaugi tu însuți — experimentele tale proprii sau ceva găsit pe GitHub — trăiește în `~/.config/omarchy/plugins/`. Ambele sunt descoperite în același mod la pornire, dar cele încorporate primesc interfețe de shell de încredere, în timp ce pluginurile terțe primesc o interfață limitată, restrânsă la propriul lor serviciu și ciclu de viață. Clonele celor încorporate păstrează numai configurația specifică sursei și apelurile UI necesare pentru comportamentul original.
+Pluginurile primare vin cu Ve OS și trăiesc în `$OMARCHY_PATH/shell/plugins/`. Orice adaugi tu însuți — experimentele tale proprii sau ceva găsit pe GitHub — trăiește în `~/.config/omarchy/plugins/`. Ambele sunt descoperite în același mod la pornire, dar cele încorporate primesc interfețe de shell de încredere, în timp ce pluginurile terțe primesc o interfață limitată, restrânsă la propriul lor serviciu și ciclu de viață. Clonele celor încorporate păstrează numai configurația specifică sursei și apelurile UI necesare pentru comportamentul original.
 
 ## Cum vezi ce ai
 

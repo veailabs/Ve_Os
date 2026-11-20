@@ -1,6 +1,6 @@
 # Brandáil
 
-Ligeann Omarchy duit lógó do chuideachta nó íomhá phearsanta a shocrú don díghlasáil tosaithe, don spárálaí scáileáin, agus don scáileán maidir araon.
+Ligeann Ve OS duit lógó do chuideachta nó íomhá phearsanta a shocrú don díghlasáil tosaithe, don spárálaí scáileáin, agus don scáileán maidir araon.
 
 ### Díghlasáil tosaithe
 
@@ -24,11 +24,11 @@ Tá trí iontráil sa roghchlár sin:
 
 - **Cuir Téacs in Eagar** osclaíonn sé `~/.config/omarchy/branding/screensaver.txt` i d'eagarthóir. Clóscríobh nó greamaigh cibé rud is mian leat — ealaín ASCII, d'ainm, focal drochmhúinte. Sábháil agus scoir, agus tosóidh an spárálaí scáileáin láithreach ionas go bhfeicfidh tú é.
 - **Socraigh ó Íomhá** osclaíonn sé roghnóir comhad do png nó svg, tiontaíonn sé go ASCII é, agus taispeánann sé an toradh duit. Oibríonn lógónna le scáthchruth soiléir i bhfad níos fearr ná grianghraif.
-- **Athchóirigh an Réamhshocrú** cuireann sé lógó Omarchy ar ais.
+- **Athchóirigh an Réamhshocrú** cuireann sé lógó Ve OS ar ais.
 
 ### Scáileán Maidir
 
-Tá na trí rogha chéanna faoi _Dealramh > Brandáil > Maidir_ don scáileán _Maidir_ a fhaigheann tú ó roghchlár Omarchy, agus oibríonn siad ar an mbealach céanna — is é `~/.config/omarchy/branding/about.txt` an comhad, agus tagann fuinneog Maidir aníos tar éis gach athraithe. Tiontaítear ealaín Maidir go méid níos lú ná méid an spárálaí scáileáin, mar go gcaithfidh sí luí isteach i bhfuinneog seachas do scáileán a líonadh.
+Tá na trí rogha chéanna faoi _Dealramh > Brandáil > Maidir_ don scáileán _Maidir_ a fhaigheann tú ó roghchlár Ve OS, agus oibríonn siad ar an mbealach céanna — is é `~/.config/omarchy/branding/about.txt` an comhad, agus tagann fuinneog Maidir aníos tar éis gach athraithe. Tiontaítear ealaín Maidir go méid níos lú ná méid an spárálaí scáileáin, mar go gcaithfidh sí luí isteach i bhfuinneog seachas do scáileán a líonadh.
 
 Agus an fhuinneog ar oscailt, claonann glioscarnach glas trasna na healaíne gach cúpla soicind agus ansin fágann sé socair arís í. Faigheann d'ealaín féin é freisin, chomh fada is go bhfuil gach carachtar inti colún amháin ar leithead — mar atá aon rud a tháirgeann _Socraigh ó Íomhá_. Fanann ealaín atá déanta as emoji nó carachtair dhúbailte-leithid socair ina ionad sin, agus fanann an scáileán socair freisin má choinníonn tú cumraíocht fastfetch de do chuid féin: is é atá i lógó socair sna cásanna sin ná an bheochan ag fanacht as an mbealach seachas ag teip, mar go gcuirfeadh glioscarnach a shleamhnú trasna orthu an chuid eile den líne san áit mícheart.
 

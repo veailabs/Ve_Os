@@ -8,7 +8,7 @@ Cada atalho fica em um plano, definido por seus modificadores, e cada plano tem 
 
 | Plano | O que fica ali | Exemplos |
 | --- | --- | --- |
-| `Super + key` | O sistema: janelas, áreas de trabalho, layouts e menus principais | `Super + Space` menu Omarchy, `Super + W` fechar janela, `Super + F` tela cheia |
+| `Super + key` | O sistema: janelas, áreas de trabalho, layouts e menus principais | `Super + Space` menu Ve OS, `Super + W` fechar janela, `Super + F` tela cheia |
 | `Super + Shift + key` | Aplicativos | `Super + Shift + B` navegador, `Super + Shift + E` e-mail, `Super + Shift + N` editor |
 | `Super + Ctrl + key` | Painéis e menus do sistema | `Super + Ctrl + A` áudio, `Super + Ctrl + N` rede, `Super + Ctrl + C` menu de captura |
 | `Super + Ctrl + Alt + key` | Ações rápidas e avisos | `Super + Ctrl + Alt + T` mostrar hora, `Super + Ctrl + Alt + B` bateria, `Super + Ctrl + Alt + C` captura de tela |
@@ -34,7 +34,7 @@ Se um padrão não servir para você (digamos que você queira `Super + Shift + 
 
 | Atalho                  | Função              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Menu Omarchy (aplicativos e tudo o mais)    |
+| `Super + Space`           | Menu Ve OS (aplicativos e tudo o mais)    |
 | `Super + Alt + Space` | Grade de aplicativos |
 | `Super + Escape` | Menu do sistema (suspender, reiniciar etc.)  |
 | `Super + Ctrl + L` | Bloquear o computador |
@@ -172,7 +172,7 @@ Altere/adicion associações em `~/.config/hypr/bindings.lua`.
 | `Super + V`           | Colar    |
 | `Super + Ctrl + V`           | Gerenciador da área de transferência    |
 
-Normalmente no Linux, você precisa de `Ctrl + Shift + C/V` para copiar e colar no terminal e de `Ctrl + C/V` para fazer isso em todo o resto. Esses atalhos unificados de área de transferência do Omarchy funcionam em todo lugar.
+Normalmente no Linux, você precisa de `Ctrl + Shift + C/V` para copiar e colar no terminal e de `Ctrl + C/V` para fazer isso em todo o resto. Esses atalhos unificados de área de transferência do Ve OS funcionam em todo lugar.
 
 ## Captura
 
@@ -194,7 +194,7 @@ Normalmente no Linux, você precisa de `Ctrl + Shift + C/V` para copiar e colar 
 
 Com gravações de tela, o atalho primeiro pergunta qual áudio você quer, depois inicia a gravação. Pressione de novo para parar. Veja [capturas de tela e gravação](12-screenshots-recording.md) para os detalhes.
 
-Todas as opções de captura também estão acessíveis em _Trigger > Capture_ no menu Omarchy (`Super + Space`).
+Todas as opções de captura também estão acessíveis em _Trigger > Capture_ no menu Ve OS (`Super + Space`).
 
 ## Notificações
 
@@ -216,9 +216,9 @@ Todas as opções de captura também estão acessíveis em _Trigger > Capture_ n
 | `Super + Backspace` | Alternar a transparência de uma janela |
 | `Super + Ctrl + Backspace` | Alternar o aspecto quadrado de janela única |
 
-Imagens de fundo extras ficam em `~/.config/omarchy/backgrounds/<theme name>`. Também disponíveis em _Install > Style > Background_ no menu Omarchy.
+Imagens de fundo extras ficam em `~/.config/omarchy/backgrounds/<theme name>`. Também disponíveis em _Install > Style > Background_ no menu Ve OS.
 
-Todas as opções de estilo também estão acessíveis em _Style_ no menu Omarchy (`Super + Space`).
+Todas as opções de estilo também estão acessíveis em _Style_ no menu Ve OS (`Super + Space`).
 
 ## Alternâncias
 
@@ -319,7 +319,7 @@ Essas funções devem ser executadas dentro de uma sessão Tmux.
 
 ## Terminal Ghostty
 
-O terminal Ghostty é instalado usando _Install > Terminal_ pelo menu Omarchy.
+O terminal Ghostty é instalado usando _Install > Terminal_ pelo menu Ve OS.
 
 | Atalho                  | Função              |
 | ----------------------- | --------------------- |

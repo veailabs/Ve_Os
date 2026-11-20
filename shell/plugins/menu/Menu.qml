@@ -1554,7 +1554,8 @@ Item {
               Text {
                 id: iconText
                 textFormat: Text.PlainText
-                visible: row.hasIcon && !row.isApp
+                visible: row.hasIcon && !row.isApp && !branded
+                readonly property bool branded: glyphFont === "omarchy" && text === "\ue900"
                 readonly property string glyphFont: row.altVariant ? row.altVariant.iconFont : row.iconFont
                 text: row.altVariant ? row.altVariant.icon : row.icon
                 color: row.hasCursor ? root.selectedText : root.foreground
@@ -1566,6 +1567,15 @@ Item {
                 anchors.left: parent.left
                 anchors.leftMargin: root.rowReservedBorderLeft + Style.space(8)
                 y: contentColumn.y + labelText.y + (labelText.height - height) / 2
+              }
+
+              VeLogo {
+                visible: row.hasIcon && !row.isApp && iconText.branded
+                width: Style.font.iconLarge
+                height: width
+                tint: row.hasCursor ? root.selectedText : root.foreground
+                anchors.horizontalCenter: iconText.horizontalCenter
+                anchors.verticalCenter: iconText.verticalCenter
               }
 
               Image {

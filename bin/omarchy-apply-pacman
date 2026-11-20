@@ -49,7 +49,7 @@ source "$OMARCHY_PATH/install/helpers/pacman.sh"
 platform=$(omarchy-hw-platform)
 templates=$(omarchy_pacman_templates "$platform")
 if [[ ! -f $templates/pacman-$channel.conf || ! -f $templates/mirrorlist-$channel ]]; then
-  echo "Omarchy has no $channel channel for $platform." >&2
+  echo "Ve OS has no $channel channel for $platform." >&2
   exit 1
 fi
 

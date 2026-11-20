@@ -28,7 +28,7 @@ See kuvab pühapäev 10:55 AM.
 
 ### Kuidas muuta oma ajavööndit?
 
-Käivita Omarchy menüüs _Uuenda > Ajavöönd_ ja vali loendist. Kui ajavöönd on õige, kuid kell ise on paigast nihkunud, käivitab _Uuenda > Kellaaeg_ sinu eest aja sünkroonimise uuesti.
+Käivita Ve OS menüüs _Uuenda > Ajavöönd_ ja vali loendist. Kui ajavöönd on õige, kuid kell ise on paigast nihkunud, käivitab _Uuenda > Kellaaeg_ sinu eest aja sünkroonimise uuesti.
 
 ### Kuidas muuta oma DNS-i, jagada oma Wi-Fi-t või kontrollida ühenduse kiirust?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Sama saad teha ekraanisalvestuste jaoks, kasutades muutujat `OMARCHY_SCREENRECORD_DIR`.
 
-Omasnap loob oma ekraanipiltide kausta automaatselt. Loo ekraanisalvestuste kaust ise ja seejärel taaskäivita Omarchy, et kumbki keskkonnamuudatus jõustuks.
+Omasnap loob oma ekraanipiltide kausta automaatselt. Loo ekraanisalvestuste kaust ise ja seejärel taaskäivita Ve OS, et kumbki keskkonnamuudatus jõustuks.
 
 ### Kuidas panna Apple Studio Display kõlarid ja veebikaamera tööle?
 
 Võiks arvata, et kõik peaks töötama lihtsalt USB C ühendamisega, kuid kahjuks see nii ei ole. Lahendus, mille leidsin selle usaldusväärseks toimimiseks, on kasutada [WJESOG DisplayPort + USB-A => USB-C kaablit](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Seejärel töötavad kõlarid ja veebikaamera nagu õlitatult.
 
-Pea meeles, et Omarchys on Apple'i ekraanide (nii Studio kui ka XDR) jaoks sisseehitatud heleduse juhtimine tavaliste klaviatuuri heledusklahvide abil.
+Pea meeles, et Ve OSs on Apple'i ekraanide (nii Studio kui ka XDR) jaoks sisseehitatud heleduse juhtimine tavaliste klaviatuuri heledusklahvide abil.
 
 ### Kuidas vabaneda kogu lisatarkvarast?
 
@@ -72,7 +72,7 @@ Kui sa ei taha selliseid programme nagu Obsidian või LibreOffice ega muud eelin
 
 Käivita _Eemalda > Pakett_, et näha iga installitud paketti. Seejärel saad klahviga tab valida iga paketi, mille soovid eemaldada, ja alustada kõige valitu eemaldamist klahviga return.
 
-Ja saad kasutada Omarchy menüüs valikut _Eemalda > Veebirakendus_, et eemaldada kõik eelinstallitud veebirakendused, mida sa ei taha.
+Ja saad kasutada Ve OS menüüs valikut _Eemalda > Veebirakendus_, et eemaldada kõik eelinstallitud veebirakendused, mida sa ei taha.
 
 Või käivita _Eemalda > Eelinstallitud_, et pühkida kõik eelinstallitud lisad — veebirakendused, TUI-d ja valikulised rakendused — ühe korraga välja. Neid käivitanud kiirklahvid kaovad koos nendega, nii et sulle jääb puhas leht sidumisi, mille saad täita enda omadega failis `~/.config/hypr/bindings.lua`.
 

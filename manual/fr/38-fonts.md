@@ -1,12 +1,12 @@
 # Polices
 
-Par défaut, Omarchy utilise JetBrainsMono Nerd Font à la fois comme police du terminal et comme police du système.
+Par défaut, Ve OS utilise JetBrainsMono Nerd Font à la fois comme police du terminal et comme police du système.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Vous pouvez changer cela via le menu _Apparence > Police_ dans le menu Omarchy (`Super + Space`). Cela définit la police à chasse fixe partout : le terminal, la barre, et tout le reste qui la demande.
+Vous pouvez changer cela via le menu _Apparence > Police_ dans le menu Ve OS (`Super + Space`). Cela définit la police à chasse fixe partout : le terminal, la barre, et tout le reste qui la demande.
 
-Vous pouvez installer d'autres polices de programmation populaires via _Installation > Style > Police_ dans le menu Omarchy : Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono et Iosevka sont toutes à un clic, dans leurs versions Nerd Font pour que les glyphes de la barre et du terminal continuent de fonctionner. Après en avoir installé une, sélectionnez-la sous _Apparence > Police_.
+Vous pouvez installer d'autres polices de programmation populaires via _Installation > Style > Police_ dans le menu Ve OS : Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono et Iosevka sont toutes à un clic, dans leurs versions Nerd Font pour que les glyphes de la barre et du terminal continuent de fonctionner. Après en avoir installé une, sélectionnez-la sous _Apparence > Police_.
 
 ## Chinois, japonais et coréen
 

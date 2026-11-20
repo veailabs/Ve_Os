@@ -1,8 +1,8 @@
 # 導覽
 
-Omarchy 裡的一切都透過鍵盤完成——*一切都是！*系統剛啟動時，你真的光靠滑鼠什麼都做不了。但你可以按下 `Super + Space` 叫出 Omarchy 選單，從這裡你幾乎可以做所有事。
+Ve OS 裡的一切都透過鍵盤完成——*一切都是！*系統剛啟動時，你真的光靠滑鼠什麼都做不了。但你可以按下 `Super + Space` 叫出 Ve OS 選單，從這裡你幾乎可以做所有事。
 
-但 Omarchy 選單甚至不是設計來當作大多數時候操作系統的主要方式。我們可以比那更快！所有最重要的應用程式都直接綁定到個別的快捷鍵。你用 `Super + Return` 啟動終端機，用 `Super + Shift + Return` 啟動瀏覽器。試著一個接著一個做，你就會看到 Hyprland 平鋪的魔法正在運作：
+但 Ve OS 選單甚至不是設計來當作大多數時候操作系統的主要方式。我們可以比那更快！所有最重要的應用程式都直接綁定到個別的快捷鍵。你用 `Super + Return` 啟動終端機，用 `Super + Shift + Return` 啟動瀏覽器。試著一個接著一個做，你就會看到 Hyprland 平鋪的魔法正在運作：
 
  ![navigation-browser-terminal](images/navigation-browser-terminal.webp)
 
@@ -30,7 +30,7 @@ Omarchy 裡的一切都透過鍵盤完成——*一切都是！*系統剛啟動�
 
 ### Dwindle 對上 scrolling 版面配置
 
-Omarchy 的預設版面配置稱為 dwindle。它讓你在單一工作區開啟的所有視窗隨時都可見，就算必須把它們縮小也一樣。
+Ve OS 的預設版面配置稱為 dwindle。它讓你在單一工作區開啟的所有視窗隨時都可見，就算必須把它們縮小也一樣。
 
  ![navigation-dwindle-layout](images/navigation-dwindle-layout.webp)
 
@@ -56,7 +56,7 @@ hl.config({
 
 浮動工作區的運作方式像傳統桌面：視窗重疊，由你自己移動它們並調整大小。每個視窗都會有一個你主題顏色的標題列，上面有最小化、最大化和關閉按鈕。`Super + M` 也會最小化聚焦的視窗。最小化的視窗會在 Dock 中等待；點擊它的應用程式就能把它帶回來。點擊視窗把它帶到前面。從任何邊緣或角落調整它的大小。在標題列上按兩下可以最大化視窗，同時保持頂欄可見，再按兩下則恢復它原本的大小。Chrome 和其他以 Chromium 為基礎的瀏覽器、Disks 和 Document Viewer 會跳過標題列，改用它們自己的標頭；`Super + Alt + F` 最大化它們，`Super + M` 最小化它們。
 
-浮動工作區也會顯示 Dock，其中有你釘選的應用程式、所有正在執行的應用程式，以及在應用程式按鈕後面的每個應用程式的格狀清單，`Super + Alt + Space` 和 Omarchy 選單中的 _Apps_ 也會開啟它。在格狀清單上對應用程式按右鍵，或按下 `Delete`，就能解除安裝它。點擊應用程式來開啟它，或把它的視窗帶到前面；再點擊一次會循環切換它的視窗。Files 只會從你所在的工作區帶回視窗，否則會開啟新視窗，而 Terminal 和 Agent 總是啟動另一個，不過最小化的視窗會先回來。用滑鼠中鍵點擊會開啟新視窗。沿著 Dock 拖曳圖示來移動它；把正在執行的應用程式拖到其他應用程式之中會讓它留在那裡。按右鍵把應用程式留在 Dock 中、把它移除，或結束它。Dock 會避開全螢幕視窗。對應用程式按鈕按右鍵，可以把 Dock 移到另一個邊緣，或讓它隱藏直到指標抵達其邊緣為止。該位置也可以在 _Appearance > Dock > Dock Position_ 下找到，而 `omarchy dock position left` 和 `omarchy dock autohide on` 從終端機設定這兩者。你留在 Dock 中的應用程式在未執行時會變淡。
+浮動工作區也會顯示 Dock，其中有你釘選的應用程式、所有正在執行的應用程式，以及在應用程式按鈕後面的每個應用程式的格狀清單，`Super + Alt + Space` 和 Ve OS 選單中的 _Apps_ 也會開啟它。在格狀清單上對應用程式按右鍵，或按下 `Delete`，就能解除安裝它。點擊應用程式來開啟它，或把它的視窗帶到前面；再點擊一次會循環切換它的視窗。Files 只會從你所在的工作區帶回視窗，否則會開啟新視窗，而 Terminal 和 Agent 總是啟動另一個，不過最小化的視窗會先回來。用滑鼠中鍵點擊會開啟新視窗。沿著 Dock 拖曳圖示來移動它；把正在執行的應用程式拖到其他應用程式之中會讓它留在那裡。按右鍵把應用程式留在 Dock 中、把它移除，或結束它。Dock 會避開全螢幕視窗。對應用程式按鈕按右鍵，可以把 Dock 移到另一個邊緣，或讓它隱藏直到指標抵達其邊緣為止。該位置也可以在 _Appearance > Dock > Dock Position_ 下找到，而 `omarchy dock position left` 和 `omarchy dock autohide on` 從終端機設定這兩者。你留在 Dock 中的應用程式在未執行時會變淡。
 
 新的工作區，以及任何你沒有用 `Super + L` 給予其自身版面配置的工作區，都使用預設版面配置。更改預設值會把每個沒有視窗的工作區重設為它，而有視窗的工作區會保留它擁有的版面配置。最小化到 Dock 的視窗仍算作它所離開的工作區上的一個視窗。在 _Appearance > Workspace Layout_ 下選擇它：Tiling、Scrolling 或 Floating。`omarchy-hyprland-workspace-layout-default scrolling` 從終端機設定它。
 

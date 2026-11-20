@@ -41,7 +41,7 @@ De här bindningarna finns bara medan Omasnap är öppen, så de kan inte krocka
 
 ## Skärminspelning
 
-`Alt + Print Screen` öppnar _Trigger > Capture > Screenrecord_, som frågar vad du vill ha på ljudspåret: inget ljud, skrivbordsljud, skrivbord plus mikrofon, eller skrivbord plus mikrofon plus webbkamera. Det sista alternativet visas bara om du faktiskt har en kamera inkopplad. Välj ett så låter Omarchy:s inspelningsväljare dig dra en region eller klicka på ett fönster eller en skärm.
+`Alt + Print Screen` öppnar _Trigger > Capture > Screenrecord_, som frågar vad du vill ha på ljudspåret: inget ljud, skrivbordsljud, skrivbord plus mikrofon, eller skrivbord plus mikrofon plus webbkamera. Det sista alternativet visas bara om du faktiskt har en kamera inkopplad. Välj ett så låter Ve OS:s inspelningsväljare dig dra en region eller klicka på ett fönster eller en skärm.
 
 Inspelningen körs på gpu-screen-recorder, som kodar på GPU:n i 60fps och faller tillbaka på CPU:n om den måste. Resultatet blir en MP4 i `~/Videos`, med namnet `screenrecording-2026-08-13_14-22-05.mp4`. Ställ in `OMARCHY_SCREENRECORD_DIR` för att ändra det — men notera att den här katalogen, till skillnad från skärmbildskatalogen, måste finnas redan, annars vägrar inspelningen att starta.
 

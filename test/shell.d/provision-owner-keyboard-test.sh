@@ -339,24 +339,22 @@ pass "off a virtual console the layout is persisted and checked without loadkeys
   done
   pass "the traced icon never asks the VT for a bright background"
 
-  # The icon is sized to the console font's real cell, which first boot can set
-  # to sun12x22. Every grid column must still get the same whole number of
-  # screen columns, or the icon loses its right edge or draws some strokes half
-  # as wide. Its second grid row is three strokes one grid column wide.
   for cell in "8 16" "12 22" "9 19" "16 32"; do
     read -r CELL_WIDTH CELL_HEIGHT <<<"$cell"
     for scale in 1 2 3; do
       progress_icon_build "$scale"
-      row=""
-      for ((x = 0; x < ICON_WIDTH; x++)); do
-        row+=${ICON_FILL[scale * ICON_WIDTH + x]}
+      for ((pixel=0; pixel<15 * scale * ICON_WIDTH; pixel++)); do
+        [[ ${ICON_FILL[pixel]} == "${ICON_FILL[pixel - pixel % ICON_COLUMN]}" ]] ||
+          fail "a ${cell/ /x} font at scale $scale scales every mark column equally"
+        if (( ICON_FILL[pixel] )); then
+          [[ -n ${ICON_TRACE[pixel]:-} ]] || fail "every filled pixel is included in the progress trace"
+        else
+          [[ -z ${ICON_TRACE[pixel]:-} ]] || fail "the progress trace never draws outside the mark"
+        fi
       done
-      read -ra strokes <<<"${row//0/ }"
-      (( ${#strokes[@]} == 3 )) && [[ ${strokes[0]} == "${strokes[1]}" && ${strokes[1]} == "${strokes[2]}" ]] ||
-        fail "a ${cell/ /x} font at scale $scale draws all three strokes of the icon's second row, equally wide" "$row"
     done
   done
-  pass "every console font draws the whole icon with equally wide strokes"
+  pass "every console font scales and traces the complete mark"
 
   # Setup draws ten frames a second while it works the disk, so a frame must not
   # start processes: only every fifth reads the console size, and none runs sed.
@@ -465,7 +463,7 @@ pass "language configuration generates before it persists, forgets an earlier at
   omarchy_form_use_language de
   keyboard_form >"$lang/output"
   [[ $(<"$lang/order") == $'keyboard\nlanguage\nkeyboard\napply jp106' ]] || fail "Esc visits the language picker before asking for the keyboard again" "$(cat "$lang/order")"
-  [[ $(<"$lang/screen") == '--foreground 8 Setup stays in English. Omarchy will be in Japanese once set up.' ]] || fail "only the undrawn language gets the English notice" "$(cat "$lang/screen")"
+  [[ $(<"$lang/screen") == '--foreground 8 Setup stays in English. Ve OS will be in Japanese once set up.' ]] || fail "only the undrawn language gets the English notice" "$(cat "$lang/screen")"
   : >"$lang/screen"
   omarchy_form_use_language de
   keyboard_form >"$lang/output"

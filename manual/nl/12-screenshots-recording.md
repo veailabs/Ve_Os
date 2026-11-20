@@ -41,7 +41,7 @@ Deze bindingen bestaan alleen terwijl Omasnap open is, dus ze kunnen nergens mee
 
 ## Schermopname
 
-`Alt + Print Screen` opent _Trigger > Capture > Screenrecord_, waarin wordt gevraagd wat je op de soundtrack wilt: geen audio, desktopaudio, desktop plus microfoon, of desktop plus microfoon plus webcam. Die laatste verschijnt alleen als je daadwerkelijk een camera hebt aangesloten. Kies er een en met de opnamekiezer van Omarchy kun je een gebied slepen of op een venster of monitor klikken.
+`Alt + Print Screen` opent _Trigger > Capture > Screenrecord_, waarin wordt gevraagd wat je op de soundtrack wilt: geen audio, desktopaudio, desktop plus microfoon, of desktop plus microfoon plus webcam. Die laatste verschijnt alleen als je daadwerkelijk een camera hebt aangesloten. Kies er een en met de opnamekiezer van Ve OS kun je een gebied slepen of op een venster of monitor klikken.
 
 De opname draait op gpu-screen-recorder, die op de GPU encodeert op 60fps en indien nodig terugvalt op de CPU. Het resultaat is een MP4 in `~/Videos`, met de naam `screenrecording-2026-08-13_14-22-05.mp4`. Stel `OMARCHY_SCREENRECORD_DIR` in om dat te wijzigen — maar let op: anders dan de map voor schermafbeeldingen moet deze al bestaan, anders weigert de opname te starten.
 

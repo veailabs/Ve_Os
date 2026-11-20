@@ -1,14 +1,14 @@
 # Bar Atas
 
-Jalur di sepanjang bahagian atas skrin anda ialah bar Omarchy. Ia bukan bar status yang dipasang kemudian tetapi sebahagian daripada shell Omarchy, proses Quickshell tunggal yang berjalan lama yang turut melukis menu, pemberitahuan, popup OSD, dan skrin kunci. Sebab itulah ia bertema dengan sempurna bersama semua yang lain dan sebab itulah panel terbuka serta-merta dan bukannya melancarkan app baharu.
+Jalur di sepanjang bahagian atas skrin anda ialah bar Ve OS. Ia bukan bar status yang dipasang kemudian tetapi sebahagian daripada shell Ve OS, proses Quickshell tunggal yang berjalan lama yang turut melukis menu, pemberitahuan, popup OSD, dan skrin kunci. Sebab itulah ia bertema dengan sempurna bersama semua yang lain dan sebab itulah panel terbuka serta-merta dan bukannya melancarkan app baharu.
 
 Ia juga satu-satunya bahagian desktop yang sentiasa berada pada skrin, jadi berbaloi untuk mengetahui apa yang dilakukan oleh semua glif kecil itu.
 
 ## Apa yang ada padanya secara lalai
 
-Bar ini mempunyai tiga bahagian. Di sebelah kiri terletak logo Omarchy (pelancar menu) dan penunjuk ruang kerja. Di tengah anda mendapat penunjuk status, jam, Elsewhen (jam dunia), cuaca, dan lencana kemas kini Omarchy. Di sebelah kanan: dulang sistem, susun atur papan kekunci (apabila lebih daripada satu dikonfigurasi), ejen, Bluetooth, rangkaian, audio, paparan, dan kuasa.
+Bar ini mempunyai tiga bahagian. Di sebelah kiri terletak logo Ve OS (pelancar menu) dan penunjuk ruang kerja. Di tengah anda mendapat penunjuk status, jam, Elsewhen (jam dunia), cuaca, dan lencana kemas kini Ve OS. Di sebelah kanan: dulang sistem, susun atur papan kekunci (apabila lebih daripada satu dikonfigurasi), ejen, Bluetooth, rangkaian, audio, paparan, dan kuasa.
 
-Beberapa daripadanya hanya muncul apabila mereka mempunyai sesuatu untuk disampaikan. Susun atur papan kekunci hanya muncul jika anda telah mengkonfigurasi lebih daripada satu susun atur. Lencana kemas kini hanya muncul apabila terdapat kemas kini Omarchy yang menunggu. Dan ikon ejen muncul pada kali pertama Omarchy menemui penggunaan pengekodan AI pada mesin itu (lihat [AI](17-ai.md)).
+Beberapa daripadanya hanya muncul apabila mereka mempunyai sesuatu untuk disampaikan. Susun atur papan kekunci hanya muncul jika anda telah mengkonfigurasi lebih daripada satu susun atur. Lencana kemas kini hanya muncul apabila terdapat kemas kini Ve OS yang menunggu. Dan ikon ejen muncul pada kali pertama Ve OS menemui penggunaan pengekodan AI pada mesin itu (lihat [AI](17-ai.md)).
 
 ## Mengklik
 
@@ -16,7 +16,7 @@ Hampir setiap widget melakukan sesuatu pada klik kiri, kanan, dan tengah, dan be
 
 | Widget | Kiri | Kanan | Tengah / tatal |
 | --- | --- | --- | --- |
-| Menu | Menu Omarchy | Terminal baharu | — |
+| Menu | Menu Ve OS | Terminal baharu | — |
 | Ruang kerja | Fokuskan ruang kerja itu pada monitor ini | — | Tatal: ruang kerja seterusnya/sebelumnya |
 | Jam | Popup kalendar | Kitarkan format label | Tengah: pemilih zon waktu |
 | Cuaca | Popup ramalan | Cuaca penuh sebagai pemberitahuan | Tengah: muat semula |
@@ -29,7 +29,7 @@ Hampir setiap widget melakukan sesuatu pada klik kiri, kanan, dan tengah, dan be
 | Media | Main/jeda | Popup kulit album | Tengah: seterusnya · tatal: sebelumnya/seterusnya |
 | Ejen | Panel ejen | Lancarkan ejen anda | Tengah: langganan seterusnya |
 | Dulang | Hover untuk mendedahkan laci | Klik kanan pada chevron untuk mengurus | — |
-| Kemas kini Omarchy | Jalankan kemas kini | — | — |
+| Kemas kini Ve OS | Jalankan kemas kini | — | — |
 
 Tidak semua dalam jadual itu berada pada bar anda dari awal. Widget media (MPRIS sedang dimainkan, dengan trek dan artis yang menatal) dan widget mikrofon kedua-duanya terbina dalam tetapi dimatikan secara lalai — tambahkannya jika anda mahukannya, seperti yang diterangkan di bawah.
 
@@ -137,6 +137,6 @@ Setiap widget ialah satu entri dalam salah satu daripada lima tatasusunan susun 
 
 `center` ialah kotak di tengah bar: semua yang berada di dalamnya dipusatkan pada skrin sebagai satu kumpulan. `centerBegin` dan `centerEnd` tergantung pada kedua-dua sisi kotak, yang merupakan cara jam kekal betul-betul di tengah walaupun cuaca dan lencana kemas kini datang dan pergi. Letakkan lebih daripada satu widget dalam `center` dan mereka dipusatkan bersama; biarkannya kosong dan `centerBegin` dan `centerEnd` bertemu di tengah bar.
 
-Satu peraturan yang berbaloi untuk dihayati: **sebaik sahaja anda mempunyai `shell.json` anda sendiri, ia adalah kanonik**. Sehingga anda menyesuaikan apa-apa, shell membaca fail lalai Omarchy. Sebaik sahaja anda menyeret widget, menjalankan `omarchy bar`, atau mengedit fail itu sendiri, anda memilikinya — tiada gabungan mendalam, jadi widget lalai baharu dalam keluaran Omarchy akan datang tidak akan muncul pada bar anda secara automatik. `omarchy bar defaults` meletakkan semula susun atur yang dihantar apabila anda mahukan permulaan yang bersih.
+Satu peraturan yang berbaloi untuk dihayati: **sebaik sahaja anda mempunyai `shell.json` anda sendiri, ia adalah kanonik**. Sehingga anda menyesuaikan apa-apa, shell membaca fail lalai Ve OS. Sebaik sahaja anda menyeret widget, menjalankan `omarchy bar`, atau mengedit fail itu sendiri, anda memilikinya — tiada gabungan mendalam, jadi widget lalai baharu dalam keluaran Ve OS akan datang tidak akan muncul pada bar anda secara automatik. `omarchy bar defaults` meletakkan semula susun atur yang dihantar apabila anda mahukan permulaan yang bersih.
 
 Fail yang sama itu juga menyimpan masa melahu anda pada peringkat atas, di luar kekunci `bar`: `idle.screensaver` dan `idle.lock`, kedua-duanya dalam saat sejak anda menjadi melahu. Jadi penyelamat skrin lalai bermula pada 150 saat dan kunci pada 300.

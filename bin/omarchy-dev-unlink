@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Restore Omarchy to the package install after reboot
+# omarchy:summary=Restore Ve OS to the package install after reboot
 # omarchy:group=dev
 # omarchy:args=[--no-reboot]
 
@@ -36,7 +36,7 @@ systemd, shell, or app-launcher environment; reboot to make every layer agree.
 
 Removes $sudoers_file, the drop-in that pointed sudo
 at the checkout, so sudo goes back to the packaged omarchy-* immediately,
-and links every agent harness's Omarchy skills back to the package's.
+and links every agent harness's omarchy skills back to the package's.
 
 Use --no-reboot when another command will handle the reboot prompt.
 USAGE
@@ -62,7 +62,7 @@ sudo rm -f "$sudoers_file"
 # tree older still.
 "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/omarchy-agent-skills-link" "$default_target"
 
-echo "Pointed Omarchy at $default_target"
+echo "Pointed Ve OS at $default_target"
 echo "Agent skills now link to $default_target/default/agents/skills"
 echo
 

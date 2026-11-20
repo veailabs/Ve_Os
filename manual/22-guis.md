@@ -20,11 +20,11 @@ Obsidian is free for all purposes, including personal, commercial, and non-profi
 
 Obsidian also offers a [commercial add-on for syncing](https://obsidian.md/sync) with mobile apps on iOS and Android. (https://obsidian.md/pricing).
 
-You start Obsidian with `Super + Shift + O`. To use theme syncing, you must select the `Omarchy` theme under settings.
+You start Obsidian with `Super + Shift + O`. To use theme syncing, you must select the `Ve OS` theme under settings.
 
 ## Omawrite
 
-[Omawrite](https://github.com/omacom-io/omawrite) is Omarchy's own dead-simple Markdown writing app. No vaults, no plugins, just you and the words.
+[Omawrite](https://github.com/omacom-io/omawrite) is an upstream Omarchy Markdown writing app. No vaults, no plugins, just you and the words.
 
 You start Omawrite with `Super + Shift + W`.
 
@@ -44,7 +44,7 @@ You start Aether via the application launcher (`Super + Space`).
 
 [LocalSend](https://localsend.org/) lets you send files to other devices on the same network running the app, like Apple's AirDrop. It's cross-platform, though, so you can send files to and from Windows, macOS, Android, iOS, and of course Linux.
 
-You can open the Share menu on `Super + Ctrl + S` or under _Trigger > Share_ in the Omarchy menu. It gives you four options:
+You can open the Share menu on `Super + Ctrl + S` or under _Trigger > Share_ in the Ve OS menu. It gives you four options:
 
 - **Clipboard** sends whatever you've copied as a text file. Great for getting a link or a snippet onto your phone without emailing yourself.
 - **File** opens a file picker where you can select several at once.
@@ -55,7 +55,7 @@ The same thing works from the terminal with `omarchy share clipboard`, `omarchy 
 
 You can also send straight from the file manager: right-click any selection in Nautilus and pick _Send via LocalSend_.
 
-Omarchy's firewall is closed by default except for LocalSend's port, so this works out of the box on a fresh install. See [security](48-security.md).
+Ve OS's firewall is closed by default except for LocalSend's port, so this works out of the box on a fresh install. See [security](48-security.md).
 
 ## LibreOffice
 
@@ -65,25 +65,25 @@ You start LibreOffice via the application launcher (`Super + Space`).
 
 ## Hype
 
-[Hype](https://github.com/omacom/hype) is Omarchy's own dead-simple presentation app. Your deck is a single Markdown file with its images and videos beside it: write each slide below a live preview, drag slides into order, then present fullscreen or export to PDF and PowerPoint. It even picks up your Omarchy theme.
+[Hype](https://github.com/omacom/hype) is an upstream Omarchy presentation app. Your deck is a single Markdown file with its images and videos beside it: write each slide below a live preview, drag slides into order, then present fullscreen or export to PDF and PowerPoint. It even picks up your Ve OS theme.
 
 You start Hype via the application launcher (`Super + Space`). Press `?` inside it to see every shortcut.
 
 ## Signed
 
-[Signed](https://github.com/omacom/signed) is Omarchy's own dead-simple way to sign PDFs and fill them in. Put your saved signature, text, and today's date anywhere on a page, then save a signed copy beside the original. See [Filling out PDFs](27-filling-out-pdfs.md) for how.
+[Signed](https://github.com/omacom/signed) is an upstream Omarchy way to sign PDFs and fill them in. Put your saved signature, text, and today's date anywhere on a page, then save a signed copy beside the original. See [Filling out PDFs](27-filling-out-pdfs.md) for how.
 
 You start Signed via the application launcher (`Super + Space`), or open a PDF with it from the file manager.
 
 ## Game Vibes
 
-Game Vibes, in the application launcher (`Super + Space`), is where Omarchy's little games live: Checkmate, a 3D chess game against a friend or the built-in opponent; Cards, Klondike solitaire; and Neon Swarm, an arcade shooter. Each is a single web page that follows your theme. Pick one with the arrows and `Enter`, and come back to the list with `Esc` from a game's title screen or `Q` while it's paused.
+Game Vibes, in the application launcher (`Super + Space`), is where Ve OS's little games live: Checkmate, a 3D chess game against a friend or the built-in opponent; Cards, Klondike solitaire; and Neon Swarm, an arcade shooter. Each is a single web page that follows your theme. Pick one with the arrows and `Enter`, and come back to the list with `Esc` from a game's title screen or `Q` while it's paused.
 
 The games you make with an agent show up here too: choose _Make something cool → Game_ in the agents panel and describe one, or name a game already in Game Vibes to keep working on it. The agent copies it into `~/Games/vibes`, where it's yours to change, and opens it when it's done. You can make that copy yourself with `omarchy games vibes copy <game>`. Games load three.js from the web, so they need a connection to start.
 
 ## Omacalc
 
-[Omacalc](https://github.com/omacom-io/omacalc) is Omarchy's own dead-simple calculator, which opens in a floating window.
+[Omacalc](https://github.com/omacom-io/omacalc) is an upstream Omarchy calculator, which opens in a floating window.
 
 You start Omacalc with `Super + Shift + Q` (or the calculator key, if your keyboard has one).
 
@@ -91,11 +91,11 @@ You start Omacalc with `Super + Shift + Q` (or the calculator key, if your keybo
 
 [Signal](https://signal.org/) is the pioneer of E2E encrypted messaging, and a great communication option for anyone who'd prefer not to go through one of the big tech conglomerates.
 
-You start Signal with `Super + Shift + G`. It's not part of the base install, so the first time you hit that, Omarchy will offer to install it for you (it's also under _Install > Service_ in the Omarchy menu).
+You start Signal with `Super + Shift + G`. It's not part of the base install, so the first time you hit that, Ve OS will offer to install it for you (it's also under _Install > Service_ in the Ve OS menu).
 
 ## Omaview
 
-[Omaview](https://github.com/omacom/omaview) is Omarchy's own dead-simple picture viewer and media player: one window for your photos, videos, and music. Open a photo and the arrow keys step through the rest of its folder, `N` and `P` do it for anything, and `Ctrl + M` shows the whole folder as a grid. It shows HEIC, AVIF, and JPEG XL photos too, and picks up where you left off in anything long.
+[Omaview](https://github.com/omacom/omaview) is an upstream Omarchy picture viewer and media player: one window for your photos, videos, and music. Open a photo and the arrow keys step through the rest of its folder, `N` and `P` do it for anything, and `Ctrl + M` shows the whole folder as a grid. It shows HEIC, AVIF, and JPEG XL photos too, and picks up where you left off in anything long.
 
 Press `F` for fullscreen, `E` to edit a picture in Omasnap or trim a video in Omacut, `Ctrl + P` to print a picture, and `Delete` to move a file to the Trash (`Ctrl + Z` brings it back). Press `?` inside it to see every shortcut.
 
@@ -103,13 +103,13 @@ You start Omaview as _Media Viewer_ via the application launcher (`Super + Space
 
 ## Omacut
 
-[Omacut](https://github.com/omacom-io/omacut) is Omarchy's own dead-simple video trimmer. When all you need is to cut the start and end off a clip, it beats firing up a full video editor.
+[Omacut](https://github.com/omacom-io/omacut) is an upstream Omarchy video trimmer. When all you need is to cut the start and end off a clip, it beats firing up a full video editor.
 
 You start Omacut via the application launcher (`Super + Space`).
 
 ## Monologue
 
-[Monologue](https://github.com/omacom/monologue) is Omarchy's own dead-simple webcam recorder. Choose your camera and microphone once, then press `Space` to record, and again to pause and resume the same take. It always records at your camera's highest resolution, with a live microphone meter so you can check your levels before you start.
+[Monologue](https://github.com/omacom/monologue) is an upstream Omarchy webcam recorder. Choose your camera and microphone once, then press `Space` to record, and again to pause and resume the same take. It always records at your camera's highest resolution, with a live microphone meter so you can check your levels before you start.
 
 Stop the take and it opens right away in a built-in editor. Double-click a clip to split it, drag the handles to trim each piece, and remove the parts you don't want. Then save it as an MP4. Your original recording is kept until you discard it, so you can always come back and cut it differently.
 

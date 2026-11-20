@@ -10,7 +10,7 @@ Os cartões oferecem o que trazem: _Copiar código_ para códigos de verificaç�
 
 Para as usar sem o rato, prima `Super + Ctrl + ,`. A notificação mais recente fica selecionada e os seus botões numerados: prima um número para usar um deles, `Enter` para clicar na notificação, `↑` e `↓` para se mover entre notificações, `Delete` para dispensar uma e `Esc` para devolver o teclado. Também se desativa sozinho ao fim de alguns segundos sem atividade.
 
-Silenciar as notificações retém-nas, exceto as confirmações do próprio Omarchy, os alertas de emergência e os códigos de verificação, que pediu há instantes. Volte a colocar as últimas no ecrã, retidas ou não, com `Super + Shift + Alt + ,`. O histórico é mantido durante um dia.
+Silenciar as notificações retém-nas, exceto as confirmações do próprio Ve OS, os alertas de emergência e os códigos de verificação, que pediu há instantes. Volte a colocar as últimas no ecrã, retidas ou não, com `Super + Shift + Alt + ,`. O histórico é mantido durante um dia.
 
 ## Avisos por tecla de atalho
 

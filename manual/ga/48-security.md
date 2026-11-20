@@ -1,6 +1,6 @@
 # Slándáil
 
-Glacann Omarchy le slándáil go fíordháiríre. Tá sé seo i gceist a bheith ina chóras oibriúcháin is féidir leat a úsáid chun _Fíorobair_ a dhéanamh sa _Domhan Fíor_. Áit nach féidir le ríomhaire glúine caillte éigeandáil slándála a chruthú. Seo mar sin a dhéanaimid é:
+Glacann Ve OS le slándáil go fíordháiríre. Tá sé seo i gceist a bheith ina chóras oibriúcháin is féidir leat a úsáid chun _Fíorobair_ a dhéanamh sa _Domhan Fíor_. Áit nach féidir le ríomhaire glúine caillte éigeandáil slándála a chruthú. Seo mar sin a dhéanaimid é:
 
 1. *Tá criptiú lán-diosca ar siúl de réir réamhshocraithe*: Seo an chéim is tábhachtaí chun cosaint fhisiciúil do shonraí a dhaingniú. Má chailltear nó má ghoidtear do ríomhaire, tá na sonraí criptithe go hiomlán ag baint úsáide as LUKS caighdeánach (Linux Unified Key Setup). Ligeann an suiteálaí duit diúltú dó le haghaidh meaisíní caithimh (féach [Ag tosú](02-getting-started.md)); níl aon chuid den chosaint seo ag suiteáil gan criptiú, agus is féidir le haon duine a bhfuil an tiomántán ina sheilbh aige é a léamh.
 2. *Tá an balla dóiteáin cumasaithe de réir réamhshocraithe*: Tá an trácht isteach go léir blocáilte de réir réamhshocraithe, le cúpla eisceacht: port 53317 le haghaidh [LocalSend](https://localsend.org/); fiosrúcháin DNS chuig réiteoir an ríomhaire féin ag seoladh droichid Docker (172.17.0.1), a nglactar leo ó na raonta seoltaí príobháideacha a thugann Docker dá choimeádáin; agus DNS ilchraolta (port 5353), a ligeann do phrintéirí agus do ghléasanna eile ar do líonra a chéile a aimsiú agus a fhógraíonn ainm do ríomhaire ansin freisin. Anuas orthu sin, coinníonn an balla dóiteáin ceadanna caighdeánacha UFW le haghaidh ping, seoladh a fháil ó do ródaire (DHCP), agus fionnachtain UPnP. Tá fiú ssh múchta go dtí go gcuireann tú ar siúl é trí _Setup > Security > SSHD_, a osclaíonn port 22 (teoranta ó thaobh ráta in aghaidh brute force) mar chuid den socrú. Dúnaimid rochtain Docker síos fiú ag baint úsáide as socrú [ufw-docker](https://github.com/chaifeng/ufw-docker) chun cosc a chur ar do choimeádáin a bheith nochta don domhan de thaisme.
@@ -10,11 +10,11 @@ Glacann Omarchy le slándáil go fíordháiríre. Tá sé seo i gceist a bheith 
 
 ## Do phasfhocail a athrú
 
-Tá dhá phasfhocal agat ar shuiteáil criptithe: an ceann a dhíghlasálann an tiomántán ag am tosaithe, agus an ceann a logálann tú isteach leis agus a úsáideann tú le `sudo`. Déanann an Socrú an dá cheann mar an gcéanna. Is féidir an dá cheann a athrú faoi _Update > Password_ i roghchlár Omarchy — _Drive Encryption_ don chéad cheann, _User_ don dara ceann. Iarrann athrú phasfhocal an tiomántáin an ceann reatha ort ar dtús, mar sin bíodh sé ar láimh agat. Má chuirtear isteach ar athrú, rith _Drive Encryption_ arís: iarrann sé an pasfhocal a dhíghlasálann an tiomántán anois agus críochnaíonn sé an t-athrú.
+Tá dhá phasfhocal agat ar shuiteáil criptithe: an ceann a dhíghlasálann an tiomántán ag am tosaithe, agus an ceann a logálann tú isteach leis agus a úsáideann tú le `sudo`. Déanann an Socrú an dá cheann mar an gcéanna. Is féidir an dá cheann a athrú faoi _Update > Password_ i roghchlár Ve OS — _Drive Encryption_ don chéad cheann, _User_ don dara ceann. Iarrann athrú phasfhocal an tiomántáin an ceann reatha ort ar dtús, mar sin bíodh sé ar láimh agat. Má chuirtear isteach ar athrú, rith _Drive Encryption_ arís: iarrann sé an pasfhocal a dhíghlasálann an tiomántán anois agus críochnaíonn sé an t-athrú.
 
 ## Meaisín a d'úsáid tú cheana a thabhairt ar aghaidh
 
-Má tá tú ag tabhairt do mheaisín do dhuine eile, ní gá duit é a athshuiteáil. Rith _Setup > Reset Computer_ i roghchlár Omarchy, clóscríobh `reset` le deimhniú, agus atosaigh. Scriosann sé sin gach cuntas úsáideora agus gach rud in `/home`, caitheann sé amach na pacáistí agus na hathruithe córais go léir a rinne tú ó shuiteáil, agus glanann sé céannacht an mheaisín — naisc líonra, eochracha óstach, agus gach rud. Is é an draoi socraithe ón gcéad tosú a thagann ar ais, réidh dá úinéir nua a n-ainm, a bpasfhocal, agus a bpasfhocal criptithe féin a chur isteach.
+Má tá tú ag tabhairt do mheaisín do dhuine eile, ní gá duit é a athshuiteáil. Rith _Setup > Reset Computer_ i roghchlár Ve OS, clóscríobh `reset` le deimhniú, agus atosaigh. Scriosann sé sin gach cuntas úsáideora agus gach rud in `/home`, caitheann sé amach na pacáistí agus na hathruithe córais go léir a rinne tú ó shuiteáil, agus glanann sé céannacht an mheaisín — naisc líonra, eochracha óstach, agus gach rud. Is é an draoi socraithe ón gcéad tosú a thagann ar ais, réidh dá úinéir nua a n-ainm, a bpasfhocal, agus a bpasfhocal criptithe féin a chur isteach.
 
 Oibríonn sé trí shnapghraf bunlíne a thógann an suiteálaí a athchóiriú, mar sin níl sé ar fáil ach ar mheaisíní a suiteáladh ó ISO Omarchy. Agus ar thiomántán gan criptiú, is scriosadh seachas scriosadh slán atá i gceist le hathshocrú, mar sin má bhí na sonraí íogair, déan suiteáil úr ina ionad.
 
@@ -24,7 +24,7 @@ Uaireanta ba mhaith leat go stopfadh `sudo` ag fiafraí, is minice nuair a bhío
 
 Téann rochtain uainithe in éag go huathoibríoch, lena n-áirítear díreach tar éis atosú ó fhionraí a chuaigh thar an spriocdháta. Críochnaíonn atosú an ríomhaire go luath í. Maireann rochtain bhuán trí aththosuithe agus fanann sí cumasaithe go dtí go ndíchumasaíonn tú í.
 
-Críochnaíonn nuashonrú nó baint phacáiste socruithe Omarchy aon deontas sealadach sula n-athraíonn a thacaíocht éaga. Má thuairiscíonn an t-ordú earráid údaraithe nó glantacháin, réitigh í sula ndéanann tú iarracht deontas eile a chumasú; ní chiallaíonn earráid nach bhfuil rochtain gan phasfhocal neamhghníomhach.
+Críochnaíonn nuashonrú nó baint phacáiste socruithe Ve OS aon deontas sealadach sula n-athraíonn a thacaíocht éaga. Má thuairiscíonn an t-ordú earráid údaraithe nó glantacháin, réitigh í sula ndéanann tú iarracht deontas eile a chumasú; ní chiallaíonn earráid nach bhfuil rochtain gan phasfhocal neamhghníomhach.
 
 Bí soiléir faoi seo: fad atá sé ar siúl, is féidir le haon rud atá ag rith mar d'úsáideoir aon rud a dhéanamh mar root gan a bheith fiafraíthe de. Sin é an pointe ar fad, agus sin é an riosca ar fad freisin.
 

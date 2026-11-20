@@ -1,6 +1,6 @@
 # Tastatūra, pele, skārienpaliktnis
 
-Hyprland ļauj ļoti detalizēti konfigurēt visas ievadierīces. Vari padarīt tastatūras atkārtošanos virsskaņas ātru vai likt skārienpaliktnim izmantot dabisko ritināšanu. To visu maini failā `~/.config/hypr/input.lua`, kuram vari piekļūt arī caur _Setup > Input_ Omarchy izvēlnē (`Super + Space`). Viss, ko tur iestatīsi, aizstāj Omarchy noklusējumus.
+Hyprland ļauj ļoti detalizēti konfigurēt visas ievadierīces. Vari padarīt tastatūras atkārtošanos virsskaņas ātru vai likt skārienpaliktnim izmantot dabisko ritināšanu. To visu maini failā `~/.config/hypr/input.lua`, kuram vari piekļūt arī caur _Setup > Input_ Ve OS izvēlnē (`Super + Space`). Viss, ko tur iestatīsi, aizstāj Ve OS noklusējumus.
 
 Lūk, piemērs:
 
@@ -59,7 +59,7 @@ Velc pa skārienpaliktni, lai pārvietotos pa darbvirsmu:
 | --- | --- |
 | Trīs pirksti pa kreisi / pa labi | Iepriekšējā / nākamā darbvieta, ieskaitot tukšās |
 | Trīs pirksti uz augšu | Pārslēgt AI konsoli |
-| Trīs pirksti uz leju | Atvērt Omarchy izvēlni |
+| Trīs pirksti uz leju | Atvērt Ve OS izvēlni |
 | Četri pirksti pa kreisi / pa labi | Pārvietot aktīvo logu uz iepriekšējo / nākamo darbvietu |
 | Četri pirksti uz leju | Pārslēgt pilnekrāna režīmu |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Lai izslēgtu visus Omarchy žestus, iestati `omarchy_default_gestures = false` faila `~/.config/hypr/hyprland.lua` augšdaļā, pirms ielādējas Omarchy noklusējumi.
+Lai izslēgtu visus Ve OS žestus, iestati `omarchy_default_gestures = false` faila `~/.config/hypr/hyprland.lua` augšdaļā, pirms ielādējas Ve OS noklusējumi.
 
 Dell XPS klēpjdatoros ar haptisko skārienpaliktni klikšķa stiprumu vari iestatīt kā zemu, vidēju vai augstu sadaļā _Trigger > Hardware > Touchpad Haptics_.
 
 ### Rakstīšana ķīniešu, japāņu un citās valodās
 
-Kad instalētājs prasa tastatūru, izvēlies japāņu, korejiešu, ķīniešu (vienkāršotā, Pinyin), Taivānas (Zhuyin) vai Honkongas (Cangjie). Omarchy automātiski konfigurē tastatūru un atbilstošo ievades dzinēju, arī bezsaistes pirmās sāknēšanās iestatīšanas laikā. Japāņu valodai izmanto Mozc, korejiešu valodai — standarta divu komplektu Hangul, vienkāršotajai ķīniešu valodai — Pinyin, Taivānai — Chewing standarta Zhuyin izkārtojumu, bet Honkongai — Cangjie ar Honkongas rakstzīmju formām. Japanese (US keyboard) nodrošina Mozc ar US tastatūras izkārtojumu. Hangul, Zhuyin un Cangjie taustiņi paliek savās standarta pozīcijās pat tad, ja latīņu burtus raksti ar Dvorak, Colemak vai AZERTY. Ja Hangul vai Chewing pievienoji pirms tam, noņem tā atlasi un atlasi to vēlreiz sadaļā _Setup > Keyboard > Input Methods_, lai tā taustiņi pārvietotos turp; Omarchy dzinēju, ar kuru jau raksti, atstāj mierā.
+Kad instalētājs prasa tastatūru, izvēlies japāņu, korejiešu, ķīniešu (vienkāršotā, Pinyin), Taivānas (Zhuyin) vai Honkongas (Cangjie). Ve OS automātiski konfigurē tastatūru un atbilstošo ievades dzinēju, arī bezsaistes pirmās sāknēšanās iestatīšanas laikā. Japāņu valodai izmanto Mozc, korejiešu valodai — standarta divu komplektu Hangul, vienkāršotajai ķīniešu valodai — Pinyin, Taivānai — Chewing standarta Zhuyin izkārtojumu, bet Honkongai — Cangjie ar Honkongas rakstzīmju formām. Japanese (US keyboard) nodrošina Mozc ar US tastatūras izkārtojumu. Hangul, Zhuyin un Cangjie taustiņi paliek savās standarta pozīcijās pat tad, ja latīņu burtus raksti ar Dvorak, Colemak vai AZERTY. Ja Hangul vai Chewing pievienoji pirms tam, noņem tā atlasi un atlasi to vēlreiz sadaļā _Setup > Keyboard > Input Methods_, lai tā taustiņi pārvietotos turp; Ve OS dzinēju, ar kuru jau raksti, atstāj mierā.
 
 Rakstīšana sākas latīņu režīmā. Nospied `Super + I`, lai cikliski pārslēgtos starp konfigurētajām ievades metodēm, un `Super + Shift + I`, lai pārslēgtos atpakaļ. Pieskaries `Shift` atsevišķi, lai izietu no tādas ievades metodes kā Pinyin uz latīņu burtiem, un pieskaries tam vēlreiz, lai atgrieztos atpakaļ, tāpat kā darbojas Sogou, Microsoft Pinyin un macOS; `Shift` plus burts joprojām raksta lielo burtu. Japāņu tastatūrās 全角/半角 pārslēdz ievadi, 変換 to ieslēdz un 無変換 to izslēdz. Korejiešu valodā 한/영 pārslēdz Hangul un 한자 pārveido par Hanja neatkarīgi no tā, vai tastatūrai ir īpaši taustiņi vai tā tiem sūta Right Alt un Right Ctrl, kā to dara daudzi klēpjdatori, tāpēc Right Alt un Right Ctrl tur nav parasti modificētāji; diktēšanu tā vietā pārslēdz ar Alt + Space. `Ctrl + Space` paliek pieejams Tmux un Herdr; `Shift + CapsLock` paliek salikšanas taustiņš.
 
 Tastatūras indikators parādās joslas labajā pusē, kad tev ir vairāki tastatūras izkārtojumi vai ievades metodes. Noklikšķini uz tā, lai pārslēgtu ievades valodas; japāņu valodai hiraganai rāda あ. Japāņu rakstzīmju izvēlei pārslēdzies uz japāņu valodu, ieraksti vārdu, piemēram, `nihongo`, un pēc tam divreiz nospied Space. Nospied Enter, lai apstiprinātu izvēli. Ja tev ir arī vairāki tastatūras izkārtojumi, ar labo pogu noklikšķini uz indikatora, lai cikliski pārslēgtos starp tiem.
 
-Izmanto _Setup > Keyboard > Keyboard Inputs_, lai izvēlētos izkārtojumus, piemēram, English un French, no tām pašām izvēlēm, kas tiek piedāvātas instalēšanas laikā. Izmanto _Setup > Keyboard > Input Methods_, lai izvēlētos, kuri salikšanas dzinēji ir aktīvi. Abi atlasītāji atveras Omarchy izvēlnē ar atzīmētām tavām pašreizējām izvēlēm. Noklikšķini vai nospied Enter, lai pārslēgtu izvēli; katra izmaiņa stājas spēkā nekavējoties. Ievades metodes atlases noņemšana to izņem no cikla, to neatinstalējot; tastatūra paliek pieejama.
+Izmanto _Setup > Keyboard > Keyboard Inputs_, lai izvēlētos izkārtojumus, piemēram, English un French, no tām pašām izvēlēm, kas tiek piedāvātas instalēšanas laikā. Izmanto _Setup > Keyboard > Input Methods_, lai izvēlētos, kuri salikšanas dzinēji ir aktīvi. Abi atlasītāji atveras Ve OS izvēlnē ar atzīmētām tavām pašreizējām izvēlēm. Noklikšķini vai nospied Enter, lai pārslēgtu izvēli; katra izmaiņa stājas spēkā nekavējoties. Ievades metodes atlases noņemšana to izņem no cikla, to neatinstalējot; tastatūra paliek pieejama.
 
 Palaid `omarchy setup keyboard` vai `omarchy setup input`, lai atvērtu tos pašus atlasītājus. Lai no komandrindas pievienotu vienu valodu, izmanto `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` vai `cangjie5`. Quick, Boshiamy un Array nāk tajā pašā pakotnē ar Cangjie un parādās Input Methods atlasītājā. Tavi pielāgotie pārslēgšanas taustiņi tiek saglabāti. Alternatīviem dzinēja izkārtojumiem vai taustiņiem instalē `fcitx5-configtool` ar `omarchy pkg add fcitx5-configtool` un palaid to no termināļa. Ievades valodas izvēle nemaina darbvirsmas valodu. Japāņu, korejiešu vai ķīniešu valodas izvēle sadaļā _Setup > Language_ pievieno tās ievades metodi, ja tev vēl nav nevienas.
 

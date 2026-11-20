@@ -1,12 +1,12 @@
 # Shriftlar
 
-Omarchy sukut bo‘yicha ham terminal, ham tizim shrifti sifatida JetBrainsMono Nerd Font dan foydalanadi.
+Ve OS sukut bo‘yicha ham terminal, ham tizim shrifti sifatida JetBrainsMono Nerd Font dan foydalanadi.
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-Buni Omarchy menyusidagi (`Super + Space`) _Ko‘rinish > Shrift_ menyusi orqali o‘zgartirishingiz mumkin. Bu monospace shriftni hamma joyda o‘rnatadi: terminalda, barda va uni so‘raydigan boshqa hamma narsada.
+Buni Ve OS menyusidagi (`Super + Space`) _Ko‘rinish > Shrift_ menyusi orqali o‘zgartirishingiz mumkin. Bu monospace shriftni hamma joyda o‘rnatadi: terminalda, barda va uni so‘raydigan boshqa hamma narsada.
 
-Omarchy menyusidagi _O‘rnatish > Uslub > Shrift_ orqali boshqa mashhur dasturlash shriftlarini o‘rnatishingiz mumkin: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono va Iosevka — barchasi bir bosishda tayyor, ularning Nerd Font versiyalarida, shuning uchun barda va terminaldagi gliflar ishlashda davom etadi. Ulardan birini o‘rnatganingizdan so‘ng, uni _Ko‘rinish > Shrift_ ostida tanlang.
+Ve OS menyusidagi _O‘rnatish > Uslub > Shrift_ orqali boshqa mashhur dasturlash shriftlarini o‘rnatishingiz mumkin: Cascadia Mono, Meslo LG Mono, Fira Code, Victor Code, Bitstream Vera Mono va Iosevka — barchasi bir bosishda tayyor, ularning Nerd Font versiyalarida, shuning uchun barda va terminaldagi gliflar ishlashda davom etadi. Ulardan birini o‘rnatganingizdan so‘ng, uni _Ko‘rinish > Shrift_ ostida tanlang.
 
 ## Xitoy, yapon va koreys tillari
 

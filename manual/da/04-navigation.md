@@ -1,8 +1,8 @@
 # Navigation
 
-Alt i Omarchy foregår via tastaturet — _ALT!_ Når systemet starter første gang, kan du bogstaveligt talt ikke gøre noget som helst med musen alene. Men du kan trykke på `Super + Space` for at åbne Omarchy-menuen, og herfra kan du gøre stort set alt.
+Alt i Ve OS foregår via tastaturet — _ALT!_ Når systemet starter første gang, kan du bogstaveligt talt ikke gøre noget som helst med musen alene. Men du kan trykke på `Super + Space` for at åbne Ve OS-menuen, og herfra kan du gøre stort set alt.
 
-Men Omarchy-menuen er ikke engang tænkt som den primære måde at betjene systemet på det meste af tiden. Vi kan gøre det hurtigere end det! Alle de vigtigste programmer er bundet direkte til individuelle genvejstaster. Du starter terminalen med `Super + Return` og en browser med `Super + Shift + Return`. Prøv at gøre det ene efter det andet, og du vil se magien ved Hyprlands tiling i aktion:
+Men Ve OS-menuen er ikke engang tænkt som den primære måde at betjene systemet på det meste af tiden. Vi kan gøre det hurtigere end det! Alle de vigtigste programmer er bundet direkte til individuelle genvejstaster. Du starter terminalen med `Super + Return` og en browser med `Super + Shift + Return`. Prøv at gøre det ene efter det andet, og du vil se magien ved Hyprlands tiling i aktion:
 
  ![navigation-browser-terminal](images/navigation-browser-terminal.webp)
 
@@ -30,7 +30,7 @@ Du kan også gå i fuldskærm med `Super + F` eller endda bare i fuld bredde (og
 
 ### Dwindle vs. scrolling-layout
 
-Omarchys standardlayout hedder dwindle. Det holder alle de vinduer, du åbner på et enkelt arbejdsområde, synlige hele tiden, selv hvis det er nødt til at krympe dem.
+Ve OSs standardlayout hedder dwindle. Det holder alle de vinduer, du åbner på et enkelt arbejdsområde, synlige hele tiden, selv hvis det er nødt til at krympe dem.
 
  ![navigation-dwindle-layout](images/navigation-dwindle-layout.webp)
 
@@ -56,7 +56,7 @@ hl.config({
 
 Et flydende arbejdsområde fungerer som et traditionelt skrivebord: Vinduer overlapper, og du flytter og tilpasser deres størrelse selv. Hvert vindue får en titellinje i dit temas farver med knapper til at minimere, maksimere og lukke. `Super + M` minimerer også det fokuserede vindue. Et minimeret vindue venter i docken; klik på dets app for at hente det tilbage. Klik på et vindue for at bringe det frem. Ændr størrelsen fra en hvilken som helst kant eller et hvilket som helst hjørne. Dobbeltklik på en titellinje for at maksimere vinduet, mens den øverste bjælke stadig er synlig, og igen for at få dets gamle størrelse tilbage. Chrome og andre Chromium-baserede browsere, Disks og Document Viewer springer titellinjen over og bruger deres egen overskriftsbjælke i stedet; `Super + Alt + F` maksimerer dem, og `Super + M` minimerer dem.
 
-Et flydende arbejdsområde viser også en dock med dine fastgjorte apps, alt det, der kører, og et gitter med alle apps bag apps-knappen, som `Super + Alt + Space` og _Apps_ i Omarchy-menuen også åbner. Højreklik på en app i gitteret, eller tryk på `Delete`, for at afinstallere den. Klik på en app for at åbne den eller for at bringe dens vindue frem; klik igen for at cykle gennem dens vinduer. Files henter kun et vindue tilbage fra det arbejdsområde, du er på, og åbner ellers et nyt, og Terminal og Agent starter altid et nyt, selvom et minimeret vindue kommer tilbage først. Midterklik åbner et nyt vindue. Træk et ikon langs docken for at flytte det; hvis du trækker en kørende app ind mellem de andre, bliver den der. Højreklik for at beholde en app i docken, tage den ud eller afslutte den. Docken går af vejen for et fuldskærmsvindue. Højreklik på apps-knappen for at flytte docken til en anden kant eller få den til at skjule sig, indtil markøren når dens kant. Positionen er også under _Appearance > Dock > Dock Position_, og `omarchy dock position left` og `omarchy dock autohide on` indstiller begge dele fra en terminal. Apps, du beholder i docken, er falmede, mens de ikke kører.
+Et flydende arbejdsområde viser også en dock med dine fastgjorte apps, alt det, der kører, og et gitter med alle apps bag apps-knappen, som `Super + Alt + Space` og _Apps_ i Ve OS-menuen også åbner. Højreklik på en app i gitteret, eller tryk på `Delete`, for at afinstallere den. Klik på en app for at åbne den eller for at bringe dens vindue frem; klik igen for at cykle gennem dens vinduer. Files henter kun et vindue tilbage fra det arbejdsområde, du er på, og åbner ellers et nyt, og Terminal og Agent starter altid et nyt, selvom et minimeret vindue kommer tilbage først. Midterklik åbner et nyt vindue. Træk et ikon langs docken for at flytte det; hvis du trækker en kørende app ind mellem de andre, bliver den der. Højreklik for at beholde en app i docken, tage den ud eller afslutte den. Docken går af vejen for et fuldskærmsvindue. Højreklik på apps-knappen for at flytte docken til en anden kant eller få den til at skjule sig, indtil markøren når dens kant. Positionen er også under _Appearance > Dock > Dock Position_, og `omarchy dock position left` og `omarchy dock autohide on` indstiller begge dele fra en terminal. Apps, du beholder i docken, er falmede, mens de ikke kører.
 
 Nye arbejdsområder, og alle, du ikke har givet deres eget layout med `Super + L`, bruger standardlayoutet. Hvis du ændrer standarden, nulstilles alle arbejdsområder uden vinduer til den, mens et med vinduer på bevarer det layout, det har. Et vindue, der er minimeret til docken, tæller stadig som et vindue på det arbejdsområde, det forlod. Vælg den under _Appearance > Workspace Layout_: Tiling, Scrolling eller Floating. `omarchy-hyprland-workspace-layout-default scrolling` indstiller den fra en terminal.
 

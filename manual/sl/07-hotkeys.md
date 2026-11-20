@@ -8,7 +8,7 @@ Vsaka bližnjica je na ravni, ki jo določajo njene modifikacijske tipke, in vsa
 
 | Raven | Kaj je tam | Primeri |
 | --- | --- | --- |
-| `Super + key` | Sistem: okna, delovni prostori, postavitve in glavni meniji | `Super + Space` meni Omarchy, `Super + W` zapri okno, `Super + F` cel zaslon |
+| `Super + key` | Sistem: okna, delovni prostori, postavitve in glavni meniji | `Super + Space` meni Ve OS, `Super + W` zapri okno, `Super + F` cel zaslon |
 | `Super + Shift + key` | Aplikacije | `Super + Shift + B` brskalnik, `Super + Shift + E` e-pošta, `Super + Shift + N` urejevalnik |
 | `Super + Ctrl + key` | Plošče in sistemski meniji | `Super + Ctrl + A` zvok, `Super + Ctrl + N` omrežje, `Super + Ctrl + C` meni za zajemanje |
 | `Super + Ctrl + Alt + key` | Hitra dejanja in obvestila | `Super + Ctrl + Alt + T` prikaži čas, `Super + Ctrl + Alt + B` baterija, `Super + Ctrl + Alt + C` posnetek zaslona |
@@ -34,7 +34,7 @@ Nekaj bližnjic krši ta pravila, ker so priročne. `Shift` s puščico ali `Tab
 
 | Bližnjica | Funkcija |
 | ----------------------- | --------------------- |
-| `Super + Space` | Meni Omarchy (aplikacije in vse drugo) |
+| `Super + Space` | Meni Ve OS (aplikacije in vse drugo) |
 | `Super + Alt + Space` | Mreža aplikacij |
 | `Super + Escape` | Sistemski meni (zaustavitev, ponovni zagon itd.) |
 | `Super + Ctrl + L` | Zakleni računalnik |
@@ -172,7 +172,7 @@ Spremeni/dodaj povezave v `~/.config/hypr/bindings.lua`.
 | `Super + V` | Prilepi |
 | `Super + Ctrl + V` | Upravljalnik odložišča |
 
-Običajno v Linuxu potrebuješ `Ctrl + Shift + C/V` za kopiranje in lepljenje v terminalu in `Ctrl + C/V`, da to storiš povsod drugje. Te poenotene bližnjice za odložišče v Omarchy delujejo povsod.
+Običajno v Linuxu potrebuješ `Ctrl + Shift + C/V` za kopiranje in lepljenje v terminalu in `Ctrl + C/V`, da to storiš povsod drugje. Te poenotene bližnjice za odložišče v Ve OS delujejo povsod.
 
 ## Zajemanje
 
@@ -194,7 +194,7 @@ Običajno v Linuxu potrebuješ `Ctrl + Shift + C/V` za kopiranje in lepljenje v 
 
 Pri snemanju zaslona bližnjica najprej vpraša, kateri zvok želiš, nato začne snemati. Pritisni jo znova, da ustaviš. Podrobnosti najdeš v [posnetki zaslona in snemanje](12-screenshots-recording.md).
 
-Vse možnosti zajemanja so dostopne tudi pod _Trigger > Capture_ v meniju Omarchy (`Super + Space`).
+Vse možnosti zajemanja so dostopne tudi pod _Trigger > Capture_ v meniju Ve OS (`Super + Space`).
 
 ## Obvestila
 
@@ -216,9 +216,9 @@ Vse možnosti zajemanja so dostopne tudi pod _Trigger > Capture_ v meniju Omarch
 | `Super + Backspace` | Preklopi prosojnost okna |
 | `Super + Ctrl + Backspace` | Preklopi kvadratno razmerje stranic za eno okno |
 
-Dodatne slike za ozadje so v `~/.config/omarchy/backgrounds/<theme name>`. Na voljo tudi prek _Install > Style > Background_ v meniju Omarchy.
+Dodatne slike za ozadje so v `~/.config/omarchy/backgrounds/<theme name>`. Na voljo tudi prek _Install > Style > Background_ v meniju Ve OS.
 
-Vse možnosti sloga so dostopne tudi pod _Style_ v meniju Omarchy (`Super + Space`).
+Vse možnosti sloga so dostopne tudi pod _Style_ v meniju Ve OS (`Super + Space`).
 
 ## Preklopi
 
@@ -319,7 +319,7 @@ Te funkcije moraš zagnati znotraj seje Tmux.
 
 ## Terminal Ghostty
 
-Terminal Ghostty namestiš z _Install > Terminal_ prek menija Omarchy.
+Terminal Ghostty namestiš z _Install > Terminal_ prek menija Ve OS.
 
 | Bližnjica | Funkcija |
 | ----------------------- | --------------------- |

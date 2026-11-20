@@ -1,10 +1,10 @@
 # Kabuk Eklentileri
 
-Omarchy masaüstü, `omarchy-shell` adlı tek, uzun ömürlü bir Quickshell işlemi olarak çalışır ve ekranda gördüğünüz hemen her şey onun içindeki bir eklentidir. Çubuk bir eklentidir. Ondan açılan paneller, emoji seçici ve pano yöneticisi gibi tam ekran katmanlar, Omarchy menüsünün kendisi, kilit ekranı, polkit iletişim kutusu ve pilinizi izleyen ve geceleri ekranınızı ısıtan başsız hizmetler de öyledir.
+Ve OS masaüstü, `omarchy-shell` adlı tek, uzun ömürlü bir Quickshell işlemi olarak çalışır ve ekranda gördüğünüz hemen her şey onun içindeki bir eklentidir. Çubuk bir eklentidir. Ondan açılan paneller, emoji seçici ve pano yöneticisi gibi tam ekran katmanlar, Ve OS menüsünün kendisi, kilit ekranı, polkit iletişim kutusu ve pilinizi izleyen ve geceleri ekranınızı ısıtan başsız hizmetler de öyledir.
 
-Bu sadece bir uygulama ayrıntısı değildir. Masaüstünün parçalarını kapatabileceğiniz, değiştirebileceğiniz veya Omarchy'nin kaynağının tek bir satırına dokunmadan kendinizinkini yazabileceğiniz anlamına gelir.
+Bu sadece bir uygulama ayrıntısı değildir. Masaüstünün parçalarını kapatabileceğiniz, değiştirebileceğiniz veya Ve OS'nin kaynağının tek bir satırına dokunmadan kendinizinkini yazabileceğiniz anlamına gelir.
 
-Birinci taraf eklentiler Omarchy ile birlikte gelir ve `$OMARCHY_PATH/shell/plugins/` içinde yaşar. Kendinizin eklediği her şey — kendi deneyleriniz veya GitHub'da bulduğunuz bir şey — `~/.config/omarchy/plugins/` içinde yaşar. Her ikisi de başlangıçta aynı şekilde keşfedilir, ancak yerleşik eklentiler güvenilir kabuk arayüzleri alırken, üçüncü taraf eklentiler kendi hizmet ve yaşam döngülerine kapsamlandırılmış sınırlı bir arayüz alır. Yerleşik eklentilerin klonları, yalnızca orijinal davranış için gereken kaynağa özgü yapılandırma ve kullanıcı arayüzü çağrılarını korur.
+Birinci taraf eklentiler Ve OS ile birlikte gelir ve `$OMARCHY_PATH/shell/plugins/` içinde yaşar. Kendinizin eklediği her şey — kendi deneyleriniz veya GitHub'da bulduğunuz bir şey — `~/.config/omarchy/plugins/` içinde yaşar. Her ikisi de başlangıçta aynı şekilde keşfedilir, ancak yerleşik eklentiler güvenilir kabuk arayüzleri alırken, üçüncü taraf eklentiler kendi hizmet ve yaşam döngülerine kapsamlandırılmış sınırlı bir arayüz alır. Yerleşik eklentilerin klonları, yalnızca orijinal davranış için gereken kaynağa özgü yapılandırma ve kullanıcı arayüzü çağrılarını korur.
 
 ## Sahip olduklarınızı görmek
 

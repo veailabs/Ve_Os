@@ -1,12 +1,12 @@
 # Sistem uykusu
 
-Omarchy varsayılan olarak askıya almayı ve hazırda bekletmeyi etkinleştirir, ancak makinenizde ikisinden biriyle sorun yaşıyorsanız, bunları kapatabilirsiniz.
+Ve OS varsayılan olarak askıya almayı ve hazırda bekletmeyi etkinleştirir, ancak makinenizde ikisinden biriyle sorun yaşıyorsanız, bunları kapatabilirsiniz.
 
 NVIDIA GB10 makinelerinde, DGX Spark ve ASUS Ascent GX10 gibi, askıya alma ve hazırda bekletme kapalıdır, NVIDIA'nın DGX OS'unda olduğu gibi, çünkü uykunun bu donanımda henüz çalıştığı gösterilmemiştir. Aynı şey ASUS Zenbook A16 (UX3607OA) için de geçerlidir; burada askıya alma çipi henüz tam olarak uyutmuyor ve gece boyunca takılıp kalabiliyor. Askıya alma açma/kapatma ve hazırda bekletme kurulumu orada uygulanmaz. Uykuyu tekrar açmak için `/etc/systemd/sleep.conf.d/omarchy-sleep-disabled.conf` dosyasını `sudo rm` ile kaldırın; Askıya Al seçeneği menüye geri döner ve hazırda bekletme diğer makinelerde olduğu gibi kurulabilir. `sudo omarchy apply hardware --install-user "$USER"` komutunu çalıştırmak dosyayı geri koyar.
 
 ### Güç profilleri
 
-Bir dizüstü bilgisayarda, Omarchy güç profilinizi prize takılı ve pilde çalışma için ayrı ayrı hatırlar ve fişi takıp çıkardıkça ikisi arasında geçiş yapar. Kutudan çıktığı haliyle bu, AC'de performans ve pilde dengeli anlamına gelir.
+Bir dizüstü bilgisayarda, Ve OS güç profilinizi prize takılı ve pilde çalışma için ayrı ayrı hatırlar ve fişi takıp çıkardıkça ikisi arasında geçiş yapar. Kutudan çıktığı haliyle bu, AC'de performans ve pilde dengeli anlamına gelir.
 
 Makinenizin neler sunduğunu `omarchy powerprofiles list` ile görebilirsiniz ve şu anda içinde bulunduğunuz durum için istediğinizi `omarchy powerprofiles set autodetect power-saver` ile ayarlayabilirsiniz. Diğer durumu hiçbir şeyin fişini çekmeden ayarlamak için doğrudan adını belirtin: `omarchy powerprofiles set battery power-saver`. Ne seçerseniz, bir sonraki sefer o durumda olduğunuzda geri alacağınız şey odur.
 

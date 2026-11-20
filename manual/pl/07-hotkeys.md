@@ -8,7 +8,7 @@ Każdy skrót klawiszowy siedzi na płaszczyźnie, wyznaczanej przez jego modyfi
 
 | Płaszczyzna | Co się tam znajduje | Przykłady |
 | --- | --- | --- |
-| `Super + key` | System: okna, obszary robocze, układy i główne menu | `Super + Space` menu Omarchy, `Super + W` zamknij okno, `Super + F` pełny ekran |
+| `Super + key` | System: okna, obszary robocze, układy i główne menu | `Super + Space` menu Ve OS, `Super + W` zamknij okno, `Super + F` pełny ekran |
 | `Super + Shift + key` | Aplikacje | `Super + Shift + B` przeglądarka, `Super + Shift + E` e-mail, `Super + Shift + N` edytor |
 | `Super + Ctrl + key` | Panele i menu systemowe | `Super + Ctrl + A` audio, `Super + Ctrl + N` sieć, `Super + Ctrl + C` menu przechwytywania |
 | `Super + Ctrl + Alt + key` | Szybkie akcje i komunikaty | `Super + Ctrl + Alt + T` pokaż czas, `Super + Ctrl + Alt + B` bateria, `Super + Ctrl + Alt + C` zrzut ekranu |
@@ -34,7 +34,7 @@ Jeśli domyślny ci nie pasuje (powiedzmy, że chcesz `Super + Shift + S` do zrz
 
 | Skrót klawiszowy                  | Funkcja              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Menu Omarchy (aplikacje i wszystko inne)    |
+| `Super + Space`           | Menu Ve OS (aplikacje i wszystko inne)    |
 | `Super + Alt + Space` | Siatka aplikacji |
 | `Super + Escape` | Menu systemowe (uśpienie, ponowne uruchomienie itd.)  |
 | `Super + Ctrl + L` | Zablokuj komputer |
@@ -172,7 +172,7 @@ Zmień/dodaj przypisania w `~/.config/hypr/bindings.lua`.
 | `Super + V`           | Wklej    |
 | `Super + Ctrl + V`           | Menedżer schowka    |
 
-Zwykle na Linuksie potrzebujesz `Ctrl + Shift + C/V`, żeby kopiować'n'wklejać w terminalu, oraz `Ctrl + C/V`, żeby robić to wszędzie indziej. Te ujednolicone skróty schowka Omarchy działają wszędzie.
+Zwykle na Linuksie potrzebujesz `Ctrl + Shift + C/V`, żeby kopiować'n'wklejać w terminalu, oraz `Ctrl + C/V`, żeby robić to wszędzie indziej. Te ujednolicone skróty schowka Ve OS działają wszędzie.
 
 ## Przechwytywanie
 
@@ -194,7 +194,7 @@ Zwykle na Linuksie potrzebujesz `Ctrl + Shift + C/V`, żeby kopiować'n'wklejać
 
 Przy nagrywaniu ekranu skrót najpierw pyta, jakiego dźwięku chcesz, a potem zaczyna nagrywać. Naciśnij go ponownie, aby zatrzymać. Szczegóły znajdziesz w [zrzutach ekranu i nagrywaniu](12-screenshots-recording.md).
 
-Wszystkie opcje przechwytywania są dostępne także w _Trigger > Capture_ w menu Omarchy (`Super + Space`).
+Wszystkie opcje przechwytywania są dostępne także w _Trigger > Capture_ w menu Ve OS (`Super + Space`).
 
 ## Powiadomienia
 
@@ -216,9 +216,9 @@ Wszystkie opcje przechwytywania są dostępne także w _Trigger > Capture_ w men
 | `Super + Backspace` | Przełącz przezroczystość okna |
 | `Super + Ctrl + Backspace` | Przełącz kwadratowe proporcje pojedynczego okna |
 
-Dodatkowe obrazy tła znajdują się w `~/.config/omarchy/backgrounds/<theme name>`. Dostępne także przez _Install > Style > Background_ w menu Omarchy.
+Dodatkowe obrazy tła znajdują się w `~/.config/omarchy/backgrounds/<theme name>`. Dostępne także przez _Install > Style > Background_ w menu Ve OS.
 
-Wszystkie opcje stylu są dostępne także w _Style_ w menu Omarchy (`Super + Space`).
+Wszystkie opcje stylu są dostępne także w _Style_ w menu Ve OS (`Super + Space`).
 
 ## Przełączniki
 
@@ -319,7 +319,7 @@ Te funkcje muszą być uruchamiane wewnątrz sesji Tmux.
 
 ## Terminal Ghostty
 
-Terminal Ghostty instaluje się za pomocą _Install > Terminal_ w menu Omarchy.
+Terminal Ghostty instaluje się za pomocą _Install > Terminal_ w menu Ve OS.
 
 | Skrót klawiszowy                  | Funkcja              |
 | ----------------------- | --------------------- |

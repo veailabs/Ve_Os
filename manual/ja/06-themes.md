@@ -1,8 +1,8 @@
 # テーマ
 
-Omarchy には22種類の美しいテーマが付属しています。Omarchy Menu（`Super + Space`）の _Appearance > Theme_ から選択することも、`Super + Ctrl + T` でテーマセレクターに直接移動することもできます。
+Ve OS には22種類の美しいテーマが付属しています。Ve OS Menu（`Super + Space`）の _Appearance > Theme_ から選択することも、`Super + Ctrl + T` でテーマセレクターに直接移動することもできます。
 
-各テーマはデスクトップ、ターミナル、neovim、アクティビティ画面（btop）、Chromium、そしてトップバー、メニュー、通知、OSD、ロック画面を含む Omarchy シェル全体のスタイルを決定します。（Obsidian については、アプリ内の _Appearance > Themes_ から Omarchy テーマを手動で選択する必要があります）。
+各テーマはデスクトップ、ターミナル、neovim、アクティビティ画面（btop）、Chromium、そしてトップバー、メニュー、通知、OSD、ロック画面を含む Ve OS シェル全体のスタイルを決定します。（Obsidian については、アプリ内の _Appearance > Themes_ から Ve OS テーマを手動で選択する必要があります）。
 
 テーマには背景画像のセットがあり、`Super + Ctrl + W` を使って切り替えることができます。
 
@@ -75,7 +75,7 @@ _White_
 
 他の人が作成したアイコンセットは _Install > Style > Icons_（または `omarchy icons install <git url>`）でインストールでき、_Remove > Icons_ で再び削除できます。_Update > Extra Icons_ はインストール済みのセットの最新バージョンを取得します。
 
-自分で作成するには、アイコンを `~/.config/omarchy/icons/<name>/` に配置します。アプリごとに1ファイルとし、アプリの `.desktop` ファイルの `Icon=` 行に合わせて名前を付けます。`.svg` で終わるファイルはそのまま表示されます。`.svg.tpl` で終わるファイルはテーマの色で描画されます。色を指定する場所に `{{ icon_main }}`、`{{ icon_mark }}`、`{{ icon_paper }}`、`{{ icon_body }}`、`{{ icon_edge }}`、`{{ icon_ink }}`、または `{{ icon_shadow }}` と記述します。`/usr/share/omarchy/icons/papercraft/` にあるデフォルトセットは、作成を始めるのに適した出発点です。`preview.png` を追加すると、ピッカーに自分のセットを表示できます。ない場合は、Omarchy があなたのアイコンからプレビューを描画します。デフォルトセットのアイコンを1つだけ変更するには、自分のバージョンを `~/.config/omarchy/icons/papercraft/` に配置します。
+自分で作成するには、アイコンを `~/.config/omarchy/icons/<name>/` に配置します。アプリごとに1ファイルとし、アプリの `.desktop` ファイルの `Icon=` 行に合わせて名前を付けます。`.svg` で終わるファイルはそのまま表示されます。`.svg.tpl` で終わるファイルはテーマの色で描画されます。色を指定する場所に `{{ icon_main }}`、`{{ icon_mark }}`、`{{ icon_paper }}`、`{{ icon_body }}`、`{{ icon_edge }}`、`{{ icon_ink }}`、または `{{ icon_shadow }}` と記述します。`/usr/share/omarchy/icons/papercraft/` にあるデフォルトセットは、作成を始めるのに適した出発点です。`preview.png` を追加すると、ピッカーに自分のセットを表示できます。ない場合は、Ve OS があなたのアイコンからプレビューを描画します。デフォルトセットのアイコンを1つだけ変更するには、自分のバージョンを `~/.config/omarchy/icons/papercraft/` に配置します。
 
 ### ロック解除
 

@@ -1,8 +1,8 @@
 # Temi
 
-Omarchy include ventidue bellissimi temi. Puoi scegliere tra di essi tramite _Aspetto > Tema_ nel Menu Omarchy (`Super + Space`) o passare direttamente al selettore dei temi usando `Super + Ctrl + T`.
+Ve OS include ventidue bellissimi temi. Puoi scegliere tra di essi tramite _Aspetto > Tema_ nel Menu Ve OS (`Super + Space`) o passare direttamente al selettore dei temi usando `Super + Ctrl + T`.
 
-Ogni tema personalizza il desktop, il terminale, neovim, la schermata delle attività (btop), Chromium e l'intera shell di Omarchy: barra superiore, menu, notifiche, OSD e schermata di blocco. (Per Obsidian, devi selezionare manualmente il tema Omarchy tramite _Aspetto > Temi_ all'interno dell'app).
+Ogni tema personalizza il desktop, il terminale, neovim, la schermata delle attività (btop), Chromium e l'intera shell di Ve OS: barra superiore, menu, notifiche, OSD e schermata di blocco. (Per Obsidian, devi selezionare manualmente il tema Ve OS tramite _Aspetto > Temi_ all'interno dell'app).
 
 I temi hanno una serie di immagini di sfondo tra cui puoi scegliere usando `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Le icone nel launcher delle app e nel dock sono disegnate con i colori del tuo t
 
 Puoi installare un set di icone creato da qualcun altro con _Installa > Stile > Icone_ (oppure `omarchy icons install <git url>`), e rimuoverlo di nuovo da _Rimuovi > Icone_. _Aggiorna > Icone extra_ recupera l'ultima versione dei set che hai installato.
 
-Per creare il tuo set, inserisci le tue icone in `~/.config/omarchy/icons/<name>/`, un file per app, con il nome tratto dalla riga `Icon=` del file `.desktop` dell'app. Un file che termina con `.svg` viene mostrato così com'è. Un file che termina con `.svg.tpl` viene disegnato con i colori del tema: scrivi `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` o `{{ icon_shadow }}` dove va un colore. Il set predefinito in `/usr/share/omarchy/icons/papercraft/` è un buon punto di partenza. Aggiungi un `preview.png` per mostrare il tuo set nel selettore; senza di esso, Omarchy disegna un'anteprima a partire dalle tue icone. Per cambiare una singola icona del set predefinito, inserisci la tua versione in `~/.config/omarchy/icons/papercraft/`.
+Per creare il tuo set, inserisci le tue icone in `~/.config/omarchy/icons/<name>/`, un file per app, con il nome tratto dalla riga `Icon=` del file `.desktop` dell'app. Un file che termina con `.svg` viene mostrato così com'è. Un file che termina con `.svg.tpl` viene disegnato con i colori del tema: scrivi `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` o `{{ icon_shadow }}` dove va un colore. Il set predefinito in `/usr/share/omarchy/icons/papercraft/` è un buon punto di partenza. Aggiungi un `preview.png` per mostrare il tuo set nel selettore; senza di esso, Ve OS disegna un'anteprima a partire dalle tue icone. Per cambiare una singola icona del set predefinito, inserisci la tua versione in `~/.config/omarchy/icons/papercraft/`.
 
 ### Sblocco
 

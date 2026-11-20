@@ -1,10 +1,10 @@
 # Vtičniki lupine
 
-Namizje Omarchy teče kot en sam dolgotrajen proces Quickshell z imenom `omarchy-shell`, skoraj vse, kar vidite na zaslonu, pa je vtičnik znotraj njega. Vrstica je vtičnik. Prav tako paneli, ki padajo iz nje, celozaslonska prekrivanja, kot sta izbirnik emojijev in upravitelj odložišča, meni Omarchy sam, zaklepni zaslon, pogovorno okno polkit in brezglave storitve, ki spremljajo vašo baterijo in ponoči ogrevajo zaslon.
+Namizje Ve OS teče kot en sam dolgotrajen proces Quickshell z imenom `omarchy-shell`, skoraj vse, kar vidite na zaslonu, pa je vtičnik znotraj njega. Vrstica je vtičnik. Prav tako paneli, ki padajo iz nje, celozaslonska prekrivanja, kot sta izbirnik emojijev in upravitelj odložišča, meni Ve OS sam, zaklepni zaslon, pogovorno okno polkit in brezglave storitve, ki spremljajo vašo baterijo in ponoči ogrevajo zaslon.
 
-To ni le podrobnost izvajanja. Pomeni, da lahko dele namizja izklopite, jih zamenjate ali napisete svoje, ne da bi se dotaknili ene same vrstice izvorne kode Omarchy.
+To ni le podrobnost izvajanja. Pomeni, da lahko dele namizja izklopite, jih zamenjate ali napisete svoje, ne da bi se dotaknili ene same vrstice izvorne kode Ve OS.
 
-Prvostrankarski vtičniki se dobavljajo z Omarchy in živijo v `$OMARCHY_PATH/shell/plugins/`. Vse, kar dodate sami — lastni poskusi ali kaj, kar ste našli na GitHubu — živi v `~/.config/omarchy/plugins/`. Oba se odkrijeta na enak način ob zagonu, vendar vgrajeni prejmejo zaupanja vredne vmesnike lupine, vtičniki tretjih oseb pa omejen vmesnik, omejen na lastno storitev in življenjski cikel. Kloni vgrajenih vtičnikov obdržijo le izvorno specifične konfiguracije in klice UI, potrebne za izvirno vedenje.
+Prvostrankarski vtičniki se dobavljajo z Ve OS in živijo v `$OMARCHY_PATH/shell/plugins/`. Vse, kar dodate sami — lastni poskusi ali kaj, kar ste našli na GitHubu — živi v `~/.config/omarchy/plugins/`. Oba se odkrijeta na enak način ob zagonu, vendar vgrajeni prejmejo zaupanja vredne vmesnike lupine, vtičniki tretjih oseb pa omejen vmesnik, omejen na lastno storitev in življenjski cikel. Kloni vgrajenih vtičnikov obdržijo le izvorno specifične konfiguracije in klice UI, potrebne za izvirno vedenje.
 
 ## Ogled tega, kar imate
 

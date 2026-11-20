@@ -8,7 +8,7 @@ Mỗi phím tắt nằm trên một mặt phẳng, được xác định bởi c
 
 | Mặt phẳng | Thứ gì nằm ở đó | Ví dụ |
 | --- | --- | --- |
-| `Super + key` | Hệ thống: cửa sổ, workspace, bố cục và các menu cốt lõi | `Super + Space` menu Omarchy, `Super + W` đóng cửa sổ, `Super + F` toàn màn hình |
+| `Super + key` | Hệ thống: cửa sổ, workspace, bố cục và các menu cốt lõi | `Super + Space` menu Ve OS, `Super + W` đóng cửa sổ, `Super + F` toàn màn hình |
 | `Super + Shift + key` | Ứng dụng | `Super + Shift + B` trình duyệt, `Super + Shift + E` email, `Super + Shift + N` trình soạn thảo |
 | `Super + Ctrl + key` | Bảng điều khiển và menu hệ thống | `Super + Ctrl + A` âm thanh, `Super + Ctrl + N` mạng, `Super + Ctrl + C` menu chụp |
 | `Super + Ctrl + Alt + key` | Thao tác nhanh và thông báo | `Super + Ctrl + Alt + T` hiển thị thời gian, `Super + Ctrl + Alt + B` pin, `Super + Ctrl + Alt + C` ảnh chụp màn hình |
@@ -34,7 +34,7 @@ Nếu một mặc định không phù hợp với bạn (chẳng hạn bạn mu�
 
 | Phím tắt | Chức năng |
 | ----------------------- | --------------------- |
-| `Super + Space` | Menu Omarchy (ứng dụng và mọi thứ khác) |
+| `Super + Space` | Menu Ve OS (ứng dụng và mọi thứ khác) |
 | `Super + Alt + Space` | Lưới ứng dụng |
 | `Super + Escape` | Menu hệ thống (tạm dừng, khởi động lại, v.v.) |
 | `Super + Ctrl + L` | Khóa máy tính |
@@ -172,7 +172,7 @@ Thay đổi/thêm các gán phím trong `~/.config/hypr/bindings.lua`.
 | `Super + V` | Dán |
 | `Super + Ctrl + V` | Trình quản lý clipboard |
 
-Thông thường trên Linux, bạn cần `Ctrl + Shift + C/V` để sao chép và dán trong terminal và `Ctrl + C/V` để làm điều đó ở mọi nơi khác. Các phím tắt clipboard hợp nhất này của Omarchy hoạt động ở mọi nơi.
+Thông thường trên Linux, bạn cần `Ctrl + Shift + C/V` để sao chép và dán trong terminal và `Ctrl + C/V` để làm điều đó ở mọi nơi khác. Các phím tắt clipboard hợp nhất này của Ve OS hoạt động ở mọi nơi.
 
 ## Chụp
 
@@ -194,7 +194,7 @@ Thông thường trên Linux, bạn cần `Ctrl + Shift + C/V` để sao chép v
 
 Với ghi màn hình, phím tắt trước tiên hỏi bạn muốn âm thanh nào, rồi bắt đầu ghi. Nhấn lại để dừng. Xem [ảnh chụp màn hình và ghi màn hình](12-screenshots-recording.md) để biết chi tiết.
 
-Tất cả các tùy chọn chụp cũng có thể truy cập trong _Trigger > Capture_ trong menu Omarchy (`Super + Space`).
+Tất cả các tùy chọn chụp cũng có thể truy cập trong _Trigger > Capture_ trong menu Ve OS (`Super + Space`).
 
 ## Thông báo
 
@@ -216,9 +216,9 @@ Tất cả các tùy chọn chụp cũng có thể truy cập trong _Trigger > C
 | `Super + Backspace` | Bật/tắt độ trong suốt trên một cửa sổ |
 | `Super + Ctrl + Backspace` | Bật/tắt tỷ lệ khung hình vuông cho một cửa sổ |
 
-Hình nền bổ sung nằm trong `~/.config/omarchy/backgrounds/<theme name>`. Cũng có sẵn qua _Install > Style > Background_ trong menu Omarchy.
+Hình nền bổ sung nằm trong `~/.config/omarchy/backgrounds/<theme name>`. Cũng có sẵn qua _Install > Style > Background_ trong menu Ve OS.
 
-Tất cả các tùy chọn phong cách cũng có thể truy cập trong _Style_ trong menu Omarchy (`Super + Space`).
+Tất cả các tùy chọn phong cách cũng có thể truy cập trong _Style_ trong menu Ve OS (`Super + Space`).
 
 ## Công tắc bật/tắt
 
@@ -319,7 +319,7 @@ Các hàm này phải được chạy bên trong một phiên Tmux.
 
 ## Terminal Ghostty
 
-Terminal Ghostty được cài đặt bằng _Install > Terminal_ qua menu Omarchy.
+Terminal Ghostty được cài đặt bằng _Install > Terminal_ qua menu Ve OS.
 
 | Phím tắt | Chức năng |
 | ----------------------- | --------------------- |

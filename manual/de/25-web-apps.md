@@ -1,10 +1,10 @@
 # Web-Apps
 
-Du kannst deine eigenen Web-Apps über _Installieren > Web-App_ im Omarchy-Menü (`Super + Space`) hinzufügen. Es fragt dich nach dem Namen der App, der URL der App und der URL des Symbols, falls es dieses nicht per Favicon abrufen kann. Tolle PNG-Symbole für viele beliebte Web-Apps findest du auf [Dashboard Icons](https://dashboardicons.com).
+Du kannst deine eigenen Web-Apps über _Installieren > Web-App_ im Ve OS-Menü (`Super + Space`) hinzufügen. Es fragt dich nach dem Namen der App, der URL der App und der URL des Symbols, falls es dieses nicht per Favicon abrufen kann. Tolle PNG-Symbole für viele beliebte Web-Apps findest du auf [Dashboard Icons](https://dashboardicons.com).
 
 Sie sind dann über den App-Launcher (`Super + Space`) erreichbar und nutzen das schöne rahmenlose Web-App-Fenster.
 
-Wenn du eine Web-App entfernen möchtest, gehe einfach zu _Entfernen > Web-App_ im Omarchy-Menü.
+Wenn du eine Web-App entfernen möchtest, gehe einfach zu _Entfernen > Web-App_ im Ve OS-Menü.
 
 Am besten meldest du dich in einem normalen Browser bei all deinen Konten an, bevor du die Web-App-Verknüpfungen verwendest. Der dünne Wrapper-Rahmen funktioniert nicht gut mit 1password, deshalb ist es einfach einfacher, dich vorher direkt anzumelden.
 
@@ -12,7 +12,7 @@ Alle Tastaturkürzel für diese Web-Apps kannst du in `~/.config/hypr/bindings.l
 
 Wenn du in einer Web-App bist, kannst du die aktuelle URL mit `Shift + Alt + L` in die Zwischenablage kopieren.
 
-Standardmäßig liefert Omarchy bereits eine Auswahl an Standard-Apps mit:
+Standardmäßig liefert Ve OS bereits eine Auswahl an Standard-Apps mit:
 
 ## HEY
 
@@ -64,7 +64,7 @@ Du kannst YouTube mit `Super + Shift + Y` starten.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) ist das beliebteste Videochat-System in den USA. Großartige Verbindungen auf der ganzen Welt. Und 40-minütige Meetings können ohne kostenpflichtiges Konto abgehalten werden. Omarchy verpackt den Web-Client von Zoom, und Zoom-Meeting-Links öffnen sich direkt darin.
+[Zoom](https://zoom.us/) ist das beliebteste Videochat-System in den USA. Großartige Verbindungen auf der ganzen Welt. Und 40-minütige Meetings können ohne kostenpflichtiges Konto abgehalten werden. Ve OS verpackt den Web-Client von Zoom, und Zoom-Meeting-Links öffnen sich direkt darin.
 
 Du startest Zoom über den App-Launcher (`Super + Space`).
 
@@ -76,7 +76,7 @@ Du startest Discord über den App-Launcher (`Super + Space`).
 
 ## Microsoft-Apps
 
-Wähle _Installieren > Dienst > Microsoft_, um Outlook, Word, Excel, PowerPoint, Teams und OneDrive als Web-Apps hinzuzufügen. Jede App hat ihren eigenen Launcher und öffnet sich direkt, unter Verwendung der kommerziellen Microsoft 365-URLs und deines vorhandenen Browserprofils. Sie öffnen sich in denselben Browser-App-Fenstern wie die anderen Web-Apps von Omarchy; sie installieren nicht den separaten Teams for Linux-Client.
+Wähle _Installieren > Dienst > Microsoft_, um Outlook, Word, Excel, PowerPoint, Teams und OneDrive als Web-Apps hinzuzufügen. Jede App hat ihren eigenen Launcher und öffnet sich direkt, unter Verwendung der kommerziellen Microsoft 365-URLs und deines vorhandenen Browserprofils. Sie öffnen sich in denselben Browser-App-Fenstern wie die anderen Web-Apps von Ve OS; sie installieren nicht den separaten Teams for Linux-Client.
 
 Entferne das Paket mit _Entfernen > Dienst > Microsoft_ oder entferne einzelne Apps mit _Entfernen > Web-App_. Du kannst auch nur die gewünschten Apps über _Installieren > Web-App_ installieren.
 
@@ -88,4 +88,4 @@ Um Arbeitsanmeldungen getrennt zu halten, hänge an die `Exec=`-Zeile jedes Laun
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Ersetze das Beispielverzeichnis durch einen absoluten Pfad deiner Wahl und verwende denselben Pfad für alle sechs Launcher, um Arbeitsanmeldungen zwischen ihnen zu teilen. Die Web-Apps verwenden den von Omarchy ausgewählten unterstützten Browser und weichen auf Chrome aus, wenn der Standardbrowser nicht unterstützt wird.
+Ersetze das Beispielverzeichnis durch einen absoluten Pfad deiner Wahl und verwende denselben Pfad für alle sechs Launcher, um Arbeitsanmeldungen zwischen ihnen zu teilen. Die Web-Apps verwenden den von Ve OS ausgewählten unterstützten Browser und weichen auf Chrome aus, wenn der Standardbrowser nicht unterstützt wird.

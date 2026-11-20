@@ -1,12 +1,12 @@
 # フォント
 
-Omarchy はデフォルトで、JetBrainsMono Nerd Font をターミナルフォントとしてもシステムフォントとしても使います。
+Ve OS はデフォルトで、JetBrainsMono Nerd Font をターミナルフォントとしてもシステムフォントとしても使います。
 
  ![fonts-jetbrainsmono](images/fonts-jetbrainsmono.webp)
 
-これは Omarchy メニュー（`Super + Space`）の _外観 > フォント_ メニューから変更できます。これで、ターミナル、バー、その他等幅フォントを要求するすべての場所で使う等幅フォントが設定されます。
+これは Ve OS メニュー（`Super + Space`）の _外観 > フォント_ メニューから変更できます。これで、ターミナル、バー、その他等幅フォントを要求するすべての場所で使う等幅フォントが設定されます。
 
-他の人気のプログラミングフォントは、Omarchy メニューの _インストール > スタイル > フォント_ からインストールできます。Cascadia Mono、Meslo LG Mono、Fira Code、Victor Code、Bitstream Vera Mono、Iosevka がすべてワンクリックでインストールでき、バーやターミナルのグリフが引き続き機能するよう、Nerd Font 版になっています。インストールしたら、_外観 > フォント_ で選択してください。
+他の人気のプログラミングフォントは、Ve OS メニューの _インストール > スタイル > フォント_ からインストールできます。Cascadia Mono、Meslo LG Mono、Fira Code、Victor Code、Bitstream Vera Mono、Iosevka がすべてワンクリックでインストールでき、バーやターミナルのグリフが引き続き機能するよう、Nerd Font 版になっています。インストールしたら、_外観 > フォント_ で選択してください。
 
 ## 中国語、日本語、韓国語
 

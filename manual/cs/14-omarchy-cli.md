@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy se obvykle ovládá pomocí klávesových zkratek a nabídky Omarchy (`Super + Space`). Ale můžete ho ovládat také přes CLI `omarchy`. To je obzvlášť užitečné, když s vámi na přizpůsobení nebo konfiguraci spolupracuje AI agent.
+Ve OS se obvykle ovládá pomocí klávesových zkratek a nabídky Ve OS (`Super + Space`). Ale můžete ho ovládat také přes CLI `omarchy`. To je obzvlášť užitečné, když s vámi na přizpůsobení nebo konfiguraci spolupracuje AI agent.
 
 CLI má přístup ke všem interním nástrojům, které se používají jak přes nabídku, tak i jinak. Vše, co je k dispozici, uvidíte spuštěním příkazu `omarchy` v terminálu.
 
@@ -8,7 +8,7 @@ Vypadá to nějak takto:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Pro diagnostiku spusťte přímo `omarchy-debug --no-sudo --print`. Vypíše diagnostiku a zapíše `/tmp/omarchy-debug.log` bez výzvy k zadání sudo, a to i u instalací balíčků, kde `omarchy debug` může selhat s chybou "Unknown Omarchy command".
+Pro diagnostiku spusťte přímo `omarchy-debug --no-sudo --print`. Vypíše diagnostiku a zapíše `/tmp/omarchy-debug.log` bez výzvy k zadání sudo, a to i u instalací balíčků, kde `omarchy debug` může selhat s chybou "Unknown Ve OS command".
 
 A u každé skupiny můžete jít ještě hlouběji:
 
@@ -60,4 +60,4 @@ Každý příkaz podporuje také `--help`, ať už se ptáte na celou skupinu (`
 
 ### Otevření nabídky z terminálu
 
-Nabídku Omarchy lze také skriptovat, což se hodí pro vaše vlastní klávesové zkratky. `omarchy menu` ji otevře v kořenové úrovni a pojmenováním můžete přejít rovnou na libovolné místo ve stromu: `omarchy menu summon appearance.theme` přejde přímo do výběru motivu, `omarchy menu toggle system` otevře systémovou nabídku a znovu ji zavře, pokud už je otevřená, a `omarchy menu close` ji zavře.
+Nabídku Ve OS lze také skriptovat, což se hodí pro vaše vlastní klávesové zkratky. `omarchy menu` ji otevře v kořenové úrovni a pojmenováním můžete přejít rovnou na libovolné místo ve stromu: `omarchy menu summon appearance.theme` přejde přímo do výběru motivu, `omarchy menu toggle system` otevře systémovou nabídku a znovu ji zavře, pokud už je otevřená, a `omarchy menu close` ji zavře.

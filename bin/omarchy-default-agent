@@ -197,7 +197,7 @@ if [[ $installing == "true" ]]; then
       [[ -n $installer ]] && break
       sleep 0.05
     done
-    printf '\033]2;Omarchy\007'
+    printf '\033]2;Ve OS\007'
   fi
 fi
 

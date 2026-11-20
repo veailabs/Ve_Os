@@ -1,8 +1,8 @@
 # Teme
 
-Omarchy vine cu douăzeci și două de teme frumoase. Le poți selecta prin _Aspect > Temă_ din Omarchy Menu (`Super + Space`) sau poți sări direct la selectorul de teme folosind `Super + Ctrl + T`.
+Ve OS vine cu douăzeci și două de teme frumoase. Le poți selecta prin _Aspect > Temă_ din Ve OS Menu (`Super + Space`) sau poți sări direct la selectorul de teme folosind `Super + Ctrl + T`.
 
-Fiecare temă stilizează desktopul, terminalul, neovim, ecranul de activitate (btop), Chromium și întregul shell Omarchy: bara de sus, meniul, notificările, OSD și ecranul de blocare. (Pentru Obsidian, trebuie să selectezi manual tema Omarchy prin _Aspect > Teme_ din interiorul aplicației).
+Fiecare temă stilizează desktopul, terminalul, neovim, ecranul de activitate (btop), Chromium și întregul shell Ve OS: bara de sus, meniul, notificările, OSD și ecranul de blocare. (Pentru Obsidian, trebuie să selectezi manual tema Ve OS prin _Aspect > Teme_ din interiorul aplicației).
 
 Temele au un set de imagini de fundal între care poți alege folosind `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Pictogramele din lansatorul de aplicații și din dock sunt desenate în culoril
 
 Poți instala un set de pictograme creat de altcineva cu _Instalare > Stil > Pictograme_ (sau `omarchy icons install <git url>`) și îl poți elimina din nou din _Eliminare > Pictograme_. _Actualizare > Pictograme suplimentare_ aduce cea mai recentă versiune a seturilor pe care le ai instalate.
 
-Ca să îți faci propriul set, pune pictogramele în `~/.config/omarchy/icons/<name>/`, câte un fișier pentru fiecare aplicație, numit după linia `Icon=` din fișierul `.desktop` al aplicației. Un fișier care se termină în `.svg` este arătat așa cum este. Un fișier care se termină în `.svg.tpl` este desenat în culorile temei: scrie `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` sau `{{ icon_shadow }}` acolo unde merge o culoare. Setul implicit din `/usr/share/omarchy/icons/papercraft/` este un punct bun de plecare. Adaugă un `preview.png` pentru a-ți arăta setul în selector; fără el, Omarchy desenează o previzualizare din pictogramele tale. Ca să schimbi o singură pictogramă din setul implicit, pune versiunea ta în `~/.config/omarchy/icons/papercraft/`.
+Ca să îți faci propriul set, pune pictogramele în `~/.config/omarchy/icons/<name>/`, câte un fișier pentru fiecare aplicație, numit după linia `Icon=` din fișierul `.desktop` al aplicației. Un fișier care se termină în `.svg` este arătat așa cum este. Un fișier care se termină în `.svg.tpl` este desenat în culorile temei: scrie `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` sau `{{ icon_shadow }}` acolo unde merge o culoare. Setul implicit din `/usr/share/omarchy/icons/papercraft/` este un punct bun de plecare. Adaugă un `preview.png` pentru a-ți arăta setul în selector; fără el, Ve OS desenează o previzualizare din pictogramele tale. Ca să schimbi o singură pictogramă din setul implicit, pune versiunea ta în `~/.config/omarchy/icons/papercraft/`.
 
 ### Deblocări
 

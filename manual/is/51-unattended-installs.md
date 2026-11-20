@@ -1,4 +1,6 @@
-# Ómönnuð uppsetning
+# Ve OS — Ómönnuð uppsetning
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO-ið getur sett sig upp án þess að nokkur sé við lyklaborðið. Ef uppsetningarforritið finnur annað drif merkt `cidata` með stillingarskrám þess afritar það þær þaðan, sleppir uppsetningarhjálpinni alfarið og endurræsir sjálft inn í fullbúið kerfið. Engin sérstök ISO-smíði, enginn auka valkostur í ræsivalmyndinni — án slíks drifs breytist ekkert og þú færð venjulegu uppsetningarhjálpina.
 

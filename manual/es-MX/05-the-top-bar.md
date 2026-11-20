@@ -1,14 +1,14 @@
 # La barra superior
 
-La franja a lo largo de la parte superior de tu pantalla es la barra de Omarchy. No es una barra de estado añadida a la fuerza, sino parte de la shell de Omarchy, el único proceso de Quickshell de larga ejecución que también dibuja el menú, las notificaciones, las ventanas emergentes OSD y la pantalla de bloqueo. Por eso combina a la perfección con todo lo demás en el tema y por eso un panel se abre al instante en lugar de lanzar una aplicación nueva.
+La franja a lo largo de la parte superior de tu pantalla es la barra de Ve OS. No es una barra de estado añadida a la fuerza, sino parte de la shell de Ve OS, el único proceso de Quickshell de larga ejecución que también dibuja el menú, las notificaciones, las ventanas emergentes OSD y la pantalla de bloqueo. Por eso combina a la perfección con todo lo demás en el tema y por eso un panel se abre al instante en lugar de lanzar una aplicación nueva.
 
 También es la única pieza del escritorio que siempre está en pantalla, así que vale la pena saber qué hacen todos esos pequeños glifos.
 
 ## Qué trae por default
 
-La barra tiene tres secciones. A la izquierda está el logo de Omarchy (el lanzador del menú) y los indicadores de espacios de trabajo. En el centro tienes los indicadores de estado, el reloj, Elsewhen (un reloj mundial), el clima y una insignia de actualización de Omarchy. A la derecha: la bandeja del sistema, la distribución de teclado (cuando hay más de una configurada), agentes, bluetooth, red, audio, pantalla y energía.
+La barra tiene tres secciones. A la izquierda está el logo de Ve OS (el lanzador del menú) y los indicadores de espacios de trabajo. En el centro tienes los indicadores de estado, el reloj, Elsewhen (un reloj mundial), el clima y una insignia de actualización de Ve OS. A la derecha: la bandeja del sistema, la distribución de teclado (cuando hay más de una configurada), agentes, bluetooth, red, audio, pantalla y energía.
 
-Algunos de esos solo aparecen cuando tienen algo que decir. La distribución de teclado aparece solo si configuraste más de una distribución. La insignia de actualización aparece solo cuando hay una actualización de Omarchy esperando. Y el ícono de agentes aparece la primera vez que Omarchy encuentra un uso de codificación con IA en la máquina (consulta [IA](17-ai.md)).
+Algunos de esos solo aparecen cuando tienen algo que decir. La distribución de teclado aparece solo si configuraste más de una distribución. La insignia de actualización aparece solo cuando hay una actualización de Ve OS esperando. Y el ícono de agentes aparece la primera vez que Ve OS encuentra un uso de codificación con IA en la máquina (consulta [IA](17-ai.md)).
 
 ## Hacer clic por aquí y por allá
 
@@ -16,7 +16,7 @@ Casi todos los widgets hacen algo con el clic izquierdo, derecho y central, y va
 
 | Widget | Izquierdo | Derecho | Central / rueda |
 | --- | --- | --- | --- |
-| Menú | Menú de Omarchy | Nueva terminal | — |
+| Menú | Menú de Ve OS | Nueva terminal | — |
 | Espacios de trabajo | Enfocar ese espacio de trabajo en este monitor | — | Rueda: espacio de trabajo siguiente/anterior |
 | Reloj | Ventana emergente del calendario | Recorrer el formato de la etiqueta | Central: selector de zona horaria |
 | Clima | Ventana emergente del pronóstico | Clima completo como notificación | Central: actualizar |
@@ -29,7 +29,7 @@ Casi todos los widgets hacen algo con el clic izquierdo, derecho y central, y va
 | Multimedia | Reproducir/pausar | Ventana emergente con la portada | Central: siguiente · rueda: anterior/siguiente |
 | Agentes | Panel de agentes | Lanzar tu agente | Central: siguiente suscripción |
 | Bandeja | Pasar el cursor para revelar el cajón | Derecho en el chevrones para administrar | — |
-| Actualización de Omarchy | Ejecutar la actualización | — | — |
+| Actualización de Ve OS | Ejecutar la actualización | — | — |
 
 No todo lo que aparece en esa tabla está en tu barra desde el inicio. El widget multimedia (reproducción actual de MPRIS, con pista y artista desplazándose) y el widget de micrófono están integrados, pero desactivados por default: agrégalos si los quieres, como se describe a continuación.
 
@@ -137,6 +137,6 @@ Cada widget es una entrada en uno de los cinco arreglos del diseño, y su config
 
 `center` es la caja en el centro de la barra: todo lo que contiene se centra en la pantalla como un solo grupo. `centerBegin` y `centerEnd` cuelgan a cada lado de la caja, que es como el reloj se queda justo en el centro aunque el clima y la insignia de actualización vayan y vengan. Pon más de un widget en `center` y se centran juntos; déjalo vacío y `centerBegin` y `centerEnd` se encuentran en el centro de la barra.
 
-Una regla que vale la pena interiorizar: **en cuanto tienes tu propio `shell.json`, es el canónico**. Hasta que personalizas algo, la shell lee el archivo default de Omarchy. En el momento en que arrastras un widget, ejecutas `omarchy bar` o editas el archivo tú mismo, es tuyo: no hay una fusión profunda, así que los widgets default nuevos en versiones futuras de Omarchy no aparecerán en tu barra automáticamente. `omarchy bar defaults` restablece el diseño incluido cada vez que quieres empezar de cero.
+Una regla que vale la pena interiorizar: **en cuanto tienes tu propio `shell.json`, es el canónico**. Hasta que personalizas algo, la shell lee el archivo default de Ve OS. En el momento en que arrastras un widget, ejecutas `omarchy bar` o editas el archivo tú mismo, es tuyo: no hay una fusión profunda, así que los widgets default nuevos en versiones futuras de Ve OS no aparecerán en tu barra automáticamente. `omarchy bar defaults` restablece el diseño incluido cada vez que quieres empezar de cero.
 
 Ese mismo archivo también guarda tus tiempos de inactividad en el nivel superior, fuera de la clave `bar`: `idle.screensaver` e `idle.lock`, ambos en segundos desde que quedaste inactivo. Así, el protector de pantalla default entra a los 150 segundos y el bloqueo a los 300.

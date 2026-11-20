@@ -1,6 +1,6 @@
 # Shell nástroje
 
-Okrem štandardných linuxových nástrojov sa Omarchy dodáva aj s množstvom vylepšených shell nástrojov. Tu sú tie hlavné.
+Okrem štandardných linuxových nástrojov sa Ve OS dodáva aj s množstvom vylepšených shell nástrojov. Tu sú tie hlavné.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Tento nástroj používa aj Neovim, keď napíšeš `Space S G`.
 
 [try](https://github.com/tobi/try) uľahčuje správu programátorských experimentov pomocou adresárov s dátumovou pečiatkou. Všetky experimenty žijú v `~/Work/tries` a máš k nim prístup prostredníctvom `try`.
 
-Omarchy nepridáva adresár `bin/` projektu do `PATH` automaticky. Dôveryhodné nástroje lokálne pre projekt spúšťaj s explicitnou relatívnou cestou, napríklad `bin/rails` alebo `./bin/dev`.
+Ve OS nepridáva adresár `bin/` projektu do `PATH` automaticky. Dôveryhodné nástroje lokálne pre projekt spúšťaj s explicitnou relatívnou cestou, napríklad `bin/rails` alebo `./bin/dev`.

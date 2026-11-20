@@ -1,8 +1,8 @@
 # Þemu
 
-Omarchy fylgja tuttugu og tvö falleg þemu. Þú getur valið á milli þeirra í gegnum _Útlit > Þema_ í Omarchy-valmyndinni (`Super + Space`) eða farið beint í þemavalið með `Super + Ctrl + T`.
+Ve OS fylgja tuttugu og tvö falleg þemu. Þú getur valið á milli þeirra í gegnum _Útlit > Þema_ í Ve OS-valmyndinni (`Super + Space`) eða farið beint í þemavalið með `Super + Ctrl + T`.
 
-Hvert þema stílar skjáborðið, útstöðina, neovim, virkniskjáinn (btop), Chromium og alla Omarchy-skelina: efstu stikuna, valmyndina, tilkynningar, OSD og læsiskjáinn. (Fyrir Obsidian þarftu að velja Omarchy-þemað handvirkt í gegnum _Útlit > Þemu_ inni í forritinu).
+Hvert þema stílar skjáborðið, útstöðina, neovim, virkniskjáinn (btop), Chromium og alla Ve OS-skelina: efstu stikuna, valmyndina, tilkynningar, OSD og læsiskjáinn. (Fyrir Obsidian þarftu að velja Ve OS-þemað handvirkt í gegnum _Útlit > Þemu_ inni í forritinu).
 
 Þemu hafa mengi bakgrunnsmynda sem þú getur valið á milli með `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Táknin í forritaræsinum og bryggjunni eru teiknuð í litum þemans þíns, �
 
 Þú getur sett upp táknasett sem einhver annar hefur búið til með _Setja upp > Stíll > Tákn_ (eða `omarchy icons install <git url>`), og fjarlægt það aftur undir _Fjarlægja > Tákn_. _Uppfæra > Aukatákn_ sækir nýjustu útgáfuna af settunum sem þú hefur sett upp.
 
-Til að búa til þitt eigið skaltu setja táknin þín í `~/.config/omarchy/icons/<name>/`, eina skrá fyrir hvert forrit, nefnda eftir `Icon=` línunni í `.desktop` skrá forritsins. Skrá sem endar á `.svg` er sýnd eins og hún er. Skrá sem endar á `.svg.tpl` er teiknuð í litum þemans: skrifaðu `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` eða `{{ icon_shadow }}` þar sem litur á að fara. Sjálfgefna settið í `/usr/share/omarchy/icons/papercraft/` er góður staður til að byrja á. Bættu við `preview.png` til að sýna settið þitt í veljaranum; án einnar slíkrar teiknar Omarchy forskoðun úr táknunum þínum. Til að breyta einu tákni í sjálfgefna settinu skaltu setja útgáfuna þína í `~/.config/omarchy/icons/papercraft/`.
+Til að búa til þitt eigið skaltu setja táknin þín í `~/.config/omarchy/icons/<name>/`, eina skrá fyrir hvert forrit, nefnda eftir `Icon=` línunni í `.desktop` skrá forritsins. Skrá sem endar á `.svg` er sýnd eins og hún er. Skrá sem endar á `.svg.tpl` er teiknuð í litum þemans: skrifaðu `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` eða `{{ icon_shadow }}` þar sem litur á að fara. Sjálfgefna settið í `/usr/share/omarchy/icons/papercraft/` er góður staður til að byrja á. Bættu við `preview.png` til að sýna settið þitt í veljaranum; án einnar slíkrar teiknar Ve OS forskoðun úr táknunum þínum. Til að breyta einu tákni í sjálfgefna settinu skaltu setja útgáfuna þína í `~/.config/omarchy/icons/papercraft/`.
 
 ### Aflæsingar
 

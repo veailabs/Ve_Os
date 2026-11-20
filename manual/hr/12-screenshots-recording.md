@@ -41,7 +41,7 @@ Te veze postoje samo dok je Omasnap otvoren, pa se ne mogu sudariti s bilo čime
 
 ## Snimanje zaslona
 
-`Alt + Print Screen` otvara _Trigger > Capture > Screenrecord_, koji pita što želite na zvučnoj podlozi: bez zvuka, zvuk radne površine, radnu površinu plus mikrofon ili radnu površinu plus mikrofon plus web-kameru. Ta posljednja opcija pojavljuje se samo ako vam je kamera stvarno priključena. Odaberite jednu i Omarchyjev odabir za snimanje omogućuje vam da povučete područje ili kliknete prozor ili monitor.
+`Alt + Print Screen` otvara _Trigger > Capture > Screenrecord_, koji pita što želite na zvučnoj podlozi: bez zvuka, zvuk radne površine, radnu površinu plus mikrofon ili radnu površinu plus mikrofon plus web-kameru. Ta posljednja opcija pojavljuje se samo ako vam je kamera stvarno priključena. Odaberite jednu i Ve OSjev odabir za snimanje omogućuje vam da povučete područje ili kliknete prozor ili monitor.
 
 Snimanje radi na gpu-screen-recorderu, koji kodira na GPU-u pri 60fps i vraća se na CPU ako mora. Rezultat je MP4 u `~/Videos`, nazvan `screenrecording-2026-08-13_14-22-05.mp4`. Postavite `OMARCHY_SCREENRECORD_DIR` da to promijenite — ali imajte na umu da, za razliku od direktorija za snimke zaslona, ovaj već mora postojati, inače snimanje odbija započeti.
 

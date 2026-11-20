@@ -1,10 +1,10 @@
 # Spletne aplikacije
 
-Svoje spletne aplikacije lahko dodate z _Install > Web App_ v meniju Omarchy (`Super + Space`). Vprašalo vas bo po imenu aplikacije, URL-ju aplikacije in URL-ju ikone, če je ne more pridobiti prek favicon. Odlične ikone PNG za številne priljubljene spletne aplikacije lahko dobite na [Dashboard Icons](https://dashboardicons.com).
+Svoje spletne aplikacije lahko dodate z _Install > Web App_ v meniju Ve OS (`Super + Space`). Vprašalo vas bo po imenu aplikacije, URL-ju aplikacije in URL-ju ikone, če je ne more pridobiti prek favicon. Odlične ikone PNG za številne priljubljene spletne aplikacije lahko dobite na [Dashboard Icons](https://dashboardicons.com).
 
 Nato bodo dostopne prek zaganjalnika aplikacij (`Super + Space`) in bodo uporabljale čudovito okno spletne aplikacije brez okvirja.
 
-Če želite odstraniti spletno aplikacijo, preprosto pojdite na _Remove > Web App_ v meniju Omarchy.
+Če želite odstraniti spletno aplikacijo, preprosto pojdite na _Remove > Web App_ v meniju Ve OS.
 
 Najbolje je, da se v vse svoje račune prijavite z običajnim brskalnikom, preden uporabite bližnjice spletnih aplikacij. Tanek okvir ovojalnice ne deluje dobro z 1password, zato se je preprosto lažje najprej prijaviti neposredno.
 
@@ -12,7 +12,7 @@ Vse bližnjice na tipkovnici za te spletne aplikacije lahko spremenite v `~/.con
 
 Ko ste v spletni aplikaciji, lahko trenutni URL kopirate v odložišče z `Shift + Alt + L`.
 
-Omarchy privzeto že vključuje izbor privzetih aplikacij:
+Ve OS privzeto že vključuje izbor privzetih aplikacij:
 
 ## HEY
 
@@ -64,7 +64,7 @@ YouTube lahko zaženete z `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) je najbolj priljubljen sistem za video klepet, ki se uporablja v ZDA. Odlične povezave po vsem svetu. In 40-minutne sestanke lahko izvedete brez plačljivega računa. Omarchy ovije spletnega odjemalca Zoom, povezave do sestankov Zoom pa se bodo odprle naravnost vanj.
+[Zoom](https://zoom.us/) je najbolj priljubljen sistem za video klepet, ki se uporablja v ZDA. Odlične povezave po vsem svetu. In 40-minutne sestanke lahko izvedete brez plačljivega računa. Ve OS ovije spletnega odjemalca Zoom, povezave do sestankov Zoom pa se bodo odprle naravnost vanj.
 
 Zoom zaženete z zaganjalnikom aplikacij (`Super + Space`).
 
@@ -76,7 +76,7 @@ Discord zaženete z zaganjalnikom aplikacij (`Super + Space`).
 
 ## Microsoftove aplikacije
 
-Izberite _Install > Service > Microsoft_, da dodate Outlook, Word, Excel, PowerPoint, Teams in OneDrive kot spletne aplikacije. Vsaka aplikacija ima svoj zaganjalnik in se odpre neposredno, pri čemer uporablja komercialne URL-je Microsoft 365 in vaš obstoječi profil brskalnika. Odprejo se v istih oknih aplikacij brskalnika kot druge spletne aplikacije Omarchy; ne namestijo ločenega odjemalca Teams for Linux.
+Izberite _Install > Service > Microsoft_, da dodate Outlook, Word, Excel, PowerPoint, Teams in OneDrive kot spletne aplikacije. Vsaka aplikacija ima svoj zaganjalnik in se odpre neposredno, pri čemer uporablja komercialne URL-je Microsoft 365 in vaš obstoječi profil brskalnika. Odprejo se v istih oknih aplikacij brskalnika kot druge spletne aplikacije Ve OS; ne namestijo ločenega odjemalca Teams for Linux.
 
 Paket odstranite z _Remove > Service > Microsoft_ ali odstranite posamezne aplikacije z _Remove > Web App_. Prek _Install > Web App_ lahko namestite tudi samo aplikacije, ki jih želite.
 
@@ -88,4 +88,4 @@ Za vladni ali suvereni oblak uredite URL v vrstici `Exec=` v ustreznem zaganjaln
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Imenik primera zamenjajte z absolutno potjo po svoji izbiri in isto pot uporabite za vseh šest zaganjalnikov, da bodo službene prijave med njimi deljene. Spletne aplikacije uporabljajo izbrani podprti brskalnik Omarchy, pri čemer uporabijo Chrome kot nadomestno možnost, kadar privzeti brskalnik ni podprt.
+Imenik primera zamenjajte z absolutno potjo po svoji izbiri in isto pot uporabite za vseh šest zaganjalnikov, da bodo službene prijave med njimi deljene. Spletne aplikacije uporabljajo izbrani podprti brskalnik Ve OS, pri čemer uporabijo Chrome kot nadomestno možnost, kadar privzeti brskalnik ni podprt.

@@ -1,14 +1,14 @@
 # Yläpalkki
 
-Näytön yläreunassa kulkeva kaistale on Omarchy-palkki. Se ei ole päälle pultattu tilapalkki, vaan osa Omarchy-kuorta, sitä yhtä pitkään käynnissä pysyvää Quickshell-prosessia, joka piirtää myös valikon, ilmoitukset, OSD-ponnahdusikkunat ja lukitusnäytön. Siksi sen teema sopii täydellisesti yhteen kaiken muun kanssa ja siksi paneeli aukeaa välittömästi sen sijaan, että käynnistäisi uuden sovelluksen.
+Näytön yläreunassa kulkeva kaistale on Ve OS-palkki. Se ei ole päälle pultattu tilapalkki, vaan osa Ve OS-kuorta, sitä yhtä pitkään käynnissä pysyvää Quickshell-prosessia, joka piirtää myös valikon, ilmoitukset, OSD-ponnahdusikkunat ja lukitusnäytön. Siksi sen teema sopii täydellisesti yhteen kaiken muun kanssa ja siksi paneeli aukeaa välittömästi sen sijaan, että käynnistäisi uuden sovelluksen.
 
 Se on myös se työpöydän osa, joka on aina näytöllä, joten kannattaa tietää, mitä kaikki nuo pienet kuviot tekevät.
 
 ## Mitä siinä on oletuksena
 
-Palkissa on kolme osiota. Vasemmalla ovat Omarchy-logo (valikon käynnistin) ja työtilojen ilmaisimet. Keskellä saat tilailmaisimet, kellon, Elsewhenin (maailmankello), sään ja Omarchy-päivitysmerkin. Oikealla: järjestelmälokero, näppäimistöasettelu (kun niitä on määritetty useampi kuin yksi), agentit, bluetooth, verkko, ääni, näyttö ja virta.
+Palkissa on kolme osiota. Vasemmalla ovat Ve OS-logo (valikon käynnistin) ja työtilojen ilmaisimet. Keskellä saat tilailmaisimet, kellon, Elsewhenin (maailmankello), sään ja Ve OS-päivitysmerkin. Oikealla: järjestelmälokero, näppäimistöasettelu (kun niitä on määritetty useampi kuin yksi), agentit, bluetooth, verkko, ääni, näyttö ja virta.
 
-Muutama niistä näkyy vain silloin, kun niillä on jotain sanottavaa. Näppäimistöasettelu näkyy vain, jos olet määrittänyt useamman kuin yhden asettelun. Päivitysmerkki näkyy vain silloin, kun Omarchy-päivitys odottaa. Ja agenttikuvake ilmestyy ensimmäisen kerran, kun Omarchy löytää koneelta AI-koodauskäyttöä (katso [AI](17-ai.md)).
+Muutama niistä näkyy vain silloin, kun niillä on jotain sanottavaa. Näppäimistöasettelu näkyy vain, jos olet määrittänyt useamman kuin yhden asettelun. Päivitysmerkki näkyy vain silloin, kun Ve OS-päivitys odottaa. Ja agenttikuvake ilmestyy ensimmäisen kerran, kun Ve OS löytää koneelta AI-koodauskäyttöä (katso [AI](17-ai.md)).
 
 ## Klikkailu
 
@@ -16,7 +16,7 @@ Lähes jokainen pienoisohjelma tekee jotain vasemmalla, oikealla ja keskimmäise
 
 | Pienoisohjelma | Vasen | Oikea | Keskimmäinen / vieritys |
 | --- | --- | --- | --- |
-| Valikko | Omarchy-valikko | Uusi pääte | — |
+| Valikko | Ve OS-valikko | Uusi pääte | — |
 | Työtilat | Siirrä tarkennus kyseiseen työtilaan tällä näytöllä | — | Vieritys: seuraava/edellinen työtila |
 | Kello | Kalenterin ponnahdusikkuna | Vaihda tunnisteen muotoa | Keskimmäinen: aikavyöhykkeen valitsin |
 | Sää | Ennusteen ponnahdusikkuna | Koko sää ilmoituksena | Keskimmäinen: päivitä |
@@ -29,7 +29,7 @@ Lähes jokainen pienoisohjelma tekee jotain vasemmalla, oikealla ja keskimmäise
 | Media | Toista/keskeytä | Kansikuvan ponnahdusikkuna | Keskimmäinen: seuraava · vieritys: edellinen/seuraava |
 | Agentit | Agenttipaneeli | Käynnistä agenttisi | Keskimmäinen: seuraava tilaus |
 | Ilmaisinalue | Vie hiiri päälle paljastaaksesi laatikon | Hallitse napsauttamalla chevronia oikealla painikkeella | — |
-| Omarchy-päivitys | Suorita päivitys | — | — |
+| Ve OS-päivitys | Suorita päivitys | — | — |
 
 Kaikki tuossa taulukossa oleva ei ole palkissasi heti käytössä. Mediapienoisohjelma (MPRIS nyt soi, vierivällä kappaleella ja esittäjällä) ja mikrofonipienoisohjelma ovat molemmat sisäänrakennettuja mutta oletuksena pois päältä — lisää ne, jos haluat ne, kuten alla kuvataan.
 
@@ -137,6 +137,6 @@ Jokainen pienoisohjelma on yksi merkintä yhdessä viidestä asettelutaulukosta,
 
 `center` on laatikko palkin keskellä: kaikki siinä oleva keskitetään näytölle yhtenä ryhmänä. `centerBegin` ja `centerEnd` riippuvat laatikon kummaltakin puolelta, mikä on tapa, jolla kello pysyy täsmälleen keskellä, vaikka sää ja päivitysmerkki tulevat ja menevät. Laita useampi kuin yksi pienoisohjelma kohtaan `center`, niin ne keskitetään yhdessä; jätä se tyhjäksi, niin `centerBegin` ja `centerEnd` kohtaavat palkin keskellä.
 
-Yksi sääntö, joka kannattaa sisäistää: **kun sinulla on oma `shell.json`, se on määräävä**. Kunnes mukautat mitään, kuori lukee Omarchyn oletustiedoston. Heti kun vedät pienoisohjelmaa, suoritat `omarchy bar` tai muokkaat tiedostoa itse, se on sinun — syvää yhdistämistä ei tehdä, joten tulevien Omarchy-julkaisujen uudet oletuspienoisohjelmat eivät ilmesty automaattisesti palkkiisi. `omarchy bar defaults` palauttaa mukana toimitetun asettelun aina, kun haluat puhtaan pöydän.
+Yksi sääntö, joka kannattaa sisäistää: **kun sinulla on oma `shell.json`, se on määräävä**. Kunnes mukautat mitään, kuori lukee Ve OSn oletustiedoston. Heti kun vedät pienoisohjelmaa, suoritat `omarchy bar` tai muokkaat tiedostoa itse, se on sinun — syvää yhdistämistä ei tehdä, joten tulevien Ve OS-julkaisujen uudet oletuspienoisohjelmat eivät ilmesty automaattisesti palkkiisi. `omarchy bar defaults` palauttaa mukana toimitetun asettelun aina, kun haluat puhtaan pöydän.
 
 Sama tiedosto sisältää myös valmiusaikasi ylätasolla, `bar`-avaimen ulkopuolella: `idle.screensaver` ja `idle.lock`, molemmat sekunteina siitä, kun siirryit valmiustilaan. Oletusnäytönsäästäjä käynnistyy siis 150 sekunnissa ja lukitus 300 sekunnissa.

@@ -1,6 +1,6 @@
 # Toetsenbord, muis, trackpad
 
-Met Hyprland configureer je al je invoerapparaten tot in detail. Je kunt de herhaling van het toetsenbord supersonisch snel maken of het trackpad natuurlijk laten scrollen. Je wijzigt dit allemaal in `~/.config/hypr/input.lua`, dat je ook kunt bereiken via _Setup > Input_ in het Omarchy-menu (`Super + Space`). Alles wat je daar instelt, vervangt de standaardinstellingen van Omarchy.
+Met Hyprland configureer je al je invoerapparaten tot in detail. Je kunt de herhaling van het toetsenbord supersonisch snel maken of het trackpad natuurlijk laten scrollen. Je wijzigt dit allemaal in `~/.config/hypr/input.lua`, dat je ook kunt bereiken via _Setup > Input_ in het Ve OS-menu (`Super + Space`). Alles wat je daar instelt, vervangt de standaardinstellingen van Ve OS.
 
 Hier is een voorbeeld:
 
@@ -59,7 +59,7 @@ Veeg over het trackpad om over het bureaublad te bewegen:
 | --- | --- |
 | Drie vingers naar links / rechts | Vorige / volgende workspace, inclusief lege |
 | Drie vingers omhoog | De AI-console tonen/verbergen |
-| Drie vingers omlaag | Het Omarchy-menu openen |
+| Drie vingers omlaag | Het Ve OS-menu openen |
 | Vier vingers naar links / rechts | Het actieve venster naar de vorige / volgende workspace verplaatsen |
 | Vier vingers omlaag | Volledig scherm in-/uitschakelen |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Om alle gebaren van Omarchy uit te schakelen, stel je `omarchy_default_gestures = false` in bovenaan `~/.config/hypr/hyprland.lua`, voordat de standaardinstellingen van Omarchy worden geladen.
+Om alle gebaren van Ve OS uit te schakelen, stel je `omarchy_default_gestures = false` in bovenaan `~/.config/hypr/hyprland.lua`, voordat de standaardinstellingen van Ve OS worden geladen.
 
 Op Dell XPS-laptops met een haptisch touchpad kun je ook de kliksterkte instellen op low, mid of high onder _Trigger > Hardware > Touchpad Haptics_.
 
 ### Typen in het Chinees, Japans en andere talen
 
-Selecteer Japans, Koreaans, Chinees (Vereenvoudigd, Pinyin), Taiwan (Zhuyin) of Hong Kong (Cangjie) wanneer het installatieprogramma naar je toetsenbord vraagt. Omarchy configureert het toetsenbord en de bijbehorende invoerengine automatisch, ook tijdens de offline installatie bij de eerste start. Japans gebruikt Mozc, Koreaans gebruikt de standaard tweedelige Hangul, Vereenvoudigd Chinees gebruikt Pinyin, Taiwan gebruikt de standaard Zhuyin-indeling van Chewing en Hong Kong gebruikt Cangjie met Hongkongse tekenvormen. Japans (US keyboard) biedt Mozc met een Amerikaanse toetsenbordindeling. Hangul-, Zhuyin- en Cangjie-toetsen blijven op hun standaardposities, zelfs wanneer je Latijnse letters typt met Dvorak, Colemak of AZERTY. Als je Hangul of Chewing hiervóór hebt toegevoegd, deselecteer en selecteer het dan opnieuw onder _Setup > Keyboard > Input Methods_ om de toetsen daarheen te verplaatsen; Omarchy laat een engine waarmee je al typt met rust.
+Selecteer Japans, Koreaans, Chinees (Vereenvoudigd, Pinyin), Taiwan (Zhuyin) of Hong Kong (Cangjie) wanneer het installatieprogramma naar je toetsenbord vraagt. Ve OS configureert het toetsenbord en de bijbehorende invoerengine automatisch, ook tijdens de offline installatie bij de eerste start. Japans gebruikt Mozc, Koreaans gebruikt de standaard tweedelige Hangul, Vereenvoudigd Chinees gebruikt Pinyin, Taiwan gebruikt de standaard Zhuyin-indeling van Chewing en Hong Kong gebruikt Cangjie met Hongkongse tekenvormen. Japans (US keyboard) biedt Mozc met een Amerikaanse toetsenbordindeling. Hangul-, Zhuyin- en Cangjie-toetsen blijven op hun standaardposities, zelfs wanneer je Latijnse letters typt met Dvorak, Colemak of AZERTY. Als je Hangul of Chewing hiervóór hebt toegevoegd, deselecteer en selecteer het dan opnieuw onder _Setup > Keyboard > Input Methods_ om de toetsen daarheen te verplaatsen; Ve OS laat een engine waarmee je al typt met rust.
 
 Typen begint in de Latijnse modus. Druk op `Super + I` om door de geconfigureerde invoermethoden te bladeren, en op `Super + Shift + I` om terug te bladeren. Tik op `Shift` op zichzelf om uit een invoermethode zoals Pinyin te stappen naar Latijnse letters, en tik er opnieuw op om terug te gaan, zoals Sogou, Microsoft Pinyin en macOS werken; `Shift` plus een letter typt nog steeds een hoofdletter. Op Japanse toetsenborden schakelt 全角/半角 de invoer, zet 変換 hem aan en zet 無変換 hem uit. Bij Koreaans schakelt 한/영 Hangul en converteert 한자 naar Hanja, of je toetsenbord nu speciale toetsen heeft of daarvoor Right Alt en Right Ctrl stuurt, zoals veel laptops doen, dus Right Alt en Right Ctrl zijn daar geen gewone modificatietoetsen; dicteren schakelt in plaats daarvan met Alt + Space. `Ctrl + Space` blijft beschikbaar voor Tmux en Herdr; `Shift + CapsLock` blijft de compose-toets.
 
 De toetsenbordindicator verschijnt rechts in de balk wanneer je meerdere toetsenbordindelingen of invoermethoden hebt. Klik erop om van invoertaal te wisselen; Japans geeft あ weer voor hiragana. Voor Japanse tekenkeuzes schakel je over naar Japans, typ je een woord zoals `nihongo` en druk je vervolgens twee keer op Space. Druk op Enter om je keuze te accepteren. Als je ook meerdere toetsenbordindelingen hebt, klik je met de rechtermuisknop op de indicator om daartussen te bladeren.
 
-Gebruik _Setup > Keyboard > Keyboard Inputs_ om indelingen zoals Engels en Frans te selecteren, uit dezelfde keuzes die tijdens de installatie worden aangeboden. Gebruik _Setup > Keyboard > Input Methods_ om te selecteren welke compositie-engines actief zijn. Beide kiezers openen in het Omarchy-menu met je huidige selecties aangevinkt. Klik of druk op Enter om een keuze in of uit te schakelen; elke wijziging wordt onmiddellijk toegepast. Als je een invoermethode deselecteert, wordt deze uit de cyclus verwijderd zonder hem te verwijderen; het toetsenbord blijft beschikbaar.
+Gebruik _Setup > Keyboard > Keyboard Inputs_ om indelingen zoals Engels en Frans te selecteren, uit dezelfde keuzes die tijdens de installatie worden aangeboden. Gebruik _Setup > Keyboard > Input Methods_ om te selecteren welke compositie-engines actief zijn. Beide kiezers openen in het Ve OS-menu met je huidige selecties aangevinkt. Klik of druk op Enter om een keuze in of uit te schakelen; elke wijziging wordt onmiddellijk toegepast. Als je een invoermethode deselecteert, wordt deze uit de cyclus verwijderd zonder hem te verwijderen; het toetsenbord blijft beschikbaar.
 
 Voer `omarchy setup keyboard` of `omarchy setup input` uit om dezelfde kiezers te openen. Om één taal vanaf de commandoregel toe te voegen, gebruik je `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` of `cangjie5`. Quick, Boshiamy en Array zitten in hetzelfde pakket als Cangjie en verschijnen in de kiezer voor Input Methods. Je aangepaste schakeltoetsen blijven behouden. Voor alternatieve engine-indelingen of -toetsen installeer je `fcitx5-configtool` met `omarchy pkg add fcitx5-configtool` en start je het vanuit een terminal. Het selecteren van een invoertaal verandert de bureaubladtaal niet. Als je Japans, Koreaans of Chinees kiest onder _Setup > Language_, wordt de bijbehorende invoermethode toegevoegd als je er nog geen hebt.
 

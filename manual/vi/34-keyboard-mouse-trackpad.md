@@ -1,6 +1,6 @@
 # Bàn phím, Chuột, Trackpad
 
-Hyprland cho phép bạn cấu hình mọi thiết bị đầu vào của mình với chi tiết tuyệt vời. Bạn có thể thay đổi tốc độ lặp phím thành nhanh siêu tốc hoặc khiến trackpad dùng cuộn tự nhiên. Bạn thay đổi tất cả trong `~/.config/hypr/input.lua`, mà bạn cũng có thể truy cập qua _Setup > Input_ trong menu Omarchy (`Super + Space`). Bất cứ điều gì bạn đặt ở đó sẽ thay thế các mặc định của Omarchy.
+Hyprland cho phép bạn cấu hình mọi thiết bị đầu vào của mình với chi tiết tuyệt vời. Bạn có thể thay đổi tốc độ lặp phím thành nhanh siêu tốc hoặc khiến trackpad dùng cuộn tự nhiên. Bạn thay đổi tất cả trong `~/.config/hypr/input.lua`, mà bạn cũng có thể truy cập qua _Setup > Input_ trong menu Ve OS (`Super + Space`). Bất cứ điều gì bạn đặt ở đó sẽ thay thế các mặc định của Ve OS.
 
 Đây là một ví dụ:
 
@@ -59,7 +59,7 @@ Vuốt trên trackpad để di chuyển quanh desktop:
 | --- | --- |
 | Ba ngón tay sang trái / phải | Workspace trước / tiếp theo, bao gồm cả những workspace trống |
 | Ba ngón tay lên | Bật/tắt AI console |
-| Ba ngón tay xuống | Mở menu Omarchy |
+| Ba ngón tay xuống | Mở menu Ve OS |
 | Bốn ngón tay sang trái / phải | Di chuyển cửa sổ đang hoạt động sang workspace trước / tiếp theo |
 | Bốn ngón tay xuống | Bật/tắt toàn màn hình |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Để tắt tất cả các cử chỉ của Omarchy, hãy đặt `omarchy_default_gestures = false` gần đầu `~/.config/hypr/hyprland.lua`, trước khi các mặc định của Omarchy tải.
+Để tắt tất cả các cử chỉ của Ve OS, hãy đặt `omarchy_default_gestures = false` gần đầu `~/.config/hypr/hyprland.lua`, trước khi các mặc định của Ve OS tải.
 
 Trên laptop Dell XPS với touchpad xúc giác, bạn cũng có thể đặt độ mạnh của cú nhấp thành low, mid, hoặc high dưới _Trigger > Hardware > Touchpad Haptics_.
 
 ### Gõ tiếng Trung, tiếng Nhật, và các ngôn ngữ khác
 
-Chọn Japanese, Korean, Chinese (Simplified, Pinyin), Taiwan (Zhuyin), hoặc Hong Kong (Cangjie) khi trình cài đặt hỏi về bàn phím của bạn. Omarchy cấu hình bàn phím và bộ máy đầu vào phù hợp một cách tự động, kể cả trong quá trình thiết lập lần khởi động đầu tiên ngoại tuyến. Japanese dùng Mozc, Korean dùng Hangul hai bộ tiêu chuẩn, Simplified Chinese dùng Pinyin, Taiwan dùng cách sắp xếp Zhuyin tiêu chuẩn của Chewing, và Hong Kong dùng Cangjie với các dạng ký tự Hong Kong. Japanese (US keyboard) cung cấp Mozc với bố cục bàn phím US. Các phím Hangul, Zhuyin, và Cangjie giữ nguyên vị trí tiêu chuẩn của chúng ngay cả khi bạn gõ chữ Latin bằng Dvorak, Colemak, hoặc AZERTY. Nếu bạn đã thêm Hangul hoặc Chewing trước đây, hãy bỏ chọn và chọn lại nó dưới _Setup > Keyboard > Input Methods_ để di chuyển các phím của nó đến đó; Omarchy để yên một bộ máy mà bạn đã gõ với nó.
+Chọn Japanese, Korean, Chinese (Simplified, Pinyin), Taiwan (Zhuyin), hoặc Hong Kong (Cangjie) khi trình cài đặt hỏi về bàn phím của bạn. Ve OS cấu hình bàn phím và bộ máy đầu vào phù hợp một cách tự động, kể cả trong quá trình thiết lập lần khởi động đầu tiên ngoại tuyến. Japanese dùng Mozc, Korean dùng Hangul hai bộ tiêu chuẩn, Simplified Chinese dùng Pinyin, Taiwan dùng cách sắp xếp Zhuyin tiêu chuẩn của Chewing, và Hong Kong dùng Cangjie với các dạng ký tự Hong Kong. Japanese (US keyboard) cung cấp Mozc với bố cục bàn phím US. Các phím Hangul, Zhuyin, và Cangjie giữ nguyên vị trí tiêu chuẩn của chúng ngay cả khi bạn gõ chữ Latin bằng Dvorak, Colemak, hoặc AZERTY. Nếu bạn đã thêm Hangul hoặc Chewing trước đây, hãy bỏ chọn và chọn lại nó dưới _Setup > Keyboard > Input Methods_ để di chuyển các phím của nó đến đó; Ve OS để yên một bộ máy mà bạn đã gõ với nó.
 
 Việc gõ bắt đầu ở chế độ Latin. Nhấn `Super + I` để chuyển vòng qua các phương thức đầu vào đã cấu hình, và `Super + Shift + I` để chuyển vòng ngược lại. Nhấn `Shift` riêng để bước ra khỏi một phương thức đầu vào như Pinyin sang chữ Latin, và nhấn lại để quay lại, theo cách Sogou, Microsoft Pinyin, và macOS hoạt động; `Shift` cộng một chữ cái vẫn gõ một chữ hoa. Trên bàn phím Japanese, 全角/半角 bật/tắt đầu vào, 変換 bật nó, và 無変換 tắt nó. Với Korean, 한/영 chuyển Hangul và 한자 chuyển đổi sang Hanja, dù bàn phím của bạn có phím chuyên dụng hay gửi Right Alt và Right Ctrl cho chúng, như nhiều laptop làm, vì vậy Right Alt và Right Ctrl không phải là phím modifier thuần túy ở đó; đọc chính tả bật/tắt bằng Alt + Space thay vào đó. `Ctrl + Space` vẫn khả dụng cho Tmux và Herdr; `Shift + CapsLock` vẫn là phím compose.
 
 Chỉ báo bàn phím xuất hiện ở phía bên phải của thanh khi bạn có nhiều bố cục bàn phím hoặc phương thức đầu vào. Nhấp vào nó để chuyển ngôn ngữ đầu vào; Japanese hiển thị あ cho hiragana. Đối với các lựa chọn ký tự Japanese, hãy chuyển sang Japanese, gõ một từ như `nihongo`, sau đó nhấn Space hai lần. Nhấn Enter để chấp nhận lựa chọn của bạn. Nếu bạn cũng có nhiều bố cục bàn phím, hãy nhấp chuột phải vào chỉ báo để chuyển vòng qua chúng.
 
-Dùng _Setup > Keyboard > Keyboard Inputs_ để chọn các bố cục như English và French, từ cùng các lựa chọn được cung cấp trong quá trình cài đặt. Dùng _Setup > Keyboard > Input Methods_ để chọn bộ máy soạn thảo nào đang hoạt động. Cả hai bộ chọn đều mở bên trong menu Omarchy với các lựa chọn hiện tại của bạn được đánh dấu. Nhấp hoặc nhấn Enter để bật/tắt một lựa chọn; mỗi thay đổi áp dụng ngay lập tức. Bỏ chọn một phương thức đầu vào sẽ loại bỏ nó khỏi vòng chuyển đổi mà không gỡ cài đặt nó; bàn phím vẫn khả dụng.
+Dùng _Setup > Keyboard > Keyboard Inputs_ để chọn các bố cục như English và French, từ cùng các lựa chọn được cung cấp trong quá trình cài đặt. Dùng _Setup > Keyboard > Input Methods_ để chọn bộ máy soạn thảo nào đang hoạt động. Cả hai bộ chọn đều mở bên trong menu Ve OS với các lựa chọn hiện tại của bạn được đánh dấu. Nhấp hoặc nhấn Enter để bật/tắt một lựa chọn; mỗi thay đổi áp dụng ngay lập tức. Bỏ chọn một phương thức đầu vào sẽ loại bỏ nó khỏi vòng chuyển đổi mà không gỡ cài đặt nó; bàn phím vẫn khả dụng.
 
 Chạy `omarchy setup keyboard` hoặc `omarchy setup input` để mở cùng các bộ chọn đó. Để thêm một ngôn ngữ từ dòng lệnh, dùng `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing`, hoặc `cangjie5`. Quick, Boshiamy, và Array đi kèm trong cùng gói với Cangjie và xuất hiện trong bộ chọn Input Methods. Các phím chuyển đổi tùy chỉnh của bạn được giữ nguyên. Đối với bố cục hoặc phím của bộ máy thay thế, hãy cài đặt `fcitx5-configtool` bằng `omarchy pkg add fcitx5-configtool` và khởi chạy nó từ terminal. Chọn một ngôn ngữ đầu vào không thay đổi ngôn ngữ desktop. Chọn Japanese, Korean, hoặc Chinese dưới _Setup > Language_ sẽ thêm phương thức đầu vào của nó khi bạn chưa có phương thức nào.
 

@@ -28,7 +28,7 @@ Isto apresentará domingo 10:55 AM.
 
 ### Como mudo o meu fuso horário?
 
-Execute _Atualizar > Fuso Horário_ no menu do Omarchy e escolha a partir da lista. Se o fuso horário estiver certo mas o próprio relógio tiver dessincronizado, _Atualizar > Hora_ reinicia a sincronização da hora por si.
+Execute _Atualizar > Fuso Horário_ no menu do Ve OS e escolha a partir da lista. Se o fuso horário estiver certo mas o próprio relógio tiver dessincronizado, _Atualizar > Hora_ reinicia a sincronização da hora por si.
 
 ### Como mudo o meu DNS, partilho o meu Wi-Fi ou verifico a velocidade da minha ligação?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Pode fazer o mesmo para as gravações de ecrã utilizando `OMARCHY_SCREENRECORD_DIR`.
 
-O Omasnap cria automaticamente o seu diretório de capturas de ecrã. Crie o diretório de gravações de ecrã e, em seguida, reinicie o Omarchy para que qualquer uma das alterações ao ambiente entre em vigor.
+O Omasnap cria automaticamente o seu diretório de capturas de ecrã. Crie o diretório de gravações de ecrã e, em seguida, reinicie o Ve OS para que qualquer uma das alterações ao ambiente entre em vigor.
 
 ### Como ponho as colunas + webcam a funcionar no meu Apple Studio Display?
 
 Pensaria que devia funcionar tudo ligando apenas por USB C, mas infelizmente não é o caso. A solução que encontrei para pôr tudo a funcionar de forma fiável é utilizar [o cabo WJESOG DisplayPort + USB-A => USB-C](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Depois, as colunas e a webcam funcionam às mil maravilhas.
 
-Lembre-se de que tem controlo de brilho integrado no Omarchy para os ecrãs Apple (tanto o Studio como o XDR) utilizando os botões normais de brilho do teclado.
+Lembre-se de que tem controlo de brilho integrado no Ve OS para os ecrãs Apple (tanto o Studio como o XDR) utilizando os botões normais de brilho do teclado.
 
 ### Como me livro de todo o software extra?
 
@@ -72,7 +72,7 @@ Se não quiser programas como o Obsidian ou o LibreOffice ou qualquer outro mate
 
 Execute _Remover > Pacote_ para ver todos os pacotes instalados. Depois, pode selecionar qualquer pacote que pretenda remover com tab, e começar a remover tudo o que selecionou com return.
 
-E pode utilizar _Remover > Aplicação Web_ a partir do menu do Omarchy para remover qualquer uma das aplicações web pré-instaladas que não queira.
+E pode utilizar _Remover > Aplicação Web_ a partir do menu do Ve OS para remover qualquer uma das aplicações web pré-instaladas que não queira.
 
 Ou execute _Remover > Pré-instalados_ para varrer todos os extras pré-instalados — aplicações web, TUIs, e aplicações opcionais — de uma só vez. As teclas de atalho que as lançavam desaparecem com eles, pelo que fica com uma folha limpa de atalhos para preencher com os seus em `~/.config/hypr/bindings.lua`.
 

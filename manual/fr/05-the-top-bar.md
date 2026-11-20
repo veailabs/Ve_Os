@@ -1,14 +1,14 @@
 # La barre supérieure
 
-La bande en haut de votre écran est la barre Omarchy. Ce n'est pas une barre d'état rapportée, mais une partie du shell Omarchy, l'unique processus Quickshell de longue durée qui dessine aussi le menu, les notifications, les fenêtres OSD et l'écran de verrouillage. C'est pourquoi son thème s'accorde parfaitement avec tout le reste et pourquoi un panneau s'ouvre instantanément au lieu de lancer une nouvelle application.
+La bande en haut de votre écran est la barre Ve OS. Ce n'est pas une barre d'état rapportée, mais une partie du shell Ve OS, l'unique processus Quickshell de longue durée qui dessine aussi le menu, les notifications, les fenêtres OSD et l'écran de verrouillage. C'est pourquoi son thème s'accorde parfaitement avec tout le reste et pourquoi un panneau s'ouvre instantanément au lieu de lancer une nouvelle application.
 
 C'est aussi le seul élément du bureau toujours à l'écran, donc il vaut la peine de savoir ce que font tous ces petits glyphes.
 
 ## Ce qu'elle affiche par défaut
 
-La barre comporte trois sections. À gauche se trouvent le logo Omarchy (le lanceur du menu) et les indicateurs d'espaces de travail. Au centre, vous avez les indicateurs d'état, l'horloge, Elsewhen (une horloge mondiale), la météo et un badge de mise à jour Omarchy. À droite : la zone de notification système, la disposition du clavier (quand plusieurs sont configurées), les agents, le bluetooth, le réseau, l'audio, l'écran et l'alimentation.
+La barre comporte trois sections. À gauche se trouvent le logo Ve OS (le lanceur du menu) et les indicateurs d'espaces de travail. Au centre, vous avez les indicateurs d'état, l'horloge, Elsewhen (une horloge mondiale), la météo et un badge de mise à jour Ve OS. À droite : la zone de notification système, la disposition du clavier (quand plusieurs sont configurées), les agents, le bluetooth, le réseau, l'audio, l'écran et l'alimentation.
 
-Quelques-uns ne s'affichent que lorsqu'ils ont quelque chose à dire. La disposition du clavier n'apparaît que si vous en avez configuré plusieurs. Le badge de mise à jour n'apparaît que lorsqu'une mise à jour Omarchy vous attend. Et l'icône des agents apparaît la première fois qu'Omarchy détecte une utilisation de codage par IA sur la machine (voir [IA](17-ai.md)).
+Quelques-uns ne s'affichent que lorsqu'ils ont quelque chose à dire. La disposition du clavier n'apparaît que si vous en avez configuré plusieurs. Le badge de mise à jour n'apparaît que lorsqu'une mise à jour Ve OS vous attend. Et l'icône des agents apparaît la première fois qu'Ve OS détecte une utilisation de codage par IA sur la machine (voir [IA](17-ai.md)).
 
 ## Cliquer partout
 
@@ -16,7 +16,7 @@ Presque chaque widget fait quelque chose au clic gauche, droit et du milieu, et 
 
 | Widget | Clic gauche | Clic droit | Clic du milieu / défilement |
 | --- | --- | --- | --- |
-| Menu | Menu Omarchy | Nouveau terminal | — |
+| Menu | Menu Ve OS | Nouveau terminal | — |
 | Espaces de travail | Basculer vers cet espace de travail sur ce moniteur | — | Défilement : espace de travail suivant/précédent |
 | Horloge | Fenêtre calendrier | Faire défiler les formats d'affichage | Clic du milieu : sélecteur de fuseau horaire |
 | Météo | Fenêtre des prévisions | Météo complète sous forme de notification | Clic du milieu : actualiser |
@@ -29,7 +29,7 @@ Presque chaque widget fait quelque chose au clic gauche, droit et du milieu, et 
 | Média | Lecture/pause | Fenêtre de la pochette | Clic du milieu : suivant · défilement : précédent/suivant |
 | Agents | Panneau des agents | Lancer votre agent | Clic du milieu : abonnement suivant |
 | Zone de notification | Survoler pour révéler le tiroir | Clic droit sur le chevron pour gérer | — |
-| Mise à jour Omarchy | Lancer la mise à jour | — | — |
+| Mise à jour Ve OS | Lancer la mise à jour | — | — |
 
 Tout ce qui figure dans ce tableau n'est pas sur votre barre dès le départ. Le widget média (MPRIS, lecture en cours, avec titre et artiste qui défilent) et le widget microphone sont tous deux intégrés mais désactivés par défaut — ajoutez-les si vous les voulez, comme décrit ci-dessous.
 
@@ -137,6 +137,6 @@ Chaque widget est une entrée dans l'un des cinq tableaux de disposition, et ses
 
 `center` est la boîte au milieu de la barre : tout ce qui s'y trouve est centré sur l'écran comme un seul groupe. `centerBegin` et `centerEnd` s'accrochent de chaque côté de la boîte, ce qui permet à l'horloge de rester parfaitement au centre même quand la météo et le badge de mise à jour vont et viennent. Mettez plusieurs widgets dans `center` et ils seront centrés ensemble ; laissez-le vide et `centerBegin` et `centerEnd` se rejoignent au milieu de la barre.
 
-Une règle qui vaut la peine d'être intégrée : **une fois que vous avez votre propre `shell.json`, il fait foi**. Tant que vous ne personnalisez rien, le shell lit le fichier par défaut d'Omarchy. Dès que vous faites glisser un widget, lancez `omarchy bar` ou modifiez le fichier vous-même, il vous appartient — il n'y a pas de fusion profonde, donc les nouveaux widgets par défaut des futures versions d'Omarchy n'apparaîtront pas automatiquement sur votre barre. `omarchy bar defaults` remet la disposition livrée par défaut chaque fois que vous voulez repartir de zéro.
+Une règle qui vaut la peine d'être intégrée : **une fois que vous avez votre propre `shell.json`, il fait foi**. Tant que vous ne personnalisez rien, le shell lit le fichier par défaut d'Ve OS. Dès que vous faites glisser un widget, lancez `omarchy bar` ou modifiez le fichier vous-même, il vous appartient — il n'y a pas de fusion profonde, donc les nouveaux widgets par défaut des futures versions d'Ve OS n'apparaîtront pas automatiquement sur votre barre. `omarchy bar defaults` remet la disposition livrée par défaut chaque fois que vous voulez repartir de zéro.
 
 Le même fichier contient aussi vos délais d'inactivité au niveau supérieur, en dehors de la clé `bar` : `idle.screensaver` et `idle.lock`, tous deux en secondes depuis que vous êtes devenu inactif. Ainsi, l'économiseur d'écran par défaut se déclenche à 150 secondes et le verrouillage à 300.

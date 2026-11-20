@@ -1,4 +1,6 @@
-# Ag Tosú
+# Ve OS — Ag Tosú
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Suiteáiltear Omarchy le ISO. Is féidir leat roghnú idir suiteáil lán-diosca, a ghlacann seilbh ar an tiomántán ar fad, nó suiteáil spáis shaor, a chuireann Omarchy sa spás neamhleithdháilte ar thiomántán — sin é an chaoi a ndéanann tú dé-thosú taobh le Windows nó córas oibriúcháin eile (féach [suiteáil dé-thosaithe](50-dual-boot-install.md) — tabhair faoi deara go mbeidh ort BitLocker a mhúchadh in Windows ar dtús). Cibé bealach, criptiú iomlán is ea an réamhshocrú don tsuiteáil, agus scriosfaidh an rogha lán-diosca an tiomántán roghnaithe, mar sin déan cinnte cúltaca a dhéanamh sula n-úsáideann tú ceann atá ann cheana!
 

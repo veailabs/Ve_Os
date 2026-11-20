@@ -1,6 +1,6 @@
 # Branding
 
-Met Omarchy kun je je bedrijfslogo of persoonlijke afbeelding instellen voor zowel de opstartontgrendeling, de schermbeveiliging als het Over-scherm.
+Met Ve OS kun je je bedrijfslogo of persoonlijke afbeelding instellen voor zowel de opstartontgrendeling, de schermbeveiliging als het Over-scherm.
 
 ### Opstartontgrendeling
 
@@ -24,11 +24,11 @@ Er staan drie items in dat menu:
 
 - **Tekst bewerken** opent `~/.config/omarchy/branding/screensaver.txt` in je editor. Typ of plak wat je maar wilt — ASCII-kunst, je naam, een grof woord. Sla op en sluit af, en de schermbeveiliging start meteen op zodat je het kunt zien.
 - **Instellen vanuit afbeelding** opent een bestandsselector voor een png of svg, zet die om naar ASCII en laat je het resultaat zien. Logo's met een duidelijk silhouet werken veel beter dan foto's.
-- **Standaard herstellen** zet het Omarchy-logo terug.
+- **Standaard herstellen** zet het Ve OS-logo terug.
 
 ### Over-scherm
 
-Dezelfde drie opties staan onder _Uiterlijk > Branding > Over_ voor het _Over_-scherm dat je krijgt via het Omarchy-menu, en ze werken identiek — het bestand is `~/.config/omarchy/branding/about.txt`, en het Over-venster verschijnt na elke wijziging. De Over-afbeelding wordt omgezet naar een kleiner formaat dan die van de schermbeveiliging, omdat ze in een venster moet passen in plaats van je hele scherm te vullen.
+Dezelfde drie opties staan onder _Uiterlijk > Branding > Over_ voor het _Over_-scherm dat je krijgt via het Ve OS-menu, en ze werken identiek — het bestand is `~/.config/omarchy/branding/about.txt`, en het Over-venster verschijnt na elke wijziging. De Over-afbeelding wordt omgezet naar een kleiner formaat dan die van de schermbeveiliging, omdat ze in een venster moet passen in plaats van je hele scherm te vullen.
 
 Terwijl het venster open is, schuift er om de paar seconden een groene glans over de afbeelding heen en laat die daarna weer stil achter. Je eigen afbeelding krijgt die ook, zolang elk teken erin één kolom breed is — en dat is alles wat _Instellen vanuit afbeelding_ produceert. Kunst opgebouwd uit emoji of tekens met dubbele breedte blijft in plaats daarvan stil, en dat geldt ook voor het scherm als je een eigen fastfetch-configuratie aanhoudt: een stilstaand logo is in die gevallen de animatie die uit de weg blijft in plaats van faalt, omdat een glans eroverheen schuiven de rest van de regel op de verkeerde plek zou laten belanden.
 

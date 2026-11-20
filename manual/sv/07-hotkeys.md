@@ -8,7 +8,7 @@ Varje kortkommando ligger på ett plan, bestämt av dess modifierare, och varje 
 
 | Plan | Vad som finns där | Exempel |
 | --- | --- | --- |
-| `Super + key` | Systemet: fönster, arbetsytor, layouter och kärnmenyer | `Super + Space` Omarchy-menyn, `Super + W` stäng fönster, `Super + F` helskärm |
+| `Super + key` | Systemet: fönster, arbetsytor, layouter och kärnmenyer | `Super + Space` Ve OS-menyn, `Super + W` stäng fönster, `Super + F` helskärm |
 | `Super + Shift + key` | Appar | `Super + Shift + B` webbläsare, `Super + Shift + E` e-post, `Super + Shift + N` redigerare |
 | `Super + Ctrl + key` | Paneler och systemmenyer | `Super + Ctrl + A` ljud, `Super + Ctrl + N` nätverk, `Super + Ctrl + C` fångstmeny |
 | `Super + Ctrl + Alt + key` | Snabbåtgärder och aviseringar | `Super + Ctrl + Alt + T` visa tid, `Super + Ctrl + Alt + B` batteri, `Super + Ctrl + Alt + C` skärmbild |
@@ -34,7 +34,7 @@ Om en standardinställning inte passar dig (säg att du vill ha `Super + Shift +
 
 | Kortkommando | Funktion |
 | ----------------------- | --------------------- |
-| `Super + Space` | Omarchy-menyn (appar och allt annat) |
+| `Super + Space` | Ve OS-menyn (appar och allt annat) |
 | `Super + Alt + Space` | Apprutnät |
 | `Super + Escape` | Systemmenyn (viloläge, omstart, osv.) |
 | `Super + Ctrl + L` | Lås datorn |
@@ -172,7 +172,7 @@ Genvägar för storleksändring använder de fysiska tangenterna `code:20` och `
 | `Super + V` | Klistra in |
 | `Super + Ctrl + V` | Urklippshanterare |
 
-Vanligtvis på Linux behöver du `Ctrl + Shift + C/V` för att kopiera och klistra in i terminalen och `Ctrl + C/V` för att göra det överallt annars. De här enhetliga urklippskortkommandona i Omarchy fungerar överallt.
+Vanligtvis på Linux behöver du `Ctrl + Shift + C/V` för att kopiera och klistra in i terminalen och `Ctrl + C/V` för att göra det överallt annars. De här enhetliga urklippskortkommandona i Ve OS fungerar överallt.
 
 ## Fångst
 
@@ -194,7 +194,7 @@ Vanligtvis på Linux behöver du `Ctrl + Shift + C/V` för att kopiera och klist
 
 Vid skärminspelningar frågar kortkommandot först vilket ljud du vill ha, sedan börjar inspelningen. Tryck på det igen för att stoppa. Se [skärmbilder och inspelning](12-screenshots-recording.md) för detaljerna.
 
-Alla fångstalternativ finns också under _Trigger > Capture_ i Omarchy-menyn (`Super + Space`).
+Alla fångstalternativ finns också under _Trigger > Capture_ i Ve OS-menyn (`Super + Space`).
 
 ## Aviseringar
 
@@ -216,9 +216,9 @@ Alla fångstalternativ finns också under _Trigger > Capture_ i Omarchy-menyn (`
 | `Super + Backspace` | Växla transparens på ett fönster |
 | `Super + Ctrl + Backspace` | Växla kvadratiskt format för ett enskilt fönster |
 
-Extra bakgrundsbilder finns i `~/.config/omarchy/backgrounds/<theme name>`. Finns också via _Install > Style > Background_ i Omarchy-menyn.
+Extra bakgrundsbilder finns i `~/.config/omarchy/backgrounds/<theme name>`. Finns också via _Install > Style > Background_ i Ve OS-menyn.
 
-Alla stilalternativ finns också under _Style_ i Omarchy-menyn (`Super + Space`).
+Alla stilalternativ finns också under _Style_ i Ve OS-menyn (`Super + Space`).
 
 ## Växlingar
 
@@ -319,7 +319,7 @@ De här funktionerna måste köras inuti en Tmux-session.
 
 ## Ghostty-terminalen
 
-Ghostty-terminalen installeras med _Install > Terminal_ via Omarchy-menyn.
+Ghostty-terminalen installeras med _Install > Terminal_ via Ve OS-menyn.
 
 | Kortkommando | Funktion |
 | ----------------------- | --------------------- |

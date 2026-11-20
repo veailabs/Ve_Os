@@ -1,6 +1,6 @@
 # Rete
 
-La rete in Omarchy è gestita da NetworkManager e la controlli dall'icona della rete nella [barra superiore](05-the-top-bar.md) o con `Super + Ctrl + N`.
+La rete in Ve OS è gestita da NetworkManager e la controlli dall'icona della rete nella [barra superiore](05-the-top-bar.md) o con `Super + Ctrl + N`.
 
 Quel pannello cerca le reti Wi-Fi, mostra la potenza del segnale e si connette. Per Ethernet non serve assolutamente nulla: colleghi il cavo e funziona. Se preferisci restare nel terminale, `nmtui` ti offre gli stessi controlli e c'è anche un gruppo di comandi `omarchy network`.
 
@@ -12,7 +12,7 @@ Se ti serve proprio la password stessa, `omarchy network password <interface>` l
 
 ## DNS
 
-Omarchy usa qualsiasi DNS la tua rete fornisca tramite DHCP. Puoi sostituirlo per l'intera macchina in _Configurazione > Rete > DNS_, dove Cloudflare e Google sono a un clic di distanza. Scegli _Personalizzato_ per inserire i tuoi server.
+Ve OS usa qualsiasi DNS la tua rete fornisca tramite DHCP. Puoi sostituirlo per l'intera macchina in _Configurazione > Rete > DNS_, dove Cloudflare e Google sono a un clic di distanza. Scegli _Personalizzato_ per inserire i tuoi server.
 
 Dal terminale, `omarchy dns` stampa il provider attuale e `omarchy dns Cloudflare` ne imposta uno.
 

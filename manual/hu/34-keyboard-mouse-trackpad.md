@@ -1,6 +1,6 @@
 # Billentyűzet, egér, érintőpad
 
-A Hyprland lehetővé teszi, hogy minden beviteli eszközödet részletesen beállítsd. Beállíthatod, hogy a billentyűzetismétlés szuperszonikusan gyors legyen, vagy hogy az érintőpad természetes görgetést használjon. Mindezt a `~/.config/hypr/input.lua` fájlban módosíthatod, amelyet az Omarchy menüben (`Super + Space`) a _Setup > Input_ útvonalon is elérhetsz. Amit ott beállítasz, felülírja az Omarchy alapértelmezéseit.
+A Hyprland lehetővé teszi, hogy minden beviteli eszközödet részletesen beállítsd. Beállíthatod, hogy a billentyűzetismétlés szuperszonikusan gyors legyen, vagy hogy az érintőpad természetes görgetést használjon. Mindezt a `~/.config/hypr/input.lua` fájlban módosíthatod, amelyet az Ve OS menüben (`Super + Space`) a _Setup > Input_ útvonalon is elérhetsz. Amit ott beállítasz, felülírja az Ve OS alapértelmezéseit.
 
 Íme egy példa:
 
@@ -59,7 +59,7 @@ Csúsztasd az ujjad az érintőpadon az asztalon való mozgáshoz:
 | --- | --- |
 | Három ujj balra / jobbra | Előző / következő munkaterület, az üreseket is beleértve |
 | Három ujj felfelé | Az AI-konzol be-/kikapcsolása |
-| Három ujj lefelé | Az Omarchy menü megnyitása |
+| Három ujj lefelé | Az Ve OS menü megnyitása |
 | Négy ujj balra / jobbra | Az aktív ablak áthelyezése az előző / következő munkaterületre |
 | Négy ujj lefelé | Teljes képernyős mód be-/kikapcsolása |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Az Omarchy összes gesztusának kikapcsolásához állítsd be az `omarchy_default_gestures = false` értéket a `~/.config/hypr/hyprland.lua` fájl tetejének közelében, még az Omarchy alapértelmezéseinek betöltése előtt.
+Az Ve OS összes gesztusának kikapcsolásához állítsd be az `omarchy_default_gestures = false` értéket a `~/.config/hypr/hyprland.lua` fájl tetejének közelében, még az Ve OS alapértelmezéseinek betöltése előtt.
 
 A haptikus érintőpaddal szerelt Dell XPS laptopokon a kattintási erősséget alacsonyra, közepesre vagy magasra is állíthatod a _Trigger > Hardware > Touchpad Haptics_ alatt.
 
 ### Gépelés kínaiul, japánul és más nyelveken
 
-Válaszd a japánt, a koreait, a kínait (egyszerűsített, Pinyin), a tajvanit (Zhuyin) vagy a hongkongit (Cangjie), amikor a telepítő a billentyűzetedről kérdez. Az Omarchy automatikusan beállítja a billentyűzetet és a hozzá illő beviteli motort, beleértve az offline első rendszerindítási beállítást is. A japán a Mozc motort használja, a koreai a szabványos kétkészletes Hangult, az egyszerűsített kínai a Pinyint, Tajvan a Chewing szabványos Zhuyin kiosztását, Hongkong pedig a Cangjie-t hongkongi karakterformákkal. A japán (US billentyűzet) US billentyűzetkiosztással biztosítja a Mozc motort. A Hangul, a Zhuyin és a Cangjie billentyűi a szabványos helyükön maradnak akkor is, ha latin betűket Dvorak, Colemak vagy AZERTY kiosztással gépelsz. Ha korábban adtad hozzá a Hangult vagy a Chewingot, a _Setup > Keyboard > Input Methods_ alatt vedd ki, majd válaszd ki újra, hogy a billentyűi oda kerüljenek; azt a motort, amellyel már gépelsz, az Omarchy békén hagyja.
+Válaszd a japánt, a koreait, a kínait (egyszerűsített, Pinyin), a tajvanit (Zhuyin) vagy a hongkongit (Cangjie), amikor a telepítő a billentyűzetedről kérdez. Az Ve OS automatikusan beállítja a billentyűzetet és a hozzá illő beviteli motort, beleértve az offline első rendszerindítási beállítást is. A japán a Mozc motort használja, a koreai a szabványos kétkészletes Hangult, az egyszerűsített kínai a Pinyint, Tajvan a Chewing szabványos Zhuyin kiosztását, Hongkong pedig a Cangjie-t hongkongi karakterformákkal. A japán (US billentyűzet) US billentyűzetkiosztással biztosítja a Mozc motort. A Hangul, a Zhuyin és a Cangjie billentyűi a szabványos helyükön maradnak akkor is, ha latin betűket Dvorak, Colemak vagy AZERTY kiosztással gépelsz. Ha korábban adtad hozzá a Hangult vagy a Chewingot, a _Setup > Keyboard > Input Methods_ alatt vedd ki, majd válaszd ki újra, hogy a billentyűi oda kerüljenek; azt a motort, amellyel már gépelsz, az Ve OS békén hagyja.
 
 A gépelés latin módban indul. Nyomd meg a `Super + I` billentyűkombinációt a beállított beviteli módok közötti lépegetéshez, a `Super + Shift + I` kombinációt pedig a visszafelé lépegetéshez. Nyomd meg önmagában röviden a `Shift` billentyűt, hogy kilépj egy olyan beviteli módból, mint a Pinyin, a latin betűkhöz, majd nyomd meg újra röviden a visszatéréshez, ahogyan a Sogou, a Microsoft Pinyin és a macOS is működik; a `Shift` és egy betű együtt továbbra is nagybetűt ír. Japán billentyűzeteken a 全角/半角 kapcsolja a bevitelt, a 変換 bekapcsolja, a 無変換 pedig kikapcsolja. Koreai használatakor a 한/영 váltja a Hangult, a 한자 pedig Hanja karakterekre alakít, akár dedikált billentyűi vannak a billentyűzetednek, akár a Right Alt és a Right Ctrl billentyűket küldi értük, ahogyan sok laptop teszi, ezért a Right Alt és a Right Ctrl ott nem sima módosítóbillentyű; ehelyett a diktálás az Alt + Space billentyűkombinációval kapcsolható. A `Ctrl + Space` továbbra is elérhető marad a Tmux és a Herdr számára; a `Shift + CapsLock` továbbra is a compose billentyű marad.
 
 A billentyűzetjelző a sáv jobb oldalán jelenik meg, ha több billentyűzetkiosztásod vagy beviteli módod van. Kattints rá a beviteli nyelvek közötti váltáshoz; a japán あ karaktert jelenít meg a hiraganához. Japán karakterválasztáshoz válts japánra, gépelj be egy szót, például `nihongo`, majd nyomd meg kétszer a Space billentyűt. Nyomd meg az Enter billentyűt a választásod elfogadásához. Ha több billentyűzetkiosztásod is van, kattints jobb gombbal a jelzőre azok közötti lépegetéshez.
 
-Használd a _Setup > Keyboard > Keyboard Inputs_ lehetőséget olyan kiosztások kiválasztásához, mint az angol és a francia, ugyanazok közül a lehetőségek közül, amelyeket a telepítés során is felkínál a rendszer. Használd a _Setup > Keyboard > Input Methods_ lehetőséget annak kiválasztásához, mely kompozíciós motorok aktívak. Mindkét választó az Omarchy menüben nyílik meg, az aktuális választásaid bejelölésével. Kattints vagy nyomd meg az Enter billentyűt egy választás be-/kikapcsolásához; minden változtatás azonnal érvénybe lép. Egy beviteli mód kiválasztásának visszavonása eltávolítja azt a ciklusból anélkül, hogy eltávolítaná a rendszerből; a billentyűzet továbbra is elérhető marad.
+Használd a _Setup > Keyboard > Keyboard Inputs_ lehetőséget olyan kiosztások kiválasztásához, mint az angol és a francia, ugyanazok közül a lehetőségek közül, amelyeket a telepítés során is felkínál a rendszer. Használd a _Setup > Keyboard > Input Methods_ lehetőséget annak kiválasztásához, mely kompozíciós motorok aktívak. Mindkét választó az Ve OS menüben nyílik meg, az aktuális választásaid bejelölésével. Kattints vagy nyomd meg az Enter billentyűt egy választás be-/kikapcsolásához; minden változtatás azonnal érvénybe lép. Egy beviteli mód kiválasztásának visszavonása eltávolítja azt a ciklusból anélkül, hogy eltávolítaná a rendszerből; a billentyűzet továbbra is elérhető marad.
 
 Futtasd az `omarchy setup keyboard` vagy az `omarchy setup input` parancsot ugyanazok a választók megnyitásához. Egy nyelv parancssorból való hozzáfűzéséhez használd az `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` vagy `cangjie5` parancsot. A Quick, a Boshiamy és az Array ugyanabban a csomagban érkezik, mint a Cangjie, és megjelenik az Input Methods választóban. Az egyéni váltóbillentyűid megmaradnak. Alternatív motorkiosztásokhoz vagy billentyűkhöz telepítsd a `fcitx5-configtool` csomagot az `omarchy pkg add fcitx5-configtool` paranccsal, és indítsd el egy terminálból. Egy beviteli nyelv kiválasztása nem változtatja meg az asztal nyelvét. Ha a _Setup > Language_ alatt japánt, koreait vagy kínait választasz, az hozzáadja annak beviteli módját, ha még egy sincs.
 

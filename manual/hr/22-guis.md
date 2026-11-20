@@ -20,7 +20,7 @@ Obsidian je besplatan za sve namjene, uključujući osobnu, komercijalnu i nepro
 
 Obsidian nudi i [komercijalni dodatak za sinkronizaciju](https://obsidian.md/sync) s mobilnim aplikacijama na iOS-u i Androidu. (https://obsidian.md/pricing).
 
-Obsidian pokrećete s `Super + Shift + O`. Da biste koristili sinkronizaciju teme, morate odabrati temu `Omarchy` u postavkama.
+Obsidian pokrećete s `Super + Shift + O`. Da biste koristili sinkronizaciju teme, morate odabrati temu `Ve OS` u postavkama.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Aether pokrećete putem pokretača aplikacija (`Super + Space`).
 
 [LocalSend](https://localsend.org/) omogućuje vam slanje datoteka drugim uređajima na istoj mreži koji pokreću aplikaciju, poput Appleova AirDropa. Međutim, radi na više platformi, pa datoteke možete slati na Windows, macOS, Android, iOS i, naravno, Linux te ih primati s njih.
 
-Izbornik Share možete otvoriti na `Super + Ctrl + S` ili pod _Trigger > Share_ u izborniku Omarchy. Nudi vam četiri mogućnosti:
+Izbornik Share možete otvoriti na `Super + Ctrl + S` ili pod _Trigger > Share_ u izborniku Ve OS. Nudi vam četiri mogućnosti:
 
 - **Clipboard** šalje sve što ste kopirali kao tekstualnu datoteku. Izvrsno za prebacivanje poveznice ili isječka na telefon bez slanja e-pošte samome sebi.
 - **File** otvara birač datoteka u kojem možete odabrati nekoliko odjednom.
@@ -55,7 +55,7 @@ Isto radi i iz terminala s `omarchy share clipboard`, `omarchy share file [path]
 
 Možete slati i izravno iz upravitelja datoteka: desnom tipkom kliknite bilo koji odabir u Nautilusu i odaberite _Send via LocalSend_.
 
-Vatrozid u Omarchyju zatvoren je prema zadanim postavkama, osim porta za LocalSend, pa ovo radi odmah nakon svježe instalacije. Pogledajte [sigurnost](48-security.md).
+Vatrozid u Ve OSju zatvoren je prema zadanim postavkama, osim porta za LocalSend, pa ovo radi odmah nakon svježe instalacije. Pogledajte [sigurnost](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Signed pokrećete putem pokretača aplikacija (`Super + Space`) ili njime otvori
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) je Omarchyjeva vlastita 3D šahovska igra. Igrajte protiv prijatelja na istom računalu ili protiv ugrađenog protivnika na tri razine, na četiri izrezbarena kompleta koji se svaki kreću na svoj način: orbitalne letjelice, rezbareno drvo i bjelokost, šumska stvorenja i bomboni. Igre nemaju sat i spremaju se nakon svakog poteza.
+[Checkmate](https://github.com/omacom/checkmate) je Ve OSjeva vlastita 3D šahovska igra. Igrajte protiv prijatelja na istom računalu ili protiv ugrađenog protivnika na tri razine, na četiri izrezbarena kompleta koji se svaki kreću na svoj način: orbitalne letjelice, rezbareno drvo i bjelokost, šumska stvorenja i bomboni. Igre nemaju sat i spremaju se nakon svakog poteza.
 
 Checkmate pokrećete putem pokretača aplikacija (`Super + Space`), gdje je naveden kao Chess. Pritisnite `?` u njemu da biste vidjeli sve prečace.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) je Omarchyjev vlastiti Klondike solitaire. Vucite po tri, bez ograničenja broja prolaza, u četiri serije karata: jedna je nacrtana u bojama vaše teme, a tri imaju vlastiti izgled. Kliknite kartu, a zatim mjesto kamo ide, povucite je ili je dvokliknite da biste je poslali na najbolje mjesto. Igre se spremaju nakon svakog poteza.
+[Cards](https://github.com/omacom/cards) je Ve OSjev vlastiti Klondike solitaire. Vucite po tri, bez ograničenja broja prolaza, u četiri serije karata: jedna je nacrtana u bojama vaše teme, a tri imaju vlastiti izgled. Kliknite kartu, a zatim mjesto kamo ide, povucite je ili je dvokliknite da biste je poslali na najbolje mjesto. Igre se spremaju nakon svakog poteza.
 
 Cards pokrećete putem pokretača aplikacija (`Super + Space`). Kliknite njegovo ime ili pritisnite `?` da biste vidjeli sve prečace.
 
@@ -97,7 +97,7 @@ Omacalc pokrećete s `Super + Shift + Q` (ili tipkom kalkulatora, ako je vaša t
 
 [Signal](https://signal.org/) je pionir E2E šifrirane razmjene poruka i izvrsna komunikacijska mogućnost za svakoga tko radije ne bi išao preko jednog od velikih tehnoloških konglomerata.
 
-Signal pokrećete s `Super + Shift + G`. Nije dio osnovne instalacije, pa će vam Omarchy prvi put kad to pritisnete ponuditi da ga instalira za vas (također je pod _Install > Service_ u izborniku Omarchy).
+Signal pokrećete s `Super + Shift + G`. Nije dio osnovne instalacije, pa će vam Ve OS prvi put kad to pritisnete ponuditi da ga instalira za vas (također je pod _Install > Service_ u izborniku Ve OS).
 
 ## Omaview
 

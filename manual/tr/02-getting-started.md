@@ -1,4 +1,6 @@
-# Başlarken
+# Ve OS — Başlarken
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy bir ISO kullanılarak kurulur. Tüm diski ele geçiren tam disk kurulumu ile Omarchy'yi bir diskteki ayrılmamış alana yerleştiren boş alan kurulumu arasında seçim yapabilirsiniz — Windows'un veya başka bir işletim sisteminin yanına çift önyükleme bu şekilde yapılır (bkz. [çift önyükleme kurulumu](50-dual-boot-install.md) — önce Windows'ta BitLocker'ı kapatmanız gerekeceğini unutmayın). Her iki durumda da kurulum varsayılan olarak tam şifrelemeyle gelir ve tam disk seçeneği seçilen diski silecektir, bu yüzden mevcut bir diski kullanmadan önce mutlaka yedek alın!
 

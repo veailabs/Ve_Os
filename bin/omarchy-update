@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy:summary=Update Omarchy and system packages
+# omarchy:summary=Update Ve OS and system packages
 # omarchy:alias=omarchy up
 # omarchy:args=[-y]
 # omarchy:examples=omarchy update | omarchy update -y
@@ -71,7 +71,7 @@ if ! omarchy-update-lock held; then
   exec omarchy-update-lock run "$0" "$@"
 fi
 
-trap 'echo ""; echo -e "\033[0;31mSomething went wrong during the update!\n\nPlease review the output above carefully, correct the error, and retry the update.\n\nIf you need assistance, get help from the community at https://omarchy.org/discord\033[0m"' ERR
+trap 'echo ""; echo -e "\033[0;31mSomething went wrong during the update!\n\nPlease review the output above carefully, correct the error, and retry the update.\n\nIf you need assistance, report the issue at https://github.com/veailabs/Ve_Os/issues\033[0m"' ERR
 trap cleanup_update EXIT
 trap 'exit 129' HUP
 trap 'exit 130' INT

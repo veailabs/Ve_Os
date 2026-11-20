@@ -1,10 +1,10 @@
 # Kapcsolók, tétlenség és a képernyővédő
 
-Sok minden, amit nap mint nap megváltoztatsz, valójában nem is beállítás. Ez egy mód, amit egy órára bekapcsolsz, aztán megint kikapcsolsz: éjszakai fény, amikor későig dolgozol, ne zavarjanak, amikor prezentálsz, ébren maradás, amikor valamit nézel. Az Omarchy ezeket kapcsolóknak hívja, és mindegyik ugyanúgy működik — egy gyorsbillentyű, egy menübejegyzés és egy parancs, mind ugyanazt a kapcsolót működteti.
+Sok minden, amit nap mint nap megváltoztatsz, valójában nem is beállítás. Ez egy mód, amit egy órára bekapcsolsz, aztán megint kikapcsolsz: éjszakai fény, amikor későig dolgozol, ne zavarjanak, amikor prezentálsz, ébren maradás, amikor valamit nézel. Az Ve OS ezeket kapcsolóknak hívja, és mindegyik ugyanúgy működik — egy gyorsbillentyű, egy menübejegyzés és egy parancs, mind ugyanazt a kapcsolót működteti.
 
 ### A kapcsolómenü
 
-A `Super + Ctrl + O` közvetlenül megnyitja a _Műveletindító > Kapcsoló_ menüt, vagy az Omarchy menüből (`Super + Space`) is odajuthatsz. A listában minden olyan kapcsoló, amit átkattinthatsz anélkül, hogy azon gondolkodnál, hol lakik az állapot. Az asztal megjelenésére vonatkozó kapcsolók mellette ülnek, a _Megjelenés_ alatt.
+A `Super + Ctrl + O` közvetlenül megnyitja a _Műveletindító > Kapcsoló_ menüt, vagy az Ve OS menüből (`Super + Space`) is odajuthatsz. A listában minden olyan kapcsoló, amit átkattinthatsz anélkül, hogy azon gondolkodnál, hol lakik az állapot. Az asztal megjelenésére vonatkozó kapcsolók mellette ülnek, a _Megjelenés_ alatt.
 
 A terminálból ugyanezek a kapcsolók az `omarchy toggle <thing>` formában érhetők el. Futtasd az `omarchy toggle` parancsot önmagában, hogy lásd az egész csoportot.
 
@@ -26,7 +26,7 @@ Az érintőpad, az érintőképernyő és a hibrid GPU kapcsolói a _Műveletind
 
 A _Megjelenés_ alatt található a menüsor és az animációk, plusz néhány dolog, amelyek nem `omarchy toggle` parancsok, de ugyanúgy viselkednek: az akkumulátor töltöttségi százaléka a sávban, az alapértelmezett munkaterület-elrendezés, valamint az _Ablakok_ alatt az ablakok közötti hézagok (`Super + Shift + Backspace`) és az 1 ablakos négyzetes képarány (`Super + Ctrl + Backspace`).
 
-Amikor a Hyprlandnek nincs GPU-ja, amivel rajzolhatna, és helyette a CPU-n renderel (llvmpipe), ahogy a még nem támogatott GPU-val rendelkező Maceken, a legtöbb virtuális gépben, vagy amikor egy grafikus illesztőprogram nem töltődik be, az Omarchy kikapcsolja az animációkat, az elmosást és az árnyékokat arra a munkamenetre, és ezt egyszer egy értesítéssel jelzi neked. A _Megjelenés > Animációk be_ visszahozza őket, és az Omarchy ezt a későbbi munkamenetekre is megjegyzi.
+Amikor a Hyprlandnek nincs GPU-ja, amivel rajzolhatna, és helyette a CPU-n renderel (llvmpipe), ahogy a még nem támogatott GPU-val rendelkező Maceken, a legtöbb virtuális gépben, vagy amikor egy grafikus illesztőprogram nem töltődik be, az Ve OS kikapcsolja az animációkat, az elmosást és az árnyékokat arra a munkamenetre, és ezt egyszer egy értesítéssel jelzi neked. A _Megjelenés > Animációk be_ visszahozza őket, és az Ve OS ezt a későbbi munkamenetekre is megjegyzi.
 
 Ezek többsége mindössze egy jelzőfájl a `~/.local/state/omarchy/toggles/` alatt. Ha egy szkriptben szeretnél valamelyik alapján elágazni, az `omarchy-toggle-enabled` kilépési kódot ad, ahelyett, hogy neked kellene keresgélned:
 
@@ -63,11 +63,11 @@ A `Super + Ctrl + Alt + ,` elnémítja az értesítéseket. Amíg be van kapcsol
 
 Semmi sem vész el azonban. Az elnémított értesítések visszatartódnak: tedd vissza az utolsó néhányat a képernyőre a `Super + Shift + Alt + ,` kombinációval. A többit lásd az [értesítések](10-notices.md) részben.
 
-Kétféle üzenet továbbra is átjut: az Omarchy saját megerősítő felugró üzenetei valamiről, amit éppen tettél ("Theme changed", "Screenshot saved"), és a parancssorból küldött kritikus riasztások. Azok a csevegőalkalmazások, amelyek mindent kritikusnak jelölnek, hogy erővel eléd tolakodjanak, nem tartoznak ide.
+Kétféle üzenet továbbra is átjut: az Ve OS saját megerősítő felugró üzenetei valamiről, amit éppen tettél ("Theme changed", "Screenshot saved"), és a parancssorból küldött kritikus riasztások. Azok a csevegőalkalmazások, amelyek mindent kritikusnak jelölnek, hogy erővel eléd tolakodjanak, nem tartoznak ide.
 
 ### Tétlenség
 
-Az Omarchy felület kezeli a tétlenségi viselkedést, és az időzítések egy legfelső szintű `idle` blokkban vannak a `~/.config/omarchy/shell.json` fájlban:
+Az Ve OS felület kezeli a tétlenségi viselkedést, és az időzítések egy legfelső szintű `idle` blokkban vannak a `~/.config/omarchy/shell.json` fájlban:
 
 ```json
 {
@@ -89,16 +89,16 @@ Ez a zárolásról és a képernyővédőről szól, nem az energiagazdálkodás
 
 ### A képernyővédő
 
-Az Omarchy képernyővédője ASCII-művészet, amely véletlenszerű szöveghatásokon fut keresztül, monitoronként egy példányban. Bármely billentyű vagy egérmozdulat kilép belőle.
+Az Ve OS képernyővédője ASCII-művészet, amely véletlenszerű szöveghatásokon fut keresztül, monitoronként egy példányban. Bármely billentyű vagy egérmozdulat kilép belőle.
 
 Igény szerint elindíthatod a _Rendszer > Képernyővédő_ menüből (`Super + Esc`), amely akkor is előkényszeríti, ha kikapcsoltad a tétlenségi képernyővédőt. Alapértelmezés szerint nincs hozzá rendelt gyorsbillentyű.
 
 Az `omarchy toggle screensaver` kapcsolja ki a tétlenségit, ha inkább közvetlenül a munkából mennél a zárolt állapotba. Bármely billentyű, kattintás, görgetés vagy egérmozdulat bezárja.
 
-Az általa rajzolt logó a tiéd, megváltoztathatod a _Megjelenés > Arculat > Képernyővédő_ alatt. Tölts fel egy png-t vagy svg-t, és az Omarchy ASCII-vé alakítja. Lásd a [márkajelzést](41-branding.md).
+Az általa rajzolt logó a tiéd, megváltoztathatod a _Megjelenés > Arculat > Képernyővédő_ alatt. Tölts fel egy png-t vagy svg-t, és az Ve OS ASCII-vé alakítja. Lásd a [márkajelzést](41-branding.md).
 
 ### A zárolási képernyő
 
-A `Super + Ctrl + L` zárolja a gépet. Ez futtatja az Omarchy felület zárolási képernyőjét, elsötétíti a kijelzőt, visszaállítja a billentyűzetkiosztásodat az elsőre, hogy ne rossz ábécével gépeld a jelszavadat, és — ha fut nálad — kilépéskor zárolja az 1Password alkalmazást is.
+A `Super + Ctrl + L` zárolja a gépet. Ez futtatja az Ve OS felület zárolási képernyőjét, elsötétíti a kijelzőt, visszaállítja a billentyűzetkiosztásodat az elsőre, hogy ne rossz ábécével gépeld a jelszavadat, és — ha fut nálad — kilépéskor zárolja az 1Password alkalmazást is.
 
 A zárolási képernyő jelszót fogad, és ujjlenyomatot is elfogad, ha már beállítottál egyet. Ezt és a többi hitelesítési módot a [hardveres hitelesítés](37-hardware-authentication.md) tárgyalja.

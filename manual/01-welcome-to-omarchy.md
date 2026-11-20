@@ -1,11 +1,9 @@
-# Welcome to Omarchy!
+# Welcome to Ve OS!
 
-Omarchy is an [omakase](https://manuals.omamix.org/3/omacom/76/omakase-computing) Linux distribution based on [Arch](https://archlinux.org/), the tiling window manager [Hyprland](https://hypr.land/), and the desktop construction-kit [Quickshell](https://quickshell.org/). It ships with everything a modern, savvy computer user needs to be productive immediately. From [Neovim](https://neovim.io/) (btw) to Chromium, [Obsidian](https://obsidian.md/) to LibreOffice, and [Hype](https://github.com/omacom/hype) to [Monologue](https://github.com/omacom/monologue). Hell, even a retro Winamp-style music player is there!
+Ve OS is the Ve team’s development fork of [Omarchy](https://github.com/omacom/omarchy), built on [Arch Linux](https://archlinux.org/), [Hyprland](https://hypr.land/) and [Quickshell](https://quickshell.org/). It brings the Ve visual identity to a keyboard-driven Linux desktop with tiling windows, coordinated themes, a dock, application launchers and developer tools.
 
-This isn't just a grab bag of preinstalled packages, though. It's a complete system designed with both aesthetics and productivity in mind. Because a _beautiful_ system is a _motivating_ system, and productivity has always been [downstream from motivation](https://world.hey.com/dhh/beautiful-motivations-6fef7c73). There's zero bloat here: Just everything I use.
+The desktop includes the Ve mark and palette, Grok Bot as a default desktop app, and Grok Build CLI integration. The agents panel can open Grok Bot, prepare an unsent Bot draft and run CLI tasks with progress, results, permission prompts and cancellation. You sign in through the official apps. Closing a Bot window does not stop cloud work; cloud controls remain in Grok Bot.
 
-It's true that developing an eye for the beauty of a TUI-heavy, theme-delighted, tiling-window-managed system like Omarchy can be an acquired taste. But that's why you're here, isn't it? To experience something a little outside of your comfort zone? To embark on a little bit of an adventure into a new way of working with computers? I hope so.
+Omarchy’s original authors and the maintainers of Arch, Hyprland, Quickshell and the bundled apps provide the underlying platform. Their licences, names and compatibility interfaces remain intact. Ve OS does not publish a separate installation ISO, Linux kernel or package repository.
 
-Omarchy isn't like Windows and it's not like macOS either. It's not trying to be as familiar as possible. It's trying to be beautiful and _better_. Embrace the Linux-ness of it all. Manually editing some config files, sure. Heavy on the terminal, definitely.
-
-Let's get started with the basics.
+Start with [Getting Started](02-getting-started.md), then learn [navigation](04-navigation.md) and [hotkeys](07-hotkeys.md). The [manual index](README.md) explains which chapters describe Ve OS and which preserve upstream installation or platform guidance.

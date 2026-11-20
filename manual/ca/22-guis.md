@@ -20,7 +20,7 @@ Obsidian és gratuït per a qualsevol finalitat, inclòs l'ús personal, comerci
 
 Obsidian també ofereix un [complement comercial per a la sincronització](https://obsidian.md/sync) amb aplicacions mòbils a iOS i Android. (https://obsidian.md/pricing).
 
-Inicies Obsidian amb `Super + Shift + O`. Per fer servir la sincronització del tema, has de seleccionar el tema `Omarchy` a la configuració.
+Inicies Obsidian amb `Super + Shift + O`. Per fer servir la sincronització del tema, has de seleccionar el tema `Ve OS` a la configuració.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Inicies Aether des del llançador d'aplicacions (`Super + Space`).
 
 [LocalSend](https://localsend.org/) et permet enviar fitxers a altres dispositius de la mateixa xarxa que executin l'aplicació, com l'AirDrop d'Apple. Això sí, és multiplataforma, de manera que pots enviar fitxers cap a i des de Windows, macOS, Android, iOS i, per descomptat, Linux.
 
-Pots obrir el menú Comparteix amb `Super + Ctrl + S` o a _Activa > Comparteix_ al menú d'Omarchy. Et dona quatre opcions:
+Pots obrir el menú Comparteix amb `Super + Ctrl + S` o a _Activa > Comparteix_ al menú d'Ve OS. Et dona quatre opcions:
 
 - **Porta-retalls** envia allò que hagis copiat com a fitxer de text. Va molt bé per passar un enllaç o un fragment al telèfon sense haver d'enviar-te un correu electrònic a tu mateix.
 - **Fitxer** obre un selector de fitxers on en pots seleccionar diversos alhora.
@@ -55,7 +55,7 @@ El mateix funciona des del terminal amb `omarchy share clipboard`, `omarchy shar
 
 També pots enviar directament des del gestor de fitxers: fes clic amb el botó dret sobre qualsevol selecció a Nautilus i tria _Envia mitjançant LocalSend_.
 
-El tallafoc d'Omarchy està tancat per defecte excepte pel port de LocalSend, de manera que això funciona des del primer moment en una instal·lació nova. Consulta [seguretat](48-security.md).
+El tallafoc d'Ve OS està tancat per defecte excepte pel port de LocalSend, de manera que això funciona des del primer moment en una instal·lació nova. Consulta [seguretat](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ Inicies Signed des del llançador d'aplicacions (`Super + Space`), o obre un PDF
 
 ## Checkmate
 
-[Checkmate](https://github.com/omacom/checkmate) és el joc d'escacs en 3D d'Omarchy. Juga contra un amic al mateix ordinador o contra l'oponent integrat en tres nivells, amb quatre conjunts esculpits que es mouen cadascun a la seva manera: naus orbitals, fusta tallada i ivori, criatures del bosc i caramels. Les partides no tenen rellotge i es desen després de cada moviment.
+[Checkmate](https://github.com/omacom/checkmate) és el joc d'escacs en 3D d'Ve OS. Juga contra un amic al mateix ordinador o contra l'oponent integrat en tres nivells, amb quatre conjunts esculpits que es mouen cadascun a la seva manera: naus orbitals, fusta tallada i ivori, criatures del bosc i caramels. Les partides no tenen rellotge i es desen després de cada moviment.
 
 Inicies Checkmate des del llançador d'aplicacions (`Super + Space`), on apareix com a Chess. Prem `?` a dins per veure totes les dreceres.
 
 ## Cards
 
-[Cards](https://github.com/omacom/cards) és el solitari Klondike d'Omarchy. En robes tres, sense límit de passades, en quatre sèries de cartes: una dibuixada amb els colors del teu tema i tres amb un aspecte propi. Fes clic en una carta i després on ha d'anar, arrossega-la o fes-hi doble clic per enviar-la al millor lloc. Les partides es desen després de cada moviment.
+[Cards](https://github.com/omacom/cards) és el solitari Klondike d'Ve OS. En robes tres, sense límit de passades, en quatre sèries de cartes: una dibuixada amb els colors del teu tema i tres amb un aspecte propi. Fes clic en una carta i després on ha d'anar, arrossega-la o fes-hi doble clic per enviar-la al millor lloc. Les partides es desen després de cada moviment.
 
 Inicies Cards des del llançador d'aplicacions (`Super + Space`). Fes clic al seu nom, o prem `?`, per veure totes les dreceres.
 
@@ -97,7 +97,7 @@ Inicies Omacalc amb `Super + Shift + Q` (o la tecla de la calculadora, si el teu
 
 [Signal](https://signal.org/) és el pioner de la missatgeria xifrada E2E, i una excel·lent opció de comunicació per a qualsevol que prefereixi no passar per un dels grans conglomerats tecnològics.
 
-Inicies Signal amb `Super + Shift + G`. No forma part de la instal·lació base, de manera que la primera vegada que premis aquesta combinació, Omarchy t'oferirà instal·lar-te'l (també es troba a _Instal·la > Servei_ al menú d'Omarchy).
+Inicies Signal amb `Super + Shift + G`. No forma part de la instal·lació base, de manera que la primera vegada que premis aquesta combinació, Ve OS t'oferirà instal·lar-te'l (també es troba a _Instal·la > Servei_ al menú d'Ve OS).
 
 ## Omaview
 

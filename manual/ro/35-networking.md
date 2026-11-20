@@ -1,6 +1,6 @@
 # Rețea
 
-Rețeaua în Omarchy este gestionată de NetworkManager, iar o controlezi din pictograma de rețea din [bara de sus](05-the-top-bar.md) sau cu `Super + Ctrl + N`.
+Rețeaua în Ve OS este gestionată de NetworkManager, iar o controlezi din pictograma de rețea din [bara de sus](05-the-top-bar.md) sau cu `Super + Ctrl + N`.
 
 Acel panou scanează rețelele Wi-Fi, arată puterea semnalului și se conectează. Ethernet nu are nevoie de nimic — îl conectezi și funcționează. Dacă preferi să rămâi în terminal, `nmtui` îți oferă aceleași comenzi, și există și un grup de comenzi `omarchy network`.
 
@@ -12,7 +12,7 @@ Dacă ai nevoie de fapt de parola în sine, `omarchy network password <interface
 
 ## DNS
 
-Omarchy folosește DNS-ul pe care rețeaua ta îl furnizează prin DHCP. Îl poți înlocui pentru întregul sistem în _Setup > Network > DNS_, unde Cloudflare și Google sunt la un clic distanță. Alege _Custom_ pentru a introduce propriile tale servere.
+Ve OS folosește DNS-ul pe care rețeaua ta îl furnizează prin DHCP. Îl poți înlocui pentru întregul sistem în _Setup > Network > DNS_, unde Cloudflare și Google sunt la un clic distanță. Alege _Custom_ pentru a introduce propriile tale servere.
 
 Din terminal, `omarchy dns` afișează furnizorul curent, iar `omarchy dns Cloudflare` setează unul.
 

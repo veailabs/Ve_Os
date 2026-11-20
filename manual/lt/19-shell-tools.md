@@ -1,6 +1,6 @@
 # Shell įrankiai
 
-Be standartinių Linux įrankių, Omarchy taip pat pristatoma su daugybe patobulintų shell įrankių. Štai svarbiausi.
+Be standartinių Linux įrankių, Ve OS taip pat pristatoma su daugybe patobulintų shell įrankių. Štai svarbiausi.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Visą vadovą gali rasti per `man yt-dlp`.
 
 [try](https://github.com/tobi/try) leidžia lengvai valdyti programavimo eksperimentus naudojant katalogus su datos antspaudais. Visi eksperimentai gyvena `~/Work/tries` ir juos gali pasiekti per `try`.
 
-Omarchy automatiškai neprideda projekto `bin/` katalogo prie `PATH`. Patikimus projektui vietinius įrankius paleisk su aiškiu santykiniu keliu, pavyzdžiui, `bin/rails` arba `./bin/dev`.
+Ve OS automatiškai neprideda projekto `bin/` katalogo prie `PATH`. Patikimus projektui vietinius įrankius paleisk su aiškiu santykiniu keliu, pavyzdžiui, `bin/rails` arba `./bin/dev`.

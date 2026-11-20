@@ -1,8 +1,8 @@
 # Motywy
 
-Omarchy zawiera dwadzieścia dwa piękne motywy. Możesz wybierać między nimi w sekcji _Wygląd > Motyw_ w menu Omarchy (`Super + Space`) albo przejść bezpośrednio do wyboru motywu za pomocą `Super + Ctrl + T`.
+Ve OS zawiera dwadzieścia dwa piękne motywy. Możesz wybierać między nimi w sekcji _Wygląd > Motyw_ w menu Ve OS (`Super + Space`) albo przejść bezpośrednio do wyboru motywu za pomocą `Super + Ctrl + T`.
 
-Każdy motyw nadaje styl pulpitowi, terminalowi, neovim, ekranowi aktywności (btop), Chromium oraz całej powłoce Omarchy: górnemu paskowi, menu, powiadomieniom, OSD i ekranowi blokady. (W przypadku Obsidian musisz ręcznie wybrać motyw Omarchy w sekcji _Wygląd > Motywy_ wewnątrz aplikacji).
+Każdy motyw nadaje styl pulpitowi, terminalowi, neovim, ekranowi aktywności (btop), Chromium oraz całej powłoce Ve OS: górnemu paskowi, menu, powiadomieniom, OSD i ekranowi blokady. (W przypadku Obsidian musisz ręcznie wybrać motyw Ve OS w sekcji _Wygląd > Motywy_ wewnątrz aplikacji).
 
 Motywy mają zestaw obrazów tła, spośród których możesz wybierać za pomocą `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Ikony w programie uruchamiającym aplikacje i w docku są rysowane w kolorach Tw
 
 Możesz zainstalować zestaw ikon stworzony przez kogoś innego w sekcji _Instalacja > Styl > Ikony_ (lub za pomocą `omarchy icons install <git url>`), a usunąć go ponownie w sekcji _Usuwanie > Ikony_. _Aktualizacja > Dodatkowe ikony_ pobiera najnowszą wersję zainstalowanych zestawów.
 
-Aby stworzyć własny zestaw, umieść ikony w `~/.config/omarchy/icons/<name>/`, po jednym pliku na aplikację, nazwanym zgodnie z wierszem `Icon=` w pliku `.desktop` aplikacji. Plik z końcówką `.svg` jest wyświetlany tak, jak jest. Plik z końcówką `.svg.tpl` jest rysowany w kolorach motywu: wpisz `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` lub `{{ icon_shadow }}` tam, gdzie ma się znaleźć kolor. Dobrym punktem wyjścia jest domyślny zestaw w `/usr/share/omarchy/icons/papercraft/`. Dodaj plik `preview.png`, aby pokazać swój zestaw w selektorze; bez niego Omarchy narysuje podgląd na podstawie Twoich ikon. Aby zmienić pojedynczą ikonę zestawu domyślnego, umieść swoją wersję w `~/.config/omarchy/icons/papercraft/`.
+Aby stworzyć własny zestaw, umieść ikony w `~/.config/omarchy/icons/<name>/`, po jednym pliku na aplikację, nazwanym zgodnie z wierszem `Icon=` w pliku `.desktop` aplikacji. Plik z końcówką `.svg` jest wyświetlany tak, jak jest. Plik z końcówką `.svg.tpl` jest rysowany w kolorach motywu: wpisz `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` lub `{{ icon_shadow }}` tam, gdzie ma się znaleźć kolor. Dobrym punktem wyjścia jest domyślny zestaw w `/usr/share/omarchy/icons/papercraft/`. Dodaj plik `preview.png`, aby pokazać swój zestaw w selektorze; bez niego Ve OS narysuje podgląd na podstawie Twoich ikon. Aby zmienić pojedynczą ikonę zestawu domyślnego, umieść swoją wersję w `~/.config/omarchy/icons/papercraft/`.
 
 ### Odblokowywanie
 

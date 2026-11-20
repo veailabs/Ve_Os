@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy biasanya dikendalikan melalui hotkey dan menu Omarchy (`Super + Space`). Namun Anda juga bisa mengendalikannya melalui CLI `omarchy`. Ini sangat membantu ketika Anda sedang meminta agen AI bekerja bersama Anda untuk kustomisasi atau konfigurasi.
+Ve OS biasanya dikendalikan melalui hotkey dan menu Ve OS (`Super + Space`). Namun Anda juga bisa mengendalikannya melalui CLI `omarchy`. Ini sangat membantu ketika Anda sedang meminta agen AI bekerja bersama Anda untuk kustomisasi atau konfigurasi.
 
 CLI ini memiliki akses ke semua perkakas internal yang digunakan baik melalui menu maupun cara lainnya. Anda bisa melihat semua yang tersedia dengan menjalankan `omarchy` di terminal.
 
@@ -8,7 +8,7 @@ Tampilannya kurang lebih seperti ini:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Untuk diagnostik, jalankan `omarchy-debug --no-sudo --print` secara langsung. Perintah ini mencetak diagnostik dan menulis `/tmp/omarchy-debug.log` tanpa meminta sudo, termasuk pada instalasi paket di mana `omarchy debug` bisa gagal dengan "Unknown Omarchy command".
+Untuk diagnostik, jalankan `omarchy-debug --no-sudo --print` secara langsung. Perintah ini mencetak diagnostik dan menulis `/tmp/omarchy-debug.log` tanpa meminta sudo, termasuk pada instalasi paket di mana `omarchy debug` bisa gagal dengan "Unknown Ve OS command".
 
 Dan Anda bisa menggali lebih dalam pada setiap grup:
 
@@ -60,4 +60,4 @@ Setiap perintah juga menerima `--help`, baik Anda menanyakan seluruh grup (`omar
 
 ### Membuka menu dari terminal
 
-Menu Omarchy juga bisa diskrip, yang berguna untuk keybinding Anda sendiri. `omarchy menu` membukanya di root, dan Anda bisa langsung melompat ke titik mana pun dalam pohonnya dengan menyebut namanya: `omarchy menu summon appearance.theme` langsung menuju pemilih tema, `omarchy menu toggle system` membuka menu sistem dan menutupnya lagi jika sudah terbuka, dan `omarchy menu close` menyingkirkannya.
+Menu Ve OS juga bisa diskrip, yang berguna untuk keybinding Anda sendiri. `omarchy menu` membukanya di root, dan Anda bisa langsung melompat ke titik mana pun dalam pohonnya dengan menyebut namanya: `omarchy menu summon appearance.theme` langsung menuju pemilih tema, `omarchy menu toggle system` membuka menu sistem dan menutupnya lagi jika sudah terbuka, dan `omarchy menu close` menyingkirkannya.

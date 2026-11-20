@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy este controlat de obicei prin tastele rapide și prin meniul Omarchy (`Super + Space`). Dar îl poți controla și prin CLI-ul `omarchy`. Acest lucru este deosebit de util atunci când ai un agent AI care lucrează cu tine la personalizare sau configurare.
+Ve OS este controlat de obicei prin tastele rapide și prin meniul Ve OS (`Super + Space`). Dar îl poți controla și prin CLI-ul `omarchy`. Acest lucru este deosebit de util atunci când ai un agent AI care lucrează cu tine la personalizare sau configurare.
 
 CLI-ul are acces la toate instrumentele interne folosite atât prin meniu, cât și în alte moduri. Poți vedea tot ce este disponibil rulând `omarchy` în terminal.
 
@@ -8,7 +8,7 @@ Arată cam așa:
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-Pentru diagnosticare, rulează direct `omarchy-debug --no-sudo --print`. Afișează diagnosticarea și scrie în `/tmp/omarchy-debug.log` fără să ceară sudo, inclusiv la instalările de pachete unde `omarchy debug` poate eșua cu "Unknown Omarchy command".
+Pentru diagnosticare, rulează direct `omarchy-debug --no-sudo --print`. Afișează diagnosticarea și scrie în `/tmp/omarchy-debug.log` fără să ceară sudo, inclusiv la instalările de pachete unde `omarchy debug` poate eșua cu "Unknown Ve OS command".
 
 Și poți aprofunda fiecare grup:
 
@@ -60,4 +60,4 @@ Fiecare comandă acceptă și `--help`, fie că întrebi un grup întreg (`omarc
 
 ### Deschiderea meniului din terminal
 
-Meniul Omarchy poate fi folosit și în scripturi, ceea ce este util pentru propriile tale combinații de taste. `omarchy menu` îl deschide la rădăcină și poți sări direct la orice punct din arbore numindu-l: `omarchy menu summon appearance.theme` merge direct la selectorul de teme, `omarchy menu toggle system` deschide meniul de sistem și îl închide din nou dacă este deja deschis, iar `omarchy menu close` îl ascunde.
+Meniul Ve OS poate fi folosit și în scripturi, ceea ce este util pentru propriile tale combinații de taste. `omarchy menu` îl deschide la rădăcină și poți sări direct la orice punct din arbore numindu-l: `omarchy menu summon appearance.theme` merge direct la selectorul de teme, `omarchy menu toggle system` deschide meniul de sistem și îl închide din nou dacă este deja deschis, iar `omarchy menu close` îl ascunde.

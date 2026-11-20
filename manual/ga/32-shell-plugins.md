@@ -1,10 +1,10 @@
 # Forlíontáin Blaoisce
 
-Ritheann deasc Omarchy mar phróiseas Quickshell fadó amháin ar a dtugtar `omarchy-shell`, agus is forlíontán taobh istigh de beagnach gach rud a fheiceann tú ar an scáileán. Is forlíontán é an barra. Mar sin is iad na painéil a thiteann síos uaidh, na forleaganacha lánscáileáin ar nós an roghnóra emoji agus an bhainisteora gearrthaisce, roghchlár Omarchy féin, an scáileán glasa, an dialóg polkit, agus na seirbhísí gan cheann a fhéachann ar do cheallraí agus a théann do scáileán san oíche.
+Ritheann deasc Ve OS mar phróiseas Quickshell fadó amháin ar a dtugtar `omarchy-shell`, agus is forlíontán taobh istigh de beagnach gach rud a fheiceann tú ar an scáileán. Is forlíontán é an barra. Mar sin is iad na painéil a thiteann síos uaidh, na forleaganacha lánscáileáin ar nós an roghnóra emoji agus an bhainisteora gearrthaisce, roghchlár Ve OS féin, an scáileán glasa, an dialóg polkit, agus na seirbhísí gan cheann a fhéachann ar do cheallraí agus a théann do scáileán san oíche.
 
-Ní mionsonra cur chun feidhme amháin é sin. Ciallaíonn sé gur féidir leat píosaí den deasc a mhúchadh, iad a mhalartú amach, nó do chuid féin a scríobh gan líne de fhoinse Omarchy a theagmháil.
+Ní mionsonra cur chun feidhme amháin é sin. Ciallaíonn sé gur féidir leat píosaí den deasc a mhúchadh, iad a mhalartú amach, nó do chuid féin a scríobh gan líne de fhoinse Ve OS a theagmháil.
 
-Tagann na forlíontáin chéadpháirtí le Omarchy agus cónaíonn siad in `$OMARCHY_PATH/shell/plugins/`. Cónaíonn aon rud a chuireann tú leat féin — do thurgnaimh féin, nó rud éigin a fuair tú ar GitHub — in `~/.config/omarchy/plugins/`. Aimsítear an dá cheann ar an mbealach céanna ag am tosaithe, ach faigheann na cinn ionsuite comhéadain iontaofa blaoisce agus faigheann forlíontáin tríú páirtí comhéadan teoranta atá dírithe ar a seirbhís agus saolré féin. Coinníonn clóna ionsuite ach an chumraíocht shonrach don fhoinse agus glaonna UI atá ag teastáil don iompar bunaidh.
+Tagann na forlíontáin chéadpháirtí le Ve OS agus cónaíonn siad in `$OMARCHY_PATH/shell/plugins/`. Cónaíonn aon rud a chuireann tú leat féin — do thurgnaimh féin, nó rud éigin a fuair tú ar GitHub — in `~/.config/omarchy/plugins/`. Aimsítear an dá cheann ar an mbealach céanna ag am tosaithe, ach faigheann na cinn ionsuite comhéadain iontaofa blaoisce agus faigheann forlíontáin tríú páirtí comhéadan teoranta atá dírithe ar a seirbhís agus saolré féin. Coinníonn clóna ionsuite ach an chumraíocht shonrach don fhoinse agus glaonna UI atá ag teastáil don iompar bunaidh.
 
 ## Féachaint ar a bhfuil agat
 

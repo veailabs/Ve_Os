@@ -391,7 +391,7 @@ def model_routes(home):
 
 
 def omarchy_launches():
-  """(auth type, model id) of every model Omarchy has launched Qwen Code on,
+  """(auth type, model id) of every model Ve OS has launched Qwen Code on,
   from the launch files omarchy-agent-local overlay qwen writes: a model on
   this machine or a paired one on the tailnet, either way the user's own
   hardware. The files stay when a model is removed, so its replies keep
@@ -416,7 +416,7 @@ def selected_route(home):
 
 def route_config(home):
   """What route_owner() decides with: the modelProviders routes, the base
-  URLs outside them, the selected route and Omarchy's local launches."""
+  URLs outside them, the selected route and Ve OS's local launches."""
   return model_routes(home), base_urls(home), selected_route(home), omarchy_launches()
 
 

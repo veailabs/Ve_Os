@@ -1,8 +1,8 @@
 # Temaer
 
-Omarchy leveres med tjueto vakre temaer. Du kan velge mellom dem via _Utseende > Tema_ i Omarchy-menyen (`Super + Space`) eller gå direkte til temavelgeren med `Super + Ctrl + T`.
+Ve OS leveres med tjueto vakre temaer. Du kan velge mellom dem via _Utseende > Tema_ i Ve OS-menyen (`Super + Space`) eller gå direkte til temavelgeren med `Super + Ctrl + T`.
 
-Hvert tema styler skrivebordet, terminalen, neovim, aktivitetsskjermen (btop), Chromium og hele Omarchy-skallet: topplinjen, menyen, varsler, OSD og låseskjermen. (For Obsidian må du manuelt velge Omarchy-temaet via _Utseende > Temaer_ inne i appen).
+Hvert tema styler skrivebordet, terminalen, neovim, aktivitetsskjermen (btop), Chromium og hele Ve OS-skallet: topplinjen, menyen, varsler, OSD og låseskjermen. (For Obsidian må du manuelt velge Ve OS-temaet via _Utseende > Temaer_ inne i appen).
 
 Temaer har et sett med bakgrunnsbilder som du kan velge mellom med `Super + Ctrl + W`.
 
@@ -75,7 +75,7 @@ Ikonene i appstarteren og dokken tegnes i fargene til temaet ditt, så de endrer
 
 Du kan installere et ikonsett noen andre har laget med _Installer > Stil > Ikoner_ (eller `omarchy icons install <git url>`), og fjerne det igjen under _Fjern > Ikoner_. _Oppdater > Ekstra ikoner_ henter den nyeste versjonen av settene du har installert.
 
-For å lage ditt eget legger du ikonene dine i `~/.config/omarchy/icons/<name>/`, én fil per app, navngitt etter `Icon=`-linjen i appens `.desktop`-fil. En fil som slutter på `.svg`, vises som den er. En fil som slutter på `.svg.tpl`, tegnes i fargene til temaet: skriv `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` eller `{{ icon_shadow }}` der en farge skal være. Standardsettet i `/usr/share/omarchy/icons/papercraft/` er et godt sted å starte fra. Legg til en `preview.png` for å vise settet ditt i velgeren; uten en slik tegner Omarchy en forhåndsvisning fra ikonene dine. For å endre ett enkelt ikon i standardsettet legger du din versjon i `~/.config/omarchy/icons/papercraft/`.
+For å lage ditt eget legger du ikonene dine i `~/.config/omarchy/icons/<name>/`, én fil per app, navngitt etter `Icon=`-linjen i appens `.desktop`-fil. En fil som slutter på `.svg`, vises som den er. En fil som slutter på `.svg.tpl`, tegnes i fargene til temaet: skriv `{{ icon_main }}`, `{{ icon_mark }}`, `{{ icon_paper }}`, `{{ icon_body }}`, `{{ icon_edge }}`, `{{ icon_ink }}` eller `{{ icon_shadow }}` der en farge skal være. Standardsettet i `/usr/share/omarchy/icons/papercraft/` er et godt sted å starte fra. Legg til en `preview.png` for å vise settet ditt i velgeren; uten en slik tegner Ve OS en forhåndsvisning fra ikonene dine. For å endre ett enkelt ikon i standardsettet legger du din versjon i `~/.config/omarchy/icons/papercraft/`.
 
 ### Opplåsinger
 

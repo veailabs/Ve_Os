@@ -12,28 +12,28 @@
 
 [Btop](https://github.com/aristocratos/btop) は、メモリ、CPU、ディスク、ネットワークの使用状況を表示する美しいリソースマネージャーです。アクティブなプロセスをすべて一覧表示し、それらを管理することもできます。
 
-Omarchy では Activity Monitor と呼ばれており、アプリランチャーから、または `Super + Shift + T` を押して起動します。フローティングウィンドウとして開きますが、`Super + T` でタイル表示できます。
+Ve OS では Activity Monitor と呼ばれており、アプリランチャーから、または `Super + Shift + T` を押して起動します。フローティングウィンドウとして開きますが、`Super + T` でタイル表示できます。
 
 ## Herdr
 
 [Herdr](https://github.com/omacom-io/herdr) は、ワークスペース、タブ、ペインを提供するターミナルワークスペースマネージャーであり、それらすべてを永続的なセッションで実行し続け、切り離して後で戻ってくることができます。
 
-アプリランチャーから、または `Super + Ctrl + Return` で起動します（あるいは既存のセッションに再接続します）。Omarchy には Tmux の設定を反映した Herdr の設定が同梱されているため、ここでもプレフィックスキーは `Ctrl + Space` です。`Super + Ctrl + K` でキーバインドをすべて閲覧できます。
+アプリランチャーから、または `Super + Ctrl + Return` で起動します（あるいは既存のセッションに再接続します）。Ve OS には Tmux の設定を反映した Herdr の設定が同梱されているため、ここでもプレフィックスキーは `Ctrl + Space` です。`Super + Ctrl + K` でキーバインドをすべて閲覧できます。
 
 ## Fastfetch
 
 [Fastfetch](https://github.com/fastfetch-cli/fastfetch) は、カーネルバージョン、稼働時間、テーマ、CPU、メモリなどのシステム情報を表示します。人気のあった neofetch ツールの後継です。
 
-Omarchy はこれを Omarchy メニュー（`Super + Space`）の _About_ として同梱しています。
+Ve OS はこれを Ve OS メニュー（`Super + Space`）の _About_ として同梱しています。
 
 ## Cliamp
 
-[Cliamp](https://www.cliamp.stream/) は Winamp 2.x に着想を得たレトロなターミナル音楽プレイヤーであり、lo-fi ビート向けのラジオ局が内蔵されています。`Super + Shift + Alt + M` で起動するか、Omarchy メニューの _Apps_ から起動します。`?` を押すとキーバインドの一覧全体が表示されます。
+[Cliamp](https://www.cliamp.stream/) は Winamp 2.x に着想を得たレトロなターミナル音楽プレイヤーであり、lo-fi ビート向けのラジオ局が内蔵されています。`Super + Shift + Alt + M` で起動するか、Ve OS メニューの _Apps_ から起動します。`?` を押すとキーバインドの一覧全体が表示されます。
 
 ## Wi-Fi と Bluetooth は？
 
-Wi-Fi と Bluetooth 向けの TUI は見つかりません — それらの仕事は Omarchy シェルの担当です。上部バーの Wi-Fi アイコンをクリックする（または `Super + Ctrl + N` を押す）とネットワークを表示して接続でき、Bluetooth アイコンをクリックする（または `Super + Ctrl + B` を押す）とデバイスをペアリングして接続できます。詳細は [ネットワーキング](35-networking.md) を参照してください。
+Wi-Fi と Bluetooth 向けの TUI は見つかりません — それらの仕事は Ve OS シェルの担当です。上部バーの Wi-Fi アイコンをクリックする（または `Super + Ctrl + N` を押す）とネットワークを表示して接続でき、Bluetooth アイコンをクリックする（または `Super + Ctrl + B` を押す）とデバイスをペアリングして接続できます。詳細は [ネットワーキング](35-networking.md) を参照してください。
 
 ## 独自のものを追加する
 
-どんなターミナルプログラムでも、完全なアプリとしての扱いを受けられます。Omarchy メニュー（`Super + Space`）の _Install > TUI_ に移動し、名前、起動コマンド、ウィンドウスタイル、アイコンを指定すれば、他のどのアプリケーションとも同じようにアプリランチャーに表示されるようになります。再び削除するには _Remove > TUI_ から行えます。
+どんなターミナルプログラムでも、完全なアプリとしての扱いを受けられます。Ve OS メニュー（`Super + Space`）の _Install > TUI_ に移動し、名前、起動コマンド、ウィンドウスタイル、アイコンを指定すれば、他のどのアプリケーションとも同じようにアプリランチャーに表示されるようになります。再び削除するには _Remove > TUI_ から行えます。

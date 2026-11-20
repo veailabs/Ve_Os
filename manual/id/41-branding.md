@@ -1,6 +1,6 @@
 # Branding
 
-Omarchy memungkinkan Anda mengatur logo perusahaan atau gambar pribadi Anda untuk buka kunci boot, screensaver, dan layar tentang.
+Ve OS memungkinkan Anda mengatur logo perusahaan atau gambar pribadi Anda untuk buka kunci boot, screensaver, dan layar tentang.
 
 ### Buka kunci boot
 
@@ -24,11 +24,11 @@ Ada tiga entri di menu itu:
 
 - **Edit Teks** membuka `~/.config/omarchy/branding/screensaver.txt` di editor Anda. Ketik atau tempel apa pun yang Anda suka — seni ASCII, nama Anda, kata kasar. Simpan dan keluar, dan screensaver langsung menyala agar Anda dapat melihatnya.
 - **Atur Dari Gambar** membuka pemilih file untuk png atau svg, mengonversinya menjadi ASCII, dan menunjukkan hasilnya kepada Anda. Logo dengan siluet yang jelas bekerja jauh lebih baik daripada foto.
-- **Pulihkan Default** mengembalikan logo Omarchy.
+- **Pulihkan Default** mengembalikan logo Ve OS.
 
 ### Layar tentang
 
-Tiga opsi yang sama ada di bawah _Tampilan > Branding > Tentang_ untuk layar _Tentang_ yang Anda dapatkan dari menu Omarchy, dan cara kerjanya identik — filenya adalah `~/.config/omarchy/branding/about.txt`, dan jendela Tentang muncul setelah setiap perubahan. Seni Tentang dikonversi ke ukuran yang lebih kecil daripada milik screensaver, karena harus muat di dalam jendela alih-alih memenuhi layar Anda.
+Tiga opsi yang sama ada di bawah _Tampilan > Branding > Tentang_ untuk layar _Tentang_ yang Anda dapatkan dari menu Ve OS, dan cara kerjanya identik — filenya adalah `~/.config/omarchy/branding/about.txt`, dan jendela Tentang muncul setelah setiap perubahan. Seni Tentang dikonversi ke ukuran yang lebih kecil daripada milik screensaver, karena harus muat di dalam jendela alih-alih memenuhi layar Anda.
 
 Selama jendela terbuka, kilau hijau melintas miring melintasi seni itu setiap beberapa detik, lalu membiarkannya diam kembali. Seni Anda sendiri juga mendapatkannya, selama setiap karakter di dalamnya selebar satu kolom — semua yang dihasilkan _Atur Dari Gambar_ memang begitu. Seni yang dibuat dari emoji atau karakter lebar ganda sebaliknya tetap diam, dan begitu juga layarnya jika Anda mempertahankan konfigurasi fastfetch milik Anda sendiri: logo yang diam dalam kasus-kasus itu adalah animasi yang menyingkir agar tidak menghalangi, bukan kegagalan, karena menggeser kilau melintasinya akan membuat sisa baris berakhir di tempat yang salah.
 

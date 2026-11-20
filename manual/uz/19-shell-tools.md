@@ -1,6 +1,6 @@
 # Shell vositalari
 
-Standart Linux vositalaridan tashqari, Omarchy bir qator takomillashtirilgan shell vositalari bilan ham keladi. Asosiylari mana.
+Standart Linux vositalaridan tashqari, Ve OS bir qator takomillashtirilgan shell vositalari bilan ham keladi. Asosiylari mana.
 
 ## fzf
 
@@ -58,4 +58,4 @@ Toʻliq qoʻllanmani `man yt-dlp` orqali topish mumkin.
 
 [try](https://github.com/tobi/try) sana tamgʻalangan kataloglar bilan dasturlash tajribalarini boshqarishni osonlashtiradi. Barcha tajribalar `~/Work/tries` da yashaydi va ularga `try` orqali kirishingiz mumkin.
 
-Omarchy loyihaning `bin/` katalogini `PATH` ga avtomatik qoʻshmaydi. Ishonchli loyiha-mahalliy vositalarni `bin/rails` yoki `./bin/dev` kabi aniq nisbiy yoʻl bilan ishga tushiring.
+Ve OS loyihaning `bin/` katalogini `PATH` ga avtomatik qoʻshmaydi. Ishonchli loyiha-mahalliy vositalarni `bin/rails` yoki `./bin/dev` kabi aniq nisbiy yoʻl bilan ishga tushiring.

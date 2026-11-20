@@ -20,7 +20,7 @@ Az Obsidian minden célra ingyenes, beleértve a személyes, kereskedelmi és no
 
 Az Obsidian [kereskedelmi kiegészítőt is kínál szinkronizáláshoz](https://obsidian.md/sync) iOS-es és Androidos mobilalkalmazásokkal. (https://obsidian.md/pricing).
 
-Az Obsidiant a `Super + Shift + O` billentyűkombinációval indítod. A téma-szinkronizálás használatához a beállításokban ki kell választanod az `Omarchy` témát.
+Az Obsidiant a `Super + Shift + O` billentyűkombinációval indítod. A téma-szinkronizálás használatához a beállításokban ki kell választanod az `Ve OS` témát.
 
 ## Omawrite
 
@@ -44,7 +44,7 @@ Az Aethert az alkalmazásindítón keresztül indítod (`Super + Space`).
 
 A [LocalSend](https://localsend.org/) lehetővé teszi, hogy fájlokat küldj ugyanazon a hálózaton lévő, az alkalmazást futtató más eszközökre, mint az Apple AirDropja. Viszont platformfüggetlen, így Windowsra, macOS-re, Androidra, iOS-re és persze Linuxra is küldhetsz fájlokat, és onnan is fogadhatsz.
 
-A Share menüt a `Super + Ctrl + S` billentyűkombinációval vagy az Omarchy menüben a _Trigger > Share_ alatt nyithatod meg. Négy lehetőséget kínál:
+A Share menüt a `Super + Ctrl + S` billentyűkombinációval vagy az Ve OS menüben a _Trigger > Share_ alatt nyithatod meg. Négy lehetőséget kínál:
 
 - A **Clipboard** szövegfájlként küldi el, bármit is másoltál. Nagyszerű arra, hogy egy linket vagy kódrészletet a telefonodra juttass anélkül, hogy e-mailt küldenél magadnak.
 - A **File** egy fájlválasztót nyit meg, ahol egyszerre többet is kiválaszthatsz.
@@ -55,7 +55,7 @@ Ugyanez működik terminálból is a `omarchy share clipboard`, a `omarchy share
 
 Közvetlenül a fájlkezelőből is küldhetsz: kattints jobb gombbal bármilyen kiválasztásra a Nautilusban, és válaszd a _Send via LocalSend_ lehetőséget.
 
-Az Omarchy tűzfala alapértelmezetten zárva van a LocalSend portjának kivételével, így ez egy friss telepítésen azonnal működik. Lásd: [biztonság](48-security.md).
+Az Ve OS tűzfala alapértelmezetten zárva van a LocalSend portjának kivételével, így ez egy friss telepítésen azonnal működik. Lásd: [biztonság](48-security.md).
 
 ## LibreOffice
 
@@ -77,13 +77,13 @@ A Signedet az alkalmazásindítón keresztül indítod (`Super + Space`), vagy n
 
 ## Checkmate
 
-A [Checkmate](https://github.com/omacom/checkmate) az Omarchy saját 3D-s sakkjátéka. Játssz egy barátoddal ugyanazon a számítógépen vagy a beépített ellenfél ellen három szinten, négy faragott készlettel, amelyek mindegyike a maga módján mozog: űreszközök, faragott fa és elefántcsont, erdei lények és édesség. A játékokban nincs óra, és minden lépés után mentenek.
+A [Checkmate](https://github.com/omacom/checkmate) az Ve OS saját 3D-s sakkjátéka. Játssz egy barátoddal ugyanazon a számítógépen vagy a beépített ellenfél ellen három szinten, négy faragott készlettel, amelyek mindegyike a maga módján mozog: űreszközök, faragott fa és elefántcsont, erdei lények és édesség. A játékokban nincs óra, és minden lépés után mentenek.
 
 A Checkmate-et az alkalmazásindítón keresztül indítod (`Super + Space`), ahol Chess néven szerepel. Nyomd meg a `?` billentyűt benne az összes gyorsbillentyű megtekintéséhez.
 
 ## Cards
 
-A [Cards](https://github.com/omacom/cards) az Omarchy saját Klondike pasziánsza. Hármasával húzol, korlátlan számú végigjátszással, négy kártyasorozatban: az egyik a témád színeivel készült, három pedig saját megjelenéssel rendelkezik. Kattints egy kártyára, majd oda, ahová megy, húzd át, vagy kattints rá duplán, hogy a legjobb helyre kerüljön. A játékok minden lépés után mentenek.
+A [Cards](https://github.com/omacom/cards) az Ve OS saját Klondike pasziánsza. Hármasával húzol, korlátlan számú végigjátszással, négy kártyasorozatban: az egyik a témád színeivel készült, három pedig saját megjelenéssel rendelkezik. Kattints egy kártyára, majd oda, ahová megy, húzd át, vagy kattints rá duplán, hogy a legjobb helyre kerüljön. A játékok minden lépés után mentenek.
 
 A Cardsot az alkalmazásindítón keresztül indítod (`Super + Space`). Kattints a nevére, vagy nyomd meg a `?` billentyűt az összes gyorsbillentyű megtekintéséhez.
 
@@ -97,7 +97,7 @@ Az Omacalcot a `Super + Shift + Q` billentyűkombinációval indítod (vagy a sz
 
 A [Signal](https://signal.org/) az E2E titkosítású üzenetküldés úttörője, és nagyszerű kommunikációs lehetőség mindenkinek, aki inkább nem valamelyik nagy technológiai konglomerátumon keresztül intézné.
 
-A Signalt a `Super + Shift + G` billentyűkombinációval indítod. Nem része az alaptelepítésnek, így amikor először megnyomod ezt, az Omarchy felajánlja, hogy telepíti neked (az Omarchy menüben az _Install > Service_ alatt is megtalálod).
+A Signalt a `Super + Shift + G` billentyűkombinációval indítod. Nem része az alaptelepítésnek, így amikor először megnyomod ezt, az Ve OS felajánlja, hogy telepíti neked (az Ve OS menüben az _Install > Service_ alatt is megtalálod).
 
 ## Omaview
 

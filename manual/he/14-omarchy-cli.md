@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-בדרך כלל שולטים ב-Omarchy דרך מקשי הקיצור ודרך תפריט Omarchy (`Super + Space`). אבל אפשר לשלוט בו גם דרך ה-CLI של `omarchy`. זה שימושי במיוחד כשאתה עובד עם סוכן AI על התאמה אישית או על הגדרות.
+בדרך כלל שולטים ב-Ve OS דרך מקשי הקיצור ודרך תפריט Ve OS (`Super + Space`). אבל אפשר לשלוט בו גם דרך ה-CLI של `omarchy`. זה שימושי במיוחד כשאתה עובד עם סוכן AI על התאמה אישית או על הגדרות.
 
 ל-CLI יש גישה לכל הכלים הפנימיים שמשמשים גם דרך התפריט וגם בדרכים אחרות. אפשר לראות את כל מה שזמין על ידי הרצת `omarchy` בטרמינל.
 
@@ -8,7 +8,7 @@
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-לאבחון, הרץ ישירות את `omarchy-debug --no-sudo --print`. הוא מדפיס אבחון וכותב את `/tmp/omarchy-debug.log` בלי לבקש sudo, גם בהתקנות של חבילות שבהן `omarchy debug` עלול להיכשל עם "Unknown Omarchy command".
+לאבחון, הרץ ישירות את `omarchy-debug --no-sudo --print`. הוא מדפיס אבחון וכותב את `/tmp/omarchy-debug.log` בלי לבקש sudo, גם בהתקנות של חבילות שבהן `omarchy debug` עלול להיכשל עם "Unknown Ve OS command".
 
 ואפשר לצלול עמוק יותר לתוך כל קבוצה:
 
@@ -60,4 +60,4 @@ Capture commands — Screenshots and screen recording:
 
 ### פתיחת התפריט מהטרמינל
 
-גם תפריט Omarchy ניתן לתסריט, וזה נוח לקיצורי המקלדת שלך. `omarchy menu` פותח אותו מהשורש, ואפשר לקפוץ ישר לכל נקודה בעץ על ידי ציון השם שלה: `omarchy menu summon appearance.theme` עובר ישר לבוחר ערכות הנושא, `omarchy menu toggle system` פותח את תפריט המערכת וסוגר אותו שוב אם הוא כבר פתוח, ו-`omarchy menu close` מסתיר אותו.
+גם תפריט Ve OS ניתן לתסריט, וזה נוח לקיצורי המקלדת שלך. `omarchy menu` פותח אותו מהשורש, ואפשר לקפוץ ישר לכל נקודה בעץ על ידי ציון השם שלה: `omarchy menu summon appearance.theme` עובר ישר לבוחר ערכות הנושא, `omarchy menu toggle system` פותח את תפריט המערכת וסוגר אותו שוב אם הוא כבר פתוח, ו-`omarchy menu close` מסתיר אותו.

@@ -41,7 +41,7 @@ Nämä sidonnat ovat olemassa vain Omasnapin ollessa auki, joten ne eivät voi t
 
 ## Näytön tallennus
 
-`Alt + Print Screen` avaa kohdan _Trigger > Capture > Screenrecord_, joka kysyy, mitä haluat ääniraidalle: ei ääntä, työpöydän ääni, työpöytä ja mikrofoni tai työpöytä, mikrofoni ja verkkokamera. Viimeinen vaihtoehto näkyy vain, jos sinulla on oikeasti kamera kytkettynä. Valitse yksi, ja Omarchyn tallennusvalitsin antaa sinun vetää alueen tai napsauttaa ikkunaa tai näyttöä.
+`Alt + Print Screen` avaa kohdan _Trigger > Capture > Screenrecord_, joka kysyy, mitä haluat ääniraidalle: ei ääntä, työpöydän ääni, työpöytä ja mikrofoni tai työpöytä, mikrofoni ja verkkokamera. Viimeinen vaihtoehto näkyy vain, jos sinulla on oikeasti kamera kytkettynä. Valitse yksi, ja Ve OSn tallennusvalitsin antaa sinun vetää alueen tai napsauttaa ikkunaa tai näyttöä.
 
 Tallennus toimii gpu-screen-recorderilla, joka koodaa GPU:lla 60fps:n nopeudella ja turvautuu CPU:hun, jos on pakko. Tuloksena on MP4-tiedosto kansiossa `~/Videos` nimellä `screenrecording-2026-08-13_14-22-05.mp4`. Aseta `OMARCHY_SCREENRECORD_DIR` muuttaaksesi sitä — mutta huomaa, että toisin kuin kuvakaappauskansio, tämän on oltava jo olemassa, tai tallennus kieltäytyy käynnistymästä.
 

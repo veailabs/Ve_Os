@@ -10,7 +10,7 @@ Kaardid pakuvad seda, mida nad endaga kannavad: _Kopeeri kood_ kinnituskoodide j
 
 Et kasutada neid ilma hiireta, vajuta `Super + Ctrl + ,`. Uusim teavitus on valitud ja selle nupud nummerdatud: vajuta numbrit, et mõnda neist kasutada, `Enter`, et teavitust klõpsata, `↑` ja `↓`, et liikuda teavituste vahel, `Delete`, et mõni neist sulgeda, ja `Esc`, et klaviatuur tagasi anda. See laseb ka ise mõne jõudeoleku sekundi järel lahti.
 
-Teavituste vaigistamine hoiab need tagasi, välja arvatud Omarchy enda kinnitused, hädaolukorra hoiatused ja kinnituskoodid, mida sa just hetk tagasi küsisid. Too viimased paar uuesti ekraanile, olgu need tagasi hoitud või mitte, klahvikombinatsiooniga `Super + Shift + Alt + ,`. Ajalugu säilitatakse üks päev.
+Teavituste vaigistamine hoiab need tagasi, välja arvatud Ve OS enda kinnitused, hädaolukorra hoiatused ja kinnituskoodid, mida sa just hetk tagasi küsisid. Too viimased paar uuesti ekraanile, olgu need tagasi hoitud või mitte, klahvikombinatsiooniga `Super + Shift + Alt + ,`. Ajalugu säilitatakse üks päev.
 
 ## Kiirklahvi teated
 

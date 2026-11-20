@@ -28,7 +28,7 @@ Dadurch wird Sonntag 10:55 AM angezeigt.
 
 ### Wie ändere ich meine Zeitzone?
 
-Führe _Update > Timezone_ im Omarchy-Menü aus und wähle aus der Liste aus. Wenn die Zeitzone stimmt, die Uhr selbst aber abweicht, startet _Update > Time_ die Zeitsynchronisierung für dich neu.
+Führe _Update > Timezone_ im Ve OS-Menü aus und wähle aus der Liste aus. Wenn die Zeitzone stimmt, die Uhr selbst aber abweicht, startet _Update > Time_ die Zeitsynchronisierung für dich neu.
 
 ### Wie ändere ich meinen DNS, teile mein Wi-Fi oder prüfe meine Verbindungsgeschwindigkeit?
 
@@ -58,13 +58,13 @@ export OMASNAP_SCREENSHOT_DIR="$HOME/Pictures/Captures"
 
 Dasselbe kannst du für Bildschirmaufnahmen mit `OMARCHY_SCREENRECORD_DIR` tun.
 
-Omasnap erstellt sein Screenshot-Verzeichnis automatisch. Erstelle das Verzeichnis für Bildschirmaufnahmen selbst und starte dann Omarchy neu, damit eine der beiden Umgebungsänderungen wirksam wird.
+Omasnap erstellt sein Screenshot-Verzeichnis automatisch. Erstelle das Verzeichnis für Bildschirmaufnahmen selbst und starte dann Ve OS neu, damit eine der beiden Umgebungsänderungen wirksam wird.
 
 ### Wie bringe ich die Lautsprecher + Webcam an meinem Apple Studio Display zum Laufen?
 
 Man würde denken, dass alles einfach durch Einstecken von USB C funktionieren sollte, aber leider ist das nicht der Fall. Die Lösung, die ich gefunden habe, damit es zuverlässig funktioniert, ist die Verwendung von [the WJESOG DisplayPort + USB-A => USB-C cable](https://www.amazon.com/WJESOG-DisplayPort-Adapter-Converter-Thunderbolt/dp/B0BNX7MS6N/). Dann funktionieren Lautsprecher und Webcam ganz wunderbar.
 
-Denk daran, dass du in Omarchy eine eingebaute Helligkeitssteuerung für die Apple Displays (sowohl Studio als auch XDR) über die normalen Helligkeitstasten der Tastatur hast.
+Denk daran, dass du in Ve OS eine eingebaute Helligkeitssteuerung für die Apple Displays (sowohl Studio als auch XDR) über die normalen Helligkeitstasten der Tastatur hast.
 
 ### Wie werde ich die ganze zusätzliche Software los?
 
@@ -72,7 +72,7 @@ Wenn du Programme wie Obsidian oder LibreOffice oder irgendeinen anderen vorinst
 
 Führe _Remove > Package_ aus, um jedes installierte Paket zu sehen. Dann kannst du mit tab jedes Paket auswählen, das du entfernen möchtest, und mit return beginnen, alles Ausgewählte zu entfernen.
 
-Und du kannst _Remove > Web App_ aus dem Omarchy-Menü verwenden, um alle vorinstallierten Web Apps zu entfernen, die du nicht willst.
+Und du kannst _Remove > Web App_ aus dem Ve OS-Menü verwenden, um alle vorinstallierten Web Apps zu entfernen, die du nicht willst.
 
 Oder führe _Remove > Preinstalls_ aus, um alle vorinstallierten Extras — Web Apps, TUIs und optionale Anwendungen — in einem Rutsch hinauszuwerfen. Die Hotkeys, die sie gestartet haben, verschwinden mit ihnen, sodass dir eine leere Liste von Bindings bleibt, die du in `~/.config/hypr/bindings.lua` mit deinen eigenen füllen kannst.
 

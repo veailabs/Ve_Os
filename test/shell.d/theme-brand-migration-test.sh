@@ -1,0 +1,46 @@
+#!/bin/bash
+
+set -euo pipefail
+source "$(dirname "$0")/base-test.sh"
+
+test_tmp=$(mktemp -d)
+trap 'rm -rf "$test_tmp"' EXIT
+export HOME="$test_tmp/home with spaces"
+current="$HOME/.local/state/omarchy/current/theme"
+pi="$HOME/.pi/agent"
+vault="$HOME/vault with spaces"
+mkdir -p "$current" "$pi" "$vault/.obsidian" "$HOME/.config/obsidian"
+printf '{"name":"omarchy-system","colors":{"background":"#123456"}}\n' >"$current/pi.json"
+printf 'body { color: blue; }\n' >"$current/obsidian.css"
+jq -n --arg path "$vault" '{vaults: {one: {path: $path}}}' >"$HOME/.config/obsidian/obsidian.json"
+
+printf '{"theme":"omarchy-system","model":"keep-me"}\n' >"$pi/settings.json"
+printf '{"cssTheme":"Omarchy","other":"keep-me"}\n' >"$vault/.obsidian/appearance.json"
+bash "$ROOT/bin/omarchy-theme-set-pi"
+bash "$ROOT/bin/omarchy-theme-set-obsidian"
+jq -e '. == {theme:"ve-system",model:"keep-me"}' "$pi/settings.json" >/dev/null || fail "Pi migrates only the inherited selection"
+jq -e '.name == "ve-system" and .colors.background == "#123456"' "$pi/themes/ve-system.json" >/dev/null || fail "Pi publishes the renamed palette without losing colors"
+jq -e '. == {cssTheme:"Ve OS",other:"keep-me"}' "$vault/.obsidian/appearance.json" >/dev/null || fail "Obsidian migrates only the inherited selection"
+jq -e '.name == "Ve OS"' "$vault/.obsidian/themes/Ve OS/manifest.json" >/dev/null || fail "Obsidian publishes the matching theme manifest"
+cmp -s "$current/obsidian.css" "$vault/.obsidian/themes/Ve OS/theme.css" || fail "Obsidian publishes the palette in a vault path with spaces"
+pass "legacy Pi and Obsidian selections migrate and preserve unrelated settings"
+
+printf '{ "theme": "night sky", "model": "keep-me" }\n' >"$pi/settings.json"
+printf '{ "cssTheme": "night sky", "other": "keep-me" }\n' >"$vault/.obsidian/appearance.json"
+cp "$pi/settings.json" "$test_tmp/pi-before"
+cp "$vault/.obsidian/appearance.json" "$test_tmp/obsidian-before"
+bash "$ROOT/bin/omarchy-theme-set-pi"
+bash "$ROOT/bin/omarchy-theme-set-obsidian"
+cmp -s "$pi/settings.json" "$test_tmp/pi-before" || fail "Pi leaves a custom theme selection byte-identical"
+cmp -s "$vault/.obsidian/appearance.json" "$test_tmp/obsidian-before" || fail "Obsidian leaves a custom theme selection byte-identical"
+pass "custom Pi and Obsidian settings remain byte-identical"
+
+printf '{malformed\n' >"$pi/settings.json"
+printf '{malformed\n' >"$vault/.obsidian/appearance.json"
+cp "$pi/settings.json" "$test_tmp/pi-before"
+cp "$vault/.obsidian/appearance.json" "$test_tmp/obsidian-before"
+bash "$ROOT/bin/omarchy-theme-set-pi"
+bash "$ROOT/bin/omarchy-theme-set-obsidian"
+cmp -s "$pi/settings.json" "$test_tmp/pi-before" || fail "Pi leaves malformed settings byte-identical"
+cmp -s "$vault/.obsidian/appearance.json" "$test_tmp/obsidian-before" || fail "Obsidian leaves malformed settings byte-identical"
+pass "malformed Pi and Obsidian settings remain byte-identical"

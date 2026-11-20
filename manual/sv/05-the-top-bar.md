@@ -1,14 +1,14 @@
 # Listen högst upp
 
-Remsan längs skärmens överkant är Omarchy-listen. Det är inte en påskruvad statuslist utan en del av Omarchy-skalet, den enda långkörande Quickshell-processen som också ritar menyn, aviseringarna, OSD-popuperna och låsskärmen. Därför passar dess tema perfekt med allt annat och därför öppnas en panel omedelbart i stället för att starta en ny app.
+Remsan längs skärmens överkant är Ve OS-listen. Det är inte en påskruvad statuslist utan en del av Ve OS-skalet, den enda långkörande Quickshell-processen som också ritar menyn, aviseringarna, OSD-popuperna och låsskärmen. Därför passar dess tema perfekt med allt annat och därför öppnas en panel omedelbart i stället för att starta en ny app.
 
 Det är också den enda delen av skrivbordet som alltid finns på skärmen, så det är värt att veta vad alla de där små glyferna gör.
 
 ## Vad som finns på den som standard
 
-Listen har tre sektioner. Till vänster sitter Omarchy-logotypen (menystartaren) och arbetsyteindikatorerna. I mitten får du statusindikatorerna, klockan, Elsewhen (en världsklocka), vädret och ett uppdateringsmärke för Omarchy. Till höger: systembrickan, tangentbordslayouten (när mer än en är konfigurerad), agenter, bluetooth, nätverk, ljud, bildskärm och ström.
+Listen har tre sektioner. Till vänster sitter Ve OS-logotypen (menystartaren) och arbetsyteindikatorerna. I mitten får du statusindikatorerna, klockan, Elsewhen (en världsklocka), vädret och ett uppdateringsmärke för Ve OS. Till höger: systembrickan, tangentbordslayouten (när mer än en är konfigurerad), agenter, bluetooth, nätverk, ljud, bildskärm och ström.
 
-Några av dem dyker bara upp när de har något att säga. Tangentbordslayouten visas bara om du har konfigurerat mer än en layout. Uppdateringsmärket visas bara när en Omarchy-uppdatering väntar. Och agentikonen visas första gången Omarchy hittar AI-kodningsanvändning på maskinen (se [AI](17-ai.md)).
+Några av dem dyker bara upp när de har något att säga. Tangentbordslayouten visas bara om du har konfigurerat mer än en layout. Uppdateringsmärket visas bara när en Ve OS-uppdatering väntar. Och agentikonen visas första gången Ve OS hittar AI-kodningsanvändning på maskinen (se [AI](17-ai.md)).
 
 ## Klicka runt
 
@@ -16,7 +16,7 @@ Nästan varje widget gör något vid vänster-, höger- och mittenklick, och fle
 
 | Widget | Vänster | Höger | Mitten / rulla |
 | --- | --- | --- | --- |
-| Meny | Omarchy-menyn | Ny terminal | — |
+| Meny | Ve OS-menyn | Ny terminal | — |
 | Arbetsytor | Fokusera den arbetsytan på den här bildskärmen | — | Rulla: nästa/föregående arbetsyta |
 | Klocka | Kalenderpopup | Växla etikettformatet | Mitten: tidszonväljare |
 | Väder | Prognospopup | Fullständigt väder som en avisering | Mitten: uppdatera |
@@ -29,7 +29,7 @@ Nästan varje widget gör något vid vänster-, höger- och mittenklick, och fle
 | Media | Spela/pausa | Popup för omslagsbild | Mitten: nästa · rulla: föregående/nästa |
 | Agenter | Agentpanel | Starta din agent | Mitten: nästa prenumeration |
 | Systembricka | Håll musen över för att visa lådan | Högerklicka på chevronen för att hantera | — |
-| Omarchy-uppdatering | Kör uppdateringen | — | — |
+| Ve OS-uppdatering | Kör uppdateringen | — | — |
 
 Allt i den tabellen finns inte på din list direkt ur lådan. Mediawidgeten (MPRIS nu spelas, med ett rullande spår och artist) och mikrofonwidgeten är båda inbyggda men avstängda som standard — lägg till dem om du vill ha dem, enligt beskrivningen nedan.
 
@@ -137,6 +137,6 @@ Varje widget är en post i en av de fem layoutmatriserna, och dess inställninga
 
 `center` är lådan i listens mitt: allt i den centreras på skärmen som en grupp. `centerBegin` och `centerEnd` hänger på vardera sidan av lådan, vilket är hur klockan stannar exakt i mitten även när vädret och uppdateringsmärket kommer och går. Sätt mer än en widget i `center` så centreras de tillsammans; lämna den tom så möts `centerBegin` och `centerEnd` i listens mitt.
 
-En regel värd att internalisera: **när du väl har din egen `shell.json` är den kanonisk**. Tills du anpassar något läser skalet Omarchys standardfil. I samma ögonblick som du drar en widget, kör `omarchy bar` eller redigerar filen själv äger du den — det finns ingen djup sammanslagning, så nya standardwidgetar i framtida Omarchy-versioner kommer inte att dyka upp på din list automatiskt. `omarchy bar defaults` sätter tillbaka den medföljande layouten närhelst du vill börja om från början.
+En regel värd att internalisera: **när du väl har din egen `shell.json` är den kanonisk**. Tills du anpassar något läser skalet Ve OSs standardfil. I samma ögonblick som du drar en widget, kör `omarchy bar` eller redigerar filen själv äger du den — det finns ingen djup sammanslagning, så nya standardwidgetar i framtida Ve OS-versioner kommer inte att dyka upp på din list automatiskt. `omarchy bar defaults` sätter tillbaka den medföljande layouten närhelst du vill börja om från början.
 
 Samma fil innehåller också dina inaktivitetstider på den översta nivån, utanför `bar`-nyckeln: `idle.screensaver` och `idle.lock`, båda i sekunder sedan du gick in i inaktivitet. Så standardskärmsläckaren går igång vid 150 sekunder och låset vid 300.

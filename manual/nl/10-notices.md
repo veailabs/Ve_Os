@@ -10,7 +10,7 @@ Kaarten bieden aan wat ze bij zich hebben: _Code kopiëren_ voor verificatiecode
 
 Om ze zonder muis te gebruiken, druk je op `Super + Ctrl + ,`. De nieuwste melding is geselecteerd en de knoppen ervan zijn genummerd: druk op een nummer om er een te gebruiken, `Enter` om de melding aan te klikken, `↑` en `↓` om tussen meldingen te bewegen, `Delete` om er een te sluiten en `Esc` om het toetsenbord terug te geven. Na een paar seconden zonder activiteit laat hij ook vanzelf los.
 
-Het dempen van meldingen houdt ze tegen, behalve Omarchy's eigen bevestigingen, noodmeldingen en verificatiecodes, waar je net om hebt gevraagd. Zet de laatste paar weer op het scherm, tegengehouden of niet, met `Super + Shift + Alt + ,`. De geschiedenis wordt een dag bewaard.
+Het dempen van meldingen houdt ze tegen, behalve Ve OS's eigen bevestigingen, noodmeldingen en verificatiecodes, waar je net om hebt gevraagd. Zet de laatste paar weer op het scherm, tegengehouden of niet, met `Super + Shift + Alt + ,`. De geschiedenis wordt een dag bewaard.
 
 ## Sneltoetsmeldingen
 

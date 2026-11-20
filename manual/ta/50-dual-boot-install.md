@@ -1,4 +1,6 @@
-# இரட்டைத் துவக்க நிறுவல்
+# Ve OS — இரட்டைத் துவக்க நிறுவல்
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Windows அல்லது பிற நிறுவல்களுடன் சேர்த்து, ஒரே ஒரு பகிர்வில் Omarchy-ஐ உங்களால் நிறுவ முடியும்.
 

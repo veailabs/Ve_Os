@@ -1,14 +1,14 @@
 # The Top Bar
 
-The strip along the top of your screen is the Omarchy bar. It's not a bolted-on status bar but part of the Omarchy shell, the single long-running Quickshell process that also draws the menu, the notifications, the OSD popups, and the lock screen. That's why it themes perfectly with everything else and why a panel opens instantly instead of spawning a new app.
+The strip along the top of your screen is the Ve OS bar. It's not a bolted-on status bar but part of the Ve OS shell, the single long-running Quickshell process that also draws the menu, the notifications, the OSD popups, and the lock screen. That's why it themes perfectly with everything else and why a panel opens instantly instead of spawning a new app.
 
 It's also the one piece of the desktop that's always on screen, so it's worth knowing what all those little glyphs do.
 
 ## What's on it by default
 
-The bar has three sections. On the left sits the Omarchy logo (the menu launcher) and the workspace indicators. In the center you get the status indicators, the clock, Elsewhen (a world clock), the weather, and an Omarchy update badge. On the right: the system tray, the keyboard layout (when more than one is configured), agents, bluetooth, network, audio, display, and power.
+The bar has three sections. On the left sits the Ve OS logo (the menu launcher) and the workspace indicators. In the center you get the status indicators, the clock, Elsewhen (a world clock), the weather, and an Ve OS update badge. On the right: the system tray, the keyboard layout (when more than one is configured), agents, bluetooth, network, audio, display, and power.
 
-A few of those only show up when they have something to say. The keyboard layout appears only if you've configured more than one layout. The update badge appears only when there's an Omarchy update waiting. And the agents icon appears the first time Omarchy finds AI coding usage on the machine (see [AI](17-ai.md)).
+A few of those only show up when they have something to say. The keyboard layout appears only if you've configured more than one layout. The update badge appears only when there's an Ve OS update waiting. And the agents icon appears the first time Ve OS finds AI coding usage on the machine (see [AI](17-ai.md)).
 
 ## Clicking around
 
@@ -16,7 +16,7 @@ Nearly every widget does something on left, right, and middle click, and several
 
 | Widget | Left | Right | Middle / scroll |
 | --- | --- | --- | --- |
-| Menu | Omarchy menu | New terminal | — |
+| Menu | Ve OS menu | New terminal | — |
 | Workspaces | Focus that workspace on this monitor | — | Scroll: next/previous workspace |
 | Clock | Calendar popup | Cycle the label format | Middle: timezone picker |
 | Weather | Forecast popup | Full weather as a notification | Middle: refresh |
@@ -29,7 +29,7 @@ Nearly every widget does something on left, right, and middle click, and several
 | Media | Play/pause | Cover-art popup | Middle: next · scroll: prev/next |
 | Agents | Agents panel | Launch your agent | Middle: next subscription |
 | Tray | Hover to reveal the drawer | Right on the chevron to manage | — |
-| Omarchy update | Run the update | — | — |
+| Ve OS update | Run the update | — | — |
 
 Not everything in that table is on your bar out of the box. The media widget (MPRIS now-playing, with a scrolling track and artist) and the microphone widget are both built in but off by default — add them if you want them, as described below.
 
@@ -137,6 +137,6 @@ Every widget is one entry in one of the five layout arrays, and its settings sit
 
 `center` is the box in the middle of the bar: everything in it is centered on the screen as one group. `centerBegin` and `centerEnd` hang off either side of the box, which is how the clock stays dead center even as the weather and update badge come and go. Put more than one widget in `center` and they're centered together; leave it empty and `centerBegin` and `centerEnd` meet in the middle of the bar.
 
-One rule worth internalizing: **once you have your own `shell.json`, it's canonical**. Until you customize anything, the shell reads Omarchy's default file. The moment you drag a widget, run `omarchy bar`, or edit the file yourself, you own it — there's no deep merge, so new default widgets in future Omarchy releases won't appear on your bar automatically. `omarchy bar defaults` puts the shipped layout back whenever you want a clean slate.
+One rule worth internalizing: **once you have your own `shell.json`, it's canonical**. Until you customize anything, the shell reads Ve OS's default file. The moment you drag a widget, run `omarchy bar`, or edit the file yourself, you own it — there's no deep merge, so new default widgets in future Ve OS releases won't appear on your bar automatically. `omarchy bar defaults` puts the shipped layout back whenever you want a clean slate.
 
 The same file also holds your idle timings at the top level, outside the `bar` key: `idle.screensaver` and `idle.lock`, both in seconds since you went idle. So the default screensaver kicks in at 150 seconds and the lock at 300.

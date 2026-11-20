@@ -1,6 +1,6 @@
 # First-party plugins
 
-These plugins ship with Omarchy and are discovered by the shell at startup.
+These plugins ship with Ve OS and are discovered by the shell at startup.
 They use the same `manifest.json` contract as third-party plugins; the
 only difference is that the shell flags them with `__isFirstParty: true`.
 First-party non-bar plugins are enabled unless listed in `disabledPlugins[]`;
@@ -18,7 +18,7 @@ User-installed plugins live alongside these conceptually but on disk under
 | Emojis        | `omarchy.emojis`          | `overlay`               | `emojis/Emojis.qml`                   |
 | Clipboard mgr | `omarchy.clipboard`       | `overlay`               | `clipboard/Clipboard.qml`             |
 | Reminders     | `omarchy.reminders`       | `overlay`               | `reminders/ReminderFlow.qml`          |
-| Omarchy menu  | `omarchy.menu`            | `menu`, `bar-widget`    | `menu/Menu.qml`, `menu/BarWidget.qml` |
+| Ve OS menu    | `omarchy.menu`            | `menu`, `bar-widget`    | `menu/Menu.qml`, `menu/BarWidget.qml` |
 | Notifications | `omarchy.notifications`   | `service`               | `notifications/Service.qml`           |
 | Audio         | `omarchy.audio`           | `bar-widget`            | `panels/audio/Panel.qml`              |
 | Bluetooth     | `omarchy.bluetooth`       | `bar-widget`            | `panels/bluetooth/Panel.qml`          |
@@ -105,9 +105,9 @@ App dock shown on floating workspaces, and hidden on tiled ones and behind a ful
 
 Its settings live in the `dock:` subtree of `shell.json`: `position` (`top`, `bottom`, `left` or `right`) and `pinned` (desktop ids). A `shell.json` without pins uses the defaults. `omarchy dock` sets both.
 
-## Omarchy menu
+## Ve OS menu
 
-Quickshell-powered Omarchy command menu.
+Quickshell-powered Ve OS command menu.
 The menu UI lives in `menu/Menu.qml` as a first-party `menu` plugin and is
 summoned through the shell (`omarchy-shell shell summon omarchy.menu ...`),
 so it shares the long-running `omarchy-shell` process instead of starting a

@@ -1,10 +1,10 @@
 # Växlar, inaktivitet & skärmsläckaren
 
-Mycket av det du ändrar till vardags är egentligen ingen inställning. Det är ett läge du slår på i en timme och sedan slår av igen: nattljus när du jobbar sent, stör ej när du presenterar, håll dig vaken när du tittar på något. Omarchy kallar dem växlar, och de fungerar alla på samma sätt — en snabbtangent, ett menyval och ett kommando som alla träffar samma omkopplare.
+Mycket av det du ändrar till vardags är egentligen ingen inställning. Det är ett läge du slår på i en timme och sedan slår av igen: nattljus när du jobbar sent, stör ej när du presenterar, håll dig vaken när du tittar på något. Ve OS kallar dem växlar, och de fungerar alla på samma sätt — en snabbtangent, ett menyval och ett kommando som alla träffar samma omkopplare.
 
 ### Växelmenyn
 
-`Super + Ctrl + O` öppnar _Utlösare > Växel_ direkt, eller så kan du gå dit från Omarchy-menyn (`Super + Space`). Allt i den listan är en omkopplare du kan slå om utan att fundera på var tillståndet bor. Omkopplare för hur skrivbordet ser ut sitter bredvid, under _Utseende_.
+`Super + Ctrl + O` öppnar _Utlösare > Växel_ direkt, eller så kan du gå dit från Ve OS-menyn (`Super + Space`). Allt i den listan är en omkopplare du kan slå om utan att fundera på var tillståndet bor. Omkopplare för hur skrivbordet ser ut sitter bredvid, under _Utseende_.
 
 Från terminalen är samma omkopplare `omarchy toggle <thing>`. Kör `omarchy toggle` på egen hand för att se hela gruppen.
 
@@ -26,7 +26,7 @@ Omkopplarna för styrplatta, pekskärm och hybrid-GPU finns under _Utlösare > H
 
 _Utseende_ innehåller menyraden och animationer, plus några saker som inte är `omarchy toggle`-kommandon men beter sig likadant: batteriprocent i raden, standardlayouten för arbetsytor och, under _Fönster_, mellanrum mellan fönster (`Super + Shift + Backspace`) och det kvadratiska bildförhållandet för 1 fönster (`Super + Ctrl + Backspace`).
 
-När Hyprland inte har någon GPU att rita med och renderar på CPU:n i stället (llvmpipe), som på Mac-datorer vars GPU ännu inte stöds, i de flesta virtuella maskiner eller när en grafikdrivrutin inte laddas, stänger Omarchy av animationer, oskärpa och skuggor för den sessionen och meddelar dig det en gång med en avisering. _Utseende > Animationer på_ tar tillbaka dem, och Omarchy kommer ihåg det även för senare sessioner.
+När Hyprland inte har någon GPU att rita med och renderar på CPU:n i stället (llvmpipe), som på Mac-datorer vars GPU ännu inte stöds, i de flesta virtuella maskiner eller när en grafikdrivrutin inte laddas, stänger Ve OS av animationer, oskärpa och skuggor för den sessionen och meddelar dig det en gång med en avisering. _Utseende > Animationer på_ tar tillbaka dem, och Ve OS kommer ihåg det även för senare sessioner.
 
 De flesta av dessa är bara en flaggfil under `~/.local/state/omarchy/toggles/`. Om du vill grena på en av dem i ett skript ger `omarchy-toggle-enabled` dig en exitkod i stället för att tvinga dig att leta:
 
@@ -63,11 +63,11 @@ Starta sedan hyprsunset vid inloggning genom att lägga till `o.launch_on_start(
 
 Ingenting går förlorat, dock. Tystade aviseringar hålls tillbaka: sätt tillbaka de senaste på skärmen med `Super + Shift + Alt + ,`. Se [aviseringar](10-notices.md) för resten.
 
-Två sorters meddelanden släpps fortfarande igenom: Omarchys egna bekräftelse-toasts för något du just gjorde ("Temat ändrat", "Skärmbild sparad"), och kritiska varningar som skickas från kommandoraden. Chattappar som markerar allt som kritiskt för att tvinga sig framför dig räknas inte.
+Två sorters meddelanden släpps fortfarande igenom: Ve OSs egna bekräftelse-toasts för något du just gjorde ("Temat ändrat", "Skärmbild sparad"), och kritiska varningar som skickas från kommandoraden. Chattappar som markerar allt som kritiskt för att tvinga sig framför dig räknas inte.
 
 ### Inaktivitet
 
-Omarchy-skalet äger inaktivitetsbeteendet, och tiderna är ett `idle`-block på toppnivå i `~/.config/omarchy/shell.json`:
+Ve OS-skalet äger inaktivitetsbeteendet, och tiderna är ett `idle`-block på toppnivå i `~/.config/omarchy/shell.json`:
 
 ```json
 {
@@ -89,16 +89,16 @@ Det här handlar om låsning och skärmsläckaren, inte ström. Viloläge och dv
 
 ### Skärmsläckaren
 
-Omarchys skärmsläckare är ASCII-konst som körs genom slumpmässiga texteffekter, en instans per bildskärm. Vilken tangent som helst eller en musrörelse avslutar den.
+Ve OSs skärmsläckare är ASCII-konst som körs genom slumpmässiga texteffekter, en instans per bildskärm. Vilken tangent som helst eller en musrörelse avslutar den.
 
 Du kan starta den på begäran från _System > Skärmsläckare_ (`Super + Esc`), vilket tvingar upp den även om du har stängt av skärmsläckaren vid inaktivitet. Det finns ingen snabbtangent bunden till den som standard.
 
 `omarchy toggle screensaver` är det som stänger av den vid inaktivitet, om du hellre går direkt från arbete till låst. Vilken tangent, klick, rullning eller musrörelse som helst stänger den.
 
-Logotypen den ritar är din att ändra, under _Utseende > Varumärkesprofil > Skärmsläckare_. Ladda upp en png eller svg så konverterar Omarchy den till ASCII. Se [varumärkesprofil](41-branding.md).
+Logotypen den ritar är din att ändra, under _Utseende > Varumärkesprofil > Skärmsläckare_. Ladda upp en png eller svg så konverterar Ve OS den till ASCII. Se [varumärkesprofil](41-branding.md).
 
 ### Låsskärmen
 
-`Super + Ctrl + L` låser maskinen. Det kör låsskärmen från Omarchy-skalet, gör displayen tom, återställer din tangentbordslayout till den första så att du inte skriver ditt lösenord i fel alfabet, och — om du har det igång — låser 1Password på vägen ut.
+`Super + Ctrl + L` låser maskinen. Det kör låsskärmen från Ve OS-skalet, gör displayen tom, återställer din tangentbordslayout till den första så att du inte skriver ditt lösenord i fel alfabet, och — om du har det igång — låser 1Password på vägen ut.
 
 Låsskärmen tar ett lösenord, och den tar ett fingeravtryck också när du väl har ställt in ett. Det, och de andra sätten att autentisera, täcks i [hårdvaruautentisering](37-hardware-authentication.md).

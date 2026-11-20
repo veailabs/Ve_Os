@@ -1,4 +1,6 @@
-# Instalări nesupravegheate
+# Ve OS — Instalări nesupravegheate
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 ISO-ul Omarchy se poate instala singur, fără nimeni la tastatură. Dacă programul de instalare găsește o a doua unitate etichetată `cidata` care conține fișierele sale de configurare, le copiază de pe ea, sare complet peste asistentul de configurare și repornește singur în sistemul finit. Fără o versiune specială de ISO, fără o intrare suplimentară în meniul de pornire — fără o astfel de unitate conectată, nu se schimbă nimic și primești asistentul normal.
 

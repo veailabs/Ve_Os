@@ -1,4 +1,6 @@
-# তত্ত্বাবধানহীন ইনস্টল
+# Ve OS — তত্ত্বাবধানহীন ইনস্টল
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy ISO কেউ কীবোর্ডের সামনে না থাকলেও নিজে নিজেই ইনস্টল হতে পারে। ইনস্টলার যদি তার কনফিগারেশন ফাইল বহনকারী `cidata` লেবেলযুক্ত দ্বিতীয় কোনো ড্রাইভ খুঁজে পায়, তাহলে সেগুলো কপি করে নেয়, সেটআপ উইজার্ড পুরোপুরি এড়িয়ে যায়, এবং নিজে থেকেই সম্পূর্ণ সিস্টেমে রিবুট করে। কোনো বিশেষ ISO বিল্ড নেই, কোনো অতিরিক্ত বুট মেনু এন্ট্রি নেই — এমন কোনো ড্রাইভ সংযুক্ত না থাকলে কিছুই বদলায় না এবং আপনি স্বাভাবিক উইজার্ডই পাবেন।
 

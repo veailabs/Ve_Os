@@ -10,7 +10,7 @@
 
 [General]
 ColorScheme=Omarchy
-Name=Omarchy
+Name=Ve OS
 
 [KDE]
 contrast=0

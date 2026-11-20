@@ -1,6 +1,6 @@
-# Omarchy CLI
+# Ve OS CLI
 
-Omarchy は通常、ホットキーと Omarchy メニュー（`Super + Space`）で操作する。だが、`omarchy` CLI からも操作できる。AI エージェントにカスタマイズや設定を手伝わせているときは特に便利だ。
+Ve OS は通常、ホットキーと Ve OS メニュー（`Super + Space`）で操作する。だが、`omarchy` CLI からも操作できる。AI エージェントにカスタマイズや設定を手伝わせているときは特に便利だ。
 
 この CLI は、メニュー経由でもそれ以外でも使われる内部ツールすべてにアクセスできる。利用可能なものはすべて、ターミナルで `omarchy` を実行すれば確認できる。
 
@@ -8,7 +8,7 @@ Omarchy は通常、ホットキーと Omarchy メニュー（`Super + Space`）
 
 ```
 ~ ❯ omarchy
-Omarchy command center
+Ve OS command center
 
 Usage:
   omarchy <command> [args...]
@@ -17,7 +17,7 @@ Usage:
   omarchy <group> <command> --help
 
 Common commands:
-  omarchy update              Update Omarchy and system packages
+  omarchy update              Update Ve OS and system packages
   omarchy theme list          List available themes
   omarchy theme set <name>    Apply a theme
   omarchy font list           List available fonts
@@ -27,21 +27,21 @@ Common commands:
 Groups:
   agent          AI coding agents, their usage, and subscription accounts
   audio          Audio input and output controls
-  bar            Omarchy shell bar layout and settings
+  bar            Ve OS shell bar layout and settings
   battery        Battery status helpers
   bluetooth      Bluetooth device controls
-  branch         Omarchy git branch management
+  branch         Ve OS git branch management
   branding       About and screensaver branding
   brightness     Display and keyboard brightness
   capture        Screenshots and screen recording
-  channel        Omarchy release channel management
+  channel        Ve OS release channel management
   clipboard      Clipboard helpers
   cmd            Command and shortcut helpers
   config         System configuration helpers
   ...
 ```
 
-診断には、`omarchy-debug --no-sudo --print` を直接実行する。これで sudo の入力を求められることなく診断情報が表示され、`/tmp/omarchy-debug.log` に書き込まれる。パッケージのインストール時のように、`omarchy debug` が "Unknown Omarchy command" で失敗する場合でも使える。
+診断には、`omarchy-debug --no-sudo --print` を直接実行する。これで sudo の入力を求められることなく診断情報が表示され、`/tmp/omarchy-debug.log` に書き込まれる。パッケージのインストール時のように、`omarchy debug` が "Unknown Ve OS command" で失敗する場合でも使える。
 
 さらに、すべてのグループを掘り下げることもできる:
 
@@ -60,4 +60,4 @@ Capture commands — Screenshots and screen recording:
 
 ### ターミナルからメニューを開く
 
-Omarchy メニューはスクリプトからも操作できる。独自のキーバインドを作るときに便利だ。`omarchy menu` でルートから開き、名前を指定すればツリー内の任意の場所へ直接ジャンプできる: `omarchy menu summon appearance.theme` ならテーマピッカーへまっすぐ進み、`omarchy menu toggle system` ならシステムメニューを開き、すでに開いている場合は閉じ、`omarchy menu close` で片付ける。
+Ve OS メニューはスクリプトからも操作できる。独自のキーバインドを作るときに便利だ。`omarchy menu` でルートから開き、名前を指定すればツリー内の任意の場所へ直接ジャンプできる: `omarchy menu summon appearance.theme` ならテーマピッカーへまっすぐ進み、`omarchy menu toggle system` ならシステムメニューを開き、すでに開いている場合は閉じ、`omarchy menu close` で片付ける。

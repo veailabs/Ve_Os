@@ -1,4 +1,6 @@
-# Kemas Kini
+# Ve OS — Kemas Kini
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 Omarchy dan pakej anda sentiasa dikemas kini melalui _Kemas Kini > Omarchy_ dalam menu Omarchy (`Super + Space`).
 

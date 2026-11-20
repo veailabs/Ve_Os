@@ -1,6 +1,6 @@
 # キーボード、マウス、トラックパッド
 
-Hyprland では、すべての入力を細かく設定できます。キーボードのリピートを超高速にしたり、トラックパッドでナチュラルスクロールを使ったりできます。設定はすべて `~/.config/hypr/input.lua` で変更します。Omarchy メニュー（`Super + Space`）の _Setup > Input_ からも開けます。そこで設定した内容は Omarchy のデフォルトを置き換えます。
+Hyprland では、すべての入力を細かく設定できます。キーボードのリピートを超高速にしたり、トラックパッドでナチュラルスクロールを使ったりできます。設定はすべて `~/.config/hypr/input.lua` で変更します。Ve OS メニュー（`Super + Space`）の _Setup > Input_ からも開けます。そこで設定した内容は Ve OS のデフォルトを置き換えます。
 
 例を示します:
 
@@ -59,7 +59,7 @@ hl.config({
 | --- | --- |
 | 3 本指で左 / 右 | 前 / 次のワークスペース（空のものを含む） |
 | 3 本指で上 | AI コンソールの切り替え |
-| 3 本指で下 | Omarchy メニューを開く |
+| 3 本指で下 | Ve OS メニューを開く |
 | 4 本指で左 / 右 | アクティブなウィンドウを前 / 次のワークスペースへ移動 |
 | 4 本指で下 | フルスクリーンの切り替え |
 
@@ -70,19 +70,19 @@ hl.gesture({ fingers = 3, direction = "up", action = "unset" })
 hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
 
-Omarchy のジェスチャーをすべてオフにするには、Omarchy のデフォルトが読み込まれる前に、`~/.config/hypr/hyprland.lua` の先頭付近で `omarchy_default_gestures = false` を設定してください。
+Ve OS のジェスチャーをすべてオフにするには、Ve OS のデフォルトが読み込まれる前に、`~/.config/hypr/hyprland.lua` の先頭付近で `omarchy_default_gestures = false` を設定してください。
 
 ハプティックタッチパッドを搭載した Dell XPS ノートパソコンでは、_Trigger > Hardware > Touchpad Haptics_ でクリックの強さを low、mid、high のいずれかに設定することもできます。
 
 ### 中国語、日本語、その他の言語での入力
 
-インストーラーでキーボードを聞かれたら、日本語、韓国語、中国語（簡体字、Pinyin）、台湾（Zhuyin）、香港（Cangjie）のいずれかを選択してください。Omarchy はキーボードとそれに合った入力エンジンを自動で設定します。オフラインでの初回起動時のセットアップ中も同様です。日本語では Mozc、韓国語では標準の 2 セット Hangul、簡体字中国語では Pinyin、台湾では Chewing の標準 Zhuyin 配列、香港では香港字形の Cangjie を使います。Japanese (US keyboard) では US キーボードレイアウトで Mozc を使えます。Dvorak、Colemak、AZERTY でラテン文字を入力する場合でも、Hangul、Zhuyin、Cangjie のキーは標準位置のままです。これより前に Hangul や Chewing を追加していた場合は、_Setup > Keyboard > Input Methods_ で一度選択を解除してから再選択すると、キーがそこへ移動します。すでに使って入力しているエンジンには、Omarchy は手を触れません。
+インストーラーでキーボードを聞かれたら、日本語、韓国語、中国語（簡体字、Pinyin）、台湾（Zhuyin）、香港（Cangjie）のいずれかを選択してください。Ve OS はキーボードとそれに合った入力エンジンを自動で設定します。オフラインでの初回起動時のセットアップ中も同様です。日本語では Mozc、韓国語では標準の 2 セット Hangul、簡体字中国語では Pinyin、台湾では Chewing の標準 Zhuyin 配列、香港では香港字形の Cangjie を使います。Japanese (US keyboard) では US キーボードレイアウトで Mozc を使えます。Dvorak、Colemak、AZERTY でラテン文字を入力する場合でも、Hangul、Zhuyin、Cangjie のキーは標準位置のままです。これより前に Hangul や Chewing を追加していた場合は、_Setup > Keyboard > Input Methods_ で一度選択を解除してから再選択すると、キーがそこへ移動します。すでに使って入力しているエンジンには、Ve OS は手を触れません。
 
 入力はラテン文字モードから始まります。`Super + I` を押すと設定済みの入力方式を順に切り替え、`Super + Shift + I` を押すと逆方向に切り替えます。`Shift` を単独で軽く押すと、Pinyin のような入力方式から抜けてラテン文字になり、もう一度押すと戻ります。Sogou、Microsoft Pinyin、macOS と同じ方式です。`Shift` と文字キーの組み合わせでは引き続き大文字が入力されます。日本語キーボードでは、全角/半角で入力を切り替え、変換でオン、無変換でオフになります。韓国語では、한/영で Hangul を切り替え、한자で Hanja に変換します。キーボードに専用キーがある場合も、多くのノートパソコンのようにそれらの代わりに Right Alt と Right Ctrl を送信する場合も同様です。そのため、そこでは Right Alt と Right Ctrl は単なる修飾キーにはなりません。代わりに音声入力は Alt + Space で切り替えます。`Ctrl + Space` は Tmux と Herdr のために引き続き使え、`Shift + CapsLock` は引き続きコンポーズキーです。
 
 キーボードインジケーターは、複数のキーボードレイアウトや入力方式がある場合にバーの右側に表示されます。クリックすると入力言語を切り替えられます。日本語ではひらがなに あ と表示されます。日本語の文字候補を使うには、日本語に切り替えて、`nihongo` のような単語を入力し、Space を 2 回押します。Enter を押すと選択が確定します。複数のキーボードレイアウトもある場合は、インジケーターを右クリックするとそれらを順に切り替えられます。
 
-_Setup > Keyboard > Keyboard Inputs_ を使うと、English や French などのレイアウトを、インストール時に提示されるのと同じ選択肢から選べます。_Setup > Keyboard > Input Methods_ を使うと、有効にする変換エンジンを選べます。どちらのピッカーも Omarchy メニュー内に開き、現在の選択にチェックが付いています。クリックするか Enter を押すと選択が切り替わり、各変更はすぐに適用されます。入力方式の選択を解除すると、アンインストールせずに切り替えサイクルから外れます。キーボードは引き続き利用できます。
+_Setup > Keyboard > Keyboard Inputs_ を使うと、English や French などのレイアウトを、インストール時に提示されるのと同じ選択肢から選べます。_Setup > Keyboard > Input Methods_ を使うと、有効にする変換エンジンを選べます。どちらのピッカーも Ve OS メニュー内に開き、現在の選択にチェックが付いています。クリックするか Enter を押すと選択が切り替わり、各変更はすぐに適用されます。入力方式の選択を解除すると、アンインストールせずに切り替えサイクルから外れます。キーボードは引き続き利用できます。
 
 同じピッカーを開くには `omarchy setup keyboard` または `omarchy setup input` を実行します。コマンドラインから言語を 1 つ追加するには、`omarchy setup input mozc`、`hangul`、`pinyin`、`chewing`、`cangjie5` のいずれかを使います。Quick、Boshiamy、Array は Cangjie と同じパッケージに含まれ、Input Methods ピッカーに表示されます。カスタムの切り替えキーは保持されます。別のエンジンレイアウトやキーを使うには、`omarchy pkg add fcitx5-configtool` で `fcitx5-configtool` をインストールし、ターミナルから起動してください。入力言語を選択してもデスクトップの言語は変わりません。_Setup > Language_ で日本語、韓国語、中国語を選ぶと、まだ入力方式がない場合にその入力方式が追加されます。
 

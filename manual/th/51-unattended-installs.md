@@ -1,4 +1,6 @@
-# การติดตั้งแบบไม่มีผู้ดูแล
+# Ve OS — การติดตั้งแบบไม่มีผู้ดูแล
+
+> Upstream reference: this chapter preserves the original Omarchy documentation. Ve OS is a development fork; the installation media, releases, services and community guides below belong to upstream. See the English Ve OS manual for fork-specific setup.
 
 ISO ของ Omarchy สามารถติดตั้งตัวเองได้โดยไม่มีใครอยู่ที่แป้นพิมพ์ หากโปรแกรมติดตั้งพบไดรฟ์ที่สองที่มีป้ายชื่อ `cidata` และมีไฟล์การกำหนดค่าของมันอยู่ โปรแกรมจะคัดลอกไฟล์เหล่านั้นออกมา ข้ามวิซาร์ดการตั้งค่าไปทั้งหมด และรีบูตเข้าสู่ระบบที่เสร็จสมบูรณ์ด้วยตัวเอง ไม่ต้องสร้าง ISO แบบพิเศษ ไม่ต้องมีรายการเมนูบูตเพิ่มเติม — หากไม่มีไดรฟ์ดังกล่าวเชื่อมต่ออยู่ ก็ไม่มีอะไรเปลี่ยนแปลง และคุณจะได้วิซาร์ดตามปกติ
 

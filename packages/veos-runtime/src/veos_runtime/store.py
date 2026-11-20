@@ -241,7 +241,7 @@ class Store:
   ):
     instruction = bounded(instruction, "instruction")
     request_key = bounded(request_key, "request_key", 160)
-    if provider not in {"codex", "claude", "antigravity"}:
+    if provider not in {"codex", "claude", "hermes", "antigravity"}:
       raise Refused("Unsupported subscription provider")
     integer(max_attempts, "max_attempts", 1, 5)
     deps = dependencies or []

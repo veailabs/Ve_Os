@@ -57,7 +57,7 @@
         <section class="panel" id="voice-panel">
           <div class="section-title"><h2>Talk to your local agent</h2><span id="voice-status" role="status">Checking voice availability…</span></div>
           <p class="hint">Voice uses a separately configured API connection. Your local agent carries out the tasks. Starting voice does not enable API billing for your agent.</p>
-          <label>Agent for voice tasks<select id="voice-provider"><option value="codex">Codex · ChatGPT</option><option value="claude">Claude Code · Claude</option></select></label>
+          <label>Agent for voice tasks<select id="voice-provider"><option value="codex">Codex · ChatGPT</option><option value="claude">Claude Code · Claude</option><option value="hermes">Hermes · ChatGPT</option></select></label>
           <div class="actions"><button id="voice-start" disabled>Start API voice</button><button id="voice-stop-speaking" disabled>Stop speaking</button><button id="voice-disconnect" disabled>Disconnect voice</button><button id="voice-cancel-task" disabled>Cancel voice task</button></div>
           <details><summary>Conversation on this page</summary><div id="voice-transcript"></div></details>
           <audio id="voice-output" controls hidden></audio>
@@ -217,6 +217,7 @@
             >Agent<select name="provider" aria-label="Agent">
               <option value="codex">Codex · ChatGPT</option>
               <option value="claude">Claude Code · Claude</option>
+              <option value="hermes">Hermes · ChatGPT</option>
               <option value="antigravity" disabled>
                 Antigravity · Not yet qualified
               </option>

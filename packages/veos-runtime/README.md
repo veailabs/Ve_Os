@@ -2,7 +2,7 @@
 
 A personal, local workspace for projects, native subscription agents, evidence, files and reviewed app actions. It is an optional package; cloning or installing Ve OS does not enable the runtime or a model account.
 
-The runtime owns a loopback API and SQLite task/evidence journal. It launches the user's native Codex or Claude client for reasoning. Those clients still use their provider's cloud; this is not an offline model. Providers start disabled, paid API fallback is refused, and a user must confirm that provider-side paid extra usage is disabled before enabling one.
+The runtime owns a loopback API and SQLite task/evidence journal. It launches the user's native Codex, Claude or qualified Hermes client for reasoning. Those clients still use their provider's cloud; this is not an offline model. Providers start disabled, paid API fallback is refused, and a user must confirm that provider-side paid extra usage is disabled before enabling one.
 
 ## Installation
 
@@ -30,6 +30,31 @@ veos provider codex check
 Use `claude` for the Claude adapter. The flag records the user's billing assertion; it does not change or inspect the provider's billing settings. Antigravity remains unavailable until its subscription authentication and execution contract are qualified.
 
 Every run rechecks native subscription sign-in. Agent children receive a filtered environment, an explicit task-scoped MCP connection and native read-oriented execution settings. There is no automatic switch to an API key, another provider or another account after quota exhaustion. A recognizable structured quota error becomes `waiting_subscription`; unknown failures remain unknown.
+
+### Hermes
+
+The Hermes adapter is qualified against `NousResearch/hermes-agent` commit `2de9f51b8008a7d49a49221c184f2f11cbfc4af1`, with Python 3.14 and its MCP extra. A different revision is refused until requalified. Install from that source checkout using its own `uv` configuration, which includes required upstream dependency overrides:
+
+```sh
+git clone https://github.com/NousResearch/hermes-agent.git "$HOME/.local/share/veos-hermes-source"
+cd "$HOME/.local/share/veos-hermes-source"
+git checkout --detach 2de9f51b8008a7d49a49221c184f2f11cbfc4af1
+uv venv --python 3.14 .venv
+uv pip install --python .venv/bin/python -e '.[mcp]'
+export PATH="$PWD/.venv/bin:$PATH"
+```
+
+Make that executable available on the VeOS user service's PATH too. Stop the VeOS worker before managing its Hermes profile, then use native sign-in and select a model your subscription actually supports:
+
+```sh
+veos provider hermes login --model YOUR_SUBSCRIPTION_MODEL
+veos provider hermes enable --model YOUR_SUBSCRIPTION_MODEL --confirm-no-paid-extra-usage
+veos provider hermes check
+```
+
+Hermes owns its native OAuth credentials under the private `hermes/` directory inside the VeOS state directory. VeOS does not parse or copy those credentials. The adapter uses `openai-codex`, not an OpenAI API key. It creates a separate native session for each task, exposes only the task-scoped VeOS MCP tools, disables native rule discovery, plugin installation, background review and title-generation calls, and keeps the project/task journal in VeOS. Ambient API-key environment variables and custom Hermes plugins/hooks are refused.
+
+Hermes's CLI can detach while its gateway continues working. VeOS therefore stops its own gateway on completion, cancellation and error, and independently checks that it is no longer running. An unconfirmed stop leaves the task `unknown` and blocks further Hermes tasks. After stopping the worker, `veos provider hermes stop` performs recovery; the runtime never uses Hermes's `--all` switch or adopts an existing personal Hermes profile. This is a single-OS-user boundary, not a container sandbox.
 
 ## Task lifecycle
 
@@ -70,7 +95,7 @@ A compatible local MCP client can delegate to the same journal and worker:
 }
 ```
 
-Start `veos serve` first. Use `claude` for the other implemented adapter. The client gets `run_local_agent`, `local_agent_status` and `cancel_local_agent`, bound to that project/provider. It receives no administrator tools or direct desktop actions. Reuse a request key only for retries of the same work. A queued task is not completed work; status distinguishes the task narrative from verified action receipts. Connections expire after an hour or are revoked on disconnect/restart. Reconnect to inspect admitted tasks through the same project/provider scope.
+Start `veos serve` first. Use `claude` or `hermes` for those implemented adapters after their native setup. The client gets `run_local_agent`, `local_agent_status` and `cancel_local_agent`, bound to that project/provider. It receives no administrator tools or direct desktop actions. Reuse a request key only for retries of the same work. A queued task is not completed work; status distinguishes the task narrative from verified action receipts. Connections expire after an hour or are revoked on disconnect/restart. Reconnect to inspect admitted tasks through the same project/provider scope.
 
 MCP compatibility does not establish that ChatGPT or another provider's subscription voice accepts this local stdio tool. VeOS does not extract subscription cookies or repurpose a consumer voice session as an API. A remote-only MCP client cannot directly reach this loopback server.
 
@@ -144,4 +169,4 @@ PYTHONPATH=src uv run --with playwright --no-project python tests/local_browser_
 
 Record test output in files and inspect it, following the repository's testing guide. On Linux, the browser smoke tests need Playwright Chromium installed. They use temporary local fixture data and perform no live model calls, message sends or Integration actions. UI screenshots are written to ignored `artifacts/`; attach them as review evidence rather than committing them.
 
-The Linux workflow also exercises a real disposable GTK application over AT-SPI and real Poppler/Tesseract document extraction. This does not replace acceptance on the target Omarchy/Wayland session. Runtime/Chrome tests do not establish live subscription execution, live mailbox connectivity, real audio quality or semantic completion of every task. Cloud supervision/enrollment/sync, recurring external signals, a Hermes runtime adapter and external teammate adapters remain outside this package's implementation. See [the implementation and acceptance guide](../../docs/veos-agent-controls.md) for contracts and limits.
+The Linux workflow also exercises a real disposable GTK application over AT-SPI and real Poppler/Tesseract document extraction. A separate Omarchy VM workflow exercises the actual Wayland session. The Hermes workflow runs its pinned native gateway against a local inference fixture, discovers the real MCP tools, executes a project read and verifies completion, in-flight cancellation and gateway shutdown; it uses no provider credentials. Runtime/fixture tests do not establish live subscription entitlement, live mailbox connectivity, real audio quality or semantic completion of every task. Cloud supervision/enrollment/sync, recurring external signals and external teammate adapters remain outside this package's implementation. See [the implementation and acceptance guide](../../docs/veos-agent-controls.md) for contracts and limits.

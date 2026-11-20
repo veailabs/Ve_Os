@@ -22,6 +22,7 @@ let voiceAvailable = false;
 const names = {
   codex: "Codex · ChatGPT",
   claude: "Claude Code · Claude",
+  hermes: "Hermes · ChatGPT",
   antigravity: "Antigravity · Google",
 };
 function node(tag, text, cls) {

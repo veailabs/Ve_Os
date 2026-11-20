@@ -118,7 +118,10 @@ TOOLS = [
     "Propose follow-up work for user acceptance. This does not start another agent.",
     {
       "instruction": TEXT,
-      "provider": {"type": "string", "enum": ["codex", "claude", "antigravity"]},
+      "provider": {
+        "type": "string",
+        "enum": ["codex", "claude", "hermes", "antigravity"],
+      },
       "request_key": TEXT,
     },
     ["instruction", "provider", "request_key"],

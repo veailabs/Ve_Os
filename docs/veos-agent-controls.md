@@ -16,7 +16,7 @@ flowchart TD
   IN --> JOURNAL[One SQLite task / evidence / receipt journal]
   API --> JOURNAL
   JOURNAL --> WORKER[Existing fenced task worker]
-  WORKER --> MODEL[Native Codex or Claude subscription client]
+  WORKER --> MODEL[Native Codex, Claude or qualified Hermes subscription client]
   MODEL --> TOOLS[Task-scoped runtime MCP]
   TOOLS --> BROWSER[Per-project local Chromium profile]
   TOOLS --> DESKTOP[Typed desktop operations / AT-SPI]
@@ -46,7 +46,9 @@ Configuration fields currently supported directly: appearance `gaps_in`, `gaps_o
 
 Generated overrides target the current Lua option names, including `input.touchpad.tap_to_click`, following the [Hyprland configuration contract](https://github.com/hyprwm/hyprland-wiki/blob/main/content/configuring/core/config-options.md).
 
-The settings panel exposes branding, themes/backgrounds, fonts/icons, bar/dock, window/layout settings, keyboard/input, default apps, plugins, native agent selection, networking, monitor configuration, startup and notifications. OS agent selection is Omarchy's native setting; it does not add a new executable adapter to the Mission Desk worker. Codex and Claude remain the worker's qualified adapter implementations; Hermes is not silently mapped to either.
+The settings panel exposes branding, themes/backgrounds, fonts/icons, bar/dock, window/layout settings, keyboard/input, default apps, plugins, native agent selection, networking, monitor configuration, startup and notifications. OS agent selection is Omarchy's native setting. Mission Desk separately supports Codex, Claude and a pinned native Hermes adapter; selecting an OS preference does not silently enable an account or change its billing configuration.
+
+Hermes runs under a private VeOS-owned native profile and uses its `openai-codex` subscription provider. Only the scoped VeOS MCP tools are exposed; native rule discovery, plugin installs, background review and title inference are disabled. Each task starts a fresh native session. Cancellation stops the owned gateway because closing the CLI alone does not stop native work. An unconfirmed stop blocks subsequent tasks until native stop recovery succeeds. The [package setup](../packages/veos-runtime/README.md#hermes) pins the qualified revision and describes sign-in; no credentials are copied from the user's other clients.
 
 The native adapter refuses browser/terminal processes, web-document trees and Mission Desk administration. It cannot be used to bypass project browser grants or operate its own action-review page. An incomplete native tree cannot be used to propose a mutation. Applications with embedded web interfaces may therefore need a supported browser/API integration instead.
 
@@ -73,6 +75,8 @@ API voice is disabled by default. The opt-in environment and startup instruction
 The response must be `ve.voice.session.v1`, provider `openai`, transport `webrtc`, execution target `local_harness`, a temporary `ek_` client secret expiring within two minutes, a model name, and `https://api.openai.com/v1/realtime/calls` as the connection URL. Redirects and other upstream hosts are refused. The backend code is tracked separately in [Super Agent #98](https://github.com/veailabs/ve-core-super-agent/pull/98).
 
 The browser sends SDP with that ephemeral credential, then advertises only the three harness functions over the data channel. Calls are correlated by call ID; duplicate events reuse one result, and reusing an ID with different arguments does not dispatch new work. Results are returned under the original call ID. Disconnect races stop late microphone tracks and revoke late connection grants. No local administrator token is sent to OpenAI. Live API voice requires separately enabled funding and provider access; ordinary ChatGPT subscription voice is not proven embeddable through this path.
+
+The backend release is a development pilot restricted to one verified tenant/user pair, with one mint in flight and three attempted mints per 15 minutes per process. Failed attempts count. This is admission control, not a hard audio-spend or duration cap: process restart resets the allowance and a direct WebRTC client controls its established call. Infrastructure [PR #1154](https://github.com/veailabs/ve-core-multicloud-infrastructure/pull/1154) adds only dedicated secret metadata and its ECS execution-role read permission. The secret value is provisioned outside Terraform. Production rejects pilot configuration. A normal Ve login and a funded API key are still necessary for live microphone qualification.
 
 `Stop speaking` sends `response.cancel` and `output_audio_buffer.clear`. Disconnect releases media and closes the scoped connection, while already-admitted work remains visible. Cancelling a task or pausing the project is a distinct action, and it cannot undo external actions already submitted.
 

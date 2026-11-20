@@ -64,13 +64,15 @@ def main():
   def option(name):
     return json.loads(command("hyprctl", "getoption", name, "-j"))
 
-  def menu_ready():
-    return (
-      subprocess.run(
-        ["omarchy-menu", "ping"], capture_output=True, timeout=10
-      ).returncode
-      == 0
+  def shell_ready():
+    result = subprocess.run(
+      ["omarchy-shell", "shell", "ping"],
+      capture_output=True,
+      text=True,
+      timeout=10,
     )
+    (artifacts / "shell-ping.log").write_text(result.stdout + result.stderr)
+    return result.returncode == 0 and result.stdout.strip() == "ok"
 
   def cleanup_call(*args):
     try:
@@ -301,7 +303,7 @@ def main():
       assert option("decoration.rounding")["int"] == 13
       passed("actual compositor parse failure rolls back the changed settings file")
 
-      wait_for(menu_ready, "Menu did not become ready")
+      wait_for(shell_ready, "Shell did not become ready")
       act("open_settings", {"area": "appearance"})
       wait_for(
         lambda: "omarchy-menu" in command("hyprctl", "layers", "-j"),

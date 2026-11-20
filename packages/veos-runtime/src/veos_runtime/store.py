@@ -765,6 +765,9 @@ class Store:
 
   def snapshot(self, pid=None):
     with self.db() as db:
+      # One read transaction: the revision must describe exactly the rows
+      # returned, or a page that saw older rows would never ask for newer ones.
+      db.execute("BEGIN")
       if pid:
         self.require_project(db, pid)
       out = {}

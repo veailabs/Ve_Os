@@ -42,6 +42,14 @@ def main():
         )
         page.get_by_role("button", name="Create project", exact=True).click()
         page.get_by_role("heading", name="A better path to market").wait_for()
+        assert page.locator("#voice-start").is_disabled()
+        page.get_by_text("Application and device access", exact=True).click()
+        permission = page.locator("#desktop-capabilities .card").filter(
+          has_text="read document"
+        )
+        permission.get_by_role("button", name="Allow access", exact=True).click()
+        permission.get_by_role("button", name="Remove access", exact=True).wait_for()
+        page.get_by_text("Application and device access", exact=True).click()
         page.get_by_role("button", name="Add task").click()
         page.get_by_label("Task", exact=True).fill(
           "Compare the two routes using public sources. Identify the three largest uncertainties."
@@ -91,8 +99,9 @@ def main():
         )
         page.locator("#tasks .badge.succeeded").wait_for()
         page.get_by_text("Read result", exact=True).click()
+        page.evaluate("window.scrollTo(0,0)")
         page.screenshot(path=str(artifacts / "mission-desk.png"), full_page=True)
-        page.get_by_role("button", name="Pause", exact=True).click()
+        page.get_by_role("button", name="Take control", exact=True).click()
         page.get_by_role("button", name="Resume", exact=True).wait_for()
         page.get_by_role("button", name="Resume", exact=True).click()
         page.get_by_role("button", name="Pause", exact=True).wait_for()
@@ -105,7 +114,12 @@ def main():
         page.get_by_role("heading", name="A better path to market").wait_for()
         assert "#" not in page.url
         page.set_viewport_size({"width": 390, "height": 844})
-        page.screenshot(path=str(artifacts / "mission-desk-mobile.png"), full_page=True)
+        page.evaluate("window.scrollTo(0,0)")
+        page.screenshot(path=str(artifacts / "mission-desk-mobile.png"))
+        page.get_by_role(
+          "heading", name="Desktop & settings", exact=True
+        ).scroll_into_view_if_needed()
+        page.screenshot(path=str(artifacts / "mission-desk-mobile-controls.png"))
         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), (
           "Horizontal overflow"
         )
@@ -127,6 +141,9 @@ def main():
                 "reload session",
                 "mobile layout",
                 "no JS errors",
+                "desktop permission grant",
+                "take control pauses the project",
+                "API voice disabled without configuration",
               ],
               "screenshots": str(artifacts),
             }

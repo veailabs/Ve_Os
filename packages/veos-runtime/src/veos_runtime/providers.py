@@ -11,7 +11,12 @@ from pathlib import Path
 
 from .store import Refused, encoded
 
-PROVIDERS = {"codex": "codex", "claude": "claude", "antigravity": "agy"}
+PROVIDERS = {
+  "codex": "codex",
+  "claude": "claude",
+  "hermes": "hermes",
+  "antigravity": "agy",
+}
 SAFE_ENV = {
   "HOME",
   "PATH",
@@ -64,6 +69,15 @@ def read_config(root):
   config = json.loads(path.read_text())
   if not isinstance(config, dict) or config.get("version") != 1:
     raise Refused("Unsupported configuration version")
+  if isinstance(config.get("providers"), dict) and set(config["providers"]) == {
+    "codex",
+    "claude",
+    "antigravity",
+  }:
+    config["providers"]["hermes"] = {
+      "enabled": False,
+      "extra_usage_disabled_confirmed": False,
+    }
   if (
     config.get("billing") != "subscription_only"
     or config.get("paid_api_fallback") is not False
@@ -116,7 +130,7 @@ def read_config(root):
       or setting["model"].startswith("-")
     ):
       raise Refused("Invalid model")
-  return config
+  return {**config, "_state_dir": str(Path(root).resolve())}
 
 
 def save_config(root, config):
@@ -124,7 +138,14 @@ def save_config(root, config):
   fd, name = tempfile.mkstemp(prefix="config-", suffix=".tmp", dir=root)
   try:
     with os.fdopen(fd, "w") as file:
-      file.write(json.dumps(config, indent=2, allow_nan=False) + "\n")
+      file.write(
+        json.dumps(
+          {k: v for k, v in config.items() if k != "_state_dir"},
+          indent=2,
+          allow_nan=False,
+        )
+        + "\n"
+      )
       file.flush()
       os.fsync(file.fileno())
     os.replace(name, path)
@@ -143,6 +164,13 @@ def probe(provider, config, run=subprocess.run):
     return {"ready": False, "reason": "billing_not_confirmed"}
   if provider == "antigravity":
     return {"ready": False, "reason": "subscription_auth_probe_not_qualified"}
+  if provider == "hermes":
+    from .hermes import check
+
+    try:
+      return check(executable, config, clean_env(), run)
+    except (Refused, OSError, ValueError, subprocess.TimeoutExpired):
+      return {"ready": False, "reason": "hermes_profile_unavailable"}
   argv = (
     [executable, "login", "status"]
     if provider == "codex"
@@ -225,8 +253,29 @@ def commands(provider, executable, workdir, session_dir, model=None):
       "--setting-sources",
       "",
       "--allowedTools",
-      "Read,Glob,Grep,WebSearch,mcp__veos__project_context,mcp__veos__available_tools,mcp__veos__list_files,mcp__veos__read_file,mcp__veos__write_report,mcp__veos__search_evidence,mcp__veos__get_evidence,mcp__veos__record_evidence,mcp__veos__record_claim,mcp__veos__propose_task,mcp__veos__ve_call,mcp__veos__browser",
+      "Read,Glob,Grep,WebSearch,mcp__veos__project_context,mcp__veos__available_tools,mcp__veos__list_files,mcp__veos__read_file,mcp__veos__write_report,mcp__veos__search_evidence,mcp__veos__get_evidence,mcp__veos__record_evidence,mcp__veos__record_claim,mcp__veos__propose_task,mcp__veos__ve_call,mcp__veos__browser,mcp__veos__desktop",
       *common,
+    ]
+  if provider == "hermes":
+    if not model:
+      raise Refused("Select a subscription model before enabling Hermes")
+    return [
+      executable,
+      "chat",
+      "--provider",
+      "openai-codex",
+      *common,
+      "--toolsets",
+      "veos",
+      "--ignore-rules",
+      "--format",
+      "stream-json",
+      "--max-turns",
+      "20",
+      "--in",
+      str(workdir),
+      "--query-file",
+      "-",
     ]
   raise Refused(
     "This provider's unattended subscription authentication has not been qualified"
@@ -266,6 +315,19 @@ class StreamResult:
         self.completed = True
       if event.get("type") in {"turn.failed", "error"}:
         self.error = self.classify(event)
+    elif self.provider == "hermes":
+      if event.get("type") == "text" and isinstance(event.get("text"), str):
+        self.text = (self.text + event["text"])[:200_000]
+      if event.get("type") == "result":
+        if (
+          type(event.get("exit_code")) is not int
+          or event["exit_code"] != 0
+          or event.get("error")
+        ):
+          self.error = self.classify(event)
+        elif isinstance(event.get("text"), str):
+          self.completed = True
+          self.text = event["text"][:200_000]
     elif event.get("type") == "result":
       if event.get("is_error") or event.get("subtype") != "success":
         self.error = self.classify(event)
@@ -327,10 +389,11 @@ def execute(
   permitted,
   checkpoint=lambda text: None,
   task_token=None,
+  provider_env=None,
 ):
   parser, total, buffers = StreamResult(provider), 0, {}
   try:
-    env = clean_env()
+    env = clean_env() if provider_env is None else provider_env
     if task_token:
       env["VEOS_TASK_TOKEN"] = task_token
     process = subprocess.Popen(

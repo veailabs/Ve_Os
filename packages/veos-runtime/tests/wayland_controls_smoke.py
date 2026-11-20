@@ -1,0 +1,424 @@
+"""Run reviewed desktop actions in the disposable installed Omarchy VM only."""
+
+import json
+import os
+import subprocess
+import tempfile
+import time
+from pathlib import Path
+
+from veos_runtime.artifacts import Artifacts
+from veos_runtime.controls import Controls
+from veos_runtime.desktop_actions import DesktopActions
+from veos_runtime.store import Refused, Store
+
+
+def command(*args):
+  return subprocess.run(
+    args, check=True, capture_output=True, text=True, timeout=60
+  ).stdout.strip()
+
+
+def wait_for(check, message, timeout=30):
+  deadline = time.monotonic() + timeout
+  while time.monotonic() < deadline:
+    result = check()
+    if result:
+      return result
+    time.sleep(0.25)
+  raise AssertionError(message)
+
+
+def main():
+  assert os.environ.get("VEOS_DISPOSABLE_ACCEPTANCE") == "1"
+  assert command("systemd-detect-virt", "--vm") in {"kvm", "qemu"}
+  assert os.environ.get("WAYLAND_DISPLAY")
+  artifacts = Path(os.environ["OMARCHY_ACCEPTANCE_DIR"])
+  artifacts.mkdir(parents=True, exist_ok=True)
+  (artifacts / "version.log").write_text(command("hyprctl", "version") + "\n")
+  config = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config")) / "hypr"
+  paths = [config / "looknfeel.lua", config / "input.lua"]
+  original_files = {p: p.read_bytes() if p.exists() else None for p in paths}
+  original_theme = command("omarchy-theme-current")
+  original_font = command("omarchy-font-current")
+  original_clients = {
+    w["address"] for w in json.loads(command("hyprctl", "clients", "-j"))
+  }
+  original_clipboard = subprocess.run(
+    ["wl-paste", "--no-newline", "--type", "text/plain"],
+    capture_output=True,
+    timeout=10,
+  )
+  checks = []
+  changed_theme = changed_font = False
+  cleanup_errors = []
+  native_fixture = None
+
+  def capture(name):
+    subprocess.run(["grim", str(artifacts / (name + ".png"))], check=True, timeout=15)
+
+  def visible_text(name, expected):
+    capture(name)
+    seen = command(
+      "tesseract", str(artifacts / (name + ".png")), "stdout", "--psm", "11"
+    )
+    return expected.casefold() in seen.casefold()
+
+  def passed(name):
+    checks.append(name)
+    print("ok - " + name, flush=True)
+
+  def option(name):
+    return json.loads(command("hyprctl", "getoption", name, "-j"))
+
+  def shell_ready():
+    result = subprocess.run(
+      ["omarchy-shell", "shell", "ping"],
+      capture_output=True,
+      text=True,
+      timeout=10,
+    )
+    (artifacts / "shell-ping.log").write_text(result.stdout + result.stderr)
+    return result.returncode == 0 and result.stdout.strip() == "ok"
+
+  def cleanup_call(*args):
+    try:
+      command(*args)
+    except (OSError, subprocess.SubprocessError) as exc:
+      cleanup_errors.append(type(exc).__name__ + ": " + args[0])
+
+  try:
+    with tempfile.TemporaryDirectory(prefix="veos-wayland-") as directory:
+      store = Store(directory)
+      pid = store.create_project(
+        "Wayland acceptance", "Exercise disposable desktop", max_runs=50
+      )
+      controls = Controls(store)
+      desktop = DesktopActions(store, controls)
+      counter = 0
+
+      def proposal(operation, args):
+        nonlocal counter
+        counter += 1
+        tid = store.create_task(pid, "Acceptance " + operation, "codex", str(counter))
+        assert store.claim(tid)
+        desktop.grant(pid, operation, True)
+        action = desktop.call(pid, tid, operation, args)
+        assert action["state"] == "pending"
+        return tid, action["action_id"]
+
+      def act(operation, args):
+        tid, aid = proposal(operation, args)
+        decision = desktop.decide(aid, True)
+        receipt = next(a for a in store.task_actions(tid) if a["id"] == aid)
+        assert decision["state"] == "succeeded", receipt
+        return receipt["result"]
+
+      def read(operation, args=None):
+        desktop.grant(pid, operation, True)
+        return desktop.call(pid, None, operation, args or {})["result"]
+
+      assert read("displays")
+      wait_for(
+        lambda: visible_text("success-veos-01-original", command("date", "+%A")),
+        "Initial desktop clock did not become visible",
+      )
+      apps = read("apps")
+      app = next(a for a in apps if a["id"] == "foot.desktop")
+      act("open_app", {"app_id": app["id"]})
+      window = wait_for(
+        lambda: next(
+          (
+            w
+            for w in read("windows")
+            if w["address"] not in original_clients and w["class"].lower() == "foot"
+          ),
+          None,
+        ),
+        "The installed Foot application did not open",
+      )
+      # Foot first maps with its initial title; its interactive shell then sets
+      # the prompt title. Observe a settled target before asking for approval.
+      binding = None
+      stable_since = 0
+
+      def focus_target_ready():
+        nonlocal binding, stable_since
+        current = controls.binding("focus_window", {"address": window["address"]})
+        if current != binding:
+          binding, stable_since = current, time.monotonic()
+        return time.monotonic() - stable_since >= 1
+
+      wait_for(focus_target_ready, "Launched window identity did not settle")
+      result = act("focus_window", {"address": window["address"]})
+      assert result["business_outcome_confirmed"] is True
+      assert (
+        json.loads(command("hyprctl", "activewindow", "-j"))["address"]
+        == window["address"]
+      )
+      capture("success-veos-02-open-focus")
+      passed(
+        "installed application discovery, reviewed launch and actual Wayland focus"
+      )
+
+      native_fixture = subprocess.Popen(
+        [
+          "/usr/bin/python3",
+          str(Path(__file__).with_name("native_accessibility_smoke.py")),
+          "--fixture",
+        ],
+        env={
+          **os.environ,
+          "GDK_BACKEND": "wayland",
+          "NO_AT_BRIDGE": "0",
+          "GTK_MODULES": "atk-bridge",
+        },
+        stdout=subprocess.DEVNULL,
+      )
+
+      def native_snapshot():
+        assert native_fixture.poll() is None, "GTK Wayland fixture exited"
+        try:
+          snapshot = read("native_read", {"app_pid": native_fixture.pid})
+        except Refused:
+          return None
+        return (
+          snapshot
+          if any(n["name"] == "Message" for n in snapshot.get("nodes", []))
+          else None
+        )
+
+      snapshot = wait_for(
+        native_snapshot, "GTK Wayland application did not expose accessibility"
+      )
+      assert "NEVER_EXPOSE_NATIVE_SECRET" not in json.dumps(snapshot)
+      entry = next(n for n in snapshot["nodes"] if n["name"] == "Message")
+      result = act(
+        "native_fill",
+        {
+          "app_pid": native_fixture.pid,
+          "node": entry["id"],
+          "revision": snapshot["revision"],
+          "text": "Wayland edit",
+        },
+      )
+      assert result["result"]["verified"] is True
+      snapshot = native_snapshot()
+      assert (
+        next(n for n in snapshot["nodes"] if n["name"] == "Message")["text"]
+        == "Wayland edit"
+      )
+      wait_for(
+        lambda: visible_text("success-veos-02b-native-edited", "Wayland edit"),
+        "Edited native field did not become visible on the desktop",
+      )
+      button = next(n for n in snapshot["nodes"] if n["name"] == "Apply fixture")
+      result = act(
+        "native_action",
+        {
+          "app_pid": native_fixture.pid,
+          "node": button["id"],
+          "revision": snapshot["revision"],
+          "action": button["actions"][0],
+        },
+      )
+      assert result["result"]["input_completed"] is True
+      assert result["business_outcome_confirmed"] is False
+      assert (
+        next(n for n in native_snapshot()["nodes"] if n["name"] == "Message")["text"]
+        == "Applied"
+      )
+      wait_for(
+        lambda: visible_text("success-veos-02c-native-applied", "Applied"),
+        "Native application result did not become visible on the desktop",
+      )
+      native_fixture.terminate()
+      native_fixture.wait(timeout=10)
+      native_fixture = None
+      passed(
+        "real Wayland GTK accessibility, reviewed edit/action, secret omission and separate outcome observation"
+      )
+
+      act("clipboard_write", {"text": "VeOS disposable clipboard baseline"})
+      tid, aid = proposal("clipboard_write", {"text": "must wait for approval"})
+      assert read("clipboard_read")["text"] == "VeOS disposable clipboard baseline"
+      desktop.grant(pid, "clipboard_write", False)
+      assert desktop.decide(aid, True)["state"] == "failed"
+      assert read("clipboard_read")["text"] == "VeOS disposable clipboard baseline"
+      tid, aid = proposal("clipboard_write", {"text": "must not run while paused"})
+      store.set_project_state(pid, "paused")
+      try:
+        desktop.decide(aid, True)
+      except Refused:
+        pass
+      else:
+        raise AssertionError("Paused project performed a desktop action")
+      store.set_project_state(pid, "active")
+      assert read("clipboard_read")["text"] == "VeOS disposable clipboard baseline"
+      act("clipboard_write", {"text": "VeOS reviewed clipboard update"})
+      assert read("clipboard_read")["text"] == "VeOS reviewed clipboard update"
+      passed("real clipboard, pending review, revoked grant and paused project")
+
+      result = act("screenshot", {})
+      _, screenshot = Artifacts(store).read(pid, result["result"]["id"])
+      assert screenshot.startswith(b"\x89PNG\r\n\x1a\n")
+      (artifacts / "success-veos-03-reviewed-capture.png").write_bytes(screenshot)
+      passed("reviewed compositor screenshot stored as a project artifact")
+
+      themes = read("themes")
+      theme = next(t for t in themes if t != original_theme)
+      changed_theme = True
+      act("set_theme", {"name": theme})
+      wait_for(
+        lambda: command("omarchy-theme-current") == theme, "Theme did not change"
+      )
+      capture("success-veos-04-theme")
+      passed("discovered theme applied through Omarchy and independently read back")
+      fonts = read("fonts")
+      font = next(f for f in fonts if f != original_font)
+      changed_font = True
+      act("set_font", {"name": font})
+      wait_for(lambda: command("omarchy-font-current") == font, "Font did not change")
+      capture("success-veos-05-font")
+      passed("discovered monospace font applied and independently read back")
+
+      before = paths[0].read_text()
+      result = act("configure", {"area": "appearance", "values": {"rounding": 13}})
+      assert Path(result["result"]["backup"]).read_text() == before
+      assert option("decoration.rounding")["int"] == 13
+      act("configure", {"area": "appearance", "values": {"border_size": 3}})
+      assert option("decoration.rounding")["int"] == 13
+      assert option("general.border_size")["int"] == 3
+      assert before.rstrip() in paths[0].read_text()
+      act(
+        "configure",
+        {
+          "area": "input",
+          "values": {"sensitivity": 0.25, "natural_scroll": True, "tap_to_click": True},
+        },
+      )
+      assert abs(option("input.sensitivity")["float"] - 0.25) < 0.001
+      assert option("input.touchpad.natural_scroll")["bool"] is True
+      assert option("input.touchpad.tap_to_click")["bool"] is True
+      capture("success-veos-06-configuration")
+      passed(
+        "Lua settings loaded by Hyprland, private backup and earlier overrides preserved"
+      )
+
+      before = paths[0].read_bytes()
+      try:
+        proposal("configure", {"area": "appearance", "values": {"rounding": 999}})
+      except Refused:
+        pass
+      else:
+        raise AssertionError("Unsupported settings were accepted")
+      assert paths[0].read_bytes() == before
+      passed("unsupported settings rejected before modifying the live configuration")
+
+      # One command failure tests the real write/rollback transaction without
+      # deliberately corrupting a user's Lua config. The installed Hyprland
+      # 0.56.2 can deadlock on malformed Lua; that separate upstream failure
+      # cannot be recovered by reloading the same unresponsive compositor.
+      real_runner = controls.runner
+      reload_failed = False
+
+      def fail_first_reload(argv, **kwargs):
+        nonlocal reload_failed
+        if argv == ["hyprctl", "reload"] and not reload_failed:
+          reload_failed = True
+          return subprocess.CompletedProcess(argv, 1)
+        return real_runner(argv, **kwargs)
+
+      controls.runner = fail_first_reload
+      try:
+        tid, aid = proposal(
+          "configure", {"area": "appearance", "values": {"rounding": 17}}
+        )
+        assert desktop.decide(aid, True)["state"] == "failed", store.task_actions(tid)
+        assert reload_failed
+        assert paths[0].read_bytes() == before
+      finally:
+        controls.runner = real_runner
+      assert command("hyprctl", "configerrors") in {"", "ok"}
+      assert option("decoration.rounding")["int"] == 13
+      passed(
+        "injected reload failure restores the file, followed by a real recovery reload"
+      )
+
+      wait_for(shell_ready, "Shell did not become ready")
+      act("open_settings", {"area": "appearance"})
+      wait_for(
+        lambda: "omarchy-menu" in command("hyprctl", "layers", "-j"),
+        "Appearance settings panel did not open",
+      )
+      wait_for(
+        lambda: visible_text("success-veos-07-settings-panel", "Theme"),
+        "Appearance settings content did not become visible",
+      )
+      command("omarchy-menu", "close")
+      passed("existing appearance settings panel opens in the Wayland shell")
+  except BaseException:
+    for label, args in {
+      "version": ["hyprctl", "version"],
+      "configerrors": ["hyprctl", "configerrors"],
+      "windows": ["hyprctl", "clients", "-j"],
+    }.items():
+      try:
+        diagnostic = subprocess.run(args, capture_output=True, text=True, timeout=5)
+        (artifacts / (label + ".log")).write_text(diagnostic.stdout + diagnostic.stderr)
+      except subprocess.TimeoutExpired:
+        (artifacts / (label + ".log")).write_text("Compositor command timed out\n")
+    try:
+      capture("failure-veos-controls")
+    except subprocess.SubprocessError:
+      pass
+    raise
+  finally:
+    if native_fixture is not None:
+      native_fixture.terminate()
+      native_fixture.wait(timeout=10)
+    cleanup_call("omarchy-menu", "close")
+    if changed_theme:
+      cleanup_call("omarchy-theme-set", original_theme)
+    if changed_font:
+      cleanup_call("omarchy-font-set", original_font)
+    for path, data in original_files.items():
+      if data is None:
+        path.unlink(missing_ok=True)
+      else:
+        path.write_bytes(data)
+    cleanup_call("hyprctl", "reload")
+    for window in json.loads(command("hyprctl", "clients", "-j")):
+      if (
+        window["address"] not in original_clients and window["class"].lower() == "foot"
+      ):
+        cleanup_call(
+          "hyprctl",
+          "dispatch",
+          'hl.dsp.window.close({ window = "address:' + window["address"] + '" })',
+        )
+    subprocess.run(
+      ["wl-copy", "--type", "text/plain"]
+      if original_clipboard.returncode == 0
+      else ["wl-copy", "--clear"],
+      input=original_clipboard.stdout if original_clipboard.returncode == 0 else None,
+      check=True,
+      timeout=10,
+    )
+    capture("success-veos-08-restored")
+  assert not cleanup_errors, cleanup_errors
+  assert command("omarchy-theme-current") == original_theme
+  assert command("omarchy-font-current") == original_font
+  assert all(
+    (p.read_bytes() if p.exists() else None) == data
+    for p, data in original_files.items()
+  )
+  assert command("hyprctl", "configerrors") in {"", "ok"}
+  passed("original theme, font and personal Hyprland files restored")
+  (artifacts / "veos-result.json").write_text(
+    json.dumps({"result": "passed", "checks": checks}, indent=2) + "\n"
+  )
+
+
+if __name__ == "__main__":
+  main()

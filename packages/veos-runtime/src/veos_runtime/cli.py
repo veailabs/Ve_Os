@@ -1,7 +1,9 @@
 import argparse
 import json
 import os
+import shutil
 import signal
+import subprocess
 import sys
 import threading
 import webbrowser
@@ -31,9 +33,17 @@ def main(argv=None):
   sub.add_parser("open")
   sub.add_parser("status")
   sub.add_parser("install-desktop")
+  incoming = sub.add_parser("incoming-mcp")
+  incoming.add_argument("--project-id", required=True)
+  incoming.add_argument(
+    "--provider", choices=["codex", "claude", "hermes"], required=True
+  )
   provider = sub.add_parser("provider")
   provider.add_argument("name", choices=PROVIDERS)
-  provider.add_argument("action", choices=["check", "enable", "disable"])
+  provider.add_argument(
+    "action", choices=["check", "enable", "disable", "login", "stop"]
+  )
+  provider.add_argument("--model")
   provider.add_argument("--confirm-no-paid-extra-usage", action="store_true")
   export = sub.add_parser("export")
   export.add_argument("project_id")
@@ -41,7 +51,53 @@ def main(argv=None):
   try:
     store = Store(args.state_dir)
     config = read_config(store.root)
-    if args.command == "init":
+    if args.command == "incoming-mcp":
+      import urllib.request
+      from urllib.parse import urlsplit
+
+      from .harness import serve_stdio
+
+      info = json.loads((store.root / "connection.json").read_text())
+      parsed = urlsplit(info["url"])
+      if (
+        parsed.scheme != "http"
+        or parsed.hostname != "127.0.0.1"
+        or parsed.username
+        or parsed.password
+        or parsed.path
+        or parsed.query
+        or parsed.fragment
+      ):
+        raise Refused("Only the local running VeOS service is supported")
+      body = json.dumps({"pid": args.project_id, "provider": args.provider}).encode()
+      request = urllib.request.Request(
+        info["url"] + "/api/harness/connect",
+        body,
+        {
+          "Authorization": "Bearer " + info["token"],
+          "Content-Type": "application/json",
+        },
+        method="POST",
+      )
+      with urllib.request.urlopen(request, timeout=10) as response:
+        connection = json.loads(response.read(20000))
+      try:
+        serve_stdio(info["url"], connection["token"])
+      finally:
+        request = urllib.request.Request(
+          info["url"] + "/api/harness/disconnect",
+          b"{}",
+          {
+            "Authorization": "Bearer " + connection["token"],
+            "Content-Type": "application/json",
+          },
+          method="POST",
+        )
+        try:
+          urllib.request.urlopen(request, timeout=5).close()
+        except OSError:
+          pass
+    elif args.command == "init":
       print(
         f"Initialized {store.root}. Providers are disabled until subscription billing is verified."
       )
@@ -56,6 +112,43 @@ def main(argv=None):
     elif args.command == "provider":
       if args.action == "check":
         print(json.dumps(probe(args.name, config)))
+      elif args.action in {"login", "stop"}:
+        from .hermes import PROVIDER, configure, environment, qualified, stop
+        from .providers import clean_env
+
+        if args.name != "hermes":
+          raise Refused("Use this provider's native sign-in command")
+        executable = shutil.which("hermes")
+        if not executable:
+          raise Refused("Install the qualified Hermes revision first")
+        env = environment(store.root, clean_env())
+        if not qualified(executable, env):
+          raise Refused("Install the qualified Hermes revision listed in the README")
+        import fcntl
+
+        with open(store.root / "worker.lock", "a+") as lock:
+          try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+          except BlockingIOError:
+            raise Refused(
+              "Stop the VeOS worker before managing its Hermes profile"
+            ) from None
+          if args.action == "stop":
+            if not stop(executable, env):
+              raise Refused("The owned Hermes gateway did not confirm it stopped")
+          else:
+            configure(
+              store.root, args.model or config["providers"]["hermes"].get("model", "")
+            )
+            result = subprocess.run(
+              [executable, "auth", "add", PROVIDER, "--type", "oauth"],
+              env=env,
+            )
+            if result.returncode != 0:
+              raise Refused(
+                "Native Hermes sign-in did not finish; run this login command again when ready"
+              )
+
       else:
         if args.action == "enable" and not args.confirm_no_paid_extra_usage:
           raise Refused(
@@ -65,9 +158,18 @@ def main(argv=None):
           raise Refused(
             "Antigravity subscription authentication probe is not qualified; it remains disabled"
           )
+        setting = config["providers"][args.name]
+        model = args.model or setting.get("model")
+        if model and (
+          len(model) > 160 or model.startswith("-") or any(ord(c) < 32 for c in model)
+        ):
+          raise Refused("Invalid model")
+        if args.name == "hermes" and args.action == "enable" and not model:
+          raise Refused("Choose the ChatGPT subscription model with --model")
         config["providers"][args.name] = {
           "enabled": args.action == "enable",
           "extra_usage_disabled_confirmed": args.confirm_no_paid_extra_usage,
+          **({"model": model} if model else {}),
         }
         save_config(store.root, config)
         print(

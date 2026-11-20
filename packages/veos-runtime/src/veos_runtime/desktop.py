@@ -23,6 +23,7 @@ def install():
         "RunAtLoad": True,
         "KeepAlive": True,
         "ThrottleInterval": 10,
+        "ExitTimeOut": 45,
         "EnvironmentVariables": {"PATH": os.environ.get("PATH", "/usr/bin:/bin")},
         "StandardOutPath": str(log / "runtime.log"),
         "StandardErrorPath": str(log / "runtime-error.log"),

@@ -4,7 +4,7 @@
 # VM image, booted for this run, the checkouts copied in, the tests run in the
 # desktop session as the logged-in user. Nothing is left behind.
 #
-#   test/ci-vm <image_dir> <sources_dir> <out_dir>
+#   test/ci-vm <image_dir> <sources_dir> <out_dir> [all|veos-controls]
 #
 #   image_dir    base.qcow2 with vmlinuz, initrd and cmdline beside it: a VM
 #                image omarchy-iso publishes, and its unpacked/ files
@@ -19,7 +19,12 @@ set -euo pipefail
 # print_failure_logs, which test/shell.d/test-runner-test.sh checks too.
 source "$(dirname -- "${BASH_SOURCE[0]}")/ci-failure-logs"
 
-image=$1 sources=$2 out=$3
+image=$1 sources=$2 out=$3 suite=${4:-all}
+case "$suite" in
+  all) suite_command='./test/all' ;;
+  veos-controls) suite_command='VEOS_DISPOSABLE_ACCEPTANCE=1 OMARCHY_ACCEPTANCE_DIR="$HOME/veos-acceptance" bash ./test/acceptance.d/veos-controls-test.sh' ;;
+  *) echo "Unknown VM suite: $suite" >&2; exit 2 ;;
+esac
 state=$(mktemp -d "${VM_STATE_DIR:-/var/tmp}/ci-vm.XXXXXX") # the socket's path has to stay under 108 bytes
 port=$(( 20000 + RANDOM % 10000 ))
 mkdir -p "$out"
@@ -36,6 +41,11 @@ seconds() { echo $(( SECONDS - started )); }
 pull_shell_logs() {
   ssh_vm 'mkdir -p ~/shell-logs && find /tmp -maxdepth 1 -name "omarchy-test-shell.*" -newer ~/started -exec cp -r {} ~/shell-logs/ \; && tar cf - -C ~ shell-logs' |
     tar xf - --no-same-owner -C "$out" || true
+}
+pull_acceptance_artifacts() {
+  if [[ $suite == "veos-controls" ]]; then
+    ssh_vm 'tar cf - -C ~ veos-acceptance' | tar xf - --no-same-owner -C "$out" || true
+  fi
 }
 # test/shell prints each file's output only once every file has finished, so
 # meanwhile report from its log directory, where each file leaves a .code file
@@ -70,6 +80,10 @@ trap cleanup EXIT
 ssh-keygen -q -t ed25519 -N '' -C ci-vm -f "$state/id_ed25519"
 keys=$(printf 'd /home/omarchy/.ssh 0700 omarchy omarchy -\nf+ /home/omarchy/.ssh/authorized_keys 0600 omarchy omarchy - %s\n' \
   "$(cat "$state/id_ed25519.pub")" | base64 -w0)
+vm_controls=()
+if [[ $suite == "veos-controls" ]]; then
+  vm_controls=(-qmp "unix:$state/qmp.sock,server=on,wait=off")
+fi
 
 qemu-img create -qf qcow2 -b "$(realpath "$image/base.qcow2")" -F qcow2 "$state/run.qcow2"
 started=$SECONDS
@@ -83,6 +97,7 @@ qemu-system-x86_64 -cpu host -enable-kvm -machine q35,accel=kvm -smp "${SMP:-4}"
   -drive "file=$state/run.qcow2,format=qcow2,if=none,id=d0" -device virtio-blk-pci,drive=d0 \
   -smbios "type=11,value=io.systemd.credential.binary:tmpfiles.extra=$keys" \
   -device virtio-vga -device virtio-rng-pci -display none \
+  "${vm_controls[@]}" \
   -netdev "user,id=n0,hostfwd=tcp:127.0.0.1:$port-:22" -device virtio-net-pci,netdev=n0 \
   -pidfile "$state/qemu.pid" -daemonize
 
@@ -125,15 +140,22 @@ fi
 # neither the commands nor the files added since.
 # The exit status goes to a file of its own, renamed into place whole: the
 # tests print lines like "rc=0" themselves, so the log cannot carry it.
-command='export OMARCHY_PATH=~/src/omarchy PATH=~/src/omarchy/bin:$PATH; cd ~/src/omarchy && date +%s.%N >~/started && ./test/all >~/run.log 2>&1; echo "$?" >~/rc.next && mv ~/rc.next ~/rc'
+command='export OMARCHY_PATH=~/src/omarchy PATH=~/src/omarchy/bin:$PATH; cd ~/src/omarchy && date +%s.%N >~/started && '"$suite_command"' >~/run.log 2>&1; echo "$?" >~/rc.next && mv ~/rc.next ~/rc'
 ssh_vm "systemd-run --user --quiet --collect --same-dir \
   -E OMARCHY_PKGS_PATH=\$HOME/src/omarchy-pkgs bash -c $(printf %q "$command")"
 last_report="" next_report=0
 until ssh_vm '[[ -s ~/rc ]]' 2>/dev/null; do
+  # The installed widget test moves the pointer to its observed geometry.
+  # Send one real mouse click only to this disposable VM, never the host.
+  if [[ $suite == "veos-controls" ]] && ssh_vm '[[ -f ~/veos-acceptance/widget-click-request ]]' 2>/dev/null; then
+    python3 "$(dirname -- "${BASH_SOURCE[0]}")/ci-vm-click.py" "$state/qmp.sock"
+    ssh_vm 'mv ~/veos-acceptance/widget-click-request ~/veos-acceptance/widget-click-sent'
+  fi
   if (( $(seconds) >= ${CI_VM_TIMEOUT:-1500} )); then
     echo "test/ci-vm: the tests did not finish in ${CI_VM_TIMEOUT:-1500} s" >&2
     ssh_vm 'cat ~/run.log' >"$out/run.log" || true
     pull_shell_logs
+    pull_acceptance_artifacts
     (print_failure_logs "$out") || true
     pull_kernel_log
     exit 1
@@ -155,6 +177,7 @@ rc=$(ssh_vm 'cat ~/rc')
 ssh_vm 'cat ~/run.log' >"$out/run.log"
 echo "rc=$rc" >>"$out/run.log"
 pull_shell_logs
+pull_acceptance_artifacts
 if [[ $rc != "0" ]]; then
   (print_failure_logs "$out") || true
 fi
@@ -162,6 +185,10 @@ ssh_vm 'systemd-analyze; systemd-analyze blame | head -25' >"$out/boot.txt" 2>&1
 ssh_vm 'echo "source tree: $(cd ~/src/omarchy && git status --porcelain | wc -l) changed files"'
 pull_kernel_log
 
-sed -n '/^Skipped checks in/,$p' "$out/run.log"
+if [[ $suite == "veos-controls" ]]; then
+  cat "$out/run.log"
+else
+  sed -n '/^Skipped checks in/,$p' "$out/run.log"
+fi
 # The tests' verdict is the run's verdict.
 [[ $rc == "0" ]]

@@ -58,6 +58,7 @@ def main():
 
       assert b"Mission Desk" in request("/")
       assert b"use strict" in request("/app.js")
+      assert b"createVeOSVoice" in request("/voice.js")
       assert b".sidebar" in request("/style.css")
       pid = json.loads(
         request(

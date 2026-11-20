@@ -178,6 +178,116 @@ class StoreTests(Fixture):
 
 
 class ProviderTests(Fixture):
+  def test_adding_hermes_preserves_existing_configuration_and_keeps_it_disabled(self):
+    self.config["providers"].pop("hermes")
+    self.config["providers"]["codex"]["enabled"] = True
+    save_config(self.store.root, self.config)
+    upgraded = read_config(self.store.root)
+    self.assertTrue(upgraded["providers"]["codex"]["enabled"])
+    self.assertFalse(upgraded["providers"]["hermes"]["enabled"])
+    save_config(self.store.root, upgraded)
+    self.assertNotIn(
+      "_state_dir", json.loads((self.store.root / "config.json").read_text())
+    )
+
+  def test_hermes_completion_requires_terminal_success(self):
+    parser = StreamResult("hermes")
+    parser.feed('{"type":"text","text":"Partial answer"}')
+    self.assertEqual(parser.outcome(0).state, "unknown")
+    parser.feed('{"type":"result","exit_code":0,"text":"Verified result"}')
+    self.assertEqual(parser.outcome(0).result, "Verified result")
+    self.assertEqual(parser.outcome(0).state, "succeeded")
+    parser.feed('{"type":"result","exit_code":1,"error":"usage limit reached"}')
+    self.assertEqual(parser.outcome(1).state, "waiting_subscription")
+    malformed = StreamResult("hermes")
+    malformed.feed('{"type":"result","exit_code":false,"text":"Not evidence"}')
+    self.assertNotEqual(malformed.outcome(0).state, "succeeded")
+
+  def test_hermes_profile_refuses_foreign_state_and_ambient_credentials(self):
+    from veos_runtime.hermes import configure, environment, profile
+
+    foreign = self.store.root / "foreign"
+    (foreign / "hermes").mkdir(parents=True)
+    with self.assertRaises(Refused):
+      profile(foreign)
+    home = configure(
+      self.store.root, "subscription-model", {"command": "/python", "args": []}
+    )
+    config = json.loads((home / "config.yaml").read_text())
+    self.assertEqual(config["fallback_model"], [])
+    self.assertEqual(config["platform_toolsets"]["cli"], ["veos"])
+    self.assertEqual(config["model"]["provider"], "openai-codex")
+    with patch.dict(
+      os.environ, {"OPENAI_API_KEY": "not-for-hermes", "HERMES_HOME": "/other/profile"}
+    ):
+      env = environment(self.store.root, clean_env())
+    self.assertNotIn("OPENAI_API_KEY", env)
+    self.assertEqual(env["HERMES_HOME"], str(home))
+    (home / ".env").write_text("OPENAI_API_KEY=unapproved")
+    with self.assertRaises(Refused):
+      environment(self.store.root, clean_env())
+
+  def test_hermes_probe_requires_qualified_cli_and_native_subscription(self):
+    from veos_runtime.hermes import REVISION, check, stop
+
+    config = read_config(self.store.root)
+    config["providers"]["hermes"]["model"] = "subscription-model"
+    calls = []
+
+    def run(argv, **kwargs):
+      calls.append(argv)
+      output = REVISION if argv[-1] == "--version" else "openai-codex: logged in\n"
+      if argv[-2:] == ["gateway", "status"]:
+        output = "✗ Gateway is not running\n"
+      return subprocess.CompletedProcess(argv, 0, output, "")
+
+    self.assertTrue(check("/hermes", config, clean_env(), run)["ready"])
+    self.assertEqual(calls[-1], ["/hermes", "auth", "status", "openai-codex"])
+
+    def bad(argv, **kw):
+      return subprocess.CompletedProcess(argv, 0, "unqualified", "")
+
+    self.assertFalse(check("/hermes", config, clean_env(), bad)["ready"])
+    env = {**clean_env(), "HERMES_HOME": str(self.store.root / "hermes")}
+
+    def failed(argv, **kw):
+      return subprocess.CompletedProcess(argv, 1, "", "")
+
+    self.assertFalse(stop("/hermes", env, failed))
+    self.assertEqual(
+      check("/hermes", config, clean_env(), run)["reason"], "hermes_stop_unconfirmed"
+    )
+    self.assertTrue(stop("/hermes", env, run))
+    self.assertEqual(calls[-2], ["/hermes", "gateway", "stop", "--yes"])
+    self.assertEqual(calls[-1], ["/hermes", "gateway", "status"])
+    self.assertFalse(stop("/hermes", env, bad))
+
+  def test_hermes_run_marker_survives_abrupt_process_exit_and_blocks_admission(self):
+    from veos_runtime.hermes import check, environment
+
+    env = environment(self.store.root, clean_env())
+    env["PYTHONPATH"] = str(Path(__file__).resolve().parents[1] / "src")
+    crashed = subprocess.run(
+      [
+        sys.executable,
+        "-c",
+        "import os; from veos_runtime.hermes import begin; begin(os.environ); os._exit(9)",
+      ],
+      env=env,
+      capture_output=True,
+      timeout=5,
+    )
+    self.assertEqual(crashed.returncode, 9)
+    config = read_config(self.store.root)
+    config["providers"]["hermes"]["model"] = "subscription-model"
+    with patch(
+      "subprocess.run", side_effect=AssertionError("No native process may start")
+    ) as run:
+      self.assertEqual(
+        check("/hermes", config, clean_env(), run)["reason"], "hermes_stop_unconfirmed"
+      )
+      run.assert_not_called()
+
   def test_config_and_environment_prevent_api_fallback(self):
     with patch.dict(
       os.environ,
@@ -541,7 +651,7 @@ class IntegrationTests(IntegrationFixture):
     )
 
 
-class HTTPTests(Fixture):
+class HTTPFixture(Fixture):
   def setUp(self):
     super().setUp()
     self.app = Application(self.store, "test-admin-token")
@@ -574,6 +684,8 @@ class HTTPTests(Fixture):
     self.app.capabilities["tokens"]["task-token"] = cap
     return cap
 
+
+class HTTPTests(HTTPFixture):
   def test_auth_origin_host_and_static_csp(self):
     for kwargs in [
       {"token": "bad"},
@@ -650,6 +762,39 @@ class HTTPTests(Fixture):
 
 
 class WorkerTests(Fixture):
+  @patch("veos_runtime.worker.shutil.which", return_value="/native/hermes")
+  def test_hermes_worker_requires_confirmed_gateway_stop(self, _):
+    config = read_config(self.store.root)
+    config["providers"]["hermes"]["model"] = "subscription-model"
+    save_config(self.store.root, config)
+    tid = self.store.create_task(self.pid, "Inspect the project", "hermes", "native")
+    app = Application(self.store)
+
+    def runner(
+      provider, argv, prompt, cwd, timeout, permitted, checkpoint, token, provider_env
+    ):
+      self.assertEqual(provider, "hermes")
+      self.assertEqual(provider_env["HERMES_HOME"], str(self.store.root / "hermes"))
+      self.assertTrue((self.store.root / "hermes/stop-unconfirmed").is_file())
+      self.assertNotIn("OPENAI_API_KEY", provider_env)
+      self.assertEqual(app.authorize(token)["task_id"], tid)
+      native = json.loads((self.store.root / "hermes/config.yaml").read_text())
+      self.assertEqual(native["platform_toolsets"]["cli"], ["veos"])
+      return Outcome("succeeded", "Read the project")
+
+    worker = Worker(
+      self.store,
+      app.capabilities,
+      "http://127.0.0.1:1",
+      prober=lambda *a: {"ready": True},
+      runner=runner,
+    )
+    with patch("veos_runtime.hermes.stop", return_value=False) as stopped:
+      self.assertTrue(worker.once())
+    stopped.assert_called_once()
+    self.assertEqual(self.store.task(tid)["state"], "unknown")
+    self.assertFalse(app.capabilities["tokens"])
+
   def test_only_one_worker_can_recover_and_own_a_workspace(self):
     app = Application(self.store)
     first = Worker(self.store, app.capabilities, "http://127.0.0.1:1")

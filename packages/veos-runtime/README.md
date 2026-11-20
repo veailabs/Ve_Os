@@ -99,6 +99,34 @@ Start `veos serve` first. Use `claude` or `hermes` for those implemented adapter
 
 MCP compatibility does not establish that ChatGPT or another provider's subscription voice accepts this local stdio tool. VeOS does not extract subscription cookies or repurpose a consumer voice session as an API. A remote-only MCP client cannot directly reach this loopback server.
 
+### Direct controls from another harness
+
+`veos control-mcp --project-id YOUR_PROJECT_ID` gives a compatible local harness the same 13 application/context tools used by the managed workers, plus four task-lifecycle tools. The connected harness does the reasoning itself; VeOS does not launch Hermes or another model behind it. The existing `incoming-mcp` interface remains the three-tool delegation path used by voice.
+
+Generate a configuration fragment for the installed runtime:
+
+```sh
+veos mcp-config --client codex --project-id YOUR_PROJECT_ID
+veos mcp-config --client claude --project-id YOUR_PROJECT_ID
+veos mcp-config --client gemini --project-id YOUR_PROJECT_ID
+veos mcp-config --client hermes --project-id YOUR_PROJECT_ID
+```
+
+Merge the fragment into that client's MCP settings; the command does not overwrite personal settings or enable providers. Codex receives TOML, Claude/Gemini receive `mcpServers` JSON, and Hermes receives `mcp_servers` JSON (also valid YAML). Fragments bind the absolute installed Python executable and state directory, contain no credentials, and require `veos serve` to be running. Regenerate after moving or reinstalling the environment. To configure delegation instead, append `--mode delegate --provider hermes` (or `codex`/`claude`). Gemini is supported as an external MCP client; a managed Gemini worker and its subscription authentication are not implemented. An external client's own tools, account and billing are governed by that client, not by VeOS's native-worker subscription checks.
+
+The direct workflow is:
+
+1. `start_control_task(task, request_key)` binds a task to this connection and consumes one project run. Reusing the same key for the same task does not start it twice; different instructions require a different key.
+2. `available_tools` discovers actual capabilities and grants. Use `browser`, `desktop`, `ve_call` and the shared context/evidence/file tools as needed. A pending write remains subject to the existing exact-action review in Mission Desk.
+3. `control_task_status(offset, limit)` returns paginated action receipts, task state and a receipt version. After review, read the receipts and observe the application outcome. The external harness keeps ownership; no background agent wakes to duplicate the task.
+4. `finish_control_task(result, outcome, receipt_version)` records the outcome. Success requires the current receipt version and no pending/executing actions. A stale version is refused; denied/failed/unknown actions cannot become a successful task. `cancel_control_task` cancels pending work.
+
+Connections are project-scoped, memory-only and expire after one hour. EOF, SIGINT/SIGTERM, expiry and clean service shutdown revoke the connection; unfinished tasks become `unknown` and pending approvals are cancelled. Already-submitted effects can still finish. An abruptly killed client may retain its connection until expiry; a runtime crash is recovered on restart. Review interrupted work and explicitly retry in Mission Desk before reconnecting with its original key. External tasks use `execution_owner=external` in the existing SQLite journal and are excluded from worker discovery and claims, including after retry. The service remains a single trusted OS user's loopback service, not a remote multi-tenant sandbox.
+
+The portable `veos-app-control` skill ships inside the wheel. Managed Hermes/Codex/Claude workers receive its body directly; MCP clients can discover/read `veos://skills/application-control`, and initialization supplies short workflow guidance. `veos skill` prints the same `SKILL.md` for a client's own skill installation mechanism. Installing the skill alone supplies instructions, not an MCP connection or additional permission. The shared skill does not enable Hermes's native memory/plugins or broaden its restricted toolset.
+
+### Optional API voice
+
 The Mission Desk microphone is a separate, explicitly enabled API voice path. Configure `VEOS_VOICE_API_ENABLED=true`, an authenticated `VEOS_VOICE_SESSION_URL` on `https://backend.ve.ai/.../core/voice/sessions`, and the short-lived `VEOS_VE_ACCESS_TOKEN` in the runtime environment. The matching Super Agent implementation is [PR #98](https://github.com/veailabs/ve-core-super-agent/pull/98), deployed to development; the pilot still needs its dedicated funded API key and verified tenant/user configuration. Credentials must not be committed. Without configuration the microphone button is disabled. The runtime does not yet own native Ve login or refresh: restart with a fresh authenticated token when it expires; do not put it in a permanent service file.
 
 Ve mints a temporary OpenAI client secret with `executionTarget=local_harness`; the browser establishes WebRTC directly with OpenAI. Only the ephemeral secret goes to OpenAI, while tool calls return to a scoped local connection and the selected native agent. The voice layer never executes model-generated JavaScript. Audio goes to OpenAI; task data may go to the selected model provider. This is not fully local inference. Voice is limited to 10 minutes per session, three connection attempts per 15 minutes, no automatic reconnection, and 100 tool calls per session. Existing project budgets still apply.

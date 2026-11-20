@@ -662,6 +662,7 @@ class HTTPFixture(Fixture):
 
   def stop_server(self):
     self.server.shutdown()
+    self.app.control_sessions.close()
     self.server.server_close()
     self.thread.join(timeout=2)
 
@@ -804,10 +805,19 @@ class WorkerTests(Fixture):
     try:
       with self.assertRaises(Refused):
         second.start()
+      with self.assertRaises(Refused):
+        second.start(run_worker=False)
     finally:
       first.close()
     self.assertFalse(first.thread.is_alive())
     self.assertLess(time.monotonic() - started, 2)
+    second.start(run_worker=False)
+    try:
+      self.assertIsNone(second.thread)
+      with self.assertRaises(Refused):
+        first.start()
+    finally:
+      second.close()
 
   def test_unavailable_provider_is_blocked_without_budget_use(self):
     tid = self.task()

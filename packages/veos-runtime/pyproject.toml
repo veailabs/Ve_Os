@@ -23,7 +23,7 @@ veos = "veos_runtime.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-veos_runtime = ["web/*.html", "web/*.js", "web/*.css", "desktop/*.json", "desktop/*.qml", "desktop/*.service", "desktop/*.desktop"]
+veos_runtime = ["web/*.html", "web/*.js", "web/*.css", "desktop/*.json", "desktop/*.qml", "desktop/*.service", "desktop/*.desktop", "skills/*/SKILL.md"]
 
 [tool.ruff]
 indent-width = 2

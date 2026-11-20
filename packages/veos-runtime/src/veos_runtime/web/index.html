@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>VeOS · Mission Desk</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="logo">ve</span>
+        <div>VeOS<small>MISSION DESK</small></div>
+      </div>
+      <div class="sidebar-heading">
+        Your projects
+        <button id="new-project" aria-label="New project">+</button>
+      </div>
+      <nav id="projects" aria-label="Projects"></nav>
+      <div class="sidebar-foot">
+        <span class="dot"></span> Personal workspace<small
+          >Stored on this computer</small
+        >
+      </div>
+    </aside>
+    <main>
+      <header>
+        <div class="eyebrow">WORK THAT CARRIES FORWARD</div>
+        <div class="account">Your subscriptions · No API fallback</div>
+      </header>
+      <div id="message" role="status" hidden></div>
+      <section id="empty">
+        <div class="eyebrow">A PLACE FOR THE WHOLE QUESTION</div>
+        <h1>Start with an objective.</h1>
+        <p>
+          Keep your research, sources and next steps together. Choose a
+          connected agent for each task and review what it finds.
+        </p>
+        <button id="first-project" class="primary">
+          Create your first project <span>↗</span>
+        </button>
+      </section>
+      <section id="project" hidden>
+        <div class="project-title">
+          <div>
+            <div id="project-state" class="eyebrow"></div>
+            <h1 id="project-name"></h1>
+          </div>
+          <div class="actions">
+            <button id="export">Export</button><button id="pause">Pause</button
+            ><button id="close-project">Close project</button>
+          </div>
+        </div>
+        <p id="objective"></p>
+        <div class="metrics">
+          <div><strong id="task-count">0</strong><span>Tasks</span></div>
+          <div>
+            <strong id="evidence-count">0</strong><span>Sources recorded</span>
+          </div>
+          <div>
+            <strong id="run-budget">0 / 20</strong><span>Runs used</span>
+          </div>
+          <div>
+            <strong id="approval-count">0</strong
+            ><span>Awaiting your review</span>
+          </div>
+        </div>
+        <div class="workspace">
+          <div class="work-column">
+            <section class="panel">
+              <div class="section-title">
+                <h2>Work queue</h2>
+                <button id="new-task" class="primary">Add task +</button>
+              </div>
+              <p class="hint">
+                Results persist between sessions. Scheduled tasks run when this
+                computer and the runtime are available.
+              </p>
+              <div id="tasks"></div>
+            </section>
+            <section class="panel">
+              <div class="section-title">
+                <h2>Claims & decisions</h2>
+                <button id="new-claim">Record claim +</button>
+              </div>
+              <p class="hint">
+                A source link supports an assessment; it does not make it a
+                verified fact.
+              </p>
+              <div id="claims"></div>
+            </section>
+          </div>
+          <div class="context-column">
+            <section class="panel">
+              <div class="section-title"><h2>Project files</h2></div>
+              <label
+                >Add a file (up to 5 MB)<input id="file-upload" type="file"
+              /></label>
+              <p class="hint">
+                Original files stay on this computer. Text files can be read by
+                your agent; PDF and image interpretation is not connected yet.
+              </p>
+              <div id="files"></div>
+            </section>
+            <section class="panel">
+              <div class="section-title"><h2>Project browser</h2></div>
+              <p class="hint">
+                A separate browser profile on this computer. Sign in directly in
+                its window. Allow each website before an agent can use it.
+              </p>
+              <label
+                >Website<input
+                  id="browser-url"
+                  type="url"
+                  placeholder="https://example.com"
+              /></label>
+              <div class="actions">
+                <button id="browser-allow">Allow website</button
+                ><button id="browser-open">Open browser</button>
+              </div>
+              <div id="browser-sites"></div>
+            </section>
+            <section class="panel">
+              <div class="section-title"><h2>Action review</h2></div>
+              <div id="approvals"></div>
+            </section>
+            <section class="panel">
+              <div class="section-title">
+                <h2>Evidence</h2>
+                <button id="new-evidence" aria-label="Record source">+</button>
+              </div>
+              <div id="evidence"></div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section class="provider-panel">
+        <div class="section-title">
+          <h2>Your agents</h2>
+          <span class="hint">Each uses its own native sign-in</span>
+        </div>
+        <div id="providers"></div>
+      </section>
+      <footer>
+        VeOS keeps the work here. Model reasoning runs with your chosen
+        provider.
+      </footer>
+    </main>
+    <dialog id="project-dialog">
+      <form id="project-form">
+        <div class="eyebrow">NEW PROJECT</div>
+        <h2>What are you working toward?</h2>
+        <label
+          >Name<input
+            name="name"
+            required
+            maxlength="120"
+            placeholder="A short, memorable name" /></label
+        ><label
+          >Objective<textarea
+            name="objective"
+            required
+            maxlength="20000"
+            placeholder="Describe the outcome, constraints and what a useful result looks like."
+          ></textarea>
+        </label>
+        <div class="form-row">
+          <label
+            >Maximum agent runs<input
+              name="max_runs"
+              type="number"
+              value="20"
+              min="1"
+              max="1000"
+              required /></label
+          ><label
+            >Deadline (optional)<input name="deadline" type="datetime-local"
+          /></label>
+        </div>
+        <div class="dialog-actions">
+          <button type="button" data-dismiss>Cancel</button
+          ><button class="primary">Create project</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="task-dialog">
+      <form id="task-form">
+        <div class="eyebrow">NEXT STEP</div>
+        <h2>Give an agent a task.</h2>
+        <label
+          >Task<textarea
+            name="instruction"
+            required
+            maxlength="20000"
+            placeholder="What should it investigate or do? Include the scope and expected result."
+          ></textarea>
+        </label>
+        <div class="form-row">
+          <label
+            >Agent<select name="provider" aria-label="Agent">
+              <option value="codex">Codex · ChatGPT</option>
+              <option value="claude">Claude Code · Claude</option>
+              <option value="antigravity" disabled>
+                Antigravity · Not yet qualified
+              </option>
+            </select></label
+          ><label
+            >Start after (optional)<input
+              name="not_before"
+              type="datetime-local"
+          /></label>
+        </div>
+        <label
+          >Wait for these tasks to succeed (optional)<select
+            id="dependencies"
+            name="dependencies"
+            multiple
+          ></select
+        ></label>
+        <p class="hint">
+          Run and time limits apply. Follow-up tasks proposed by an agent need
+          your acceptance. External changes need action review.
+        </p>
+        <div class="dialog-actions">
+          <button type="button" data-dismiss>Cancel</button
+          ><button class="primary">Queue task</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="evidence-dialog">
+      <form id="evidence-form">
+        <div class="eyebrow">SOURCE RECORD</div>
+        <h2>Preserve the evidence.</h2>
+        <label
+          >Source URL or artifact URN<input
+            name="uri"
+            required
+            maxlength="4096"
+            placeholder="https://…" /></label
+        ><label
+          >Exact excerpt<textarea
+            name="excerpt"
+            required
+            maxlength="50000"
+          ></textarea>
+        </label>
+        <p class="hint">
+          Recording an excerpt does not fetch or verify the source.
+        </p>
+        <div class="dialog-actions">
+          <button type="button" data-dismiss>Cancel</button
+          ><button class="primary">Record source</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="claim-dialog">
+      <form id="claim-form">
+        <div class="eyebrow">EVIDENCE-LED ASSESSMENT</div>
+        <h2>What does the evidence suggest?</h2>
+        <label
+          >Statement<textarea
+            name="statement"
+            required
+            maxlength="10000"
+          ></textarea></label
+        ><label
+          >Kind<select name="kind" aria-label="Kind">
+            <option value="claim">Claim</option>
+            <option value="hypothesis">Hypothesis</option>
+            <option value="decision">Your decision</option>
+          </select></label
+        ><label
+          >Supporting sources<select
+            name="supporting"
+            aria-label="Supporting sources"
+            multiple
+          ></select></label
+        ><label
+          >Contradicting sources<select
+            name="contradicting"
+            aria-label="Contradicting sources"
+            multiple
+          ></select
+        ></label>
+        <div class="dialog-actions">
+          <button type="button" data-dismiss>Cancel</button
+          ><button class="primary">Record assessment</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

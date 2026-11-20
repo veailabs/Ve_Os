@@ -18,6 +18,9 @@ session_omarchy_path=$(systemctl --user show-environment | sed -n 's/^OMARCHY_PA
 export OMARCHY_PATH="$session_omarchy_path"
 export PATH="$OMARCHY_PATH/bin:$PATH"
 printf 'Desktop under test: %s; VeOS source: %s\n' "$OMARCHY_PATH" "$ROOT"
+wait_until "installed shell is responsive" 60 omarchy-shell shell ping
+wait_until "installed bar is visible" 30 layer_on_screen "omarchy-bar"
+wait_until "installed background is visible" 30 layer_on_screen "omarchy-background"
 
 export PYTHONPATH="$ROOT/packages/veos-runtime/src"
 export OMARCHY_ACCEPTANCE_DIR="$ARTIFACTS"

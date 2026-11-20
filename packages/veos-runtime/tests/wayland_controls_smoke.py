@@ -57,6 +57,13 @@ def main():
   def capture(name):
     subprocess.run(["grim", str(artifacts / (name + ".png"))], check=True, timeout=15)
 
+  def visible_text(name, expected):
+    capture(name)
+    seen = command(
+      "tesseract", str(artifacts / (name + ".png")), "stdout", "--psm", "11"
+    )
+    return expected.casefold() in seen.casefold()
+
   def passed(name):
     checks.append(name)
     print("ok - " + name, flush=True)
@@ -185,7 +192,10 @@ def main():
         next(n for n in snapshot["nodes"] if n["name"] == "Message")["text"]
         == "Wayland edit"
       )
-      capture("success-veos-02b-native-edited")
+      wait_for(
+        lambda: visible_text("success-veos-02b-native-edited", "Wayland edit"),
+        "Edited native field did not become visible on the desktop",
+      )
       button = next(n for n in snapshot["nodes"] if n["name"] == "Apply fixture")
       result = act(
         "native_action",
@@ -202,7 +212,10 @@ def main():
         next(n for n in native_snapshot()["nodes"] if n["name"] == "Message")["text"]
         == "Applied"
       )
-      capture("success-veos-02c-native-applied")
+      wait_for(
+        lambda: visible_text("success-veos-02c-native-applied", "Applied"),
+        "Native application result did not become visible on the desktop",
+      )
       native_fixture.terminate()
       native_fixture.wait(timeout=10)
       native_fixture = None

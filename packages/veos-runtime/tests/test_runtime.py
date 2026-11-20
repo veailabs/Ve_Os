@@ -262,6 +262,32 @@ class ProviderTests(Fixture):
     self.assertEqual(calls[-1], ["/hermes", "gateway", "status"])
     self.assertFalse(stop("/hermes", env, bad))
 
+  def test_hermes_run_marker_survives_abrupt_process_exit_and_blocks_admission(self):
+    from veos_runtime.hermes import check, environment
+
+    env = environment(self.store.root, clean_env())
+    env["PYTHONPATH"] = str(Path(__file__).resolve().parents[1] / "src")
+    crashed = subprocess.run(
+      [
+        sys.executable,
+        "-c",
+        "import os; from veos_runtime.hermes import begin; begin(os.environ); os._exit(9)",
+      ],
+      env=env,
+      capture_output=True,
+      timeout=5,
+    )
+    self.assertEqual(crashed.returncode, 9)
+    config = read_config(self.store.root)
+    config["providers"]["hermes"]["model"] = "subscription-model"
+    with patch(
+      "subprocess.run", side_effect=AssertionError("No native process may start")
+    ) as run:
+      self.assertEqual(
+        check("/hermes", config, clean_env(), run)["reason"], "hermes_stop_unconfirmed"
+      )
+      run.assert_not_called()
+
   def test_config_and_environment_prevent_api_fallback(self):
     with patch.dict(
       os.environ,
@@ -749,6 +775,7 @@ class WorkerTests(Fixture):
     ):
       self.assertEqual(provider, "hermes")
       self.assertEqual(provider_env["HERMES_HOME"], str(self.store.root / "hermes"))
+      self.assertTrue((self.store.root / "hermes/stop-unconfirmed").is_file())
       self.assertNotIn("OPENAI_API_KEY", provider_env)
       self.assertEqual(app.authorize(token)["task_id"], tid)
       native = json.loads((self.store.root / "hermes/config.yaml").read_text())

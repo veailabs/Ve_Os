@@ -10,7 +10,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from unittest.mock import patch
 
-from veos_runtime.hermes import configure, environment, qualified, stop
+from veos_runtime.hermes import begin, configure, environment, qualified, stop
 from veos_runtime.providers import StreamResult, clean_env, commands, execute
 from veos_runtime.server import Application, make_server
 from veos_runtime.store import Store
@@ -151,6 +151,7 @@ def main():
         feed(parser, line)
 
       with patch.object(StreamResult, "feed", record):
+        begin(env)
         outcome = execute(
           "hermes",
           argv,
@@ -167,6 +168,7 @@ def main():
       assert stop(executable, env), "Owned gateway stop not confirmed"
       inference.cancel_next = True
       started = time.monotonic()
+      begin(env)
       outcome = execute(
         "hermes",
         argv,

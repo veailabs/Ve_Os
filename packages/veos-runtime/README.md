@@ -54,7 +54,7 @@ veos provider hermes check
 
 Hermes owns its native OAuth credentials under the private `hermes/` directory inside the VeOS state directory. VeOS does not parse or copy those credentials. The adapter uses `openai-codex`, not an OpenAI API key. It creates a separate native session for each task, exposes only the task-scoped VeOS MCP tools, disables native rule discovery, plugin installation, background review and title-generation calls, and keeps the project/task journal in VeOS. Ambient API-key environment variables and custom Hermes plugins/hooks are refused.
 
-Hermes's CLI can detach while its gateway continues working. VeOS therefore stops its own gateway on completion, cancellation and error, and independently checks that it is no longer running. An unconfirmed stop leaves the task `unknown` and blocks further Hermes tasks. After stopping the worker, `veos provider hermes stop` performs recovery; the runtime never uses Hermes's `--all` switch or adopts an existing personal Hermes profile. This is a single-OS-user boundary, not a container sandbox.
+Hermes's CLI can detach while its gateway continues working. VeOS writes and flushes an active-run marker before launch, stops its own gateway on completion, cancellation and error, and independently checks that it is no longer running before clearing the marker. After an abrupt worker crash, the marker blocks new Hermes work until gateway recovery succeeds. An unconfirmed stop leaves the task `unknown` and blocks further Hermes tasks. After stopping the worker, `veos provider hermes stop` performs recovery; the runtime never uses Hermes's `--all` switch or adopts an existing personal Hermes profile. This is a single-OS-user boundary, not a container sandbox.
 
 ## Task lifecycle
 

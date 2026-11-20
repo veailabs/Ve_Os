@@ -151,3 +151,17 @@ def stop(executable, env, run=subprocess.run):
     return True
   except (OSError, subprocess.TimeoutExpired):
     return False
+
+
+def begin(env):
+  marker = Path(env["HERMES_HOME"]) / "stop-unconfirmed"
+  try:
+    fd = os.open(marker, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+  except FileExistsError:
+    raise Refused(
+      "Stop the previous owned Hermes gateway before another task"
+    ) from None
+  with os.fdopen(fd, "w") as file:
+    file.write("A native run may remain active until gateway shutdown is confirmed.\n")
+    file.flush()
+    os.fsync(file.fileno())

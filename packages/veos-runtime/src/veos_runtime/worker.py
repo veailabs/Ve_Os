@@ -126,7 +126,7 @@ class Worker:
         )
         native_env = None
         if task["provider"] == "hermes":
-          from .hermes import configure, environment
+          from .hermes import begin, configure, environment
 
           configure(
             self.store.root,
@@ -135,6 +135,7 @@ class Worker:
             config["timeout_seconds"],
           )
           native_env = environment(self.store.root, clean_env())
+          begin(native_env)
 
         def checkpoint(text):
           with self.store.db() as db:

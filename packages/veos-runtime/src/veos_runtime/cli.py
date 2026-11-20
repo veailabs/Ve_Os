@@ -140,11 +140,14 @@ def main(argv=None):
             configure(
               store.root, args.model or config["providers"]["hermes"].get("model", "")
             )
-            subprocess.run(
+            result = subprocess.run(
               [executable, "auth", "add", PROVIDER, "--type", "oauth"],
               env=env,
-              check=True,
             )
+            if result.returncode != 0:
+              raise Refused(
+                "Native Hermes sign-in did not finish; run this login command again when ready"
+              )
 
       else:
         if args.action == "enable" and not args.confirm_no_paid_extra_usage:

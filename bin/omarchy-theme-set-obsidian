@@ -11,9 +11,9 @@ jq -r '.vaults | values[].path' ~/.config/obsidian/obsidian.json 2>/dev/null | w
   [[ -d $vault_path/.obsidian ]] || continue
 
   theme_dir="$vault_path/.obsidian/themes/Ve OS"
-  mkdir -p "$theme_dir"
+  mkdir -p "$theme_dir" || continue
 
-  cat >"$theme_dir/manifest.json" <<'EOF'
+  cat >"$theme_dir/manifest.json" <<'EOF' || continue
 {
   "name": "Ve OS",
   "version": "1.0.0",
@@ -24,7 +24,7 @@ jq -r '.vaults | values[].path' ~/.config/obsidian/obsidian.json 2>/dev/null | w
 }
 EOF
 
-  cp "$CURRENT_THEME_DIR/obsidian.css" "$theme_dir/theme.css"
+  cp "$CURRENT_THEME_DIR/obsidian.css" "$theme_dir/theme.css" || continue
 
   appearance="$vault_path/.obsidian/appearance.json"
   if [[ -f $appearance ]] && jq -e '.cssTheme == "Omarchy"' "$appearance" >/dev/null 2>&1; then

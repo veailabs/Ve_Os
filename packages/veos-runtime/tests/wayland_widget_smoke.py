@@ -10,9 +10,15 @@ from pathlib import Path
 
 
 def command(*args, env=None, timeout=60):
-  return subprocess.run(
-    args, check=True, capture_output=True, text=True, timeout=timeout, env=env
-  ).stdout.strip()
+  result = subprocess.run(
+    args, check=False, capture_output=True, text=True, timeout=timeout, env=env
+  )
+  if result.returncode:
+    raise AssertionError(
+      f"Command {args!r} failed ({result.returncode})\n"
+      f"stdout: {result.stdout}\nstderr: {result.stderr}"
+    )
+  return result.stdout.strip()
 
 
 def wait_for(check, message, timeout=45):
@@ -140,6 +146,12 @@ def main():
       lambda: "veos.missions" in command("omarchy-shell", "shell", "listPlugins"),
       "Installed widget was not discovered",
     )
+    (artifacts / "installed-plugin-enable.txt").write_text(
+      Path(shutil.which("omarchy-plugin-enable")).read_text()
+    )
+    (artifacts / "installed-plugins.json").write_text(
+      command("omarchy-shell", "shell", "listPlugins")
+    )
     command("omarchy-plugin-enable", "veos.missions", "--section", "right")
 
     def geometry():
@@ -223,6 +235,12 @@ def main():
       "real Omarchy widget click opens authenticated installed Mission Desk without model runs"
     )
   finally:
+    journal = command(
+      "journalctl", "--user", "--since", since, "-t", "omarchy-shell", "--no-pager"
+    )
+    (artifacts / "widget-shell.log").write_text(
+      journal.replace(token, "[redacted]") if token else journal
+    )
     (artifacts / "widget-click-request").unlink(missing_ok=True)
     if installed:
       subprocess.run(

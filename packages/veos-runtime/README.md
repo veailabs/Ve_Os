@@ -99,7 +99,7 @@ Start `veos serve` first. Use `claude` or `hermes` for those implemented adapter
 
 MCP compatibility does not establish that ChatGPT or another provider's subscription voice accepts this local stdio tool. VeOS does not extract subscription cookies or repurpose a consumer voice session as an API. A remote-only MCP client cannot directly reach this loopback server.
 
-The Mission Desk microphone is a separate, explicitly enabled API voice path. Configure `VEOS_VOICE_API_ENABLED=true`, an authenticated `VEOS_VOICE_SESSION_URL` on `https://backend.ve.ai/.../core/voice/sessions`, and the short-lived `VEOS_VE_ACCESS_TOKEN` in the runtime environment. The matching Super Agent implementation is [PR #98](https://github.com/veailabs/ve-core-super-agent/pull/98); its deployment and API funding must be verified independently. Credentials must not be committed. Without configuration the microphone button is disabled.
+The Mission Desk microphone is a separate, explicitly enabled API voice path. Configure `VEOS_VOICE_API_ENABLED=true`, an authenticated `VEOS_VOICE_SESSION_URL` on `https://backend.ve.ai/.../core/voice/sessions`, and the short-lived `VEOS_VE_ACCESS_TOKEN` in the runtime environment. The matching Super Agent implementation is [PR #98](https://github.com/veailabs/ve-core-super-agent/pull/98), deployed to development; the pilot still needs its dedicated funded API key and verified tenant/user configuration. Credentials must not be committed. Without configuration the microphone button is disabled. The runtime does not yet own native Ve login or refresh: restart with a fresh authenticated token when it expires; do not put it in a permanent service file.
 
 Ve mints a temporary OpenAI client secret with `executionTarget=local_harness`; the browser establishes WebRTC directly with OpenAI. Only the ephemeral secret goes to OpenAI, while tool calls return to a scoped local connection and the selected native agent. The voice layer never executes model-generated JavaScript. Audio goes to OpenAI; task data may go to the selected model provider. This is not fully local inference. Voice is limited to 10 minutes per session, three connection attempts per 15 minutes, no automatic reconnection, and 100 tool calls per session. Existing project budgets still apply.
 
@@ -146,7 +146,7 @@ omarchy-shell shell rescanPlugins
 omarchy plugin enable veos.missions
 ```
 
-The widget launches Mission Desk on click; it does not poll or run a model inside the shell. The target Omarchy/Quickshell session still needs validation. Installing or copying these files does not install an OS or run migrations.
+The widget launches Mission Desk on click; it does not poll or run a model inside the shell. The Wayland acceptance workflow installs this wheel and user service in a disposable Omarchy VM, enables the actual widget and verifies a real click opens Mission Desk. Check the exact release commit's workflow and screenshot artifacts before deployment. Installing or copying these files does not install an OS or run migrations.
 
 On macOS, `veos install-desktop` creates a user LaunchAgent. Start it with `launchctl bootstrap "gui/$(id -u)" "$HOME/Library/LaunchAgents/ai.ve.veos-runtime.plist"`; stop it with the equivalent `launchctl bootout`. The service starts at user login and restarts after process exit. It cannot execute tasks while the computer is off. Existing differing service/widget files are never silently overwritten.
 

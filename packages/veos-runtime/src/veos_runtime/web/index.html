@@ -143,6 +143,18 @@
             </section>
             <section class="panel">
               <div class="section-title">
+                <h2>Memory</h2>
+                <button id="new-memory" aria-label="Add memory">+</button>
+              </div>
+              <p class="hint">
+                What your agents start with: your standing direction, this
+                project's decisions and lessons about doing the work. An agent
+                can only propose direction and lessons; you decide.
+              </p>
+              <div id="memory"></div>
+            </section>
+            <section class="panel">
+              <div class="section-title">
                 <h2>Evidence</h2>
                 <button id="new-evidence" aria-label="Record source">+</button>
               </div>
@@ -303,6 +315,36 @@
         <div class="dialog-actions">
           <button type="button" data-dismiss>Cancel</button
           ><button class="primary">Record assessment</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="memory-dialog">
+      <form id="memory-form">
+        <div class="eyebrow">MEMORY</div>
+        <h2>What should be remembered?</h2>
+        <label
+          >Applies to<select name="scope" aria-label="Applies to">
+            <option value="executive">Every project · your direction</option>
+            <option value="project">This project</option>
+            <option value="procedural">Every project · how work is done</option>
+          </select></label
+        ><label
+          >Kind<select name="kind" aria-label="Memory kind"></select></label
+        ><label
+          >Remember<textarea
+            name="statement"
+            required
+            maxlength="2000"
+            placeholder="One durable decision, rule or lesson."
+          ></textarea>
+        </label>
+        <p class="hint">
+          Direction guides every agent but grants no permission and approves no
+          action. Earlier wording stays in the history.
+        </p>
+        <div class="dialog-actions">
+          <button type="button" data-dismiss>Cancel</button
+          ><button class="primary">Save memory</button>
         </div>
       </form>
     </dialog>

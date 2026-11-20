@@ -127,6 +127,59 @@ class Store:
                   size INTEGER NOT NULL, created REAL NOT NULL,
                   UNIQUE(project_id,name,sha256)
                 );
+                CREATE TABLE IF NOT EXISTS memories (
+                  id TEXT PRIMARY KEY, scope TEXT NOT NULL, kind TEXT NOT NULL,
+                  project_id TEXT REFERENCES projects(id), statement TEXT NOT NULL,
+                  detail TEXT NOT NULL DEFAULT '{}', state TEXT NOT NULL,
+                  author TEXT NOT NULL, task_id TEXT REFERENCES tasks(id),
+                  run_id TEXT REFERENCES runs(id),
+                  supersedes TEXT REFERENCES memories(id),
+                  created REAL NOT NULL, updated REAL NOT NULL
+                );
+                CREATE INDEX IF NOT EXISTS memories_scope ON memories(scope, state, project_id, created);
+                CREATE TABLE IF NOT EXISTS claim_revisions (
+                  claim_id TEXT NOT NULL REFERENCES claims(id), seq INTEGER NOT NULL,
+                  confidence INTEGER, state TEXT NOT NULL, reason TEXT NOT NULL,
+                  author TEXT NOT NULL, task_id TEXT REFERENCES tasks(id),
+                  run_id TEXT REFERENCES runs(id), created REAL NOT NULL,
+                  PRIMARY KEY(claim_id, seq)
+                );
+                CREATE TABLE IF NOT EXISTS entities (
+                  id TEXT PRIMARY KEY, project_id TEXT NOT NULL REFERENCES projects(id),
+                  kind TEXT NOT NULL, name TEXT NOT NULL,
+                  detail TEXT NOT NULL DEFAULT '{}', state TEXT NOT NULL,
+                  merged_into TEXT REFERENCES entities(id),
+                  task_id TEXT REFERENCES tasks(id), run_id TEXT REFERENCES runs(id),
+                  created REAL NOT NULL, updated REAL NOT NULL
+                );
+                CREATE INDEX IF NOT EXISTS entities_project ON entities(project_id, state, created);
+                CREATE TABLE IF NOT EXISTS entity_keys (
+                  project_id TEXT NOT NULL REFERENCES projects(id), key TEXT NOT NULL,
+                  entity_id TEXT NOT NULL REFERENCES entities(id), label TEXT NOT NULL,
+                  PRIMARY KEY(project_id, key, entity_id)
+                );
+                CREATE INDEX IF NOT EXISTS entity_keys_entity ON entity_keys(entity_id);
+                CREATE INDEX IF NOT EXISTS entity_keys_key ON entity_keys(key);
+                CREATE TABLE IF NOT EXISTS signals (
+                  id TEXT PRIMARY KEY, project_id TEXT NOT NULL REFERENCES projects(id),
+                  source TEXT NOT NULL, uri TEXT, actor TEXT, content TEXT NOT NULL,
+                  content_hash TEXT NOT NULL, rights TEXT NOT NULL,
+                  observed REAL NOT NULL, published REAL,
+                  state TEXT NOT NULL DEFAULT 'active',
+                  task_id TEXT REFERENCES tasks(id), run_id TEXT REFERENCES runs(id),
+                  UNIQUE(project_id, content_hash)
+                );
+                CREATE TABLE IF NOT EXISTS links (
+                  id TEXT PRIMARY KEY, project_id TEXT NOT NULL REFERENCES projects(id),
+                  subject_type TEXT NOT NULL, subject_id TEXT NOT NULL,
+                  relation TEXT NOT NULL, object_type TEXT NOT NULL,
+                  object_id TEXT NOT NULL, confidence INTEGER,
+                  state TEXT NOT NULL DEFAULT 'active', author TEXT NOT NULL,
+                  task_id TEXT REFERENCES tasks(id), run_id TEXT REFERENCES runs(id),
+                  created REAL NOT NULL,
+                  UNIQUE(project_id, subject_type, subject_id, relation, object_type, object_id)
+                );
+                CREATE INDEX IF NOT EXISTS links_object ON links(project_id, object_type, object_id);
             """)
       # Additive migrations also upgrade workspaces created by 0.1.0.
       db.execute("BEGIN IMMEDIATE")
@@ -140,6 +193,7 @@ class Store:
         "claims": {
           "task_id": "TEXT REFERENCES tasks(id)",
           "run_id": "TEXT REFERENCES runs(id)",
+          "confidence": "INTEGER",
         },
         "evidence": {"run_id": "TEXT REFERENCES runs(id)"},
       }.items():
@@ -147,7 +201,7 @@ class Store:
         for column, definition in columns.items():
           if column not in present:
             db.execute(f"ALTER TABLE {table} ADD COLUMN {column} {definition}")
-      db.execute("PRAGMA user_version=3")
+      db.execute("PRAGMA user_version=4")
     os.chmod(self.root / "state.sqlite3", 0o600)
 
   @contextmanager
@@ -601,10 +655,13 @@ class Store:
     contradicting=None,
     task_id=None,
     run_id=None,
+    confidence=None,
   ):
     statement = bounded(statement, "statement", 10_000)
     if kind not in {"claim", "hypothesis", "decision"}:
       raise Refused("Invalid claim kind")
+    if confidence is not None:
+      integer(confidence, "confidence", 0, 100)
     supporting, contradicting = supporting or [], contradicting or []
     if (
       not isinstance(supporting, list)
@@ -633,18 +690,13 @@ class Store:
         ).fetchone()
         if not row or row[0] != pid or row[1] != "active":
           raise Refused("Evidence is missing, withdrawn or outside this project")
+      state = "contested" if contradicting else "unverified"
       db.execute(
-        "INSERT INTO claims(id,project_id,statement,kind,state,created,task_id,run_id) VALUES(?,?,?,?,?,?,?,?)",
-        (
-          cid,
-          pid,
-          statement,
-          kind,
-          "contested" if contradicting else "unverified",
-          self.clock(),
-          task_id,
-          run_id,
-        ),
+        "INSERT INTO claims(id,project_id,statement,kind,state,created,task_id,run_id,confidence) VALUES(?,?,?,?,?,?,?,?,?)",
+        (cid, pid, statement, kind, state, self.clock(), task_id, run_id, confidence),
+      )
+      self.claim_revision(
+        db, cid, confidence, state, "recorded", task_id, run_id, bool(task_id)
       )
       db.executemany(
         "INSERT INTO claim_evidence VALUES(?,?,?)",
@@ -655,23 +707,67 @@ class Store:
     self.notify()
     return cid
 
+  def claim_revision(
+    self, db, cid, confidence, state, reason, task_id=None, run_id=None, agent=False
+  ):
+    """Append one immutable line to a claim's history, inside the caller's transaction."""
+    seq = db.execute(
+      "SELECT coalesce(max(seq),0)+1 FROM claim_revisions WHERE claim_id=?", (cid,)
+    ).fetchone()[0]
+    db.execute(
+      "INSERT INTO claim_revisions VALUES(?,?,?,?,?,?,?,?,?)",
+      (
+        cid,
+        seq,
+        confidence,
+        state,
+        reason,
+        "agent" if agent else "owner",
+        task_id,
+        run_id,
+        self.clock(),
+      ),
+    )
+
   def withdraw_evidence(self, pid, eid):
     with self.db() as db:
       db.execute("BEGIN IMMEDIATE")
-      if not db.execute(
-        "SELECT 1 FROM evidence WHERE id=? AND project_id=?", (eid, pid)
-      ).fetchone():
+      row = db.execute(
+        "SELECT state FROM evidence WHERE id=? AND project_id=?", (eid, pid)
+      ).fetchone()
+      if not row:
         raise Refused("Evidence not found")
+      if row["state"] == "withdrawn":
+        return
       db.execute("UPDATE evidence SET state='withdrawn' WHERE id=?", (eid,))
-      db.execute(
-        "UPDATE claims SET state='needs_review' WHERE id IN (SELECT claim_id FROM claim_evidence WHERE evidence_id=?)",
+      # Everything interpreted from a withdrawn source returns to review; the
+      # records and their history stay.
+      for claim in db.execute(
+        "SELECT id,confidence FROM claims WHERE state!='retracted' AND id IN (SELECT claim_id FROM claim_evidence WHERE evidence_id=?)",
         (eid,),
+      ).fetchall():
+        db.execute("UPDATE claims SET state='needs_review' WHERE id=?", (claim["id"],))
+        self.claim_revision(
+          db, claim["id"], claim["confidence"], "needs_review", "evidence_withdrawn"
+        )
+      db.execute(
+        """UPDATE memories SET state='needs_review',updated=? WHERE state='active' AND id IN (
+             SELECT subject_id FROM links WHERE project_id=? AND subject_type='memory' AND object_type='evidence' AND object_id=?
+             UNION SELECT object_id FROM links WHERE project_id=? AND object_type='memory' AND subject_type='evidence' AND subject_id=?)""",
+        (self.clock(), pid, eid, pid, eid),
+      )
+      db.execute(
+        "UPDATE links SET state='source_withdrawn' WHERE project_id=? AND state='active' AND ((object_type='evidence' AND object_id=?) OR (subject_type='evidence' AND subject_id=?))",
+        (pid, eid, eid),
       )
       self.event(db, pid, "evidence.withdrawn", {"id": eid})
     self.notify()
 
   def snapshot(self, pid=None):
     with self.db() as db:
+      # One read transaction: the revision must describe exactly the rows
+      # returned, or a page that saw older rows would never ask for newer ones.
+      db.execute("BEGIN")
       if pid:
         self.require_project(db, pid)
       out = {}
@@ -699,6 +795,30 @@ class Store:
         for x in db.execute("SELECT * FROM claim_evidence")
         if x["claim_id"] in claim_ids
       ]
+      out["claim_revisions"] = [
+        dict(x)
+        for x in db.execute("SELECT * FROM claim_revisions ORDER BY claim_id,seq")
+        if x["claim_id"] in claim_ids
+      ]
+      # Executive and procedural memory belong to the owner, not to one project,
+      # so a project view carries them along with that project's own records.
+      out["memories"] = [
+        dict(x)
+        for x in db.execute(
+          "SELECT * FROM memories"
+          + (" WHERE project_id=? OR scope!='project'" if pid else "")
+          + " ORDER BY created",
+          (pid,) if pid else (),
+        )
+      ]
+      for table in ("entities", "entity_keys", "signals", "links"):
+        out[table] = [
+          dict(x)
+          for x in db.execute(
+            f"SELECT * FROM {table}" + (" WHERE project_id=?" if pid else ""),
+            (pid,) if pid else (),
+          )
+        ]
       out["revision"] = db.execute(
         "SELECT coalesce(max(seq),0) FROM events"
       ).fetchone()[0]

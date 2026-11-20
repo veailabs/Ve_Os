@@ -101,7 +101,7 @@ MCP compatibility does not establish that ChatGPT or another provider's subscrip
 
 ### Direct controls from another harness
 
-`veos control-mcp --project-id YOUR_PROJECT_ID` gives a compatible local harness the same 13 application/context tools used by the managed workers, plus four task-lifecycle tools. The connected harness does the reasoning itself; VeOS does not launch Hermes or another model behind it. The existing `incoming-mcp` interface remains the three-tool delegation path used by voice.
+`veos control-mcp --project-id YOUR_PROJECT_ID` gives a compatible local harness the same 20 application, context and memory tools used by the managed workers, plus four task-lifecycle tools. The connected harness does the reasoning itself; VeOS does not launch Hermes or another model behind it. The existing `incoming-mcp` interface remains the three-tool delegation path used by voice.
 
 Generate a configuration fragment for the installed runtime:
 
@@ -139,6 +139,37 @@ Sources record URIs, excerpts, capture times, hashes and creating runs. Claims/h
 
 Use `available_tools` to discover configured browser and Ve capabilities. The remaining tools record sources/claims, propose follow-up tasks, list/read files, write reports and invoke explicitly allowed Ve tools. Child tasks require user acceptance. No model is separately billed as a router or evaluator.
 
+## Memory
+
+The runtime keeps four memories in the same journal, so a project outlives the agents that worked on it:
+
+| Memory | Holds | Who writes it |
+|---|---|---|
+| Executive | Your strategy, preferences, risk appetite, operating rules and priorities, for every project | You. An agent can only propose an entry; it reaches no agent until you accept it |
+| Project | One project's decisions, outcomes, next actions, timeline and notes | You or that project's agents |
+| Evidence | Sources, claims and hypotheses with a confidence and a full revision history, plus observed signals | You or that project's agents |
+| Procedural | Workflows, retry lessons and failure patterns, for every project, beside provider and tool results computed from the journal | You. An agent can only propose an entry |
+
+Nothing is edited in place. Revising a memory writes a new version that supersedes the old one, and each version names its author and, for an agent, the task and run. A claim keeps every confidence it has had with the reason for each change; contradicting evidence must come with a lower confidence. Withdrawing a source returns the claims and memories that rest on it to review and takes them out of agent context until you keep them. `veos memory erase` removes the text of a memory and all its versions, leaving only identifiers.
+
+Entities are the organizations, people and technologies a project follows. `resolve_entity` matches a mention to an existing record by identifier (`domain:example.com`, `patent:US1234567`, `orcid:…`) or, for organizations and technologies, by a name or alias that differs only in case, spacing or punctuation. People who share a name, and records whose identifiers disagree, are recorded as ambiguous beside their candidates until you rule in the Memory panel that they are the same or different. Links relate any two records of one project (`person employed_by organization`, `claim about entity`, `signal mentions entity`); they are the project's relationship graph. A signal is one observed event from a feed, kept once per project however often it is seen.
+
+Every agent task starts with your active direction, set apart from the rest of its context, and with the project's memory and the accepted lessons as untrusted records. Direction grants no permission and approves no action: grants and action review still decide every effect. Agents use `recall_memory`, `remember`, `revise_claim`, `resolve_entity`, `link_records`, `related_records` and `record_signal`. An agent reads and writes only its own project's records; another project's memory, entities and signals are never returned to it.
+
+```sh
+veos memory add --scope executive --kind operating_rule --statement "Draft outreach for approval; never send it."
+veos memory list --state proposed
+veos memory accept MEMORY_ID      # or reject, retract, erase
+veos memory revise MEMORY_ID --statement "New wording"
+veos memory history MEMORY_ID
+veos memory brief --project-id YOUR_PROJECT_ID
+veos memory performance
+```
+
+`veos memory brief` returns what an executive brief must rest on: your direction, the project's decisions and next actions, each claim with its confidence history and timestamped sources, the claims whose confidence fell, those left without a standing source, and what awaits your review. No claim is presented as verified fact.
+
+Memory is local to this OS user, like the rest of the journal, and `veos export` includes it. Retrieval matches literal words; there is no embedding model or separately billed search. It is not yet synchronized with the Ve memory engine, so it does not follow you to another device.
+
 ## Optional Ve connection
 
 The mail adapter is disabled by default. It requires an independently verified HTTPS Integration endpoint, mailbox UUID and exact read/write tool allowlists in the state directory's `config.json`. It accepts a user-authorized short-lived `VEOS_VE_ACCESS_TOKEN` through the runtime environment, mints a scoped MCP grant and binds every tool to the configured mailbox. It does not forward the user token to the agent.
@@ -153,7 +184,7 @@ State defaults to `~/.local/state/veos` or `$XDG_STATE_HOME/veos`. Set `--state-
 
 | Path | Contents |
 |---|---|
-| `state.sqlite3` | Projects, tasks, runs, evidence, claims, action receipts, browser/desktop grants, harness task scope, file metadata and events |
+| `state.sqlite3` | Projects, tasks, runs, evidence, claims, memories, entities, signals, links, action receipts, browser/desktop grants, harness task scope, file metadata and events |
 | `artifacts/<project>/<hash>` | Uploaded originals and generated reports |
 | `browser-profiles/<project>` | Chromium cookies and site storage |
 | `projects/<project>` | Native client work directories |

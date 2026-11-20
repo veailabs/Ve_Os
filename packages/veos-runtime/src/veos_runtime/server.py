@@ -17,6 +17,7 @@ from .desktop_actions import DesktopActions
 from .harness import Harness
 from .integrations import IntegrationActions
 from .mcp import TOOLS
+from .memory import Memory
 from .providers import PROVIDERS, probe, read_config
 from .store import Refused, encoded
 from .voice import Voice
@@ -36,6 +37,7 @@ class Application:
     self.harness = Harness(store)
     self.voice = Voice()
     self.artifacts = Artifacts(store)
+    self.memory = Memory(store)
     self.control_sessions = ControlSessions(store, self.call_tool)
     self.base_url = ""
 
@@ -85,7 +87,70 @@ class Application:
         pid, args["id"], args.get("offset", 0), args.get("limit", 12000)
       )
     if name == "project_context":
-      return {"untrusted": True, "project": self.store.context(pid)}
+      return {
+        "untrusted": True,
+        "project": self.store.context(pid),
+        "memory": self.memory.context(pid),
+      }
+    author = {"task_id": tid, "run_id": capability["lease"], "agent": True}
+    if name == "recall_memory":
+      return self.memory.recall(
+        pid, args.get("query"), args.get("scope", "all"), args.get("limit", 20)
+      )
+    if name == "remember":
+      return self.memory.remember(
+        args["scope"],
+        args["kind"],
+        args["statement"],
+        pid,
+        evidence=args.get("evidence"),
+        **author,
+      )
+    if name == "revise_claim":
+      return self.memory.revise_claim(
+        pid,
+        args["id"],
+        args["reason"],
+        args.get("confidence"),
+        args.get("supporting"),
+        args.get("contradicting"),
+        **author,
+      )
+    if name == "resolve_entity":
+      return self.memory.resolve_entity(
+        pid,
+        args["kind"],
+        args["name"],
+        args.get("aliases"),
+        args.get("identifiers"),
+        args.get("detail"),
+        **author,
+      )
+    if name == "link_records":
+      return self.memory.link(
+        pid,
+        args["subject"],
+        args["relation"],
+        args["object"],
+        args.get("confidence"),
+        **author,
+      )
+    if name == "related_records":
+      return {"untrusted": True} | self.memory.neighbors(
+        pid, args["record"], args.get("limit", 50)
+      )
+    if name == "record_signal":
+      return self.memory.record_signal(
+        pid,
+        args["source"],
+        args["content"],
+        args.get("uri"),
+        args.get("actor"),
+        args.get("rights", "public"),
+        args.get("published"),
+        args.get("entities"),
+        **author,
+      )
     if name == "browser":
       return self.browser_actions.call(
         pid, tid, args["operation"], args.get("args", {})
@@ -149,6 +214,7 @@ class Application:
           args.get("contradicting"),
           tid,
           capability["lease"],
+          args.get("confidence"),
         )
       }
     if name == "propose_task":
@@ -236,7 +302,14 @@ def make_server(app, port=8764):
         self.guard()
         query = parse_qs(path.query)
         if path.path in {"/api/state", "/api/export"}:
-          self.send(200, app.store.snapshot(query.get("project", [None])[0]))
+          snapshot = app.store.snapshot(query.get("project", [None])[0])
+          if path.path == "/api/state":
+            # The page counts signals; only an export carries their text.
+            snapshot["signals"] = [
+              {"id": s["id"], "project_id": s["project_id"]}
+              for s in snapshot["signals"]
+            ]
+          self.send(200, snapshot)
         elif path.path == "/api/files":
           self.send(
             200,
@@ -264,6 +337,19 @@ def make_server(app, port=8764):
               ),
               "settings_areas": [*SETTINGS, "displays", "startup", "notifications"],
             },
+          )
+        elif path.path == "/api/memory/brief":
+          self.send(200, app.memory.brief(query.get("project", [None])[0]))
+        elif path.path == "/api/memory/history":
+          self.send(200, {"versions": app.memory.history(query.get("id", [None])[0])})
+        elif path.path == "/api/memory/performance":
+          self.send(200, app.memory.performance())
+        elif path.path == "/api/entities":
+          self.send(
+            200,
+            app.memory.entity(
+              query.get("project", [None])[0], query.get("id", [None])[0]
+            ),
           )
         elif path.path == "/api/voice/status":
           self.send(200, app.voice.status())
@@ -351,6 +437,39 @@ def make_server(app, port=8764):
           )
         elif path == "/api/claims":
           result = {"id": app.store.add_claim(**data)}
+        elif path == "/api/memory":
+          result = app.memory.remember(
+            data["scope"],
+            data["kind"],
+            data["statement"],
+            data.get("pid"),
+            data.get("detail"),
+            data.get("evidence"),
+          )
+        elif path == "/api/memory/revise":
+          result = app.memory.revise(data["id"], data["statement"], data.get("detail"))
+        elif path == "/api/memory/erase":
+          result = app.memory.erase(data["id"])
+        elif path.startswith("/api/memory/"):
+          parts = path.split("/")
+          if len(parts) != 5:
+            raise Refused("Invalid memory route")
+          result = app.memory.decide(parts[3], parts[4])
+        elif path == "/api/claims/revise":
+          result = app.memory.revise_claim(
+            data["pid"],
+            data["id"],
+            data["reason"],
+            data.get("confidence"),
+            data.get("supporting"),
+            data.get("contradicting"),
+          )
+        elif path == "/api/claims/retract":
+          result = app.memory.retract_claim(data["pid"], data["id"], data["reason"])
+        elif path == "/api/entities/merge":
+          result = app.memory.merge_entities(data["pid"], data["id"], data["into"])
+        elif path == "/api/entities/distinct":
+          result = app.memory.distinct_entity(data["pid"], data["id"])
         elif path == "/api/evidence/withdraw":
           app.store.withdraw_evidence(data["pid"], data["id"])
           result = {"ok": True}

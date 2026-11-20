@@ -7,6 +7,7 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
+from veos_runtime.memory import Memory
 from veos_runtime.providers import default_config, save_config
 from veos_runtime.server import Application, make_server
 from veos_runtime.store import Store
@@ -76,6 +77,65 @@ def main():
         page.get_by_label("Supporting sources").select_option(eid)
         page.get_by_role("button", name="Record assessment").click()
         page.locator("#claims .card").wait_for()
+        memory = Memory(store)
+        panel = page.locator("#memory")
+        page.get_by_role("button", name="Add memory").click()
+        page.get_by_label("Memory kind").select_option("operating_rule")
+        page.get_by_label("Remember", exact=True).fill(
+          "Draft outreach for my approval; never send it."
+        )
+        page.get_by_role("button", name="Save memory").click()
+        panel.locator(".card .badge.active").wait_for()
+        # An agent's proposal arrives live and takes effect only when accepted.
+        agent = {"task_id": tid, "run_id": None, "agent": True}
+        proposal = memory.remember(
+          "procedural",
+          "retry_lesson",
+          "Deduplicate patent families before counting filings.",
+          pid,
+          **agent,
+        )
+        proposed = panel.locator(".card").filter(has_text="Deduplicate patent families")
+        proposed.locator(".badge.proposed").wait_for()
+        assert memory.context(pid)["procedural"] == []
+        proposed.get_by_role("button", name="Accept", exact=True).click()
+        proposed.locator(".badge.active").wait_for()
+        assert [m["id"] for m in memory.context(pid)["procedural"]] == [proposal["id"]]
+        rule = panel.locator(".card").filter(has_text="Draft outreach")
+        rule.get_by_role("button", name="Revise", exact=True).click()
+        assert page.get_by_label("Memory kind").is_disabled()
+        page.get_by_label("Remember", exact=True).fill(
+          "Draft outreach for my approval; never send or schedule it."
+        )
+        page.get_by_role("button", name="Save memory").click()
+        panel.get_by_text("never send or schedule it").wait_for()
+        assert [m["state"] for m in memory.listing(scope="executive")] == [
+          "superseded",
+          "active",
+        ]
+        known = memory.resolve_entity(pid, "person", "Wei Zhang")
+        memory.resolve_entity(pid, "person", "Wei Zhang")
+        unsettled = panel.locator(".card").filter(has_text="Entity · person")
+        unsettled.get_by_role("button", name="Same as Wei Zhang").click()
+        unsettled.wait_for(state="detached")
+        assert [
+          e["id"] for e in store.snapshot(pid)["entities"] if e["state"] == "active"
+        ] == [known["id"]]
+        claim = store.snapshot(pid)["claims"][0]
+        memory.revise_claim(pid, claim["id"], "First estimate", 70)
+        refuting = store.add_evidence(
+          pid, "https://example.org/contract-terms", "Illustrative contrary source."
+        )
+        memory.revise_claim(
+          pid, claim["id"], "Contract terms contradict it", 40, contradicting=[refuting]
+        )
+        page.locator("#claims").get_by_text(
+          "Confidence 40% · lowered from 70%"
+        ).wait_for()
+        panel.scroll_into_view_if_needed()
+        panel.locator("xpath=..").screenshot(
+          path=str(artifacts / "mission-desk-memory.png")
+        )
         page.locator("#file-upload").set_input_files(
           {
             "name": "source.txt",
@@ -134,6 +194,9 @@ def main():
                 "task creation",
                 "evidence",
                 "linked hypothesis",
+                "memory add, proposal acceptance and revision",
+                "ambiguous entity merge",
+                "lowered claim confidence",
                 "file upload/download",
                 "live events",
                 "pause/resume",

@@ -57,6 +57,30 @@ def main(argv=None):
   )
   provider.add_argument("--model")
   provider.add_argument("--confirm-no-paid-extra-usage", action="store_true")
+  memory = sub.add_parser(
+    "memory", help="Read and rule on executive, project and procedural memory"
+  )
+  memory.add_argument(
+    "action",
+    choices=[
+      "list",
+      "add",
+      "accept",
+      "reject",
+      "retract",
+      "revise",
+      "erase",
+      "history",
+      "brief",
+      "performance",
+    ],
+  )
+  memory.add_argument("id", nargs="?")
+  memory.add_argument("--project-id")
+  memory.add_argument("--scope", choices=["executive", "project", "procedural"])
+  memory.add_argument("--kind")
+  memory.add_argument("--state")
+  memory.add_argument("--statement")
   export = sub.add_parser("export")
   export.add_argument("project_id")
   args = parser.parse_args(argv)
@@ -163,6 +187,36 @@ def main(argv=None):
         print(
           f"{args.name}: {args.action}d. Every task still verifies native subscription sign-in."
         )
+    elif args.command == "memory":
+      from .memory import Memory
+
+      memory = Memory(store)
+      if args.action in {"accept", "reject", "retract", "revise", "erase", "history"}:
+        if not args.id:
+          raise Refused("Give the memory ID")
+      if args.action == "list":
+        result = memory.listing(args.project_id, args.scope, args.state)
+      elif args.action == "add":
+        if not (args.scope and args.kind and args.statement):
+          raise Refused("Give --scope, --kind and --statement")
+        result = memory.remember(args.scope, args.kind, args.statement, args.project_id)
+      elif args.action == "revise":
+        if not args.statement:
+          raise Refused("Give the new wording with --statement")
+        result = memory.revise(args.id, args.statement)
+      elif args.action == "erase":
+        result = memory.erase(args.id)
+      elif args.action == "history":
+        result = memory.history(args.id)
+      elif args.action == "brief":
+        if not args.project_id:
+          raise Refused("Give --project-id")
+        result = memory.brief(args.project_id)
+      elif args.action == "performance":
+        result = memory.performance()
+      else:
+        result = memory.decide(args.id, args.action)
+      print(json.dumps(result, indent=2))
     elif args.command == "export":
       print(json.dumps(store.snapshot(args.project_id), indent=2))
     elif args.command == "status":

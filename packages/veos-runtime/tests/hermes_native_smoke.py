@@ -41,7 +41,43 @@ class Inference(BaseHTTPRequestHandler):
       self.server.release.wait(15)
       return
     returned = [m for m in body.get("messages", []) if m.get("role") == "tool"]
-    if returned:
+    direct = any(n.endswith("_start_control_task") for n in names)
+    if direct and len(returned) < 3:
+      steps = [
+        (
+          "start_control_task",
+          {
+            "task": "Inspect this project's context",
+            "request_key": "hermes-direct-smoke",
+          },
+        ),
+        ("project_context", {}),
+        (
+          "finish_control_task",
+          {
+            "result": "Read the local project",
+            "outcome": "succeeded",
+            "receipt_version": 0,
+          },
+        ),
+      ]
+      name, args = steps[len(returned)]
+      message = {
+        "role": "assistant",
+        "content": None,
+        "tool_calls": [
+          {
+            "id": "direct-" + name,
+            "type": "function",
+            "function": {
+              "name": next(n for n in names if n.endswith("_" + name)),
+              "arguments": json.dumps(args),
+            },
+          }
+        ],
+      }
+      finish = "tool_calls"
+    elif returned:
       assert "Hermes qualification" in json.dumps(returned)
       message = {
         "role": "assistant",
@@ -166,6 +202,41 @@ def main():
       assert outcome.result == "Verified the local project through VeOS.", outcome
       assert len(inference.requests) >= 2
       assert stop(executable, env), "Owned gateway stop not confirmed"
+      # Reuse the real native harness against the public direct-control interface.
+      # Its private MCP process obtains a scoped connection, not the admin token.
+      (store.root / "connection.json").write_text(
+        json.dumps({"url": app.base_url, "token": app.token})
+      )
+      config["mcp_servers"]["veos"] = {
+        "command": sys.executable,
+        "args": [
+          "-m",
+          "veos_runtime",
+          "--state-dir",
+          str(store.root),
+          "control-mcp",
+          "--project-id",
+          pid,
+        ],
+        "env": {"PYTHONPATH": str(Path(__file__).resolve().parents[1] / "src")},
+      }
+      (home / "config.yaml").write_text(json.dumps(config))
+      begin(env)
+      direct = execute(
+        "hermes",
+        argv,
+        "Start a control task, read project_context, then finish the task.",
+        workdir,
+        120,
+        lambda: True,
+        provider_env=env,
+      )
+      assert direct.state == "succeeded", direct
+      tasks = [
+        t for t in store.snapshot(pid)["tasks"] if t["execution_owner"] == "external"
+      ]
+      assert len(tasks) == 1 and tasks[0]["state"] == "succeeded", tasks
+      assert stop(executable, env), "Direct-control gateway stop not confirmed"
       inference.cancel_next = True
       started = time.monotonic()
       begin(env)
@@ -196,6 +267,7 @@ def main():
               "only VeOS tools exposed",
               "tool executes against local project",
               "structured final result",
+              "external Hermes starts, reads and finishes through direct MCP controls",
               "owned gateway stop",
               "cancellation while native model request is in flight",
               "gateway absence independently verified after cancellation",
@@ -211,6 +283,7 @@ def main():
       inference.shutdown()
       inference.server_close()
       app.browser.close()
+      app.control_sessions.close()
 
 
 if __name__ == "__main__":

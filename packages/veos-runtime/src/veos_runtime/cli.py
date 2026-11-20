@@ -38,6 +38,18 @@ def main(argv=None):
   incoming.add_argument(
     "--provider", choices=["codex", "claude", "hermes"], required=True
   )
+  control = sub.add_parser("control-mcp")
+  control.add_argument("--project-id", required=True)
+  config_parser = sub.add_parser("mcp-config")
+  config_parser.add_argument("--project-id", required=True)
+  config_parser.add_argument(
+    "--client", choices=["codex", "claude", "gemini", "hermes"], required=True
+  )
+  config_parser.add_argument(
+    "--mode", choices=["control", "delegate"], default="control"
+  )
+  config_parser.add_argument("--provider", choices=["codex", "claude", "hermes"])
+  sub.add_parser("skill")
   provider = sub.add_parser("provider")
   provider.add_argument("name", choices=PROVIDERS)
   provider.add_argument(
@@ -51,52 +63,28 @@ def main(argv=None):
   try:
     store = Store(args.state_dir)
     config = read_config(store.root)
-    if args.command == "incoming-mcp":
-      import urllib.request
-      from urllib.parse import urlsplit
+    if args.command in {"incoming-mcp", "control-mcp"}:
+      from .portability import serve_connection
 
-      from .harness import serve_stdio
-
-      info = json.loads((store.root / "connection.json").read_text())
-      parsed = urlsplit(info["url"])
-      if (
-        parsed.scheme != "http"
-        or parsed.hostname != "127.0.0.1"
-        or parsed.username
-        or parsed.password
-        or parsed.path
-        or parsed.query
-        or parsed.fragment
-      ):
-        raise Refused("Only the local running VeOS service is supported")
-      body = json.dumps({"pid": args.project_id, "provider": args.provider}).encode()
-      request = urllib.request.Request(
-        info["url"] + "/api/harness/connect",
-        body,
-        {
-          "Authorization": "Bearer " + info["token"],
-          "Content-Type": "application/json",
-        },
-        method="POST",
+      serve_connection(
+        store,
+        args.project_id,
+        "control" if args.command == "control-mcp" else "delegate",
+        getattr(args, "provider", None),
       )
-      with urllib.request.urlopen(request, timeout=10) as response:
-        connection = json.loads(response.read(20000))
-      try:
-        serve_stdio(info["url"], connection["token"])
-      finally:
-        request = urllib.request.Request(
-          info["url"] + "/api/harness/disconnect",
-          b"{}",
-          {
-            "Authorization": "Bearer " + connection["token"],
-            "Content-Type": "application/json",
-          },
-          method="POST",
-        )
-        try:
-          urllib.request.urlopen(request, timeout=5).close()
-        except OSError:
-          pass
+    elif args.command == "mcp-config":
+      from .portability import client_config
+
+      print(
+        client_config(
+          args.client, store.root, args.project_id, args.mode, args.provider
+        ),
+        end="",
+      )
+    elif args.command == "skill":
+      from .mcp import skill_text
+
+      print(skill_text(), end="")
     elif args.command == "init":
       print(
         f"Initialized {store.root}. Providers are disabled until subscription billing is verified."
@@ -202,8 +190,7 @@ def main(argv=None):
       app = Application(store)
       server = make_server(app, args.port)
       worker = Worker(store, app.capabilities, app.base_url)
-      if not args.no_worker:
-        worker.start()
+      worker.start(run_worker=not args.no_worker)
       connection = store.root / "connection.json"
       connection.write_text(json.dumps({"url": app.base_url, "token": app.token}))
       os.chmod(connection, 0o600)
@@ -221,6 +208,7 @@ def main(argv=None):
         server.serve_forever(poll_interval=0.2)
       finally:
         worker.close()
+        app.control_sessions.close()
         app.browser.close()
         server.server_close()
         connection.unlink(missing_ok=True)

@@ -132,6 +132,7 @@ class Store:
       db.execute("BEGIN IMMEDIATE")
       for table, columns in {
         "tasks": {
+          "execution_owner": "TEXT NOT NULL DEFAULT 'worker'",
           "action_version": "INTEGER NOT NULL DEFAULT 0",
           "seen_action_version": "INTEGER NOT NULL DEFAULT 0",
           "continuation": "INTEGER NOT NULL DEFAULT 0",
@@ -146,7 +147,7 @@ class Store:
         for column, definition in columns.items():
           if column not in present:
             db.execute(f"ALTER TABLE {table} ADD COLUMN {column} {definition}")
-      db.execute("PRAGMA user_version=2")
+      db.execute("PRAGMA user_version=3")
     os.chmod(self.root / "state.sqlite3", 0o600)
 
   @contextmanager
@@ -238,10 +239,17 @@ class Store:
     not_before=None,
     parent_id=None,
     proposed=False,
+    execution_owner="worker",
   ):
     instruction = bounded(instruction, "instruction")
     request_key = bounded(request_key, "request_key", 160)
-    if provider not in {"codex", "claude", "hermes", "antigravity"}:
+    if execution_owner not in {"worker", "external"} or (
+      execution_owner == "external" and provider != "external"
+    ):
+      raise Refused("Invalid task execution owner")
+    if provider not in {"codex", "claude", "hermes", "antigravity"} and not (
+      execution_owner == "external" and provider == "external"
+    ):
       raise Refused("Unsupported subscription provider")
     integer(max_attempts, "max_attempts", 1, 5)
     deps = dependencies or []
@@ -268,6 +276,8 @@ class Store:
       "parent_id": parent_id,
       "proposed": proposed,
     }
+    if execution_owner == "external":
+      body["execution_owner"] = execution_owner
     tid, now = identity(), self.clock()
     with self.db() as db:
       db.execute("BEGIN IMMEDIATE")
@@ -295,7 +305,7 @@ class Store:
       if count >= 100:
         raise Refused("Project already has 100 pending tasks")
       db.execute(
-        "INSERT INTO tasks(id,project_id,request_key,request_hash,instruction,provider,state,max_attempts,not_before,parent_id,created,updated) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",
+        "INSERT INTO tasks(id,project_id,request_key,request_hash,instruction,provider,state,max_attempts,not_before,parent_id,created,updated,execution_owner) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)",
         (
           tid,
           pid,
@@ -309,6 +319,7 @@ class Store:
           parent_id,
           now,
           now,
+          execution_owner,
         ),
       )
       db.executemany(
@@ -326,12 +337,14 @@ class Store:
         raise Refused("Task not found")
       return dict(row)
 
-  def task_command(self, tid, command):
+  def task_command(self, tid, command, expected_lease=None):
     with self.db() as db:
       db.execute("BEGIN IMMEDIATE")
       row = db.execute("SELECT * FROM tasks WHERE id=?", (tid,)).fetchone()
       if not row:
         raise Refused("Task not found")
+      if expected_lease is not None and row["lease"] != expected_lease:
+        raise Refused("Task is no longer owned by this connection")
       project = self.require_project(db, row["project_id"])
       if command != "cancel" and project["state"] == "closed":
         raise Refused("Project is closed")
@@ -376,6 +389,10 @@ class Store:
       ).fetchall()
       for row in rows:
         db.execute(
+          "UPDATE actions SET state='cancelled' WHERE task_id=? AND state='pending' AND EXISTS(SELECT 1 FROM tasks WHERE id=? AND execution_owner='external')",
+          (row["id"], row["id"]),
+        )
+        db.execute(
           "UPDATE tasks SET state='unknown',reason='interrupted_process',lease=NULL,updated=? WHERE id=?",
           (self.clock(), row["id"]),
         )
@@ -399,7 +416,7 @@ class Store:
         dict(x)
         for x in db.execute(
           """SELECT t.* FROM tasks t JOIN projects p ON p.id=t.project_id
-              WHERE t.state='queued' AND t.not_before<=? AND p.state='active'
+              WHERE t.state='queued' AND t.execution_owner='worker' AND t.not_before<=? AND p.state='active'
               AND p.runs_used<p.max_runs AND (p.deadline IS NULL OR p.deadline>?)
               AND (t.attempts<t.max_attempts OR t.continuation=1)
               AND NOT EXISTS(SELECT 1 FROM dependencies d JOIN tasks x ON x.id=d.dependency_id WHERE d.task_id=t.id AND x.state!='succeeded')
@@ -419,7 +436,7 @@ class Store:
         self.event(db, row[0], "task.blocked", {"id": tid, "reason": reason})
     self.notify()
 
-  def claim(self, tid):
+  def claim(self, tid, execution_owner="worker"):
     lease, now = identity(), self.clock()
     with self.db() as db:
       db.execute("BEGIN IMMEDIATE")
@@ -429,6 +446,7 @@ class Store:
       ).fetchone()
       if (
         not row
+        or row["execution_owner"] != execution_owner
         or row["state"] != "queued"
         or row["project_state"] != "active"
         or row["not_before"] > now
@@ -468,7 +486,7 @@ class Store:
         is not None
       )
 
-  def finish(self, tid, lease, state, result=None, reason=None):
+  def finish(self, tid, lease, state, result=None, reason=None, receipt_version=None):
     if state not in {
       "succeeded",
       "failed",
@@ -488,6 +506,20 @@ class Store:
       if not row:
         return False
       project = self.require_project(db, row["project_id"])
+      external = row["execution_owner"] == "external"
+      if external and state == "succeeded":
+        if type(receipt_version) is not int or receipt_version != row["action_version"]:
+          raise Refused("Read the current control task receipts before finishing")
+        if db.execute(
+          "SELECT 1 FROM actions WHERE task_id=? AND state IN ('pending','executing')",
+          (tid,),
+        ).fetchone():
+          raise Refused("Wait for action review and receipts before finishing")
+      elif external:
+        db.execute(
+          "UPDATE actions SET state='cancelled' WHERE task_id=? AND state='pending'",
+          (tid,),
+        )
       turn_state, turn_reason = state, reason
       continuation = 0
       actions = {
@@ -498,7 +530,7 @@ class Store:
           state, reason = "unknown", "external_outcome_unknown"
         elif actions & {"pending", "executing"}:
           state, reason = "waiting_approval", "awaiting_action_receipt"
-        elif row["action_version"] > row["seen_action_version"]:
+        elif not external and row["action_version"] > row["seen_action_version"]:
           state, reason, continuation = (
             "queued",
             "action_receipt_available",

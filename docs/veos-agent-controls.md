@@ -86,6 +86,16 @@ For live acceptance, an operator provisions that dedicated key, verifies the dev
 
 `Stop speaking` sends `response.cancel` and `output_audio_buffer.clear`. Disconnect releases media and closes the scoped connection, while already-admitted work remains visible. Cancelling a task or pausing the project is a distinct action, and it cannot undo external actions already submitted.
 
+## Harness portability
+
+The shared controls now have two local entry points. `incoming-mcp` delegates tasks to a configured native worker and keeps the existing three-tool voice contract. `control-mcp` lets an external reasoning harness own a task and call the same application tools directly. It adds start/status/finish/cancel tools, project-bound connection lifetime and explicit action-receipt acknowledgement; it does not copy the browser/desktop/integration controllers or launch a second reasoning agent.
+
+External tasks remain in the existing journal with `execution_owner=external`. Worker discovery and atomic claims exclude them, even after an explicit retry or new action receipt. Connection loss cancels pending approvals and marks unfinished work unknown. Cancellation and completion check the owning lease; stale connections cannot cancel or complete a later retry. A successful completion requires current receipts and no unresolved action. Inputs delivered to an application still require observation before claiming the user's business objective succeeded.
+
+One packaged `veos-app-control/SKILL.md` supplies the workflow to managed Hermes/Codex/Claude prompts, an MCP resource and `veos skill`. `veos mcp-config --client codex|claude|gemini|hermes --project-id ...` emits a configuration fragment without editing client settings or exposing a credential. Configuration and stdio protocol qualification are distinct from live model qualification. Gemini can use the external MCP path; it is not a managed worker. Client-side account billing and any tools outside VeOS remain the external client's responsibility. Setup and lifecycle details are in the package README's direct-controls section.
+
+This reuse does not extend application coverage beyond the controllers already qualified: Linux Wayland commands and accessible widgets, granted browser DOM controls, local document extraction, and explicitly configured Ve APIs. Custom canvases, inaccessible native widgets and macOS native controls need additional adapters. Provider fallback, cloud relay and universal pixel clicking are not added.
+
 ## State placement
 
 | Local | Cloud/provider |

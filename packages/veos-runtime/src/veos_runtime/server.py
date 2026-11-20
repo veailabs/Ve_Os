@@ -11,6 +11,7 @@ from urllib.parse import parse_qs, urlsplit
 
 from .artifacts import Artifacts
 from .browser import BrowserActions, LocalBrowser
+from .control_session import ControlSessions
 from .controls import SETTINGS
 from .desktop_actions import DesktopActions
 from .harness import Harness
@@ -35,6 +36,7 @@ class Application:
     self.harness = Harness(store)
     self.voice = Voice()
     self.artifacts = Artifacts(store)
+    self.control_sessions = ControlSessions(store, self.call_tool)
     self.base_url = ""
 
   def authorize(self, bearer, task_only=False):
@@ -187,7 +189,7 @@ def make_server(app, port=8764):
       except (BrokenPipeError, ConnectionResetError):
         pass
 
-    def guard(self, task_only=False, harness_only=False):
+    def guard(self, task_only=False, harness_only=False, control_only=False):
       if self.headers.get("Host") != urlsplit(app.base_url).netloc:
         raise PermissionError("Invalid host")
       if self.headers.get("Origin") not in {None, app.base_url}:
@@ -197,6 +199,8 @@ def make_server(app, port=8764):
         raise PermissionError("Sign in from the VeOS launcher")
       if harness_only:
         return app.harness.authorize(auth[7:])
+      if control_only:
+        return app.control_sessions.authorize(auth[7:])
       cap = app.authorize(auth[7:], task_only)
       if not task_only and not cap.get("admin"):
         raise PermissionError("Only the user may manage the runtime")
@@ -297,10 +301,22 @@ def make_server(app, port=8764):
         cap = self.guard(
           task_only=path == "/api/tools",
           harness_only=path in {"/api/harness/tools", "/api/harness/disconnect"},
+          control_only=path in {"/api/control/tools", "/api/control/disconnect"},
         )
         data = self.body()
         if path == "/api/tools":
           result = app.call_tool(cap, data.get("name"), data.get("arguments", {}))
+        elif path == "/api/control/connect":
+          if set(data) != {"pid"}:
+            raise Refused("Choose one project for the control connection")
+          result = app.control_sessions.connect(data["pid"])
+        elif path == "/api/control/tools":
+          result = app.control_sessions.call(
+            cap, data.get("name"), data.get("arguments", {})
+          )
+        elif path == "/api/control/disconnect":
+          app.control_sessions.disconnect(cap)
+          result = {"disconnected": True, "pending_actions_cancelled": True}
         elif path == "/api/harness/connect":
           result = app.harness.connect(data["pid"], data["provider"])
         elif path == "/api/harness/tools":

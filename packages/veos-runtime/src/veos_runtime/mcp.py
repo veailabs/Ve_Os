@@ -3,6 +3,7 @@ import os
 import sys
 import urllib.error
 import urllib.request
+from pathlib import Path
 
 
 def tool(name, description, properties, required):
@@ -135,7 +136,24 @@ TOOLS = [
 ]
 
 
-def serve(url, token):
+SKILL_URI = "veos://skills/application-control"
+INSTRUCTIONS = (
+  "Use VeOS for project-scoped application work. Discover available_tools and read "
+  "veos://skills/application-control for the control workflow. If start_control_task "
+  "is available, start a task before using controls and inspect control_task_status "
+  "before finishing. Pending approval is not execution; verify resulting state. "
+  "The runtime enforces project grants and action review."
+)
+
+
+def skill_text():
+  return (
+    Path(__file__).with_name("skills") / "veos-app-control" / "SKILL.md"
+  ).read_text()
+
+
+def serve(url, token, tools=None, endpoint="/api/tools"):
+  tools = TOOLS if tools is None else tools
   for line in sys.stdin:
     request = None
     try:
@@ -148,17 +166,37 @@ def serve(url, token):
       if method == "initialize":
         result = {
           "protocolVersion": "2025-03-26",
-          "capabilities": {"tools": {}},
+          "capabilities": {"tools": {}, "resources": {}},
           "serverInfo": {"name": "veos", "version": "0.3.0"},
+          "instructions": INSTRUCTIONS,
         }
       elif method == "ping":
         result = {}
       elif method == "tools/list":
-        result = {"tools": TOOLS}
+        result = {"tools": tools}
+      elif method == "resources/list":
+        result = {
+          "resources": [
+            {
+              "uri": SKILL_URI,
+              "name": "veos-app-control",
+              "description": "VeOS application-control skill",
+              "mimeType": "text/markdown",
+            }
+          ]
+        }
+      elif method == "resources/read":
+        if request.get("params", {}).get("uri") != SKILL_URI:
+          raise ValueError("Unknown resource")
+        result = {
+          "contents": [
+            {"uri": SKILL_URI, "mimeType": "text/markdown", "text": skill_text()}
+          ]
+        }
       elif method == "tools/call":
         body = json.dumps(request.get("params", {})).encode()
         req = urllib.request.Request(
-          url + "/api/tools",
+          url + endpoint,
           body,
           {
             "Authorization": "Bearer " + token,
@@ -171,6 +209,9 @@ def serve(url, token):
           if len(data) > 1_000_000:
             raise ValueError("Result too large")
           result = {"content": [{"type": "text", "text": data.decode()}]}
+          content = json.loads(data)
+          if isinstance(content, dict):
+            result["structuredContent"] = content
       else:
         print(
           json.dumps(

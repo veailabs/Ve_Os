@@ -3,10 +3,6 @@ name: VeOS runtime
 on:
   pull_request:
     branches: [master]
-    paths:
-      - 'packages/veos-runtime/**'
-      - '.github/workflows/veos-runtime.yml'
-      - 'docs/veos-runtime.md'
   workflow_dispatch:
 
 permissions:

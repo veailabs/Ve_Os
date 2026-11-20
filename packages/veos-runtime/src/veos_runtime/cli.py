@@ -31,6 +31,9 @@ def main(argv=None):
   sub.add_parser("open")
   sub.add_parser("status")
   sub.add_parser("install-desktop")
+  incoming = sub.add_parser("incoming-mcp")
+  incoming.add_argument("--project-id", required=True)
+  incoming.add_argument("--provider", choices=["codex", "claude"], required=True)
   provider = sub.add_parser("provider")
   provider.add_argument("name", choices=PROVIDERS)
   provider.add_argument("action", choices=["check", "enable", "disable"])
@@ -41,7 +44,53 @@ def main(argv=None):
   try:
     store = Store(args.state_dir)
     config = read_config(store.root)
-    if args.command == "init":
+    if args.command == "incoming-mcp":
+      import urllib.request
+      from urllib.parse import urlsplit
+
+      from .harness import serve_stdio
+
+      info = json.loads((store.root / "connection.json").read_text())
+      parsed = urlsplit(info["url"])
+      if (
+        parsed.scheme != "http"
+        or parsed.hostname != "127.0.0.1"
+        or parsed.username
+        or parsed.password
+        or parsed.path
+        or parsed.query
+        or parsed.fragment
+      ):
+        raise Refused("Only the local running VeOS service is supported")
+      body = json.dumps({"pid": args.project_id, "provider": args.provider}).encode()
+      request = urllib.request.Request(
+        info["url"] + "/api/harness/connect",
+        body,
+        {
+          "Authorization": "Bearer " + info["token"],
+          "Content-Type": "application/json",
+        },
+        method="POST",
+      )
+      with urllib.request.urlopen(request, timeout=10) as response:
+        connection = json.loads(response.read(20000))
+      try:
+        serve_stdio(info["url"], connection["token"])
+      finally:
+        request = urllib.request.Request(
+          info["url"] + "/api/harness/disconnect",
+          b"{}",
+          {
+            "Authorization": "Bearer " + connection["token"],
+            "Content-Type": "application/json",
+          },
+          method="POST",
+        )
+        try:
+          urllib.request.urlopen(request, timeout=5).close()
+        except OSError:
+          pass
+    elif args.command == "init":
       print(
         f"Initialized {store.root}. Providers are disabled until subscription billing is verified."
       )

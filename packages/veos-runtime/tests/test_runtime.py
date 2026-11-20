@@ -541,7 +541,7 @@ class IntegrationTests(IntegrationFixture):
     )
 
 
-class HTTPTests(Fixture):
+class HTTPFixture(Fixture):
   def setUp(self):
     super().setUp()
     self.app = Application(self.store, "test-admin-token")
@@ -574,6 +574,8 @@ class HTTPTests(Fixture):
     self.app.capabilities["tokens"]["task-token"] = cap
     return cap
 
+
+class HTTPTests(HTTPFixture):
   def test_auth_origin_host_and_static_csp(self):
     for kwargs in [
       {"token": "bad"},

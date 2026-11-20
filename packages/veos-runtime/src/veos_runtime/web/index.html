@@ -6,6 +6,7 @@
     <title>VeOS · Mission Desk</title>
     <link rel="stylesheet" href="/style.css" />
     <script src="/app.js" defer></script>
+    <script src="/voice.js" defer></script>
   </head>
   <body>
     <aside class="sidebar">
@@ -27,7 +28,7 @@
     <main>
       <header>
         <div class="eyebrow">WORK THAT CARRIES FORWARD</div>
-        <div class="account">Your subscriptions · No API fallback</div>
+        <div class="account">Tasks use your subscriptions</div>
       </header>
       <div id="message" role="status" hidden></div>
       <section id="empty">
@@ -53,6 +54,14 @@
           </div>
         </div>
         <p id="objective"></p>
+        <section class="panel" id="voice-panel">
+          <div class="section-title"><h2>Talk to your local agent</h2><span id="voice-status" role="status">Checking voice availability…</span></div>
+          <p class="hint">Voice uses a separately configured API connection. Your local agent carries out the tasks. Starting voice does not enable API billing for your agent.</p>
+          <label>Agent for voice tasks<select id="voice-provider"><option value="codex">Codex · ChatGPT</option><option value="claude">Claude Code · Claude</option></select></label>
+          <div class="actions"><button id="voice-start" disabled>Start API voice</button><button id="voice-stop-speaking" disabled>Stop speaking</button><button id="voice-disconnect" disabled>Disconnect voice</button><button id="voice-cancel-task" disabled>Cancel voice task</button></div>
+          <details><summary>Conversation on this page</summary><div id="voice-transcript"></div></details>
+          <audio id="voice-output" controls hidden></audio>
+        </section>
         <div class="metrics">
           <div><strong id="task-count">0</strong><span>Tasks</span></div>
           <div>
@@ -93,13 +102,20 @@
           </div>
           <div class="context-column">
             <section class="panel">
+              <div class="section-title"><h2>Desktop & settings</h2><button id="take-control">Take control</button></div>
+              <p class="hint">Choose what this project can access. Take control pauses the project; actions already submitted may still finish.</p>
+              <label>Customize<select id="settings-area" aria-label="Customization area"></select></label>
+              <button id="open-settings">Open settings</button>
+              <details><summary>Application and device access</summary><div id="desktop-capabilities"></div></details>
+            </section>
+            <section class="panel">
               <div class="section-title"><h2>Project files</h2></div>
               <label
                 >Add a file (up to 5 MB)<input id="file-upload" type="file"
               /></label>
               <p class="hint">
                 Original files stay on this computer. Text files can be read by
-                your agent; PDF and image interpretation is not connected yet.
+                your agent. Local PDF/OCR reading requires the document capability and its installed tools.
               </p>
               <div id="files"></div>
             </section>

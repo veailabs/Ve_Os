@@ -225,7 +225,7 @@ def commands(provider, executable, workdir, session_dir, model=None):
       "--setting-sources",
       "",
       "--allowedTools",
-      "Read,Glob,Grep,WebSearch,mcp__veos__project_context,mcp__veos__available_tools,mcp__veos__list_files,mcp__veos__read_file,mcp__veos__write_report,mcp__veos__search_evidence,mcp__veos__get_evidence,mcp__veos__record_evidence,mcp__veos__record_claim,mcp__veos__propose_task,mcp__veos__ve_call,mcp__veos__browser",
+      "Read,Glob,Grep,WebSearch,mcp__veos__project_context,mcp__veos__available_tools,mcp__veos__list_files,mcp__veos__read_file,mcp__veos__write_report,mcp__veos__search_evidence,mcp__veos__get_evidence,mcp__veos__record_evidence,mcp__veos__record_claim,mcp__veos__propose_task,mcp__veos__ve_call,mcp__veos__browser,mcp__veos__desktop",
       *common,
     ]
   raise Refused(

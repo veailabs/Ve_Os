@@ -11,10 +11,14 @@ from urllib.parse import parse_qs, urlsplit
 
 from .artifacts import Artifacts
 from .browser import BrowserActions, LocalBrowser
+from .controls import SETTINGS
+from .desktop_actions import DesktopActions
+from .harness import Harness
 from .integrations import IntegrationActions
 from .mcp import TOOLS
 from .providers import PROVIDERS, probe, read_config
 from .store import Refused, encoded
+from .voice import Voice
 
 WEB = Path(__file__).with_name("web")
 
@@ -27,6 +31,9 @@ class Application:
     self.integrations = IntegrationActions(store)
     self.browser = LocalBrowser(store)
     self.browser_actions = BrowserActions(store, self.browser)
+    self.desktop_actions = DesktopActions(store)
+    self.harness = Harness(store)
+    self.voice = Voice()
     self.artifacts = Artifacts(store)
     self.base_url = ""
 
@@ -81,8 +88,17 @@ class Application:
       return self.browser_actions.call(
         pid, tid, args["operation"], args.get("args", {})
       )
+    if name == "desktop":
+      return self.desktop_actions.call(
+        pid, tid, args["operation"], args.get("args", {}), args.get("request_key")
+      )
     if name == "available_tools":
-      result = {"browser": self.browser.status(pid), "ve": []}
+      result = {
+        "browser": self.browser.status(pid),
+        "desktop": self.desktop_actions.status(pid),
+        "settings_areas": [*SETTINGS, "displays", "startup", "notifications"],
+        "ve": [],
+      }
       config = read_config(self.store.root)["ve"]
       if config["endpoint"]:
         try:
@@ -163,7 +179,7 @@ def make_server(app, port=8764):
       self.send_header("Referrer-Policy", "no-referrer")
       self.send_header(
         "Content-Security-Policy",
-        "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'none'; form-action 'self'",
+        "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self' https://api.openai.com; media-src 'self' blob:; img-src 'self' data:; frame-ancestors 'none'; base-uri 'none'; form-action 'self'",
       )
       self.end_headers()
       try:
@@ -171,7 +187,7 @@ def make_server(app, port=8764):
       except (BrokenPipeError, ConnectionResetError):
         pass
 
-    def guard(self, task_only=False):
+    def guard(self, task_only=False, harness_only=False):
       if self.headers.get("Host") != urlsplit(app.base_url).netloc:
         raise PermissionError("Invalid host")
       if self.headers.get("Origin") not in {None, app.base_url}:
@@ -179,6 +195,8 @@ def make_server(app, port=8764):
       auth = self.headers.get("Authorization", "")
       if not auth.startswith("Bearer "):
         raise PermissionError("Sign in from the VeOS launcher")
+      if harness_only:
+        return app.harness.authorize(auth[7:])
       cap = app.authorize(auth[7:], task_only)
       if not task_only and not cap.get("admin"):
         raise PermissionError("Only the user may manage the runtime")
@@ -199,13 +217,14 @@ def make_server(app, port=8764):
     def do_GET(self):
       try:
         path = urlsplit(self.path)
-        if path.path in {"/", "/app.js", "/style.css"}:
+        if path.path in {"/", "/app.js", "/voice.js", "/style.css"}:
           if self.headers.get("Host") != urlsplit(app.base_url).netloc:
             raise PermissionError("Invalid host")
           filename = "index.html" if path.path == "/" else path.path[1:]
           mime = {
             "index.html": "text/html",
             "app.js": "text/javascript",
+            "voice.js": "text/javascript",
             "style.css": "text/css",
           }[filename]
           self.send(200, (WEB / filename).read_bytes(), mime + "; charset=utf-8")
@@ -232,6 +251,18 @@ def make_server(app, port=8764):
           )
         elif path.path == "/api/browser":
           self.send(200, app.browser.status(query.get("project", [None])[0]))
+        elif path.path == "/api/desktop":
+          self.send(
+            200,
+            {
+              "capabilities": app.desktop_actions.status(
+                query.get("project", [None])[0]
+              ),
+              "settings_areas": [*SETTINGS, "displays", "startup", "notifications"],
+            },
+          )
+        elif path.path == "/api/voice/status":
+          self.send(200, app.voice.status())
         elif path.path == "/api/providers":
           config = read_config(app.store.root)
           self.send(
@@ -263,10 +294,30 @@ def make_server(app, port=8764):
     def do_POST(self):
       try:
         path = urlsplit(self.path).path
-        cap = self.guard(task_only=path == "/api/tools")
+        cap = self.guard(
+          task_only=path == "/api/tools",
+          harness_only=path in {"/api/harness/tools", "/api/harness/disconnect"},
+        )
         data = self.body()
         if path == "/api/tools":
           result = app.call_tool(cap, data.get("name"), data.get("arguments", {}))
+        elif path == "/api/harness/connect":
+          result = app.harness.connect(data["pid"], data["provider"])
+        elif path == "/api/harness/tools":
+          result = app.harness.call(cap, data.get("name"), data.get("arguments", {}))
+        elif path == "/api/harness/disconnect":
+          app.harness.disconnect(self.headers["Authorization"][7:])
+          result = {"disconnected": True, "tasks_cancelled": False}
+        elif path == "/api/voice/start":
+          connection = app.harness.connect(data["pid"], data["provider"])
+          try:
+            result = {**app.voice.mint(), "harness": connection}
+            with app.store.db() as db:
+              if app.store.require_project(db, data["pid"])["state"] != "active":
+                raise Refused("Project is no longer active")
+          except Exception:
+            app.harness.disconnect(connection["token"])
+            raise
         elif path == "/api/projects":
           result = {"id": app.store.create_project(**data)}
         elif path == "/api/tasks":
@@ -303,11 +354,25 @@ def make_server(app, port=8764):
           if not row:
             raise Refused("Action not found")
           actions = (
-            app.browser_actions if row[0].startswith("browser.") else app.integrations
+            app.browser_actions
+            if row[0].startswith("browser.")
+            else app.desktop_actions
+            if row[0].startswith("desktop.")
+            else app.integrations
           )
           result = actions.decide(aid, data["approve"])
         elif path == "/api/browser/grant":
           result = app.browser.grant(data["pid"], data["url"], data.get("allow", True))
+        elif path == "/api/desktop/grant":
+          result = app.desktop_actions.grant(
+            data["pid"], data["operation"], data["allow"]
+          )
+        elif path == "/api/desktop/settings":
+          with app.store.db() as db:
+            app.store.require_project(db, data["pid"])
+          result = app.desktop_actions.controls.invoke(
+            data["pid"], "open_settings", {"area": data["area"]}
+          )
         elif path == "/api/browser/open":
           result = app.browser.invoke(data["pid"], "open", {"url": data["url"]})
         elif path == "/api/providers/check":

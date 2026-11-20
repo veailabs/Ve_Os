@@ -16,6 +16,9 @@ let state = {
 };
 let selected = sessionStorage.getItem("veos-project");
 let revision = 0;
+let voiceClient = null;
+let voiceTask = null;
+let voiceAvailable = false;
 const names = {
   codex: "Codex · ChatGPT",
   claude: "Claude Code · Claude",
@@ -97,6 +100,7 @@ function render() {
     ),
   );
   const p = project();
+  if (voiceClient?.projectId && (voiceClient.projectId !== selected || p?.state !== "active")) voiceClient.stop();
   $("empty").hidden = !!p;
   $("project").hidden = !p;
   if (!p) return;
@@ -322,7 +326,40 @@ function render() {
         ]),
   );
   browserStatus().catch((error) => message(error.message));
+  desktopStatus().catch((error) => message(error.message));
 }
+async function desktopStatus() {
+  const pid = selected;
+  if (!pid) return;
+  const result = await api(`/api/desktop?project=${encodeURIComponent(pid)}`);
+  if (pid !== selected) return;
+  const previous = $("settings-area").value;
+  $("settings-area").replaceChildren(...result.settings_areas.map(area => {
+    const option = node("option", area.replaceAll("_", " "));
+    option.value = area;
+    return option;
+  }));
+  if (result.settings_areas.includes(previous)) $("settings-area").value = previous;
+  $("open-settings").disabled = !result.capabilities.find(c => c.operation === "open_settings")?.available;
+  $("take-control").disabled = project()?.state !== "active";
+  $("desktop-capabilities").replaceChildren(...result.capabilities.map(cap => {
+    const row = node("div", undefined, "card");
+    row.append(node("strong", cap.operation.replaceAll("_", " ")),
+      blank(cap.reason || (cap.read_only ? "Read access" : "Changes require action review")),
+      button(cap.allowed ? "Remove access" : "Allow access", () => api("/api/desktop/grant", {
+        pid, operation: cap.operation, allow: !cap.allowed
+      })));
+    return row;
+  }));
+}
+$("take-control").onclick = () => perform(async () => {
+  await api(`/api/projects/${selected}`, {state: "paused"});
+  message("Project paused. You have control. Inspect any action already submitted before resuming.");
+});
+$("open-settings").onclick = () => perform(async () => {
+  await api("/api/desktop/settings", {pid: selected, area: $("settings-area").value});
+  message("Settings opened on this computer. Opening the panel does not change its settings.");
+});
 async function browserStatus() {
   const pid = selected;
   if (!pid) return;
@@ -426,6 +463,38 @@ async function providers() {
     }),
   );
 }
+async function voiceStatus() {
+  const result = await api("/api/voice/status");
+  voiceAvailable = result.available;
+  $("voice-start").disabled = !result.available;
+  $("voice-status").textContent = result.available ? "API voice ready when you choose to connect" : result.reason;
+}
+$("voice-start").onclick = () => perform(async () => {
+  if (!voiceClient) voiceClient = window.createVeOSVoice({
+    api,
+    audioOutput: $("voice-output"),
+    onStatus: (text, active) => {
+      $("voice-status").textContent = text;
+      $("voice-start").disabled = active || !voiceAvailable;
+      $("voice-disconnect").disabled = !active;
+      $("voice-stop-speaking").disabled = !active;
+    },
+    onTask: id => { voiceTask = id; $("voice-cancel-task").disabled = false; },
+    onTranscript: (speaker, text) => {
+      const transcript = $("voice-transcript");
+      transcript.append(node("p", `${speaker}: ${text.slice(0,8000)}`));
+      while (transcript.children.length > 30) transcript.firstChild.remove();
+    },
+  });
+  await voiceClient.start(selected, $("voice-provider").value);
+});
+$("voice-disconnect").onclick = () => voiceClient?.stop();
+$("voice-stop-speaking").onclick = () => voiceClient?.stopSpeaking();
+$("voice-cancel-task").onclick = () => perform(async () => {
+  if (voiceTask) await api(`/api/tasks/${voiceTask}/cancel`,{});
+  $("voice-cancel-task").disabled = true;
+});
+window.addEventListener("pagehide", () => voiceClient?.stop());
 for (const b of document.querySelectorAll("[data-dismiss]"))
   b.onclick = () => b.closest("dialog").close();
 $("new-project").onclick = $("first-project").onclick = () =>
@@ -564,5 +633,6 @@ else
   perform(async () => {
     await refresh();
     await providers();
+    await voiceStatus();
     watch();
   });

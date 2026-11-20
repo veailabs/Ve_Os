@@ -5,7 +5,9 @@ set -euo pipefail
 source "$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)/base-test.sh"
 
 test_tmp=$(mktemp -d)
-trap 'rm -rf "$test_tmp"' EXIT
+mkfifo "$test_tmp/herdr-completion"
+exec {herdr_completion}<>"$test_tmp/herdr-completion"
+trap 'exec {herdr_completion}>&-; rm -rf "$test_tmp"' EXIT
 home="$test_tmp/home"
 state="$home/.local/state/omarchy/current"
 themes="$home/.config/omarchy/themes"
@@ -34,8 +36,13 @@ chmod +x "$commands/noop"
 # a no-op except the compositor reload, whose timing it checks.
 for command in "$ROOT"/bin/omarchy-restart-* "$ROOT"/bin/omarchy-theme-set-* omarchy-hook omarchy-theme-bg-cache; do
   command=${command##*/}
-  [[ $command == omarchy-restart-hyprctl ]] || ln -sf noop "$commands/$command"
+  [[ $command == omarchy-restart-hyprctl || $command == omarchy-theme-set-herdr-machines ]] || ln -sf noop "$commands/$command"
 done
+cat >"$commands/omarchy-theme-set-herdr-machines" <<'STUB'
+#!/bin/bash
+printf 'done\n' >&"$TEST_HERDR_COMPLETION_FD"
+STUB
+chmod +x "$commands/omarchy-theme-set-herdr-machines"
 cat >"$commands/omarchy-restart-hyprctl" <<'STUB'
 #!/bin/bash
 echo "hypr-reload" >>"$TEST_LOG"
@@ -112,8 +119,12 @@ chmod +x "$commands/omarchy-restart-hyprctl" "$commands/hyprctl" "$commands/omar
 # where they would still be writing into $test_tmp as it is removed.
 set_theme() {
   : >"$log"
-  HOME="$home" OMARCHY_PATH="$ROOT" PATH="$commands:$ROOT/bin:$PATH" XDG_RUNTIME_DIR="$test_tmp" TEST_LOG="$log" OMARCHY_THEME_WAIT=1 \
+  HOME="$home" OMARCHY_PATH="$ROOT" PATH="$commands:$ROOT/bin:$PATH" XDG_RUNTIME_DIR="$test_tmp" TEST_LOG="$log" TEST_HERDR_COMPLETION_FD="$herdr_completion" OMARCHY_THEME_WAIT=1 \
     /bin/bash "$ROOT/bin/omarchy-theme-set" "$1" </dev/null >"$test_tmp/stdout" 2>"$test_tmp/stderr" || fail "theme selection completes" "$(cat "$test_tmp/stderr")"
+  if [[ ${OMARCHY_THEME_HEADLESS:-} != "1" && ${OMARCHY_THEME_OFFLINE:-} != "1" ]]; then
+    read -r -t 10 -u "$herdr_completion" completion || fail "the detached Herdr fixture worker completes before cleanup"
+    [[ $completion == done ]] || fail "the detached Herdr fixture worker acknowledges completion"
+  fi
 }
 
 # Once a theme switch has put up its cover, the shell sequences the rest:

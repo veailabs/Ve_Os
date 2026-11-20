@@ -137,6 +137,19 @@ def main():
         ),
         "The installed Foot application did not open",
       )
+      # Foot first maps with its initial title; its interactive shell then sets
+      # the prompt title. Observe a settled target before asking for approval.
+      binding = None
+      stable_since = 0
+
+      def focus_target_ready():
+        nonlocal binding, stable_since
+        current = controls.binding("focus_window", {"address": window["address"]})
+        if current != binding:
+          binding, stable_since = current, time.monotonic()
+        return time.monotonic() - stable_since >= 1
+
+      wait_for(focus_target_ready, "Launched window identity did not settle")
       result = act("focus_window", {"address": window["address"]})
       assert result["business_outcome_confirmed"] is True
       assert (

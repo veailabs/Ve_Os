@@ -21,6 +21,7 @@ import math
 import re
 import unicodedata
 
+from .goals import cancel_plans
 from .providers import read_config
 from .store import Refused, bounded, digest, encoded, identity, integer, shaped
 
@@ -1221,6 +1222,8 @@ class Memory:
         ),
       )
       if old:
+        if kind == "goal":
+          cancel_plans(self.store, db, goal_id=revises)
         db.execute(
           "UPDATE records SET state='superseded',updated=? WHERE id=?", (now, revises)
         )
@@ -1264,6 +1267,8 @@ class Memory:
         "UPDATE records SET state=?,updated=? WHERE id=?",
         (state, self.store.clock(), rid),
       )
+      if row["type"] == "goal" and state == "retracted":
+        cancel_plans(self.store, db, goal_id=rid)
       self.store.event(db, pid, row["type"] + "." + state, {"id": rid})
     self.store.notify()
     return {"id": rid, "state": state}

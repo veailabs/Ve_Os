@@ -2,7 +2,7 @@ name: VeOS runtime
 
 on:
   pull_request:
-    branches: [master, ve/feat/mission-runtime, ve/feat/agent-controls, ve/feat/harness-portability, ve/feat/project-memory]
+    branches: [master, ve/feat/mission-runtime, ve/feat/agent-controls, ve/feat/harness-portability, ve/feat/project-memory, ve/feat/memory-records]
   workflow_dispatch:
 
 permissions:

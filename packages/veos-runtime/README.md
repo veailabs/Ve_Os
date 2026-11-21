@@ -195,6 +195,42 @@ veos memory performance
 
 Memory is local to this OS user, like the rest of the journal, and `veos export` includes it. Retrieval matches literal words; there is no embedding model or separately billed search. It is not yet synchronized with the Ve memory engine, so it does not follow you to another device.
 
+### Bounded goal plans
+
+An accepted, active goal can now drive a reviewed plan of 1–10 steps through the existing task queue. An agent proposes a plan with `propose_goal_plan` and reads its state with `goal_progress`; managed workers and direct MCP harnesses share these tools. The three-tool incoming delegation/voice interface stays unchanged. Proposing a plan starts no worker and enables no provider. Only the owner accepts it through the CLI or authenticated owner API.
+
+Each step names a provider, an instruction, expected outputs, dependencies on earlier step keys and an attempt limit (1–5, default 1). Requiring earlier dependencies makes the graph acyclic. Goal context travels with every step, including success criteria, constraints and stop conditions; source text and goal records grant no permissions. The existing worker still checks native subscription sign-in and project grants. External actions still require their own exact-action approval.
+
+Save a step array as `plan.json`, for example:
+
+```json
+[
+  {"key":"research","provider":"claude","instruction":"Collect evidence for the opportunity","outputs":["Evidence IDs, source dates and uncertainties"]},
+  {"key":"brief","provider":"codex","instruction":"Compare invent, partner and wait","dependencies":["research"],"outputs":["Source-linked brief with alternatives and decisions needed"]}
+]
+```
+
+```sh
+veos goal plan GOAL_ID --project-id PROJECT_ID --request-key opportunity-review-v1 < plan.json
+veos goal progress GOAL_ID --project-id PROJECT_ID
+veos goal accept PLAN_ID --project-id PROJECT_ID
+veos goal cancel PLAN_ID --project-id PROJECT_ID
+```
+
+Use `reject` to decline a proposed plan. Add `--signal-id SIGNAL_ID` when proposing a follow-up to a signal that reawakens that goal. One signal gets at most one plan per goal version, even after rejection or cancellation; a repeated request key returns the original plan, while different work under the same key is refused. A new investigation without that trigger requires a new, separately reviewed plan.
+
+Accepting a plan creates its tasks and dependencies in one transaction; a full queue rolls back the entire acceptance. Repeated or concurrent approval creates no duplicate tasks. Accepted tasks appear in the existing Mission Desk work queue. Plan creation, review and detailed progress are currently CLI/API/MCP features; there is no dedicated plan editor in the page.
+
+A goal's `detail.constraints.max_runs` (integer 1–1000) caps all runs from all its plans, including retries and action-receipt continuations. It defaults to the project's run cap. `deadline_days` (integer 1–366) is measured from that goal version's creation time. The project budget and deadline also apply. Acceptance checks that the plan's requested attempts fit the remaining budgets; it does not reserve runs, so another plan may consume them first. Every claim rechecks the limits transactionally. Exhaustion blocks remaining work with a reason; a goal deadline also fences active runs and new action approvals. Providers remain disabled until explicitly configured.
+
+Revising a goal, including pausing or marking it met/stopped, or retracting it cancels that version's proposed plans, unfinished tasks and pending action approvals in the same transaction. Completed results remain in history. An effect already submitted may still finish. Resuming a revised goal requires a new plan and approval. Pausing the whole project instead retains the existing project pause/resume behavior.
+
+Progress reports task states, result previews, remaining work and run allowance, five plans per page. Follow `next_offset` with CLI `--offset`, the API `offset` query parameter or the MCP `offset` argument. Successful tasks produce `needs_outcome_review`; they never automatically mark a goal met. Expected outputs and natural-language stop conditions are instructions for the worker and owner to evaluate, not a semantic validator. Dollar budgets are not enforced by this subscription-run counter. No automatic feed watcher, model planner, evaluator, provider switching or cloud supervisor is introduced.
+
+Owner API: `POST /api/goals/plans` takes `{pid, goal_id, request_key, steps, signal_id?}`; `POST /api/goals/plans/decide` takes `{pid, id, command}`; `GET /api/goals/progress?project=PROJECT_ID&id=GOAL_ID` returns the reviewed goal version and its plans. Plan data is included in project export. Schema version 6 adds the plan table and nullable task reference without rewriting existing records.
+
+This extends the local foundations from [runtime #2](https://github.com/veailabs/Ve_Os/pull/2), [agent controls #3](https://github.com/veailabs/Ve_Os/pull/3), [harness portability #4](https://github.com/veailabs/Ve_Os/pull/4) and memory #5–#6. It implements a local slice of the Element OS blueprint v1.0 sections 8–9 and 14: goal contracts, bounded task graphs, idempotency and run limits. The blueprint's cloud supervisor, Postgres/Vespa authority, automatic evidence evaluation and live multi-provider acceptance remain separate work.
+
 ## Optional Ve connection
 
 The mail adapter is disabled by default. It requires an independently verified HTTPS Integration endpoint, mailbox UUID and exact read/write tool allowlists in the state directory's `config.json`. It accepts a user-authorized short-lived `VEOS_VE_ACCESS_TOKEN` through the runtime environment, mints a scoped MCP grant and binds every tool to the configured mailbox. It does not forward the user token to the agent.

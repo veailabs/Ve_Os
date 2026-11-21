@@ -135,6 +135,8 @@ class DesktopActions:
       if not row:
         raise Refused("Action is not pending")
       project = self.store.require_project(db, row["project_id"])
+      if approve:
+        self.store.check_goal_deadline(db, row["task_id"])
       if approve and (
         project["state"] != "active"
         or project["deadline"] is not None

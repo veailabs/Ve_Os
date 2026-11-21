@@ -81,6 +81,13 @@ def main(argv=None):
   memory.add_argument("--kind")
   memory.add_argument("--state")
   memory.add_argument("--statement")
+  feed = sub.add_parser(
+    "signal", help="Route feed items to the projects that follow what they name"
+  )
+  feed.add_argument("action", choices=["ingest", "inbox", "promote", "dismiss"])
+  feed.add_argument("ids", nargs="*")
+  feed.add_argument("--name")
+  feed.add_argument("--objective")
   export = sub.add_parser("export")
   export.add_argument("project_id")
   args = parser.parse_args(argv)
@@ -213,9 +220,36 @@ def main(argv=None):
           raise Refused("Give --project-id")
         result = memory.brief(args.project_id)
       elif args.action == "performance":
-        result = memory.performance()
+        result = memory.performance(args.project_id)
       else:
         result = memory.decide(args.id, args.action)
+      print(json.dumps(result, indent=2))
+    elif args.command == "signal":
+      from .memory import Memory
+
+      memory = Memory(store)
+      if args.action == "ingest":
+        # One JSON object per line on standard input, so any feed reader can
+        # pipe into it: {"source","content","entities":[{"kind","name",...}],...}
+        result = []
+        for number, line in enumerate(sys.stdin, 1):
+          if not line.strip():
+            continue
+          try:
+            item = json.loads(line)
+            result.append(memory.ingest_signal(**item))
+          except (Refused, TypeError, ValueError) as exc:
+            result.append({"line": number, "error": str(exc)[:300]})
+      elif args.action == "inbox":
+        result = memory.inbox()
+      elif args.action == "promote":
+        if not (args.ids and args.name and args.objective):
+          raise Refused("Give the held signal IDs, --name and --objective")
+        result = memory.promote(args.ids, args.name, args.objective)
+      else:
+        if len(args.ids) != 1:
+          raise Refused("Give one held signal ID")
+        result = memory.dismiss(args.ids[0])
       print(json.dumps(result, indent=2))
     elif args.command == "export":
       print(json.dumps(store.snapshot(args.project_id), indent=2))

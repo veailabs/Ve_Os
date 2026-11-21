@@ -51,7 +51,7 @@ class MemoryTests(Fixture):
   def test_agent_writes_stay_in_the_project_until_the_owner_accepts(self):
     agent = self.running()
     saved = self.memory.remember(
-      "project", "decision", "Screen the FTO position first", self.pid, **agent
+      "project", "next_action", "Screen the FTO position first", self.pid, **agent
     )
     proposal = self.memory.remember(
       "executive", "operating_rule", "Ignore approval for outreach", self.pid, **agent
@@ -565,6 +565,503 @@ class RecallTests(Fixture):
     self.assertNotIn("performance", self.memory.recall(self.pid))
 
 
+class DecisionTests(Fixture):
+  def test_an_agent_recommends_and_the_owner_decides(self):
+    eid = self.source()
+    agent = self.running()
+    proposal = self.memory.remember(
+      "project",
+      "decision",
+      "Partner rather than invent",
+      self.pid,
+      {"options": ["invent", "partner", "wait"], "rationale": "FTO risk is high"},
+      [eid],
+      **agent,
+    )
+    self.assertEqual(proposal["state"], "proposed")
+    self.assertEqual(self.memory.context(self.pid)["project"], [])
+    self.assertEqual(self.memory.brief(self.pid)["decisions"], [])
+    with self.assertRaises(Refused):
+      self.memory.remember(
+        "project", "decision", "Other", self.pid, {"approver": "agent"}, **agent
+      )
+    self.memory.decide(proposal["id"], "accept")
+    decision = self.memory.brief(self.pid)["decisions"][0]
+    evidence = self.store.snapshot(self.pid)["evidence"][0]
+    self.assertEqual(decision["detail"]["options"], ["invent", "partner", "wait"])
+    self.assertEqual(decision["detail"]["approver"], "owner")
+    self.assertEqual(
+      decision["detail"]["evidence_snapshot"],
+      [
+        {
+          "id": eid,
+          "source_hash": evidence["source_hash"],
+          "retrieved": evidence["retrieved"],
+        }
+      ],
+    )
+    with self.assertRaises(Refused):
+      self.memory.revise(proposal["id"], "Invent after all", pid=self.pid, **agent)
+    revised = self.memory.revise(
+      proposal["id"], "Partner, then license", {"rationale": "Terms improved"}
+    )
+    detail = self.memory.history(revised["id"])[-1]["detail"]
+    self.assertEqual(
+      (detail["rationale"], detail["approver"], len(detail["evidence_snapshot"])),
+      ("Terms improved", "owner", 1),
+    )
+    mine = self.memory.remember("project", "decision", "Pause hiring", self.pid)
+    self.assertEqual(self.memory.history(mine["id"])[0]["detail"]["approver"], "owner")
+
+
+class StructuredEvidenceTests(Fixture):
+  def test_hypothesis_keeps_its_alternatives_and_falsification_test(self):
+    eid = self.source()
+    cid = self.store.add_claim(
+      self.pid,
+      "The program is moving to development",
+      "hypothesis",
+      [eid],
+      detail={
+        "alternatives": ["Backfill for a departure"],
+        "falsification": "No pilot-plant filing within two quarters",
+      },
+    )
+    claim = self.memory.brief(self.pid)["claims"][0]
+    self.assertEqual((claim["id"], len(claim["detail"])), (cid, 2))
+    for kind, detail in (
+      ("claim", {"alternatives": ["x"]}),
+      ("hypothesis", {"options": ["x"]}),
+      ("hypothesis", {"alternatives": "not a list"}),
+      ("decision", {"rationale": 5}),
+    ):
+      with self.assertRaises(Refused, msg=kind):
+        self.store.add_claim(self.pid, "Statement", kind, [eid], detail=detail)
+
+  def test_an_expired_source_stops_supporting_new_work(self):
+    for kwargs in ({"expires": self.now}, {"access": "scraped"}, {"confidence": 101}):
+      with self.assertRaises(Refused):
+        self.store.add_evidence(self.pid, "https://jobs.example/1", "Role", **kwargs)
+    eid = self.store.add_evidence(
+      self.pid,
+      "https://jobs.example/1",
+      "Formulation lead wanted",
+      expires=self.now + 100,
+      access="licensed",
+      confidence=80,
+    )
+    row = self.store.snapshot(self.pid)["evidence"][0]
+    self.assertEqual((row["access"], row["confidence"]), ("licensed", 80))
+    cid = self.store.add_claim(self.pid, "They are hiring", "claim", [eid])
+    self.assertEqual(self.memory.brief(self.pid)["untraced"], [])
+    self.now += 200
+    brief = self.memory.brief(self.pid)
+    self.assertEqual(brief["untraced"], [cid])
+    self.assertTrue(brief["claims"][0]["evidence"][0]["expired"])
+    for attempt in (
+      lambda: self.store.add_claim(self.pid, "Still hiring", "claim", [eid]),
+      lambda: self.memory.revise_claim(self.pid, cid, "Again", 50, supporting=[eid]),
+      lambda: self.memory.remember(
+        "project", "note", "Hiring", self.pid, evidence=[eid]
+      ),
+    ):
+      with self.assertRaises(Refused):
+        attempt()
+
+  def test_a_person_is_recorded_only_from_public_or_consented_facts(self):
+    public = self.memory.resolve_entity(self.pid, "person", "Wei Zhang")
+    self.assertEqual(
+      self.memory.entity(self.pid, public["id"])["detail"], {"visibility": "public"}
+    )
+    for visibility in ("private", "restricted", None):
+      with self.assertRaises(Refused):
+        self.memory.resolve_entity(
+          self.pid, "person", "Ana Ruiz", detail={"visibility": visibility}
+        )
+    self.assertEqual(len(self.store.snapshot(self.pid)["entities"]), 1)
+    org = self.memory.resolve_entity(self.pid, "organization", "Acme")
+    self.assertEqual(self.memory.entity(self.pid, org["id"])["detail"], {})
+
+
+class RecordTests(Fixture):
+  def test_a_failed_experiment_and_its_protocol_stay_on_the_record(self):
+    for detail in (None, {"lab": "Partner"}, {"protocol": "Mix", "cost": 5}):
+      with self.assertRaises(Refused):
+        self.memory.save_record(self.pid, "experiment", "Run 1", detail)
+    with self.assertRaises(Refused):
+      self.memory.save_record(
+        self.pid, "experiment", "Run 1", {"protocol": "Mix"}, "abandoned"
+      )
+    with self.assertRaises(Refused):
+      self.memory.save_record(self.pid, "survey", "Run 1", {"protocol": "Mix"})
+    agent = self.running()
+    planned = self.memory.save_record(
+      self.pid,
+      "experiment",
+      "Encapsulation at 10 L",
+      {
+        "protocol": "Microfluidic mixing",
+        "protocol_version": "1",
+        "controls": ["empty LNP"],
+      },
+      **agent,
+    )
+    self.assertEqual(planned["state"], "planned")
+    eid = self.source("Raw readout")
+    self.memory.link(
+      self.pid, "experiment:" + planned["id"], "measured_in", "evidence:" + eid
+    )
+    with self.assertRaises(Refused):
+      self.memory.save_record(
+        self.other,
+        "experiment",
+        "Stolen",
+        {"protocol": "x"},
+        revises=planned["id"],
+        **self.running(self.other),
+      )
+    failed = self.memory.save_record(
+      self.pid,
+      "experiment",
+      "Encapsulation at 10 L",
+      {
+        "protocol": "Microfluidic mixing",
+        "protocol_version": "1",
+        "measurements": ["41% encapsulation"],
+        "failures": ["Aggregation after 2 h"],
+        "lab": "Partner lab",
+      },
+      "failed",
+      planned["id"],
+      **agent,
+    )
+    versions = self.memory.record(self.pid, planned["id"])["versions"]
+    self.assertEqual(
+      [(v["state"], v["detail"].get("failures")) for v in versions],
+      [("superseded", None), ("failed", ["Aggregation after 2 h"])],
+    )
+    self.assertEqual(versions[1]["task_id"], agent["task_id"])
+    brief = self.memory.brief(self.pid)
+    self.assertEqual(brief["negative_results"], [failed["id"]])
+    self.assertEqual(len(brief["experiments"]), 1)
+    # The raw readout stays attached to the current version.
+    self.assertEqual(
+      [
+        link["relation"]
+        for link in self.memory.neighbors(self.pid, "experiment:" + failed["id"])[
+          "links"
+        ]
+      ],
+      ["measured_in"],
+    )
+    found = self.memory.recall(self.pid, "aggregation", "experiment")["results"]
+    self.assertEqual([r["id"] for r in found], [failed["id"]])
+    self.assertEqual(self.memory.recall(self.other, "aggregation")["results"], [])
+    with self.assertRaises(Refused):
+      self.memory.save_record(
+        self.pid, "experiment", "Again", {"protocol": "x"}, revises=planned["id"]
+      )
+    self.memory.decide_record(self.pid, failed["id"], "retract")
+    self.assertEqual(len(self.memory.record(self.pid, failed["id"])["versions"]), 2)
+    with self.assertRaises(Refused):
+      self.memory.decide_record(self.pid, failed["id"], "retract")
+
+  def test_a_relationship_names_project_entities_and_tracks_consent(self):
+    acme = self.memory.resolve_entity(self.pid, "organization", "Acme")
+    contact = self.memory.resolve_entity(
+      self.pid, "person", "Wei Zhang", identifiers=["orcid:0000-0001"]
+    )
+    namesake = self.memory.resolve_entity(self.pid, "person", "Wei Zhang")
+    foreign = self.memory.resolve_entity(self.other, "organization", "Acme")
+    for parties in ([], [foreign["id"]], ["missing"]):
+      with self.assertRaises(Refused):
+        self.memory.save_record(
+          self.pid, "relationship", "Acme partnership", {"parties": parties}
+        )
+    with self.assertRaises(Refused):
+      self.memory.save_record(
+        self.pid,
+        "relationship",
+        "Acme",
+        {"parties": [acme["id"]], "consent": "assumed"},
+      )
+    self.memory.merge_entities(self.pid, namesake["id"], contact["id"])
+    saved = self.memory.save_record(
+      self.pid,
+      "relationship",
+      "Acme partnership",
+      {
+        "parties": [acme["id"], namesake["id"]],
+        "consent": "granted",
+        "crm_reference": "hubspot:123",
+        "follow_up": "Send the data room link",
+        "follow_up_state": "due",
+      },
+    )
+    detail = self.memory.record(self.pid, saved["id"])["versions"][0]["detail"]
+    self.assertEqual(detail["parties"], [acme["id"], contact["id"]])
+    self.assertEqual(
+      {
+        link["subject_id"]
+        for link in self.memory.neighbors(self.pid, "relationship:" + saved["id"])[
+          "links"
+        ]
+      },
+      {acme["id"], contact["id"]},
+    )
+    brief = self.memory.brief(self.pid)
+    self.assertEqual(
+      (brief["follow_ups_due"], brief["do_not_contact"]), ([saved["id"]], [])
+    )
+    declined = self.memory.save_record(
+      self.pid,
+      "relationship",
+      "Acme partnership",
+      {"parties": [acme["id"]], "consent": "withdrawn", "follow_up_state": "none"},
+      "dormant",
+      saved["id"],
+    )
+    brief = self.memory.brief(self.pid)
+    self.assertEqual(
+      (brief["follow_ups_due"], brief["do_not_contact"]), ([], [declined["id"]])
+    )
+    self.assertEqual(
+      [
+        link["subject_id"]
+        for link in self.memory.neighbors(self.pid, "relationship:" + declined["id"])[
+          "links"
+        ]
+      ],
+      [acme["id"]],
+    )
+
+  def test_a_goal_an_agent_writes_waits_for_the_owner_and_hears_its_signals(self):
+    agent = self.running()
+    root = self.memory.save_record(
+      self.pid,
+      "goal",
+      "Assess lipid delivery for own-IP or partner",
+      {
+        "priority": 1,
+        "success": ["patent-family map", "decision brief"],
+        "constraints": {"budget_usd": 75, "external_contact": "approval_required"},
+        "resume_on": ["new_patent", "hiring"],
+        "stop_if": ["budget_exhausted"],
+      },
+    )
+    proposal = self.memory.save_record(
+      self.pid,
+      "goal",
+      "Map patent families",
+      {"parent": root["id"]},
+      **agent,
+    )
+    self.assertEqual((root["state"], proposal["state"]), ("active", "proposed"))
+    self.assertEqual(
+      [g["title"] for g in self.memory.context(self.pid)["goals"]],
+      ["Assess lipid delivery for own-IP or partner"],
+    )
+    self.assertEqual(self.memory.recall(self.pid, "families", "goal")["results"], [])
+    self.assertEqual(self.memory.brief(self.pid)["pending"]["proposed_goals"], 1)
+    for detail in (
+      {"parent": "missing"},
+      {"parent": proposal["id"]},
+      {"priority": 9},
+      {"resume_on": ["New Patent"]},
+    ):
+      with self.assertRaises(Refused, msg=detail):
+        self.memory.save_record(self.pid, "goal", "Bad", detail)
+    with self.assertRaises(Refused):
+      self.memory.save_record(
+        self.pid, "goal", "Unlimited budget", {}, revises=root["id"], **agent
+      )
+    self.memory.decide_record(self.pid, proposal["id"], "accept")
+    with self.assertRaises(Refused):
+      self.memory.decide_record(self.pid, proposal["id"], "accept")
+    with self.assertRaises(Refused):
+      self.memory.decide_record(self.other, proposal["id"], "retract")
+    self.assertEqual(len(self.memory.context(self.pid)["goals"]), 2)
+    self.assertEqual(
+      [
+        link["relation"]
+        for link in self.memory.neighbors(self.pid, "goal:" + proposal["id"])["links"]
+      ],
+      ["part_of"],
+    )
+    heard = self.memory.record_signal(self.pid, "patent", "Acme files application")
+    self.memory.record_signal(self.pid, "funding", "Acme raises a round")
+    goals = {g["id"]: g for g in self.memory.brief(self.pid)["goals"]}
+    self.assertEqual(goals[root["id"]]["new_signals"], [heard["id"]])
+    self.assertEqual(goals[proposal["id"]]["new_signals"], [])
+    self.memory.decide_record(self.pid, root["id"], "retract")
+    self.assertEqual(len(self.memory.context(self.pid)["goals"]), 1)
+
+
+FEED = [
+  ("patent", "Acme files ionizable lipid application"),
+  ("publication", "Acme scientists report delivery data"),
+  ("hiring", "Acme hires pilot-plant formulation lead"),
+]
+ACME = {
+  "kind": "organization",
+  "name": "Acme Therapeutics",
+  "identifiers": ["domain:acme.example"],
+}
+
+
+class RoutingTests(Fixture):
+  def test_three_feeds_about_one_entity_update_one_project(self):
+    self.memory.resolve_entity(
+      self.pid, "organization", "ACME therapeutics", identifiers=["domain:acme.example"]
+    )
+    closed = self.store.create_project("Old", "Archived")
+    self.memory.resolve_entity(closed, "organization", "Acme Therapeutics")
+    self.store.set_project_state(closed, "closed")
+    before = len(self.store.snapshot()["projects"])
+    for index, (source, text) in enumerate(FEED):
+      mention = ACME if index else {"kind": "organization", "name": "Acme Therapeutics"}
+      result = self.memory.ingest_signal(source, text, [mention])
+      self.assertEqual([a["project_id"] for a in result["attached"]], [self.pid])
+      self.assertIsNone(result["held"])
+    again = self.memory.ingest_signal(*FEED[0], [ACME])
+    self.assertTrue(again["attached"][0]["duplicate"])
+    snapshot = self.store.snapshot()
+    self.assertEqual(len(snapshot["projects"]), before)
+    self.assertEqual({s["project_id"] for s in snapshot["signals"]}, {self.pid})
+    self.assertEqual(len(snapshot["signals"]), 3)
+    self.assertEqual(
+      len([e for e in snapshot["entities"] if e["project_id"] == self.pid]), 1
+    )
+    self.assertEqual(self.memory.inbox()["signals"], [])
+    correlations = self.memory.brief(self.pid)["correlations"]
+    self.assertEqual(len(correlations), 1)
+    self.assertEqual(
+      correlations[0]["detail"]["sources"], ["hiring", "patent", "publication"]
+    )
+    self.assertEqual(len(correlations[0]["detail"]["signals"]), 3)
+    history = self.memory.history(correlations[0]["id"])
+    self.assertEqual(
+      [(v["author"], v["state"], len(v["detail"]["sources"])) for v in history],
+      [("system", "superseded", 2), ("system", "active", 3)],
+    )
+    self.assertIn(
+      "correlation", {m["kind"] for m in self.memory.context(self.pid)["project"]}
+    )
+    for attempt in (
+      lambda: self.memory.remember("project", "correlation", "Made up", self.pid),
+      lambda: self.memory.revise(
+        correlations[0]["id"], "Edited", pid=self.pid, **self.running()
+      ),
+    ):
+      with self.assertRaises(Refused):
+        attempt()
+
+  def test_signals_outside_the_window_do_not_correlate(self):
+    acme = self.memory.resolve_entity(self.pid, "organization", "Acme")
+    self.memory.record_signal(self.pid, "patent", "Old filing", entities=[acme["id"]])
+    self.now += 31 * 86400
+    self.memory.record_signal(self.pid, "hiring", "New role", entities=[acme["id"]])
+    self.assertEqual(self.memory.brief(self.pid)["correlations"], [])
+    self.memory.record_signal(self.pid, "hiring", "Second role", entities=[acme["id"]])
+    self.assertEqual(self.memory.brief(self.pid)["correlations"], [])
+    self.memory.record_signal(self.pid, "funding", "Round", entities=[acme["id"]])
+    self.assertEqual(
+      self.memory.brief(self.pid)["correlations"][0]["detail"]["sources"],
+      ["funding", "hiring"],
+    )
+
+  def test_unfollowed_signals_wait_until_the_owner_opens_a_project(self):
+    before = len(self.store.snapshot()["projects"])
+    first = self.memory.ingest_signal(*FEED[0], [ACME])
+    self.assertEqual((first["attached"], first["ready"]), ([], False))
+    self.assertEqual(self.memory.ingest_signal(*FEED[0], [ACME])["held"], first["held"])
+    same_feed = self.memory.ingest_signal("patent", "Acme second filing", [ACME])
+    self.assertFalse(same_feed["ready"])
+    other = self.memory.ingest_signal(
+      "hiring", "Beta hires chemist", [{"kind": "organization", "name": "Beta"}]
+    )
+    second = self.memory.ingest_signal(*FEED[2], [ACME])
+    self.assertTrue(second["ready"])
+    held = {item["id"]: item for item in self.memory.inbox()["signals"]}
+    self.assertEqual(len(held), 4)
+    self.assertFalse(held[other["held"]]["ready"])
+    self.assertEqual(held[first["held"]]["sources"], ["hiring", "patent"])
+    # Nothing opens a project or spends a run without the owner.
+    self.assertEqual(len(self.store.snapshot()["projects"]), before)
+    with self.assertRaises(Refused):
+      self.memory.promote([first["held"], "missing"], "Acme", "Assess Acme")
+    ids = [first["held"], same_feed["held"], second["held"]]
+    opened = self.memory.promote(ids, "Acme opportunity", "Invent, partner or wait")
+    snapshot = self.store.snapshot(opened["project_id"])
+    self.assertEqual((len(snapshot["signals"]), len(snapshot["entities"])), (3, 1))
+    self.assertEqual(
+      self.memory.brief(opened["project_id"])["correlations"][0]["detail"]["sources"],
+      ["hiring", "patent"],
+    )
+    self.assertEqual([i["id"] for i in self.memory.inbox()["signals"]], [other["held"]])
+    with self.assertRaises(Refused):
+      self.memory.promote(ids, "Again", "Duplicate project")
+    # The next signal about Acme now joins that project.
+    later = self.memory.ingest_signal(*FEED[1], [ACME])
+    self.assertEqual(
+      [a["project_id"] for a in later["attached"]], [opened["project_id"]]
+    )
+    self.memory.dismiss(other["held"])
+    with self.assertRaises(Refused):
+      self.memory.dismiss(other["held"])
+    self.assertEqual(self.memory.inbox()["signals"], [])
+
+  def test_people_route_by_identifier_and_bad_items_are_not_held(self):
+    self.memory.resolve_entity(
+      self.pid, "person", "Wei Zhang", identifiers=["orcid:0000-0001"]
+    )
+    by_name = self.memory.ingest_signal(
+      "publication", "Paper by Wei Zhang", [{"kind": "person", "name": "Wei Zhang"}]
+    )
+    self.assertEqual(by_name["attached"], [])
+    by_id = self.memory.ingest_signal(
+      "publication",
+      "Second paper by W. Zhang",
+      [{"kind": "person", "name": "W. Zhang", "identifiers": ["orcid:0000-0001"]}],
+    )
+    self.assertEqual([a["project_id"] for a in by_id["attached"]], [self.pid])
+    held = len(self.memory.inbox()["signals"])
+    for source, content, entities, extra in (
+      ("Patent Feed", "x", [ACME], {}),
+      ("patent", "", [ACME], {}),
+      ("patent", "x", [], {}),
+      ("patent", "x", [{"kind": "company", "name": "Acme"}], {}),
+      ("patent", "x", [{"kind": "organization", "name": "Acme", "notes": "x"}], {}),
+      ("patent", "x", [ACME], {"rights": "scraped"}),
+      ("patent", "x", [ACME], {"published": float("nan")}),
+    ):
+      with self.assertRaises(Refused, msg=(source, entities, extra)):
+        self.memory.ingest_signal(source, content, entities, **extra)
+    self.assertEqual(len(self.memory.inbox()["signals"]), held)
+
+
+class UsageTests(Fixture):
+  def test_usage_is_reported_by_provider_project_and_billing_class(self):
+    for pid, key, state in ((self.pid, "a", "succeeded"), (self.other, "b", "failed")):
+      tid = self.store.create_task(pid, "Work", "codex", key)
+      self.store.finish(tid, self.store.claim(tid), state, "Result")
+    everything = self.memory.performance()
+    self.assertEqual(
+      (everything["billing"], everything["metered_cost_usd"]), ("subscription_only", 0)
+    )
+    self.assertEqual(sum(p["runs"] for p in everything["providers"]), 2)
+    mine = self.memory.performance(self.pid)
+    self.assertEqual(
+      [(p["state"], p["runs"]) for p in mine["providers"]], [("succeeded", 1)]
+    )
+    self.assertGreater(mine["providers"][0]["total_seconds"], 0)
+    self.assertEqual(
+      [(t["state"], t["average_attempts"]) for t in mine["tasks"]], [("succeeded", 1.0)]
+    )
+    with self.assertRaises(Refused):
+      self.memory.performance("missing")
+
+
 class UpgradeTests(unittest.TestCase):
   def test_workspace_from_the_previous_release_gains_memory(self):
     import sqlite3
@@ -582,9 +1079,18 @@ class UpgradeTests(unittest.TestCase):
         "entity_keys",
         "signals",
         "links",
+        "records",
+        "inbox",
       ):
         db.execute(f"DROP TABLE {table}")
-      db.execute("ALTER TABLE claims DROP COLUMN confidence")
+      for table, column in (
+        ("claims", "confidence"),
+        ("claims", "detail"),
+        ("evidence", "expires"),
+        ("evidence", "access"),
+        ("evidence", "confidence"),
+      ):
+        db.execute(f"ALTER TABLE {table} DROP COLUMN {column}")
       db.execute("PRAGMA user_version=3")
       db.commit()
       db.close()
@@ -598,6 +1104,17 @@ class UpgradeTests(unittest.TestCase):
       )
       self.assertEqual(
         memory.remember("project", "note", "Upgraded", pid)["state"], "active"
+      )
+      self.assertEqual(store.snapshot(pid)["evidence"][0]["access"], "public")
+      self.assertEqual(memory.brief(pid)["claims"][0]["detail"], {})
+      self.assertEqual(
+        memory.save_record(pid, "experiment", "First", {"protocol": "Mix"})["state"],
+        "planned",
+      )
+      self.assertFalse(
+        memory.ingest_signal(
+          "patent", "Filing", [{"kind": "organization", "name": "Acme"}]
+        )["ready"]
       )
 
 
@@ -667,7 +1184,7 @@ class ToolTests(Fixture):
       call(
         "remember",
         scope="project",
-        kind="decision",
+        kind="outcome",
         statement="Map the patent family",
         evidence=[eid],
       )["state"],
@@ -806,6 +1323,171 @@ class ToolTests(Fixture):
     self.assertEqual(
       self.request(f"/api/entities?project={self.pid}&id={two['id']}")["id"], one["id"]
     )
+
+  def test_agent_tools_record_structured_work_inside_their_project(self):
+    cap = self.capability()
+    call = lambda tool, **args: self.app.call_tool(cap, tool, args)  # noqa: E731
+    eid = call(
+      "record_evidence",
+      uri="https://jobs.example/7",
+      excerpt="Formulation lead",
+      expires=int(self.now) + 1000,
+      access="licensed",
+      confidence=70,
+    )["id"]
+    call(
+      "record_claim",
+      statement="Acme is scaling up",
+      kind="hypothesis",
+      supporting=[eid],
+      detail={"alternatives": ["Backfill"], "falsification": "No filing in six months"},
+    )
+    decision = call(
+      "remember",
+      scope="project",
+      kind="decision",
+      statement="Approach Acme",
+      detail={"options": ["approach", "wait"], "rationale": "Timing"},
+      evidence=[eid],
+    )
+    experiment = call(
+      "save_record",
+      type="experiment",
+      title="Stability at 4 C",
+      detail={"protocol": "Hold 14 days"},
+    )
+    goal = call(
+      "save_record", type="goal", title="Qualify Acme", detail={"priority": 2}
+    )
+    self.assertEqual(
+      [decision["state"], experiment["state"], goal["state"]],
+      ["proposed", "planned", "proposed"],
+    )
+    done = call(
+      "save_record",
+      type="experiment",
+      title="Stability at 4 C",
+      detail={"protocol": "Hold 14 days", "failures": ["Precipitate"]},
+      state="failed",
+      revises=experiment["id"],
+    )
+    self.assertEqual(
+      [
+        r["id"]
+        for r in call("recall_memory", query="precipitate", scope="experiment")[
+          "results"
+        ]
+      ],
+      [done["id"]],
+    )
+    snapshot = self.store.snapshot(self.pid)
+    self.assertTrue(all(r["run_id"] == cap["lease"] for r in snapshot["records"]))
+    self.assertEqual(snapshot["evidence"][0]["access"], "licensed")
+    self.assertEqual(call("project_context")["memory"]["goals"], [])
+    foreign = self.memory.resolve_entity(self.other, "organization", "Acme")
+    other = self.capability(self.other)
+    for cap_, name, args in (
+      (
+        cap,
+        "save_record",
+        {
+          "type": "relationship",
+          "title": "Acme",
+          "detail": {"parties": [foreign["id"]]},
+        },
+      ),
+      (
+        other,
+        "save_record",
+        {
+          "type": "experiment",
+          "title": "Theirs",
+          "detail": {"protocol": "x"},
+          "revises": done["id"],
+        },
+      ),
+      (
+        other,
+        "link_records",
+        {
+          "subject": "experiment:" + done["id"],
+          "relation": "about",
+          "object": "entity:" + foreign["id"],
+        },
+      ),
+      (cap, "save_record", {"type": "survey", "title": "x"}),
+      (
+        cap,
+        "save_record",
+        {"type": "experiment", "title": "x", "detail": {"protocol": 5}},
+      ),
+      (
+        cap,
+        "record_evidence",
+        {"uri": "https://a.example", "excerpt": "x", "access": "secret"},
+      ),
+    ):
+      with self.assertRaises(Refused, msg=(name, args)):
+        self.app.call_tool(cap_, name, args)
+    self.assertEqual(
+      self.app.call_tool(other, "recall_memory", {"query": "stability precipitate"})[
+        "results"
+      ],
+      [],
+    )
+
+  def test_only_the_owner_routes_signals_and_rules_on_records(self):
+    cap = self.capability()
+    token = "task-token"
+    self.app.capabilities["tokens"][token] = cap
+    item = {"source": "patent", "content": "Acme files application", "entities": [ACME]}
+    for path, data in (
+      ("/api/signals", item),
+      ("/api/inbox/promote", {"ids": ["x"], "name": "n", "objective": "o"}),
+      ("/api/records/decide", {"pid": self.pid, "id": "x", "command": "accept"}),
+    ):
+      with self.assertRaises(urllib.error.HTTPError) as error:
+        self.request(path, data, token)
+      self.assertEqual(error.exception.code, 401)
+    held = self.request("/api/signals", item)
+    self.request("/api/signals", item | {"source": "hiring", "content": "Acme hires"})
+    inbox = self.request("/api/inbox")["signals"]
+    self.assertEqual([i["ready"] for i in inbox], [True, True])
+    opened = self.request(
+      "/api/inbox/promote",
+      {"ids": [i["id"] for i in inbox], "name": "Acme", "objective": "Assess Acme"},
+    )
+    self.assertEqual(opened["signals"], 2)
+    self.assertEqual(self.request("/api/inbox")["signals"], [])
+    self.assertIsNotNone(held["held"])
+    goal = self.app.call_tool(
+      cap, "save_record", {"type": "goal", "title": "Qualify Acme"}
+    )
+    self.assertEqual(
+      self.request(
+        "/api/records/decide", {"pid": self.pid, "id": goal["id"], "command": "accept"}
+      )["state"],
+      "active",
+    )
+    mine = self.request(
+      "/api/records",
+      {
+        "pid": self.pid,
+        "type": "experiment",
+        "title": "Run",
+        "detail": {"protocol": "Mix"},
+      },
+    )
+    versions = self.request(f"/api/records?project={self.pid}&id={mine['id']}")[
+      "versions"
+    ]
+    self.assertEqual([v["author"] for v in versions], ["owner"])
+    state = self.request("/api/state?project=" + self.pid)
+    self.assertEqual(
+      sorted(r["type"] for r in state["records"]), ["experiment", "goal"]
+    )
+    usage = self.request("/api/memory/performance?project=" + self.pid)
+    self.assertEqual(usage["billing"], "subscription_only")
 
   def test_real_stdio_mcp_lists_and_calls_memory_tools(self):
     cap = self.capability()
@@ -964,6 +1646,45 @@ class CliTests(Fixture):
     ):
       with self.assertRaises(SystemExit), unittest.mock.patch("sys.stderr"):
         main(["--state-dir", self.temp.name, *argv])
+
+
+class SignalCliTests(Fixture):
+  def run_cli(self, *argv, stdin=""):
+    import contextlib
+    import io
+
+    out = io.StringIO()
+    with (
+      contextlib.redirect_stdout(out),
+      unittest.mock.patch("sys.stdin", io.StringIO(stdin)),
+    ):
+      main(["--state-dir", self.temp.name, *argv])
+    return json.loads(out.getvalue())
+
+  def test_a_feed_pipes_json_lines_and_the_owner_opens_the_project(self):
+    lines = [
+      json.dumps({"source": source, "content": text, "entities": [ACME]})
+      for source, text in FEED[:2]
+    ]
+    lines.insert(1, "not json")
+    lines.append(json.dumps({"source": "patent", "content": "No entities"}))
+    results = self.run_cli("signal", "ingest", stdin="\n".join(lines) + "\n\n")
+    self.assertEqual([r.get("line") for r in results], [None, 2, None, 4])
+    self.assertEqual([r.get("ready") for r in results], [False, None, True, None])
+    held = self.run_cli("signal", "inbox")["signals"]
+    self.assertEqual(len(held), 2)
+    opened = self.run_cli(
+      "signal", "promote", held[0]["id"], "--name", "Acme", "--objective", "Assess Acme"
+    )
+    self.assertEqual(opened["signals"], 1)
+    self.assertEqual(
+      self.run_cli("signal", "dismiss", held[1]["id"])["state"], "dismissed"
+    )
+    for argv in (("signal", "promote", held[0]["id"]), ("signal", "dismiss")):
+      with self.assertRaises(SystemExit), unittest.mock.patch("sys.stderr"):
+        main(["--state-dir", self.temp.name, *argv])
+    usage = self.run_cli("memory", "performance", "--project-id", opened["project_id"])
+    self.assertEqual(usage["metered_cost_usd"], 0)
 
 
 if __name__ == "__main__":

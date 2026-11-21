@@ -305,6 +305,7 @@ h2 {
   letter-spacing: 0.5px;
   color: #576c69;
 }
+.badge.ready,
 .badge.succeeded {
   background: #e0efe6;
   color: #286149;

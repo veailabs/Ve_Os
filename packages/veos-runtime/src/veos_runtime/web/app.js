@@ -18,7 +18,9 @@ let state = {
   entities: [],
   signals: [],
   links: [],
+  records: [],
 };
+let held = [];
 const memoryKinds = {
   executive: ["strategy", "preference", "risk_appetite", "operating_rule", "priority"],
   project: ["decision", "outcome", "next_action", "timeline", "note"],
@@ -125,6 +127,75 @@ function memoryDialog(memory) {
   scope.disabled = kind.disabled = !!memory;
   $("memory-dialog").showModal();
 }
+function authored(item, origin) {
+  if (item.author === "system") return "Recorded by VeOS from signals";
+  if (item.author !== "agent") return "Written by you";
+  return `Written by an agent${origin ? ` in ${origin.name}` : ""}`;
+}
+function recordCard(r) {
+  const c = node("article", undefined, "card"),
+    meta = node("div", undefined, "meta"),
+    actions = node("div", undefined, "actions"),
+    decide = (command) =>
+      api("/api/records/decide", { pid: selected, id: r.id, command });
+  meta.append(node("span", r.type), badge(r.state));
+  c.append(
+    meta,
+    node("p", r.title),
+    blank(`${authored(r)} · ${localTime(r.created)}`),
+    details("Details", JSON.stringify(JSON.parse(r.detail), null, 2), true),
+  );
+  if (r.state === "proposed")
+    actions.append(
+      button("Accept", () => decide("accept"), "primary"),
+      button("Reject", () => decide("reject")),
+    );
+  else
+    actions.append(
+      button("Retract", () => {
+        if (confirm(`Retract this ${r.type}? Its history stays on the record.`))
+          return decide("retract");
+      }),
+    );
+  c.append(actions);
+  return c;
+}
+function renderInbox() {
+  $("inbox-panel").hidden = !held.length;
+  $("inbox").replaceChildren(
+    ...held.map((item) => {
+      const c = node("div", undefined, "card"),
+        meta = node("div", undefined, "meta"),
+        actions = node("div", undefined, "actions");
+      meta.append(node("span", item.source));
+      if (item.ready) meta.append(badge("ready"));
+      c.append(
+        meta,
+        node("p", item.content.slice(0, 400)),
+        blank(
+          `Names ${item.mentions.map((m) => m.name).join(", ")} · seen in ${item.sources.join(", ")}`,
+        ),
+      );
+      if (item.ready)
+        actions.append(
+          button(
+            "Open a project",
+            async () => {
+              $("project-form").dataset.inbox = [item.id, ...item.related].join(",");
+              $("project-form").elements.name.value = item.mentions[0].name;
+              $("project-dialog").showModal();
+            },
+            "primary",
+          ),
+        );
+      actions.append(
+        button("Dismiss", () => api("/api/inbox/dismiss", { id: item.id })),
+      );
+      c.append(actions);
+      return c;
+    }),
+  );
+}
 function memoryCard(m) {
   const c = node("article", undefined, "card"),
     meta = node("div", undefined, "meta"),
@@ -138,9 +209,13 @@ function memoryCard(m) {
     meta,
     node("p", m.statement),
     blank(
-      `${m.author === "agent" ? `Written by an agent${origin ? ` in ${origin.name}` : ""}` : "Written by you"} · ${localTime(m.created)}`,
+      `${authored(m, origin)} · ${localTime(m.created)}`,
     ),
   );
+  if (m.kind === "decision" && m.state === "proposed")
+    c.append(
+      details("Options and rationale", JSON.stringify(JSON.parse(m.detail), null, 2), true),
+    );
   if (m.state === "proposed")
     actions.append(
       button("Accept", () => api(`/api/memory/${m.id}/accept`, {}), "primary"),
@@ -151,8 +226,9 @@ function memoryCard(m) {
       actions.append(
         button("Keep", () => api(`/api/memory/${m.id}/accept`, {}), "primary"),
       );
+    if (m.kind !== "correlation")
+      actions.append(button("Revise", async () => memoryDialog(m)));
     actions.append(
-      button("Revise", async () => memoryDialog(m)),
       button("Retract", () => {
         if (confirm("Retract this memory? Agents will stop receiving it."))
           return api(`/api/memory/${m.id}/retract`, {});
@@ -208,12 +284,22 @@ function renderMemory() {
           b.created - a.created,
       ),
     unsettled = scoped("entities").filter((e) => e.state === "ambiguous"),
+    states = ["superseded", "retracted", "rejected"],
+    records = scoped("records")
+      .filter((r) => !states.includes(r.state))
+      .sort(
+        (a, b) =>
+          (b.state === "proposed") - (a.state === "proposed") ||
+          b.created - a.created,
+      ),
     entities = scoped("entities").filter((e) => e.state !== "merged").length;
   $("memory").replaceChildren(
     ...unsettled.map(entityCard),
+    ...records.filter((r) => r.state === "proposed").map(recordCard),
     ...memories.map(memoryCard),
+    ...records.filter((r) => r.state !== "proposed").map(recordCard),
     blank(
-      memories.length || unsettled.length
+      memories.length || unsettled.length || records.length
         ? `Recorded in this project: ${count(entities, "entity", "entities")}, ${count(scoped("signals").length, "signal")}, ${count(scoped("links").length, "link")}.`
         : "Nothing remembered yet. Add your standing direction, or let an agent record what this project decides.",
     ),
@@ -349,6 +435,14 @@ function render() {
           const scores = state.claim_revisions
             .filter((r) => r.claim_id === c.id && r.confidence !== null)
             .map((r) => r.confidence);
+          const fields = JSON.parse(c.detail || "{}");
+          for (const [label, value] of [
+            ["Competing explanations", fields.alternatives?.join("; ")],
+            ["Would be disproved by", fields.falsification],
+            ["Options", fields.options?.join("; ")],
+            ["Rationale", fields.rationale],
+          ])
+            if (value) e.append(blank(`${label}: ${value}`));
           if (c.confidence !== null && c.confidence !== undefined)
             e.append(
               blank(
@@ -575,9 +669,11 @@ $("file-upload").onchange = () =>
   });
 async function refresh() {
   state = await api("/api/state");
+  held = (await api("/api/inbox")).signals;
   revision = state.revision;
   if (!project()) selected = state.projects[0]?.id || null;
   render();
+  renderInbox();
 }
 async function providers() {
   const data = await api("/api/providers");
@@ -641,8 +737,10 @@ $("voice-cancel-task").onclick = () => perform(async () => {
 window.addEventListener("pagehide", () => voiceClient?.stop());
 for (const b of document.querySelectorAll("[data-dismiss]"))
   b.onclick = () => b.closest("dialog").close();
-$("new-project").onclick = $("first-project").onclick = () =>
+$("new-project").onclick = $("first-project").onclick = () => {
+  delete $("project-form").dataset.inbox;
   $("project-dialog").showModal();
+};
 $("new-task").onclick = () => {
   $("task-form").dataset.requestKey = crypto.randomUUID();
   $("dependencies").replaceChildren(
@@ -690,6 +788,18 @@ function form(id, submit) {
   };
 }
 form("project-form", async (f) => {
+  const signals = $("project-form").dataset.inbox;
+  delete $("project-form").dataset.inbox;
+  if (signals) {
+    const opened = await api("/api/inbox/promote", {
+      ids: signals.split(","),
+      name: f.get("name"),
+      objective: f.get("objective"),
+      max_runs: Number(f.get("max_runs")),
+    });
+    selected = opened.project_id;
+    return;
+  }
   const p = await api("/api/projects", {
     name: f.get("name"),
     objective: f.get("objective"),

@@ -132,6 +132,77 @@ def main():
         page.locator("#claims").get_by_text(
           "Confidence 40% · lowered from 70%"
         ).wait_for()
+        # A goal an agent writes waits for the owner; a failed experiment stays.
+        goal = memory.save_record(pid, "goal", "Qualify three manufacturers", **agent)
+        memory.save_record(
+          pid,
+          "experiment",
+          "Pilot batch at 10 L",
+          {"protocol": "Microfluidic mixing", "failures": ["Aggregation after 2 h"]},
+          "failed",
+        )
+        proposed_goal = panel.locator(".card").filter(
+          has_text="Qualify three manufacturers"
+        )
+        proposed_goal.locator(".badge.proposed").wait_for()
+        assert memory.context(pid)["goals"] == []
+        proposed_goal.get_by_role("button", name="Accept", exact=True).click()
+        proposed_goal.locator(".badge.active").wait_for()
+        assert [g["id"] for g in memory.context(pid)["goals"]] == [goal["id"]]
+        panel.locator(".card").filter(has_text="Pilot batch at 10 L").locator(
+          ".badge.failed"
+        ).wait_for()
+        store.add_claim(
+          pid,
+          "The partner is preparing scale-up.",
+          "hypothesis",
+          [eid],
+          detail={
+            "alternatives": ["Routine maintenance hiring"],
+            "falsification": "No pilot-plant filing within two quarters",
+          },
+        )
+        page.locator("#claims").get_by_text(
+          "Would be disproved by: No pilot-plant filing within two quarters"
+        ).wait_for()
+        # Two feeds name a company no project follows; only the owner opens one.
+        acme = {
+          "kind": "organization",
+          "name": "Acme Therapeutics",
+          "identifiers": ["domain:acme.example"],
+        }
+        assert page.locator("#inbox-panel").is_hidden()
+        memory.ingest_signal("patent", "Acme files a lipid application.", [acme])
+        waiting = page.locator("#inbox .card").filter(has_text="Acme files")
+        waiting.wait_for()
+        assert waiting.get_by_role("button", name="Open a project").count() == 0
+        memory.ingest_signal("hiring", "Acme hires a formulation lead.", [acme])
+        waiting.locator(".badge.ready").wait_for()
+        page.locator("#inbox-panel").scroll_into_view_if_needed()
+        page.locator("#inbox-panel").screenshot(
+          path=str(artifacts / "mission-desk-inbox.png")
+        )
+        projects = len(store.snapshot()["projects"])
+        waiting.get_by_role("button", name="Open a project").click()
+        assert (
+          page.get_by_label("Name", exact=True).input_value() == "Acme Therapeutics"
+        )
+        page.get_by_label("Objective", exact=True).fill("Invent, partner or wait.")
+        page.get_by_role("button", name="Create project", exact=True).click()
+        page.get_by_role("heading", name="Acme Therapeutics").wait_for()
+        page.locator("#inbox-panel").wait_for(state="hidden")
+        panel.locator(".card").filter(
+          has_text="Signals from hiring, patent name Acme Therapeutics"
+        ).get_by_text("Recorded by VeOS from signals").wait_for()
+        assert len(store.snapshot()["projects"]) == projects + 1
+        assert memory.inbox()["signals"] == []
+        panel.locator("xpath=..").screenshot(
+          path=str(artifacts / "mission-desk-signals.png")
+        )
+        page.locator("#projects").get_by_role(
+          "button", name="A better path to market"
+        ).click()
+        page.get_by_role("heading", name="A better path to market").wait_for()
         panel.scroll_into_view_if_needed()
         panel.locator("xpath=..").screenshot(
           path=str(artifacts / "mission-desk-memory.png")
@@ -197,6 +268,9 @@ def main():
                 "memory add, proposal acceptance and revision",
                 "ambiguous entity merge",
                 "lowered claim confidence",
+                "proposed goal acceptance and failed experiment",
+                "hypothesis alternatives and falsification",
+                "signal inbox to owner-opened project with correlation",
                 "file upload/download",
                 "live events",
                 "pause/resume",

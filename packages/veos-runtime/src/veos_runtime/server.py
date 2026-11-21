@@ -103,7 +103,18 @@ class Application:
         args["kind"],
         args["statement"],
         pid,
-        evidence=args.get("evidence"),
+        args.get("detail"),
+        args.get("evidence"),
+        **author,
+      )
+    if name == "save_record":
+      return self.memory.save_record(
+        pid,
+        args["type"],
+        args["title"],
+        args.get("detail"),
+        args.get("state"),
+        args.get("revises"),
         **author,
       )
     if name == "revise_claim":
@@ -201,7 +212,14 @@ class Application:
     if name == "record_evidence":
       return {
         "id": self.store.add_evidence(
-          pid, args["uri"], args["excerpt"], tid, capability["lease"]
+          pid,
+          args["uri"],
+          args["excerpt"],
+          tid,
+          capability["lease"],
+          args.get("expires"),
+          args.get("access", "public"),
+          args.get("confidence"),
         )
       }
     if name == "record_claim":
@@ -215,6 +233,7 @@ class Application:
           tid,
           capability["lease"],
           args.get("confidence"),
+          args.get("detail"),
         )
       }
     if name == "propose_task":
@@ -343,7 +362,16 @@ def make_server(app, port=8764):
         elif path.path == "/api/memory/history":
           self.send(200, {"versions": app.memory.history(query.get("id", [None])[0])})
         elif path.path == "/api/memory/performance":
-          self.send(200, app.memory.performance())
+          self.send(200, app.memory.performance(query.get("project", [None])[0]))
+        elif path.path == "/api/records":
+          self.send(
+            200,
+            app.memory.record(
+              query.get("project", [None])[0], query.get("id", [None])[0]
+            ),
+          )
+        elif path.path == "/api/inbox":
+          self.send(200, app.memory.inbox())
         elif path.path == "/api/entities":
           self.send(
             200,
@@ -470,6 +498,33 @@ def make_server(app, port=8764):
           result = app.memory.merge_entities(data["pid"], data["id"], data["into"])
         elif path == "/api/entities/distinct":
           result = app.memory.distinct_entity(data["pid"], data["id"])
+        elif path == "/api/records":
+          result = app.memory.save_record(
+            data["pid"],
+            data["type"],
+            data["title"],
+            data.get("detail"),
+            data.get("state"),
+            data.get("revises"),
+          )
+        elif path == "/api/records/decide":
+          result = app.memory.decide_record(data["pid"], data["id"], data["command"])
+        elif path == "/api/signals":
+          result = app.memory.ingest_signal(
+            data["source"],
+            data["content"],
+            data["entities"],
+            data.get("uri"),
+            data.get("actor"),
+            data.get("rights", "public"),
+            data.get("published"),
+          )
+        elif path == "/api/inbox/promote":
+          result = app.memory.promote(
+            data["ids"], data["name"], data["objective"], data.get("max_runs", 20)
+          )
+        elif path == "/api/inbox/dismiss":
+          result = app.memory.dismiss(data["id"])
         elif path == "/api/evidence/withdraw":
           app.store.withdraw_evidence(data["pid"], data["id"])
           result = {"ok": True}

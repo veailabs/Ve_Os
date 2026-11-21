@@ -49,6 +49,47 @@ def integer(value, name, low, high):
   return value
 
 
+def shaped(value, spec, required=()):
+  """Check a record's structured fields against its type's contract.
+
+  spec maps a field to ("text", max), ("list", max items), ("enum", choices),
+  ("int", low, high) or ("object",).
+  """
+  value = {} if value is None else value
+  if not isinstance(value, dict) or set(value) - set(spec):
+    raise Refused("Unknown field; allowed: " + ", ".join(sorted(spec)))
+  out = {}
+  for key, item in value.items():
+    kind = spec[key]
+    if kind[0] == "text":
+      out[key] = bounded(item, key, kind[1])
+    elif kind[0] == "list":
+      if not isinstance(item, list) or len(item) > kind[1]:
+        raise Refused(f"Invalid {key}")
+      out[key] = [bounded(x, key, 1000) for x in item]
+    elif kind[0] == "enum":
+      if item not in kind[1]:
+        raise Refused(f"{key} must be one of: " + ", ".join(kind[1]))
+      out[key] = item
+    elif kind[0] == "int":
+      out[key] = integer(item, key, kind[1], kind[2])
+    else:
+      if not isinstance(item, dict) or len(encoded(item)) > 4000:
+        raise Refused(f"Invalid {key}")
+      out[key] = item
+  if set(required) - set(out):
+    raise Refused("Missing: " + ", ".join(sorted(set(required) - set(out))))
+  return out
+
+
+ACCESS = ("public", "licensed", "internal")
+CLAIM_DETAIL = {
+  "claim": {},
+  "hypothesis": {"alternatives": ("list", 10), "falsification": ("text", 2000)},
+  "decision": {"options": ("list", 10), "rationale": ("text", 4000)},
+}
+
+
 class Store:
   def __init__(self, root, clock=time.time):
     self.root = Path(root).resolve()
@@ -180,6 +221,23 @@ class Store:
                   UNIQUE(project_id, subject_type, subject_id, relation, object_type, object_id)
                 );
                 CREATE INDEX IF NOT EXISTS links_object ON links(project_id, object_type, object_id);
+                CREATE TABLE IF NOT EXISTS records (
+                  id TEXT PRIMARY KEY, project_id TEXT NOT NULL REFERENCES projects(id),
+                  type TEXT NOT NULL, title TEXT NOT NULL,
+                  detail TEXT NOT NULL DEFAULT '{}', state TEXT NOT NULL,
+                  author TEXT NOT NULL, task_id TEXT REFERENCES tasks(id),
+                  run_id TEXT REFERENCES runs(id),
+                  supersedes TEXT REFERENCES records(id),
+                  created REAL NOT NULL, updated REAL NOT NULL
+                );
+                CREATE INDEX IF NOT EXISTS records_project ON records(project_id, type, state, created);
+                CREATE TABLE IF NOT EXISTS inbox (
+                  id TEXT PRIMARY KEY, source TEXT NOT NULL, uri TEXT, actor TEXT,
+                  content TEXT NOT NULL, content_hash TEXT NOT NULL UNIQUE,
+                  rights TEXT NOT NULL, observed REAL NOT NULL, published REAL,
+                  mentions TEXT NOT NULL, state TEXT NOT NULL DEFAULT 'held',
+                  project_id TEXT REFERENCES projects(id)
+                );
             """)
       # Additive migrations also upgrade workspaces created by 0.1.0.
       db.execute("BEGIN IMMEDIATE")
@@ -194,14 +252,20 @@ class Store:
           "task_id": "TEXT REFERENCES tasks(id)",
           "run_id": "TEXT REFERENCES runs(id)",
           "confidence": "INTEGER",
+          "detail": "TEXT NOT NULL DEFAULT '{}'",
         },
-        "evidence": {"run_id": "TEXT REFERENCES runs(id)"},
+        "evidence": {
+          "run_id": "TEXT REFERENCES runs(id)",
+          "expires": "REAL",
+          "access": "TEXT NOT NULL DEFAULT 'public'",
+          "confidence": "INTEGER",
+        },
       }.items():
         present = {r["name"] for r in db.execute(f"PRAGMA table_info({table})")}
         for column, definition in columns.items():
           if column not in present:
             db.execute(f"ALTER TABLE {table} ADD COLUMN {column} {definition}")
-      db.execute("PRAGMA user_version=4")
+      db.execute("PRAGMA user_version=5")
     os.chmod(self.root / "state.sqlite3", 0o600)
 
   @contextmanager
@@ -608,8 +672,29 @@ class Store:
     self.notify()
     return True
 
-  def add_evidence(self, pid, uri, excerpt, task_id=None, run_id=None):
+  def add_evidence(
+    self,
+    pid,
+    uri,
+    excerpt,
+    task_id=None,
+    run_id=None,
+    expires=None,
+    access="public",
+    confidence=None,
+  ):
     from urllib.parse import urlsplit
+
+    if access not in ACCESS:
+      raise Refused("Access must be public, licensed or internal")
+    if confidence is not None:
+      integer(confidence, "confidence", 0, 100)
+    if expires is not None and (
+      type(expires) not in (int, float)
+      or not math.isfinite(expires)
+      or expires <= self.clock()
+    ):
+      raise Refused("A source must expire in the future")
 
     uri, excerpt = (
       bounded(uri, "source URI", 4096),
@@ -639,8 +724,20 @@ class Store:
       if old:
         return old[0]
       db.execute(
-        "INSERT INTO evidence(id,project_id,task_id,uri,excerpt,source_hash,retrieved,run_id) VALUES(?,?,?,?,?,?,?,?)",
-        (eid, pid, task_id, uri, excerpt, checksum, self.clock(), run_id),
+        "INSERT INTO evidence(id,project_id,task_id,uri,excerpt,source_hash,retrieved,run_id,expires,access,confidence) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+        (
+          eid,
+          pid,
+          task_id,
+          uri,
+          excerpt,
+          checksum,
+          self.clock(),
+          run_id,
+          expires,
+          access,
+          confidence,
+        ),
       )
       self.event(db, pid, "evidence.added", {"id": eid})
     self.notify()
@@ -656,10 +753,12 @@ class Store:
     task_id=None,
     run_id=None,
     confidence=None,
+    detail=None,
   ):
     statement = bounded(statement, "statement", 10_000)
     if kind not in {"claim", "hypothesis", "decision"}:
       raise Refused("Invalid claim kind")
+    detail = encoded(shaped(detail, CLAIM_DETAIL[kind]))
     if confidence is not None:
       integer(confidence, "confidence", 0, 100)
     supporting, contradicting = supporting or [], contradicting or []
@@ -685,15 +784,22 @@ class Store:
       ):
         raise Refused("Task is outside this project")
       for eid in supporting + contradicting:
-        row = db.execute(
-          "SELECT project_id,state FROM evidence WHERE id=?", (eid,)
-        ).fetchone()
-        if not row or row[0] != pid or row[1] != "active":
-          raise Refused("Evidence is missing, withdrawn or outside this project")
+        self.usable_evidence(db, pid, eid)
       state = "contested" if contradicting else "unverified"
       db.execute(
-        "INSERT INTO claims(id,project_id,statement,kind,state,created,task_id,run_id,confidence) VALUES(?,?,?,?,?,?,?,?,?)",
-        (cid, pid, statement, kind, state, self.clock(), task_id, run_id, confidence),
+        "INSERT INTO claims(id,project_id,statement,kind,state,created,task_id,run_id,confidence,detail) VALUES(?,?,?,?,?,?,?,?,?,?)",
+        (
+          cid,
+          pid,
+          statement,
+          kind,
+          state,
+          self.clock(),
+          task_id,
+          run_id,
+          confidence,
+          detail,
+        ),
       )
       self.claim_revision(
         db, cid, confidence, state, "recorded", task_id, run_id, bool(task_id)
@@ -706,6 +812,16 @@ class Store:
       self.event(db, pid, "claim.added", {"id": cid})
     self.notify()
     return cid
+
+  def usable_evidence(self, db, pid, eid):
+    """A source a new assessment may rest on: this project's, standing, unexpired."""
+    row = db.execute(
+      "SELECT project_id,state,expires FROM evidence WHERE id=?", (eid,)
+    ).fetchone()
+    if not row or row[0] != pid or row[1] != "active":
+      raise Refused("Evidence is missing, withdrawn or outside this project")
+    if row[2] is not None and row[2] <= self.clock():
+      raise Refused("That source has expired; record it again from the original")
 
   def claim_revision(
     self, db, cid, confidence, state, reason, task_id=None, run_id=None, agent=False
@@ -811,7 +927,7 @@ class Store:
           (pid,) if pid else (),
         )
       ]
-      for table in ("entities", "entity_keys", "signals", "links"):
+      for table in ("entities", "entity_keys", "signals", "links", "records"):
         out[table] = [
           dict(x)
           for x in db.execute(

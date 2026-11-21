@@ -101,7 +101,7 @@ MCP compatibility does not establish that ChatGPT or another provider's subscrip
 
 ### Direct controls from another harness
 
-`veos control-mcp --project-id YOUR_PROJECT_ID` gives a compatible local harness the same 20 application, context and memory tools used by the managed workers, plus four task-lifecycle tools. The connected harness does the reasoning itself; VeOS does not launch Hermes or another model behind it. The existing `incoming-mcp` interface remains the three-tool delegation path used by voice.
+`veos control-mcp --project-id YOUR_PROJECT_ID` gives a compatible local harness the same 21 application, context and memory tools used by the managed workers, plus four task-lifecycle tools. The connected harness does the reasoning itself; VeOS does not launch Hermes or another model behind it. The existing `incoming-mcp` interface remains the three-tool delegation path used by voice.
 
 Generate a configuration fragment for the installed runtime:
 
@@ -146,15 +146,40 @@ The runtime keeps four memories in the same journal, so a project outlives the a
 | Memory | Holds | Who writes it |
 |---|---|---|
 | Executive | Your strategy, preferences, risk appetite, operating rules and priorities, for every project | You. An agent can only propose an entry; it reaches no agent until you accept it |
-| Project | One project's decisions, outcomes, next actions, timeline and notes | You or that project's agents |
+| Project | One project's decisions, outcomes, next actions, timeline and notes, and the correlations VeOS notes between its signals | You or that project's agents. An agent's decision is a recommendation until you approve it |
 | Evidence | Sources, claims and hypotheses with a confidence and a full revision history, plus observed signals | You or that project's agents |
 | Procedural | Workflows, retry lessons and failure patterns, for every project, beside provider and tool results computed from the journal | You. An agent can only propose an entry |
 
 Nothing is edited in place. Revising a memory writes a new version that supersedes the old one, and each version names its author and, for an agent, the task and run. A claim keeps every confidence it has had with the reason for each change; contradicting evidence must come with a lower confidence. Withdrawing a source returns the claims and memories that rest on it to review and takes them out of agent context until you keep them. `veos memory erase` removes the text of a memory and all its versions, leaving only identifiers.
 
-Entities are the organizations, people and technologies a project follows. `resolve_entity` matches a mention to an existing record by identifier (`domain:example.com`, `patent:US1234567`, `orcid:…`) or, for organizations and technologies, by a name or alias that differs only in case, spacing or punctuation. People who share a name, and records whose identifiers disagree, are recorded as ambiguous beside their candidates until you rule in the Memory panel that they are the same or different. Links relate any two records of one project (`person employed_by organization`, `claim about entity`, `signal mentions entity`); they are the project's relationship graph. A signal is one observed event from a feed, kept once per project however often it is seen.
+A decision carries its options and rationale, a snapshot of the sources it rested on as they stood, and you as its approver. A hypothesis carries its competing explanations and the observation that would disprove it. A source can carry an expiry, an access class (public, licensed or internal) and a confidence of its own; once expired it supports no new claim or memory, and the brief lists the claims left resting on it.
 
-Every agent task starts with your active direction, set apart from the rest of its context, and with the project's memory and the accepted lessons as untrusted records. Direction grants no permission and approves no action: grants and action review still decide every effect. Agents use `recall_memory`, `remember`, `revise_claim`, `resolve_entity`, `link_records`, `related_records` and `record_signal`. An agent reads and writes only its own project's records; another project's memory, entities and signals are never returned to it.
+A project also keeps three typed records, each versioned like a memory:
+
+| Record | Fields | Notes |
+|---|---|---|
+| Experiment | Protocol and version, inputs, measurements, controls, failures, lab, IP terms | States planned, running, succeeded, failed, inconclusive. A failed run is a result: it cannot be deleted, and the brief lists it |
+| Relationship | Parties (entities of the project), consent, meetings, CRM reference, follow-up and its state | The brief lists follow-ups due and the relationships whose consent is declined or withdrawn. Recording one contacts nobody |
+| Goal | Parent goal, priority, success criteria, constraints, the signals that should reawaken it, stop conditions | A goal an agent writes is proposed until you accept it. Active goals start every task's context |
+
+Another record type is one entry in `TYPES` in `memory.py`: its fields, its states and whether an agent's entry waits for you.
+
+Entities are the organizations, people and technologies a project follows. A person is recorded only from public roles or with consent, and the record says which. `resolve_entity` matches a mention to an existing record by identifier (`domain:example.com`, `patent:US1234567`, `orcid:…`) or, for organizations and technologies, by a name or alias that differs only in case, spacing or punctuation. People who share a name, and records whose identifiers disagree, are recorded as ambiguous beside their candidates until you rule in the Memory panel that they are the same or different. Links relate any two records of one project (`person employed_by organization`, `claim about entity`, `signal mentions entity`); they are the project's relationship graph. A signal is one observed event from a feed, kept once per project however often it is seen.
+
+### Signals from feeds
+
+`veos signal ingest` reads one JSON object per line from standard input, so any feed reader can pipe into it. VeOS collects nothing itself and calls no model here.
+
+```sh
+echo '{"source":"patent","content":"Acme files a lipid application","entities":[{"kind":"organization","name":"Acme Therapeutics","identifiers":["domain:acme.example"]}]}' | veos signal ingest
+veos signal inbox
+veos signal promote HELD_ID --name "Acme opportunity" --objective "Invent, partner or wait"
+veos signal dismiss HELD_ID
+```
+
+A signal about an entity that an open project already follows is recorded in that project, so a patent, a publication and a job listing about one company update one project rather than opening three. People are matched by identifier only. When two different feeds name the same entity within 30 days, VeOS records a correlation in the project's memory; it states which feeds and which entity, not what it means. A goal whose `resume_on` names that kind of signal is marked as having news. A signal nothing follows is held, and becomes ready once two different feeds name the same entity. Opening the project is your decision, in the Mission Desk or with `promote`: nothing creates a project or spends a run on its own.
+
+Every agent task starts with your active direction, set apart from the rest of its context, and with the project's memory and the accepted lessons as untrusted records. Direction grants no permission and approves no action: grants and action review still decide every effect. Agents use `recall_memory`, `remember`, `revise_claim`, `resolve_entity`, `link_records`, `related_records`, `record_signal` and `save_record`. An agent reads and writes only its own project's records; another project's memory, entities and signals are never returned to it.
 
 ```sh
 veos memory add --scope executive --kind operating_rule --statement "Draft outreach for approval; never send it."
@@ -166,7 +191,7 @@ veos memory brief --project-id YOUR_PROJECT_ID
 veos memory performance
 ```
 
-`veos memory brief` returns what an executive brief must rest on: your direction, the project's decisions and next actions, each claim with its confidence history and timestamped sources, the claims whose confidence fell, those left without a standing source, and what awaits your review. No claim is presented as verified fact.
+`veos memory brief` returns what an executive brief must rest on: your direction, the project's goals, decisions, next actions and correlations, its experiments and relationships, each claim with its confidence history and timestamped sources, the claims whose confidence fell, those left without a standing source, and what awaits your review. `veos memory performance` reports real usage by provider, task and tool, for everything or one project (`--project-id`): runs, attempts and seconds. Every provider is a subscription client, so the metered cost is zero and is reported as such. No claim is presented as verified fact.
 
 Memory is local to this OS user, like the rest of the journal, and `veos export` includes it. Retrieval matches literal words; there is no embedding model or separately billed search. It is not yet synchronized with the Ve memory engine, so it does not follow you to another device.
 
@@ -184,7 +209,7 @@ State defaults to `~/.local/state/veos` or `$XDG_STATE_HOME/veos`. Set `--state-
 
 | Path | Contents |
 |---|---|
-| `state.sqlite3` | Projects, tasks, runs, evidence, claims, memories, entities, signals, links, action receipts, browser/desktop grants, harness task scope, file metadata and events |
+| `state.sqlite3` | Projects, tasks, runs, evidence, claims, memories, records, entities, signals, held signals, links, action receipts, browser/desktop grants, harness task scope, file metadata and events |
 | `artifacts/<project>/<hash>` | Uploaded originals and generated reports |
 | `browser-profiles/<project>` | Chromium cookies and site storage |
 | `projects/<project>` | Native client work directories |

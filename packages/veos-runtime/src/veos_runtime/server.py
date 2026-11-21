@@ -14,6 +14,7 @@ from .browser import BrowserActions, LocalBrowser
 from .control_session import ControlSessions
 from .controls import SETTINGS
 from .desktop_actions import DesktopActions
+from .goals import GoalPlans
 from .harness import Harness
 from .integrations import IntegrationActions
 from .mcp import TOOLS
@@ -38,6 +39,7 @@ class Application:
     self.voice = Voice()
     self.artifacts = Artifacts(store)
     self.memory = Memory(store)
+    self.goals = GoalPlans(store)
     self.control_sessions = ControlSessions(store, self.call_tool)
     self.base_url = ""
 
@@ -66,7 +68,11 @@ class Application:
       ]
       if type(value) is not expected or ("enum" in spec and value not in spec["enum"]):
         raise Refused("Invalid tool argument type")
-      if isinstance(value, list) and any(not isinstance(x, str) for x in value):
+      if (
+        isinstance(value, list)
+        and spec.get("items", {}).get("type") == "string"
+        and any(not isinstance(x, str) for x in value)
+      ):
         raise Refused("Evidence IDs must be strings")
     pid, tid = capability["project_id"], capability["task_id"]
     with self.store.db() as db:
@@ -107,6 +113,10 @@ class Application:
         args.get("evidence"),
         **author,
       )
+    if name == "propose_goal_plan":
+      return self.goals.propose(pid, **args, **author)
+    if name == "goal_progress":
+      return self.goals.progress(pid, args["goal_id"], args.get("offset", 0))
     if name == "save_record":
       return self.memory.save_record(
         pid,
@@ -363,6 +373,15 @@ def make_server(app, port=8764):
           self.send(200, {"versions": app.memory.history(query.get("id", [None])[0])})
         elif path.path == "/api/memory/performance":
           self.send(200, app.memory.performance(query.get("project", [None])[0]))
+        elif path.path == "/api/goals/progress":
+          self.send(
+            200,
+            app.goals.progress(
+              query.get("project", [None])[0],
+              query.get("id", [None])[0],
+              int(query.get("offset", ["0"])[0]),
+            ),
+          )
         elif path.path == "/api/records":
           self.send(
             200,
@@ -498,6 +517,16 @@ def make_server(app, port=8764):
           result = app.memory.merge_entities(data["pid"], data["id"], data["into"])
         elif path == "/api/entities/distinct":
           result = app.memory.distinct_entity(data["pid"], data["id"])
+        elif path == "/api/goals/plans":
+          result = app.goals.propose(
+            data["pid"],
+            data["goal_id"],
+            data["request_key"],
+            data["steps"],
+            data.get("signal_id"),
+          )
+        elif path == "/api/goals/plans/decide":
+          result = app.goals.decide(data["pid"], data["id"], data["command"])
         elif path == "/api/records":
           result = app.memory.save_record(
             data["pid"],

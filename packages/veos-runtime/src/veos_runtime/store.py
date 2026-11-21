@@ -231,6 +231,16 @@ class Store:
                   created REAL NOT NULL, updated REAL NOT NULL
                 );
                 CREATE INDEX IF NOT EXISTS records_project ON records(project_id, type, state, created);
+                CREATE TABLE IF NOT EXISTS goal_plans (
+                  id TEXT PRIMARY KEY, project_id TEXT NOT NULL REFERENCES projects(id),
+                  goal_id TEXT NOT NULL REFERENCES records(id),
+                  signal_id TEXT REFERENCES signals(id), request_key TEXT NOT NULL,
+                  request_hash TEXT NOT NULL, steps TEXT NOT NULL,
+                  state TEXT NOT NULL, author TEXT NOT NULL,
+                  task_id TEXT REFERENCES tasks(id), run_id TEXT REFERENCES runs(id),
+                  created REAL NOT NULL, updated REAL NOT NULL,
+                  UNIQUE(project_id, request_key), UNIQUE(goal_id, signal_id)
+                );
                 CREATE TABLE IF NOT EXISTS inbox (
                   id TEXT PRIMARY KEY, source TEXT NOT NULL, uri TEXT, actor TEXT,
                   content TEXT NOT NULL, content_hash TEXT NOT NULL UNIQUE,
@@ -243,6 +253,7 @@ class Store:
       db.execute("BEGIN IMMEDIATE")
       for table, columns in {
         "tasks": {
+          "goal_plan_id": "TEXT REFERENCES goal_plans(id)",
           "execution_owner": "TEXT NOT NULL DEFAULT 'worker'",
           "action_version": "INTEGER NOT NULL DEFAULT 0",
           "seen_action_version": "INTEGER NOT NULL DEFAULT 0",
@@ -265,7 +276,8 @@ class Store:
         for column, definition in columns.items():
           if column not in present:
             db.execute(f"ALTER TABLE {table} ADD COLUMN {column} {definition}")
-      db.execute("PRAGMA user_version=5")
+      db.execute("CREATE INDEX IF NOT EXISTS tasks_goal_plan ON tasks(goal_plan_id)")
+      db.execute("PRAGMA user_version=6")
     os.chmod(self.root / "state.sqlite3", 0o600)
 
   @contextmanager
@@ -359,6 +371,40 @@ class Store:
     proposed=False,
     execution_owner="worker",
   ):
+    with self.db() as db:
+      db.execute("BEGIN IMMEDIATE")
+      tid = self._create_task(
+        db,
+        pid,
+        instruction,
+        provider,
+        request_key,
+        dependencies,
+        max_attempts,
+        not_before,
+        parent_id,
+        proposed,
+        execution_owner,
+      )
+    self.notify()
+    return tid
+
+  def _create_task(
+    self,
+    db,
+    pid,
+    instruction,
+    provider,
+    request_key,
+    dependencies=None,
+    max_attempts=2,
+    not_before=None,
+    parent_id=None,
+    proposed=False,
+    execution_owner="worker",
+    goal_plan_id=None,
+  ):
+    """Insert inside the caller's write transaction, including a whole goal plan."""
     instruction = bounded(instruction, "instruction")
     request_key = bounded(request_key, "request_key", 160)
     if execution_owner not in {"worker", "external"} or (
@@ -396,56 +442,56 @@ class Store:
     }
     if execution_owner == "external":
       body["execution_owner"] = execution_owner
+    if goal_plan_id:
+      body["goal_plan_id"] = goal_plan_id
     tid, now = identity(), self.clock()
-    with self.db() as db:
-      db.execute("BEGIN IMMEDIATE")
-      p = self.require_project(db, pid)
-      if p["state"] == "closed":
-        raise Refused("Project is closed")
-      old = db.execute(
-        "SELECT id,request_hash FROM tasks WHERE project_id=? AND request_key=?",
-        (pid, request_key),
-      ).fetchone()
-      if old:
-        if old["request_hash"] != digest(body):
-          raise Refused("Idempotency key was already used for different work")
-        return old["id"]
-      if parent_id and proposed is not True:
-        raise Refused("Agent-created tasks must first be accepted by the user")
-      for dep in set(deps + ([parent_id] if parent_id else [])):
-        row = db.execute("SELECT project_id FROM tasks WHERE id=?", (dep,)).fetchone()
-        if not row or row["project_id"] != pid:
-          raise Refused("Dependency belongs to another project or does not exist")
-      count = db.execute(
-        "SELECT count(*) FROM tasks WHERE project_id=? AND state IN ('proposed','queued','running')",
-        (pid,),
-      ).fetchone()[0]
-      if count >= 100:
-        raise Refused("Project already has 100 pending tasks")
-      db.execute(
-        "INSERT INTO tasks(id,project_id,request_key,request_hash,instruction,provider,state,max_attempts,not_before,parent_id,created,updated,execution_owner) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)",
-        (
-          tid,
-          pid,
-          request_key,
-          digest(body),
-          instruction,
-          provider,
-          "proposed" if proposed else "queued",
-          max_attempts,
-          when,
-          parent_id,
-          now,
-          now,
-          execution_owner,
-        ),
-      )
-      db.executemany(
-        "INSERT INTO dependencies VALUES(?,?)",
-        [(tid, dep) for dep in set(deps)],
-      )
-      self.event(db, pid, "task.created", {"id": tid, "proposed": proposed})
-    self.notify()
+    p = self.require_project(db, pid)
+    if p["state"] == "closed":
+      raise Refused("Project is closed")
+    old = db.execute(
+      "SELECT id,request_hash FROM tasks WHERE project_id=? AND request_key=?",
+      (pid, request_key),
+    ).fetchone()
+    if old:
+      if old["request_hash"] != digest(body):
+        raise Refused("Idempotency key was already used for different work")
+      return old["id"]
+    if parent_id and proposed is not True:
+      raise Refused("Agent-created tasks must first be accepted by the user")
+    for dep in set(deps + ([parent_id] if parent_id else [])):
+      row = db.execute("SELECT project_id FROM tasks WHERE id=?", (dep,)).fetchone()
+      if not row or row["project_id"] != pid:
+        raise Refused("Dependency belongs to another project or does not exist")
+    count = db.execute(
+      "SELECT count(*) FROM tasks WHERE project_id=? AND state IN ('proposed','queued','running')",
+      (pid,),
+    ).fetchone()[0]
+    if count >= 100:
+      raise Refused("Project already has 100 pending tasks")
+    db.execute(
+      "INSERT INTO tasks(id,project_id,request_key,request_hash,instruction,provider,state,max_attempts,not_before,parent_id,created,updated,execution_owner,goal_plan_id) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      (
+        tid,
+        pid,
+        request_key,
+        digest(body),
+        instruction,
+        provider,
+        "proposed" if proposed else "queued",
+        max_attempts,
+        when,
+        parent_id,
+        now,
+        now,
+        execution_owner,
+        goal_plan_id,
+      ),
+    )
+    db.executemany(
+      "INSERT INTO dependencies VALUES(?,?)",
+      [(tid, dep) for dep in set(deps)],
+    )
+    self.event(db, pid, "task.created", {"id": tid, "proposed": proposed})
     return tid
 
   def task(self, tid):
@@ -528,20 +574,62 @@ class Store:
     self.notify()
     return len(rows)
 
+  def goal_limits(self, db, goal_id):
+    row = db.execute(
+      "SELECT g.detail,g.created,p.max_runs FROM records g JOIN projects p ON p.id=g.project_id WHERE g.id=? AND g.type='goal'",
+      (goal_id,),
+    ).fetchone()
+    if not row:
+      raise Refused("Goal not found")
+    constraints = json.loads(row["detail"]).get("constraints", {})
+    limit = integer(
+      constraints.get("max_runs", row["max_runs"]), "goal max_runs", 1, 1000
+    )
+    days = constraints.get("deadline_days")
+    deadline = (
+      None
+      if days is None
+      else row["created"] + integer(days, "goal deadline_days", 1, 366) * 86400
+    )
+    used = db.execute(
+      "SELECT count(*) FROM runs r JOIN tasks t ON t.id=r.task_id JOIN goal_plans gp ON gp.id=t.goal_plan_id WHERE gp.goal_id=?",
+      (goal_id,),
+    ).fetchone()[0]
+    return limit, used, deadline
+
+  def goal_block_reason(self, db, plan_id, check_budget=True):
+    if not plan_id:
+      return None
+    row = db.execute("SELECT goal_id FROM goal_plans WHERE id=?", (plan_id,)).fetchone()
+    limit, used, deadline = self.goal_limits(db, row["goal_id"])
+    if deadline is not None and deadline <= self.clock():
+      return "goal_deadline_passed"
+    if check_budget and used >= limit:
+      return "goal_run_budget_exhausted"
+    return None
+
+  def check_goal_deadline(self, db, tid):
+    row = db.execute("SELECT goal_plan_id FROM tasks WHERE id=?", (tid,)).fetchone()
+    if row and self.goal_block_reason(db, row["goal_plan_id"], check_budget=False):
+      raise Refused("Goal deadline passed")
+
   def ready(self):
     with self.db() as db:
-      return [
-        dict(x)
-        for x in db.execute(
-          """SELECT t.* FROM tasks t JOIN projects p ON p.id=t.project_id
-              WHERE t.state='queued' AND t.execution_owner='worker' AND t.not_before<=? AND p.state='active'
-              AND p.runs_used<p.max_runs AND (p.deadline IS NULL OR p.deadline>?)
-              AND (t.attempts<t.max_attempts OR t.continuation=1)
-              AND NOT EXISTS(SELECT 1 FROM dependencies d JOIN tasks x ON x.id=d.dependency_id WHERE d.task_id=t.id AND x.state!='succeeded')
-              ORDER BY t.created LIMIT 100""",
-          (self.clock(), self.clock()),
-        )
-      ]
+      out = []
+      for row in db.execute(
+        """SELECT t.* FROM tasks t JOIN projects p ON p.id=t.project_id
+            WHERE t.state='queued' AND t.execution_owner='worker' AND t.not_before<=? AND p.state='active'
+            AND p.runs_used<p.max_runs AND (p.deadline IS NULL OR p.deadline>?)
+            AND (t.attempts<t.max_attempts OR t.continuation=1)
+            AND NOT EXISTS(SELECT 1 FROM dependencies d JOIN tasks x ON x.id=d.dependency_id WHERE d.task_id=t.id AND x.state!='succeeded')
+            ORDER BY t.created""",
+        (self.clock(), self.clock()),
+      ):
+        if not self.goal_block_reason(db, row["goal_plan_id"]):
+          out.append(dict(row))
+          if len(out) == 100:
+            break
+      return out
 
   def block(self, tid, reason, state="blocked"):
     with self.db() as db:
@@ -567,6 +655,7 @@ class Store:
         or row["execution_owner"] != execution_owner
         or row["state"] != "queued"
         or row["project_state"] != "active"
+        or self.goal_block_reason(db, row["goal_plan_id"])
         or row["not_before"] > now
         or row["runs_used"] >= row["max_runs"]
         or (row["attempts"] >= row["max_attempts"] and not row["continuation"])
@@ -596,12 +685,12 @@ class Store:
 
   def permitted(self, tid, lease):
     with self.db() as db:
-      return (
-        db.execute(
-          "SELECT 1 FROM tasks t JOIN projects p ON p.id=t.project_id WHERE t.id=? AND t.lease=? AND t.state='running' AND p.state='active' AND (p.deadline IS NULL OR p.deadline>?)",
-          (tid, lease, self.clock()),
-        ).fetchone()
-        is not None
+      row = db.execute(
+        "SELECT t.goal_plan_id FROM tasks t JOIN projects p ON p.id=t.project_id WHERE t.id=? AND t.lease=? AND t.state='running' AND p.state='active' AND (p.deadline IS NULL OR p.deadline>?)",
+        (tid, lease, self.clock()),
+      ).fetchone()
+      return row is not None and not self.goal_block_reason(
+        db, row["goal_plan_id"], check_budget=False
       )
 
   def finish(self, tid, lease, state, result=None, reason=None, receipt_version=None):
@@ -660,6 +749,10 @@ class Store:
         project["deadline"] is not None and project["deadline"] <= self.clock()
       ):
         state, reason = "unknown", "stopped_or_paused"
+      if goal_reason := self.goal_block_reason(
+        db, row["goal_plan_id"], check_budget=False
+      ):
+        state, reason = "unknown", goal_reason
       db.execute(
         "UPDATE tasks SET state=?,result=?,reason=?,continuation=?,lease=NULL,updated=? WHERE id=?",
         (state, result, reason, continuation, self.clock(), tid),
@@ -927,7 +1020,14 @@ class Store:
           (pid,) if pid else (),
         )
       ]
-      for table in ("entities", "entity_keys", "signals", "links", "records"):
+      for table in (
+        "entities",
+        "entity_keys",
+        "signals",
+        "links",
+        "records",
+        "goal_plans",
+      ):
         out[table] = [
           dict(x)
           for x in db.execute(
@@ -1023,17 +1123,24 @@ class Store:
         self.event(db, row["project_id"], "approval.expired", {"id": row["id"]})
         self._action_changed(db, row["task_id"])
       tasks = db.execute(
-        "SELECT t.id,t.project_id,p.runs_used,p.max_runs FROM tasks t JOIN projects p ON p.id=t.project_id WHERE t.state IN ('queued','waiting_approval') AND (p.runs_used>=p.max_runs OR p.deadline<=?)",
+        "SELECT t.id,t.project_id,t.goal_plan_id,p.runs_used,p.max_runs,p.deadline FROM tasks t JOIN projects p ON p.id=t.project_id WHERE t.state IN ('queued','waiting_approval') AND (t.goal_plan_id IS NOT NULL OR p.runs_used>=p.max_runs OR p.deadline<=?)",
         (self.clock(),),
       ).fetchall()
       for row in tasks:
+        goal_reason = self.goal_block_reason(db, row["goal_plan_id"])
+        if (
+          not goal_reason
+          and row["runs_used"] < row["max_runs"]
+          and (row["deadline"] is None or row["deadline"] > self.clock())
+        ):
+          continue
         # Let an already requested action finish; only the continuation needs a run.
         if db.execute(
           "SELECT 1 FROM actions WHERE task_id=? AND state IN ('pending','executing')",
           (row["id"],),
         ).fetchone():
           continue
-        reason = (
+        reason = goal_reason or (
           "project_run_budget_exhausted"
           if row["runs_used"] >= row["max_runs"]
           else "project_deadline_passed"

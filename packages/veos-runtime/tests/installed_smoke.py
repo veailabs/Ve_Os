@@ -87,6 +87,37 @@ def main():
       assert state["tasks"][0]["state"] == "blocked"
       assert state["tasks"][0]["attempts"] == 0
       assert state["projects"][0]["runs_used"] == 0
+      goal = json.loads(
+        request(
+          "/api/records",
+          {"pid": pid, "type": "goal", "title": "Review installed planning"},
+        )
+      )["id"]
+      plan = json.loads(
+        request(
+          "/api/goals/plans",
+          {
+            "pid": pid,
+            "goal_id": goal,
+            "request_key": "wheel-plan",
+            "steps": [
+              {
+                "key": "brief",
+                "provider": "codex",
+                "instruction": "Prepare a sourced brief",
+                "outputs": ["Evidence and uncertainty"],
+              }
+            ],
+          },
+        )
+      )["id"]
+      request("/api/goals/plans/decide", {"pid": pid, "id": plan, "command": "accept"})
+      progress = json.loads(request(f"/api/goals/progress?project={pid}&id={goal}"))
+      assert len(progress["plans"][0]["tasks"]) == 1
+      request("/api/goals/plans/decide", {"pid": pid, "id": plan, "command": "cancel"})
+      progress = json.loads(request(f"/api/goals/progress?project={pid}&id={goal}"))
+      assert progress["plans"][0]["counts"] == {"cancelled": 1}
+      assert progress["remaining_project_runs"] == 20
       # Every generated client configuration must launch the installed server;
       # resource loading catches missing packaged skill files.
       for client in ("codex", "claude", "gemini", "hermes"):
@@ -202,7 +233,11 @@ def main():
       check=True,
       timeout=3,
     )
-    assert json.loads(status.stdout)["tasks"] == {"blocked": 1, "succeeded": 1}
+    assert json.loads(status.stdout)["tasks"] == {
+      "blocked": 1,
+      "succeeded": 1,
+      "cancelled": 1,
+    }
     print(
       json.dumps(
         {
@@ -211,6 +246,7 @@ def main():
             "installed wheel assets",
             "private session file",
             "disabled provider consumes no runs",
+            "goal plan approval, progress and cancellation",
             "clean shutdown",
             "persistent state after process exit",
             "four client configurations launch the installed MCP server",

@@ -88,6 +88,15 @@ def main(argv=None):
   feed.add_argument("ids", nargs="*")
   feed.add_argument("--name")
   feed.add_argument("--objective")
+  goal = sub.add_parser("goal", help="Propose, review and track bounded goal plans")
+  goal.add_argument(
+    "action", choices=["plan", "progress", "accept", "reject", "cancel"]
+  )
+  goal.add_argument("id", help="Goal ID for plan/progress; plan ID for review")
+  goal.add_argument("--project-id", required=True)
+  goal.add_argument("--request-key")
+  goal.add_argument("--signal-id")
+  goal.add_argument("--offset", type=int, default=0)
   export = sub.add_parser("export")
   export.add_argument("project_id")
   args = parser.parse_args(argv)
@@ -223,6 +232,24 @@ def main(argv=None):
         result = memory.performance(args.project_id)
       else:
         result = memory.decide(args.id, args.action)
+      print(json.dumps(result, indent=2))
+    elif args.command == "goal":
+      from .goals import GoalPlans
+
+      goals = GoalPlans(store)
+      if args.action == "plan":
+        if not args.request_key:
+          raise Refused("Give --request-key for this plan")
+        raw = sys.stdin.read(100_001)
+        if len(raw) > 100_000:
+          raise Refused("Plan input is too large")
+        result = goals.propose(
+          args.project_id, args.id, args.request_key, json.loads(raw), args.signal_id
+        )
+      elif args.action == "progress":
+        result = goals.progress(args.project_id, args.id, args.offset)
+      else:
+        result = goals.decide(args.project_id, args.id, args.action)
       print(json.dumps(result, indent=2))
     elif args.command == "signal":
       from .memory import Memory

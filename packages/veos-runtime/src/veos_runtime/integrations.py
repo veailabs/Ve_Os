@@ -309,6 +309,8 @@ class IntegrationActions:
     with self.store.db() as db:
       db.execute("BEGIN IMMEDIATE")
       project = self.store.require_project(db, row["project_id"])
+      if approve:
+        self.store.check_goal_deadline(db, row["task_id"])
       state = (
         "denied"
         if not approve

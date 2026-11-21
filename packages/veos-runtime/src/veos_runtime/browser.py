@@ -648,6 +648,8 @@ class BrowserActions:
       if not row:
         raise Refused("Browser action is not awaiting approval")
       project = self.store.require_project(db, row["project_id"])
+      if approve:
+        self.store.check_goal_deadline(db, row["task_id"])
       if approve and (
         project["state"] != "active"
         or (

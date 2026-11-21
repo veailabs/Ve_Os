@@ -12,6 +12,7 @@ from pathlib import Path
 
 from veos_runtime import mcp
 from veos_runtime.cli import main
+from veos_runtime.goals import GoalPlans
 from veos_runtime.memory import Memory, normal
 from veos_runtime.providers import Outcome, default_config, save_config
 from veos_runtime.server import Application, make_server
@@ -1062,6 +1063,305 @@ class UsageTests(Fixture):
       self.memory.performance("missing")
 
 
+class GoalPlanTests(Fixture):
+  def setUp(self):
+    super().setUp()
+    self.goals = GoalPlans(self.store)
+    self.gid = self.memory.save_record(
+      self.pid,
+      "goal",
+      "Assess own IP and partnership",
+      {
+        "success": ["Sourced decision brief"],
+        "constraints": {"max_runs": 5, "deadline_days": 7},
+        "resume_on": ["new_patent"],
+      },
+    )["id"]
+    self.steps = [
+      {
+        "key": "research",
+        "instruction": "Collect source evidence",
+        "provider": "claude",
+        "outputs": ["Evidence IDs and uncertainties"],
+      },
+      {
+        "key": "brief",
+        "instruction": "Compare invent and partner",
+        "provider": "codex",
+        "dependencies": ["research"],
+        "outputs": ["Report with sources and alternatives"],
+      },
+    ]
+
+  def propose(self, key="plan", **kwargs):
+    return self.goals.propose(self.pid, self.gid, key, self.steps, **kwargs)["id"]
+
+  def progress(self):
+    return self.goals.progress(self.pid, self.gid)
+
+  def test_reviewed_plan_uses_existing_dependencies_and_keeps_goal_review_separate(
+    self,
+  ):
+    plan = self.propose()
+    self.assertEqual(self.store.snapshot()["tasks"], [])
+    self.assertEqual(self.propose(), plan)
+    with self.assertRaises(Refused):
+      self.goals.propose(self.pid, self.gid, "plan", self.steps[:1])
+    self.goals.decide(self.pid, plan, "accept")
+    self.goals.decide(self.pid, plan, "accept")
+    tasks = self.progress()["plans"][0]["tasks"]
+    self.assertEqual(len(tasks), 2)
+    first, second = [t["id"] for t in tasks]
+    self.assertEqual([t["id"] for t in self.store.ready()], [first])
+    self.assertIsNone(self.store.claim(second))
+    self.store.set_project_state(self.pid, "paused")
+    self.assertIsNone(self.store.claim(first))
+    self.store.set_project_state(self.pid, "active")
+    lease = self.store.claim(first)
+    self.assertTrue(self.store.permitted(first, lease))
+    self.store.finish(first, lease, "succeeded", "Evidence recorded")
+    self.assertEqual([t["id"] for t in self.store.ready()], [second])
+    self.store.finish(second, self.store.claim(second), "succeeded", "Brief ready")
+    progress = self.progress()
+    self.assertEqual(progress["goal"]["state"], "active")
+    self.assertTrue(progress["plans"][0]["needs_outcome_review"])
+    self.assertEqual(progress["remaining_goal_runs"], 3)
+    self.assertIn("Report with sources", self.store.task(second)["instruction"])
+    self.assertIn(plan, [p["id"] for p in self.store.snapshot(self.pid)["goal_plans"]])
+    self.assertEqual(self.store.snapshot(self.other)["goal_plans"], [])
+    reopened = GoalPlans(Store(self.temp.name, clock=self.clock))
+    self.assertEqual(
+      reopened.progress(self.pid, self.gid)["plans"][0]["counts"], {"succeeded": 2}
+    )
+
+  def test_existing_worker_executes_three_provider_plan_with_scoped_context(self):
+    config = default_config()
+    config["providers"]["hermes"]["model"] = "fixture-model"
+    save_config(self.store.root, config)
+    steps = [
+      dict(self.steps[0], key=provider, provider=provider)
+      for provider in ("claude", "codex", "hermes")
+    ]
+    plan = self.goals.propose(self.pid, self.gid, "providers", steps)["id"]
+    self.goals.decide(self.pid, plan, "accept")
+    calls = []
+
+    def runner(provider, argv, prompt, *args, **kwargs):
+      self.assertIn(self.gid, prompt)
+      self.assertIn("Evidence IDs and uncertainties", prompt)
+      calls.append(provider)
+      return Outcome("succeeded", "Fixture output; not a live provider result")
+
+    worker = Worker(
+      self.store,
+      {"lock": threading.Lock(), "tokens": {}},
+      "http://127.0.0.1:1",
+      prober=lambda *_: {"ready": True},
+      runner=runner,
+    )
+    # Hermes has its own qualified native smoke; this fixture checks the shared
+    # planner/worker contract without configuring a provider account or gateway.
+    with (
+      unittest.mock.patch("veos_runtime.worker.commands", return_value=["fixture"]),
+      unittest.mock.patch("veos_runtime.hermes.configure"),
+      unittest.mock.patch(
+        "veos_runtime.hermes.environment", return_value={"fixture": "true"}
+      ),
+      unittest.mock.patch("veos_runtime.hermes.begin"),
+      unittest.mock.patch("veos_runtime.hermes.stop", return_value=True),
+    ):
+      for _ in steps:
+        self.assertTrue(worker.once())
+      self.assertFalse(worker.once())
+    self.assertEqual(calls, ["claude", "codex", "hermes"])
+    self.assertEqual(self.progress()["plans"][0]["counts"], {"succeeded": 3})
+
+  def test_progress_pages_preserve_plan_history(self):
+    plans = [self.propose(str(i)) for i in range(6)]
+    first = self.progress()
+    second = self.goals.progress(self.pid, self.gid, first["next_offset"])
+    self.assertEqual([p["id"] for p in first["plans"] + second["plans"]], plans)
+    self.assertIsNone(second["next_offset"])
+
+  def test_invalid_or_cross_project_plans_never_create_work(self):
+    bad_steps = [
+      [],
+      self.steps * 6,
+      [self.steps[0] | {"dependencies": ["research"]}],
+      [self.steps[0] | {"dependencies": ["brief"]}],
+      [self.steps[0], self.steps[0]],
+      [self.steps[0] | {"max_attempts": True}],
+      [self.steps[0] | {"provider": "external"}],
+      [self.steps[0] | {"outputs": []}],
+      [self.steps[0] | {"permissions": ["send"]}],
+    ]
+    for steps in bad_steps:
+      with self.subTest(steps=steps), self.assertRaises(Refused):
+        self.goals.propose(self.pid, self.gid, "invalid", steps)
+    with self.assertRaises(Refused):
+      self.goals.propose(self.other, self.gid, "foreign", self.steps)
+    with self.assertRaises(Refused):
+      self.goals.progress(self.other, self.gid)
+    proposed = self.memory.save_record(
+      self.pid, "goal", "Unapproved", **self.running()
+    )["id"]
+    with self.assertRaises(Refused):
+      self.goals.propose(self.pid, proposed, "unapproved", self.steps)
+    self.assertEqual(self.store.snapshot()["goal_plans"], [])
+
+  def test_signal_followup_is_scoped_and_deduplicated(self):
+    signal = self.memory.record_signal(self.pid, "patent", "New filing")["id"]
+    plan = self.propose(signal_id=signal)
+    self.assertEqual(self.propose(signal_id=signal), plan)
+    with self.assertRaisesRegex(Refused, "already has a plan"):
+      self.propose("new-key", signal_id=signal)
+    unrelated = self.memory.record_signal(self.pid, "hiring", "New position")["id"]
+    foreign = self.memory.record_signal(self.other, "patent", "Other project")["id"]
+    for sid in (unrelated, foreign):
+      with self.assertRaises(Refused):
+        self.propose("wrong-signal", signal_id=sid)
+    self.goals.decide(self.pid, plan, "reject")
+    with self.assertRaises(Refused):
+      self.propose("replay", signal_id=signal)
+    self.assertEqual(self.store.snapshot()["tasks"], [])
+
+  def test_acceptance_is_atomic_when_queue_fills(self):
+    plan = self.propose()
+    for index in range(99):
+      self.store.create_task(self.pid, "Existing work", "codex", str(index))
+    with self.assertRaisesRegex(Refused, "100 pending"):
+      self.goals.decide(self.pid, plan, "accept")
+    self.assertEqual(self.progress()["plans"][0]["tasks"], [])
+    self.assertEqual(self.progress()["plans"][0]["state"], "proposed")
+    self.assertEqual(len(self.store.snapshot()["tasks"]), 99)
+
+  def test_concurrent_acceptance_enqueues_each_step_once(self):
+    from concurrent.futures import ThreadPoolExecutor
+
+    plan = self.propose()
+    with ThreadPoolExecutor(max_workers=2) as pool:
+      results = list(
+        pool.map(lambda _: self.goals.decide(self.pid, plan, "accept"), range(2))
+      )
+    self.assertEqual([r["state"] for r in results], ["accepted", "accepted"])
+    self.assertEqual(len(self.progress()["plans"][0]["tasks"]), 2)
+
+  def test_goal_revision_and_retraction_cancel_inflight_work_and_pending_actions(self):
+    for command in ("revise", "retract", "cancel"):
+      with self.subTest(command=command):
+        gid = self.memory.save_record(self.pid, "goal", command)["id"]
+        plan = self.goals.propose(self.pid, gid, command, self.steps)["id"]
+        self.goals.decide(self.pid, plan, "accept")
+        tid = self.goals.progress(self.pid, gid)["plans"][0]["tasks"][0]["id"]
+        lease = self.store.claim(tid)
+        with self.store.db() as db:
+          db.execute(
+            "INSERT INTO actions VALUES(?,?,?,?,?,?,'pending',?,NULL,?)",
+            (
+              command,
+              self.pid,
+              tid,
+              command,
+              "browser.click",
+              "{}",
+              self.now + 1000,
+              self.now,
+            ),
+          )
+        if command == "revise":
+          self.memory.save_record(
+            self.pid, "goal", "Paused", {}, state="paused", revises=gid
+          )
+        elif command == "retract":
+          self.memory.decide_record(self.pid, gid, "retract")
+        else:
+          self.goals.decide(self.pid, plan, "cancel")
+        self.assertFalse(self.store.permitted(tid, lease))
+        self.assertFalse(self.store.finish(tid, lease, "succeeded", "Stale outcome"))
+        self.assertIsNone(self.store.claim(tid))
+        self.assertEqual(self.store.task(tid)["state"], "cancelled")
+        self.assertEqual(
+          next(a for a in self.store.snapshot()["actions"] if a["id"] == command)[
+            "state"
+          ],
+          "cancelled",
+        )
+        with self.assertRaises(Refused):
+          self.store.task_command(tid, "retry")
+        with self.assertRaises(Refused):
+          self.goals.decide(self.pid, plan, "accept")
+
+  def test_budget_is_shared_across_plans_and_counts_continuation_runs(self):
+    gid = self.memory.save_record(
+      self.pid, "goal", "One run only", {"constraints": {"max_runs": 1}}
+    )["id"]
+    plans = [
+      self.goals.propose(self.pid, gid, key, self.steps[:1])["id"]
+      for key in ("one", "two")
+    ]
+    for plan in plans:
+      self.goals.decide(self.pid, plan, "accept")
+    first, second = [
+      p["tasks"][0]["id"] for p in self.goals.progress(self.pid, gid)["plans"]
+    ]
+    lease = self.store.claim(first)
+    self.assertTrue(self.store.permitted(first, lease))
+    self.assertIsNone(self.store.claim(second))
+    self.store.finish(first, lease, "succeeded", "Result")
+    # Receipt continuations can queue a task without increasing its attempts.
+    with self.store.db() as db:
+      db.execute("UPDATE tasks SET state='queued',continuation=1 WHERE id=?", (first,))
+    self.assertIsNone(self.store.claim(first))
+    self.store.maintain()
+    self.assertEqual(self.store.task(first)["reason"], "goal_run_budget_exhausted")
+    self.assertEqual(self.store.task(second)["reason"], "goal_run_budget_exhausted")
+    self.assertEqual(self.goals.progress(self.pid, gid)["remaining_goal_runs"], 0)
+    too_big = self.goals.propose(self.pid, gid, "too-big", self.steps)["id"]
+    with self.assertRaisesRegex(Refused, "goal run budget"):
+      self.goals.decide(self.pid, too_big, "accept")
+
+  def test_goal_deadline_fences_claims_active_runs_and_action_review(self):
+    plan = self.propose()
+    self.goals.decide(self.pid, plan, "accept")
+    first, second = [t["id"] for t in self.progress()["plans"][0]["tasks"]]
+    lease = self.store.claim(first)
+    self.now += 8 * 86400
+    self.assertFalse(self.store.permitted(first, lease))
+    self.assertIsNone(self.store.claim(second))
+    with self.store.db() as db, self.assertRaisesRegex(Refused, "Goal deadline"):
+      self.store.check_goal_deadline(db, first)
+    from veos_runtime.browser import BrowserActions
+    from veos_runtime.desktop_actions import DesktopActions
+
+    adapters = {
+      "browser": BrowserActions(self.store, unittest.mock.Mock()),
+      "desktop": DesktopActions(self.store, unittest.mock.Mock()),
+    }
+    for name, adapter in adapters.items():
+      with self.store.db() as db:
+        db.execute(
+          "INSERT INTO actions VALUES(?,?,?,?,?,?,'pending',?,NULL,?)",
+          (
+            name,
+            self.pid,
+            first,
+            name,
+            name + ".click",
+            "{}",
+            self.now + 1000,
+            self.now,
+          ),
+        )
+      with self.assertRaisesRegex(Refused, "Goal deadline"):
+        adapter.decide(name, True)
+      adapter.decide(name, False)
+    self.store.finish(first, lease, "succeeded", "Late result")
+    self.assertEqual(self.store.task(first)["state"], "unknown")
+    self.assertEqual(self.store.task(first)["reason"], "goal_deadline_passed")
+    self.store.maintain()
+    self.assertEqual(self.store.task(second)["reason"], "goal_deadline_passed")
+
+
 class UpgradeTests(unittest.TestCase):
   def test_workspace_from_the_previous_release_gains_memory(self):
     import sqlite3
@@ -1146,6 +1446,51 @@ class ToolTests(Fixture):
     )
     with urllib.request.urlopen(request, timeout=10) as response:
       return json.loads(response.read())
+
+  def test_goal_plans_through_mcp_require_owner_review_and_project_scope(self):
+    cap = self.capability()
+    self.app.capabilities["tokens"]["agent-token"] = cap
+    goal = self.memory.save_record(self.pid, "goal", "Source a brief")["id"]
+    foreign = self.memory.save_record(self.other, "goal", "Private goal")["id"]
+    args = {
+      "goal_id": goal,
+      "request_key": "agent-plan",
+      "steps": [
+        {
+          "key": "brief",
+          "instruction": "Prepare a brief",
+          "provider": "codex",
+          "outputs": ["Sources and uncertainty"],
+        }
+      ],
+    }
+    plan = self.app.call_tool(cap, "propose_goal_plan", args)
+    progress = self.app.call_tool(cap, "goal_progress", {"goal_id": goal})
+    self.assertEqual(progress["plans"][0]["author"], "agent")
+    self.assertEqual(progress["plans"][0]["tasks"], [])
+    for name, call in (
+      ("propose_goal_plan", args | {"goal_id": foreign}),
+      ("goal_progress", {"goal_id": foreign}),
+    ):
+      with self.assertRaises(Refused):
+        self.app.call_tool(cap, name, call)
+    for path, body in (
+      ("/api/goals/plans", {"pid": self.pid, **args}),
+      (
+        "/api/goals/plans/decide",
+        {"pid": self.pid, "id": plan["id"], "command": "accept"},
+      ),
+    ):
+      with self.assertRaises(urllib.error.HTTPError) as error:
+        self.request(path, body, "agent-token")
+      self.assertEqual(error.exception.code, 401)
+    self.request(
+      "/api/goals/plans/decide",
+      {"pid": self.pid, "id": plan["id"], "command": "accept"},
+    )
+    progress = self.request(f"/api/goals/progress?project={self.pid}&id={goal}")
+    self.assertEqual(progress["plans"][0]["counts"], {"queued": 1})
+    self.assertEqual(progress["plans"][0]["task_id"], cap["task_id"])
 
   def test_agent_tools_write_attributed_project_scoped_memory(self):
     cap = self.capability()
@@ -1660,6 +2005,36 @@ class SignalCliTests(Fixture):
     ):
       main(["--state-dir", self.temp.name, *argv])
     return json.loads(out.getvalue())
+
+  def test_owner_can_review_goal_plans_from_the_cli(self):
+    goal = self.memory.save_record(self.pid, "goal", "Assess an opportunity")["id"]
+    steps = [
+      {
+        "key": "brief",
+        "instruction": "Prepare a brief",
+        "provider": "claude",
+        "outputs": ["Source-linked recommendation"],
+      }
+    ]
+    plan = self.run_cli(
+      "goal",
+      "plan",
+      goal,
+      "--project-id",
+      self.pid,
+      "--request-key",
+      "cli",
+      stdin=json.dumps(steps),
+    )
+    self.assertEqual(plan["state"], "proposed")
+    approved = self.run_cli("goal", "accept", plan["id"], "--project-id", self.pid)
+    self.assertEqual(approved["state"], "accepted")
+    progress = self.run_cli("goal", "progress", goal, "--project-id", self.pid)
+    self.assertEqual(progress["plans"][0]["counts"], {"queued": 1})
+    self.run_cli("goal", "cancel", plan["id"], "--project-id", self.pid)
+    self.assertEqual(
+      self.store.task(progress["plans"][0]["tasks"][0]["id"])["state"], "cancelled"
+    )
 
   def test_a_feed_pipes_json_lines_and_the_owner_opens_the_project(self):
     lines = [
